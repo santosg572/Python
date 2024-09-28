@@ -1,0 +1,39 @@
+import matplotlib.pyplot as plt
+import matplotlib.image as mpimg
+import numpy as np
+
+file1 = "file1.png"
+file2 = "file2.png"
+
+
+image1 = mpimg.imread(file1)
+image2 = mpimg.imread(file2) 
+
+image1 = image1[:, :, 1]
+image2 = image2[:, :, 1]
+
+print(type(image1))
+
+
+image3 = np.abs(image1 - image2)
+
+print(np.min(image3))
+print(np.max(image3))
+
+ss = image3.shape
+nx = ss[0]
+ny = ss[1]
+
+vec = image3[0,:]
+
+for i in np.arange(1, nx):
+ print(i)
+ vec = vec + image3[i,:]
+
+vec = vec / nx
+plt.plot(vec)
+
+#plt.imshow(image3)
+plt.show()
+
+

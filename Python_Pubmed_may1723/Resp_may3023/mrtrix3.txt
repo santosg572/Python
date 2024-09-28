@@ -1,0 +1,1337 @@
+{
+    "abstract": "Cerebral neoplasms like gliomas may cause intracranial pressure increasing, neural tract deviation, infiltration, or destruction in peritumoral areas, leading to neuro-functional deficits. Novel tracking technology, such as DTI, can objectively reveal and visualize three-dimensional white matter trajectories; in combination with intraoperative navigation, it can help achieve maximum resection whilst minimizing neurological deficit. Since the reconstruction of DTI raw data largely relies on the technical engineering and anatomical experience of the operator; it is time-consuming and prone to operator-induced bias. Here, we develop new user-friendly software to automatically segment and reconstruct functionally active areas to facilitate precise surgery. In this pilot trial, we used an in-house developed software (DiffusionGo) specially designed for neurosurgeons, which integrated a reliable diffusion-weighted image (DWI) preprocessing pipeline that embedded several functionalities from software packages of FSL, MRtrix3, and ANTs. The preprocessing pipeline is as follows: 1. DWI denoising, 2. Gibbs-ringing removing, 3. Susceptibility distortion correction (process if opposite polarity data were acquired), 4. Eddy current and motion correction, and 5. Bias correction. Then, this fully automatic multiple assigned criteria algorithms for fiber tracking were used to achieve easy modeling and assist precision surgery. We demonstrated the application with three language-related cases in three different centers, including a left frontal, a left temporal, and a left frontal-temporal glioma, to achieve a favorable surgical outcome with language function preservation or recovery. The DTI tracking result using DiffusionGo showed robust consistency with direct cortical stimulation (DCS) finding. We believe that this fully automatic processing pipeline provides the neurosurgeon with a solution that may reduce time costs and operating errors and improve care quality and surgical procedure quality across different neurosurgical centers.",
+    "authors": [
+        {
+            "affiliation": "Department of Neurosurgery, Huashan Hospital, Shanghai Medical College, Fudan University, Shanghai, China.\nNational Center for Neurological Disorders, Shanghai, China.\nNeurosurgical Institute of Fudan University, Shanghai, China.\nShanghai Clinical Medical Center of Neurosurgery, Shanghai, China.\nShanghai Key Laboratory of Brain Function Restoration and Neural Regeneration, Shanghai, China.\nResearch Units of New Technologies of Micro-Endoscopy Combination in Skull Base Surgery, Chinese Academy of Medical Sciences (CAMS), Shanghai, China.",
+            "firstname": "Yifan",
+            "initials": "Y",
+            "lastname": "Yuan"
+        },
+        {
+            "affiliation": "Department of Neurosurgery, Huashan Hospital, Shanghai Medical College, Fudan University, Shanghai, China.\nNational Center for Neurological Disorders, Shanghai, China.\nNeurosurgical Institute of Fudan University, Shanghai, China.\nShanghai Clinical Medical Center of Neurosurgery, Shanghai, China.\nShanghai Key Laboratory of Brain Function Restoration and Neural Regeneration, Shanghai, China.\nResearch Units of New Technologies of Micro-Endoscopy Combination in Skull Base Surgery, Chinese Academy of Medical Sciences (CAMS), Shanghai, China.",
+            "firstname": "Tianming",
+            "initials": "T",
+            "lastname": "Qiu"
+        },
+        {
+            "affiliation": "Institute of Neuroscience, National Yang Ming Chiao Tung University, Hsinchu, Taiwan.",
+            "firstname": "Shin Tai",
+            "initials": "ST",
+            "lastname": "Chong"
+        },
+        {
+            "affiliation": "Department of Neurosurgery, Neurological Institute, Taipei Veterans General Hospital, Taipei, Taiwan.",
+            "firstname": "Sanford Pin-Chuan",
+            "initials": "SP",
+            "lastname": "Hsu"
+        },
+        {
+            "affiliation": "Magnetic Resonance (MR) Collaboration, Siemens Healthineers Ltd., Shanghai, China.",
+            "firstname": "Ying-Hua",
+            "initials": "YH",
+            "lastname": "Chu"
+        },
+        {
+            "affiliation": "Magnetic Resonance (MR) Collaboration, Siemens Healthineers Ltd., Shanghai, China.",
+            "firstname": "Yi-Cheng",
+            "initials": "YC",
+            "lastname": "Hsu"
+        },
+        {
+            "affiliation": "Department of Neurosurgery, Huashan Hospital, Shanghai Medical College, Fudan University, Shanghai, China.\nNational Center for Neurological Disorders, Shanghai, China.\nNeurosurgical Institute of Fudan University, Shanghai, China.\nShanghai Clinical Medical Center of Neurosurgery, Shanghai, China.\nShanghai Key Laboratory of Brain Function Restoration and Neural Regeneration, Shanghai, China.\nResearch Units of New Technologies of Micro-Endoscopy Combination in Skull Base Surgery, Chinese Academy of Medical Sciences (CAMS), Shanghai, China.",
+            "firstname": "Geng",
+            "initials": "G",
+            "lastname": "Xu"
+        },
+        {
+            "affiliation": "Institute of Neuroscience, National Yang Ming Chiao Tung University, Hsinchu, Taiwan.",
+            "firstname": "Yu-Ting",
+            "initials": "YT",
+            "lastname": "Ko"
+        },
+        {
+            "affiliation": "Institute of Neuroscience, National Yang Ming Chiao Tung University, Hsinchu, Taiwan.",
+            "firstname": "Kuan-Tsen",
+            "initials": "KT",
+            "lastname": "Kuo"
+        },
+        {
+            "affiliation": "Department of Neurosurgery, Huashan Hospital, Shanghai Medical College, Fudan University, Shanghai, China.\nNational Center for Neurological Disorders, Shanghai, China.\nNeurosurgical Institute of Fudan University, Shanghai, China.\nShanghai Clinical Medical Center of Neurosurgery, Shanghai, China.\nShanghai Key Laboratory of Brain Function Restoration and Neural Regeneration, Shanghai, China.\nResearch Units of New Technologies of Micro-Endoscopy Combination in Skull Base Surgery, Chinese Academy of Medical Sciences (CAMS), Shanghai, China.",
+            "firstname": "Zixiao",
+            "initials": "Z",
+            "lastname": "Yang"
+        },
+        {
+            "affiliation": "Department of Neurosurgery, Huashan Hospital, Shanghai Medical College, Fudan University, Shanghai, China.\nNational Center for Neurological Disorders, Shanghai, China.\nNeurosurgical Institute of Fudan University, Shanghai, China.\nShanghai Clinical Medical Center of Neurosurgery, Shanghai, China.\nShanghai Key Laboratory of Brain Function Restoration and Neural Regeneration, Shanghai, China.\nResearch Units of New Technologies of Micro-Endoscopy Combination in Skull Base Surgery, Chinese Academy of Medical Sciences (CAMS), Shanghai, China.",
+            "firstname": "Wei",
+            "initials": "W",
+            "lastname": "Zhu"
+        },
+        {
+            "affiliation": "Institute of Neuroscience, National Yang Ming Chiao Tung University, Hsinchu, Taiwan.",
+            "firstname": "Ching-Po",
+            "initials": "CP",
+            "lastname": "Lin"
+        },
+        {
+            "affiliation": "Department of Neurosurgery, Huashan Hospital, Shanghai Medical College, Fudan University, Shanghai, China.\nNational Center for Neurological Disorders, Shanghai, China.\nNeurosurgical Institute of Fudan University, Shanghai, China.\nShanghai Clinical Medical Center of Neurosurgery, Shanghai, China.\nShanghai Key Laboratory of Brain Function Restoration and Neural Regeneration, Shanghai, China.\nResearch Units of New Technologies of Micro-Endoscopy Combination in Skull Base Surgery, Chinese Academy of Medical Sciences (CAMS), Shanghai, China.\nDepartment of Neurosurgery, National Regional Medical Center, Fudan University Huashan Hospital, Fuzhou, Fujian, China.",
+            "firstname": "Jianping",
+            "initials": "J",
+            "lastname": "Song"
+        }
+    ],
+    "conclusions": null,
+    "copyrights": "Copyright \u00a9 2023 Yuan, Qiu, Chong, Hsu, Chu, Hsu, Xu, Ko, Kuo, Yang, Zhu, Lin and Song.",
+    "doi": "10.3389/fonc.2023.1089923\n10.3322/caac.21492\n10.1038/s41571-020-00447-z\n10.1001/jamaoncol.2019.6143\n10.3390/metabo12100901\n10.1016/S0006-3495(94)80775-1\n10.1002/nbm.1940080707\n10.1002/nbm.781\n10.1002/1531-8249(199902)45:2<265::aid-ana21>3.0.co;2-3\n10.1016/j.neuroimage.2007.08.031\n10.3171/jns.2004.101.1.0066\n10.1038/s41467-017-01285-x\n10.1111/jon.12283\n10.1016/j.neuroimage.2019.116137\n10.1016/j.neuroimage.2011.09.015\n10.1002/mrm.26059\n10.1016/j.neuroimage.2019.06.039\n10.1016/j.neuroimage.2016.08.016\n10.1002/mrm.26054\n10.1371/journal.pone.0185647\n10.1109/TMI.2010.2046908\n10.1016/j.neuroimage.2012.01.021\n10.3171/2018.4.JNS18403\n10.1093/brain/awu247\n10.3171/2014.10.JNS132647\n10.1056/NEJMoa067819\n10.1016/j.wneu.2015.06.059\n10.1093/brain/awu168\n10.1002/hbm.22991\n10.1093/brain/awab125\n10.1016/j.mri.2011.04.014\n10.1177/10105395211044954\n10.1016/j.neuroimage.2010.09.035\n10.1016/j.neuroimage.2009.08.017\n10.1016/j.neuroimage.2011.01.032\n10.1007/s00701-020-04637-7",
+    "journal": "Frontiers in oncology",
+    "keywords": [
+        "awake neurosurgery",
+        "brain mapping",
+        "diffusion tensor imaging",
+        "functional neuroimaging",
+        "white matter tracts fiber tracking software for neurosurgeon"
+    ],
+    "methods": null,
+    "publication_date": "2023-04-11",
+    "pubmed_id": "37035157\n30207593\n33293629\n32027343\n36295803\n8130344\n8739270\n12489096\n9989633\n17911032\n15255253\n22040405\n29116093\n26259925\n31473352\n21979382\n26599599\n31226495\n27523449\n26745823\n28968429\n20378467\n22248573\n30497229\n25190682\n25423277\n18172171\n26142811\n24970097\n26351094\n33792674\n21664783\n34514860\n20869453\n19683061\n21256221\n33180195",
+    "results": null,
+    "title": "Automatic bundle-specific white matter fiber tracking tool using diffusion tensor imaging data: A pilot trial in the application of language-related glioma resection.",
+    "xml": "<Element 'PubmedArticle' at 0x7fe19344fbd0>"
+}
+{
+    "abstract": "The cerebellum and basal ganglia were initially considered anatomically distinct regions, each connected \nIn this study, we validated and expanded the previous findings of the structural connectivity within the cerebellum-basal ganglia subcortical network, in a larger dataset of 64 subjects, across di\ufb00erent age ranges. Tractography and fixel-based analysis were performed on the 3\u2009T di\ufb00usion-weighted dataset using Mrtrix3 software, considering fiber density and cross-section as indicators of axonal integrity. Tractography of the well-established cerebello-thalamo-cortical tract was conducted as a control. We tested the relationship between the structural white matter integrity of these connections with aging and with the performance in di\ufb00erent domains of Addenbrooke's Cognitive Examination.\nTractography analysis isolated connections from the dentate nucleus to the contralateral putamen \nWe validated the structural connectivity within the cerebellum-basal ganglia reciprocal network, in a larger dataset of human subjects, across wider age range. The structural features of the subcortical cerebello-basal ganglia tracts in human subjects display age-related neurodegeneration. Individual morphological variability of cerebellar tracts to the striatum and prefrontal cortex was associated with di\ufb00erent cognitive functions, suggesting a functional contribution of cerebellar tracts to cognitive decline with aging. This study o\ufb00ers new perspectives to consider the functional role of these pathways in motor learning and the pathophysiology of movement disorders involving the cerebellum and striatum.",
+    "authors": [
+        {
+            "affiliation": "Comprehensive Care Centre for Movement Disorders, Department of Neurology, Sree Chitra Tirunal Institute of Medical Sciences and Technology, Thiruvananthapuram, India.",
+            "firstname": "Vineeth",
+            "initials": "V",
+            "lastname": "Radhakrishnan"
+        },
+        {
+            "affiliation": "INSERM, CNRS, Paris Brain Institute, Sorbonne Universit\u00e9, Paris, France.",
+            "firstname": "Cecile",
+            "initials": "C",
+            "lastname": "Gallea"
+        },
+        {
+            "affiliation": "INSERM, CNRS, Paris Brain Institute, Sorbonne Universit\u00e9, Paris, France.",
+            "firstname": "Romain",
+            "initials": "R",
+            "lastname": "Valabregue"
+        },
+        {
+            "affiliation": "Comprehensive Care Centre for Movement Disorders, Department of Neurology, Sree Chitra Tirunal Institute of Medical Sciences and Technology, Thiruvananthapuram, India.",
+            "firstname": "Syam",
+            "initials": "S",
+            "lastname": "Krishnan"
+        },
+        {
+            "affiliation": "Department of Imaging Sciences and Interventional Radiology, Sree Chitra Tirunal Institute of Medical Sciences and Technology, Thiruvananthapuram, India.",
+            "firstname": "Chandrasekharan",
+            "initials": "C",
+            "lastname": "Kesavadas"
+        },
+        {
+            "affiliation": "Department of Imaging Sciences and Interventional Radiology, Sree Chitra Tirunal Institute of Medical Sciences and Technology, Thiruvananthapuram, India.",
+            "firstname": "Bejoy",
+            "initials": "B",
+            "lastname": "Thomas"
+        },
+        {
+            "affiliation": "Comprehensive Care Centre for Movement Disorders, Department of Neurology, Sree Chitra Tirunal Institute of Medical Sciences and Technology, Thiruvananthapuram, India.",
+            "firstname": "Praveen",
+            "initials": "P",
+            "lastname": "James"
+        },
+        {
+            "affiliation": "Department of Neurology, Sree Chitra Tirunal Institute for Medical Sciences and Technology, Thiruvananthapuram, India.",
+            "firstname": "Ramshekhar",
+            "initials": "R",
+            "lastname": "Menon"
+        },
+        {
+            "affiliation": "Comprehensive Care Centre for Movement Disorders, Department of Neurology, Sree Chitra Tirunal Institute of Medical Sciences and Technology, Thiruvananthapuram, India.\nParkinson and Movement Disorder Centre, Department of Neurology, Aster Medcity, Kochi, India.",
+            "firstname": "Asha",
+            "initials": "A",
+            "lastname": "Kishore"
+        }
+    ],
+    "conclusions": "We validated the structural connectivity within the cerebellum-basal ganglia reciprocal network, in a larger dataset of human subjects, across wider age range. The structural features of the subcortical cerebello-basal ganglia tracts in human subjects display age-related neurodegeneration. Individual morphological variability of cerebellar tracts to the striatum and prefrontal cortex was associated with di\ufb00erent cognitive functions, suggesting a functional contribution of cerebellar tracts to cognitive decline with aging. This study o\ufb00ers new perspectives to consider the functional role of these pathways in motor learning and the pathophysiology of movement disorders involving the cerebellum and striatum.",
+    "copyrights": "Copyright \u00a9 2023 Radhakrishnan, Gallea, Valabregue, Krishnan, Kesavadas, Thomas, James, Menon and Kishore.",
+    "doi": "10.3389/fnagi.2023.1019239\n10.1007/BF00239724\n10.1002/ana.20442\n10.1093/brain/awl162\n10.1016/0165-0173(83)90015-2\n10.1523/JNEUROSCI.0895-11.2011\n10.1080/87565641003696775\n10.1016/j.neuroscience.2013.11.026\n10.1016/j.tins.2007.03.006\n10.1186/s40673-017-0064-8\n10.1073/pnas.1000496107\n10.1038/s41583-018-0002-7\n10.1002/cne.22379\n10.1016/j.neuroimage.2011.05.059\n10.1126/science.aav0581\n10.1002/hbm.25008\n10.1038/s41598-021-83983-7\n10.1016/j.neuroimage.2019.06.039\n10.1038/s41467-022-30844-0\n10.1038/ncomms13629\n10.25259/SNI_338_2021\n10.1016/S0959-4388(00)00153-7\n10.3389/fnhum.2014.00410\n10.1093/cercor/bhv102\n10.1136/jnnp.54.5.388\n10.1007/s12311-019-01083-9\n10.1523/JNEUROSCI.1868-09.2009\n10.1016/j.jchemneu.2003.10.003\n10.1093/brain/awx317\n10.1038/nn1544\n10.1016/j.neurobiolaging.2011.10.017\n10.1016/s1053-8119(02)91132-8\n10.1093/braincomms/fcab125\n10.1136/jnnp-2017-316250\n10.1007/BF00201431\n10.1098/rstb.1971.0106\n10.3389/fneur.2014.00068\n10.3389/fneur.2014.00157\n10.1016/j.neuroimage.2006.08.039\n10.1038/nn.2723\n10.1002/gps.1239\n10.5281/zenodo.3530921\n10.7916/tohm.v0.682\n10.4103/0972-2327.144018\n10.3389/fnana.2016.00029\n10.1159/000100736\n10.1016/s0896-6273(03)00169-7\n10.1080/13803395.2011.614599\n10.1038/s41598-017-02469-7\n10.1016/j.parkreldis.2020.12.001\n10.3389/fnsys.2014.00163\n10.1001/archneur.61.8.1307\n10.1111/ejn.12314\n10.1523/JNEUROSCI.4254-11.2012\n10.1016/j.neuroimage.2012.10.008\n10.1016/j.neuroimage.2011.10.045\n10.1016/j.neuroimage.2016.09.029\n10.1016/j.neuroimage.2015.05.039\n10.1016/j.neuroimage.2019.116189\n10.1016/j.clinph.2011.04.027\n10.1002/(SICI)1096-9861(19960429)368:2<215::AID-CNE4>3.0.CO;2-6\n10.1016/j.neurobiolaging.2010.04.027\n10.1016/j.neurobiolaging.2004.09.017\n10.1016/j.neulet.2018.07.005\n10.1126/science.275.5306.1593\n10.1002/hbm.10062\n10.1016/j.neuroimage.2004.07.051\n10.1016/j.neuroimage.2008.08.039\n10.1016/j.neuroimage.2011.08.065\n10.1146/annurev.neuro.31.060407.125606\n10.1016/s0197-4580(97)00155-3\n10.1016/j.neuroimage.2019.116137\n10.1016/j.neuroimage.2004.07.037\n10.1093/scan/nsaa124\n10.1007/s12311-020-01155-1\n10.1016/j.neuroimage.2016.08.016\n10.1016/j.neuron.2009.12.027\n10.1002/ana.20424\n10.1093/brain/aws360\n10.3174/ajnr.A1870\n10.1002/hbm.23427",
+    "journal": "Frontiers in aging neuroscience",
+    "keywords": [
+        "aging",
+        "basal ganglia",
+        "cerebellum",
+        "connectivity",
+        "diffusion",
+        "learning",
+        "memory",
+        "tractography"
+    ],
+    "methods": null,
+    "publication_date": "2023-02-14",
+    "pubmed_id": "36776439\n210029\n15786454\n16844713\n6189561\n21753011\n20446132\n24280637\n17408759\n28515949\n20404184\n29643480\n20533359\n21664278\n30655412\n32304267\n33633204\n31226495\n35680891\n27976682\n34513166\n11240282\n25018721\n25994960\n1865199\n31707620\n9763385\n19571149\n14729134\n29206893\n16205719\n22118947\n12377157\n34222873\n29089396\n1486143\n26745823\n4399123\n24834063\n25183959\n17056276\n21270784\n15526301\n31632837\n25506164\n27047348\n3329871\n12718865\n22047489\n28539669\n33307418\n25309350\n15313852\n23879686\n22238098\n23063452\n22036682\n27639350\n26004503\n14561615\n31521825\n22078259\n8725303\n20594616\n15917106\n29997061\n9054347\n12391568\n15501092\n18835452\n21907811\n19555291\n9461058\n31473352\n15528117\n32888303\n32632709\n27523449\n20152119\n15747371\n23404337\n19926703\n27726278",
+    "results": "Tractography analysis isolated connections from the dentate nucleus to the contralateral putamen ",
+    "title": "Cerebellar and basal ganglia structural connections in humans: Effect of aging and relation with memory and learning.",
+    "xml": "<Element 'PubmedArticle' at 0x7fe193487b80>"
+}
+{
+    "abstract": "",
+    "authors": [
+        {
+            "affiliation": "Center of Functionally Integrative Neuroscience, Department of Clinical Medicine, Aarhus University, Aarhus, Denmark.",
+            "firstname": "Mikkel V",
+            "initials": "MV",
+            "lastname": "Petersen"
+        },
+        {
+            "affiliation": "Department of Biomedical Engineering and Duke University, Durham, North Carolina, USA.\nDepartment of Neurosurgery, Duke University, Durham, North Carolina, USA.",
+            "firstname": "Cameron C",
+            "initials": "CC",
+            "lastname": "McIntyre"
+        }
+    ],
+    "conclusions": null,
+    "copyrights": null,
+    "doi": "10.1089/brain.2022.0068\n10.1016/j.neuroimage.2021.118135\n10.1016/j.brs.2022.03.002\n10.1093/cercor/bhx066\n10.3389/fninf.2014.00044\n10.1093/cercor/bhab500\n10.1016/j.neuroimage.2010.10.059\n10.1016/j.brs.2010.01.003\n10.1227/NEU.0000000000000540\n10.1016/j.neuroimage.2021.118543\n10.3389/fnana.2020.00013\n10.1007/s00429-007-0170-0\n10.1016/j.neuroimage.2013.04.127\n10.1016/j.neuroimage.2018.01.015\n10.1007/s12021-020-09497-1\n10.1016/j.neuroimage.2020.117180\n10.1016/j.neuroimage.2018.08.068\n10.1016/j.brs.2021.03.009\n10.1016/j.celrep.2022.110439\n10.1016/j.neuroimage.2014.07.061\n10.3389/fnana.2021.739576\n10.1038/s41467-017-01285-x\n10.1111/ner.13350\n10.3171/2017.9.JNS171321\n10.1016/j.neuroimage.2008.07.009\n10.1016/j.parkreldis.2004.02.007\n10.1016/j.neuroimage.2011.02.046\n10.1038/sdata.2018.63\n10.3171/2016.4.JNS1624\n10.1016/j.neuron.2019.09.030\n10.1016/j.neuroimage.2022.119029\n10.1016/j.neuroimage.2018.10.029\n10.1016/j.neuroimage.2021.118502\n10.1016/j.biopsych.2021.11.007\n10.1016/j.neuroimage.2012.06.005\n10.1073/pnas.1405672111\n10.1136/jnnp.2007.117507\n10.1016/j.neuroimage.2019.116137\n10.1016/j.neuroimage.2015.09.014\n10.1093/brain/aww020\n10.1016/j.neuroimage.2007.02.049\n10.1016/j.neuroimage.2020.117307\n10.1016/j.neuroimage.2018.05.027\n10.1016/j.neuroimage.2006.09.026\n10.1016/j.neuroimage.2017.12.064",
+    "journal": "Brain connectivity",
+    "keywords": [
+        "ansa lenticularis",
+        "dentatorubrothalamic tract",
+        "internal capsule",
+        "lenticular fasciculus",
+        "pyramidal tract"
+    ],
+    "methods": null,
+    "publication_date": "2023-02-12",
+    "pubmed_id": "36772800\n33951517\n35292403\n28334314\n24817849\n35169827\n20974269\n20607090\n25161000\n34508893\n32390807\n18193279\n23668970\n29331449\n33196967\n32702488\n30179717\n33757931\n35235786\n25109526\n34776880\n29116093\n33389779\n29570012\n18692144\n15120094\n21352927\n29664465\n27392264\n31708306\n35231632\n30317017\n34433094\n35063186\n22705374\n25368179\n17928327\n31473352\n26385011\n26921616\n17481925\n32861787\n29758339\n17110133\n29355769",
+    "results": null,
+    "title": "Comparison of Anatomical Pathway Models with Tractography Estimates of the Pallidothalamic, Cerebellothalamic, and Corticospinal Tracts.",
+    "xml": "<Element 'PubmedArticle' at 0x7fe1934be040>"
+}
+{
+    "abstract": "Diffusion weighted MRI is an indispensable tool for routine patient screening and diagnostics of pathology. Recently, several deep learning methods have been proposed to quantify diffusion parameters, but poor generalisation to new data prevents broader use of these methods, as they require retraining of the neural network for each new scan protocol. In this work, we present the dtiRIM, a new deep learning method for Diffusion Tensor Imaging (DTI) based on the Recurrent Inference Machines. Thanks to its ability to learn how to solve inverse problems and to use the diffusion tensor model to promote data consistency, the dtiRIM can generalise to variations in the acquisition settings. This enables a single trained network to produce high quality tensor estimates for a variety of cases. We performed extensive validation of our method using simulation and in vivo data, and compared it to the Iterated Weighted Linear Least Squares (IWLLS), the approach of the state-of-the-art MRTrix3 software, and to an implementation of the Maximum Likelihood Estimator (MLE). Our results show that dtiRIM predictions present low dependency on tissue properties, anatomy and scanning parameters, with results comparable to or better than both IWLLS and MLE. Further, we demonstrate that a single dtiRIM model can be used for a diversity of data sets without significant loss in quality, representing, to our knowledge, the first generalisable deep learning based solver for DTI.",
+    "authors": [
+        {
+            "affiliation": "Erasmus MC University Medical Center, Department of Radiology and Nuclear Medicine, Rotterdam, the Netherlands. Electronic address: emanoel.sabidussi@gmail.com.",
+            "firstname": "E R",
+            "initials": "ER",
+            "lastname": "Sabidussi"
+        },
+        {
+            "affiliation": "Erasmus MC University Medical Center, Department of Radiology and Nuclear Medicine, Rotterdam, the Netherlands.",
+            "firstname": "S",
+            "initials": "S",
+            "lastname": "Klein"
+        },
+        {
+            "affiliation": "imec-Vision Lab, Department of Physics, University of Antwerp, Antwerp, Belgium; Lab for Equilibrium Investigations and Aerospace, Department of Physics, University of Antwerp, Antwerp, Belgium.",
+            "firstname": "B",
+            "initials": "B",
+            "lastname": "Jeurissen"
+        },
+        {
+            "affiliation": "Erasmus MC University Medical Center, Department of Radiology and Nuclear Medicine, Rotterdam, the Netherlands.",
+            "firstname": "D H J",
+            "initials": "DHJ",
+            "lastname": "Poot"
+        }
+    ],
+    "conclusions": null,
+    "copyrights": "Copyright \u00a9 2023. Published by Elsevier Inc.",
+    "doi": "10.1016/j.neuroimage.2023.119900",
+    "journal": "NeuroImage",
+    "keywords": [
+        "Deep learning",
+        "Diffusion tensor imaging",
+        "Diffusion-weighted MRI",
+        "Generalisable",
+        "Recurrent inference machines"
+    ],
+    "methods": null,
+    "publication_date": "2023-01-27",
+    "pubmed_id": "36702213",
+    "results": null,
+    "title": "dtiRIM: A generalisable deep learning method for diffusion tensor imaging.",
+    "xml": "<Element 'PubmedArticle' at 0x7fe193609cc0>"
+}
+{
+    "abstract": "The diffusion properties from diffusion tensor imaging (DTI) are sensitive to white matter (WM) abnormalities and could serve as indicators of diffuse axonal damages incurred during a traumatic brain injury (TBI). Analyses of diffusion metrics in the regions of interest (ROIs) were used to compare the differences in the 18 major fiber tracts in 46 participants, between TBI participants with (n\u00a0=\u00a017) or without (n\u00a0=\u00a016) chronic symptoms (CS) and a control group (CG, n\u00a0=\u00a013). In addition to the widely used diffusion metrics, such as fractional anisotropy (FA), mean (MD), axial (AD) and radial (RD) diffusivities, apparent fiber density (AFD), complexity (CX) and fixel number (FN) derived from Mrtrix3 software package were used to characterize WM tracts and compare between participant groups in the ROIs defined by the fixel numbers. Significant differences were found in FA, AFD, MD, RD and CX in ROIs with different FNs in the corpus callosum forceps minor, left and right inferior longitudinal fasciculus, and left and right uncinate fasciculus for both TBI groups compared to controls. Diffusion properties in ROIs with different FNs can serve as detailed biomarkers of WM abnormalities, especially for individuals with chronic TBI related symptoms.",
+    "authors": [
+        {
+            "affiliation": "WRIISC-Women, VA Palo Alto Health Care System, 3801 Miranda Avenue, Palo Alto, CA 94304, USA; Rehabilitation Service, VA Palo Alto Health Care System, 3801 Miranda Avenue, Palo Alto, CA 94304, USA. Electronic address: xkang@stanford.edu.",
+            "firstname": "Xiaojian",
+            "initials": "X",
+            "lastname": "Kang"
+        },
+        {
+            "affiliation": "Department of Radiology, Stanford University School of Medicine, VA Palo Alto Heath Care System, Palo Alto, CA 94304, USA.",
+            "firstname": "Byung C",
+            "initials": "BC",
+            "lastname": "Yoon"
+        },
+        {
+            "affiliation": "WRIISC-Women, VA Palo Alto Health Care System, 3801 Miranda Avenue, Palo Alto, CA 94304, USA; Rehabilitation Service, VA Palo Alto Health Care System, 3801 Miranda Avenue, Palo Alto, CA 94304, USA.",
+            "firstname": "Siddhi",
+            "initials": "S",
+            "lastname": "Shah"
+        },
+        {
+            "affiliation": "WRIISC-Women, VA Palo Alto Health Care System, 3801 Miranda Avenue, Palo Alto, CA 94304, USA; Rehabilitation Service, VA Palo Alto Health Care System, 3801 Miranda Avenue, Palo Alto, CA 94304, USA; Department of Neurosurgery, Stanford University School of Medicine, 300 Pasteur Dr, Stanford, CA 94305, USA.",
+            "firstname": "Maheen M",
+            "initials": "MM",
+            "lastname": "Adamson"
+        }
+    ],
+    "conclusions": null,
+    "copyrights": "Copyright \u00a9 2023 Elsevier Ltd and Japan Neuroscience Society. All rights reserved.",
+    "doi": "10.1016/j.neures.2023.01.009",
+    "journal": "Neuroscience research",
+    "keywords": [
+        "Apparent fiber density",
+        "Complexity",
+        "DTI",
+        "Fiber orientation distribution",
+        "Fixel",
+        "TBI"
+    ],
+    "methods": null,
+    "publication_date": "2023-01-23",
+    "pubmed_id": "36682692",
+    "results": null,
+    "title": "Fixel-based analysis of the diffusion properties of the patients with brain injury and chronic health symptoms.",
+    "xml": "<Element 'PubmedArticle' at 0x7fe193613810>"
+}
+{
+    "abstract": "This study explores the feasibility of implementing a tractography-based navigated transcranial magnetic stimulation (nTMS) language mapping protocol targeting cortical terminations of the arcuate fasciculus (AF). We compared the results and distribution of errors from the new protocol to an established perisylvian nTMS protocol that stimulated without any specific targeting over the entire perisylvian cortex.\nSixty right-handed patients with language-eloquent brain tumors were examined in this study with one half of the cohort receiving the tractographybased protocol and the other half receiving the perisylvian protocol. Probabilistic tractography using MRtrix3 was performed for patients in the tractography-based group to identify the AF's cortical endpoints. nTMS mappings were performed and resulting language errors were classified into five psycholinguistic groups.\nTractography and nTMS were successfully performed in all patients. The tractogram-based group showed a significantly higher median overall ER than the perisylvian group (3.8% vs. 2.9% p <.05). The median ER without hesitation errors in the tractogram-based group was also significantly higher than the perisylvian group (2.0% vs. 1.4%, p <.05). The ERs by error type showed no significant differences between protocols except in the no response ER, with a higher median ER in the tractogram-based group (0.4% vs. 0%, p <.05). Analysis of ERs based on the Corina cortical parcellation system showed especially high nTMS ERs over the posterior middle temporal gyrus (pMTG) in the perisylvian protocol and high ERs over the middle and ventral postcentral gyrus (vPoG), the opercular inferior frontal gyrus (opIFG) and the ventral precentral gyrus (vPrG) in the tractography-based protocol.\nBy considering the white matter anatomy and performing nTMS on the cortical endpoints of the AF, the efficacy of nTMS in disrupting patients' object naming abilities was increased. The newly introduced method showed proof of concept and resulted in AF-specific ERs and noninvasive cortical language maps, which could be applied to additional fiber bundles related to the language network in future nTMS studies.",
+    "authors": [
+        {
+            "affiliation": "Image Guidance Lab, Department of Neurosurgery, Charit\u00e9 - University Hospital, Berlin, Germany.",
+            "firstname": "Klara",
+            "initials": "K",
+            "lastname": "Reisch"
+        },
+        {
+            "affiliation": "Image Guidance Lab, Department of Neurosurgery, Charit\u00e9 - University Hospital, Berlin, Germany.",
+            "firstname": "Franziska",
+            "initials": "F",
+            "lastname": "B\u00f6ttcher"
+        },
+        {
+            "affiliation": "Image Guidance Lab, Department of Neurosurgery, Charit\u00e9 - University Hospital, Berlin, Germany.",
+            "firstname": "Mehmet S",
+            "initials": "MS",
+            "lastname": "Tuncer"
+        },
+        {
+            "affiliation": "Image Guidance Lab, Department of Neurosurgery, Charit\u00e9 - University Hospital, Berlin, Germany.",
+            "firstname": "Heike",
+            "initials": "H",
+            "lastname": "Schneider"
+        },
+        {
+            "affiliation": "Image Guidance Lab, Department of Neurosurgery, Charit\u00e9 - University Hospital, Berlin, Germany.",
+            "firstname": "Peter",
+            "initials": "P",
+            "lastname": "Vajkoczy"
+        },
+        {
+            "affiliation": "Image Guidance Lab, Department of Neurosurgery, Charit\u00e9 - University Hospital, Berlin, Germany.\nCluster of Excellence: \"Matters of Activity. Image Space Material\", Humboldt University, Berlin, Germany.",
+            "firstname": "Thomas",
+            "initials": "T",
+            "lastname": "Picht"
+        },
+        {
+            "affiliation": "Image Guidance Lab, Department of Neurosurgery, Charit\u00e9 - University Hospital, Berlin, Germany.\nCluster of Excellence: \"Matters of Activity. Image Space Material\", Humboldt University, Berlin, Germany.",
+            "firstname": "Lucius S",
+            "initials": "LS",
+            "lastname": "Fekonja"
+        }
+    ],
+    "conclusions": null,
+    "copyrights": "Copyright \u00a9 2022 Reisch, B\u00f6ttcher, Tuncer, Schneider, Vajkoczy, Picht and Fekonja.",
+    "doi": "10.3389/fonc.2022.1008442\n10.1056/NEJMoa067819\n10.1007/s00701-017-3397-4\n10.1016/j.neuroimage.2013.05.018\n10.1227/NEU.0b013e3182889e01\n10.3389/fnins.2016.00552\n10.1016/j.clinph.2015.11.017\n10.3171/2014.10.JNS141582\n10.1016/j.neuroimage.2008.09.040\n10.1007/s101430100151\n10.1007/s00701-017-3187-z\n10.1016/j.conb.2012.10.002\n10.3171/2014.10.JNS132647\n10.1093/brain/aws222\n10.1073/pnas.0805234105\n10.1038/nrn2113\n10.1016/j.cortex.2008.04.002\n10.3389/fnhum.2021.672665\n10.1016/j.nicl.2020.102541\n10.1111/joa.12204\n10.1002/nbm.3785\n10.3171/2016.4.JNS152896\n10.1227/NEU.0000000000000502\n10.1093/braincomms/fcaa158\n10.1007/s12264-017-0137-y\n10.1002/hbm.25757\n10.1016/j.neuroimage.2019.116137\n10.1016/0028-3932(71)90067-4\n10.1016/j.cortex.2021.08.002\n10.1016/j.nicl.2020.102536\n10.1002/gps.1042\n10.1016/j.neuroimage.2007.02.016\n10.1016/j.neuroimage.2011.09.015\n10.1016/j.neuroimage.2010.09.025\n10.1101/2020.10.28.20220293\n10.1016/j.neuroimage.2016.08.016\n10.1002/mrm.26054\n10.1002/mrm.21890\n10.1016/j.neuroimage.2017.02.085\n10.1016/S1053-8119(03)00336-7\n10.1007/s00701-019-03899-0\n10.1016/j.neuroimage.2006.01.015\n10.1016/j.neuroimage.2021.118502\n10.5281/zenodo.7387973\n10.1007/s11548-022-02736-7\n10.1016/j.clinph.2013.08.015\n10.1016/j.bandl.2010.04.001\n10.1016/j.jneumeth.2011.11.003\n10.1038/s41586-020-2649-2\n10.1038/s41592-019-0686-2\n10.5395/rde.2017.42.2.152\n10.1007/978-1-4419-9863-7_1215\n10.21105/joss.03021\n10.1007/s00401-007-0278-6\n10.3171/2020.3.JNS193085\n10.1109/TMI.2008.2004424\n10.4236/jbise.2013.62023\n10.1016/j.clinph.2015.11.042\n10.1007/s00701-019-04159-x\n10.1002/hbm.25619\n10.1016/S1474-4422(05)70140-X\n10.1016/j.jocn.2005.11.045\n10.1016/j.neuroimage.2010.07.036\n10.1002/ana.20319\n10.1007/s00276-019-02244-5\n10.1097/00001756-200310270-00026\n10.1523/JNEUROSCI.4705-14.2015\n10.1016/j.cognition.2003.11.002\n10.1186/1471-2202-15-20\n10.1073/pnas.0702116104\n10.1007/s00429-014-0751-7\n10.3389/fnana.2018.00077\n10.1093/ons/opy267\n10.1093/brain/awt094\n10.1007/s00415-009-0053-9\n10.1007/s00429-019-01987-6\n10.1016/j.neuroimage.2018.10.029\n10.1016/j.pnmrs.2019.03.001\n10.1038/s41467-017-01285-x\n10.1007/s00429-018-1663-8\n10.1016/j.neuroimage.2018.07.070",
+    "journal": "Frontiers in oncology",
+    "keywords": [
+        "diffusion magnetic resonance imaging",
+        "glioma",
+        "language mapping",
+        "preoperative planning",
+        "tractography",
+        "transcranial magnetic stimulation"
+    ],
+    "methods": null,
+    "publication_date": "2022-12-27",
+    "pubmed_id": "36568245\n18172171\n29224085\n23702420\n23385773\n27994536\n26679420\n25884257\n18976714\n11778822\n28456870\n23146876\n25423277\n23107648\n19004769\n17431404\n18614162\n34248526\n33401138\n24975421\n28945294\n27257834\n25072115\n33543136\n28501904\n34951084\n31473352\n5146491\n6209953\n34537591\n33360768\n14758579\n17379540\n21979382\n20851191\n33585250\n27523449\n26745823\n19319973\n28284799\n14568458\n31004240\n16545965\n34433094\n36070033\n24051073\n20452661\n22108143\n32939066\n32015543\n28503482\n17618441\n32470943\n19188114\n25328583\n26762952\n31823119\n34387388\n16033690\n17049865\n20656040\n15597383\n31028450\n14561939\n26586812\n15037129\n24479694\n17939998\n24633827\n30283306\n30260438\n23649697\n19271103\n31773331\n30317017\n31481155\n29116093\n29663135\n30086412",
+    "results": "Tractography and nTMS were successfully performed in all patients. The tractogram-based group showed a significantly higher median overall ER than the perisylvian group (3.8% vs. 2.9% p <.05). The median ER without hesitation errors in the tractogram-based group was also significantly higher than the perisylvian group (2.0% vs. 1.4%, p <.05). The ERs by error type showed no significant differences between protocols except in the no response ER, with a higher median ER in the tractogram-based group (0.4% vs. 0%, p <.05). Analysis of ERs based on the Corina cortical parcellation system showed especially high nTMS ERs over the posterior middle temporal gyrus (pMTG) in the perisylvian protocol and high ERs over the middle and ventral postcentral gyrus (vPoG), the opercular inferior frontal gyrus (opIFG) and the ventral precentral gyrus (vPrG) in the tractography-based protocol.",
+    "title": "Tractography-based navigated TMS language mapping protocol.",
+    "xml": "<Element 'PubmedArticle' at 0x7fe193619cc0>"
+}
+{
+    "abstract": "Top-down processes such as expectations play a key role in pain perception. In specific contexts, inferred threat of impending pain can affect perceived pain more than the noxious intensity. This biasing effect of top-down threats can affect some individuals more strongly than others due to differences in fear of pain. The specific characteristics of intrinsic brain characteristics that mediate the effects of top-down threat bias are mainly unknown. In this study, we examined whether threat bias is associated with structural and functional brain connectivity. The variability in the top-down bias was mapped to the microstructure of white matter in diffusion weighted images (DWI) using MRTrix3. Mean functional connectivity of five canonical resting state networks was tested for association with bias scores and with the identified DWI metrics. We found that the fiber density of the splenium of the corpus callosum was significantly low in individuals with high top-down threat bias (FWE corrected with 5000 permutations, p\u00a0<\u00a00.05). The mean functional connectivity within the language/memory and between language/memory and default mode networks predicted the bias scores. Functional connectivity within language memory networks predicted the splenium fiber density, higher pain catastrophizing and lower mindful awareness. Probabilistic tractography showed that the identified region in the splenium connected several sensory regions and high-order parietal regions between the two hemispheres, indicating the splenium's role in sensory integration. These findings demonstrate that individuals who show more change in pain with changes in the threat of receiving a stronger noxious stimulus have lower structural connectivity in the pathway necessary for integrating top-down cue information with bottom-up sensory information. Conversely, systems involved in memory recall, semantic and self-referential processing are more strongly connected in people with top-down threat bias.",
+    "authors": [
+        {
+            "affiliation": "Department of Anesthesia, Pain Management & Perioperative Medicine, Dalhousie University, NSHA, Halifax B3H 1V7, Canada.",
+            "firstname": "Guillermo",
+            "initials": "G",
+            "lastname": "Aristi"
+        },
+        {
+            "affiliation": "Department of Anesthesia, Pain Management & Perioperative Medicine, Dalhousie University, NSHA, Halifax B3H 1V7, Canada.",
+            "firstname": "Christopher",
+            "initials": "C",
+            "lastname": "O'Grady"
+        },
+        {
+            "affiliation": "Department of Anesthesia, Pain Management & Perioperative Medicine, Dalhousie University, NSHA, Halifax B3H 1V7, Canada.",
+            "firstname": "Chris",
+            "initials": "C",
+            "lastname": "Bowen"
+        },
+        {
+            "affiliation": "Department of Anesthesia, Pain Management & Perioperative Medicine, Dalhousie University, NSHA, Halifax B3H 1V7, Canada.",
+            "firstname": "Steven",
+            "initials": "S",
+            "lastname": "Beyea"
+        },
+        {
+            "affiliation": "Harvard Medical School, Mass General Hospital, Boston, MA. 02129, USA.",
+            "firstname": "Sara W",
+            "initials": "SW",
+            "lastname": "Lazar"
+        },
+        {
+            "affiliation": "Department of Anesthesia, Pain Management & Perioperative Medicine, Dalhousie University, NSHA, Halifax B3H 1V7, Canada. Electronic address: javeria.hashmi@dal.ca.",
+            "firstname": "Javeria Ali",
+            "initials": "JA",
+            "lastname": "Hashmi"
+        }
+    ],
+    "conclusions": null,
+    "copyrights": "Copyright \u00a9 2022. Published by Elsevier Inc.",
+    "doi": "10.1016/j.neuroimage.2022.119349",
+    "journal": "NeuroImage",
+    "keywords": [
+        "Bias, Top-down",
+        "Diffusion MRI",
+        "Expectation",
+        "Functional MRI",
+        "Functional connectivity",
+        "Mindfulness",
+        "Pain catastrophizing",
+        "Pain, perception",
+        "Prediction",
+        "System segregation",
+        "Threat"
+    ],
+    "methods": null,
+    "publication_date": "2022-06-12",
+    "pubmed_id": "35690258",
+    "results": null,
+    "title": "Top-down threat bias in pain perception is predicted by intrinsic structural and functional connections of the brain.",
+    "xml": "<Element 'PubmedArticle' at 0x7fe1936527c0>"
+}
+{
+    "abstract": "Diplomats representing the USA have reported with unusual neurologic symptoms and MRI changes after being posted in Havana, Cuba between late 2016 and 2018. Here, we examined white matter microstructure and network connectivity of individuals stationed in Havana, using diffusion-weighted MRI, fixel-based analysis and structural connectomics as implemented in MRtrix3. MRI data acquisition and clinical assessments were done in a total of 24 diplomats and their family members and 40 healthy controls. The diplomat data were grouped into an exposed cohort (",
+    "authors": [
+        {
+            "affiliation": "Department of Anesthesia, Pain Management & Perioperative Medicine, Dalhousie University, Nova Scotia Health Authority, Halifax, Canada B3H 1V7.",
+            "firstname": "Guillermo",
+            "initials": "G",
+            "lastname": "Aristi"
+        },
+        {
+            "affiliation": "Departments of Medical Neuroscience, Pediatric and Surgery, Dalhousie University, Nova Scotia Health Authority, Halifax, Canada B3H 4R2.",
+            "firstname": "Lyna",
+            "initials": "L",
+            "lastname": "Kamintsky"
+        },
+        {
+            "affiliation": "Department of Psychiatry, Dalhousie University, NSHA, Halifax, Canada B3H 1V7.",
+            "firstname": "Margaux",
+            "initials": "M",
+            "lastname": "Ross"
+        },
+        {
+            "affiliation": "Department of Diagnostic Radiology, Dalhousie University, NSHA, Halifax Canada, B3H 1V7.",
+            "firstname": "Chris",
+            "initials": "C",
+            "lastname": "Bowen"
+        },
+        {
+            "affiliation": "Department of Psychiatry, Dalhousie University, NSHA, Halifax, Canada B3H 1V7.",
+            "firstname": "Cynthia",
+            "initials": "C",
+            "lastname": "Calkin"
+        },
+        {
+            "affiliation": "Departments of Medical Neuroscience, Pediatric and Surgery, Dalhousie University, Nova Scotia Health Authority, Halifax, Canada B3H 4R2.\nDepartment of Brain and Cognitive Sciences, Zlotowski Center for Neuroscience, Ben-Gurion University of the Negev, Beer-Sheva 1084105, Israel.",
+            "firstname": "Alon",
+            "initials": "A",
+            "lastname": "Friedman"
+        },
+        {
+            "affiliation": "Department of Anesthesia, Pain Management & Perioperative Medicine, Dalhousie University, Nova Scotia Health Authority, Halifax, Canada B3H 1V7.",
+            "firstname": "Javeria A",
+            "initials": "JA",
+            "lastname": "Hashmi"
+        }
+    ],
+    "conclusions": null,
+    "copyrights": "\u00a9 The Author(s) 2022. Published by Oxford University Press on behalf of the Guarantors of Brain.",
+    "doi": "10.1093/braincomms/fcac053\n10.1101/19007096",
+    "journal": "Brain communications",
+    "keywords": [
+        "Havana syndrome",
+        "brain injury",
+        "diffusion-weighted MRI",
+        "headache",
+        "white matter"
+    ],
+    "methods": null,
+    "publication_date": "2022-05-05",
+    "pubmed_id": "35505689\n30828629\n29450484\n29709238\n31334794\n31999046\n28609579\n27981032\n22611035\n28461700\n26004503\n27639350\n29845009\n25555998\n32499553\n20600983\n25647751\n31896672\n26717528\n24141845\n20819842\n11703471\n26606250\n2748771\n8551320\n29863894\n15501092\n20378467\n28092321\n22705374\n23238430\n26163802\n29309541\n18219185\n29383621\n18617586\n26405087\n22404852\n25653617\n28126745\n9786305\n22440225\n20620868\n23627735\n32897306",
+    "results": null,
+    "title": "Symptoms reported by Canadians posted in Havana are linked with reduced white matter fibre density.",
+    "xml": "<Element 'PubmedArticle' at 0x7fe19365bc20>"
+}
+{
+    "abstract": "Diffusion imaging aims to non-invasively characterize the anatomy and integrity of the brain's white matter fibers. We evaluated the accuracy and reliability of commonly used diffusion imaging methods as a function of data quantity and analysis method, using both simulations and highly sampled individual-specific data (927-1442 diffusion weighted images [DWIs] per individual). Diffusion imaging methods that allow for crossing fibers (FSL's BedpostX [BPX], DSI Studio's Constant Solid Angle Q-Ball Imaging [CSA-QBI], MRtrix3's Constrained Spherical Deconvolution [CSD]) estimated excess fibers when insufficient data were present and/or when the data did not match the model priors. To reduce such overfitting, we developed a novel Bayesian Multi-tensor Model-selection (BaMM) method and applied it to the popular ball-and-stick model used in BedpostX within the FSL software package. BaMM was robust to overfitting and showed high reliability and the relatively best crossing-fiber accuracy with increasing amounts of diffusion data. Thus, sufficient data and an overfitting resistant analysis method enhance precision diffusion imaging. For potential clinical applications of diffusion imaging, such as neurosurgical planning and deep brain stimulation (DBS), the quantities of data required to achieve diffusion imaging reliability are lower than those needed for functional MRI.",
+    "authors": [
+        {
+            "affiliation": "Department of Psychiatry, Washington University School of Medicine, St. Louis, MO 63110, United States of America.",
+            "firstname": "Nicole A",
+            "initials": "NA",
+            "lastname": "Seider"
+        },
+        {
+            "affiliation": "Department of Neurology, Washington University School of Medicine, St. Louis, MO 63110, United States of America.",
+            "firstname": "Babatunde",
+            "initials": "B",
+            "lastname": "Adeyemo"
+        },
+        {
+            "affiliation": "Department of Psychiatry, Washington University School of Medicine, St. Louis, MO 63110, United States of America; Department of Neurology, Washington University School of Medicine, St. Louis, MO 63110, United States of America.",
+            "firstname": "Ryland",
+            "initials": "R",
+            "lastname": "Miller"
+        },
+        {
+            "affiliation": "Department of Neurology, Washington University School of Medicine, St. Louis, MO 63110, United States of America; Department of Neurology, New York University Langone Medical Center, New York, NY 10016, United States of America.",
+            "firstname": "Dillan J",
+            "initials": "DJ",
+            "lastname": "Newbold"
+        },
+        {
+            "affiliation": "Department of Psychiatry, Washington University School of Medicine, St. Louis, MO 63110, United States of America.",
+            "firstname": "Jacqueline M",
+            "initials": "JM",
+            "lastname": "Hampton"
+        },
+        {
+            "affiliation": "Department of Psychiatry, Washington University School of Medicine, St. Louis, MO 63110, United States of America; Department of Neurology, Washington University School of Medicine, St. Louis, MO 63110, United States of America.",
+            "firstname": "Kristen M",
+            "initials": "KM",
+            "lastname": "Scheidter"
+        },
+        {
+            "affiliation": "Mallinckrodt Institute of Radiology, Washington University School of Medicine, St. Louis, MO 63110, United States of America.",
+            "firstname": "Jerrel",
+            "initials": "J",
+            "lastname": "Rutlin"
+        },
+        {
+            "affiliation": "Department of Psychiatry, Washington University School of Medicine, St. Louis, MO 63110, United States of America.",
+            "firstname": "Timothy O",
+            "initials": "TO",
+            "lastname": "Laumann"
+        },
+        {
+            "affiliation": "Department of Neurological Surgery, Washington University School of Medicine, St Louis, MO 63110 United States of America.",
+            "firstname": "Jarod L",
+            "initials": "JL",
+            "lastname": "Roland"
+        },
+        {
+            "affiliation": "Department of Neurology, Washington University School of Medicine, St. Louis, MO 63110, United States of America.",
+            "firstname": "David F",
+            "initials": "DF",
+            "lastname": "Montez"
+        },
+        {
+            "affiliation": "Department of Neurology, Washington University School of Medicine, St. Louis, MO 63110, United States of America; Department of Biomedical Engineering, Washington University in St Louis, St. Louis, MO 63110, United States of America.",
+            "firstname": "Andrew N",
+            "initials": "AN",
+            "lastname": "Van"
+        },
+        {
+            "affiliation": "Department of Neurology, Washington University School of Medicine, St. Louis, MO 63110, United States of America.",
+            "firstname": "Annie",
+            "initials": "A",
+            "lastname": "Zheng"
+        },
+        {
+            "affiliation": "Department of Psychiatry, Washington University School of Medicine, St. Louis, MO 63110, United States of America.",
+            "firstname": "Scott",
+            "initials": "S",
+            "lastname": "Marek"
+        },
+        {
+            "affiliation": "Department of Neurology, Washington University School of Medicine, St. Louis, MO 63110, United States of America.",
+            "firstname": "Benjamin P",
+            "initials": "BP",
+            "lastname": "Kay"
+        },
+        {
+            "affiliation": "Mallinckrodt Institute of Radiology, Washington University School of Medicine, St. Louis, MO 63110, United States of America; Department of Chemistry, Washington University in St Louis, St. Louis, MO 63110, United States of America.",
+            "firstname": "G Larry",
+            "initials": "GL",
+            "lastname": "Bretthorst"
+        },
+        {
+            "affiliation": "Kennedy Krieger Institute, Baltimore, MD 21205, United States of America; Department of Neurology, Johns Hopkins University School of Medicine, Baltimore, MD 21287, United States of America; Department of Pediatrics, Johns Hopkins University School of Medicine, Baltimore, MD 21287, United States of America.",
+            "firstname": "Bradley L",
+            "initials": "BL",
+            "lastname": "Schlaggar"
+        },
+        {
+            "affiliation": "Department of Cognitive Science, University of California, San Diego, La Jolla, CA, United States of America.",
+            "firstname": "Deanna J",
+            "initials": "DJ",
+            "lastname": "Greene"
+        },
+        {
+            "affiliation": "Mallinckrodt Institute of Radiology, Washington University School of Medicine, St. Louis, MO 63110, United States of America; Department of Obstetrics and Gynecology, Washington University School of Medicine, St. Louis, MO 63110, United States of America; Department of Biomedical Engineering, Washington University in St Louis, St. Louis, MO 63110, United States of America.",
+            "firstname": "Yong",
+            "initials": "Y",
+            "lastname": "Wang"
+        },
+        {
+            "affiliation": "Department of Psychiatry, Washington University School of Medicine, St. Louis, MO 63110, United States of America; Mallinckrodt Institute of Radiology, Washington University School of Medicine, St. Louis, MO 63110, United States of America; Department of Biomedical Engineering, Washington University in St Louis, St. Louis, MO 63110, United States of America; Department of Neuroscience, Washington University School of Medicine, St. Louis, MO 63110, United States of America; Department of Psychological and Brain Sciences, Washington University in St. Louis, MO 63110, United States of America.",
+            "firstname": "Steven E",
+            "initials": "SE",
+            "lastname": "Petersen"
+        },
+        {
+            "affiliation": "Department of Psychiatry, Washington University School of Medicine, St. Louis, MO 63110, United States of America; Mallinckrodt Institute of Radiology, Washington University School of Medicine, St. Louis, MO 63110, United States of America; Department of Psychological and Brain Sciences, Washington University in St. Louis, MO 63110, United States of America.",
+            "firstname": "Deanna M",
+            "initials": "DM",
+            "lastname": "Barch"
+        },
+        {
+            "affiliation": "Mallinckrodt Institute of Radiology, Washington University School of Medicine, St. Louis, MO 63110, United States of America.",
+            "firstname": "Evan M",
+            "initials": "EM",
+            "lastname": "Gordon"
+        },
+        {
+            "affiliation": "Department of Neurology, Washington University School of Medicine, St. Louis, MO 63110, United States of America; Mallinckrodt Institute of Radiology, Washington University School of Medicine, St. Louis, MO 63110, United States of America.",
+            "firstname": "Abraham Z",
+            "initials": "AZ",
+            "lastname": "Snyder"
+        },
+        {
+            "affiliation": "Mallinckrodt Institute of Radiology, Washington University School of Medicine, St. Louis, MO 63110, United States of America; Department of Neuroscience, Washington University School of Medicine, St. Louis, MO 63110, United States of America.",
+            "firstname": "Joshua S",
+            "initials": "JS",
+            "lastname": "Shimony"
+        },
+        {
+            "affiliation": "Department of Neurology, Washington University School of Medicine, St. Louis, MO 63110, United States of America; Mallinckrodt Institute of Radiology, Washington University School of Medicine, St. Louis, MO 63110, United States of America; Department of Biomedical Engineering, Washington University in St Louis, St. Louis, MO 63110, United States of America; Program in Occupational Therapy, Washington University School of Medicine, St. Louis, MO 63110, United States of America; Department of Pediatrics, Washington University School of Medicine, St. Louis, MO 63110, United States of America.",
+            "firstname": "Nico U F",
+            "initials": "NUF",
+            "lastname": "Dosenbach"
+        }
+    ],
+    "conclusions": null,
+    "copyrights": "Copyright \u00a9 2022. Published by Elsevier Inc.",
+    "doi": "10.1016/j.neuroimage.2022.119138",
+    "journal": "NeuroImage",
+    "keywords": [],
+    "methods": null,
+    "publication_date": "2022-03-28",
+    "pubmed_id": "35339687\n20535807\n11323803\n29193413\n26481672\n8019776\n8130344\n29486323\n17070705\n14587019\n28728026\n29567376\n30990956\n30290696\n25741721\n30113753\n34216774\n24347370\n28757305\n34718460\n29179667\n31916942\n29673485\n31836321\n11329200\n22334356\n21979382\n15906300\n17188901\n25109526\n15065255\n20886566\n32151760\n18387822\n17388952\n14512617\n26212711\n33743230\n22162075\n20432301\n32035272\n21631321\n29116093\n30473014\n31176831\n24264234\n14645885\n33753484\n32778224\n16971635\n32289460\n22001791\n27480623\n25194848\n8939209\n22422210\n30471463\n25879933\n33822196\n24107956\n29074279\n15501092\n23486659\n27071694\n23702418\n28654718\n32015137\n17379540\n24038308\n31473352\n22015852\n15562495\n22366334\n24816651\n25724201\n29758339\n22484410\n34404728\n34009709",
+    "results": null,
+    "title": "Accuracy and reliability of diffusion imaging models.",
+    "xml": "<Element 'PubmedArticle' at 0x7fe193676f40>"
+}
+{
+    "abstract": "Previous Diffusion Tensor Imaging (DTI) studies in children suggest that developmental improvements in inhibitory control is largely mediated by the degree of white matter organisation within a right-lateralised network of fronto-basal-ganglia regions. Recent advances in diffusion imaging analysis now permit greater biological specificity, both in identifying specific fibre populations within a voxel, as well as in the underlying microstructural properties of that white matter. In the present work, employing a novel fixel-based analysis (FBA) framework, we aimed to comprehensively investigate microstructure within the fronto-basal-ganglia circuit in childhood, and its contribution to inhibition performance. Diffusion MRI data were obtained from 43 healthy children and adolescents aged 9-11 years (10.42\u00a0\u00b1\u00a0.41 years, 18 females). Response inhibition for each participant was assessed using the Stop-signal Task (SST) and quantified as a Stop-Signal Reaction Time (SSRT). All steps relevant to FBA were implemented in MRtrix3Tissue, a fork of the MRtrix3 software library. The fronto-basal-ganglia circuit were delineated using probabilistic tractography to identify the tracts connecting the subthalamic nucleus, pre-supplementary motor area and the inferior frontal gyrus. Connectivity-based fixel enhancement (CFE) was then used to assess the association between fibre density (FD) and fibre cross-section (FC) with inhibitory ability. Significant negative associations were identified for FD in both the right and left fronto-basal-ganglia circuit whereby greater FD was associated with better inhibition performance (e.g., reduced SSRTs). This effect was specifically localised to clusters of fixels within white matter proximal to the right subthalamic nucleus. We did not report any meaningful associations between SSRT and FC. Whilst findings are broadly consistent with prior DTI evidence, current results suggest that SSRT is predominantly facilitated by subcortical microstructure of the connections projecting from the subthalamic nucleus to the cortical regions of the network. Our findings extend current understanding of the role of white matter in childhood response inhibition.",
+    "authors": [
+        {
+            "affiliation": "Cognitive Neuroscience Unit, School of Psychology, Deakin University, Geelong, Australia. Electronic address: mervyn.singh@deakin.edu.au.",
+            "firstname": "Mervyn",
+            "initials": "M",
+            "lastname": "Singh"
+        },
+        {
+            "affiliation": "Cognitive Neuroscience Unit, School of Psychology, Deakin University, Geelong, Australia.",
+            "firstname": "Ian",
+            "initials": "I",
+            "lastname": "Fuelscher"
+        },
+        {
+            "affiliation": "Department of Forensic and Neurodevelopmental Sciences, Sackler Institute for Translational Neurodevelopment, Institute of Psychiatry, Psychology, and Neuroscience, King's College London, UK.",
+            "firstname": "Jason",
+            "initials": "J",
+            "lastname": "He"
+        },
+        {
+            "affiliation": "Developmental Imaging, Murdoch Children's Research Institute Parkville, Melbourne, Australia; Department of Paediatrics, The University of Melbourne, Melbourne, Australia; The Royal Children's Hospital, Melbourne, Australia.",
+            "firstname": "Vicki",
+            "initials": "V",
+            "lastname": "Anderson"
+        },
+        {
+            "affiliation": "Cognitive Neuroscience Unit, School of Psychology, Deakin University, Geelong, Australia; Developmental Imaging, Murdoch Children's Research Institute Parkville, Melbourne, Australia; Department of Paediatrics, The University of Melbourne, Melbourne, Australia.",
+            "firstname": "Timothy J",
+            "initials": "TJ",
+            "lastname": "Silk"
+        },
+        {
+            "affiliation": "Cognitive Neuroscience Unit, School of Psychology, Deakin University, Geelong, Australia. Electronic address: c.hyde@deakin.edu.au.",
+            "firstname": "Christian",
+            "initials": "C",
+            "lastname": "Hyde"
+        }
+    ],
+    "conclusions": null,
+    "copyrights": "Copyright \u00a9 2021 Elsevier Ltd. All rights reserved.",
+    "doi": "10.1016/j.cortex.2021.06.002",
+    "journal": "Cortex; a journal devoted to the study of the nervous system and behavior",
+    "keywords": [
+        "Child",
+        "Diffusion MRI",
+        "Fixel-based analysis",
+        "Response inhibition",
+        "Stop-signal task"
+    ],
+    "methods": null,
+    "publication_date": "2021-07-28",
+    "pubmed_id": "34315068",
+    "results": null,
+    "title": "Inter-individual performance differences in the stop-signal task are associated with fibre-specific microstructure of the fronto-basal-ganglia circuit in healthy children.",
+    "xml": "<Element 'PubmedArticle' at 0x7fe1936a7e00>"
+}
+{
+    "abstract": "Diffusion weighted MRI imaging (DWI) is often subject to low signal-to-noise ratios (SNRs) and artifacts. Recent work has produced software tools that can correct individual problems, but these tools have not been combined with each other and with quality assurance (QA). A single integrated pipeline is proposed to perform DWI preprocessing with a spectrum of tools and produce an intuitive QA document.\nThe proposed pipeline, built around the FSL, MRTrix3, and ANTs software packages, performs DWI denoising; inter-scan intensity normalization; susceptibility-, eddy current-, and motion-induced artifact correction; and slice-wise signal drop-out imputation. To perform QA on the raw and preprocessed data and each preprocessing operation, the pipeline documents qualitative visualizations, quantitative plots, gradient verifications, and tensor goodness-of-fit and fractional anisotropy analyses.\nRaw DWI data were preprocessed and quality checked with the proposed pipeline and demonstrated improved SNRs; physiologic intensity ratios; corrected susceptibility-, eddy current-, and motion-induced artifacts; imputed signal-lost slices; and improved tensor fits. The pipeline identified incorrect gradient configurations and file-type conversion errors and was shown to be effective on externally available datasets.\nThe proposed pipeline is a single integrated pipeline that combines established diffusion preprocessing tools from major MRI-focused software packages with intuitive QA.",
+    "authors": [
+        {
+            "affiliation": "Department of Biomedical Engineering, Vanderbilt University, Nashville, TN, USA.",
+            "firstname": "Leon Y",
+            "initials": "LY",
+            "lastname": "Cai"
+        },
+        {
+            "affiliation": "Department of Electrical Engineering and Computer Science, Vanderbilt University, Nashville, TN, USA.",
+            "firstname": "Qi",
+            "initials": "Q",
+            "lastname": "Yang"
+        },
+        {
+            "affiliation": "Department of Electrical Engineering and Computer Science, Vanderbilt University, Nashville, TN, USA.",
+            "firstname": "Colin B",
+            "initials": "CB",
+            "lastname": "Hansen"
+        },
+        {
+            "affiliation": "Department of Electrical Engineering and Computer Science, Vanderbilt University, Nashville, TN, USA.",
+            "firstname": "Vishwesh",
+            "initials": "V",
+            "lastname": "Nath"
+        },
+        {
+            "affiliation": "Department of Electrical Engineering and Computer Science, Vanderbilt University, Nashville, TN, USA.",
+            "firstname": "Karthik",
+            "initials": "K",
+            "lastname": "Ramadass"
+        },
+        {
+            "affiliation": "Department of Biomedical Engineering, Vanderbilt University, Nashville, TN, USA.",
+            "firstname": "Graham W",
+            "initials": "GW",
+            "lastname": "Johnson"
+        },
+        {
+            "affiliation": "Neuroscience Graduate Program, Vanderbilt Brain Institute, Vanderbilt University Medical Center, Nashville, TN, USA.\nDepartment of Psychology and Human Development, Peabody College, Vanderbilt University, Nashville, TN, USA.",
+            "firstname": "Benjamin N",
+            "initials": "BN",
+            "lastname": "Conrad"
+        },
+        {
+            "affiliation": "Department of Psychiatry and Behavioral Sciences, Vanderbilt University Medical Center, Nashville, TN, USA.\nCenter for Cognitive Medicine, Vanderbilt University Medical Center, Nashville, TN, USA.",
+            "firstname": "Brian D",
+            "initials": "BD",
+            "lastname": "Boyd"
+        },
+        {
+            "affiliation": "Department of Psychiatry and Behavioral Sciences, Vanderbilt University Medical Center, Nashville, TN, USA.\nCenter for Cognitive Medicine, Vanderbilt University Medical Center, Nashville, TN, USA.",
+            "firstname": "John P",
+            "initials": "JP",
+            "lastname": "Begnoche"
+        },
+        {
+            "affiliation": "Laboratory of Behavioral Neuroscience, National Institute on Aging, National Institutes of Health, Baltimore, MD, USA.",
+            "firstname": "Lori L",
+            "initials": "LL",
+            "lastname": "Beason-Held"
+        },
+        {
+            "affiliation": "Laboratory of Behavioral Neuroscience, National Institute on Aging, National Institutes of Health, Baltimore, MD, USA.",
+            "firstname": "Andrea T",
+            "initials": "AT",
+            "lastname": "Shafer"
+        },
+        {
+            "affiliation": "Laboratory of Behavioral Neuroscience, National Institute on Aging, National Institutes of Health, Baltimore, MD, USA.",
+            "firstname": "Susan M",
+            "initials": "SM",
+            "lastname": "Resnick"
+        },
+        {
+            "affiliation": "Department of Psychiatry and Behavioral Sciences, Vanderbilt University Medical Center, Nashville, TN, USA.\nCenter for Cognitive Medicine, Vanderbilt University Medical Center, Nashville, TN, USA.",
+            "firstname": "Warren D",
+            "initials": "WD",
+            "lastname": "Taylor"
+        },
+        {
+            "affiliation": "Department of Psychology and Human Development, Peabody College, Vanderbilt University, Nashville, TN, USA.",
+            "firstname": "Gavin R",
+            "initials": "GR",
+            "lastname": "Price"
+        },
+        {
+            "affiliation": "Department of Biomedical Engineering, Vanderbilt University, Nashville, TN, USA.\nDepartment of Radiology and Radiological Sciences, Vanderbilt University Medical Center, Nashville, TN, USA.\nDepartment of Neurological Surgery, Vanderbilt University Medical Center, Nashville, TN, USA.\nVanderbilt University Institute of Imaging Science, Vanderbilt University, Nashville, TN, USA.",
+            "firstname": "Victoria L",
+            "initials": "VL",
+            "lastname": "Morgan"
+        },
+        {
+            "affiliation": "Department of Biomedical Engineering, Vanderbilt University, Nashville, TN, USA.\nDepartment of Psychiatry and Behavioral Sciences, Vanderbilt University Medical Center, Nashville, TN, USA.\nDepartment of Radiology and Radiological Sciences, Vanderbilt University Medical Center, Nashville, TN, USA.\nVanderbilt University Institute of Imaging Science, Vanderbilt University, Nashville, TN, USA.",
+            "firstname": "Baxter P",
+            "initials": "BP",
+            "lastname": "Rogers"
+        },
+        {
+            "affiliation": "Department of Radiology and Radiological Sciences, Vanderbilt University Medical Center, Nashville, TN, USA.\nVanderbilt University Institute of Imaging Science, Vanderbilt University, Nashville, TN, USA.",
+            "firstname": "Kurt G",
+            "initials": "KG",
+            "lastname": "Schilling"
+        },
+        {
+            "affiliation": "Department of Biomedical Engineering, Vanderbilt University, Nashville, TN, USA.\nDepartment of Electrical Engineering and Computer Science, Vanderbilt University, Nashville, TN, USA.\nDepartment of Psychiatry and Behavioral Sciences, Vanderbilt University Medical Center, Nashville, TN, USA.\nDepartment of Radiology and Radiological Sciences, Vanderbilt University Medical Center, Nashville, TN, USA.\nVanderbilt University Institute of Imaging Science, Vanderbilt University, Nashville, TN, USA.",
+            "firstname": "Bennett A",
+            "initials": "BA",
+            "lastname": "Landman"
+        }
+    ],
+    "conclusions": null,
+    "copyrights": "\u00a9 2021 International Society for Magnetic Resonance in Medicine.",
+    "doi": "10.1002/mrm.28678",
+    "journal": "Magnetic resonance in medicine",
+    "keywords": [
+        "DTI",
+        "denoising",
+        "diffusion weighted imaging",
+        "distortion correction",
+        "preprocessing",
+        "quality assurance"
+    ],
+    "methods": null,
+    "publication_date": "2021-02-04",
+    "pubmed_id": "33533094\n21435570\n28291247\n22786754\n20032062\n30837858\n20882528\n29631021\n16023676\n31511636\n16201007\n17911032\n21135713\n29211865\n31192130\n16897692\n26945974\n7984070\n15508154\n26520775\n29486323\n32800991\n24269273\n27523449\n26599599\n31226495\n14568458\n15501092\n32735601\n26481672\n27393418\n24968247\n23637895\n24523693\n30267859\n30077743\n25433212\n34155395\n31473352\n21979382\n24879923\n12391568\n23684865\n17481925\n17931890\n17659998\n21640837\n11293691\n26745823\n16488635\n20378467\n8598820\n34270123\n30261308\n10847596\n30682379\n28284799\n29277648\n28935239\n21880566",
+    "results": "Raw DWI data were preprocessed and quality checked with the proposed pipeline and demonstrated improved SNRs; physiologic intensity ratios; corrected susceptibility-, eddy current-, and motion-induced artifacts; imputed signal-lost slices; and improved tensor fits. The pipeline identified incorrect gradient configurations and file-type conversion errors and was shown to be effective on externally available datasets.",
+    "title": "PreQual: An automated pipeline for integrated preprocessing and quality assurance of diffusion weighted MRI images.",
+    "xml": "<Element 'PubmedArticle' at 0x7fe1936b2090>"
+}
+{
+    "abstract": "Pediatric traumatic brain injury (pTBI) is a major community health concern. Due to ongoing maturation, injury to the brain at a young age can have devastating consequences in later life. However, how pTBI affects brain development, including white matter maturation, is still poorly understood. Here, we used advanced diffusion weighted imaging (DWI) to assess chronic white matter changes after experimental pTBI. Mice at post-natal day 21 sustained a TBI using the controlled cortical impact model and magnetic resonance imaging (MRI) was performed at 6 months post-injury using a 4.7\u00a0T Bruker scanner. Four diffusion shells with 81 directions and b-values of 1000, 3000, 5000, and 7000s/mm",
+    "authors": [
+        {
+            "affiliation": "Department of Neuroscience, Central Clinical School, Monash University, The Alfred Centre, 99 Commercial Road, Melbourne, VIC, 3004, Australia.",
+            "firstname": "Akram",
+            "initials": "A",
+            "lastname": "Zamani"
+        },
+        {
+            "affiliation": "Department of Neuroscience, Central Clinical School, Monash University, The Alfred Centre, 99 Commercial Road, Melbourne, VIC, 3004, Australia.\nDepartment of Medicine (Royal Melbourne Hospital), University of Melbourne, Parkville, VIC, Australia.",
+            "firstname": "Terence J",
+            "initials": "TJ",
+            "lastname": "O'Brien"
+        },
+        {
+            "affiliation": "Applied MRI Research, National Institute of Radiological Sciences, QST, Chiba, Japan.",
+            "firstname": "Jeff",
+            "initials": "J",
+            "lastname": "Kershaw"
+        },
+        {
+            "affiliation": "Melbourne Brain Centre Imaging Unit, Department of Biomedical Engineering, The University of Melbourne, 3010, Parkville, VIC, Australia.",
+            "firstname": "Leigh A",
+            "initials": "LA",
+            "lastname": "Johnston"
+        },
+        {
+            "affiliation": "Department of Neuroscience, Central Clinical School, Monash University, The Alfred Centre, 99 Commercial Road, Melbourne, VIC, 3004, Australia.\nDepartment of Medicine (Royal Melbourne Hospital), University of Melbourne, Parkville, VIC, Australia.",
+            "firstname": "Bridgette D",
+            "initials": "BD",
+            "lastname": "Semple"
+        },
+        {
+            "affiliation": "Department of Neuroscience, Central Clinical School, Monash University, The Alfred Centre, 99 Commercial Road, Melbourne, VIC, 3004, Australia. david.wright@monash.edu.",
+            "firstname": "David K",
+            "initials": "DK",
+            "lastname": "Wright"
+        }
+    ],
+    "conclusions": null,
+    "copyrights": "\u00a9 2021. Crown.",
+    "doi": "10.1007/s11682-020-00433-0\n10.1523/jneurosci.0982-17.2017\n10.1002/acn3.667",
+    "journal": "Brain imaging and behavior",
+    "keywords": [
+        "fiber density",
+        "pediatric TBI",
+        "white matter"
+    ],
+    "methods": null,
+    "publication_date": "2021-01-08",
+    "pubmed_id": "33411159\n16195184\n15537678\n12006280\n25697845\n18506799\n17402851\n20643215\n21777683\n21925280\n18655838\n27468807\n16943660\n26975556\n15037457\n24738143\n24076005\n19196176\n18816827\n10680798\n16521095\n17978027\n19061377\n21345223\n21147236\n16943663\n26004503\n27639350\n26894518\n24147615\n26739435\n28724747\n25497734\n14642481\n19489082\n21469191\n22399284\n30564624\n17446039\n27349514\n28152648\n22484410",
+    "results": null,
+    "title": "White matter changes following experimental pediatric traumatic brain injury: an advanced diffusion-weighted imaging investigation.",
+    "xml": "<Element 'PubmedArticle' at 0x7fe1936dc4a0>"
+}
+{
+    "abstract": "Diffusion magnetic resonance imaging (dMRI) studies report altered white matter (WM) development in preterm infants. Neurite orientation dispersion and density imaging (NODDI) metrics provide more realistic estimations of neurite architecture in vivo compared with standard diffusion tensor imaging (DTI) metrics. This study investigated microstructural maturation of WM in preterm neonates scanned between 25 and 45\u00a0weeks postmenstrual age (PMA) with normal neurodevelopmental outcomes at 2\u00a0years using DTI and NODDI metrics.\nThirty-one neonates (n\u2009=\u200917 male) with median (range) gestational age (GA) 32\nPMA at scan positively correlated with fractional anisotropy (FA) in the CST, fornix and optic radiations and neurite density index (NDI) in the cingulum, CST and fornix and negatively correlated with mean diffusivity (MD) in all tracts. A multilinear regression model demonstrated PMA at scan influenced all diffusion measures, GA and GAxPMA at scan influenced FA, MD and NDI and gender affected NDI. Cross-sectional analyses revealed asynchronous WM maturation within and between WM tracts.).\nWe describe normal WM maturation in preterm neonates with normal neurodevelopmental outcomes. NODDI can enhance our understanding of WM maturation compared with standard DTI metrics alone.",
+    "authors": [
+        {
+            "affiliation": "Centre for the Developing Brain, School of Imaging Sciences & Biomedical Engineering, King's College London, London, UK.",
+            "firstname": "J A",
+            "initials": "JA",
+            "lastname": "Kimpton"
+        },
+        {
+            "affiliation": "Centre for the Developing Brain, School of Imaging Sciences & Biomedical Engineering, King's College London, London, UK.\nDepartment of Forensic and Neurodevelopmental Science, Institute of Psychiatry, Psychology and Neuroscience, King's College London, London, UK.",
+            "firstname": "D",
+            "initials": "D",
+            "lastname": "Batalle"
+        },
+        {
+            "affiliation": "Centre for the Developing Brain, School of Imaging Sciences & Biomedical Engineering, King's College London, London, UK.",
+            "firstname": "M L",
+            "initials": "ML",
+            "lastname": "Barnett"
+        },
+        {
+            "affiliation": "Centre for the Developing Brain, School of Imaging Sciences & Biomedical Engineering, King's College London, London, UK.",
+            "firstname": "E J",
+            "initials": "EJ",
+            "lastname": "Hughes"
+        },
+        {
+            "affiliation": "Centre for the Developing Brain, School of Imaging Sciences & Biomedical Engineering, King's College London, London, UK.",
+            "firstname": "A T M",
+            "initials": "ATM",
+            "lastname": "Chew"
+        },
+        {
+            "affiliation": "Centre for the Developing Brain, School of Imaging Sciences & Biomedical Engineering, King's College London, London, UK.",
+            "firstname": "S",
+            "initials": "S",
+            "lastname": "Falconer"
+        },
+        {
+            "affiliation": "Centre for the Developing Brain, School of Imaging Sciences & Biomedical Engineering, King's College London, London, UK.",
+            "firstname": "J D",
+            "initials": "JD",
+            "lastname": "Tournier"
+        },
+        {
+            "affiliation": "Department of Computer Science and Centre for Medical Imaging Computing, University College London, London, UK.",
+            "firstname": "D",
+            "initials": "D",
+            "lastname": "Alexander"
+        },
+        {
+            "affiliation": "Department of Computer Science and Centre for Medical Imaging Computing, University College London, London, UK.",
+            "firstname": "H",
+            "initials": "H",
+            "lastname": "Zhang"
+        },
+        {
+            "affiliation": "Centre for the Developing Brain, School of Imaging Sciences & Biomedical Engineering, King's College London, London, UK.",
+            "firstname": "A D",
+            "initials": "AD",
+            "lastname": "Edwards"
+        },
+        {
+            "affiliation": "Centre for the Developing Brain, School of Imaging Sciences & Biomedical Engineering, King's College London, London, UK. serena.counsell@kcl.ac.uk.",
+            "firstname": "S J",
+            "initials": "SJ",
+            "lastname": "Counsell"
+        }
+    ],
+    "conclusions": "We describe normal WM maturation in preterm neonates with normal neurodevelopmental outcomes. NODDI can enhance our understanding of WM maturation compared with standard DTI metrics alone.",
+    "copyrights": null,
+    "doi": "10.1007/s00234-020-02584-9\n10.1016/s0140-6736(08)60074-4\n10.1001/jama.288.6.728\n10.1056/NEJMoa041367\n10.1542/peds.112.1.176\n10.1542/peds.112.1.1\n10.1542/peds.2005-1866\n10.1093/brain/awn268\n10.1016/j.neuroimage.2017.12.097\n10.1007/BF00964595\n10.1152/physrev.2001.81.2.871\n10.1038/pr.2015.172\n10.3174/ajnr.A1660\n10.1016/j.neuroimage.2005.05.018\n10.1111/dmcn.12250\n10.1203/PDR.0b013e3182084e54\n10.1016/j.cortex.2013.11.010\n10.1016/j.nicl.2019.101855\n10.3174/ajnr.A2723\n10.1016/j.nicl.2018.09.020\n10.1016/j.neuroimage.2010.01.011\n10.1093/brain/awm001\n10.1002/ima.22005\n10.1016/j.neuroimage.2012.06.081\n10.1016/j.neuroimage.2012.03.072\n10.1109/tmi.2011.2162099\n10.1002/hbm.22872\n10.1016/j.neuroimage.2017.01.065\n10.1016/j.neuroimage.2014.03.057\n10.1002/hbm.23227\n10.1016/j.neuroimage.2013.10.034\n10.1016/j.mri.2017.03.007\n10.1016/j.neuroimage.2010.03.072\n10.1016/j.neuroimage.2008.10.060\n10.1016/j.neuroimage.2013.11.025\n10.3389/fnana.2016.00009\n10.1016/j.neuroimage.2020.116672\n10.1109/tmi.2014.2322280\n10.1002/ana.410430213\n10.1016/j.nicl.2015.03.021\n10.1371/journal.pone.0182340\n10.1016/j.neuroimage.2017.01.023\n10.1002/hbm.24706\n10.1016/j.nicl.2019.101944\n10.1371/journal.pone.0123656\n10.1016/j.ejrad.2005.11.019\n10.1016/j.neuroimage.2006.06.009\n10.1523/JNEUROSCI.2769-08.2009\n10.1002/hbm.20363\n10.1016/j.neuroimage.2020.116552\n10.1002/brb3.17\n10.1146/annurev-psych-010814-015340\n10.1007/s00429-014-0881-y\n10.1016/j.neuroscience.2013.12.044\n10.1097/00005072-198805000-00003\n10.1016/j.neuroimage.2018.04.017\n10.1371/journal.pone.0119536\n10.1016/s0387-7604(12)80271-3\n10.1016/j.neuroimage.2012.03.057\n10.1523/jneurosci.5302-10.2011\n10.1038/s41598-017-09915-6\n10.1016/j.ijdevneu.2016.02.002\n10.1016/j.neuroscience.2011.07.041\n10.1002/hbm.21477\n10.1093/cercor/bhu084\n10.1093/cercor/bhn097\n10.1016/j.neuroimage.2007.12.053\n10.1016/j.nicl.2017.11.017\n10.1016/j.neuroimage.2015.12.033\n10.1016/j.neuroimage.2020.116906",
+    "journal": "Neuroradiology",
+    "keywords": [
+        "Diffusion magnetic resonance imaging (dMRI)",
+        "High-angular resolution diffusion MR imaging (HARDI)",
+        "Neonate",
+        "Neurite orientation dispersion and density imaging (NODDI)",
+        "Preterm",
+        "Tractography"
+    ],
+    "methods": null,
+    "publication_date": "2020-10-31",
+    "pubmed_id": "33123752\n18177778\n12169077\n15635108\n12837883\n12837859\n16882805\n18952670\n29305910\n1566710\n6521822\n11274346\n26372513\n19574497\n15978841\n24102176\n21131895\n24405815\n31103872\n21998101\n30268990\n32132139\n20074650\n17347255\n22846632\n22484410\n21768045\n26096639\n28153637\n24680870\n27133221\n24185027\n28359912\n20362683\n19059345\n24269274\n26909027\n32092432\n24816548\n9485064\n26106527\n28817577\n28087489\n31282058\n31426019\n26115451\n16439088\n16286422\n16905335\n19339620\n17318834\n31972280\n22399089\n25559117\n25183543\n24378955\n3367155\n29655938\n25742520\n1375444\n22510254\n21795544\n28852074\n26948153\n21824507\n22110013\n24812082\n18562332\n18295509\n29234596\n26724777\n32387626",
+    "results": "PMA at scan positively correlated with fractional anisotropy (FA) in the CST, fornix and optic radiations and neurite density index (NDI) in the cingulum, CST and fornix and negatively correlated with mean diffusivity (MD) in all tracts. A multilinear regression model demonstrated PMA at scan influenced all diffusion measures, GA and GAxPMA at scan influenced FA, MD and NDI and gender affected NDI. Cross-sectional analyses revealed asynchronous WM maturation within and between WM tracts.).",
+    "title": "Diffusion magnetic resonance imaging assessment of regional white matter maturation in preterm neonates.",
+    "xml": "<Element 'PubmedArticle' at 0x7fe1936f7f40>"
+}
+{
+    "abstract": "With an estimated five million new stroke survivors every year and a rapidly aging population suffering from hyperintensities and diseases of presumed vascular origin that affect white matter and contribute to cognitive decline, it is critical that we understand the impact of white matter damage on brain structure and behavior. Current techniques for assessing the impact of lesions consider only location, type, and extent, while ignoring how the affected region was connected to the rest of the brain. Regional brain function is a product of both local structure and its connectivity. Therefore, obtaining a map of white matter disconnection is a crucial step that could help us predict the behavioral deficits that patients exhibit. In the present work, we introduce a new practical method for computing lesion-based white matter disconnection maps that require only moderate computational resources. We achieve this by creating diffusion tractography models of the brains of healthy adults and assessing the connectivity between small regions. We then interrupt these connectivity models by projecting patients' lesions into them to compute predicted white matter disconnection. A quantified disconnection map can be computed for an individual patient in approximately 35 seconds using a single core CPU-based computation. In comparison, a similar quantification performed with other tools provided by MRtrix3 takes 5.47 minutes.",
+    "authors": [
+        {
+            "affiliation": null,
+            "firstname": "Abdelrahman",
+            "initials": "A",
+            "lastname": "Zayed"
+        },
+        {
+            "affiliation": null,
+            "firstname": "Yasser",
+            "initials": "Y",
+            "lastname": "Iturria-Medina"
+        },
+        {
+            "affiliation": null,
+            "firstname": "Arno",
+            "initials": "A",
+            "lastname": "Villringer"
+        },
+        {
+            "affiliation": null,
+            "firstname": "Bernhard",
+            "initials": "B",
+            "lastname": "Sehm"
+        },
+        {
+            "affiliation": null,
+            "firstname": "Christopher J",
+            "initials": "CJ",
+            "lastname": "Steele"
+        }
+    ],
+    "conclusions": null,
+    "copyrights": null,
+    "doi": "10.1109/EMBC44109.2020.9176229",
+    "journal": "Annual International Conference of the IEEE Engineering in Medicine and Biology Society. IEEE Engineering in Medicine and Biology Society. Annual International Conference",
+    "keywords": [],
+    "methods": null,
+    "publication_date": "2020-10-07",
+    "pubmed_id": "33018324",
+    "results": null,
+    "title": "Rapid Quantification of White Matter Disconnection in the Human Brain.",
+    "xml": "<Element 'PubmedArticle' at 0x7fe19372cae0>"
+}
+{
+    "abstract": "MRtrix3 is an open-source, cross-platform software package for medical image processing, analysis and visualisation, with a particular emphasis on the investigation of the brain using diffusion MRI. It is implemented using a fast, modular and flexible general-purpose code framework for image data access and manipulation, enabling efficient development of new applications, whilst retaining high computational performance and a consistent command-line interface between applications. In this article, we provide a high-level overview of the features of the MRtrix3 framework and general-purpose image processing applications provided with the software.",
+    "authors": [
+        {
+            "affiliation": "Centre for the Developing Brain, School of Biomedical Engineering & Imaging Sciences, King's College London, London, United Kingdom; Department of Biomedical Engineering, School of Biomedical Engineering & Imaging Sciences, King's College London, London, United Kingdom. Electronic address: jacques-donald.tournier@kcl.ac.uk.",
+            "firstname": "J-Donald",
+            "initials": "JD",
+            "lastname": "Tournier"
+        },
+        {
+            "affiliation": "The Florey Institute of Neuroscience and Mental Health, Melbourne, Australia; The Florey Department of Neuroscience and Mental Health, University of Melbourne, Melbourne, Australia.",
+            "firstname": "Robert",
+            "initials": "R",
+            "lastname": "Smith"
+        },
+        {
+            "affiliation": "The Florey Institute of Neuroscience and Mental Health, Melbourne, Australia.",
+            "firstname": "David",
+            "initials": "D",
+            "lastname": "Raffelt"
+        },
+        {
+            "affiliation": "The Florey Institute of Neuroscience and Mental Health, Melbourne, Australia.",
+            "firstname": "Rami",
+            "initials": "R",
+            "lastname": "Tabbara"
+        },
+        {
+            "affiliation": "The Florey Institute of Neuroscience and Mental Health, Melbourne, Australia; The Florey Department of Neuroscience and Mental Health, University of Melbourne, Melbourne, Australia.",
+            "firstname": "Thijs",
+            "initials": "T",
+            "lastname": "Dhollander"
+        },
+        {
+            "affiliation": "Centre for the Developing Brain, School of Biomedical Engineering & Imaging Sciences, King's College London, London, United Kingdom; Department of Biomedical Engineering, School of Biomedical Engineering & Imaging Sciences, King's College London, London, United Kingdom.",
+            "firstname": "Maximilian",
+            "initials": "M",
+            "lastname": "Pietsch"
+        },
+        {
+            "affiliation": "Centre for the Developing Brain, School of Biomedical Engineering & Imaging Sciences, King's College London, London, United Kingdom; Department of Biomedical Engineering, School of Biomedical Engineering & Imaging Sciences, King's College London, London, United Kingdom.",
+            "firstname": "Daan",
+            "initials": "D",
+            "lastname": "Christiaens"
+        },
+        {
+            "affiliation": "Imec-Vision Lab, Department of Physics, University of Antwerp, Antwerp, Belgium.",
+            "firstname": "Ben",
+            "initials": "B",
+            "lastname": "Jeurissen"
+        },
+        {
+            "affiliation": "The Florey Institute of Neuroscience and Mental Health, Melbourne, Australia; The Florey Department of Neuroscience and Mental Health, University of Melbourne, Melbourne, Australia.",
+            "firstname": "Chun-Hung",
+            "initials": "CH",
+            "lastname": "Yeh"
+        },
+        {
+            "affiliation": "The Florey Institute of Neuroscience and Mental Health, Melbourne, Australia; The Florey Department of Neuroscience and Mental Health, University of Melbourne, Melbourne, Australia.",
+            "firstname": "Alan",
+            "initials": "A",
+            "lastname": "Connelly"
+        }
+    ],
+    "conclusions": null,
+    "copyrights": "Copyright \u00a9 2019 Elsevier Inc. All rights reserved.",
+    "doi": "10.1016/j.neuroimage.2019.116137",
+    "journal": "NeuroImage",
+    "keywords": [
+        "Image",
+        "MRI",
+        "Processing",
+        "Software",
+        "Visualisation"
+    ],
+    "methods": null,
+    "publication_date": "2019-09-02",
+    "pubmed_id": "31473352",
+    "results": null,
+    "title": "MRtrix3: A fast, flexible and open software framework for medical image processing and visualisation.",
+    "xml": "<Element 'PubmedArticle' at 0x7fe193733d10>"
+}
+{
+    "abstract": "Diffusion-weighted magnetic resonance imaging (dMRI) enables the microstructural characterization and reconstruction of white matter pathways in vivo non-invasively. However, dMRI only provides information on the orientation of potential fibers but not on their anatomical plausibility. To that end, recent methodological advances facilitate the effective use of anatomical priors in the process of fiber reconstruction, thus improving the accuracy of the results. Here, we investigated the potential of anatomically constrained tracking (ACT), a modular addition to the tractography software package MRtrix3, to accurately reconstruct the optic radiation, a commonly affected pathway in multiple sclerosis (MS). Diffusion MRI data were acquired from 28 MS patients and 22 age- and sex-matched healthy controls. For each participant, the optic radiation was segmented based on the fiber reconstruction obtained using ACT. When implementing ACT in MS, it proved essential to incorporate lesion maps to avoid incorrect reconstructions due to tissue-type misclassifications in lesional areas. The ACT-based results were compared with those obtained using two commonly used probabilistic fiber tracking procedures, based on FSL (FMRIB Software Library) and MRtrix3 without ACT. All three procedures enabled a reliable localization of the optic radiation in both MS patients and controls. However, for FSL and MRtrix3 without ACT it was necessary to place an additional waypoint halfway between the lateral geniculate nucleus and the primary visual cortex to filter out anatomically implausible tracks. In the case of ACT, the results with and without an additional waypoint were virtually identical, presumably because the employed anatomical constraints already prevented the occurrence of the most implausible tracks. Irrespective of the employed tractography procedure, increased diffusivity and decreased anisotropy were found in the optic radiation of the MS patients compared to the controls.",
+    "authors": [
+        {
+            "affiliation": "Department of Neurology, Otto-von-Guericke-University Magdeburg, Leipziger Stra\u00dfe 44, 39120 Magdeburg, Germany.",
+            "firstname": "M",
+            "initials": "M",
+            "lastname": "Horbruegger"
+        },
+        {
+            "affiliation": "Department of Neurology, Otto-von-Guericke-University Magdeburg, Leipziger Stra\u00dfe 44, 39120 Magdeburg, Germany; Department of Computer Science, Otto-von-Guericke-University Magdeburg, Universit\u00e4tsplatz 2, 39106 Magdeburg, Germany.",
+            "firstname": "K",
+            "initials": "K",
+            "lastname": "Loewe"
+        },
+        {
+            "affiliation": "Department of Neurology, Otto-von-Guericke-University Magdeburg, Leipziger Stra\u00dfe 44, 39120 Magdeburg, Germany.",
+            "firstname": "J",
+            "initials": "J",
+            "lastname": "Kaufmann"
+        },
+        {
+            "affiliation": "Department of Ophthalmology, Otto-von-Guericke-University Magdeburg, Leipziger Stra\u00dfe 44, 39120 Magdeburg, Germany.",
+            "firstname": "M",
+            "initials": "M",
+            "lastname": "Wagner"
+        },
+        {
+            "affiliation": "Center for Neuroscience Zurich, Federal Institute of Technology (ETH), Zurich, Switzerland; GermanyNeuroimmunology and Multiple Sclerosis Research, Department of Neurology, University Hospital Zurich, Frauenklinikstrasse 26, 8091 Zurich, Switzerland.",
+            "firstname": "S",
+            "initials": "S",
+            "lastname": "Schippling"
+        },
+        {
+            "affiliation": "Department of Neurology, Otto-von-Guericke-University Magdeburg, Leipziger Stra\u00dfe 44, 39120 Magdeburg, Germany; Department of Neurology with Institute of Translational Neurology, University Hospital Muenster, Muenster, Germany. Electronic address: marc.pawlitzki@med.ovgu.de.",
+            "firstname": "M",
+            "initials": "M",
+            "lastname": "Pawlitzki"
+        },
+        {
+            "affiliation": "Department of Neurology, Otto-von-Guericke-University Magdeburg, Leipziger Stra\u00dfe 44, 39120 Magdeburg, Germany; Leibniz Institute for Neurobiology, Brenneckestra\u00dfe 6, 39118 Magdeburg, Germany; Kliniken Schmieder Heidelberg, Speyererhofweg 1, 69117 Heidelberg, Germany.",
+            "firstname": "M A",
+            "initials": "MA",
+            "lastname": "Schoenfeld"
+        }
+    ],
+    "conclusions": null,
+    "copyrights": "Copyright \u00a9 2019 The Authors. Published by Elsevier Inc. All rights reserved.",
+    "doi": "10.1016/j.nicl.2019.101740\n10.1136/jnnp-2014-308189\n10.1002/mrm.10171\n10.1002/mrm.20033\n10.1002/nbm.1543\n10.1002/%28SICI%291522-2594%28199909%2942%3A3%3C515%3A%3AAID-MRM14%3E3.0.CO%3B2-Q\n10.1016/j.nicl.2016.07.003\n10.1016/j.nicl.2018.05.004\n10.1186/s12880-016-0145-9\n10.1002/mrm.1910150117\n10.1080/14737175.2019.1559051\n10.1371/journal.pone.0018019\n10.1016/j.neulet.2014.03.049\n10.1167/8.10.12\n10.1016/j.neuroimage.2012.06.005",
+    "journal": "NeuroImage. Clinical",
+    "keywords": [
+        "ACT",
+        "Diffusion MRI",
+        "Fiber tracking",
+        "Magnetic resonance imaging",
+        "Multiple sclerosis",
+        "Optic radiation",
+        "Probabilistic tractography"
+    ],
+    "methods": null,
+    "publication_date": "2019-03-15",
+    "pubmed_id": "30870736\n16495327\n8739270\n24973342\n14587019\n17070705\n12482069\n29350435\n10468624\n3407471\n17499520\n10984517\n24114885\n29527473\n26549300\n12111967\n12880786\n12489103\n22334356\n21297149\n21979382\n22611035\n25109526\n15065255\n20886566\n10467296\n22846632\n24838786\n25807541\n27489769\n17260320\n27555964\n29021839\n29984162\n6598017\n25377222\n24559840\n27400959\n25742640\n26376179\n2374495\n28255575\n30587061\n21494672\n29125019\n21387374\n27639350\n19944769\n27383146\n23572238\n23606965\n24948688\n22119648\n24690576\n19146354\n25129119\n12391568\n15501092\n22705374\n22536333\n15528117\n21469191\n15562495\n26912640\n17481925\n26279341\n29342192\n25555998\n21885257\n19059349",
+    "results": null,
+    "title": "Anatomically constrained tractography facilitates biologically plausible fiber reconstruction of the optic radiation in multiple sclerosis.",
+    "xml": "<Element 'PubmedArticle' at 0x7fe19373e680>"
+}
+{
+    "abstract": "Topographic regularity of axonal connections is commonly understood as the preservation of spatial relationships between nearby neurons and is a fundamental structural property of the brain. In particular the retinotopic mapping of the visual pathway can even be quantitatively computed. Inspired from this previously untapped anatomical knowledge, we propose a novel tractography method that preserves both topographic and geometric regularity. We make use of parameterized curves with Frenet-Serret frame and introduce a highly flexible mechanism for controlling geometric regularity. At the same time, we incorporate a novel local data support term in order to account for topographic organization. Unifying geometry with topographic regularity, we develop a Bayesian framework for generating highly organized streamlines that accurately follow neuroanatomy. We additionally propose two novel validation techniques to quantify topographic regularity. In our experiments, we studied the results of our approach with respect to connectivity, reproducibility and topographic regularity aspects. We present both qualitative and quantitative comparisons of our technique against three algorithms from MRtrix3. We show that our method successfully generates highly organized fiber tracks while capturing bundle anatomy that are geometrically challenging for other approaches.",
+    "authors": [
+        {
+            "affiliation": "Laboratory of Neuro Imaging (LONI), USC Stevens Neuroimaging and Informatics Institute, Keck School of Medicine, University of Southern California, Los Angeles, CA, USA.",
+            "firstname": "Dogu Baran",
+            "initials": "DB",
+            "lastname": "Aydogan"
+        },
+        {
+            "affiliation": "Laboratory of Neuro Imaging (LONI), USC Stevens Neuroimaging and Informatics Institute, Keck School of Medicine, University of Southern California, Los Angeles, CA, USA. Electronic address: yshi@loni.usc.edu.",
+            "firstname": "Yonggang",
+            "initials": "Y",
+            "lastname": "Shi"
+        }
+    ],
+    "conclusions": null,
+    "copyrights": "Copyright \u00a9 2018 Elsevier Inc. All rights reserved.",
+    "doi": "10.1016/j.neuroimage.2018.06.071\n10.1007/s00429-018-1663-8\n10.1007/s00429-018-1663-8\n10.1016/j.neuroimage.2010.07.024\n10.3389/fninf.2014.00008/full\n10.3389/fninf.2014.00008\n10.1109/TMI.2011.2112769\n10.1007/978-3-319-59050-9_21\n10.1007/978-3-319-59050-9_21",
+    "journal": "NeuroImage",
+    "keywords": [
+        "Connectome",
+        "Corticospinal tract",
+        "Retinotopy",
+        "dMRI"
+    ],
+    "methods": null,
+    "publication_date": "2018-07-11",
+    "pubmed_id": "29986834\n21376655\n26156987\n20832489\n29663135\n28090602\n23657980\n11025519\n14587019\n17070705\n24676149\n23041195\n22485157\n26048951\n20643215\n25389414\n16111897\n25953631\n23722210\n10468624\n23706753\n27375412\n25167548\n17604650\n19188114\n27335406\n9087826\n21187930\n24347370\n18765890\n21256221\n20426077\n11832223\n16894991\n24600385\n24816531\n12030823\n19244007\n12880786\n26058702\n18167806\n17466539\n16040268\n18299703\n22433046\n23407972\n23298689\n17543543\n21319270\n25109526\n18779066\n10398948\n26551261\n16156351\n18816816\n15627594\n12632468\n26403579\n15799061\n25452742\n24135166\n19501657\n16563804\n29116093\n19914856\n19694258\n12489097\n20432285\n9989633\n12489096\n11305897\n24323973\n3750869\n22001791\n12071621\n12884338\n22453492\n24862252\n20426147\n25194848\n16685844\n23265801\n19449372\n19030160\n20677281\n21317082\n25320800\n20854913\n24683986\n11313298\n18367409\n16919994\n20879320\n17293361\n21858868\n18831651\n20879230\n23238430\n26163802\n19818861\n23702418\n24684002\n26845558\n17462748\n25368179\n3367210\n17379540\n14527588\n15528117\n11948731\n25966471\n15562495\n12353272\n23702417\n22366334\n23110883\n27050319\n28943732\n22461612\n17455199\n27662597\n27209007\n27211472\n24348913\n18815098\n27364472\n18602332",
+    "results": null,
+    "title": "Tracking and validation techniques for topographically organized tractography.",
+    "xml": "<Element 'PubmedArticle' at 0x7fe1937668b0>"
+}
+{
+    "abstract": "Chronic musculoskeletal pain is a condition that influences central nervous system structure. In this study, we combined novel structural neuroimaging techniques, using well-validated software packages including FSL, Mrtrix3, and DSI Studio, to characterize brain grey (GM) and white matter (WM) differences in chronic musculoskeletal pain participants (n\u00a0=\u00a074), compared to age-matched pain-free controls (n\u00a0=\u00a031). In participants with chronic pain, we identified significantly higher volume in subcortical GM structures using voxel-based morphometry (FSLVBM). These differences were most prominent in the caudate, amygdala, and the hippocampus. At the same time, volume was lower in the dorsolateral prefrontal cortex, as well as the primary motor and sensory regions in patients with chronic pain. To delineate WM microstructural differences of neuronal (e.g., activity-dependent myelin remodeling) and non-neuronal (e.g., neuroinflammation) origins, we utilized Mrtrix3 software pipelines to investigate WM fiber complexity, density, and cross-section. Whole-brain analyses revealed lower WM fiber complexity within the corpus callosum and the anterior limb of the left internal capsule. Whole brain and region of interest analyses revealed fiber complexity differences within the salience and the sensorimotor networks. In contrast, we detected non-neuronal white matter density differences within the dorsal attention network: density was lower in the inferior fronto-occipital fasciculus and the splenium of the corpus callosum in chronic musculoskeletal pain. Consistent with the involvement of the dorsal attention network, WM tractography analysis, conducted with DSI Studio and Network Based Statistics, revealed higher connectivity from the superior parietal lobule to the hippocampus in patients with chronic pain. No differences were detected in measures of fiber cross-section, suggesting the absence of neuronal degeneration in chronic pain. The combination of multiple neuroimaging techniques in this study offers a unique window into the structural differences within the chronic pain brain and provides the first evidence of microstructural variations in fiber complexity and density.",
+    "authors": [
+        {
+            "affiliation": "Department of Psychiatry, The Robert Larner, M.D. College of Medicine at the University of Vermont, Burlington, VT, USA; Department of Neurological Sciences, The Robert Larner, M.D. College of Medicine at the University of Vermont, Burlington, VT, USA.",
+            "firstname": "James H",
+            "initials": "JH",
+            "lastname": "Bishop"
+        },
+        {
+            "affiliation": "Department of Psychiatry, The Robert Larner, M.D. College of Medicine at the University of Vermont, Burlington, VT, USA.",
+            "firstname": "Marina",
+            "initials": "M",
+            "lastname": "Shpaner"
+        },
+        {
+            "affiliation": "Department of Psychiatry, The Robert Larner, M.D. College of Medicine at the University of Vermont, Burlington, VT, USA.",
+            "firstname": "Antoni",
+            "initials": "A",
+            "lastname": "Kubicki"
+        },
+        {
+            "affiliation": "Department of Psychiatry, The Robert Larner, M.D. College of Medicine at the University of Vermont, Burlington, VT, USA.",
+            "firstname": "Sarah",
+            "initials": "S",
+            "lastname": "Clements"
+        },
+        {
+            "affiliation": "Department of Radiology, The Robert Larner, M.D. College of Medicine at the University of Vermont, Burlington, VT, USA; MRI Center for Biomedical Imaging, The Robert Larner, M.D. College of Medicine at the University of Vermont, Burlington, VT, USA.",
+            "firstname": "Richard",
+            "initials": "R",
+            "lastname": "Watts"
+        },
+        {
+            "affiliation": "Department of Psychiatry, The Robert Larner, M.D. College of Medicine at the University of Vermont, Burlington, VT, USA. Electronic address: Magdalena.Naylor@uvm.edu.",
+            "firstname": "Magdalena R",
+            "initials": "MR",
+            "lastname": "Naylor"
+        }
+    ],
+    "conclusions": null,
+    "copyrights": "Copyright \u00a9 2017 Elsevier Inc. All rights reserved.",
+    "doi": "10.1016/j.neuroimage.2017.12.021",
+    "journal": "NeuroImage",
+    "keywords": [
+        "Chronic pain",
+        "Diffusion magnetic resonance imaging",
+        "Diffusion tractography",
+        "Microstructure",
+        "VBM"
+    ],
+    "methods": null,
+    "publication_date": "2017-12-16",
+    "pubmed_id": "29242104",
+    "results": null,
+    "title": "Structural network differences in chronic muskuloskeletal pain: Beyond fractional anisotropy.",
+    "xml": "<Element 'PubmedArticle' at 0x7fe1937aacc0>"
+}
+{
+    "abstract": "Diffusion-weighted imaging (DWI)-based tractography has gained increasing popularity as a method for detailed visualization of white matter (WM) tracts. Different imaging techniques, and more novel, advanced imaging methods provide significant WM structural detail. While there has been greater focus on improving tract visualization for larger WM pathways, the relative value of each method for cranial nerve reconstruction and how this methodology can assist surgical decision-making is still understudied. Images from 10 patients with posterior fossa tumors (4 male, mean age: 63.5), affecting either the trigeminal nerve (CN V) or the facial/vestibular complex (CN VII/VIII), were employed. Three distinct reconstruction methods [two tensor-based methods: single diffusion tensor tractography (SDT) (3D Slicer), eXtended streamline tractography (XST), and one fiber orientation distribution (FOD)-based method: streamline tractography using constrained spherical deconvolution (CSD)-derived estimates (MRtrix3)], were compared to determine which of these was best suited for use in a neurosurgical setting in terms of processing speed, anatomical accuracy, and accurate depiction of the relationship between the tumor and affected CN. Computation of the tensor map was faster when compared to the implementation of CSD to provide estimates of FOD. Both XST and CSD-based reconstruction methods tended to give more detailed representations of the projections of CN V and CN VII/VIII compared to SDT. These reconstruction methods were able to more accurately delineate the course of CN V and CN VII/VIII, differentiate CN V from the cerebellar peduncle, and delineate compression of CN VII/VIII in situations where SDT could not. However, CSD-based reconstruction methods tended to generate more invalid streamlines. XST offers the best combination of anatomical accuracy and speed of reconstruction of cranial nerves within this patient population. Given the possible anatomical limitations of single tensor models, supplementation with more advanced tensor-based reconstruction methods might be beneficial.",
+    "authors": [
+        {
+            "affiliation": "Division of Brain, Imaging and Behaviour - Systems Neuroscience, Krembil Institute, University Health Network, Toronto, ON, Canada.\nDivision of Neurosurgery, Department of Surgery, Toronto Western Hospital, Toronto, ON, Canada.",
+            "firstname": "Brendan",
+            "initials": "B",
+            "lastname": "Behan"
+        },
+        {
+            "affiliation": "Division of Brain, Imaging and Behaviour - Systems Neuroscience, Krembil Institute, University Health Network, Toronto, ON, Canada.\nDepartment of Surgery, Institute of Medical Science, University of Toronto, Toronto, ON, Canada.",
+            "firstname": "David Q",
+            "initials": "DQ",
+            "lastname": "Chen"
+        },
+        {
+            "affiliation": "Division of Neurosurgery, Department of Surgery, Toronto Western Hospital, Toronto, ON, Canada.",
+            "firstname": "Francesco",
+            "initials": "F",
+            "lastname": "Sammartino"
+        },
+        {
+            "affiliation": "Division of Brain, Imaging and Behaviour - Systems Neuroscience, Krembil Institute, University Health Network, Toronto, ON, Canada.\nDepartment of Neurology and Neurological Sciences, Stanford University, Stanford, CA, United States.",
+            "firstname": "Danielle D",
+            "initials": "DD",
+            "lastname": "DeSouza"
+        },
+        {
+            "affiliation": "Division of Brain, Imaging and Behaviour - Systems Neuroscience, Krembil Institute, University Health Network, Toronto, ON, Canada.\nDivision of Neurosurgery, Department of Surgery, Toronto Western Hospital, Toronto, ON, Canada.",
+            "firstname": "Erika",
+            "initials": "E",
+            "lastname": "Wharton-Shukster"
+        },
+        {
+            "affiliation": "Division of Brain, Imaging and Behaviour - Systems Neuroscience, Krembil Institute, University Health Network, Toronto, ON, Canada.\nDivision of Neurosurgery, Department of Surgery, Toronto Western Hospital, Toronto, ON, Canada.\nDepartment of Surgery, Institute of Medical Science, University of Toronto, Toronto, ON, Canada.\nJoint Department of Medical Imaging, University Health Network, Toronto, ON, Canada.",
+            "firstname": "Mojgan",
+            "initials": "M",
+            "lastname": "Hodaie"
+        }
+    ],
+    "conclusions": null,
+    "copyrights": null,
+    "doi": "10.3389/fnins.2017.00554\n10.3171/2013.1.FOCUS12412\n10.1002/1522-2594(200010)44:4<625::AID-MRM17>3.0.CO;2-O\n10.1227/NEU.0b013e31820c6cbe\n10.1016/j.nicl.2015.03.009\n10.1007/s11548-015-1344-5\n10.1073/pnas.96.18.10422\n10.1016/j.nicl.2017.06.011\n10.3171/2013.2.JNS121294\n10.1016/j.mri.2012.05.001\n10.3171/2011.7.JNS11495\n10.1097/MAO.0000000000000984\n10.1371/journal.pone.0032745\n10.1227/01.NEU.0000367613.09324\n10.1016/j.neuroimage.2011.09.015\n10.1006/nimg.2002.1132\n10.1002/hbm.22099\n10.1016/j.neuroimage.2012.06.081\n10.1007/s11604-007-0169-8\n10.1227/NEU.0b013e318270d9fb\n10.1371/journal.pone.0070973\n10.3171/jns.2004.100.4.0597\n10.1002/(SICI)1097-0185(19990615)257:3<102::AID-AR7>3.0.CO;2-6\n10.1002/1531-8249(199902)45:2<265::AID-ANA21>3.0.CO;2-3\n10.1002/nbm.781\n10.1016/j.wneu.2013.08.035\n10.1007/978-3-319-21359-0_2\n10.1016/j.nec.2010.12.004\n10.1007/s00429-014-0861-2\n10.1016/j.clineuro.2014.06.009\n10.1016/j.neuroimage.2008.06.034\n10.3171/jns.2002.97.5.1091\n10.3171/2011.12.JNS111404\n10.1002/mds.26633\n10.3389/fnins.2013.00031\n10.1016/j.neuroimage.2007.02.016\n10.1002/ima.22005\n10.1016/j.neuroimage.2004.07.037\n10.1002/mrm.22924\n10.1002/mrm.10268\n10.1016/j.neuroimage.2008.03.036\n10.1016/S1361-8415(02)00053-1\n10.1016/j.neuroimage.2014.12.060\n10.1007/s11548-014-1129-2",
+    "journal": "Frontiers in neuroscience",
+    "keywords": [
+        "constrained spherical deconvolution",
+        "diffusion tensor imaging",
+        "extended streamline tractography",
+        "fiber orientation distribution",
+        "trigeminal nerve",
+        "vestibulocochlear nerve"
+    ],
+    "methods": null,
+    "publication_date": "2017-10-25",
+    "pubmed_id": "29062268\n23544405\n8130344\n11025519\n21242825\n26082890\n26762104\n10468624\n28664037\n23540269\n22770690\n21962081\n26905823\n22412918\n20305498\n21979382\n12377157\n22611035\n22846632\n18026904\n23254805\n23923036\n15070111\n10397783\n9989633\n12489096\n24007693\n26508405\n21435570\n25134682\n25016239\n18657622\n12450031\n22283188\n27214406\n23486659\n17379540\n15528117\n21469191\n12353272\n18495497\n12044998\n25555998\n25408307",
+    "results": null,
+    "title": "Comparison of Diffusion-Weighted MRI Reconstruction Methods for Visualization of Cranial Nerves in Posterior Fossa Surgery.",
+    "xml": "<Element 'PubmedArticle' at 0x7fe1937b64f0>"
+}

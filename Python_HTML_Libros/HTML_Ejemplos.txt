@@ -1,0 +1,3 @@
+/Users/leopoldogonzalez/Desktop/HTML_Ejemplos/e01.html
+/Users/leopoldogonzalez/Desktop/HTML_Ejemplos/e02.html
+/Users/leopoldogonzalez/Desktop/HTML_Ejemplos/q.log

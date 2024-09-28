@@ -1,0 +1,560 @@
+/home/santosg/LIBROS_TODOS/PPP_libros/Python_Libros/10.1007_978-1-4842-3423-5.pdf
+/home/santosg/LIBROS_TODOS/PPP_libros/Python_Libros/10.1007_978-1-4842-6455-3.pdf
+/home/santosg/LIBROS_TODOS/PPP_libros/Python_Libros/2007_Book_RhythmAndTransforms.pdf
+/home/santosg/LIBROS_TODOS/PPP_libros/Python_Libros/2014_Book_PythonForSignalProcessing.pdf
+/home/santosg/LIBROS_TODOS/PPP_libros/Python_Libros/2014_Book_ThePythonWorkbook.pdf
+/home/santosg/LIBROS_TODOS/PPP_libros/Python_Libros/2015_Book_AnIntroductionToPythonAndCompu.pdf
+/home/santosg/LIBROS_TODOS/PPP_libros/Python_Libros/2016_Book_AnIntroductionToStatisticsWith.pdf
+/home/santosg/LIBROS_TODOS/PPP_libros/Python_Libros/2016_Book_APrimerOnScientificProgramming.pdf
+/home/santosg/LIBROS_TODOS/PPP_libros/Python_Libros/2016_Book_LeanPython.pdf
+/home/santosg/LIBROS_TODOS/PPP_libros/Python_Libros/2016_Book_ProgrammingForComputations-Pyt.pdf
+/home/santosg/LIBROS_TODOS/PPP_libros/Python_Libros/2016_Book_PythonDescriptors.pdf
+/home/santosg/LIBROS_TODOS/PPP_libros/Python_Libros/2016_Book_PythonForProbabilityStatistics.pdf
+/home/santosg/LIBROS_TODOS/PPP_libros/Python_Libros/2016_Book_PythonRecipesHandbook.pdf
+/home/santosg/LIBROS_TODOS/PPP_libros/Python_Libros/2016_Book_SolvingPDEsInPython.pdf
+/home/santosg/LIBROS_TODOS/PPP_libros/Python_Libros/2017_Book_BeginningDjango.pdf
+/home/santosg/LIBROS_TODOS/PPP_libros/Python_Libros/2017_Book_BeginningPython.pdf
+/home/santosg/LIBROS_TODOS/PPP_libros/Python_Libros/2017_Book_DeepLearningWithPython.pdf
+/home/santosg/LIBROS_TODOS/PPP_libros/Python_Libros/2017_Book_MicroPythonForTheInternetOfThi.pdf
+/home/santosg/LIBROS_TODOS/PPP_libros/Python_Libros/2017_Book_PracticalPythonDesignPatterns.pdf
+/home/santosg/LIBROS_TODOS/PPP_libros/Python_Libros/2017_Book_Python2And3Compatibility.pdf
+/home/santosg/LIBROS_TODOS/PPP_libros/Python_Libros/2017_Book_PythonForGraphAndNetworkAnalys.pdf
+/home/santosg/LIBROS_TODOS/PPP_libros/Python_Libros/2018_Book_DataAnalysisAndVisualizationUs.pdf
+/home/santosg/LIBROS_TODOS/PPP_libros/Python_Libros/2018_Book_DynamicalSystemsWithApplicatio.pdf
+/home/santosg/LIBROS_TODOS/PPP_libros/Python_Libros/2018_Book_LearnDataAnalysisWithPython.pdf
+/home/santosg/LIBROS_TODOS/PPP_libros/Python_Libros/2018_Book_.pdf
+/home/santosg/LIBROS_TODOS/PPP_libros/Python_Libros/2018_Book_PracticalMachineLearningWithPy.pdf
+/home/santosg/LIBROS_TODOS/PPP_libros/Python_Libros/2018_Book_PracticalPythonAIProjects.pdf
+/home/santosg/LIBROS_TODOS/PPP_libros/Python_Libros/2018_Book_PythonGraphics.pdf
+/home/santosg/LIBROS_TODOS/PPP_libros/Python_Libros/2018_PracticalPythonAIProjects.pdf
+/home/santosg/LIBROS_TODOS/PPP_libros/Python_Libros/an_introduction_python_computer_programming.pdf
+/home/santosg/LIBROS_TODOS/PPP_libros/Python_Libros/A_Primer_Scientific_Programming_Python.pdf
+/home/santosg/LIBROS_TODOS/PPP_libros/Python_Libros/Artificial_Intelligence_Python.PDF
+/home/santosg/LIBROS_TODOS/PPP_libros/Python_Libros/Beginning_Python_Novice_Professional_LIBRO.pdf
+/home/santosg/LIBROS_TODOS/PPP_libros/Python_Libros/Beginning_Python.pdf
+/home/santosg/LIBROS_TODOS/PPP_libros/Python_Libros/Beginning_Python_Visualization_Crafting.pdf
+/home/santosg/LIBROS_TODOS/PPP_libros/Python_Libros/Beginning_Python_Visualization.pdf
+/home/santosg/LIBROS_TODOS/PPP_libros/Python_Libros/Beginning_Ruby.pdf
+/home/santosg/LIBROS_TODOS/PPP_libros/Python_Libros/Beginnning_Python_Visualization.pdf
+/home/santosg/LIBROS_TODOS/PPP_libros/Python_Libros/Bernard2016_Book_PythonRecipesHandbook.pdf
+/home/santosg/LIBROS_TODOS/PPP_libros/Python_Libros/BeysolowII2018_Book_AppliedNaturalLanguageProcessi.pdf
+/home/santosg/LIBROS_TODOS/PPP_libros/Python_Libros/bok_3A978-1-4842-0241-8.pdf
+/home/santosg/LIBROS_TODOS/PPP_libros/Python_Libros/bok_3A978-3-319-30717-6.pdf
+/home/santosg/LIBROS_TODOS/PPP_libros/Python_Libros/computer-vision-python-3.pdf
+/home/santosg/LIBROS_TODOS/PPP_libros/Python_Libros/Data_Structures_Algorithms_Python.pdf
+/home/santosg/LIBROS_TODOS/PPP_libros/Python_Libros/Driscoll2018_Book_WxPythonRecipes.pdf
+/home/santosg/LIBROS_TODOS/PPP_libros/Python_Libros/Elementary_Mechanics_Using_Python.pdf
+/home/santosg/LIBROS_TODOS/PPP_libros/Python_Libros/Expert_Python_Programming_Ziade.pdf
+/home/santosg/LIBROS_TODOS/PPP_libros/Python_Libros/Foundations_Python_Network_Programming.pdf
+/home/santosg/LIBROS_TODOS/PPP_libros/Python_Libros/Fundamentals_Python_Data_Structures_Lambert.pdf
+/home/santosg/LIBROS_TODOS/PPP_libros/Python_Libros/Gad2019_Book_BuildingAndroidAppsInPythonUsi.pdf
+/home/santosg/LIBROS_TODOS/PPP_libros/Python_Libros/Goerzen2010_Book_FoundationsOfPythonNetworkProg.pdf
+/home/santosg/LIBROS_TODOS/PPP_libros/Python_Libros/Hall-Stacey2009_Book_Python3ForAbsoluteBeginners.pdf
+/home/santosg/LIBROS_TODOS/PPP_libros/Python_Libros/Hunt2019_Book_AdvancedGuideToPython3Programm.pdf
+/home/santosg/LIBROS_TODOS/PPP_libros/Python_Libros/inmersionEnPython3.0.11.pdf
+/home/santosg/LIBROS_TODOS/PPP_libros/Python_Libros/Introduction_Programming_Using_Python _Liang.pdf
+/home/santosg/LIBROS_TODOS/PPP_libros/Python_Libros/Introduction_Programming_Using_Python_Liang.pdf
+/home/santosg/LIBROS_TODOS/PPP_libros/Python_Libros/Introduction_Programming_Using_Python .pdf
+/home/santosg/LIBROS_TODOS/PPP_libros/Python_Libros/Intro_ML_Python.pdf
+/home/santosg/LIBROS_TODOS/PPP_libros/Python_Libros/introprog-py.pdf
+/home/santosg/LIBROS_TODOS/PPP_libros/Python_Libros/InventarConPython_3a_es.pdf
+/home/santosg/LIBROS_TODOS/PPP_libros/Python_Libros/Johansson2019_Book_NumericalPython.pdf
+/home/santosg/LIBROS_TODOS/PPP_libros/Python_Libros/Korites2018_Book_PythonGraphics.pdf
+/home/santosg/LIBROS_TODOS/PPP_libros/Python_Libros/Kulkarni-Shivananda2019_Book_NaturalLanguageProcessingRecip.pdf
+/home/santosg/LIBROS_TODOS/PPP_libros/Python_Libros/Kurgalin-Borzunov2021_Book_AlgebraAndGeometryWithPython.pdf
+/home/santosg/LIBROS_TODOS/PPP_libros/Python_Libros/lean_python_gerrard.pdf
+/home/santosg/LIBROS_TODOS/PPP_libros/Python_Libros/Lean_Python_Paul.pdf
+/home/santosg/LIBROS_TODOS/PPP_libros/Python_Libros/Learning_Python_3E.pdf
+/home/santosg/LIBROS_TODOS/PPP_libros/Python_Libros/Learning_Python_Design_Patterns_Zlobin.pdf
+/home/santosg/LIBROS_TODOS/PPP_libros/Python_Libros/Learning_Python_Mark.pdf
+/home/santosg/LIBROS_TODOS/PPP_libros/Python_Libros/Learn_Program_Python.pdf
+/home/santosg/LIBROS_TODOS/PPP_libros/Python_Libros/Learn_Python_HardWay_libros
+/home/santosg/LIBROS_TODOS/PPP_libros/Python_Libros/Learn_Python_Hard Way.pdf
+/home/santosg/LIBROS_TODOS/PPP_libros/Python_Libros/Learn to_Program_Python.pdf
+/home/santosg/LIBROS_TODOS/PPP_libros/Python_Libros/Libro_Python.pdf
+/home/santosg/LIBROS_TODOS/PPP_libros/Python_Libros/Mastering_Python_Regular_Expressions_Felix.pdf
+/home/santosg/LIBROS_TODOS/PPP_libros/Python_Libros/Milliken2020_Book_PythonProjectsForBeginners.pdf
+/home/santosg/LIBROS_TODOS/PPP_libros/Python_Libros/Modelling Creativity.pdf
+/home/santosg/LIBROS_TODOS/PPP_libros/Python_Libros/MySQL_Python_Albert.pdf
+/home/santosg/LIBROS_TODOS/PPP_libros/Python_Libros/NipypeBeginnersGuide.pdf
+/home/santosg/LIBROS_TODOS/PPP_libros/Python_Libros/Numerical_Python-A_Practical_Techniques_Approach_Industry.pdf
+/home/santosg/LIBROS_TODOS/PPP_libros/Python_Libros/Numerical_Python_LIBRO.pdf
+/home/santosg/LIBROS_TODOS/PPP_libros/Python_Libros/Numerical_Python_Robert.pdf
+/home/santosg/LIBROS_TODOS/PPP_libros/Python_Libros/Phython_Data_Analytics_LIBRO.pdf
+/home/santosg/LIBROS_TODOS/PPP_libros/Python_Libros/ProgrammingComputerVision_CCdraft.pdf
+/home/santosg/LIBROS_TODOS/PPP_libros/Python_Libros/Pyomo_Optimization_Modeling_Python.pdf
+/home/santosg/LIBROS_TODOS/PPP_libros/Python_Libros/Python 2.6 Graphics Cookbook - Ohlson de Fine - Packt.pdf
+/home/santosg/LIBROS_TODOS/PPP_libros/Python_Libros/Python2.6GraphicsCookbook-OhlsondeFine-Packt.pdf
+/home/santosg/LIBROS_TODOS/PPP_libros/Python_Libros/Python_2_6_Graphics_Cookbook.pdf
+/home/santosg/LIBROS_TODOS/PPP_libros/Python_Libros/Python_2_6_Text_Processing_Beginners_Guide_McNeil.pdf
+/home/santosg/LIBROS_TODOS/PPP_libros/Python_Libros/Python_3_Object_Oriented_Programming_Phillips.pdf
+/home/santosg/LIBROS_TODOS/PPP_libros/Python_Libros/Python_3_Web_Development_Beginner_s_Guide_04.pdf
+/home/santosg/LIBROS_TODOS/PPP_libros/Python_Libros/Python_Algorithms.pdf
+/home/santosg/LIBROS_TODOS/PPP_libros/Python_Libros/Python and Tkinter Programming (2000).pdf
+/home/santosg/LIBROS_TODOS/PPP_libros/Python_Libros/Python_Cookbook_David.pdf
+/home/santosg/LIBROS_TODOS/PPP_libros/Python_Libros/Python_Create_Modify_Reuse_Knowlton.pdf
+/home/santosg/LIBROS_TODOS/PPP_libros/Python_Libros/Python_Data_Analysis_libros
+/home/santosg/LIBROS_TODOS/PPP_libros/Python_Libros/Python_Data_Analysis_libros33
+/home/santosg/LIBROS_TODOS/PPP_libros/Python_Libros/Python_Data_Analytics.pdf
+/home/santosg/LIBROS_TODOS/PPP_libros/Python_Libros/Python-for-Data-Analysis.pdf
+/home/santosg/LIBROS_TODOS/PPP_libros/Python_Libros/Python_Graphics_DATA
+/home/santosg/LIBROS_TODOS/PPP_libros/Python_Libros/Python_GUI_Development_Tkinter_2014
+/home/santosg/LIBROS_TODOS/PPP_libros/Python_Libros/Python_Hacking_Essentials.pdf
+/home/santosg/LIBROS_TODOS/PPP_libros/Python_Libros/Python_In_Nutshell_Alex.pdf
+/home/santosg/LIBROS_TODOS/PPP_libros/Python_Libros/Python para todos.pdf
+/home/santosg/LIBROS_TODOS/PPP_libros/Python_Libros/Python_Probability_Statistics_Machine_Learning.pdf
+/home/santosg/LIBROS_TODOS/PPP_libros/Python_Libros/Python_Programming_Absolute_Beginner_3e_Dawson.pdf
+/home/santosg/LIBROS_TODOS/PPP_libros/Python_Libros/Python_Programming_An_Introduction_Computer_ Science.pdf
+/home/santosg/LIBROS_TODOS/PPP_libros/Python_Libros/Python_Programming for_Biology_Bioinformatics_Beyond .pdf
+/home/santosg/LIBROS_TODOS/PPP_libros/Python_Libros/Python_Programming_Fundamentals_LIBRO.pdf
+/home/santosg/LIBROS_TODOS/PPP_libros/Python_Libros/Python_Programming_Fundamentals.pdf
+/home/santosg/LIBROS_TODOS/PPP_libros/Python_Libros/Python_Recipes_Handbook.pdf
+/home/santosg/LIBROS_TODOS/PPP_libros/Python_Libros/Python_Scripting_Computational_Science_LIBRO.pdf
+/home/santosg/LIBROS_TODOS/PPP_libros/Python_Libros/Python_Scripting_Computational_Science.pdf
+/home/santosg/LIBROS_TODOS/PPP_libros/Python_Libros/Python Scripting for Computational Science.pdf
+/home/santosg/LIBROS_TODOS/PPP_libros/Python_Libros/Python_Signal_Processing_LIBRO.pdf
+/home/santosg/LIBROS_TODOS/PPP_libros/Python_Libros/Python_Signal_Processing.pdf
+/home/santosg/LIBROS_TODOS/PPP_libros/Python_Libros/Python_Testing_Cookbook_Turnquist.pdf
+/home/santosg/LIBROS_TODOS/PPP_libros/Python_Libros/The_Definitive_Guide_Jython_LIBRO.pdf
+/home/santosg/LIBROS_TODOS/PPP_libros/Python_Libros/The_Definitive_Guide_Jython.pdf
+/home/santosg/LIBROS_TODOS/PPP_libros/Python_Libros/The_Python_Quick_Syntax_Reference.pdf
+/home/santosg/LIBROS_TODOS/PPP_libros/Python_Libros/Tkinter GUI ApplicationDevelopment HOTSHOT.pdf
+/home/santosg/LIBROS_TODOS/PPP_libros/Python_Libros/TutorialPython2.pdf
+/home/santosg/LIBROS_TODOS/PPP_libros/Python_Libros/Unpingco2019_Book_PythonForProbabilityStatistics.pdf
+/home/santosg/LIBROS_TODOS/PPP_libros/Python_Libros/Wilkes2020_Book_AdvancedPythonDevelopment.pdf
+/home/santosg/LIBROS_TODOS/PPP_libros/Python_Libros/Without_Bounds_Scientific_Canvas_NonLinearity.pdf
+/home/santosg/LIBROS_TODOS/PPP_libros/Python_Libros/Ziade_-_Expert_Python_programming.pdf
+/home/santosg/LIBROS_TODOS/PPP_libros/Python_Libros/Learn_Python_HardWay_libros/Learn_Python_Hard Way.pdf
+/home/santosg/LIBROS_TODOS/PPP_libros/Python_Libros/Python_Data_Analysis_libros/c01
+/home/santosg/LIBROS_TODOS/PPP_libros/Python_Libros/Python_Data_Analysis_libros/c02
+/home/santosg/LIBROS_TODOS/PPP_libros/Python_Libros/Python_Data_Analysis_libros/c03
+/home/santosg/LIBROS_TODOS/PPP_libros/Python_Libros/Python_Data_Analysis_libros/c04
+/home/santosg/LIBROS_TODOS/PPP_libros/Python_Libros/Python_Data_Analysis_libros/c05
+/home/santosg/LIBROS_TODOS/PPP_libros/Python_Libros/Python_Data_Analysis_libros/c06
+/home/santosg/LIBROS_TODOS/PPP_libros/Python_Libros/Python_Data_Analysis_libros/c07
+/home/santosg/LIBROS_TODOS/PPP_libros/Python_Libros/Python_Data_Analysis_libros/c08
+/home/santosg/LIBROS_TODOS/PPP_libros/Python_Libros/Python_Data_Analysis_libros/c09
+/home/santosg/LIBROS_TODOS/PPP_libros/Python_Libros/Python_Data_Analysis_libros/c10
+/home/santosg/LIBROS_TODOS/PPP_libros/Python_Libros/Python_Data_Analysis_libros/c11
+/home/santosg/LIBROS_TODOS/PPP_libros/Python_Libros/Python_Data_Analysis_libros/c12
+/home/santosg/LIBROS_TODOS/PPP_libros/Python_Libros/Python_Data_Analysis_libros/c13
+/home/santosg/LIBROS_TODOS/PPP_libros/Python_Libros/Python_Data_Analysis_libros/c14
+/home/santosg/LIBROS_TODOS/PPP_libros/Python_Libros/Python_Data_Analysis_libros/c15
+/home/santosg/LIBROS_TODOS/PPP_libros/Python_Libros/Python_Data_Analysis_libros/c16
+/home/santosg/LIBROS_TODOS/PPP_libros/Python_Libros/Python_Data_Analysis_libros/c17
+/home/santosg/LIBROS_TODOS/PPP_libros/Python_Libros/Python_Data_Analysis_libros/c18
+/home/santosg/LIBROS_TODOS/PPP_libros/Python_Libros/Python_Data_Analysis_libros/c19
+/home/santosg/LIBROS_TODOS/PPP_libros/Python_Libros/Python_Data_Analysis_libros/c20
+/home/santosg/LIBROS_TODOS/PPP_libros/Python_Libros/Python_Data_Analysis_libros/c21
+/home/santosg/LIBROS_TODOS/PPP_libros/Python_Libros/Python_Data_Analysis_libros/c22
+/home/santosg/LIBROS_TODOS/PPP_libros/Python_Libros/Python_Data_Analysis_libros/c23
+/home/santosg/LIBROS_TODOS/PPP_libros/Python_Libros/Python_Data_Analysis_libros/c24
+/home/santosg/LIBROS_TODOS/PPP_libros/Python_Libros/Python_Data_Analysis_libros/c25
+/home/santosg/LIBROS_TODOS/PPP_libros/Python_Libros/Python_Data_Analysis_libros/c26
+/home/santosg/LIBROS_TODOS/PPP_libros/Python_Libros/Python_Data_Analysis_libros/c27
+/home/santosg/LIBROS_TODOS/PPP_libros/Python_Libros/Python_Data_Analysis_libros/c28
+/home/santosg/LIBROS_TODOS/PPP_libros/Python_Libros/Python_Data_Analysis_libros/c29
+/home/santosg/LIBROS_TODOS/PPP_libros/Python_Libros/Python_Data_Analysis_libros/c30
+/home/santosg/LIBROS_TODOS/PPP_libros/Python_Libros/Python_Data_Analysis_libros/c31
+/home/santosg/LIBROS_TODOS/PPP_libros/Python_Libros/Python_Data_Analysis_libros/c32
+/home/santosg/LIBROS_TODOS/PPP_libros/Python_Libros/Python_Data_Analysis_libros/c33
+/home/santosg/LIBROS_TODOS/PPP_libros/Python_Libros/Python_Data_Analysis_libros/c34
+/home/santosg/LIBROS_TODOS/PPP_libros/Python_Libros/Python_Data_Analysis_libros/c35
+/home/santosg/LIBROS_TODOS/PPP_libros/Python_Libros/Python_Data_Analysis_libros/c36
+/home/santosg/LIBROS_TODOS/PPP_libros/Python_Libros/Python_Data_Analysis_libros/c37
+/home/santosg/LIBROS_TODOS/PPP_libros/Python_Libros/Python_Data_Analysis_libros/c38
+/home/santosg/LIBROS_TODOS/PPP_libros/Python_Libros/Python_Data_Analysis_libros/c39
+/home/santosg/LIBROS_TODOS/PPP_libros/Python_Libros/Python_Data_Analysis_libros/c40
+/home/santosg/LIBROS_TODOS/PPP_libros/Python_Libros/Python_Data_Analysis_libros/c41
+/home/santosg/LIBROS_TODOS/PPP_libros/Python_Libros/Python_Data_Analysis_libros/c42
+/home/santosg/LIBROS_TODOS/PPP_libros/Python_Libros/Python_Data_Analysis_libros/c43
+/home/santosg/LIBROS_TODOS/PPP_libros/Python_Libros/Python_Data_Analysis_libros/c44
+/home/santosg/LIBROS_TODOS/PPP_libros/Python_Libros/Python_Data_Analysis_libros/c45
+/home/santosg/LIBROS_TODOS/PPP_libros/Python_Libros/Python_Data_Analysis_libros/c46
+/home/santosg/LIBROS_TODOS/PPP_libros/Python_Libros/Python_Data_Analysis_libros/c47
+/home/santosg/LIBROS_TODOS/PPP_libros/Python_Libros/Python_Data_Analysis_libros/c48
+/home/santosg/LIBROS_TODOS/PPP_libros/Python_Libros/Python_Data_Analysis_libros/c49
+/home/santosg/LIBROS_TODOS/PPP_libros/Python_Libros/Python_Data_Analysis_libros/c50
+/home/santosg/LIBROS_TODOS/PPP_libros/Python_Libros/Python_Data_Analysis_libros/c51
+/home/santosg/LIBROS_TODOS/PPP_libros/Python_Libros/Python_Data_Analysis_libros/c52
+/home/santosg/LIBROS_TODOS/PPP_libros/Python_Libros/Python_Data_Analysis_libros/c53
+/home/santosg/LIBROS_TODOS/PPP_libros/Python_Libros/Python_Data_Analysis_libros/c54
+/home/santosg/LIBROS_TODOS/PPP_libros/Python_Libros/Python_Data_Analysis_libros/c55
+/home/santosg/LIBROS_TODOS/PPP_libros/Python_Libros/Python_Data_Analysis_libros/c56
+/home/santosg/LIBROS_TODOS/PPP_libros/Python_Libros/Python_Data_Analysis_libros/c57
+/home/santosg/LIBROS_TODOS/PPP_libros/Python_Libros/Python_Data_Analysis_libros/c58
+/home/santosg/LIBROS_TODOS/PPP_libros/Python_Libros/Python_Data_Analysis_libros/c59
+/home/santosg/LIBROS_TODOS/PPP_libros/Python_Libros/Python_Data_Analysis_libros/c60
+/home/santosg/LIBROS_TODOS/PPP_libros/Python_Libros/Python_Data_Analysis_libros/c61
+/home/santosg/LIBROS_TODOS/PPP_libros/Python_Libros/Python_Data_Analysis_libros/c62
+/home/santosg/LIBROS_TODOS/PPP_libros/Python_Libros/Python_Data_Analysis_libros/c63
+/home/santosg/LIBROS_TODOS/PPP_libros/Python_Libros/Python_Data_Analysis_libros/c64
+/home/santosg/LIBROS_TODOS/PPP_libros/Python_Libros/Python_Data_Analysis_libros/c65
+/home/santosg/LIBROS_TODOS/PPP_libros/Python_Libros/Python_Data_Analysis_libros/c66
+/home/santosg/LIBROS_TODOS/PPP_libros/Python_Libros/Python_Data_Analysis_libros/c67
+/home/santosg/LIBROS_TODOS/PPP_libros/Python_Libros/Python_Data_Analysis_libros/c68
+/home/santosg/LIBROS_TODOS/PPP_libros/Python_Libros/Python_Data_Analysis_libros/c69
+/home/santosg/LIBROS_TODOS/PPP_libros/Python_Libros/Python_Data_Analysis_libros/c70
+/home/santosg/LIBROS_TODOS/PPP_libros/Python_Libros/Python_Data_Analysis_libros/c71
+/home/santosg/LIBROS_TODOS/PPP_libros/Python_Libros/Python_Data_Analysis_libros/c72
+/home/santosg/LIBROS_TODOS/PPP_libros/Python_Libros/Python_Data_Analysis_libros/c73
+/home/santosg/LIBROS_TODOS/PPP_libros/Python_Libros/Python_Data_Analysis_libros/c74
+/home/santosg/LIBROS_TODOS/PPP_libros/Python_Libros/Python_Data_Analysis_libros/c75
+/home/santosg/LIBROS_TODOS/PPP_libros/Python_Libros/Python_Data_Analysis_libros/c76
+/home/santosg/LIBROS_TODOS/PPP_libros/Python_Libros/Python_Data_Analysis_libros/c77
+/home/santosg/LIBROS_TODOS/PPP_libros/Python_Libros/Python_Data_Analysis_libros/c78
+/home/santosg/LIBROS_TODOS/PPP_libros/Python_Libros/Python_Data_Analysis_libros/c79
+/home/santosg/LIBROS_TODOS/PPP_libros/Python_Libros/Python_Data_Analysis_libros/c80
+/home/santosg/LIBROS_TODOS/PPP_libros/Python_Libros/Python_Data_Analysis_libros/c81
+/home/santosg/LIBROS_TODOS/PPP_libros/Python_Libros/Python_Data_Analysis_libros/c82
+/home/santosg/LIBROS_TODOS/PPP_libros/Python_Libros/Python_Data_Analysis_libros/c83
+/home/santosg/LIBROS_TODOS/PPP_libros/Python_Libros/Python_Data_Analysis_libros/c84
+/home/santosg/LIBROS_TODOS/PPP_libros/Python_Libros/Python_Data_Analysis_libros/c85
+/home/santosg/LIBROS_TODOS/PPP_libros/Python_Libros/Python_Data_Analysis_libros/c86
+/home/santosg/LIBROS_TODOS/PPP_libros/Python_Libros/Python_Data_Analysis_libros/c87
+/home/santosg/LIBROS_TODOS/PPP_libros/Python_Libros/Python_Data_Analysis_libros/c88
+/home/santosg/LIBROS_TODOS/PPP_libros/Python_Libros/Python_Data_Analysis_libros/c89
+/home/santosg/LIBROS_TODOS/PPP_libros/Python_Libros/Python_Data_Analysis_libros/c90
+/home/santosg/LIBROS_TODOS/PPP_libros/Python_Libros/Python_Data_Analysis_libros/c91
+/home/santosg/LIBROS_TODOS/PPP_libros/Python_Libros/Python_Data_Analysis_libros/c92
+/home/santosg/LIBROS_TODOS/PPP_libros/Python_Libros/Python_Data_Analysis_libros/c93
+/home/santosg/LIBROS_TODOS/PPP_libros/Python_Libros/Python_Data_Analysis_libros/c94
+/home/santosg/LIBROS_TODOS/PPP_libros/Python_Libros/Python_Data_Analysis_libros/c95
+/home/santosg/LIBROS_TODOS/PPP_libros/Python_Libros/Python_Data_Analysis_libros/c96
+/home/santosg/LIBROS_TODOS/PPP_libros/Python_Libros/Python_Data_Analysis_libros/c97
+/home/santosg/LIBROS_TODOS/PPP_libros/Python_Libros/Python_Data_Analysis_libros/c98
+/home/santosg/LIBROS_TODOS/PPP_libros/Python_Libros/Python_Data_Analysis_libros/c99
+/home/santosg/LIBROS_TODOS/PPP_libros/Python_Libros/Python_Data_Analysis_libros33/c01
+/home/santosg/LIBROS_TODOS/PPP_libros/Python_Libros/Python_Data_Analysis_libros33/c02
+/home/santosg/LIBROS_TODOS/PPP_libros/Python_Libros/Python_Data_Analysis_libros33/c03
+/home/santosg/LIBROS_TODOS/PPP_libros/Python_Libros/Python_Data_Analysis_libros33/c04
+/home/santosg/LIBROS_TODOS/PPP_libros/Python_Libros/Python_Data_Analysis_libros33/c05
+/home/santosg/LIBROS_TODOS/PPP_libros/Python_Libros/Python_Data_Analysis_libros33/c06
+/home/santosg/LIBROS_TODOS/PPP_libros/Python_Libros/Python_Data_Analysis_libros33/c07
+/home/santosg/LIBROS_TODOS/PPP_libros/Python_Libros/Python_Data_Analysis_libros33/c08
+/home/santosg/LIBROS_TODOS/PPP_libros/Python_Libros/Python_Data_Analysis_libros33/c09
+/home/santosg/LIBROS_TODOS/PPP_libros/Python_Libros/Python_Data_Analysis_libros33/c10
+/home/santosg/LIBROS_TODOS/PPP_libros/Python_Libros/Python_Data_Analysis_libros33/c11
+/home/santosg/LIBROS_TODOS/PPP_libros/Python_Libros/Python_Data_Analysis_libros33/c12
+/home/santosg/LIBROS_TODOS/PPP_libros/Python_Libros/Python_Data_Analysis_libros33/c13
+/home/santosg/LIBROS_TODOS/PPP_libros/Python_Libros/Python_Data_Analysis_libros33/c14
+/home/santosg/LIBROS_TODOS/PPP_libros/Python_Libros/Python_Data_Analysis_libros33/c15
+/home/santosg/LIBROS_TODOS/PPP_libros/Python_Libros/Python_Data_Analysis_libros33/c16
+/home/santosg/LIBROS_TODOS/PPP_libros/Python_Libros/Python_Data_Analysis_libros33/c17
+/home/santosg/LIBROS_TODOS/PPP_libros/Python_Libros/Python_Data_Analysis_libros33/c18
+/home/santosg/LIBROS_TODOS/PPP_libros/Python_Libros/Python_Data_Analysis_libros33/c19
+/home/santosg/LIBROS_TODOS/PPP_libros/Python_Libros/Python_Data_Analysis_libros33/c20
+/home/santosg/LIBROS_TODOS/PPP_libros/Python_Libros/Python_Data_Analysis_libros33/c21
+/home/santosg/LIBROS_TODOS/PPP_libros/Python_Libros/Python_Data_Analysis_libros33/c22
+/home/santosg/LIBROS_TODOS/PPP_libros/Python_Libros/Python_Data_Analysis_libros33/c23
+/home/santosg/LIBROS_TODOS/PPP_libros/Python_Libros/Python_Data_Analysis_libros33/c24
+/home/santosg/LIBROS_TODOS/PPP_libros/Python_Libros/Python_Data_Analysis_libros33/c25
+/home/santosg/LIBROS_TODOS/PPP_libros/Python_Libros/Python_Data_Analysis_libros33/c26
+/home/santosg/LIBROS_TODOS/PPP_libros/Python_Libros/Python_Data_Analysis_libros33/c27
+/home/santosg/LIBROS_TODOS/PPP_libros/Python_Libros/Python_Data_Analysis_libros33/c28
+/home/santosg/LIBROS_TODOS/PPP_libros/Python_Libros/Python_Data_Analysis_libros33/c29
+/home/santosg/LIBROS_TODOS/PPP_libros/Python_Libros/Python_Data_Analysis_libros33/c30
+/home/santosg/LIBROS_TODOS/PPP_libros/Python_Libros/Python_Data_Analysis_libros33/c31
+/home/santosg/LIBROS_TODOS/PPP_libros/Python_Libros/Python_Data_Analysis_libros33/c32
+/home/santosg/LIBROS_TODOS/PPP_libros/Python_Libros/Python_Data_Analysis_libros33/c33
+/home/santosg/LIBROS_TODOS/PPP_libros/Python_Libros/Python_Data_Analysis_libros33/c34
+/home/santosg/LIBROS_TODOS/PPP_libros/Python_Libros/Python_Data_Analysis_libros33/c35
+/home/santosg/LIBROS_TODOS/PPP_libros/Python_Libros/Python_Data_Analysis_libros33/c36
+/home/santosg/LIBROS_TODOS/PPP_libros/Python_Libros/Python_Data_Analysis_libros33/c37
+/home/santosg/LIBROS_TODOS/PPP_libros/Python_Libros/Python_Data_Analysis_libros33/c38
+/home/santosg/LIBROS_TODOS/PPP_libros/Python_Libros/Python_Data_Analysis_libros33/c39
+/home/santosg/LIBROS_TODOS/PPP_libros/Python_Libros/Python_Data_Analysis_libros33/c40
+/home/santosg/LIBROS_TODOS/PPP_libros/Python_Libros/Python_Data_Analysis_libros33/c41
+/home/santosg/LIBROS_TODOS/PPP_libros/Python_Libros/Python_Data_Analysis_libros33/c42
+/home/santosg/LIBROS_TODOS/PPP_libros/Python_Libros/Python_Data_Analysis_libros33/c43
+/home/santosg/LIBROS_TODOS/PPP_libros/Python_Libros/Python_Data_Analysis_libros33/c44
+/home/santosg/LIBROS_TODOS/PPP_libros/Python_Libros/Python_Data_Analysis_libros33/c45
+/home/santosg/LIBROS_TODOS/PPP_libros/Python_Libros/Python_Data_Analysis_libros33/c46
+/home/santosg/LIBROS_TODOS/PPP_libros/Python_Libros/Python_Data_Analysis_libros33/c47
+/home/santosg/LIBROS_TODOS/PPP_libros/Python_Libros/Python_Data_Analysis_libros33/c48
+/home/santosg/LIBROS_TODOS/PPP_libros/Python_Libros/Python_Data_Analysis_libros33/c49
+/home/santosg/LIBROS_TODOS/PPP_libros/Python_Libros/Python_Data_Analysis_libros33/c50
+/home/santosg/LIBROS_TODOS/PPP_libros/Python_Libros/Python_Data_Analysis_libros33/c51
+/home/santosg/LIBROS_TODOS/PPP_libros/Python_Libros/Python_Data_Analysis_libros33/c52
+/home/santosg/LIBROS_TODOS/PPP_libros/Python_Libros/Python_Data_Analysis_libros33/c53
+/home/santosg/LIBROS_TODOS/PPP_libros/Python_Libros/Python_Data_Analysis_libros33/c54
+/home/santosg/LIBROS_TODOS/PPP_libros/Python_Libros/Python_Data_Analysis_libros33/c55
+/home/santosg/LIBROS_TODOS/PPP_libros/Python_Libros/Python_Data_Analysis_libros33/c56
+/home/santosg/LIBROS_TODOS/PPP_libros/Python_Libros/Python_Data_Analysis_libros33/c57
+/home/santosg/LIBROS_TODOS/PPP_libros/Python_Libros/Python_Data_Analysis_libros33/c58
+/home/santosg/LIBROS_TODOS/PPP_libros/Python_Libros/Python_Data_Analysis_libros33/c59
+/home/santosg/LIBROS_TODOS/PPP_libros/Python_Libros/Python_Data_Analysis_libros33/c60
+/home/santosg/LIBROS_TODOS/PPP_libros/Python_Libros/Python_Data_Analysis_libros33/c61
+/home/santosg/LIBROS_TODOS/PPP_libros/Python_Libros/Python_Data_Analysis_libros33/c62
+/home/santosg/LIBROS_TODOS/PPP_libros/Python_Libros/Python_Data_Analysis_libros33/c63
+/home/santosg/LIBROS_TODOS/PPP_libros/Python_Libros/Python_Data_Analysis_libros33/c64
+/home/santosg/LIBROS_TODOS/PPP_libros/Python_Libros/Python_Data_Analysis_libros33/c65
+/home/santosg/LIBROS_TODOS/PPP_libros/Python_Libros/Python_Data_Analysis_libros33/c66
+/home/santosg/LIBROS_TODOS/PPP_libros/Python_Libros/Python_Data_Analysis_libros33/c67
+/home/santosg/LIBROS_TODOS/PPP_libros/Python_Libros/Python_Data_Analysis_libros33/c68
+/home/santosg/LIBROS_TODOS/PPP_libros/Python_Libros/Python_Data_Analysis_libros33/c69
+/home/santosg/LIBROS_TODOS/PPP_libros/Python_Libros/Python_Data_Analysis_libros33/c70
+/home/santosg/LIBROS_TODOS/PPP_libros/Python_Libros/Python_Data_Analysis_libros33/c71
+/home/santosg/LIBROS_TODOS/PPP_libros/Python_Libros/Python_Data_Analysis_libros33/c72
+/home/santosg/LIBROS_TODOS/PPP_libros/Python_Libros/Python_Data_Analysis_libros33/c73
+/home/santosg/LIBROS_TODOS/PPP_libros/Python_Libros/Python_Data_Analysis_libros33/c74
+/home/santosg/LIBROS_TODOS/PPP_libros/Python_Libros/Python_Data_Analysis_libros33/c75
+/home/santosg/LIBROS_TODOS/PPP_libros/Python_Libros/Python_Data_Analysis_libros33/c76
+/home/santosg/LIBROS_TODOS/PPP_libros/Python_Libros/Python_Data_Analysis_libros33/c77
+/home/santosg/LIBROS_TODOS/PPP_libros/Python_Libros/Python_Data_Analysis_libros33/c78
+/home/santosg/LIBROS_TODOS/PPP_libros/Python_Libros/Python_Data_Analysis_libros33/c79
+/home/santosg/LIBROS_TODOS/PPP_libros/Python_Libros/Python_Data_Analysis_libros33/c80
+/home/santosg/LIBROS_TODOS/PPP_libros/Python_Libros/Python_Data_Analysis_libros33/c81
+/home/santosg/LIBROS_TODOS/PPP_libros/Python_Libros/Python_Data_Analysis_libros33/c82
+/home/santosg/LIBROS_TODOS/PPP_libros/Python_Libros/Python_Data_Analysis_libros33/c83
+/home/santosg/LIBROS_TODOS/PPP_libros/Python_Libros/Python_Data_Analysis_libros33/c84
+/home/santosg/LIBROS_TODOS/PPP_libros/Python_Libros/Python_Data_Analysis_libros33/c85
+/home/santosg/LIBROS_TODOS/PPP_libros/Python_Libros/Python_Data_Analysis_libros33/c86
+/home/santosg/LIBROS_TODOS/PPP_libros/Python_Libros/Python_Data_Analysis_libros33/c87
+/home/santosg/LIBROS_TODOS/PPP_libros/Python_Libros/Python_Data_Analysis_libros33/c88
+/home/santosg/LIBROS_TODOS/PPP_libros/Python_Libros/Python_Data_Analysis_libros33/c89
+/home/santosg/LIBROS_TODOS/PPP_libros/Python_Libros/Python_Data_Analysis_libros33/c90
+/home/santosg/LIBROS_TODOS/PPP_libros/Python_Libros/Python_Data_Analysis_libros33/c91
+/home/santosg/LIBROS_TODOS/PPP_libros/Python_Libros/Python_Data_Analysis_libros33/c92
+/home/santosg/LIBROS_TODOS/PPP_libros/Python_Libros/Python_Data_Analysis_libros33/c93
+/home/santosg/LIBROS_TODOS/PPP_libros/Python_Libros/Python_Data_Analysis_libros33/c94
+/home/santosg/LIBROS_TODOS/PPP_libros/Python_Libros/Python_Data_Analysis_libros33/c95
+/home/santosg/LIBROS_TODOS/PPP_libros/Python_Libros/Python_Data_Analysis_libros33/c96
+/home/santosg/LIBROS_TODOS/PPP_libros/Python_Libros/Python_Data_Analysis_libros33/c97
+/home/santosg/LIBROS_TODOS/PPP_libros/Python_Libros/Python_Data_Analysis_libros33/c98
+/home/santosg/LIBROS_TODOS/PPP_libros/Python_Libros/Python_Data_Analysis_libros33/c99
+/home/santosg/LIBROS_TODOS/PPP_libros/Python_Libros/Python_Graphics_DATA/3845_01_Code_final
+/home/santosg/LIBROS_TODOS/PPP_libros/Python_Libros/Python_Graphics_DATA/3845_02_Code_final
+/home/santosg/LIBROS_TODOS/PPP_libros/Python_Libros/Python_Graphics_DATA/3845_03_Code_final
+/home/santosg/LIBROS_TODOS/PPP_libros/Python_Libros/Python_Graphics_DATA/3845_04_Code_final
+/home/santosg/LIBROS_TODOS/PPP_libros/Python_Libros/Python_Graphics_DATA/3845_05_Code_final
+/home/santosg/LIBROS_TODOS/PPP_libros/Python_Libros/Python_Graphics_DATA/3845_06_Code_final
+/home/santosg/LIBROS_TODOS/PPP_libros/Python_Libros/Python_Graphics_DATA/3845_07_Code_final
+/home/santosg/LIBROS_TODOS/PPP_libros/Python_Libros/Python_Graphics_DATA/3845_08_Code_final
+/home/santosg/LIBROS_TODOS/PPP_libros/Python_Libros/Python_Graphics_DATA/3845_09_Code_final
+/home/santosg/LIBROS_TODOS/PPP_libros/Python_Libros/Python_Graphics_DATA/3845_10_code_final
+/home/santosg/LIBROS_TODOS/PPP_libros/Python_Libros/Python_Graphics_DATA/3845_11_Code_final
+/home/santosg/LIBROS_TODOS/PPP_libros/Python_Libros/Python_Graphics_DATA/3845-images in code for chp 10
+/home/santosg/LIBROS_TODOS/PPP_libros/Python_Libros/Python_Graphics_DATA/3845-images in code for chp 6
+/home/santosg/LIBROS_TODOS/PPP_libros/Python_Libros/Python_Graphics_DATA/3845-images in code for chp 7
+/home/santosg/LIBROS_TODOS/PPP_libros/Python_Libros/Python_Graphics_DATA/3845-images in code for chp 9
+/home/santosg/LIBROS_TODOS/PPP_libros/Python_Libros/Python_Graphics_DATA/3845_01_Code_final/simple_line_1.py
+/home/santosg/LIBROS_TODOS/PPP_libros/Python_Libros/Python_Graphics_DATA/3845_01_Code_final/simplest_1.py
+/home/santosg/LIBROS_TODOS/PPP_libros/Python_Libros/Python_Graphics_DATA/3845_01_Code_final/simplest_2.py
+/home/santosg/LIBROS_TODOS/PPP_libros/Python_Libros/Python_Graphics_DATA/3845_02_Code_final/3arc_ellipses.py
+/home/santosg/LIBROS_TODOS/PPP_libros/Python_Libros/Python_Graphics_DATA/3845_02_Code_final/3concentric_squares.py
+/home/santosg/LIBROS_TODOS/PPP_libros/Python_Libros/Python_Graphics_DATA/3845_02_Code_final/3rectangles.py
+/home/santosg/LIBROS_TODOS/PPP_libros/Python_Libros/Python_Graphics_DATA/3845_02_Code_final/4color_text.py
+/home/santosg/LIBROS_TODOS/PPP_libros/Python_Libros/Python_Graphics_DATA/3845_02_Code_final/4lines.py
+/home/santosg/LIBROS_TODOS/PPP_libros/Python_Libros/Python_Graphics_DATA/3845_02_Code_final/align_text_2.py
+/home/santosg/LIBROS_TODOS/PPP_libros/Python_Libros/Python_Graphics_DATA/3845_02_Code_final/arc_circle.py
+/home/santosg/LIBROS_TODOS/PPP_libros/Python_Libros/Python_Graphics_DATA/3845_02_Code_final/circle_1.py
+/home/santosg/LIBROS_TODOS/PPP_libros/Python_Libros/Python_Graphics_DATA/3845_02_Code_final/clone_stars.py
+/home/santosg/LIBROS_TODOS/PPP_libros/Python_Libros/Python_Graphics_DATA/3845_02_Code_final/curved_bend.py
+/home/santosg/LIBROS_TODOS/PPP_libros/Python_Libros/Python_Graphics_DATA/3845_02_Code_final/dashed_line.py
+/home/santosg/LIBROS_TODOS/PPP_libros/Python_Libros/Python_Graphics_DATA/3845_02_Code_final/fonts_available.py
+/home/santosg/LIBROS_TODOS/PPP_libros/Python_Libros/Python_Graphics_DATA/3845_02_Code_final/line_1.py
+/home/santosg/LIBROS_TODOS/PPP_libros/Python_Libros/Python_Graphics_DATA/3845_02_Code_final/rectangle.py
+/home/santosg/LIBROS_TODOS/PPP_libros/Python_Libros/Python_Graphics_DATA/3845_02_Code_final/sharp_bend.py
+/home/santosg/LIBROS_TODOS/PPP_libros/Python_Libros/Python_Graphics_DATA/3845_02_Code_final/shifted_star.py
+/home/santosg/LIBROS_TODOS/PPP_libros/Python_Libros/Python_Graphics_DATA/3845_02_Code_final/star_polygon.py
+/home/santosg/LIBROS_TODOS/PPP_libros/Python_Libros/Python_Graphics_DATA/3845_02_Code_final/text_1.py
+/home/santosg/LIBROS_TODOS/PPP_libros/Python_Libros/Python_Graphics_DATA/3845_02_Code_final/triangle_polygon.py
+/home/santosg/LIBROS_TODOS/PPP_libros/Python_Libros/Python_Graphics_DATA/3845_02_Code_final/vine_1.py
+/home/santosg/LIBROS_TODOS/PPP_libros/Python_Libros/Python_Graphics_DATA/3845_03_Code_final/4color_text.py
+/home/santosg/LIBROS_TODOS/PPP_libros/Python_Libros/Python_Graphics_DATA/3845_03_Code_final/align_text_1.py
+/home/santosg/LIBROS_TODOS/PPP_libros/Python_Libros/Python_Graphics_DATA/3845_03_Code_final/align_text_2.py
+/home/santosg/LIBROS_TODOS/PPP_libros/Python_Libros/Python_Graphics_DATA/3845_03_Code_final/anchor_align_text_1.py
+/home/santosg/LIBROS_TODOS/PPP_libros/Python_Libros/Python_Graphics_DATA/3845_03_Code_final/fonts_available.py
+/home/santosg/LIBROS_TODOS/PPP_libros/Python_Libros/Python_Graphics_DATA/3845_03_Code_final/justify_align_text_1.py
+/home/santosg/LIBROS_TODOS/PPP_libros/Python_Libros/Python_Graphics_DATA/3845_03_Code_final/text_1.py
+/home/santosg/LIBROS_TODOS/PPP_libros/Python_Libros/Python_Graphics_DATA/3845_04_Code_final/bounce_ball_1.py
+/home/santosg/LIBROS_TODOS/PPP_libros/Python_Libros/Python_Graphics_DATA/3845_04_Code_final/floating_point_collisions_1.py
+/home/santosg/LIBROS_TODOS/PPP_libros/Python_Libros/Python_Graphics_DATA/3845_04_Code_final/gravity_ball_1.py
+/home/santosg/LIBROS_TODOS/PPP_libros/Python_Libros/Python_Graphics_DATA/3845_04_Code_final/kinetic_gravity_balls_1.py
+/home/santosg/LIBROS_TODOS/PPP_libros/Python_Libros/Python_Graphics_DATA/3845_04_Code_final/moveball_1.py
+/home/santosg/LIBROS_TODOS/PPP_libros/Python_Libros/Python_Graphics_DATA/3845_04_Code_final/move_erase_cycle_1.py
+/home/santosg/LIBROS_TODOS/PPP_libros/Python_Libros/Python_Graphics_DATA/3845_04_Code_final/multiple_line_rotations_1.py
+/home/santosg/LIBROS_TODOS/PPP_libros/Python_Libros/Python_Graphics_DATA/3845_04_Code_final/rotate_line_1.py
+/home/santosg/LIBROS_TODOS/PPP_libros/Python_Libros/Python_Graphics_DATA/3845_04_Code_final/timed_moveball_1.py
+/home/santosg/LIBROS_TODOS/PPP_libros/Python_Libros/Python_Graphics_DATA/3845_04_Code_final/two_balls_moving_1.py
+/home/santosg/LIBROS_TODOS/PPP_libros/Python_Libros/Python_Graphics_DATA/3845_05_Code_final/animated_color_wheel_1.py
+/home/santosg/LIBROS_TODOS/PPP_libros/Python_Libros/Python_Graphics_DATA/3845_05_Code_final/color_arithmetic_1.py
+/home/santosg/LIBROS_TODOS/PPP_libros/Python_Libros/Python_Graphics_DATA/3845_05_Code_final/color_mixer_1.py
+/home/santosg/LIBROS_TODOS/PPP_libros/Python_Libros/Python_Graphics_DATA/3845_05_Code_final/color_picker_1.py
+/home/santosg/LIBROS_TODOS/PPP_libros/Python_Libros/Python_Graphics_DATA/3845_05_Code_final/primary_color_wheel_1.py
+/home/santosg/LIBROS_TODOS/PPP_libros/Python_Libros/Python_Graphics_DATA/3845_05_Code_final/red_beachball_1.py
+/home/santosg/LIBROS_TODOS/PPP_libros/Python_Libros/Python_Graphics_DATA/3845_05_Code_final/red_beachball_1.py~
+/home/santosg/LIBROS_TODOS/PPP_libros/Python_Libros/Python_Graphics_DATA/3845_05_Code_final/red_color_segment_1.py
+/home/santosg/LIBROS_TODOS/PPP_libros/Python_Libros/Python_Graphics_DATA/3845_05_Code_final/systematicColorNames_1.py
+/home/santosg/LIBROS_TODOS/PPP_libros/Python_Libros/Python_Graphics_DATA/3845_06_Code_final/image_blend_1.py
+/home/santosg/LIBROS_TODOS/PPP_libros/Python_Libros/Python_Graphics_DATA/3845_06_Code_final/image_blend_2.py
+/home/santosg/LIBROS_TODOS/PPP_libros/Python_Libros/Python_Graphics_DATA/3845_06_Code_final/image_color_adjuster_1.py
+/home/santosg/LIBROS_TODOS/PPP_libros/Python_Libros/Python_Graphics_DATA/3845_06_Code_final/image_color_manip_1.py
+/home/santosg/LIBROS_TODOS/PPP_libros/Python_Libros/Python_Graphics_DATA/3845_06_Code_final/image_composite_1.py
+/home/santosg/LIBROS_TODOS/PPP_libros/Python_Libros/Python_Graphics_DATA/3845_06_Code_final/image_flips_1.py
+/home/santosg/LIBROS_TODOS/PPP_libros/Python_Libros/Python_Graphics_DATA/3845_06_Code_final/image_getattributes_1.py
+/home/santosg/LIBROS_TODOS/PPP_libros/Python_Libros/Python_Graphics_DATA/3845_06_Code_final/image_get_green_1.py
+/home/santosg/LIBROS_TODOS/PPP_libros/Python_Libros/Python_Graphics_DATA/3845_06_Code_final/image_jpg2png_1.py
+/home/santosg/LIBROS_TODOS/PPP_libros/Python_Libros/Python_Graphics_DATA/3845_06_Code_final/image_offset_1.py
+/home/santosg/LIBROS_TODOS/PPP_libros/Python_Libros/Python_Graphics_DATA/3845_06_Code_final/image_one2another_1.py
+/home/santosg/LIBROS_TODOS/PPP_libros/Python_Libros/Python_Graphics_DATA/3845_06_Code_final/image_pileof_filters_1.py
+/home/santosg/LIBROS_TODOS/PPP_libros/Python_Libros/Python_Graphics_DATA/3845_06_Code_final/image_preserved_aspect_resize_1.py
+/home/santosg/LIBROS_TODOS/PPP_libros/Python_Libros/Python_Graphics_DATA/3845_06_Code_final/image_resize_1.py
+/home/santosg/LIBROS_TODOS/PPP_libros/Python_Libros/Python_Graphics_DATA/3845_06_Code_final/image_rotate_1.py
+/home/santosg/LIBROS_TODOS/PPP_libros/Python_Libros/Python_Graphics_DATA/3845_07_Code_final/endless_passing_show_1.py
+/home/santosg/LIBROS_TODOS/PPP_libros/Python_Libros/Python_Graphics_DATA/3845_07_Code_final/passing_cloudscape_1.py
+/home/santosg/LIBROS_TODOS/PPP_libros/Python_Libros/Python_Graphics_DATA/3845_07_Code_final/passing_show_1.py
+/home/santosg/LIBROS_TODOS/PPP_libros/Python_Libros/Python_Graphics_DATA/3845_07_Code_final/photo_image_animation_1.py
+/home/santosg/LIBROS_TODOS/PPP_libros/Python_Libros/Python_Graphics_DATA/3845_07_Code_final/walker_spider_1.py
+/home/santosg/LIBROS_TODOS/PPP_libros/Python_Libros/Python_Graphics_DATA/3845_07_Code_final/walking_birdy_1.py
+/home/santosg/LIBROS_TODOS/PPP_libros/Python_Libros/Python_Graphics_DATA/3845_07_Code_final/walking_creature_1.py
+/home/santosg/LIBROS_TODOS/PPP_libros/Python_Libros/Python_Graphics_DATA/3845_07_Code_final/walking_toff_1.py
+/home/santosg/LIBROS_TODOS/PPP_libros/Python_Libros/Python_Graphics_DATA/3845_08_Code_final/all_mouse_actions_1.py
+/home/santosg/LIBROS_TODOS/PPP_libros/Python_Libros/Python_Graphics_DATA/3845_08_Code_final/file_append_1.py
+/home/santosg/LIBROS_TODOS/PPP_libros/Python_Libros/Python_Graphics_DATA/3845_08_Code_final/file_make_1.py
+/home/santosg/LIBROS_TODOS/PPP_libros/Python_Libros/Python_Graphics_DATA/3845_08_Code_final/file_write_1.py
+/home/santosg/LIBROS_TODOS/PPP_libros/Python_Libros/Python_Graphics_DATA/3845_08_Code_final/file_write_2.py
+/home/santosg/LIBROS_TODOS/PPP_libros/Python_Libros/Python_Graphics_DATA/3845_08_Code_final/mouseclick_1.py
+/home/santosg/LIBROS_TODOS/PPP_libros/Python_Libros/Python_Graphics_DATA/3845_08_Code_final/mouse_shape_editor_1.py
+/home/santosg/LIBROS_TODOS/PPP_libros/Python_Libros/Python_Graphics_DATA/3845_08_Code_final/mouse_shape_recorder_1.py
+/home/santosg/LIBROS_TODOS/PPP_libros/Python_Libros/Python_Graphics_DATA/3845_08_Code_final/retrieve_curley_vine_1.py
+/home/santosg/LIBROS_TODOS/PPP_libros/Python_Libros/Python_Graphics_DATA/3845_08_Code_final/save_curley_vine_1.py
+/home/santosg/LIBROS_TODOS/PPP_libros/Python_Libros/Python_Graphics_DATA/3845_09_Code_final/commas_for_spaces_svg2tkinter_1.py
+/home/santosg/LIBROS_TODOS/PPP_libros/Python_Libros/Python_Graphics_DATA/3845_09_Code_final/table_glass_vase_1.JPG
+/home/santosg/LIBROS_TODOS/PPP_libros/Python_Libros/Python_Graphics_DATA/3845_10_code_final/alert_D.gif
+/home/santosg/LIBROS_TODOS/PPP_libros/Python_Libros/Python_Graphics_DATA/3845_10_code_final/blueeye_D.gif
+/home/santosg/LIBROS_TODOS/PPP_libros/Python_Libros/Python_Graphics_DATA/3845_10_code_final/button_1.py
+/home/santosg/LIBROS_TODOS/PPP_libros/Python_Libros/Python_Graphics_DATA/3845_10_code_final/button_array_1.py
+/home/santosg/LIBROS_TODOS/PPP_libros/Python_Libros/Python_Graphics_DATA/3845_10_code_final/button_focus_1.py
+/home/santosg/LIBROS_TODOS/PPP_libros/Python_Libros/Python_Graphics_DATA/3845_10_code_final/button_interaction_1.py
+/home/santosg/LIBROS_TODOS/PPP_libros/Python_Libros/Python_Graphics_DATA/3845_10_code_final/button_message_1.py
+/home/santosg/LIBROS_TODOS/PPP_libros/Python_Libros/Python_Graphics_DATA/3845_10_code_final/dropdown_1.py
+/home/santosg/LIBROS_TODOS/PPP_libros/Python_Libros/Python_Graphics_DATA/3845_10_code_final/earth_D.gif
+/home/santosg/LIBROS_TODOS/PPP_libros/Python_Libros/Python_Graphics_DATA/3845_10_code_final/earth.gif
+/home/santosg/LIBROS_TODOS/PPP_libros/Python_Libros/Python_Graphics_DATA/3845_10_code_final/entry_box_1.py
+/home/santosg/LIBROS_TODOS/PPP_libros/Python_Libros/Python_Graphics_DATA/3845_10_code_final/eye_D.gif
+/home/santosg/LIBROS_TODOS/PPP_libros/Python_Libros/Python_Graphics_DATA/3845_10_code_final/fireman_1.gif
+/home/santosg/LIBROS_TODOS/PPP_libros/Python_Libros/Python_Graphics_DATA/3845_10_code_final/galaxy_D.gif
+/home/santosg/LIBROS_TODOS/PPP_libros/Python_Libros/Python_Graphics_DATA/3845_10_code_final/go_on.gif
+/home/santosg/LIBROS_TODOS/PPP_libros/Python_Libros/Python_Graphics_DATA/3845_10_code_final/image_button_1.py
+/home/santosg/LIBROS_TODOS/PPP_libros/Python_Libros/Python_Graphics_DATA/3845_10_code_final/listbox_simple_1.py
+/home/santosg/LIBROS_TODOS/PPP_libros/Python_Libros/Python_Graphics_DATA/3845_10_code_final/random_2_D.gif
+/home/santosg/LIBROS_TODOS/PPP_libros/Python_Libros/Python_Graphics_DATA/3845_10_code_final/random_3_D.gif
+/home/santosg/LIBROS_TODOS/PPP_libros/Python_Libros/Python_Graphics_DATA/3845_10_code_final/smile_D.gif
+/home/santosg/LIBROS_TODOS/PPP_libros/Python_Libros/Python_Graphics_DATA/3845_10_code_final/text_in_window_1.py
+/home/santosg/LIBROS_TODOS/PPP_libros/Python_Libros/Python_Graphics_DATA/3845_10_code_final/Usbkey_D.gif
+/home/santosg/LIBROS_TODOS/PPP_libros/Python_Libros/Python_Graphics_DATA/3845_10_code_final/vine_D.gif
+/home/santosg/LIBROS_TODOS/PPP_libros/Python_Libros/Python_Graphics_DATA/3845_10_code_final/widget_configuration_1.py
+/home/santosg/LIBROS_TODOS/PPP_libros/Python_Libros/Python_Graphics_DATA/3845_10_code_final/winged_lion.gif
+/home/santosg/LIBROS_TODOS/PPP_libros/Python_Libros/Python_Graphics_DATA/3845_10_code_final/winglion_D.gif
+/home/santosg/LIBROS_TODOS/PPP_libros/Python_Libros/Python_Graphics_DATA/3845_11_Code_final/checkbox_1.py
+/home/santosg/LIBROS_TODOS/PPP_libros/Python_Libros/Python_Graphics_DATA/3845_11_Code_final/checkbox_1.py~
+/home/santosg/LIBROS_TODOS/PPP_libros/Python_Libros/Python_Graphics_DATA/3845_11_Code_final/frame_1.py
+/home/santosg/LIBROS_TODOS/PPP_libros/Python_Libros/Python_Graphics_DATA/3845_11_Code_final/frame_1.py~
+/home/santosg/LIBROS_TODOS/PPP_libros/Python_Libros/Python_Graphics_DATA/3845_11_Code_final/grid_button_array_1.py
+/home/santosg/LIBROS_TODOS/PPP_libros/Python_Libros/Python_Graphics_DATA/3845_11_Code_final/keypress_1.py
+/home/santosg/LIBROS_TODOS/PPP_libros/Python_Libros/Python_Graphics_DATA/3845_11_Code_final/keypress_1.py~
+/home/santosg/LIBROS_TODOS/PPP_libros/Python_Libros/Python_Graphics_DATA/3845_11_Code_final/mini_3slider_gadget_1.py
+/home/santosg/LIBROS_TODOS/PPP_libros/Python_Libros/Python_Graphics_DATA/3845_11_Code_final/mini_3slider_gadget_1.py~
+/home/santosg/LIBROS_TODOS/PPP_libros/Python_Libros/Python_Graphics_DATA/3845_11_Code_final/pack_button_array_1.py
+/home/santosg/LIBROS_TODOS/PPP_libros/Python_Libros/Python_Graphics_DATA/3845_11_Code_final/radio_1.py
+/home/santosg/LIBROS_TODOS/PPP_libros/Python_Libros/Python_Graphics_DATA/3845_11_Code_final/scrollbar_1.py
+/home/santosg/LIBROS_TODOS/PPP_libros/Python_Libros/Python_Graphics_DATA/3845-images in code for chp 10/alert_D.gif
+/home/santosg/LIBROS_TODOS/PPP_libros/Python_Libros/Python_Graphics_DATA/3845-images in code for chp 10/blueeye_D.gif
+/home/santosg/LIBROS_TODOS/PPP_libros/Python_Libros/Python_Graphics_DATA/3845-images in code for chp 10/earth_D.gif
+/home/santosg/LIBROS_TODOS/PPP_libros/Python_Libros/Python_Graphics_DATA/3845-images in code for chp 10/earth.gif
+/home/santosg/LIBROS_TODOS/PPP_libros/Python_Libros/Python_Graphics_DATA/3845-images in code for chp 10/eye_D.gif
+/home/santosg/LIBROS_TODOS/PPP_libros/Python_Libros/Python_Graphics_DATA/3845-images in code for chp 10/fireman_1.gif
+/home/santosg/LIBROS_TODOS/PPP_libros/Python_Libros/Python_Graphics_DATA/3845-images in code for chp 10/galaxy_D.gif
+/home/santosg/LIBROS_TODOS/PPP_libros/Python_Libros/Python_Graphics_DATA/3845-images in code for chp 10/go_on.gif
+/home/santosg/LIBROS_TODOS/PPP_libros/Python_Libros/Python_Graphics_DATA/3845-images in code for chp 10/random_2_D.gif
+/home/santosg/LIBROS_TODOS/PPP_libros/Python_Libros/Python_Graphics_DATA/3845-images in code for chp 10/random_3_D.gif
+/home/santosg/LIBROS_TODOS/PPP_libros/Python_Libros/Python_Graphics_DATA/3845-images in code for chp 10/smile_D.gif
+/home/santosg/LIBROS_TODOS/PPP_libros/Python_Libros/Python_Graphics_DATA/3845-images in code for chp 10/Usbkey_D.gif
+/home/santosg/LIBROS_TODOS/PPP_libros/Python_Libros/Python_Graphics_DATA/3845-images in code for chp 10/vine_D.gif
+/home/santosg/LIBROS_TODOS/PPP_libros/Python_Libros/Python_Graphics_DATA/3845-images in code for chp 10/winged_lion.gif
+/home/santosg/LIBROS_TODOS/PPP_libros/Python_Libros/Python_Graphics_DATA/3845-images in code for chp 10/winglion_D.gif
+/home/santosg/LIBROS_TODOS/PPP_libros/Python_Libros/Python_Graphics_DATA/3845-images in code for chp 6/100_canary.png
+/home/santosg/LIBROS_TODOS/PPP_libros/Python_Libros/Python_Graphics_DATA/3845-images in code for chp 6/100_cockcrow.png
+/home/santosg/LIBROS_TODOS/PPP_libros/Python_Libros/Python_Graphics_DATA/3845-images in code for chp 6/100_sun_1.png
+/home/santosg/LIBROS_TODOS/PPP_libros/Python_Libros/Python_Graphics_DATA/3845-images in code for chp 6/blank.png
+/home/santosg/LIBROS_TODOS/PPP_libros/Python_Libros/Python_Graphics_DATA/3845-images in code for chp 6/canary_a.jpg
+/home/santosg/LIBROS_TODOS/PPP_libros/Python_Libros/Python_Graphics_DATA/3845-images in code for chp 6/dusi_leo_1.jpg
+/home/santosg/LIBROS_TODOS/PPP_libros/Python_Libros/Python_Graphics_DATA/3845-images in code for chp 6/dusi_leo.png
+/home/santosg/LIBROS_TODOS/PPP_libros/Python_Libros/Python_Graphics_DATA/3845-images in code for chp 6/dusi_leo_smlr_1.jpg
+/home/santosg/LIBROS_TODOS/PPP_libros/Python_Libros/Python_Graphics_DATA/3845-images in code for chp 6/fiery_2.png
+/home/santosg/LIBROS_TODOS/PPP_libros/Python_Libros/Python_Graphics_DATA/3845-images in code for chp 6/lion_ramp_2.png
+/home/santosg/LIBROS_TODOS/PPP_libros/Python_Libros/Python_Graphics_DATA/3845-images in code for chp 6/russian_doll.png
+/home/santosg/LIBROS_TODOS/PPP_libros/Python_Libros/Python_Graphics_DATA/3845-images in code for chp 6/test_pattern_1.jpg
+/home/santosg/LIBROS_TODOS/PPP_libros/Python_Libros/Python_Graphics_DATA/3845-images in code for chp 7/ambassador.gif
+/home/santosg/LIBROS_TODOS/PPP_libros/Python_Libros/Python_Graphics_DATA/3845-images in code for chp 7/apteryx1.gif
+/home/santosg/LIBROS_TODOS/PPP_libros/Python_Libros/Python_Graphics_DATA/3845-images in code for chp 7/apteryx1.png
+/home/santosg/LIBROS_TODOS/PPP_libros/Python_Libros/Python_Graphics_DATA/3845-images in code for chp 7/beachball.gif
+/home/santosg/LIBROS_TODOS/PPP_libros/Python_Libros/Python_Graphics_DATA/3845-images in code for chp 7/blue_vase.gif
+/home/santosg/LIBROS_TODOS/PPP_libros/Python_Libros/Python_Graphics_DATA/3845-images in code for chp 7/brass_vase.gif
+/home/santosg/LIBROS_TODOS/PPP_libros/Python_Libros/Python_Graphics_DATA/3845-images in code for chp 7/continuous_clouds_panorama.gif
+/home/santosg/LIBROS_TODOS/PPP_libros/Python_Libros/Python_Graphics_DATA/3845-images in code for chp 7/glass_vase.gif
+/home/santosg/LIBROS_TODOS/PPP_libros/Python_Libros/Python_Graphics_DATA/3845-images in code for chp 7/jungle_strip_1.gif
+/home/santosg/LIBROS_TODOS/PPP_libros/Python_Libros/Python_Graphics_DATA/3845-images in code for chp 7/karoo.gif
+/home/santosg/LIBROS_TODOS/PPP_libros/Python_Libros/Python_Graphics_DATA/3845-images in code for chp 7/red_vase.gif
+/home/santosg/LIBROS_TODOS/PPP_libros/Python_Libros/Python_Graphics_DATA/3845-images in code for chp 7/shoe1.gif
+/home/santosg/LIBROS_TODOS/PPP_libros/Python_Libros/Python_Graphics_DATA/3845-images in code for chp 7/toff_bg.gif
+/home/santosg/LIBROS_TODOS/PPP_libros/Python_Libros/Python_Graphics_DATA/3845-images in code for chp 7/toff_shoe.gif
+/home/santosg/LIBROS_TODOS/PPP_libros/Python_Libros/Python_Graphics_DATA/3845-images in code for chp 7/yellow_airplane_2.gif
+/home/santosg/LIBROS_TODOS/PPP_libros/Python_Libros/Python_Graphics_DATA/3845-images in code for chp 9/table_glass_vase_1.JPG
+/home/santosg/LIBROS_TODOS/PPP_libros/Python_Libros/Python_GUI_Development_Tkinter_2014/00. Introduction
+/home/santosg/LIBROS_TODOS/PPP_libros/Python_Libros/Python_GUI_Development_Tkinter_2014/01. Getting Started with Python and Tkinter
+/home/santosg/LIBROS_TODOS/PPP_libros/Python_Libros/Python_GUI_Development_Tkinter_2014/02. Tkinter Concepts
+/home/santosg/LIBROS_TODOS/PPP_libros/Python_Libros/Python_GUI_Development_Tkinter_2014/03. Basic Widgets
+/home/santosg/LIBROS_TODOS/PPP_libros/Python_Libros/Python_GUI_Development_Tkinter_2014/04. Organizational Widgets
+/home/santosg/LIBROS_TODOS/PPP_libros/Python_Libros/Python_GUI_Development_Tkinter_2014/05. Advanced Widgets
+/home/santosg/LIBROS_TODOS/PPP_libros/Python_Libros/Python_GUI_Development_Tkinter_2014/06. Geometry Management
+/home/santosg/LIBROS_TODOS/PPP_libros/Python_Libros/Python_GUI_Development_Tkinter_2014/07. Event Handling
+/home/santosg/LIBROS_TODOS/PPP_libros/Python_Libros/Python_GUI_Development_Tkinter_2014/08. Building an Application
+/home/santosg/LIBROS_TODOS/PPP_libros/Python_Libros/Python_GUI_Development_Tkinter_2014/Exercise Files.zip
+/home/santosg/LIBROS_TODOS/PPP_libros/Python_Libros/Python_GUI_Development_Tkinter_2014/00. Introduction/00_01-welcome.mp4
+/home/santosg/LIBROS_TODOS/PPP_libros/Python_Libros/Python_GUI_Development_Tkinter_2014/00. Introduction/00_02-prerequisites.mp4
+/home/santosg/LIBROS_TODOS/PPP_libros/Python_Libros/Python_GUI_Development_Tkinter_2014/00. Introduction/00_03-exercisefiles.mp4
+/home/santosg/LIBROS_TODOS/PPP_libros/Python_Libros/Python_GUI_Development_Tkinter_2014/01. Getting Started with Python and Tkinter/01_01-windows_install.mp4
+/home/santosg/LIBROS_TODOS/PPP_libros/Python_Libros/Python_GUI_Development_Tkinter_2014/01. Getting Started with Python and Tkinter/01_02-mac_install.mp4
+/home/santosg/LIBROS_TODOS/PPP_libros/Python_Libros/Python_GUI_Development_Tkinter_2014/01. Getting Started with Python and Tkinter/01_03-hello.mp4
+/home/santosg/LIBROS_TODOS/PPP_libros/Python_Libros/Python_GUI_Development_Tkinter_2014/02. Tkinter Concepts/02_01-background.mp4
+/home/santosg/LIBROS_TODOS/PPP_libros/Python_Libros/Python_GUI_Development_Tkinter_2014/02. Tkinter Concepts/02_02-widgets.mp4
+/home/santosg/LIBROS_TODOS/PPP_libros/Python_Libros/Python_GUI_Development_Tkinter_2014/02. Tkinter Concepts/02_03-geometry.mp4
+/home/santosg/LIBROS_TODOS/PPP_libros/Python_Libros/Python_GUI_Development_Tkinter_2014/02. Tkinter Concepts/02_04-events.mp4
+/home/santosg/LIBROS_TODOS/PPP_libros/Python_Libros/Python_GUI_Development_Tkinter_2014/02. Tkinter Concepts/02_05-revisit.mp4
+/home/santosg/LIBROS_TODOS/PPP_libros/Python_Libros/Python_GUI_Development_Tkinter_2014/03. Basic Widgets/03_01-label.mp4
+/home/santosg/LIBROS_TODOS/PPP_libros/Python_Libros/Python_GUI_Development_Tkinter_2014/03. Basic Widgets/03_02-button.mp4
+/home/santosg/LIBROS_TODOS/PPP_libros/Python_Libros/Python_GUI_Development_Tkinter_2014/03. Basic Widgets/03_03-selection_buttons.mp4
+/home/santosg/LIBROS_TODOS/PPP_libros/Python_Libros/Python_GUI_Development_Tkinter_2014/03. Basic Widgets/03_04-entry.mp4
+/home/santosg/LIBROS_TODOS/PPP_libros/Python_Libros/Python_GUI_Development_Tkinter_2014/03. Basic Widgets/03_05-selection_boxse.mp4
+/home/santosg/LIBROS_TODOS/PPP_libros/Python_Libros/Python_GUI_Development_Tkinter_2014/03. Basic Widgets/03_06-progressbar.mp4
+/home/santosg/LIBROS_TODOS/PPP_libros/Python_Libros/Python_GUI_Development_Tkinter_2014/04. Organizational Widgets/04_01-frame.mp4
+/home/santosg/LIBROS_TODOS/PPP_libros/Python_Libros/Python_GUI_Development_Tkinter_2014/04. Organizational Widgets/04_02-toplevel.mp4
+/home/santosg/LIBROS_TODOS/PPP_libros/Python_Libros/Python_GUI_Development_Tkinter_2014/04. Organizational Widgets/04_03-panedwindow.mp4
+/home/santosg/LIBROS_TODOS/PPP_libros/Python_Libros/Python_GUI_Development_Tkinter_2014/04. Organizational Widgets/04_04-notebook.mp4
+/home/santosg/LIBROS_TODOS/PPP_libros/Python_Libros/Python_GUI_Development_Tkinter_2014/05. Advanced Widgets/05_01-text.mp4
+/home/santosg/LIBROS_TODOS/PPP_libros/Python_Libros/Python_GUI_Development_Tkinter_2014/05. Advanced Widgets/05_02-text_advanced.mp4
+/home/santosg/LIBROS_TODOS/PPP_libros/Python_Libros/Python_GUI_Development_Tkinter_2014/05. Advanced Widgets/05_03-treeview.mp4
+/home/santosg/LIBROS_TODOS/PPP_libros/Python_Libros/Python_GUI_Development_Tkinter_2014/05. Advanced Widgets/05_04-treeview_advanced.mp4
+/home/santosg/LIBROS_TODOS/PPP_libros/Python_Libros/Python_GUI_Development_Tkinter_2014/05. Advanced Widgets/05_05-menu.mp4
+/home/santosg/LIBROS_TODOS/PPP_libros/Python_Libros/Python_GUI_Development_Tkinter_2014/05. Advanced Widgets/05_06-canvas.mp4
+/home/santosg/LIBROS_TODOS/PPP_libros/Python_Libros/Python_GUI_Development_Tkinter_2014/05. Advanced Widgets/05_07-canvas_advanced.mp4
+/home/santosg/LIBROS_TODOS/PPP_libros/Python_Libros/Python_GUI_Development_Tkinter_2014/05. Advanced Widgets/05_08-scrollbar.mp4
+/home/santosg/LIBROS_TODOS/PPP_libros/Python_Libros/Python_GUI_Development_Tkinter_2014/05. Advanced Widgets/05_09-style.mp4
+/home/santosg/LIBROS_TODOS/PPP_libros/Python_Libros/Python_GUI_Development_Tkinter_2014/05. Advanced Widgets/05_10-dialog.mp4
+/home/santosg/LIBROS_TODOS/PPP_libros/Python_Libros/Python_GUI_Development_Tkinter_2014/06. Geometry Management/06_01-pack.mp4
+/home/santosg/LIBROS_TODOS/PPP_libros/Python_Libros/Python_GUI_Development_Tkinter_2014/06. Geometry Management/06_02-grid.mp4
+/home/santosg/LIBROS_TODOS/PPP_libros/Python_Libros/Python_GUI_Development_Tkinter_2014/06. Geometry Management/06_03-place.mp4
+/home/santosg/LIBROS_TODOS/PPP_libros/Python_Libros/Python_GUI_Development_Tkinter_2014/07. Event Handling/07_01-callback.mp4
+/home/santosg/LIBROS_TODOS/PPP_libros/Python_Libros/Python_GUI_Development_Tkinter_2014/07. Event Handling/07_02-keyboard.mp4
+/home/santosg/LIBROS_TODOS/PPP_libros/Python_Libros/Python_GUI_Development_Tkinter_2014/07. Event Handling/07_03-mouse.mp4
+/home/santosg/LIBROS_TODOS/PPP_libros/Python_Libros/Python_GUI_Development_Tkinter_2014/07. Event Handling/07_04-virtual.mp4
+/home/santosg/LIBROS_TODOS/PPP_libros/Python_Libros/Python_GUI_Development_Tkinter_2014/07. Event Handling/07_05-multiple.mp4
+/home/santosg/LIBROS_TODOS/PPP_libros/Python_Libros/Python_GUI_Development_Tkinter_2014/08. Building an Application/08_01-requirements.mp4
+/home/santosg/LIBROS_TODOS/PPP_libros/Python_Libros/Python_GUI_Development_Tkinter_2014/08. Building an Application/08_02-design.mp4
+/home/santosg/LIBROS_TODOS/PPP_libros/Python_Libros/Python_GUI_Development_Tkinter_2014/08. Building an Application/08_03-widgets.mp4
+/home/santosg/LIBROS_TODOS/PPP_libros/Python_Libros/Python_GUI_Development_Tkinter_2014/08. Building an Application/08_04-layout.mp4
+/home/santosg/LIBROS_TODOS/PPP_libros/Python_Libros/Python_GUI_Development_Tkinter_2014/08. Building an Application/08_05-events.mp4
+/home/santosg/LIBROS_TODOS/PPP_libros/Python_Libros/Python_GUI_Development_Tkinter_2014/08. Building an Application/08_06-style.mp4

@@ -1,0 +1,101 @@
+\begin{frame}
+
+\begin{itemize}
+\item El objetivo de este libro es enseñar programación informática utilizando ejemplos de matemáticas y ciencias naturales.
+
+\item Hemos elegido utilizar el lenguaje de programación Python porque combina un notable poder expresivo con una sintaxis muy limpia, simple y compacta. 
+
+\item Python es fácil de aprender y muy adecuado para una introducción a la programación informática.
+
+\item Los ejemplos de este libro integran la programación con aplicaciones a las matemáticas, la física, la biología y las finanzas. 
+
+\item Este libro se centra principalmente en el proceso de pensamiento, o equivalentemente: la programación como técnica de resolución de problemas
+
+\item Es por eso que la mayoría de las páginas están dedicadas a estudios de casos de programación, donde definimos un problema y explicamos cómo crear el programa correspondiente. 
+el libro está lleno de ejercicios de varios tipos
+\end{itemize}
+
+\end{frame}
+
+\begin{frame}
+
+To work with this book, I recommend using Python version 2.7. For Chaps. 5–9
+and Appendices A–E, you need the NumPy and Matplotlib packages, preferably
+also the IPython and SciTools packages, and for Appendix G, Cython is required.
+Other packages used in the text are nose and sympy. Section H.1 has more information on how you can get access to Python and the mentioned packages.
+
+\end{frame}
+
+\begin{frame}
+
+C01 Computing with Formulas 
+
+Nuestros primeros ejemplos de programación de computadoras involucran programas que evalúan fórmulas matemáticas. Aprenderá cómo escribir y ejecutar un programa de Python, cómo trabajar con variables, cómo calcular con funciones matemáticas como e^x, y sin x, y cómo usar Python para cálculos interactivos.
+
+
+Suponemos que está algo familiarizado con las computadoras para que sepa qué archivos y carpetas son (otra palabra frecuente para carpeta es directorio), cómo se mueve entre carpetas, cómo cambia los nombres de archivos y carpetas, y cómo escribe texto y lo guarda. en un archivo.
+
+\end{frame}
+
+\begin{frame}
+
+1.1 The First Programming Encounter: a Formula 
+
+La primera fórmula que consideraremos se refiere al movimiento vertical de una pelota lanzada al aire. A partir de la segunda ley de movimiento de Newton, se puede establecer un modelo matemático para el movimiento de la pelota y encontrar que la posición vertical de la pelota, llamada y, varía con el tiempo t de acuerdo con la siguiente fórmula:
+
+$$
+y(t) =  v_0 t - \frac{1}{2} g t^2 
+$$
+
+Aquí, $v_0$ es la velocidad inicial de la pelota, g es la aceleración de la gravedad y t es el tiempo. Observe que el eje y se elige de modo que la pelota comience en y =0 cuando t = 0. La fórmula anterior ignora la resistencia del aire, que suele ser pequeña a menos que $v_0$ sea grande; consulte el ejercicio 1.11.
+
+Para obtener una visión general del tiempo que tarda la pelota en moverse hacia arriba y volver a y = 0 nuevamente, podemos buscar soluciones a la ecuación y = 0:
+
+$$
+v_0t - \frac{1}{2} g t^2 =  t(v_0 - \frac{1}{2} gt) = 0 \Rightarrow t = 0 or t = \frac{2v_0}{g}
+$$ 
+
+Es decir, la pelota regresa después de $2v_0/g$ segundos y, por lo tanto, es razonable restringir el interés de (1.1) a $t \in [0,  2v_0/g]$.
+
+\end{frame}
+
+\begin{frame}
+1.1.1 Using a Program as a Calculator 
+
+Nuestro primer programa evaluará (1.1) para una elección específica de $v_0, g y t$. Elegir $v_0 =5 m/s$ y g = 9:81 $m/s^2$ hace que la pelota regrese después de $t = 2v_0/g \approx 1 s$. Esto significa que estamos básicamente interesados en el intervalo de tiempo Œ0; 1. Digamos que queremos calcular la altura de la pelota en el tiempo t = 0:6 s. De (1.1) tenemos
+
+
+$$
+y = 5 \dot  0.6 - \frac{1}{2} \dot 9:81 \dot  0.6^2 
+$$ 
+
+Esta expresión aritmética se puede evaluar y su valor se puede imprimir mediante un programa Python de una línea muy simple:
+
+print 5*0.6 - 0.5*9.81*0.6**2 
+
+Los cuatro operadores aritméticos estándar se escriben como +, -, * y / en Python y en la mayoría de los demás lenguajes informáticos. La exponenciación emplea una notación de doble asterisco en Python, por ejemplo, $0.6^2$ se escribe como 0,6**2. Nuestra tarea ahora es crear el programa y ejecutarlo, y esto se describirá a continuación.
+
+\end{frame}
+
+\begin{frame}
+
+1.1.2 About Programs and Programming 
+
+Un programa de computadora es solo una secuencia de instrucciones para la computadora, escritas en un lenguaje de computadora. La mayoría de los lenguajes de programación se parecen un poco al inglés, pero son mucho más simples.
+
+Otra percepción de la palabra programa es un archivo que se puede ejecutar ("doble clic") para realizar una tarea. 
+
+En general, la palabra programa significa este archivo único o la colección de archivos con instrucciones textuales.
+
+
+Obviamente, la programación se trata de escribir programas, pero este proceso es más que escribir las instrucciones correctas en un archivo. Primero, debemos entender cómo se puede resolver un problema dando una secuencia de instrucciones a la computadora. Esta es una de las cosas más difíciles con la programación. En segundo lugar, debemos expresar correctamente esta secuencia de instrucciones en un lenguaje informático y almacenar el texto correspondiente en un archivo (el programa). Esta es normalmente la parte más fácil. En tercer lugar, debemos averiguar cómo comprobar la validez de los resultados. Por lo general, los resultados no son los esperados y necesitamos una cuarta fase en la que sistemáticamente rastreamos los errores y los corregimos. Dominar estos cuatro pasos requiere mucho entrenamiento, lo que significa hacer una gran cantidad de programas (¡ejercicios en este libro, por ejemplo!) y hacer que los programas funcionen.
+
+\end{frame}
+
+\begin{frame}
+
+1.1.3 Tools for Writing Programs 
+
+(base) santosg@lucrecia:~$ 
+
+\end{frame}

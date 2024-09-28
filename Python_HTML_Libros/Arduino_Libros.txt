@@ -1,0 +1,148 @@
+/home/santosg/LIBROS_TODOS/AAA_libros/Arduino_Libros/2009-11-17-arduino-basics.pdf
+/home/santosg/LIBROS_TODOS/AAA_libros/Arduino_Libros/2010_Book_BeginningArduino.pdf
+/home/santosg/LIBROS_TODOS/AAA_libros/Arduino_Libros/2010_Book_PracticalArduino.pdf
+/home/santosg/LIBROS_TODOS/AAA_libros/Arduino_Libros/2011_Book_PracticalArduinoEngineering.pdf
+/home/santosg/LIBROS_TODOS/AAA_libros/Arduino_Libros/2012_ArduinoAndKinectProjects.pdf
+/home/santosg/LIBROS_TODOS/AAA_libros/Arduino_Libros/2012_Book_PracticalAVRMicrocontrollers.pdf
+/home/santosg/LIBROS_TODOS/AAA_libros/Arduino_Libros/2013_ArduinoAndLEGOProjects.pdf
+/home/santosg/LIBROS_TODOS/AAA_libros/Arduino_Libros/2014_Book_ExperimentingWithRaspberryPi.pdf
+/home/santosg/LIBROS_TODOS/AAA_libros/Arduino_Libros/2017_Book_BuildingArduinoPLCs.pdf
+/home/santosg/LIBROS_TODOS/AAA_libros/Arduino_Libros/2017_Book_DeployingRaspberryPiInTheClass.pdf
+/home/santosg/LIBROS_TODOS/AAA_libros/Arduino_Libros/2018_Book_AdvancedRaspberryPi.pdf
+/home/santosg/LIBROS_TODOS/AAA_libros/Arduino_Libros/2018_Book_CodingTheArduino.pdf
+/home/santosg/LIBROS_TODOS/AAA_libros/Arduino_Libros/2018_Book_ConnectingArduinoToTheWeb.pdf
+/home/santosg/LIBROS_TODOS/AAA_libros/Arduino_Libros/2018_Book_LearnRaspberryPiProgrammingWit.pdf
+/home/santosg/LIBROS_TODOS/AAA_libros/Arduino_Libros/2018_Book_RaspberryPiForArduinoUsers (1).pdf
+/home/santosg/LIBROS_TODOS/AAA_libros/Arduino_Libros/2018_Book_RaspberryPiForArduinoUsers.pdf
+/home/santosg/LIBROS_TODOS/AAA_libros/Arduino_Libros/30 Arduino Projects for the Evil Genius.pdf
+/home/santosg/LIBROS_TODOS/AAA_libros/Arduino_Libros/8X8M-Guide.pdf
+/home/santosg/LIBROS_TODOS/AAA_libros/Arduino_Libros/Apress Arduino Adventures 2013 Retail eBook-BitBook.pdf
+/home/santosg/LIBROS_TODOS/AAA_libros/Arduino_Libros/Apress - Arduino and Kinect Projects 2012 RETAiL eBOOk-rebOOk.pdf
+/home/santosg/LIBROS_TODOS/AAA_libros/Arduino_Libros/Arduino_Adventures.pdf
+/home/santosg/LIBROS_TODOS/AAA_libros/Arduino_Libros/Arduino Adventures V413HAV.pdf
+/home/santosg/LIBROS_TODOS/AAA_libros/Arduino_Libros/Arduino and Kinect Projects.pdf
+/home/santosg/LIBROS_TODOS/AAA_libros/Arduino_Libros/Arduino - A Quick Start Guide Quick Start Guide.pdf
+/home/santosg/LIBROS_TODOS/AAA_libros/Arduino_Libros/Arduino_Booklet.pdf
+/home/santosg/LIBROS_TODOS/AAA_libros/Arduino_Libros/Arduino Books Collection.jpg
+/home/santosg/LIBROS_TODOS/AAA_libros/Arduino_Libros/Arduino Cookbook.epub
+/home/santosg/LIBROS_TODOS/AAA_libros/Arduino_Libros/Arduino Cookbook.pdf
+/home/santosg/LIBROS_TODOS/AAA_libros/Arduino_Libros/Arduino in Action.pdf
+/home/santosg/LIBROS_TODOS/AAA_libros/Arduino_Libros/Arduino Internals 2.pdf
+/home/santosg/LIBROS_TODOS/AAA_libros/Arduino_Libros/Arduino Internals.pdf
+/home/santosg/LIBROS_TODOS/AAA_libros/Arduino_Libros/Arduino Lab 1.pdf
+/home/santosg/LIBROS_TODOS/AAA_libros/Arduino_Libros/Arduino_Massimo.pdf
+/home/santosg/LIBROS_TODOS/AAA_libros/Arduino_Libros/arduino-mini-user-guide.pdf
+/home/santosg/LIBROS_TODOS/AAA_libros/Arduino_Libros/ArduinoNanoManual23.pdf
+/home/santosg/LIBROS_TODOS/AAA_libros/Arduino_Libros/arduino_notebook_v1-1.pdf
+/home/santosg/LIBROS_TODOS/AAA_libros/Arduino_Libros/ARDUINO_NOTEBOOKv6.pdf
+/home/santosg/LIBROS_TODOS/AAA_libros/Arduino_Libros/arduino_projects.pdf
+/home/santosg/LIBROS_TODOS/AAA_libros/Arduino_Libros/Arduino_Projects_Save_Word.pdf
+/home/santosg/LIBROS_TODOS/AAA_libros/Arduino_Libros/Arduino projects to save the world.pdf
+/home/santosg/LIBROS_TODOS/AAA_libros/Arduino_Libros/Arduino Robotics.pdf
+/home/santosg/LIBROS_TODOS/AAA_libros/Arduino_Libros/Arduino_Robotics.pdf
+/home/santosg/LIBROS_TODOS/AAA_libros/Arduino_Libros/Arduino_Starter_Kit_Manual-Mar2010.pdf
+/home/santosg/LIBROS_TODOS/AAA_libros/Arduino_Libros/Arduino Wearables-2010kaiser.pdf
+/home/santosg/LIBROS_TODOS/AAA_libros/Arduino_Libros/Arduino Workshop.pdf
+/home/santosg/LIBROS_TODOS/AAA_libros/Arduino_Libros/Arduino_workshop_sensors.pdf
+/home/santosg/LIBROS_TODOS/AAA_libros/Arduino_Libros/Atmospheric Monitoring With Arduino V413HAV.pdf
+/home/santosg/LIBROS_TODOS/AAA_libros/Arduino_Libros/Beginning_Android)ADK_Arduino.pdf
+/home/santosg/LIBROS_TODOS/AAA_libros/Arduino_Libros/Beginning Android ADK with Arduino.pdf
+/home/santosg/LIBROS_TODOS/AAA_libros/Arduino_Libros/Beginning_Arduino.pdf
+/home/santosg/LIBROS_TODOS/AAA_libros/Arduino_Libros/Beginning Arduino Programming,-2010kaiser.pdf
+/home/santosg/LIBROS_TODOS/AAA_libros/Arduino_Libros/Beginning_Arduino_Programming.pdf
+/home/santosg/LIBROS_TODOS/AAA_libros/Arduino_Libros/Beginning_C_Arduino_2E.pdf
+/home/santosg/LIBROS_TODOS/AAA_libros/Arduino_Libros/bionic_arduino_classes
+/home/santosg/LIBROS_TODOS/AAA_libros/Arduino_Libros/bok_3A978-1-4302-4168-3.pdf
+/home/santosg/LIBROS_TODOS/AAA_libros/Arduino_Libros/bok_3A978-1-4302-4267-3.pdf
+/home/santosg/LIBROS_TODOS/AAA_libros/Arduino_Libros/bok_3A978-1-4302-4777-7.pdf
+/home/santosg/LIBROS_TODOS/AAA_libros/Arduino_Libros/bok_3A978-1-4302-4930-6.pdf
+/home/santosg/LIBROS_TODOS/AAA_libros/Arduino_Libros/bok_3A978-1-4302-5017-3.pdf
+/home/santosg/LIBROS_TODOS/AAA_libros/Arduino_Libros/bok_3A978-1-4842-2632-2.pdf
+/home/santosg/LIBROS_TODOS/AAA_libros/Arduino_Libros/Building Arduino Projects for the Internet of Things Experiments with Real-World Applications.pdf
+/home/santosg/LIBROS_TODOS/AAA_libros/Arduino_Libros/Building Autonomous Line Followers using Arduino and PID.pdf
+/home/santosg/LIBROS_TODOS/AAA_libros/Arduino_Libros/Circuit-Sheets.pdf
+/home/santosg/LIBROS_TODOS/AAA_libros/Arduino_Libros/Designing_Embedded_System_arduino.pdf
+/home/santosg/LIBROS_TODOS/AAA_libros/Arduino_Libros/Dunbar2020_Book_ArduinoSoftwareInternals.pdf
+/home/santosg/LIBROS_TODOS/AAA_libros/Arduino_Libros/Ebook.OREILLY-MAKE ARDUINO BOTS AND GADGETS SIX EMBEDDED PROJECTS WITH OPEN SOURCE HARDWARE AND SOFTWARE.pdf
+/home/santosg/LIBROS_TODOS/AAA_libros/Arduino_Libros/Environmental Monitoring with Arduino.pdf
+/home/santosg/LIBROS_TODOS/AAA_libros/Arduino_Libros/Getting_Started_with_Arduino.pdf
+/home/santosg/LIBROS_TODOS/AAA_libros/Arduino_Libros/Getting_Started_with_Arduino_Second_Edition.pdf
+/home/santosg/LIBROS_TODOS/AAA_libros/Arduino_Libros/GUI_Design_Android_Apps.pdf
+/home/santosg/LIBROS_TODOS/AAA_libros/Arduino_Libros/Intel_Galileo_Intel_Galileo_Gen2.pdf
+/home/santosg/LIBROS_TODOS/AAA_libros/Arduino_Libros/iOS Sensor Apps with Arduino.epub
+/home/santosg/LIBROS_TODOS/AAA_libros/Arduino_Libros/iOS Sensor Apps with Arduino.pdf
+/home/santosg/LIBROS_TODOS/AAA_libros/Arduino_Libros/Knight2018_Book_ConnectingArduinoToTheWeb.pdf
+/home/santosg/LIBROS_TODOS/AAA_libros/Arduino_Libros/Learn Electronics With Arduino V413HAV.pdf
+/home/santosg/LIBROS_TODOS/AAA_libros/Arduino_Libros/Make_a_Mind_Controlled_Arduino_Robot.pdf
+/home/santosg/LIBROS_TODOS/AAA_libros/Arduino_Libros/Make an Arduino Controlled Robot 2012.pdf
+/home/santosg/LIBROS_TODOS/AAA_libros/Arduino_Libros/Making Things See.pdf
+/home/santosg/LIBROS_TODOS/AAA_libros/Arduino_Libros/Making_Things_Talk_Tom_Igoe_OReilly.pdf
+/home/santosg/LIBROS_TODOS/AAA_libros/Arduino_Libros/Microcontroller Programming - The Microchip PIC.pdf
+/home/santosg/LIBROS_TODOS/AAA_libros/Arduino_Libros/MintDuino - Building an Arduino Compatible Breadboard Microcontroller V413HAV.pdf
+/home/santosg/LIBROS_TODOS/AAA_libros/Arduino_Libros/Practical Arduino Cool Projects for Open Source Hardware.pdf
+/home/santosg/LIBROS_TODOS/AAA_libros/Arduino_Libros/Practical Arduino Engineering.epub
+/home/santosg/LIBROS_TODOS/AAA_libros/Arduino_Libros/Practical_Arduino_Engineering.pdf
+/home/santosg/LIBROS_TODOS/AAA_libros/Arduino_Libros/Practical_arduino.pdf
+/home/santosg/LIBROS_TODOS/AAA_libros/Arduino_Libros/Programming Interactivity.pdf
+/home/santosg/LIBROS_TODOS/AAA_libros/Arduino_Libros/Programming Your Home Automate with Arduino, Android, and Your Computer.pdf
+/home/santosg/LIBROS_TODOS/AAA_libros/Arduino_Libros/Raspberry Pi Home Automation with Arduino.pdf
+/home/santosg/LIBROS_TODOS/AAA_libros/Arduino_Libros/Robert Faludi - Building Wireless Sensor Networks with ZigBee, XBee, Arduino, and Processing - 2010.pdf
+/home/santosg/LIBROS_TODOS/AAA_libros/Arduino_Libros/self_sufficient_arduino1_2.pdf
+/home/santosg/LIBROS_TODOS/AAA_libros/Arduino_Libros/Seneviratne2017_Book_BuildingArduinoPLCs.pdf
+/home/santosg/LIBROS_TODOS/AAA_libros/Arduino_Libros/TMP36-Guide.pdf
+/home/santosg/LIBROS_TODOS/AAA_libros/Arduino_Libros/UITLEG.pdf
+/home/santosg/LIBROS_TODOS/AAA_libros/Arduino_Libros/bionic_arduino_classes/bionic_arduino_class1.pdf
+/home/santosg/LIBROS_TODOS/AAA_libros/Arduino_Libros/bionic_arduino_classes/bionic_arduino_class2.pdf
+/home/santosg/LIBROS_TODOS/AAA_libros/Arduino_Libros/bionic_arduino_classes/bionic_arduino_class3.pdf
+/home/santosg/LIBROS_TODOS/AAA_libros/Arduino_Libros/bionic_arduino_classes/bionic_arduino_class4.pdf
+/home/santosg/LIBROS_TODOS/AAA_libros/Arduino_Libros/bionic_arduino_classes/bionicarduino-sketches
+/home/santosg/LIBROS_TODOS/AAA_libros/Arduino_Libros/bionic_arduino_classes/bionicarduino-sketches/Blink
+/home/santosg/LIBROS_TODOS/AAA_libros/Arduino_Libros/bionic_arduino_classes/bionicarduino-sketches/Button
+/home/santosg/LIBROS_TODOS/AAA_libros/Arduino_Libros/bionic_arduino_classes/bionicarduino-sketches/CandleLight
+/home/santosg/LIBROS_TODOS/AAA_libros/Arduino_Libros/bionic_arduino_classes/bionicarduino-sketches/FadeOrBlink
+/home/santosg/LIBROS_TODOS/AAA_libros/Arduino_Libros/bionic_arduino_classes/bionicarduino-sketches/Fading
+/home/santosg/LIBROS_TODOS/AAA_libros/Arduino_Libros/bionic_arduino_classes/bionicarduino-sketches/NunchuckPrint
+/home/santosg/LIBROS_TODOS/AAA_libros/Arduino_Libros/bionic_arduino_classes/bionicarduino-sketches/NunchuckServo
+/home/santosg/LIBROS_TODOS/AAA_libros/Arduino_Libros/bionic_arduino_classes/bionicarduino-sketches/PiezoKnock
+/home/santosg/LIBROS_TODOS/AAA_libros/Arduino_Libros/bionic_arduino_classes/bionicarduino-sketches/PiezoMotorPulse
+/home/santosg/LIBROS_TODOS/AAA_libros/Arduino_Libros/bionic_arduino_classes/bionicarduino-sketches/PlayMelody
+/home/santosg/LIBROS_TODOS/AAA_libros/Arduino_Libros/bionic_arduino_classes/bionicarduino-sketches/PotDimmer
+/home/santosg/LIBROS_TODOS/AAA_libros/Arduino_Libros/bionic_arduino_classes/bionicarduino-sketches/PotSend
+/home/santosg/LIBROS_TODOS/AAA_libros/Arduino_Libros/bionic_arduino_classes/bionicarduino-sketches/RGBMoodLight
+/home/santosg/LIBROS_TODOS/AAA_libros/Arduino_Libros/bionic_arduino_classes/bionicarduino-sketches/RGBPotMixer
+/home/santosg/LIBROS_TODOS/AAA_libros/Arduino_Libros/bionic_arduino_classes/bionicarduino-sketches/RGBPotMixer2
+/home/santosg/LIBROS_TODOS/AAA_libros/Arduino_Libros/bionic_arduino_classes/bionicarduino-sketches/SerialHelloWorld
+/home/santosg/LIBROS_TODOS/AAA_libros/Arduino_Libros/bionic_arduino_classes/bionicarduino-sketches/SerialMotorSpeed
+/home/santosg/LIBROS_TODOS/AAA_libros/Arduino_Libros/bionic_arduino_classes/bionicarduino-sketches/SerialReadBasic
+/home/santosg/LIBROS_TODOS/AAA_libros/Arduino_Libros/bionic_arduino_classes/bionicarduino-sketches/SerialReadBlink
+/home/santosg/LIBROS_TODOS/AAA_libros/Arduino_Libros/bionic_arduino_classes/bionicarduino-sketches/SerialRGBLED
+/home/santosg/LIBROS_TODOS/AAA_libros/Arduino_Libros/bionic_arduino_classes/bionicarduino-sketches/ServoSerialBetter
+/home/santosg/LIBROS_TODOS/AAA_libros/Arduino_Libros/bionic_arduino_classes/bionicarduino-sketches/ServoSerialSimple
+/home/santosg/LIBROS_TODOS/AAA_libros/Arduino_Libros/bionic_arduino_classes/bionicarduino-sketches/ServoSimple
+/home/santosg/LIBROS_TODOS/AAA_libros/Arduino_Libros/bionic_arduino_classes/bionicarduino-sketches/SoundSerial
+/home/santosg/LIBROS_TODOS/AAA_libros/Arduino_Libros/bionic_arduino_classes/bionicarduino-sketches/Theremin
+/home/santosg/LIBROS_TODOS/AAA_libros/Arduino_Libros/bionic_arduino_classes/bionicarduino-sketches/Blink/Blink.pde
+/home/santosg/LIBROS_TODOS/AAA_libros/Arduino_Libros/bionic_arduino_classes/bionicarduino-sketches/Button/Button.pde
+/home/santosg/LIBROS_TODOS/AAA_libros/Arduino_Libros/bionic_arduino_classes/bionicarduino-sketches/CandleLight/CandleLight.pde
+/home/santosg/LIBROS_TODOS/AAA_libros/Arduino_Libros/bionic_arduino_classes/bionicarduino-sketches/FadeOrBlink/FadeOrBlink.pde
+/home/santosg/LIBROS_TODOS/AAA_libros/Arduino_Libros/bionic_arduino_classes/bionicarduino-sketches/Fading/Fading.pde
+/home/santosg/LIBROS_TODOS/AAA_libros/Arduino_Libros/bionic_arduino_classes/bionicarduino-sketches/NunchuckPrint/NunchuckPrint.pde
+/home/santosg/LIBROS_TODOS/AAA_libros/Arduino_Libros/bionic_arduino_classes/bionicarduino-sketches/NunchuckServo/NunchuckServo.pde
+/home/santosg/LIBROS_TODOS/AAA_libros/Arduino_Libros/bionic_arduino_classes/bionicarduino-sketches/PiezoKnock/PiezoKnock.pde
+/home/santosg/LIBROS_TODOS/AAA_libros/Arduino_Libros/bionic_arduino_classes/bionicarduino-sketches/PiezoMotorPulse/PiezoMotorPulse.pde
+/home/santosg/LIBROS_TODOS/AAA_libros/Arduino_Libros/bionic_arduino_classes/bionicarduino-sketches/PlayMelody/PlayMelody.pde
+/home/santosg/LIBROS_TODOS/AAA_libros/Arduino_Libros/bionic_arduino_classes/bionicarduino-sketches/PotDimmer/PotDimmer.pde
+/home/santosg/LIBROS_TODOS/AAA_libros/Arduino_Libros/bionic_arduino_classes/bionicarduino-sketches/PotSend/PotSend.pde
+/home/santosg/LIBROS_TODOS/AAA_libros/Arduino_Libros/bionic_arduino_classes/bionicarduino-sketches/RGBMoodLight/RGBMoodLight.pde
+/home/santosg/LIBROS_TODOS/AAA_libros/Arduino_Libros/bionic_arduino_classes/bionicarduino-sketches/RGBPotMixer/RGBPotMixer.pde
+/home/santosg/LIBROS_TODOS/AAA_libros/Arduino_Libros/bionic_arduino_classes/bionicarduino-sketches/RGBPotMixer2/RGBPotMixer2.pde
+/home/santosg/LIBROS_TODOS/AAA_libros/Arduino_Libros/bionic_arduino_classes/bionicarduino-sketches/SerialHelloWorld/SerialHelloWorld.pde
+/home/santosg/LIBROS_TODOS/AAA_libros/Arduino_Libros/bionic_arduino_classes/bionicarduino-sketches/SerialMotorSpeed/SerialMotorSpeed.pde
+/home/santosg/LIBROS_TODOS/AAA_libros/Arduino_Libros/bionic_arduino_classes/bionicarduino-sketches/SerialReadBasic/SerialReadBasic.pde
+/home/santosg/LIBROS_TODOS/AAA_libros/Arduino_Libros/bionic_arduino_classes/bionicarduino-sketches/SerialReadBlink/SerialReadBlink.pde
+/home/santosg/LIBROS_TODOS/AAA_libros/Arduino_Libros/bionic_arduino_classes/bionicarduino-sketches/SerialRGBLED/SerialRGBLED.pde
+/home/santosg/LIBROS_TODOS/AAA_libros/Arduino_Libros/bionic_arduino_classes/bionicarduino-sketches/ServoSerialBetter/ServoSerialBetter.pde
+/home/santosg/LIBROS_TODOS/AAA_libros/Arduino_Libros/bionic_arduino_classes/bionicarduino-sketches/ServoSerialSimple/ServoSerialSimple.pde
+/home/santosg/LIBROS_TODOS/AAA_libros/Arduino_Libros/bionic_arduino_classes/bionicarduino-sketches/ServoSimple/ServoSimple.pde
+/home/santosg/LIBROS_TODOS/AAA_libros/Arduino_Libros/bionic_arduino_classes/bionicarduino-sketches/SoundSerial/SoundSerial.pde
+/home/santosg/LIBROS_TODOS/AAA_libros/Arduino_Libros/bionic_arduino_classes/bionicarduino-sketches/Theremin/Theremin.pde

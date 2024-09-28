@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="50mm"
+   height="50mm"
+   viewBox="0 0 50 50"
+   version="1.1"
+   id="svg5"
+   inkscape:version="1.1 (c4e8f9e, 2021-05-24)"
+   sodipodi:docname="img01.svg"
+   inkscape:export-filename="/Users/santosg/Python_Daniel/img01.png"
+   inkscape:export-xdpi="96"
+   inkscape:export-ydpi="96"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview7"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:document-units="mm"
+     showgrid="false"
+     inkscape:zoom="0.67081229"
+     inkscape:cx="-49.19409"
+     inkscape:cy="578.40324"
+     inkscape:window-width="1445"
+     inkscape:window-height="1006"
+     inkscape:window-x="0"
+     inkscape:window-y="25"
+     inkscape:window-maximized="0"
+     inkscape:current-layer="layer1"
+     width="60mm" />
+  <defs
+     id="defs2">
+    <linearGradient
+       id="linearGradient1054"
+       inkscape:swatch="solid">
+      <stop
+         style="stop-color:#000000;stop-opacity:1;"
+         offset="0"
+         id="stop1052" />
+    </linearGradient>
+    <linearGradient
+       id="linearGradient1026"
+       inkscape:swatch="solid">
+      <stop
+         style="stop-color:#000000;stop-opacity:1;"
+         offset="0"
+         id="stop1024" />
+    </linearGradient>
+    <linearGradient
+       id="linearGradient976"
+       inkscape:swatch="solid">
+      <stop
+         style="stop-color:#280b0b;stop-opacity:1;"
+         offset="0"
+         id="stop974" />
+    </linearGradient>
+  </defs>
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1">
+    <circle
+       style="fill:#280b0b;fill-rule:evenodd;stroke-width:0.147511"
+       id="path31"
+       cx="13.263251"
+       cy="14.720695"
+       r="5" />
+    <circle
+       style="fill:#280b0b;fill-rule:evenodd;stroke-width:0.147511"
+       id="path31-9"
+       cx="12.20747"
+       cy="39.557354"
+       r="5" />
+    <ellipse
+       style="fill:#280b0b;fill-rule:evenodd;stroke-width:0.123417"
+       id="path31-9-2"
+       cx="27.667627"
+       cy="30.091213"
+       rx="3.5"
+       ry="5" />
+    <ellipse
+       style="fill:#280b0b;fill-rule:evenodd;stroke-width:0.123417"
+       id="path31-9-2-4"
+       cx="54.949348"
+       cy="-0.61551344"
+       rx="3.5"
+       ry="5"
+       transform="rotate(40.5)" />
+    <ellipse
+       style="fill:#280b0b;fill-rule:evenodd;stroke-width:0.123417"
+       id="path31-3"
+       cx="39.028191"
+       cy="15.575269"
+       rx="5"
+       ry="3.5" />
+  </g>
+</svg>
