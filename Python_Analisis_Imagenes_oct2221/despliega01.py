@@ -5,17 +5,17 @@ import numpy as np
 import matplotlib.pyplot as plt
 
 jpgfile = Image.open("cuadrado.jpg")
-print dir(jpgfile)
+print(dir(jpgfile))
 
-print jpgfile.bits, jpgfile.size, jpgfile.format
+print(jpgfile.bits, jpgfile.size, jpgfile.format)
 
 image = np.array(jpgfile)
 ss = image.shape
-print ss
-print ss[0]*ss[1]
+print(ss)
+print(ss[0]*ss[1])
 
 img = image # image[:,:,1]
-print img.shape
+print(img.shape)
 
 #img = 255 * (img > 10) * (img<50)
 
