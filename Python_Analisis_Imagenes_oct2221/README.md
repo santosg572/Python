@@ -1,1 +1,0 @@
-# Python_Analisis_Imagenes_oct2221
