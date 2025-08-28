@@ -1,0 +1,7 @@
+https://www.geeksforgeeks.org/python/how-to-use-chatgpt-api-in-python/
+
+https://medium.com/@obaff/building-a-simple-program-with-chatgpt-api-and-python-dd0e464e71be
+
+pip install openai
+
+
