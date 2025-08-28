@@ -1,0 +1,4 @@
+1. Cuentas palabras de 2 a's, 3 a's, 4 a's, ... hay en el archivo
+2. Cuentas palabras de 2 b's, 3 b's, 4 b's, ... hay en el archivo 
+3. Cuantas palabras hay de la forma 'abab', 'aabb'
+ 
