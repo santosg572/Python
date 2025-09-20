@@ -1,6 +1,0 @@
-/Users/leopoldogonzalez/Desktop/CURSOS_mayo_2024/R.html
-/Users/leopoldogonzalez/Desktop/CURSOS_mayo_2024/ch01.html
-/Users/leopoldogonzalez/Desktop/CURSOS_mayo_2024/e01.html
-/Users/leopoldogonzalez/Desktop/CURSOS_mayo_2024/im01.png
-/Users/leopoldogonzalez/Desktop/CURSOS_mayo_2024/latex.html
-/Users/leopoldogonzalez/Desktop/CURSOS_mayo_2024/optimizacion_vectorial.html
