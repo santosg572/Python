@@ -1,7 +1,7 @@
 import openai
 
 # Load your OpenAI API key
-#openai.api_key = "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"
+#openai.api_key = 
 
 
 def generate_chatgpt_response(prompt):
