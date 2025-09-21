@@ -39,7 +39,9 @@ for ss in datos:
       print(dd)
 #      ddx = '<p> <a href="https://' +dd[1:] + '">¡Visita Semrush!</a> </p>\n'
       ddx = '<p> <a href="' +dd + '"> Libro-'+ str(k) +'</a> </p>\n'
+      ddy = '<object height="300" data="' + dd + '" type="application/pdf" width="860"> </object>'
       filo.write(ddx)
+      filo.write(ddy)
       k = k+1
 filo.write(dd2)
 filo.close()
