@@ -1,0 +1,371 @@
+/mnt/datos/santosg/Libros_TODOS_antonieta/Q-R_libros/R_Libros:
+2005_Book_AnRAndS-PLUSCompanionToMultiva.pdf
+2006_Book_R-TreesTheoryAndApplications.pdf
+2007_Book_InteractiveAndDynamicGraphicsF.pdf
+2008_Book_DataManipulationWithR.pdf
+2008_Book_Lattice.pdf
+2008_Book_NonlinearRegressionWithR.pdf
+2009_Book_APracticalGuideToEcologicalMod.pdf
+2009_Book_DynamicLinearModelsWithR.pdf
+2009_Book_FunctionalDataAnalysisWithRAnd.pdf
+2009_Book_RThroughExcel.pdf
+2010_Book_AdvancesInSocialScienceResearc.pdf
+2010_Book_IntroducingMonteCarloMethodsWi.pdf
+2010_Book_TakingYourIPadToTheMax.pdf
+2012_Book_AnalysisOfPhylogeneticsAndEvol.pdf
+2012_Book_CompetingRisksAndMultistateMod.pdf
+2012_Book_GraphicalModelsWithR.pdf
+2012_Book_ModelingPsychophysicalDataInR.pdf
+2012_Book_RByExample.pdf
+2012_Book_SolvingDifferentialEquationsIn.pdf
+2013_Book_AppliedSpatialDataAnalysisWith.pdf
+2013_Book_GuideToProgrammingAndAlgorithm.pdf
+2013_Book_RForBusinessAnalytics.pdf
+2013_Book_TheRSoftware.pdf
+2014_Book_BayesianEssentialsWithR.pdf
+2014_Book_BeginningDataScienceWithR.pdf
+2014_Book_FunctionalAndPhylogeneticEcolo.pdf
+2014_Book_IntroductionToDataAnalysisAndG.pdf
+2014_Book_ModernOptimizationWithR.pdf
+2014_Book_RForCloudComputing.pdf
+2014_Book_RRecipes.pdf
+2014_Book_StatisticalAnalysisOfFinancial.pdf
+2014_Book_StatisticalAnalysisOfNetworkDa.pdf
+2014_Book_TextAnalysisWithRForStudentsOf (1).pdf
+2014_Book_TextAnalysisWithRForStudentsOf.pdf
+2014_Book_XMLAndWebTechnologiesForDataSc.pdf
+2015_Book_AnalyzingFinancialDataAndImple.pdf
+2015_Book_AppliedMultivariateStatisticsW.pdf
+2015_Book_BeginningR.pdf
+2015_Book_HumanitiesDataInR.pdf
+2015_Book_Meta-AnalysisWithR.pdf
+2015_Book_PrimerToAnalysisOfGenomicDataU.pdf
+2015_Book_QualityControlWithR.pdf
+2016_Book_AdvancedR.pdf
+2016_Book_AppliedSurvivalAnalysisUsingR.pdf
+2016_Book_BeginningSQLServerRServices.pdf
+2016_Book_SystemDynamicsModelingWithR.pdf
+2017_Book_AdvancedObject-OrientedProgram.pdf
+2017_Book_DataVisualisationWithR.pdf
+2017_Book_FunctionalDataStructuresInR.pdf
+2017_Book_FunctionalProgrammingInR.pdf
+2017_Book_IntroductionToDeepLearningUsin.pdf
+2017_Book_MachineLearningUsingR.pdf
+2017_Book_MachineLearningWithR.pdf
+2017_Book_UsingRForDigitalSoilMapping.pdf
+2018_Book_BusinessCaseAnalysisWithR.pdf
+2018_Book_SingularSpectrumAnalysisWithR.pdf
+2018_Book_SoundAnalysisAndSynthesisWithR.pdf
+2019_Book_RDataScienceQuickReference.pdf
+524a_li_yuelin.pdf
+978-1-4842-2872-2.pdf
+978-1-4842-7202-2.pdf
+978-1-4842-7924-3.pdf
+978-1-4842-8155-0.pdf
+978-1-4939-1702-0.pdf
+Analysis_Phylogenetics_Evolution_R.pdf
+a-step-by-step-r-tutorial.pdf
+Beginning_Data_Science_R_Manas.pdf
+Beginning_R_An.Introduction.to.Statistical.Programming.2E.pdf
+Beginning.R.An.Introduction.to.Statistical.Programming.2nd.edition[Dr.Soc].pdf
+Beginning R An Introduction to Statistical Programming.pdf
+book.pdf
+CSchpt3.pdf
+Efficient R Programming.pdf
+Everitt.pdf
+ExploraVisualizaConR-Fcharte.pdf
+Faraway-PRA.pdf
+fullrefman.pdf
+Functional_Data Analysis_R_MATLAB.pdf
+grafi3.pdf
+Graphical_Models_R.pdf
+Graphs in R - Data Visualization with R Programming Language
+Handling_and_Processing_Strings_in_R.pdf
+Introduction_to_R.pdf
+introduction-to-statistical-data-analysis-with-r.pdf
+Introductory_Time_Series_R.pdf
+JCGSR.pdf
+language-overview.pdf
+Learn_R_Applied_Statistics.pdf
+Learn R Programming from Scratch
+Learn_R_Programming_from_Scratch
+Learn_R_Programming_Scratch
+Lecture1v2.pdf
+lecture2.pdf
+Modelos-Lineales-Aplicados-en-R.pdf
+multiples_comparaciones_R.pdf
+Nonlinear_Parameter_Optimization_R_Tools_Nash.pdf
+Nonlinear_Regression_R.pdf
+Notes on the use of R for psychology.pdf
+NotesontheuseofRforpsychology.pdf
+Notes_use_R_psychology.pdf
+OReilly Hands-On Programming with R (2014).pdf
+Owen-TheRGuide.pdf
+PAPIME_Manual_curso_R.pdf
+Pathak2014_Book_BeginningDataScienceWithR.pdf
+R2.pdf
+R(2).pdf
+Rahlf2019_Book_DataVisualisationWithR (1).pdf
+Rbasics.pdf
+r_books_p.pdf
+r_class1_f05.pdf
+R_Courses_Intro_101
+R-data.pdf
+rdebuts_es.pdf
+Recipes_for_E.pdf
+refman.pdf
+r-for-data-science-import-tidy-transform-visualize-and-model-data.pdf
+R_graphics_cookbook.docx
+R Graphics Cookbook.pdf
+RGraphicsCookbook.pdf
+R Help.pdf
+RHelp.pdf
+R-intro-1.1.0-espanol.1.pdf
+R-intro.pdf
+Rivera-Tutorial_Sweave99.pdf
+Rivera-Tutorial_Sweave.pdf
+R-lang.pdf
+r-language-es.pdf
+R_Lenguaje.pdf
+R.pdf
+Rprogramming.pdf
+R_Ptogramming_Exploratory_data
+Rtutorial.emlar4.pdf
+Statistical Computing with R_ A tutorial.pdf
+StatisticalComputingwithR_Atutorial.pdf
+STATISTICS_AN_INTRODUCTION_USING_R.pdf
+Statistics_Data_R.pdf
+Statistics_INtroduction_Using_R
+The_Art_R_Programming_Tour_Statistical_Software_Design.pdf
+The Book of R - A First Course in Programming and Statistics (Early Access) By Tilman M. Davies[CPUL].pdf
+The_R_Book_2nd_ Crawley.pdf
+The_R_Book_Michael_Crawley_2007.pdf
+The R Book - Michael J. Crawley 2007.pdf
+The_R_Book_Michael.pdf
+the_r_book_nov2211.pages
+The_R_Book.pdf
+Time_Series_Analysis_R_Jonathan.pdf
+Time_Series_Analysis_R.pdf
+Understanding_Statistics_Using_R.pdf
+Unsupervised Learning with R - Erik Rodriguez Pacheco.pdf
+using_R_Data_analysis_Hraphics_Maindonald.pdf
+usingR.pdf
+v16b06.pdf
+Writing Functions Using R.pdf
+Writing_Functions_Using_R.pdf
+WritingFunctionsUsingR.pdf
+
+/mnt/datos/santosg/Libros_TODOS_antonieta/Q-R_libros/R_Libros/Graphs in R - Data Visualization with R Programming Language:
+01 Welcome
+02 Graphical parameters in R base
+03 Base plotting commands
+04 Library plotrix
+05 Library ggplot2
+06 Library lattice
+
+/mnt/datos/santosg/Libros_TODOS_antonieta/Q-R_libros/R_Libros/Graphs in R - Data Visualization with R Programming Language/01 Welcome:
+001 Welcome.mp4
+
+/mnt/datos/santosg/Libros_TODOS_antonieta/Q-R_libros/R_Libros/Graphs in R - Data Visualization with R Programming Language/02 Graphical parameters in R base:
+001 Introduction to par.mp4
+001 Parameters Script.pdf
+002 Parameters adjust to family.mp4
+003 Parameters foreground to las orientation.mp4
+004 Parameters lend to margin.mp4
+005 Point types.mp4
+006 Parameters point size to log scales.mp4
+007 Plot Types and adding text.mp4
+008 Adding lines and symbols.mp4
+009 Legends and axes.mp4
+010 Section summary.mp4
+011 Exercises par.mp4
+012 Solutions par.mp4
+
+/mnt/datos/santosg/Libros_TODOS_antonieta/Q-R_libros/R_Libros/Graphs in R - Data Visualization with R Programming Language/03 Base plotting commands:
+001 Base plots Scipt.pdf
+001 Boxplots.mp4
+002 Histograms.mp4
+003 Bar charts.mp4
+004 Pie charts and summary.mp4
+005 Exercises and solutions Base plots.mp4
+
+/mnt/datos/santosg/Libros_TODOS_antonieta/Q-R_libros/R_Libros/Graphs in R - Data Visualization with R Programming Language/04 Library plotrix:
+001 Introduction to plotrix and nested bar charts.mp4
+001 Plotrix Script.pdf
+002 3Dpie charts and fan plots.mp4
+003 Gantt charts.mp4
+004 Gap plot and adding tables to a plot.mp4
+005 Zoom in plot and lower level plotting.mp4
+006 Summary.mp4
+007 Exercises plotrix.mp4
+008 Solutions Plotrix.mp4
+
+/mnt/datos/santosg/Libros_TODOS_antonieta/Q-R_libros/R_Libros/Graphs in R - Data Visualization with R Programming Language/05 Library ggplot2:
+001 Ggplot2 Script.pdf
+001 Intro to ggplot2.mp4
+002 Plotting with qplot.mp4
+003 Histograms, facets and aesthetics with qplot.mp4
+004 ggplot intro.mp4
+005 Scatterplots with ggplot.mp4
+006 Formatting text with ggplot.mp4
+007 Histograms with ggplot.mp4
+008 Boxplots with ggplot.mp4
+009 Summary.mp4
+010 Exercises ggplot2.mp4
+011 Solutions ggplot2.mp4
+
+/mnt/datos/santosg/Libros_TODOS_antonieta/Q-R_libros/R_Libros/Graphs in R - Data Visualization with R Programming Language/06 Library lattice:
+001 Introduction to Lattice and Bar charts.mp4
+001 Script Lattice.pdf
+002 Shingles.mp4
+003 Box plot and Violin plots.mp4
+004 Exercises and Solutions in Lattice.mp4
+
+/mnt/datos/santosg/Libros_TODOS_antonieta/Q-R_libros/R_Libros/Learn R Programming from Scratch:
+01 Course Overview
+02 Downloading  Installing R
+03 Basics of R Programming
+~Download More Stuff Here !.url
+
+/mnt/datos/santosg/Libros_TODOS_antonieta/Q-R_libros/R_Libros/Learn R Programming from Scratch/01 Course Overview:
+001 Introduction.mp4
+
+/mnt/datos/santosg/Libros_TODOS_antonieta/Q-R_libros/R_Libros/Learn R Programming from Scratch/02 Downloading  Installing R:
+001 Downloading  Installing R.mp4
+002 Overview of R Console.mp4
+003 Downloading  Installing RStudio.mp4
+004 Overview of RStudio.mp4
+
+/mnt/datos/santosg/Libros_TODOS_antonieta/Q-R_libros/R_Libros/Learn R Programming from Scratch/03 Basics of R Programming:
+001 Printing Hello World message.mp4
+002 Working with Variables in R.mp4
+003 Printing Integer Sequences.mp4
+004 Hello Wordl Program Using Function.mp4
+005 if-else statements in R.mp4
+006 Using Switch for Multiple Statements in R.mp4
+
+/mnt/datos/santosg/Libros_TODOS_antonieta/Q-R_libros/R_Libros/Learn_R_Programming_from_Scratch:
+01 Course Overview
+02 Downloading  Installing R
+03 Basics of R Programming
+~Download More Stuff Here !.url
+
+/mnt/datos/santosg/Libros_TODOS_antonieta/Q-R_libros/R_Libros/Learn_R_Programming_from_Scratch/01 Course Overview:
+001 Introduction.mp4
+
+/mnt/datos/santosg/Libros_TODOS_antonieta/Q-R_libros/R_Libros/Learn_R_Programming_from_Scratch/02 Downloading  Installing R:
+001 Downloading  Installing R.mp4
+002 Overview of R Console.mp4
+003 Downloading  Installing RStudio.mp4
+004 Overview of RStudio.mp4
+
+/mnt/datos/santosg/Libros_TODOS_antonieta/Q-R_libros/R_Libros/Learn_R_Programming_from_Scratch/03 Basics of R Programming:
+001 Printing Hello World message.mp4
+002 Working with Variables in R.mp4
+003 Printing Integer Sequences.mp4
+004 Hello Wordl Program Using Function.mp4
+005 if-else statements in R.mp4
+006 Using Switch for Multiple Statements in R.mp4
+
+/mnt/datos/santosg/Libros_TODOS_antonieta/Q-R_libros/R_Libros/Learn_R_Programming_Scratch:
+01 Course Overview
+02 Downloading  Installing R
+03 Basics of R Programming
+
+/mnt/datos/santosg/Libros_TODOS_antonieta/Q-R_libros/R_Libros/Learn_R_Programming_Scratch/01 Course Overview:
+001 Introduction.mp4
+
+/mnt/datos/santosg/Libros_TODOS_antonieta/Q-R_libros/R_Libros/Learn_R_Programming_Scratch/02 Downloading  Installing R:
+001 Downloading  Installing R.mp4
+002 Overview of R Console.mp4
+003 Downloading  Installing RStudio.mp4
+004 Overview of RStudio.mp4
+
+/mnt/datos/santosg/Libros_TODOS_antonieta/Q-R_libros/R_Libros/Learn_R_Programming_Scratch/03 Basics of R Programming:
+001 Printing Hello World message.mp4
+002 Working with Variables in R.mp4
+003 Printing Integer Sequences.mp4
+004 Hello Wordl Program Using Function.mp4
+005 if-else statements in R.mp4
+006 Using Switch for Multiple Statements in R.mp4
+
+/mnt/datos/santosg/Libros_TODOS_antonieta/Q-R_libros/R_Libros/R_Courses_Intro_101:
+1 - Introduction to R Programming Udemy R Course
+2 - Math Operators in R
+3 - Variables and Dataypes in R
+4 - Vectors in R
+
+/mnt/datos/santosg/Libros_TODOS_antonieta/Q-R_libros/R_Libros/R_Courses_Intro_101/1 - Introduction to R Programming Udemy R Course:
+Introduction.mp4
+
+/mnt/datos/santosg/Libros_TODOS_antonieta/Q-R_libros/R_Libros/R_Courses_Intro_101/2 - Math Operators in R:
+How R Works.mp4
+Perform Math Operations in R.mp4
+
+/mnt/datos/santosg/Libros_TODOS_antonieta/Q-R_libros/R_Libros/R_Courses_Intro_101/3 - Variables and Dataypes in R:
+Assigning Values to Variables in R.mp4
+Understanding Datatypes in R.mp4
+
+/mnt/datos/santosg/Libros_TODOS_antonieta/Q-R_libros/R_Libros/R_Courses_Intro_101/4 - Vectors in R:
+Adding Two Vectors in R.mp4
+Comparing Two Vectors in R.mp4
+Creating and Naming Vectors in R.mp4
+
+/mnt/datos/santosg/Libros_TODOS_antonieta/Q-R_libros/R_Libros/R_Ptogramming_Exploratory_data:
+Alternatives to R-5129098.mp4
+Beyond Exploratory Data Analysis-5129106.mp4
+Bivariate Analysis-5128754.mp4
+Bivariate Analysis - Calculating Descriptive Statistics-5128740.mp4
+Bivariate Analysis Demo-5128760.mp4
+Bivariate Analysis Demo-5128788.mp4
+Calculating Descriptive Statistics Overview-5128716.mp4
+Calculating Descriptive Statistics Summary-5128712.mp4
+Cleaning Data-5128786.mp4
+Cluster Analysis Demo-5129112.mp4
+Demo Conclusion-5128722.mp4
+Demo Conclusion-5128750.mp4
+Demo Setup-5128738.mp4
+Demo Setup - Calculating Descriptive Statistics-5128768.mp4
+Demo Setup - Transforming and Cleaning Data-5128742.mp4
+Exporting Data-5128772.mp4
+Guidance-5128752.mp4
+Guidance - Calculating Descriptive Statistics-5128776.mp4
+Hello World Demo-5105244.mp4
+Important ! Readme.txt
+Introducing R-Studio-5128774.mp4
+Introduction & Course Overview-5105242.mp4
+Introduction to Calculating Descriptive Statistics-5128724.mp4
+Introduction to R-5105246.mp4
+Introduction to Transforming and Cleaning Data-5128762.mp4
+Introduction to Visualizing Data-5128710.mp4
+Linear Regression Analysis Demo-5129118.mp4
+Loading Data-5128780.mp4
+Other R Language Features Demo-5128778.mp4
+Overview-5128708.mp4
+Overview of Transforming and Cleaning Data-5128746.mp4
+Overview of Visualizing Data-5128732.mp4
+R Data Frames Demo-5128766.mp4
+R Data Structures Demo-5128784.mp4
+R Language Basics Demo-5128770.mp4
+Summary-5129096.mp4
+Summary of Visualizing Data-5128706.mp4
+Transforming and Cleaning Data Summary-5128714.mp4
+Univariate Analysis-5128756.mp4
+Univariate Analysis - Calculating Descriptive Statistics-5128726.mp4
+Univariate Analysis Demo-5128748.mp4
+Univariate Analysis Demo-5128782.mp4
+Welcome to R Programming Summary-5128730.mp4
+
+/mnt/datos/santosg/Libros_TODOS_antonieta/Q-R_libros/R_Libros/Statistics_INtroduction_Using_R:
+R10Proportiondata.pdf
+R11Countdata.pdf
+R12Survivalanalysis.pdf
+R1Plots.pdf
+R2Calculations.pdf
+R3Statistics.pdf
+R4Regression.pdf
+R5Anova.pdf
+R6Ancova.pdf
+R7Nesteddesigns.pdf
+R8Multipleregression.pdf
+R9Glims.pdf

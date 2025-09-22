@@ -22,8 +22,11 @@ in Chap. 3 for various types of interactive plots should help future Pythonistas
 these problems.
 
 Chapter 1 Why Statistics?
+--------------------------
 
 Statistics is the explanation of variance in the light of what remains unexplained.
+
+1.1 Why Statistics?
 
 Every day we are confronted with situations with uncertain outcomes, and must
 make decisions based on incomplete data: “Should I run for the bus? Which stock
@@ -96,4 +99,60 @@ reiter1.com/.
 
 I hope to convince you that Python provides clear and flexible tools for most of
 the statistical problems that you will encounter, and that you will enjoy using it.
+
+1.2 Conventions
+---------------
+
+The following conventions will be used.
+
+• Text that is to be typed in on the computer is written in Courier font, e.g., plot(x,y).
+• Optional text in command-line entries is expressed with <...>, e.g., <InstallationDir>.
+• Names referring to computer programs and applications are written in italics, e.g., Jupyter.
+• Italics will also be used when introducing new terms or expressions for the first time.
+• Really important points that should definitely be remembered are indicated as follows:
+
+This will be important!
+
+1.3 Accompanying Material
+-------------------------
+
+All the examples and solutions shown in this book are available online. This
+includes code samples and example programs, Jupyter Notebooks with additional
+or extended information, as well as the data and Python code used to generate many
+of the figures. They can be downloaded from GitHub
+https://github.com/thomas-haslwanter/statsintro-python-2e
+which is organized in folders:
+
+data: Raw data required for running the programs.
+
+resources: Images used by this repository.
+
+ipynbs: Jupyter Notebooks with examples, and with additional or
+extended information that goes beyond the content pre-
+sented in the book.
+
+src/exercise_solutions: Solutions to the exercises that are presented at the end of most chapters.
+
+src/listings: Programs that are explicitly listed in this book.
+
+src/figures: Code used to generate the Python figures in the text.
+Unless noted otherwise, the source code for
+Python figures is available in the source file
+F<chapter-#>_<figure-#>_xxx.py. For example, Fig. 8.4 can be generated with the Python code in
+F8_4_anovaOneway.py
+
+src/code_quantlets: Additional code samples.
+
+In this book, references to the src/code_quantlets-directory in this reposi-
+tory will be abbreviated with <ISP2e>. Make sure also to look at the file
+Errata.pdf in the top folder of that archive, which will be kept up to date with
+corrections to any mistakes that are discovered after publication of the book.
+
+Packages on GitHub are called repositories, and can easily be copied to
+your computer: when git is installed on your computer, simply type
+git clone <RepositoryName> (here, the repository name of
+statsintro-python-2e given above) in a command terminal, and the whole
+repository—code as well as data—will be “cloned” to your system. Alternatively,
+you can download a ZIP-archive from there to your local system.
+
 
