@@ -1,0 +1,42 @@
+[0m[01;32m2009_Book_Robotics.pdf[0m
+[01;32m2017_Book_RoboticsVisionAndControl.pdf[0m
+[01;32m978-3-319-54413-7.pdf[0m
+[01;32m978-981-97-4022-2.pdf[0m
+[01;32mJ.Clayden - Organic chemistry.pdf[0m
+[01;32mLivre - Chimie - Harvey David - Modern Analytic Chemistry (816 p) (U.S).pdf[0m
+[01;32mMcMurry - Organic Chemistry 5th edition.pdf[0m
+[01;32mOxford.Dictionary.Of.Biochemistry.And.Molecular.Biology.-.Teresa.Atwood.pdf[0m
+[01;32mOxford University Press Organic Chemistry.pdf[0m
+[01;32mPhysical Chemistry for the Life Sciences - Peter Atkins.pdf[0m
+[01;34mQuantum_Computation[0m
+[01;32mQuantum_Computational_Chemistry.pdf[0m
+[01;32mQuantum_Computational_Number_Theory.pdf[0m
+[01;34mQuantum_Computing[0m
+[01;34mQuantum_Information_Libros[0m
+[01;34mQuimica_Analitica_libros[0m
+[01;34mQuimica_libros[0m
+[01;34mQuimica_Organica_libros[0m
+[01;34mRails_Libros[0m
+[01;32mRandom_Walks_Random_Environments.djvu[0m
+[01;32mRandom_walks_random_environments_vol_2.djvu[0m
+[01;34mRaspberri_LIBROS[0m
+[01;34mRaspberry_Pi[0m
+[01;34mRaven_Libros[0m
+[01;34mReaccion_libros[0m
+[01;34mRealidad_Virtual[0m
+[01;34mReconocimiento_Patrones_Libros[0m
+[01;34mRecostruccion_3D_Libros[0m
+[01;34mRedes_libros[0m
+[01;34mRedes_neuronales[0m
+[01;34mRedes_Neuronales_libros[0m
+[01;34mRelatividad_General[0m
+[01;34mRelidad_Virtual[0m
+[01;34mResonancia_Magnetica_libros[0m
+[01;34mR_Libros[0m
+[01;34mR_Libros_RESPALDAR[0m
+[01;34mRobotica_libros[0m
+[01;34mRuby_libros[0m
+[01;34mSimulacion[0m
+[01;34mSistemas_Complejos[0m
+[01;34mSistemas_Dinamicos[0m
+[01;32mSolomons, Graham - Fundamentals of Organic Chemistry.pdf[0m
