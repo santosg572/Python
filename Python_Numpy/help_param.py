@@ -1,4 +1,4 @@
-import numpy as np
+import numpy.random as np
 import sys
 
 param = sys.argv[1]
