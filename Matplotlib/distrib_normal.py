@@ -36,5 +36,16 @@ print(y1)
 ax3 = plt.subplot(2, 2, 3)
 ax3.plot(x1, y1, 'or')
 
+ax3 = plt.subplot(2, 2, 4)
+ax3.boxplot(x)
+
+print('media= ',np.mean(x))
+print('mediana= ',np.median(x))
+print('mínimo= ',np.min(x))
+print('max= ',np.max(x))
+print('desviación estándar= ',np.std(x))
+print('varianza= ',np.var(x))
+
 plt.show()
+
 
