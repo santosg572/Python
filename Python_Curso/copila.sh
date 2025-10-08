@@ -1,5 +1,8 @@
 #!/bin/bash
 
-RScript $1.R
+make html
+
+open build/html/index.html
+
 
 
