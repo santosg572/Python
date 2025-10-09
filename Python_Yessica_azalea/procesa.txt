@@ -1,0 +1,1275 @@
+&&&&&&&&&&&&&&&&&&&&&&&&& AnalyzeHeader &&&&&&&&&&&&&&&&&&&&&&&&&&&&&&
+Help on class AnalyzeHeader in module nibabel.analyze:
+
+class AnalyzeHeader(nibabel.wrapstruct.LabeledWrapStruct, nibabel.spatialimages.SpatialHeader)
+ |  AnalyzeHeader(binaryblock=None, endianness=None, check=True)
+ |  
+ |  Class for basic analyze header
+ |  
+ |  Implements zoom-only setting of affine transform, and no image
+ |  scaling
+ |  
+ |  Method resolution order:
+ |      AnalyzeHeader
+ |      nibabel.wrapstruct.LabeledWrapStruct
+ |      nibabel.wrapstruct.WrapStruct
+&&&&&&&&&&&&&&&&&&&&&&&&& AnalyzeImage &&&&&&&&&&&&&&&&&&&&&&&&&&&&&&
+Help on class AnalyzeImage in module nibabel.analyze:
+
+class AnalyzeImage(nibabel.spatialimages.SpatialImage)
+ |  AnalyzeImage(dataobj, affine, header=None, extra=None, file_map=None, dtype=None)
+ |  
+ |  Class for basic Analyze format image
+ |  
+ |  Method resolution order:
+ |      AnalyzeImage
+ |      nibabel.spatialimages.SpatialImage
+ |      nibabel.dataobj_images.DataobjImage
+ |      nibabel.filebasedimages.FileBasedImage
+ |      builtins.object
+ |  
+&&&&&&&&&&&&&&&&&&&&&&&&& Cifti2Header &&&&&&&&&&&&&&&&&&&&&&&&&&&&&&
+Help on class Cifti2Header in module nibabel.cifti2.cifti2:
+
+class Cifti2Header(nibabel.filebasedimages.FileBasedHeader, nibabel.xmlutils.XmlSerializable)
+ |  Cifti2Header(matrix=None, version='2.0')
+ |  
+ |  Class for CIFTI-2 header extension
+ |  
+ |  Method resolution order:
+ |      Cifti2Header
+ |      nibabel.filebasedimages.FileBasedHeader
+ |      nibabel.xmlutils.XmlSerializable
+ |      builtins.object
+ |  
+ |  Methods defined here:
+&&&&&&&&&&&&&&&&&&&&&&&&& Cifti2Image &&&&&&&&&&&&&&&&&&&&&&&&&&&&&&
+Help on class Cifti2Image in module nibabel.cifti2.cifti2:
+
+class Cifti2Image(nibabel.dataobj_images.DataobjImage, nibabel.filebasedimages.SerializableImage)
+ |  Cifti2Image(dataobj=None, header=None, nifti_header=None, extra=None, file_map=None, dtype=None)
+ |  
+ |  Class for single file CIFTI-2 format image
+ |  
+ |  Method resolution order:
+ |      Cifti2Image
+ |      nibabel.dataobj_images.DataobjImage
+ |      nibabel.filebasedimages.SerializableImage
+ |      nibabel.filebasedimages.FileBasedImage
+ |      builtins.object
+ |  
+&&&&&&&&&&&&&&&&&&&&&&&&& FileHolder &&&&&&&&&&&&&&&&&&&&&&&&&&&&&&
+Help on class FileHolder in module nibabel.fileholders:
+
+class FileHolder(builtins.object)
+ |  FileHolder(filename: 'str | None' = None, fileobj: 'io.IOBase | None' = None, pos: 'int' = 0)
+ |  
+ |  class to contain filename, fileobj and file position
+ |  
+ |  Methods defined here:
+ |  
+ |  __init__(self, filename: 'str | None' = None, fileobj: 'io.IOBase | None' = None, pos: 'int' = 0)
+ |      Initialize FileHolder instance
+ |      
+ |      Parameters
+ |      ----------
+&&&&&&&&&&&&&&&&&&&&&&&&& FileHolderError &&&&&&&&&&&&&&&&&&&&&&&&&&&&&&
+Help on class FileHolderError in module nibabel.fileholders:
+
+class FileHolderError(builtins.Exception)
+ |  Method resolution order:
+ |      FileHolderError
+ |      builtins.Exception
+ |      builtins.BaseException
+ |      builtins.object
+ |  
+ |  Data descriptors defined here:
+ |  
+ |  __weakref__
+ |      list of weak references to the object (if defined)
+ |  
+&&&&&&&&&&&&&&&&&&&&&&&&& GiftiImage &&&&&&&&&&&&&&&&&&&&&&&&&&&&&&
+Help on class GiftiImage in module nibabel.gifti.gifti:
+
+class GiftiImage(nibabel.xmlutils.XmlSerializable, nibabel.filebasedimages.SerializableImage)
+ |  GiftiImage(header=None, extra=None, file_map=None, meta=None, labeltable=None, darrays=None, version='1.0')
+ |  
+ |  GIFTI image object
+ |  
+ |  The Gifti spec suggests using the following suffixes to your
+ |  filename when saving each specific type of data:
+ |  
+ |  .gii
+ |      Generic GIFTI File
+ |  .coord.gii
+ |      Coordinates
+&&&&&&&&&&&&&&&&&&&&&&&&& MGHImage &&&&&&&&&&&&&&&&&&&&&&&&&&&&&&
+Help on class MGHImage in module nibabel.freesurfer.mghformat:
+
+class MGHImage(nibabel.spatialimages.SpatialImage, nibabel.filebasedimages.SerializableImage)
+ |  MGHImage(dataobj, affine, header=None, extra=None, file_map=None)
+ |  
+ |  Class for MGH format image
+ |  
+ |  Method resolution order:
+ |      MGHImage
+ |      nibabel.spatialimages.SpatialImage
+ |      nibabel.dataobj_images.DataobjImage
+ |      nibabel.filebasedimages.SerializableImage
+ |      nibabel.filebasedimages.FileBasedImage
+ |      builtins.object
+&&&&&&&&&&&&&&&&&&&&&&&&& Minc1Image &&&&&&&&&&&&&&&&&&&&&&&&&&&&&&
+Help on class Minc1Image in module nibabel.minc1:
+
+class Minc1Image(nibabel.spatialimages.SpatialImage)
+ |  Minc1Image(dataobj: 'ArrayLike', affine: 'np.ndarray | None', header: 'FileBasedHeader | ty.Mapping | None' = None, extra: 'ty.Mapping | None' = None, file_map: 'FileMap | None' = None)
+ |  
+ |  Class for MINC1 format images
+ |  
+ |  The MINC1 image class uses the default header type, rather than a specific
+ |  MINC header type - and reads the relevant information from the MINC file on
+ |  load.
+ |  
+ |  Method resolution order:
+ |      Minc1Image
+ |      nibabel.spatialimages.SpatialImage
+&&&&&&&&&&&&&&&&&&&&&&&&& Minc2Image &&&&&&&&&&&&&&&&&&&&&&&&&&&&&&
+Help on class Minc2Image in module nibabel.minc2:
+
+class Minc2Image(nibabel.minc1.Minc1Image)
+ |  Minc2Image(dataobj: 'ArrayLike', affine: 'np.ndarray | None', header: 'FileBasedHeader | ty.Mapping | None' = None, extra: 'ty.Mapping | None' = None, file_map: 'FileMap | None' = None)
+ |  
+ |  Class for MINC2 images
+ |  
+ |  The MINC2 image class uses the default header type, rather than a
+ |  specific MINC header type - and reads the relevant information from
+ |  the MINC file on load.
+ |  
+ |  Method resolution order:
+ |      Minc2Image
+ |      nibabel.minc1.Minc1Image
+&&&&&&&&&&&&&&&&&&&&&&&&& Nifti1Header &&&&&&&&&&&&&&&&&&&&&&&&&&&&&&
+Help on class Nifti1Header in module nibabel.nifti1:
+
+class Nifti1Header(nibabel.spm99analyze.SpmAnalyzeHeader)
+ |  Nifti1Header(binaryblock=None, endianness=None, check=True, extensions=())
+ |  
+ |  Class for NIfTI1 header
+ |  
+ |  The NIfTI1 header has many more coded fields than the simpler Analyze
+ |  variants.  NIfTI1 headers also have extensions.
+ |  
+ |  Nifti allows the header to be a separate file, as part of a nifti image /
+ |  header pair, or to precede the data in a single file.  The object needs to
+ |  know which type it is, in order to manage the voxel offset pointing to the
+ |  data, extension reading, and writing the correct magic string.
+&&&&&&&&&&&&&&&&&&&&&&&&& Nifti1Image &&&&&&&&&&&&&&&&&&&&&&&&&&&&&&
+Help on class Nifti1Image in module nibabel.nifti1:
+
+class Nifti1Image(Nifti1Pair, nibabel.filebasedimages.SerializableImage)
+ |  Nifti1Image(dataobj, affine, header=None, extra=None, file_map=None, dtype=None)
+ |  
+ |  Class for single file NIfTI1 format image
+ |  
+ |  Method resolution order:
+ |      Nifti1Image
+ |      Nifti1Pair
+ |      nibabel.analyze.AnalyzeImage
+ |      nibabel.spatialimages.SpatialImage
+ |      nibabel.dataobj_images.DataobjImage
+ |      nibabel.filebasedimages.SerializableImage
+&&&&&&&&&&&&&&&&&&&&&&&&& Nifti1Pair &&&&&&&&&&&&&&&&&&&&&&&&&&&&&&
+Help on class Nifti1Pair in module nibabel.nifti1:
+
+class Nifti1Pair(nibabel.analyze.AnalyzeImage)
+ |  Nifti1Pair(dataobj, affine, header=None, extra=None, file_map=None, dtype=None)
+ |  
+ |  Class for NIfTI1 format image, header pair
+ |  
+ |  Method resolution order:
+ |      Nifti1Pair
+ |      nibabel.analyze.AnalyzeImage
+ |      nibabel.spatialimages.SpatialImage
+ |      nibabel.dataobj_images.DataobjImage
+ |      nibabel.filebasedimages.FileBasedImage
+ |      builtins.object
+&&&&&&&&&&&&&&&&&&&&&&&&& Nifti2Header &&&&&&&&&&&&&&&&&&&&&&&&&&&&&&
+Help on class Nifti2Header in module nibabel.nifti2:
+
+class Nifti2Header(nibabel.nifti1.Nifti1Header)
+ |  Nifti2Header(binaryblock=None, endianness=None, check=True, extensions=())
+ |  
+ |  Class for NIfTI2 header
+ |  
+ |  NIfTI2 is a slightly simplified variant of NIfTI1 which replaces 32-bit
+ |  floats with 64-bit floats, and increases some integer widths to 32 or 64
+ |  bits.
+ |  
+ |  Method resolution order:
+ |      Nifti2Header
+ |      nibabel.nifti1.Nifti1Header
+&&&&&&&&&&&&&&&&&&&&&&&&& Nifti2Image &&&&&&&&&&&&&&&&&&&&&&&&&&&&&&
+Help on class Nifti2Image in module nibabel.nifti2:
+
+class Nifti2Image(nibabel.nifti1.Nifti1Image)
+ |  Nifti2Image(dataobj, affine, header=None, extra=None, file_map=None, dtype=None)
+ |  
+ |  Class for single file NIfTI2 format image
+ |  
+ |  Method resolution order:
+ |      Nifti2Image
+ |      nibabel.nifti1.Nifti1Image
+ |      nibabel.nifti1.Nifti1Pair
+ |      nibabel.analyze.AnalyzeImage
+ |      nibabel.spatialimages.SpatialImage
+ |      nibabel.dataobj_images.DataobjImage
+&&&&&&&&&&&&&&&&&&&&&&&&& Nifti2Pair &&&&&&&&&&&&&&&&&&&&&&&&&&&&&&
+Help on class Nifti2Pair in module nibabel.nifti2:
+
+class Nifti2Pair(nibabel.nifti1.Nifti1Pair)
+ |  Nifti2Pair(dataobj, affine, header=None, extra=None, file_map=None, dtype=None)
+ |  
+ |  Class for NIfTI2 format image, header pair
+ |  
+ |  Method resolution order:
+ |      Nifti2Pair
+ |      nibabel.nifti1.Nifti1Pair
+ |      nibabel.analyze.AnalyzeImage
+ |      nibabel.spatialimages.SpatialImage
+ |      nibabel.dataobj_images.DataobjImage
+ |      nibabel.filebasedimages.FileBasedImage
+&&&&&&&&&&&&&&&&&&&&&&&&& OrientationError &&&&&&&&&&&&&&&&&&&&&&&&&&&&&&
+Help on class OrientationError in module nibabel.orientations:
+
+class OrientationError(builtins.Exception)
+ |  Method resolution order:
+ |      OrientationError
+ |      builtins.Exception
+ |      builtins.BaseException
+ |      builtins.object
+ |  
+ |  Data descriptors defined here:
+ |  
+ |  __weakref__
+ |      list of weak references to the object (if defined)
+ |  
+&&&&&&&&&&&&&&&&&&&&&&&&& Spm2AnalyzeHeader &&&&&&&&&&&&&&&&&&&&&&&&&&&&&&
+Help on class Spm2AnalyzeHeader in module nibabel.spm2analyze:
+
+class Spm2AnalyzeHeader(nibabel.spm99analyze.Spm99AnalyzeHeader)
+ |  Spm2AnalyzeHeader(binaryblock=None, endianness=None, check=True)
+ |  
+ |  Class for SPM2 variant of basic Analyze header
+ |  
+ |  SPM2 variant adds the following to basic Analyze format:
+ |  
+ |  * voxel origin;
+ |  * slope scaling of data;
+ |  * reading - but not writing - intercept of data.
+ |  
+ |  Method resolution order:
+&&&&&&&&&&&&&&&&&&&&&&&&& Spm2AnalyzeImage &&&&&&&&&&&&&&&&&&&&&&&&&&&&&&
+Help on class Spm2AnalyzeImage in module nibabel.spm2analyze:
+
+class Spm2AnalyzeImage(nibabel.spm99analyze.Spm99AnalyzeImage)
+ |  Spm2AnalyzeImage(dataobj, affine, header=None, extra=None, file_map=None, dtype=None)
+ |  
+ |  Class for SPM2 variant of basic Analyze image
+ |  
+ |  Method resolution order:
+ |      Spm2AnalyzeImage
+ |      nibabel.spm99analyze.Spm99AnalyzeImage
+ |      nibabel.analyze.AnalyzeImage
+ |      nibabel.spatialimages.SpatialImage
+ |      nibabel.dataobj_images.DataobjImage
+ |      nibabel.filebasedimages.FileBasedImage
+&&&&&&&&&&&&&&&&&&&&&&&&& Spm99AnalyzeHeader &&&&&&&&&&&&&&&&&&&&&&&&&&&&&&
+Help on class Spm99AnalyzeHeader in module nibabel.spm99analyze:
+
+class Spm99AnalyzeHeader(SpmAnalyzeHeader)
+ |  Spm99AnalyzeHeader(binaryblock=None, endianness=None, check=True)
+ |  
+ |  Class for SPM99 variant of basic Analyze header
+ |  
+ |  SPM99 variant adds the following to basic Analyze format:
+ |  
+ |  * voxel origin;
+ |  * slope scaling of data.
+ |  
+ |  Method resolution order:
+ |      Spm99AnalyzeHeader
+&&&&&&&&&&&&&&&&&&&&&&&&& Spm99AnalyzeImage &&&&&&&&&&&&&&&&&&&&&&&&&&&&&&
+Help on class Spm99AnalyzeImage in module nibabel.spm99analyze:
+
+class Spm99AnalyzeImage(nibabel.analyze.AnalyzeImage)
+ |  Spm99AnalyzeImage(dataobj, affine, header=None, extra=None, file_map=None, dtype=None)
+ |  
+ |  Class for SPM99 variant of basic Analyze image
+ |  
+ |  Method resolution order:
+ |      Spm99AnalyzeImage
+ |      nibabel.analyze.AnalyzeImage
+ |      nibabel.spatialimages.SpatialImage
+ |      nibabel.dataobj_images.DataobjImage
+ |      nibabel.filebasedimages.FileBasedImage
+ |      builtins.object
+&&&&&&&&&&&&&&&&&&&&&&&&& aff2axcodes &&&&&&&&&&&&&&&&&&&&&&&&&&&&&&
+Help on function aff2axcodes in module nibabel.orientations:
+
+aff2axcodes(aff, labels=None, tol=None)
+    axis direction codes for affine `aff`
+    
+    Parameters
+    ----------
+    aff : (N,M) array-like
+        affine transformation matrix
+    labels : optional, None or sequence of (2,) sequences
+        Labels for negative and positive ends of output axes of `aff`.  See
+        docstring for ``ornt2axcodes`` for more detail
+    tol : None or float
+        Tolerance for SVD of affine - see ``io_orientation`` for more detail.
+&&&&&&&&&&&&&&&&&&&&&&&&& affines &&&&&&&&&&&&&&&&&&&&&&&&&&&&&&
+Help on module nibabel.affines in nibabel:
+
+NAME
+    nibabel.affines - Utility routines for working with points and affine transforms
+
+CLASSES
+    builtins.ValueError(builtins.Exception)
+        AffineError
+    
+    class AffineError(builtins.ValueError)
+     |  Errors in calculating or using affines
+     |  
+     |  Method resolution order:
+     |      AffineError
+&&&&&&&&&&&&&&&&&&&&&&&&& all_image_classes &&&&&&&&&&&&&&&&&&&&&&&&&&&&&&
+Help on list object:
+
+class list(object)
+ |  list(iterable=(), /)
+ |  
+ |  Built-in mutable sequence.
+ |  
+ |  If no argument is given, the constructor creates a new empty list.
+ |  The argument must be an iterable if specified.
+ |  
+ |  Methods defined here:
+ |  
+ |  __add__(self, value, /)
+ |      Return self+value.
+&&&&&&&&&&&&&&&&&&&&&&&&& ana &&&&&&&&&&&&&&&&&&&&&&&&&&&&&&
+Help on module nibabel.analyze in nibabel:
+
+NAME
+    nibabel.analyze - Read / write access to the basic Mayo Analyze format
+
+DESCRIPTION
+    ===========================
+     The Analyze header format
+    ===========================
+    
+    This is a binary header format and inherits from ``WrapStruct``
+    
+    Apart from the attributes and methods of WrapStruct:
+    
+&&&&&&&&&&&&&&&&&&&&&&&&& analyze &&&&&&&&&&&&&&&&&&&&&&&&&&&&&&
+Help on module nibabel.analyze in nibabel:
+
+NAME
+    nibabel.analyze - Read / write access to the basic Mayo Analyze format
+
+DESCRIPTION
+    ===========================
+     The Analyze header format
+    ===========================
+    
+    This is a binary header format and inherits from ``WrapStruct``
+    
+    Apart from the attributes and methods of WrapStruct:
+    
+&&&&&&&&&&&&&&&&&&&&&&&&& apply_orientation &&&&&&&&&&&&&&&&&&&&&&&&&&&&&&
+Help on function apply_orientation in module nibabel.orientations:
+
+apply_orientation(arr, ornt)
+    Apply transformations implied by `ornt` to the first
+    n axes of the array `arr`
+    
+    Parameters
+    ----------
+    arr : array-like of data with ndim >= n
+    ornt : (n,2) orientation array
+       orientation transform. ``ornt[N,1]` is flip of axis N of the
+       array implied by `shape`, where 1 means no flip and -1 means
+       flip.  For example, if ``N==0`` and ``ornt[0,1] == -1``, and
+       there's an array ``arr`` of shape `shape`, the flip would
+&&&&&&&&&&&&&&&&&&&&&&&&& arrayproxy &&&&&&&&&&&&&&&&&&&&&&&&&&&&&&
+Help on module nibabel.arrayproxy in nibabel:
+
+NAME
+    nibabel.arrayproxy - Array proxy base class
+
+DESCRIPTION
+    The proxy API is - at minimum:
+    
+    * The object has a read-only attribute ``shape``
+    * read only ``is_proxy`` attribute / property set to True
+    * the object returns the data array from ``np.asarray(prox)``
+    * returns array slice from ``prox[<slice_spec>]`` where ``<slice_spec>`` is any
+      ndarray slice specification that does not use numpy 'advanced indexing'.
+    * modifying no object outside ``obj`` will affect the result of
+&&&&&&&&&&&&&&&&&&&&&&&&& arraywriters &&&&&&&&&&&&&&&&&&&&&&&&&&&&&&
+Help on module nibabel.arraywriters in nibabel:
+
+NAME
+    nibabel.arraywriters - Array writer objects
+
+DESCRIPTION
+    Array writers have init signature::
+    
+        def __init__(self, array, out_dtype=None)
+    
+    and methods
+    
+    * scaling_needed() - returns True if array requires scaling for write
+    * finite_range() - returns min, max of self.array
+&&&&&&&&&&&&&&&&&&&&&&&&& as_closest_canonical &&&&&&&&&&&&&&&&&&&&&&&&&&&&&&
+Help on function as_closest_canonical in module nibabel.funcs:
+
+as_closest_canonical(img, enforce_diag=False)
+    Return `img` with data reordered to be closest to canonical
+    
+    Canonical order is the ordering of the output axes.
+    
+    Parameters
+    ----------
+    img : ``spatialimage``
+    enforce_diag : {False, True}, optional
+       If True, before transforming image, check if the resulting image
+       affine will be close to diagonal, and if not, raise an error
+    
+&&&&&&&&&&&&&&&&&&&&&&&&& batteryrunners &&&&&&&&&&&&&&&&&&&&&&&&&&&&&&
+Help on module nibabel.batteryrunners in nibabel:
+
+NAME
+    nibabel.batteryrunners - Battery runner classes and Report classes
+
+DESCRIPTION
+    These classes / objects are for generic checking / fixing batteries
+    
+    The ``BatteryRunner`` class will run a series of checks on a single
+    object.
+    
+    A check is a callable, of signature ``func(obj, fix=False)`` which
+    returns a tuple ``(obj, Report)`` for ``func(obj, False)`` or
+    ``func(obj, True)``, where the obj may be a modified object, or a
+&&&&&&&&&&&&&&&&&&&&&&&&& bench &&&&&&&&&&&&&&&&&&&&&&&&&&&&&&
+Help on function bench in module nibabel:
+
+bench(label=None, verbose=1, extra_argv=None)
+    Run benchmarks for nibabel using pytest
+    
+    The protocol mimics the ``numpy.testing.NoseTester.bench()``.
+    Not all features are currently implemented.
+    
+    Parameters
+    ----------
+    label : None
+        Unused.
+    verbose: int, optional
+        Verbosity value for test outputs. Positive values increase verbosity, and
+&&&&&&&&&&&&&&&&&&&&&&&&& brikhead &&&&&&&&&&&&&&&&&&&&&&&&&&&&&&
+Help on module nibabel.brikhead in nibabel:
+
+NAME
+    nibabel.brikhead - Class for reading AFNI BRIK/HEAD datasets
+
+DESCRIPTION
+    See https://afni.nimh.nih.gov/pub/dist/doc/program_help/README.attributes.html
+    for information on what is required to have a valid BRIK/HEAD dataset.
+    
+    Unless otherwise noted, descriptions AFNI attributes in the code refer to this
+    document.
+    
+    Notes
+    -----
+&&&&&&&&&&&&&&&&&&&&&&&&& caret &&&&&&&&&&&&&&&&&&&&&&&&&&&&&&
+Help on module nibabel.caret in nibabel:
+
+NAME
+    nibabel.caret
+
+DESCRIPTION
+    # emacs: -*- mode: python-mode; py-indent-offset: 4; indent-tabs-mode: nil -*-
+    # vi: set ft=python sts=4 ts=4 sw=4 et:
+    ### ### ### ### ### ### ### ### ### ### ### ### ### ### ### ### ### ### ### ##
+    #
+    #   See COPYING file distributed along with the NiBabel package for the
+    #   copyright and license terms.
+    #
+    ### ### ### ### ### ### ### ### ### ### ### ### ### ### ### ### ### ### ### ##
+&&&&&&&&&&&&&&&&&&&&&&&&& casting &&&&&&&&&&&&&&&&&&&&&&&&&&&&&&
+Help on module nibabel.casting in nibabel:
+
+NAME
+    nibabel.casting - Utilities for casting numpy values in various ways
+
+DESCRIPTION
+    Most routines work round some numpy oddities in floating point precision and
+    casting.  Others work round numpy casting to and from python ints
+
+CLASSES
+    builtins.Exception(builtins.BaseException)
+        CastingError
+        FloatingError
+    
+&&&&&&&&&&&&&&&&&&&&&&&&& cifti2 &&&&&&&&&&&&&&&&&&&&&&&&&&&&&&
+Help on package nibabel.cifti2 in nibabel:
+
+NAME
+    nibabel.cifti2 - CIFTI-2 format IO
+
+DESCRIPTION
+    .. currentmodule:: nibabel.cifti2
+    
+    .. autosummary::
+       :toctree: ../generated
+    
+       cifti2
+       cifti2_axes
+
+&&&&&&&&&&&&&&&&&&&&&&&&& concat_images &&&&&&&&&&&&&&&&&&&&&&&&&&&&&&
+Help on function concat_images in module nibabel.funcs:
+
+concat_images(images, check_affines=True, axis=None)
+    Concatenate images in list to single image, along specified dimension
+    
+    Parameters
+    ----------
+    images : sequence
+       sequence of ``SpatialImage`` or filenames of the same dimensionality\s
+    check_affines : {True, False}, optional
+       If True, then check that all the affines for `images` are nearly
+       the same, raising a ``ValueError`` otherwise.  Default is True
+    axis : None or int, optional
+        If None, concatenates on a new dimension.  This requires all images to
+&&&&&&&&&&&&&&&&&&&&&&&&& dataobj_images &&&&&&&&&&&&&&&&&&&&&&&&&&&&&&
+Help on module nibabel.dataobj_images in nibabel:
+
+NAME
+    nibabel.dataobj_images - File-based images that have data arrays
+
+DESCRIPTION
+    The class:`DataObjImage` class defines an image that extends the
+    :class:`FileBasedImage` by adding an array-like object, named ``dataobj``.
+    This can either be an actual numpy array, or an object that:
+    
+    * returns an array from ``numpy.asanyarray(obj)``;
+    * has an attribute or property ``shape``.
+
+CLASSES
+&&&&&&&&&&&&&&&&&&&&&&&&& deprecated &&&&&&&&&&&&&&&&&&&&&&&&&&&&&&
+Help on module nibabel.deprecated in nibabel:
+
+NAME
+    nibabel.deprecated - Module to help with deprecating objects and classes
+
+CLASSES
+    builtins.UserWarning(builtins.Warning)
+        VisibleDeprecationWarning
+    builtins.object
+        FutureWarningMixin
+        ModuleProxy
+    
+    class FutureWarningMixin(builtins.object)
+     |  FutureWarningMixin(*args: 'P.args', **kwargs: 'P.kwargs') -> 'None'
+&&&&&&&&&&&&&&&&&&&&&&&&& deprecator &&&&&&&&&&&&&&&&&&&&&&&&&&&&&&
+Help on module nibabel.deprecator in nibabel:
+
+NAME
+    nibabel.deprecator - Class for recording and reporting deprecations
+
+CLASSES
+    builtins.RuntimeError(builtins.Exception)
+        ExpiredDeprecationError
+    builtins.object
+        Deprecator
+    
+    class Deprecator(builtins.object)
+     |  Deprecator(version_comparator: 'ty.Callable[[str], int]', warn_class: 'type[Warning]' = <class 'DeprecationWarning'>, error_class: 'type[Exception]' = <class 'nibabel.deprecator.ExpiredDeprecationError'>) -> 'None'
+     |  
+&&&&&&&&&&&&&&&&&&&&&&&&& ecat &&&&&&&&&&&&&&&&&&&&&&&&&&&&&&
+Help on module nibabel.ecat in nibabel:
+
+NAME
+    nibabel.ecat - Read ECAT format images
+
+DESCRIPTION
+    An ECAT format image consists of:
+    
+    * a *main header*;
+    * at least one *matrix list* (mlist);
+    
+    ECAT thinks of memory locations in terms of *blocks*.  One block is 512
+    bytes.  Thus block 1 starts at 0 bytes, block 2 at 512 bytes, and so on.
+    
+&&&&&&&&&&&&&&&&&&&&&&&&& eulerangles &&&&&&&&&&&&&&&&&&&&&&&&&&&&&&
+Help on module nibabel.eulerangles in nibabel:
+
+NAME
+    nibabel.eulerangles - Module implementing Euler angle rotations and their conversions
+
+DESCRIPTION
+    See:
+    
+    * https://en.wikipedia.org/wiki/Rotation_matrix
+    * https://en.wikipedia.org/wiki/Euler_angles
+    * http://mathworld.wolfram.com/EulerAngles.html
+    
+    See also: *Representing Attitude with Euler Angles and Quaternions: A
+    Reference* (2006) by James Diebel. A cached PDF link last found here:
+&&&&&&&&&&&&&&&&&&&&&&&&& externals &&&&&&&&&&&&&&&&&&&&&&&&&&&&&&
+Help on package nibabel.externals in nibabel:
+
+NAME
+    nibabel.externals - # init for externals package
+
+PACKAGE CONTENTS
+    conftest
+    netcdf
+    oset
+    tests (package)
+
+FILE
+    /Users/santosg/miniconda3/lib/python3.9/site-packages/nibabel/externals/__init__.py
+
+&&&&&&&&&&&&&&&&&&&&&&&&& filebasedimages &&&&&&&&&&&&&&&&&&&&&&&&&&&&&&
+Help on module nibabel.filebasedimages in nibabel:
+
+NAME
+    nibabel.filebasedimages - Common interface for any image format--volume or surface, binary or xml
+
+CLASSES
+    builtins.Exception(builtins.BaseException)
+        ImageFileError
+    builtins.object
+        FileBasedHeader
+        FileBasedImage
+            SerializableImage
+    
+    class FileBasedHeader(builtins.object)
+&&&&&&&&&&&&&&&&&&&&&&&&& fileholders &&&&&&&&&&&&&&&&&&&&&&&&&&&&&&
+Help on module nibabel.fileholders in nibabel:
+
+NAME
+    nibabel.fileholders - Fileholder class
+
+CLASSES
+    builtins.Exception(builtins.BaseException)
+        FileHolderError
+    builtins.object
+        FileHolder
+    
+    class FileHolder(builtins.object)
+     |  FileHolder(filename: 'str | None' = None, fileobj: 'io.IOBase | None' = None, pos: 'int' = 0)
+     |  
+&&&&&&&&&&&&&&&&&&&&&&&&& filename_parser &&&&&&&&&&&&&&&&&&&&&&&&&&&&&&
+Help on module nibabel.filename_parser in nibabel:
+
+NAME
+    nibabel.filename_parser - Create filename pairs, triplets etc, with expected extensions
+
+CLASSES
+    builtins.Exception(builtins.BaseException)
+        TypesFilenamesError
+    
+    class TypesFilenamesError(builtins.Exception)
+     |  Method resolution order:
+     |      TypesFilenamesError
+     |      builtins.Exception
+     |      builtins.BaseException
+&&&&&&&&&&&&&&&&&&&&&&&&& fileslice &&&&&&&&&&&&&&&&&&&&&&&&&&&&&&
+Help on module nibabel.fileslice in nibabel:
+
+NAME
+    nibabel.fileslice - Utilities for getting array slices out of file-like objects
+
+FUNCTIONS
+    calc_slicedefs(sliceobj, in_shape, itemsize, offset, order, heuristic=<function threshold_heuristic at 0x10ea271f0>)
+        Return parameters for slicing array with `sliceobj` given memory layout
+        
+        Calculate the best combination of skips / (read + discard) to use for
+        reading the data from disk / memory, then generate corresponding
+        `segments`, the disk offsets and read lengths to read the memory.  If we
+        have chosen some (read + discard) optimization, then we need to discard the
+        surplus values from the read array using `post_slicers`, a slicing tuple
+&&&&&&&&&&&&&&&&&&&&&&&&& flip_axis &&&&&&&&&&&&&&&&&&&&&&&&&&&&&&
+Help on function flip_axis in module nibabel.orientations:
+
+flip_axis(arr, axis=0)
+    Flip contents of `axis` in array `arr`
+    
+    flip_axis is deprecated. Please use numpy.flip instead.
+    
+    * deprecated from version: 3.2
+    * Raises <class 'nibabel.deprecator.ExpiredDeprecationError'> as of version: 5.0
+
+None
+&&&&&&&&&&&&&&&&&&&&&&&&& four_to_three &&&&&&&&&&&&&&&&&&&&&&&&&&&&&&
+Help on function four_to_three in module nibabel.funcs:
+
+&&&&&&&&&&&&&&&&&&&&&&&&& freesurfer &&&&&&&&&&&&&&&&&&&&&&&&&&&&&&
+Help on package nibabel.freesurfer in nibabel:
+
+NAME
+    nibabel.freesurfer - Reading functions for freesurfer files
+
+PACKAGE CONTENTS
+    io
+    mghformat
+    tests (package)
+
+FILE
+    /Users/santosg/miniconda3/lib/python3.9/site-packages/nibabel/freesurfer/__init__.py
+
+
+&&&&&&&&&&&&&&&&&&&&&&&&& funcs &&&&&&&&&&&&&&&&&&&&&&&&&&&&&&
+Help on module nibabel.funcs in nibabel:
+
+NAME
+    nibabel.funcs - Processor functions for images
+
+FUNCTIONS
+    as_closest_canonical(img, enforce_diag=False)
+        Return `img` with data reordered to be closest to canonical
+        
+        Canonical order is the ordering of the output axes.
+        
+        Parameters
+        ----------
+        img : ``spatialimage``
+&&&&&&&&&&&&&&&&&&&&&&&&& get_info &&&&&&&&&&&&&&&&&&&&&&&&&&&&&&
+Help on function get_info in module nibabel:
+
+get_info()
+
+None
+&&&&&&&&&&&&&&&&&&&&&&&&& gifti &&&&&&&&&&&&&&&&&&&&&&&&&&&&&&
+Help on package nibabel.gifti in nibabel:
+
+NAME
+    nibabel.gifti - GIfTI format IO
+
+DESCRIPTION
+    .. currentmodule:: nibabel.gifti
+    
+&&&&&&&&&&&&&&&&&&&&&&&&& imageclasses &&&&&&&&&&&&&&&&&&&&&&&&&&&&&&
+Help on module nibabel.imageclasses in nibabel:
+
+NAME
+    nibabel.imageclasses - Define supported image classes and names
+
+FUNCTIONS
+    spatial_axes_first(img: 'DataobjImage') -> 'bool'
+        True if spatial image axes for `img` always precede other axes
+        
+        Parameters
+        ----------
+        img : object
+            Image object implementing at least ``shape`` attribute.
+        
+&&&&&&&&&&&&&&&&&&&&&&&&& imageglobals &&&&&&&&&&&&&&&&&&&&&&&&&&&&&&
+Help on module nibabel.imageglobals in nibabel:
+
+NAME
+    nibabel.imageglobals - Defaults for images and headers
+
+DESCRIPTION
+    error_level is the problem level (see BatteryRunners) at which an error will be
+    raised, by the batteryrunners ``log_raise`` method.  Thus a level of 0 will
+    result in an error for any problem at all, and a level of 50 will mean no errors
+    will be raised (unless someone's put some strange problem_level > 50 code in).
+    
+    ``logger`` is the default logger (python log instance)
+    
+    To set the log level (log message appears for problem of level >= log level),
+&&&&&&&&&&&&&&&&&&&&&&&&& imagestats &&&&&&&&&&&&&&&&&&&&&&&&&&&&&&
+Help on module nibabel.imagestats in nibabel:
+
+NAME
+    nibabel.imagestats - Functions for computing image statistics
+
+FUNCTIONS
+    count_nonzero_voxels(img)
+        Count number of non-zero voxels
+        
+        Parameters
+        ----------
+        img : ``SpatialImage``
+            All voxels of the mask should be of value 1, background should have value 0.
+        
+&&&&&&&&&&&&&&&&&&&&&&&&& info &&&&&&&&&&&&&&&&&&&&&&&&&&&&&&
+Help on module nibabel.info in nibabel:
+
+NAME
+    nibabel.info - Define static nibabel metadata for nibabel
+
+DESCRIPTION
+    The long description parameter is used in the nibabel top-level docstring,
+    and in building the docs.
+    We exec this file in several places, so it cannot import nibabel or use
+    relative imports.
+
+DATA
+    long_description = '\nRead and write access to common neuroimaging fi....
+
+&&&&&&&&&&&&&&&&&&&&&&&&& io_orientation &&&&&&&&&&&&&&&&&&&&&&&&&&&&&&
+Help on function io_orientation in module nibabel.orientations:
+
+io_orientation(affine, tol=None)
+    Orientation of input axes in terms of output axes for `affine`
+    
+    Valid for an affine transformation from ``p`` dimensions to ``q``
+    dimensions (``affine.shape == (q + 1, p + 1)``).
+    
+    The calculated orientations can be used to transform associated
+    arrays to best match the output orientations. If ``p`` > ``q``, then
+    some of the output axes should be considered dropped in this
+    orientation.
+    
+    Parameters
+&&&&&&&&&&&&&&&&&&&&&&&&& is_proxy &&&&&&&&&&&&&&&&&&&&&&&&&&&&&&
+Help on function is_proxy in module nibabel.arrayproxy:
+
+is_proxy(obj)
+    Return True if `obj` is an array proxy
+
+None
+&&&&&&&&&&&&&&&&&&&&&&&&& load &&&&&&&&&&&&&&&&&&&&&&&&&&&&&&
+Help on function load in module nibabel.loadsave:
+
+load(filename: 'FileSpec', **kwargs) -> 'FileBasedImage'
+    Load file given filename, guessing at file type
+    
+    Parameters
+    ----------
+&&&&&&&&&&&&&&&&&&&&&&&&& loadsave &&&&&&&&&&&&&&&&&&&&&&&&&&&&&&
+Help on module nibabel.loadsave in nibabel:
+
+NAME
+    nibabel.loadsave - Utilities to load and save image objects
+
+FUNCTIONS
+    guessed_image_type(filename)
+        Guess image type from file `filename`
+        
+        guessed_image_type deprecated.
+        
+        * deprecated from version: 3.2
+        * Raises <class 'nibabel.deprecator.ExpiredDeprecationError'> as of version: 5.0
+    
+&&&&&&&&&&&&&&&&&&&&&&&&& minc1 &&&&&&&&&&&&&&&&&&&&&&&&&&&&&&
+Help on module nibabel.minc1 in nibabel:
+
+NAME
+    nibabel.minc1 - Read MINC1 format images
+
+CLASSES
+    builtins.Exception(builtins.BaseException)
+        MincError
+    builtins.object
+        Minc1File
+        MincImageArrayProxy
+    nibabel.spatialimages.SpatialHeader(nibabel.filebasedimages.FileBasedHeader, nibabel.spatialimages.SpatialProtocol)
+        MincHeader
+            Minc1Header
+&&&&&&&&&&&&&&&&&&&&&&&&& minc2 &&&&&&&&&&&&&&&&&&&&&&&&&&&&&&
+Help on module nibabel.minc2 in nibabel:
+
+NAME
+    nibabel.minc2 - Preliminary MINC2 support
+
+DESCRIPTION
+    Use with care; I haven't tested this against a wide range of MINC files.
+    
+    If you have a file that isn't read correctly, please send an example.
+    
+    Test reading with something like::
+    
+        import nibabel as nib
+        img = nib.load('my_funny.mnc')
+&&&&&&&&&&&&&&&&&&&&&&&&& mriutils &&&&&&&&&&&&&&&&&&&&&&&&&&&&&&
+Help on module nibabel.mriutils in nibabel:
+
+NAME
+    nibabel.mriutils - Utilities for calculations related to MRI
+
+FUNCTIONS
+    calculate_dwell_time(water_fat_shift, echo_train_length, field_strength)
+        Calculate the dwell time
+        
+        Parameters
+        ----------
+        water_fat_shift : float
+            The water fat shift of the recording, in pixels.
+        echo_train_length : int
+&&&&&&&&&&&&&&&&&&&&&&&&& ni1 &&&&&&&&&&&&&&&&&&&&&&&&&&&&&&
+Help on module nibabel.nifti1 in nibabel:
+
+NAME
+    nibabel.nifti1 - Read / write access to NIfTI1 image format
+
+DESCRIPTION
+    NIfTI1 format defined at http://nifti.nimh.nih.gov/nifti-1/
+
+CLASSES
+    builtins.list(builtins.object)
+        Nifti1Extensions
+    builtins.object
+        Nifti1Extension
+            Nifti1DicomExtension
+&&&&&&&&&&&&&&&&&&&&&&&&& nifti1 &&&&&&&&&&&&&&&&&&&&&&&&&&&&&&
+Help on module nibabel.nifti1 in nibabel:
+
+NAME
+    nibabel.nifti1 - Read / write access to NIfTI1 image format
+
+DESCRIPTION
+    NIfTI1 format defined at http://nifti.nimh.nih.gov/nifti-1/
+
+CLASSES
+    builtins.list(builtins.object)
+        Nifti1Extensions
+    builtins.object
+        Nifti1Extension
+            Nifti1DicomExtension
+&&&&&&&&&&&&&&&&&&&&&&&&& nifti2 &&&&&&&&&&&&&&&&&&&&&&&&&&&&&&
+Help on module nibabel.nifti2 in nibabel:
+
+NAME
+    nibabel.nifti2 - Read / write access to NIfTI2 image format
+
+DESCRIPTION
+    Format described here:
+    
+        https://www.nitrc.org/forum/message.php?msg_id=3738
+
+CLASSES
+    nibabel.nifti1.Nifti1Header(nibabel.spm99analyze.SpmAnalyzeHeader)
+        Nifti2Header
+            Nifti2PairHeader
+&&&&&&&&&&&&&&&&&&&&&&&&& openers &&&&&&&&&&&&&&&&&&&&&&&&&&&&&&
+Help on module nibabel.openers in nibabel:
+
+NAME
+    nibabel.openers - Context manager openers for various fileobject types
+
+CLASSES
+    builtins.object
+        Opener
+            ImageOpener
+    gzip.GzipFile(_compression.BaseStream)
+        DeterministicGzipFile
+    typing.Protocol(typing.Generic)
+        Fileish
+    
+&&&&&&&&&&&&&&&&&&&&&&&&& optpkg &&&&&&&&&&&&&&&&&&&&&&&&&&&&&&
+Help on module nibabel.optpkg in nibabel:
+
+NAME
+    nibabel.optpkg - Routines to support optional packages
+
+FUNCTIONS
+    optional_package(name: 'str', trip_msg: 'str | None' = None, min_version: 'str | Version | ty.Callable[[ModuleType], bool] | None' = None) -> 'tuple[ModuleType | TripWire, bool, ty.Callable[[], None]]'
+        Return package-like thing and module setup for package `name`
+        
+        Parameters
+        ----------
+        name : str
+            package name
+        trip_msg : None or str
+&&&&&&&&&&&&&&&&&&&&&&&&& orientations &&&&&&&&&&&&&&&&&&&&&&&&&&&&&&
+Help on module nibabel.orientations in nibabel:
+
+NAME
+    nibabel.orientations - Utilities for calculating and applying affine orientations
+
+CLASSES
+    builtins.Exception(builtins.BaseException)
+        OrientationError
+    
+    class OrientationError(builtins.Exception)
+     |  Method resolution order:
+     |      OrientationError
+     |      builtins.Exception
+     |      builtins.BaseException
+&&&&&&&&&&&&&&&&&&&&&&&&& os &&&&&&&&&&&&&&&&&&&&&&&&&&&&&&
+Help on module os:
+
+NAME
+    os - OS routines for NT or Posix depending on what system we're on.
+
+MODULE REFERENCE
+    https://docs.python.org/3.9/library/os
+    
+    The following documentation is automatically generated from the Python
+    source files.  It may be incomplete, incorrect or include features that
+    are considered implementation detail and may vary between Python
+    implementations.  When in doubt, consult the module reference at the
+    location listed above.
+
+&&&&&&&&&&&&&&&&&&&&&&&&& parrec &&&&&&&&&&&&&&&&&&&&&&&&&&&&&&
+Help on module nibabel.parrec in nibabel:
+
+NAME
+    nibabel.parrec - Read images in PAR/REC format
+
+DESCRIPTION
+    This is yet another MRI image format generated by Philips scanners. It is an
+    ASCII header (PAR) plus a binary blob (REC).
+    
+    This implementation aims to read version 4.0 through 4.2 of this format. Other
+    versions could probably be supported, but we need example images to test
+    against.  If you want us to support another version, and have an image we can
+    add to the test suite, let us know.  You would make us very happy by submitting
+    a pull request.
+&&&&&&&&&&&&&&&&&&&&&&&&& pkg_info &&&&&&&&&&&&&&&&&&&&&&&&&&&&&&
+Help on module nibabel.pkg_info in nibabel:
+
+NAME
+    nibabel.pkg_info
+
+FUNCTIONS
+    cmp_pkg_version(version_str: 'str', pkg_version_str: 'str' = '5.2.1') -> 'int'
+        Compare ``version_str`` to current package version
+        
+        This comparator follows `PEP-440`_ conventions for determining version
+        ordering.
+        
+        To be valid, a version must have a numerical major version. It may be
+        optionally followed by a dot and a numerical minor version, which may,
+&&&&&&&&&&&&&&&&&&&&&&&&& quaternions &&&&&&&&&&&&&&&&&&&&&&&&&&&&&&
+Help on module nibabel.quaternions in nibabel:
+
+NAME
+    nibabel.quaternions - Functions to operate on, or return, quaternions
+
+DESCRIPTION
+    The module also includes functions for the closely related angle, axis
+    pair as a specification for rotation.
+    
+    Quaternions here consist of 4 values ``w, x, y, z``, where ``w`` is the
+    real (scalar) part, and ``x, y, z`` are the complex (vector) part.
+    
+    Note - rotation matrices here apply to column vectors, that is,
+    they are applied on the left of the vector.  For example:
+&&&&&&&&&&&&&&&&&&&&&&&&& save &&&&&&&&&&&&&&&&&&&&&&&&&&&&&&
+Help on function save in module nibabel.loadsave:
+
+save(img: 'FileBasedImage', filename: 'FileSpec', **kwargs) -> 'None'
+    Save an image to file adapting format to `filename`
+    
+    Parameters
+    ----------
+    img : ``SpatialImage``
+       image to save
+    filename : str or os.PathLike
+       filename (often implying filenames) to which to save `img`.
+    \*\*kwargs : keyword arguments
+        Keyword arguments to format-specific save
+    
+&&&&&&&&&&&&&&&&&&&&&&&&& spatialimages &&&&&&&&&&&&&&&&&&&&&&&&&&&&&&
+Help on module nibabel.spatialimages in nibabel:
+
+NAME
+    nibabel.spatialimages - A simple spatial image class
+
+DESCRIPTION
+    The image class maintains the association between a 3D (or greater)
+    array, and an affine transform that maps voxel coordinates to some world space.
+    It also has a ``header`` - some standard set of meta-data that is specific to
+    the image format, and ``extra`` - a dictionary container for any other
+    metadata.
+    
+    It has attributes:
+    
+&&&&&&&&&&&&&&&&&&&&&&&&& spm2 &&&&&&&&&&&&&&&&&&&&&&&&&&&&&&
+Help on module nibabel.spm2analyze in nibabel:
+
+NAME
+    nibabel.spm2analyze - Read / write access to SPM2 version of analyze image format
+
+CLASSES
+    nibabel.spm99analyze.Spm99AnalyzeHeader(nibabel.spm99analyze.SpmAnalyzeHeader)
+        Spm2AnalyzeHeader
+    nibabel.spm99analyze.Spm99AnalyzeImage(nibabel.analyze.AnalyzeImage)
+        Spm2AnalyzeImage
+    
+    class Spm2AnalyzeHeader(nibabel.spm99analyze.Spm99AnalyzeHeader)
+     |  Spm2AnalyzeHeader(binaryblock=None, endianness=None, check=True)
+     |  
+&&&&&&&&&&&&&&&&&&&&&&&&& spm2analyze &&&&&&&&&&&&&&&&&&&&&&&&&&&&&&
+Help on module nibabel.spm2analyze in nibabel:
+
+NAME
+    nibabel.spm2analyze - Read / write access to SPM2 version of analyze image format
+
+CLASSES
+    nibabel.spm99analyze.Spm99AnalyzeHeader(nibabel.spm99analyze.SpmAnalyzeHeader)
+        Spm2AnalyzeHeader
+    nibabel.spm99analyze.Spm99AnalyzeImage(nibabel.analyze.AnalyzeImage)
+        Spm2AnalyzeImage
+    
+    class Spm2AnalyzeHeader(nibabel.spm99analyze.Spm99AnalyzeHeader)
+     |  Spm2AnalyzeHeader(binaryblock=None, endianness=None, check=True)
+     |  
+&&&&&&&&&&&&&&&&&&&&&&&&& spm99 &&&&&&&&&&&&&&&&&&&&&&&&&&&&&&
+Help on module nibabel.spm99analyze in nibabel:
+
+NAME
+    nibabel.spm99analyze - Read / write access to SPM99 version of analyze image format
+
+CLASSES
+    nibabel.analyze.AnalyzeHeader(nibabel.wrapstruct.LabeledWrapStruct, nibabel.spatialimages.SpatialHeader)
+        SpmAnalyzeHeader
+            Spm99AnalyzeHeader
+    nibabel.analyze.AnalyzeImage(nibabel.spatialimages.SpatialImage)
+        Spm99AnalyzeImage
+    
+    class Spm99AnalyzeHeader(SpmAnalyzeHeader)
+     |  Spm99AnalyzeHeader(binaryblock=None, endianness=None, check=True)
+&&&&&&&&&&&&&&&&&&&&&&&&& spm99analyze &&&&&&&&&&&&&&&&&&&&&&&&&&&&&&
+Help on module nibabel.spm99analyze in nibabel:
+
+NAME
+    nibabel.spm99analyze - Read / write access to SPM99 version of analyze image format
+
+CLASSES
+    nibabel.analyze.AnalyzeHeader(nibabel.wrapstruct.LabeledWrapStruct, nibabel.spatialimages.SpatialHeader)
+        SpmAnalyzeHeader
+            Spm99AnalyzeHeader
+    nibabel.analyze.AnalyzeImage(nibabel.spatialimages.SpatialImage)
+        Spm99AnalyzeImage
+    
+    class Spm99AnalyzeHeader(SpmAnalyzeHeader)
+     |  Spm99AnalyzeHeader(binaryblock=None, endianness=None, check=True)
+&&&&&&&&&&&&&&&&&&&&&&&&& squeeze_image &&&&&&&&&&&&&&&&&&&&&&&&&&&&&&
+Help on function squeeze_image in module nibabel.funcs:
+
+squeeze_image(img)
+    Return image, remove axes length 1 at end of image shape
+    
+    For example, an image may have shape (10,20,30,1,1).  In this case
+    squeeze will result in an image with shape (10,20,30).  See doctests
+    for further description of behavior.
+    
+    Parameters
+    ----------
+    img : ``SpatialImage``
+    
+    Returns
+&&&&&&&&&&&&&&&&&&&&&&&&& streamlines &&&&&&&&&&&&&&&&&&&&&&&&&&&&&&
+Help on package nibabel.streamlines in nibabel:
+
+NAME
+    nibabel.streamlines - Multiformat-capable streamline format read / write interface
+
+PACKAGE CONTENTS
+    array_sequence
+    header
+    tck
+    tests (package)
+    tractogram
+    tractogram_file
+    trk
+    utils
+&&&&&&&&&&&&&&&&&&&&&&&&& test &&&&&&&&&&&&&&&&&&&&&&&&&&&&&&
+Help on function test in module nibabel:
+
+test(label=None, verbose=1, extra_argv=None, doctests=False, coverage=False, raise_warnings=None, timer=False)
+    Run tests for nibabel using pytest
+    
+    The protocol mimics the ``numpy.testing.NoseTester.test()``.
+    Not all features are currently implemented.
+    
+    Parameters
+    ----------
+    label : None
+        Unused.
+    verbose: int, optional
+        Verbosity value for test outputs. Positive values increase verbosity, and
+&&&&&&&&&&&&&&&&&&&&&&&&& tripwire &&&&&&&&&&&&&&&&&&&&&&&&&&&&&&
+Help on module nibabel.tripwire in nibabel:
+
+NAME
+    nibabel.tripwire - Class to raise error for missing modules or other misfortunes
+
+CLASSES
+    builtins.AttributeError(builtins.Exception)
+        TripWireError
+    builtins.object
+        TripWire
+    
+    class TripWire(builtins.object)
+     |  TripWire(msg: str) -> None
+     |  
+&&&&&&&&&&&&&&&&&&&&&&&&& viewers &&&&&&&&&&&&&&&&&&&&&&&&&&&&&&
+Help on module nibabel.viewers in nibabel:
+
+NAME
+    nibabel.viewers - Utilities for viewing images
+
+DESCRIPTION
+    Includes version of OrthoSlicer3D code originally written by our own
+    Paul Ivanov.
+
+CLASSES
+    builtins.object
+        OrthoSlicer3D
+    
+    class OrthoSlicer3D(builtins.object)
+&&&&&&&&&&&&&&&&&&&&&&&&& volumeutils &&&&&&&&&&&&&&&&&&&&&&&&&&&&&&
+Help on module nibabel.volumeutils in nibabel:
+
+NAME
+    nibabel.volumeutils - Utility functions for analyze-like formats
+
+CLASSES
+    builtins.dict(builtins.object)
+        DtypeMapper(builtins.dict, typing.Generic)
+    builtins.object
+        Recoder
+    typing.Generic(builtins.object)
+        DtypeMapper(builtins.dict, typing.Generic)
+    
+    class DtypeMapper(builtins.dict, typing.Generic)
+&&&&&&&&&&&&&&&&&&&&&&&&& wrapstruct &&&&&&&&&&&&&&&&&&&&&&&&&&&&&&
+Help on module nibabel.wrapstruct in nibabel:
+
+NAME
+    nibabel.wrapstruct - Class to wrap numpy structured array
+
+DESCRIPTION
+    ============
+     wrapstruct
+    ============
+    
+    The :class:`WrapStruct` class is a wrapper around a numpy structured array
+    type.
+    
+    It implements:
+&&&&&&&&&&&&&&&&&&&&&&&&& xmlutils &&&&&&&&&&&&&&&&&&&&&&&&&&&&&&
+Help on module nibabel.xmlutils in nibabel:
+
+NAME
+    nibabel.xmlutils - Thin layer around xml.etree.ElementTree, to abstract nibabel xml support
+
+CLASSES
+    builtins.object
+        XmlParser
+        XmlSerializable
+            XmlBasedHeader(nibabel.filebasedimages.FileBasedHeader, XmlSerializable)
+    nibabel.filebasedimages.FileBasedHeader(builtins.object)
+        XmlBasedHeader(nibabel.filebasedimages.FileBasedHeader, XmlSerializable)
+    
+    class XmlBasedHeader(nibabel.filebasedimages.FileBasedHeader, XmlSerializable)

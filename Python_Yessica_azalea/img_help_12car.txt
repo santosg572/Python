@@ -1,0 +1,585 @@
+&&&&&&&&&&&&&&&&&&&&&&&&& ImageArrayProxy &&&&&&&&&&&&&&&&&&&&&&&&&&&&&&
+Help on class ArrayProxy in module nibabel.arrayproxy:
+
+class ArrayProxy(ArrayLike)
+ |  ArrayProxy(file_like, spec, *, mmap=True, order=None, keep_file_open=None)
+ |  
+ |  Class to act as proxy for the array that can be read from a file
+ |  
+ |  The array proxy allows us to freeze the passed fileobj and header such that
+ |  it returns the expected data array.
+ |  
+ |  This implementation assumes a contiguous array in the file object, with one
+ |  of the numpy dtypes, starting at a given file position ``offset`` with
+ |  single ``slope`` and ``intercept`` scaling to produce output values.
+ |  
+&&&&&&&&&&&&&&&&&&&&&&&&& ImageSlicer &&&&&&&&&&&&&&&&&&&&&&&&&&&&&&
+Help on class SpatialFirstSlicer in module nibabel.spatialimages:
+
+class SpatialFirstSlicer(typing.Generic)
+ |  SpatialFirstSlicer(img: 'SpatialImgT')
+ |  
+ |  Slicing interface that returns a new image with an updated affine
+ |  
+ |  Checks that an image's first three axes are spatial
+ |  
+ |  Method resolution order:
+ |      SpatialFirstSlicer
+ |      typing.Generic
+ |      builtins.object
+ |  
+&&&&&&&&&&&&&&&&&&&&&&&&& affine &&&&&&&&&&&&&&&&&&&&&&&&&&&&&&
+Help on ndarray object:
+
+class ndarray(builtins.object)
+ |  ndarray(shape, dtype=float, buffer=None, offset=0,
+ |          strides=None, order=None)
+ |  
+ |  An array object represents a multidimensional, homogeneous array
+ |  of fixed-size items.  An associated data-type object describes the
+ |  format of each element in the array (its byte-order, how many bytes it
+ |  occupies in memory, whether it is an integer, a floating point number,
+ |  or something else, etc.)
+ |  
+ |  Arrays should be constructed using `array`, `zeros` or `empty` (refer
+ |  to the See Also section below).  The parameters given here refer to
+&&&&&&&&&&&&&&&&&&&&&&&&& as_reoriented &&&&&&&&&&&&&&&&&&&&&&&&&&&&&&
+Help on method as_reoriented in module nibabel.nifti1:
+
+as_reoriented(ornt) method of nibabel.nifti1.Nifti1Image instance
+    Apply an orientation change and return a new image
+    
+    If ornt is identity transform, return the original image, unchanged
+    
+    Parameters
+    ----------
+    ornt : (n,2) orientation array
+       orientation transform. ``ornt[N,1]` is flip of axis N of the
+       array implied by `shape`, where 1 means no flip and -1 means
+       flip.  For example, if ``N==0`` and ``ornt[0,1] == -1``, and
+       there's an array ``arr`` of shape `shape`, the flip would
+&&&&&&&&&&&&&&&&&&&&&&&&& dataobj &&&&&&&&&&&&&&&&&&&&&&&&&&&&&&
+Help on ArrayProxy in module nibabel.arrayproxy object:
+
+class ArrayProxy(ArrayLike)
+ |  ArrayProxy(file_like, spec, *, mmap=True, order=None, keep_file_open=None)
+ |  
+ |  Class to act as proxy for the array that can be read from a file
+ |  
+ |  The array proxy allows us to freeze the passed fileobj and header such that
+ |  it returns the expected data array.
+ |  
+ |  This implementation assumes a contiguous array in the file object, with one
+ |  of the numpy dtypes, starting at a given file position ``offset`` with
+ |  single ``slope`` and ``intercept`` scaling to produce output values.
+ |  
+&&&&&&&&&&&&&&&&&&&&&&&&& extra &&&&&&&&&&&&&&&&&&&&&&&&&&&&&&
+Help on dict object:
+
+class dict(object)
+ |  dict() -> new empty dictionary
+ |  dict(mapping) -> new dictionary initialized from a mapping object's
+ |      (key, value) pairs
+ |  dict(iterable) -> new dictionary initialized as if via:
+ |      d = {}
+ |      for k, v in iterable:
+ |          d[k] = v
+ |  dict(**kwargs) -> new dictionary initialized with the name=value pairs
+ |      in the keyword argument list.  For example:  dict(one=1, two=2)
+ |  
+ |  Built-in subclasses:
+&&&&&&&&&&&&&&&&&&&&&&&&& file_map &&&&&&&&&&&&&&&&&&&&&&&&&&&&&&
+Help on dict object:
+
+class dict(object)
+ |  dict() -> new empty dictionary
+ |  dict(mapping) -> new dictionary initialized from a mapping object's
+ |      (key, value) pairs
+ |  dict(iterable) -> new dictionary initialized as if via:
+ |      d = {}
+ |      for k, v in iterable:
+ |          d[k] = v
+ |  dict(**kwargs) -> new dictionary initialized with the name=value pairs
+ |      in the keyword argument list.  For example:  dict(one=1, two=2)
+ |  
+ |  Built-in subclasses:
+&&&&&&&&&&&&&&&&&&&&&&&&& files_types &&&&&&&&&&&&&&&&&&&&&&&&&&&&&&
+Help on tuple object:
+
+class tuple(object)
+ |  tuple(iterable=(), /)
+ |  
+ |  Built-in immutable sequence.
+ |  
+ |  If no argument is given, the constructor returns an empty tuple.
+ |  If iterable is specified the tuple is initialized from iterable's items.
+ |  
+ |  If the argument is a tuple, the return value is the same object.
+ |  
+ |  Built-in subclasses:
+ |      asyncgen_hooks
+&&&&&&&&&&&&&&&&&&&&&&&&& filespec_to_file_map &&&&&&&&&&&&&&&&&&&&&&&&&&&&&&
+Help on method filespec_to_file_map in module nibabel.filebasedimages:
+
+filespec_to_file_map(filespec: 'FileSpec') -> 'FileMap' method of builtins.type instance
+    Make `file_map` for this class from filename `filespec`
+    
+    Class method
+    
+    Parameters
+    ----------
+    filespec : str or os.PathLike
+        Filename that might be for this image file type.
+    
+    Returns
+    -------
+&&&&&&&&&&&&&&&&&&&&&&&&& from_bytes &&&&&&&&&&&&&&&&&&&&&&&&&&&&&&
+Help on method from_bytes in module nibabel.filebasedimages:
+
+from_bytes(bytestring: 'bytes') -> 'StreamImgT' method of builtins.type instance
+    Construct image from a byte string
+    
+    Class method
+    
+    Parameters
+    ----------
+    bytestring : bytes
+        Byte string containing the on-disk representation of an image
+
+None
+&&&&&&&&&&&&&&&&&&&&&&&&& from_file_map &&&&&&&&&&&&&&&&&&&&&&&&&&&&&&
+&&&&&&&&&&&&&&&&&&&&&&&&& from_filename &&&&&&&&&&&&&&&&&&&&&&&&&&&&&&
+Help on method from_filename in module nibabel.dataobj_images:
+
+from_filename(filename: 'FileSpec', *, mmap: "bool | ty.Literal['c', 'r']" = True, keep_file_open: 'bool | None' = None) -> 'ArrayImgT' method of builtins.type instance
+    Class method to create image from filename `filename`
+    
+    Parameters
+    ----------
+    filename : str
+        Filename of image to load
+    mmap : {True, False, 'c', 'r'}, optional, keyword only
+        `mmap` controls the use of numpy memory mapping for reading image
+        array data.  If False, do not try numpy ``memmap`` for data array.
+        If one of {'c', 'r'}, try numpy memmap with ``mode=mmap``.  A
+        `mmap` value of True gives the same behavior as ``mmap='c'``.  If
+&&&&&&&&&&&&&&&&&&&&&&&&& from_image &&&&&&&&&&&&&&&&&&&&&&&&&&&&&&
+Help on method from_image in module nibabel.spatialimages:
+
+from_image(img: 'SpatialImage | FileBasedImage') -> 'SpatialImgT' method of builtins.type instance
+    Class method to create new instance of own class from `img`
+    
+    Parameters
+    ----------
+    img : ``spatialimage`` instance
+       In fact, an object with the API of ``spatialimage`` -
+       specifically ``dataobj``, ``affine``, ``header`` and ``extra``.
+    
+    Returns
+    -------
+    cimg : ``spatialimage`` instance
+&&&&&&&&&&&&&&&&&&&&&&&&& from_stream &&&&&&&&&&&&&&&&&&&&&&&&&&&&&&
+Help on method from_stream in module nibabel.filebasedimages:
+
+from_stream(io_obj: 'io.IOBase') -> 'StreamImgT' method of builtins.type instance
+    Load image from readable IO stream
+    
+    Convert to BytesIO to enable seeking, if input stream is not seekable
+    
+    Parameters
+    ----------
+    io_obj : IOBase object
+        Readable stream
+
+None
+&&&&&&&&&&&&&&&&&&&&&&&&& from_url &&&&&&&&&&&&&&&&&&&&&&&&&&&&&&
+&&&&&&&&&&&&&&&&&&&&&&&&& get_data &&&&&&&&&&&&&&&&&&&&&&&&&&&&&&
+Help on method get_data in module nibabel.dataobj_images:
+
+get_data(caching='fill') method of nibabel.nifti1.Nifti1Image instance
+    Return image data from image with any necessary scaling applied
+    
+    get_data() is deprecated in favor of get_fdata(), which has a more predictable return type. To obtain get_data() behavior going forward, use numpy.asanyarray(img.dataobj).
+    
+    * deprecated from version: 3.0
+    * Raises <class 'nibabel.deprecator.ExpiredDeprecationError'> as of version: 5.0
+
+None
+&&&&&&&&&&&&&&&&&&&&&&&&& get_data_dtype &&&&&&&&&&&&&&&&&&&&&&&&&&&&&&
+Help on method get_data_dtype in module nibabel.nifti1:
+
+&&&&&&&&&&&&&&&&&&&&&&&&& get_fdata &&&&&&&&&&&&&&&&&&&&&&&&&&&&&&
+Help on method get_fdata in module nibabel.dataobj_images:
+
+get_fdata(caching: "ty.Literal['fill', 'unchanged']" = 'fill', dtype: 'npt.DTypeLike' = <class 'numpy.float64'>) -> 'np.ndarray[ty.Any, np.dtype[np.floating]]' method of nibabel.nifti1.Nifti1Image instance
+    Return floating point image data with necessary scaling applied
+    
+    The image ``dataobj`` property can be an array proxy or an array.  An
+    array proxy is an object that knows how to load the image data from
+    disk.  An image with an array proxy ``dataobj`` is a *proxy image*; an
+    image with an array in ``dataobj`` is an *array image*.
+    
+    The default behavior for ``get_fdata()`` on a proxy image is to read
+    the data from the proxy, and store in an internal cache.  Future calls
+    to ``get_fdata`` will return the cached array.  This is the behavior
+    selected with `caching` == "fill".
+&&&&&&&&&&&&&&&&&&&&&&&&& get_filename &&&&&&&&&&&&&&&&&&&&&&&&&&&&&&
+Help on method get_filename in module nibabel.filebasedimages:
+
+get_filename() -> 'str | None' method of nibabel.nifti1.Nifti1Image instance
+    Fetch the image filename
+    
+    Parameters
+    ----------
+    None
+    
+    Returns
+    -------
+    fname : None or str
+       Returns None if there is no filename, or a filename string.
+       If an image may have several filenames associated with it (e.g.
+&&&&&&&&&&&&&&&&&&&&&&&&& get_qform &&&&&&&&&&&&&&&&&&&&&&&&&&&&&&
+Help on method get_qform in module nibabel.nifti1:
+
+get_qform(coded=False) method of nibabel.nifti1.Nifti1Image instance
+    Return 4x4 affine matrix from qform parameters in header
+    
+    Parameters
+    ----------
+    coded : bool, optional
+        If True, return {affine or None}, and qform code.  If False, just
+        return affine.  {affine or None} means, return None if qform code
+        == 0, and affine otherwise.
+    
+    Returns
+    -------
+&&&&&&&&&&&&&&&&&&&&&&&&& get_sform &&&&&&&&&&&&&&&&&&&&&&&&&&&&&&
+Help on method get_sform in module nibabel.nifti1:
+
+get_sform(coded=False) method of nibabel.nifti1.Nifti1Image instance
+    Return 4x4 affine matrix from sform parameters in header
+    
+    Parameters
+    ----------
+    coded : bool, optional
+        If True, return {affine or None}, and sform code.  If False, just
+        return affine.  {affine or None} means, return None if sform code
+        == 0, and affine otherwise.
+    
+    Returns
+    -------
+&&&&&&&&&&&&&&&&&&&&&&&&& header &&&&&&&&&&&&&&&&&&&&&&&&&&&&&&
+Help on Nifti1Header in module nibabel.nifti1 object:
+
+class Nifti1Header(nibabel.spm99analyze.SpmAnalyzeHeader)
+ |  Nifti1Header(binaryblock=None, endianness=None, check=True, extensions=())
+ |  
+ |  Class for NIfTI1 header
+ |  
+ |  The NIfTI1 header has many more coded fields than the simpler Analyze
+ |  variants.  NIfTI1 headers also have extensions.
+ |  
+ |  Nifti allows the header to be a separate file, as part of a nifti image /
+ |  header pair, or to precede the data in a single file.  The object needs to
+ |  know which type it is, in order to manage the voxel offset pointing to the
+ |  data, extension reading, and writing the correct magic string.
+&&&&&&&&&&&&&&&&&&&&&&&&& header_class &&&&&&&&&&&&&&&&&&&&&&&&&&&&&&
+Help on class Nifti1Header in module nibabel.nifti1:
+
+class Nifti1Header(nibabel.spm99analyze.SpmAnalyzeHeader)
+ |  Nifti1Header(binaryblock=None, endianness=None, check=True, extensions=())
+ |  
+ |  Class for NIfTI1 header
+ |  
+ |  The NIfTI1 header has many more coded fields than the simpler Analyze
+ |  variants.  NIfTI1 headers also have extensions.
+ |  
+ |  Nifti allows the header to be a separate file, as part of a nifti image /
+ |  header pair, or to precede the data in a single file.  The object needs to
+ |  know which type it is, in order to manage the voxel offset pointing to the
+ |  data, extension reading, and writing the correct magic string.
+&&&&&&&&&&&&&&&&&&&&&&&&& in_memory &&&&&&&&&&&&&&&&&&&&&&&&&&&&&&
+Help on bool object:
+
+class bool(int)
+ |  bool(x) -> bool
+ |  
+ |  Returns True when the argument x is true, False otherwise.
+ |  The builtins True and False are the only two instances of the class bool.
+ |  The class bool is a subclass of the class int, and cannot be subclassed.
+ |  
+ |  Method resolution order:
+ |      bool
+ |      int
+ |      object
+ |  
+&&&&&&&&&&&&&&&&&&&&&&&&& instance_to_filename &&&&&&&&&&&&&&&&&&&&&&&&&&&&&&
+Help on method instance_to_filename in module nibabel.filebasedimages:
+
+instance_to_filename(img: 'FileBasedImage', filename: 'FileSpec') -> 'None' method of builtins.type instance
+    Save `img` in our own format, to name implied by `filename`
+    
+    This is a class method
+    
+    Parameters
+    ----------
+    img : ``any FileBasedImage`` instance
+    
+    filename : str
+       Filename, implying name to which to save image.
+
+&&&&&&&&&&&&&&&&&&&&&&&&& load &&&&&&&&&&&&&&&&&&&&&&&&&&&&&&
+Help on method from_filename in module nibabel.dataobj_images:
+
+from_filename(filename: 'FileSpec', *, mmap: "bool | ty.Literal['c', 'r']" = True, keep_file_open: 'bool | None' = None) -> 'ArrayImgT' method of builtins.type instance
+    Class method to create image from filename `filename`
+    
+    Parameters
+    ----------
+    filename : str
+        Filename of image to load
+    mmap : {True, False, 'c', 'r'}, optional, keyword only
+        `mmap` controls the use of numpy memory mapping for reading image
+        array data.  If False, do not try numpy ``memmap`` for data array.
+        If one of {'c', 'r'}, try numpy memmap with ``mode=mmap``.  A
+        `mmap` value of True gives the same behavior as ``mmap='c'``.  If
+&&&&&&&&&&&&&&&&&&&&&&&&& make_file_map &&&&&&&&&&&&&&&&&&&&&&&&&&&&&&
+Help on method make_file_map in module nibabel.filebasedimages:
+
+make_file_map(mapping: 'ty.Mapping[str, str | io.IOBase] | None' = None) -> 'FileMap' method of builtins.type instance
+    Class method to make files holder for this image type
+    
+    Parameters
+    ----------
+    mapping : None or mapping, optional
+       mapping with keys corresponding to image file types (such as
+       'image', 'header' etc, depending on image class) and values
+       that are filenames or file-like.  Default is None
+    
+    Returns
+    -------
+&&&&&&&&&&&&&&&&&&&&&&&&& makeable &&&&&&&&&&&&&&&&&&&&&&&&&&&&&&
+Help on bool object:
+
+class bool(int)
+ |  bool(x) -> bool
+ |  
+ |  Returns True when the argument x is true, False otherwise.
+ |  The builtins True and False are the only two instances of the class bool.
+ |  The class bool is a subclass of the class int, and cannot be subclassed.
+ |  
+ |  Method resolution order:
+ |      bool
+ |      int
+ |      object
+ |  
+&&&&&&&&&&&&&&&&&&&&&&&&& ndim &&&&&&&&&&&&&&&&&&&&&&&&&&&&&&
+Help on int object:
+
+class int(object)
+ |  int([x]) -> integer
+ |  int(x, base=10) -> integer
+ |  
+ |  Convert a number or string to an integer, or return 0 if no arguments
+ |  are given.  If x is a number, return x.__int__().  For floating point
+ |  numbers, this truncates towards zero.
+ |  
+ |  If x is not a number or if base is given, then x must be a string,
+ |  bytes, or bytearray instance representing an integer literal in the
+ |  given base.  The literal can be preceded by '+' or '-' and be surrounded
+ |  by whitespace.  The base defaults to 10.  Valid bases are 0 and 2-36.
+&&&&&&&&&&&&&&&&&&&&&&&&& orthoview &&&&&&&&&&&&&&&&&&&&&&&&&&&&&&
+Help on method orthoview in module nibabel.spatialimages:
+
+orthoview() -> 'OrthoSlicer3D' method of nibabel.nifti1.Nifti1Image instance
+    Plot the image using OrthoSlicer3D
+    
+    Returns
+    -------
+    viewer : instance of OrthoSlicer3D
+        The viewer.
+    
+    Notes
+    -----
+    This requires matplotlib. If a non-interactive backend is used,
+    consider using viewer.show() (equivalently plt.show()) to show
+&&&&&&&&&&&&&&&&&&&&&&&&& path_maybe_image &&&&&&&&&&&&&&&&&&&&&&&&&&&&&&
+Help on method path_maybe_image in module nibabel.filebasedimages:
+
+path_maybe_image(filename: 'FileSpec', sniff: 'FileSniff | None' = None, sniff_max: 'int' = 1024) -> 'tuple[bool, FileSniff | None]' method of builtins.type instance
+    Return True if `filename` may be image matching this class
+    
+    Parameters
+    ----------
+    filename : str or os.PathLike
+        Filename for an image, or an image header (metadata) file.
+        If `filename` points to an image data file, and the image type has
+        a separate "header" file, we work out the name of the header file,
+        and read from that instead of `filename`.
+    sniff : None or (bytes, filename), optional
+        Bytes content read from a previous call to this method, on another
+&&&&&&&&&&&&&&&&&&&&&&&&& rw &&&&&&&&&&&&&&&&&&&&&&&&&&&&&&
+Help on bool object:
+
+class bool(int)
+ |  bool(x) -> bool
+ |  
+ |  Returns True when the argument x is true, False otherwise.
+ |  The builtins True and False are the only two instances of the class bool.
+ |  The class bool is a subclass of the class int, and cannot be subclassed.
+ |  
+ |  Method resolution order:
+ |      bool
+ |      int
+ |      object
+ |  
+&&&&&&&&&&&&&&&&&&&&&&&&& set_data_dtype &&&&&&&&&&&&&&&&&&&&&&&&&&&&&&
+Help on method set_data_dtype in module nibabel.nifti1:
+
+set_data_dtype(datatype) method of nibabel.nifti1.Nifti1Image instance
+    Set numpy dtype for data from code, dtype, type or alias
+    
+    Using :py:class:`int` or ``"int"`` is disallowed, as these types
+    will be interpreted as ``np.int64``, which is almost never desired.
+    ``np.int64`` is permitted for those intent on making poor choices.
+    
+    The following aliases are defined to allow for flexible specification:
+    
+      * ``'mask'`` - Alias for ``uint8``
+      * ``'compat'`` - The nearest Analyze-compatible datatype
+        (``uint8``, ``int16``, ``int32``, ``float32``)
+&&&&&&&&&&&&&&&&&&&&&&&&& set_filename &&&&&&&&&&&&&&&&&&&&&&&&&&&&&&
+Help on method set_filename in module nibabel.filebasedimages:
+
+set_filename(filename: 'str') -> 'None' method of nibabel.nifti1.Nifti1Image instance
+    Sets the files in the object from a given filename
+    
+    The different image formats may check whether the filename has
+    an extension characteristic of the format, and raise an error if
+    not.
+    
+    Parameters
+    ----------
+    filename : str or os.PathLike
+       If the image format only has one file associated with it,
+       this will be the only filename set into the image
+&&&&&&&&&&&&&&&&&&&&&&&&& set_qform &&&&&&&&&&&&&&&&&&&&&&&&&&&&&&
+Help on method set_qform in module nibabel.nifti1:
+
+set_qform(affine, code=None, strip_shears=True, **kwargs) method of nibabel.nifti1.Nifti1Image instance
+    Set qform header values from 4x4 affine
+    
+    Parameters
+    ----------
+    affine : None or 4x4 array
+        affine transform to write into sform. If None, only set code.
+    code : None, string or integer
+        String or integer giving meaning of transform in *affine*.
+        The default is None.  If code is None, then:
+    
+        * If affine is None, `code`-> 0
+&&&&&&&&&&&&&&&&&&&&&&&&& set_sform &&&&&&&&&&&&&&&&&&&&&&&&&&&&&&
+Help on method set_sform in module nibabel.nifti1:
+
+set_sform(affine, code=None, **kwargs) method of nibabel.nifti1.Nifti1Image instance
+    Set sform transform from 4x4 affine
+    
+    Parameters
+    ----------
+    affine : None or 4x4 array
+        affine transform to write into sform.  If None, only set `code`
+    code : None, string or integer
+        String or integer giving meaning of transform in *affine*.
+        The default is None.  If code is None, then:
+    
+        * If affine is None, `code`-> 0
+&&&&&&&&&&&&&&&&&&&&&&&&& shape &&&&&&&&&&&&&&&&&&&&&&&&&&&&&&
+Help on tuple object:
+
+class tuple(object)
+ |  tuple(iterable=(), /)
+ |  
+ |  Built-in immutable sequence.
+ |  
+ |  If no argument is given, the constructor returns an empty tuple.
+ |  If iterable is specified the tuple is initialized from iterable's items.
+ |  
+ |  If the argument is a tuple, the return value is the same object.
+ |  
+ |  Built-in subclasses:
+ |      asyncgen_hooks
+&&&&&&&&&&&&&&&&&&&&&&&&& slicer &&&&&&&&&&&&&&&&&&&&&&&&&&&&&&
+Help on SpatialFirstSlicer in module nibabel.spatialimages object:
+
+class SpatialFirstSlicer(typing.Generic)
+ |  SpatialFirstSlicer(img: 'SpatialImgT')
+ |  
+ |  Slicing interface that returns a new image with an updated affine
+ |  
+ |  Checks that an image's first three axes are spatial
+ |  
+ |  Method resolution order:
+ |      SpatialFirstSlicer
+ |      typing.Generic
+ |      builtins.object
+ |  
+&&&&&&&&&&&&&&&&&&&&&&&&& to_bytes &&&&&&&&&&&&&&&&&&&&&&&&&&&&&&
+Help on method to_bytes in module nibabel.filebasedimages:
+
+to_bytes(**kwargs) -> 'bytes' method of nibabel.nifti1.Nifti1Image instance
+    Return a ``bytes`` object with the contents of the file that would
+    be written if the image were saved.
+    
+    Parameters
+    ----------
+    \*\*kwargs : keyword arguments
+        Keyword arguments that may be passed to ``img.to_file_map()``
+    
+    Returns
+    -------
+    bytes
+&&&&&&&&&&&&&&&&&&&&&&&&& to_file_map &&&&&&&&&&&&&&&&&&&&&&&&&&&&&&
+Help on method to_file_map in module nibabel.nifti1:
+
+to_file_map(file_map=None, dtype=None) method of nibabel.nifti1.Nifti1Image instance
+    Write image to `file_map` or contained ``self.file_map``
+    
+    Parameters
+    ----------
+    file_map : None or mapping, optional
+       files mapping.  If None (default) use object's ``file_map``
+       attribute instead
+    dtype : dtype-like, optional
+       The on-disk data type to coerce the data array.
+
+None
+&&&&&&&&&&&&&&&&&&&&&&&&& to_stream &&&&&&&&&&&&&&&&&&&&&&&&&&&&&&
+Help on method to_stream in module nibabel.filebasedimages:
+
+to_stream(io_obj: 'io.IOBase', **kwargs) -> 'None' method of nibabel.nifti1.Nifti1Image instance
+    Save image to writable IO stream
+    
+    Parameters
+    ----------
+    io_obj : IOBase object
+        Writable stream
+    \*\*kwargs : keyword arguments
+        Keyword arguments that may be passed to ``img.to_file_map()``
+
+None
+&&&&&&&&&&&&&&&&&&&&&&&&& uncache &&&&&&&&&&&&&&&&&&&&&&&&&&&&&&
+&&&&&&&&&&&&&&&&&&&&&&&&& update_header &&&&&&&&&&&&&&&&&&&&&&&&&&&&&&
+Help on method update_header in module nibabel.nifti1:
+
+update_header() method of nibabel.nifti1.Nifti1Image instance
+    Harmonize header with image data and affine
+
+None
+&&&&&&&&&&&&&&&&&&&&&&&&& valid_exts &&&&&&&&&&&&&&&&&&&&&&&&&&&&&&
+Help on tuple object:
+
+class tuple(object)
+ |  tuple(iterable=(), /)
+ |  
+ |  Built-in immutable sequence.
+ |  
