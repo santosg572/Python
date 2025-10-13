@@ -1,6 +1,6 @@
 from playsound import playsound
 
-playsound('salida.wav')
+playsound('recorded.wav')
 
 
 
