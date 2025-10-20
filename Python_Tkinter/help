@@ -7,6 +7,6 @@ b1.pack()
 b2 = tkinter.Button(window,text="Como estas")
 b2.pack()
 e1 = tkinter.Entry()
-l1 = tkinter.Label()
-print(help(window.grid))
+
+print(help(e1))
 
