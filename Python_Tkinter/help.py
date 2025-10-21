@@ -6,6 +6,7 @@ dd = dir(tkinter)
 
 for ss in dd:
    if ss[0] != '_':
+     print('&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&& ' + ss + ' &&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&')
      print(help(eval('tkinter.'+ss)))
 
 
