@@ -1,0 +1,12 @@
+conda env list
+
+conda create -n test_env python=3.6.3
+
+conda activate test_env
+
+conda deactivate
+
+
+pip install nibabel
+
+

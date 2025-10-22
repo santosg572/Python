@@ -1,0 +1,27 @@
+conda env list
+conda create -n myenv python=3.9
+
+pip install python-vlc
+
+'libvlccore.dylib' (no such file)
+
+
+(Audio) iMac-de-Fernando:Python_Audio santosg$ python registra_audioB.py 
+Grabando durante 10 segundos...
+libc++abi: terminating
+Abort trap: 6
+(Audio) iMac-de-Fernando:Python_Audio santosg$ nano graba01.py
+(Audio) iMac-de-Fernando:Python_Audio santosg$ python graba01.py 
+libc++abi: terminating
+Abort trap: 6
+(Audio) iMac-de-Fernando:Python_Audio santosg$ 
+(Audio) iMac-de-Fernando:Python_Audio santosg$ nano graba02.py
+(Audio) iMac-de-Fernando:Python_Audio santosg$ python graba02.py 
+Recording
+libc++abi: terminating
+Abort trap: 6
+(Audio) iMac-de-Fernando:Python_Audio santosg$ 
+
+
+
+
