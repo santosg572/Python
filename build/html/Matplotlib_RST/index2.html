@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+
+<html lang="en" data-content_root="../">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Matplotlib &#8212; Numerical_Analysis_2E_Walter 1.0 documentation</title>
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=d1102ebc" />
+    <link rel="stylesheet" type="text/css" href="../_static/basic.css?v=b08954a9" />
+    <link rel="stylesheet" type="text/css" href="../_static/alabaster.css?v=27fed22d" />
+    <script src="../_static/documentation_options.js?v=f2a433a1"></script>
+    <script src="../_static/doctools.js?v=9bcbadda"></script>
+    <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Tutorials" href="Tutorials.html" />
+    <link rel="prev" title="Manejo de imágenes de Resonancia Magnética" href="../nifti.html" />
+   
+  <link rel="stylesheet" href="../_static/custom.css" type="text/css" />
+  
+
+  
+  
+
+  </head><body>
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          
+
+          <div class="body" role="main">
+            
+  <section id="matplotlib">
+<h1>Matplotlib<a class="headerlink" href="#matplotlib" title="Link to this heading">¶</a></h1>
+<div class="toctree-wrapper compound">
+<p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="Tutorials.html">Tutorials</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Using_Matplotlib-Axes_and_subplots.html">Axes and subplots</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Using_Matplotlib-Figures_and_backends.html">Figures and backends</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Using_Matplotlib-Quick_start_guide.html">Quick start guide</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="Using_Matplotlib-Quick_start_guide.html#axis-scales-and-ticks">Axis scales and ticks</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Using_Matplotlib-Quick_start_guide.html#color-mapped-data">Color mapped data</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Using_Matplotlib-Quick_start_guide.html#working-with-multiple-figures-and-axes">Working with multiple Figures and Axes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Using_Matplotlib-Quick_start_guide.html#more-reading">More reading</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="doc01.html">Figure</a></li>
+<li class="toctree-l1"><a class="reference internal" href="doc01.html#axes">Axes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="doc03.html">API Reference</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="doc03.html#matplotlib-interfaces">Matplotlib interfaces</a></li>
+<li class="toctree-l2"><a class="reference internal" href="doc03.html#axes-interface-object-based-explicit">Axes interface (object-based, explicit)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="doc03.html#pyplot-interface-function-based-implicit">pyplot interface (function-based, implicit)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="doc03.html#modules">Modules</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="matplotlib_pyplot.html">matplotlib.pyplot</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="matplotlib_pyplot.html#managing-figure-and-axes">Managing Figure and Axes</a></li>
+</ul>
+</li>
+</ul>
+</div>
+</section>
+
+
+          </div>
+          
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="Main">
+        <div class="sphinxsidebarwrapper">
+<h1 class="logo"><a href="../index.html">Numerical_Analysis_2E_Walter</a></h1>
+
+
+
+
+
+
+
+
+
+<search id="searchbox" style="display: none" role="search">
+    <div class="searchformwrapper">
+    <form class="search" action="../search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" placeholder="Search"/>
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</search>
+<script>document.getElementById('searchbox').style.display = "block"</script><h3>Navigation</h3>
+<p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../Numerical_Analysis_2E_Walter_C01.html">Numerical_Analysis_2E_Walter_C01</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../nifti.html">Manejo de imágenes de Resonancia Magnética</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Matplotlib</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="Tutorials.html">Tutorials</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Using_Matplotlib-Axes_and_subplots.html">Axes and subplots</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Using_Matplotlib-Figures_and_backends.html">Figures and backends</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Using_Matplotlib-Quick_start_guide.html">Quick start guide</a></li>
+<li class="toctree-l2"><a class="reference internal" href="doc01.html">Figure</a></li>
+<li class="toctree-l2"><a class="reference internal" href="doc01.html#axes">Axes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="doc03.html">API Reference</a></li>
+<li class="toctree-l2"><a class="reference internal" href="matplotlib_pyplot.html">matplotlib.pyplot</a></li>
+</ul>
+</li>
+</ul>
+
+<div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="../index.html">Documentation overview</a><ul>
+      <li>Previous: <a href="../nifti.html" title="previous chapter">Manejo de imágenes de Resonancia Magnética</a></li>
+      <li>Next: <a href="Tutorials.html" title="next chapter">Tutorials</a></li>
+  </ul></li>
+</ul>
+</div>
+
+
+
+
+
+
+
+
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &#169;2025, leopoldo.
+      
+      |
+      Powered by <a href="https://www.sphinx-doc.org/">Sphinx 8.2.3</a>
+      &amp; <a href="https://alabaster.readthedocs.io">Alabaster 1.0.0</a>
+      
+      |
+      <a href="../_sources/Matplotlib_RST/index2.rst.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+  </body>
+</html>

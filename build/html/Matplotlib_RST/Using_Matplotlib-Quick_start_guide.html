@@ -1,0 +1,485 @@
+<!DOCTYPE html>
+
+<html lang="en" data-content_root="../">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Quick start guide &#8212; Numerical_Analysis_2E_Walter 1.0 documentation</title>
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=d1102ebc" />
+    <link rel="stylesheet" type="text/css" href="../_static/basic.css?v=b08954a9" />
+    <link rel="stylesheet" type="text/css" href="../_static/alabaster.css?v=27fed22d" />
+    <script src="../_static/documentation_options.js?v=f2a433a1"></script>
+    <script src="../_static/doctools.js?v=9bcbadda"></script>
+    <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="&lt;no title&gt;" href="Using_Matplotlib.html" />
+    <link rel="prev" title="Figures and backends" href="Using_Matplotlib-Figures_and_backends.html" />
+   
+  <link rel="stylesheet" href="../_static/custom.css" type="text/css" />
+  
+
+  
+  
+
+  </head><body>
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          
+
+          <div class="body" role="main">
+            
+  <section id="quick-start-guide">
+<h1>Quick start guide<a class="headerlink" href="#quick-start-guide" title="Link to this heading">¶</a></h1>
+<p><a class="reference external" href="https://matplotlib.org/stable/users/explain/quick_start.html">https://matplotlib.org/stable/users/explain/quick_start.html</a></p>
+<p>Quick start guide
+This tutorial covers some basic usage patterns and best practices to help you get started with
+Matplotlib.</p>
+<p>import matplotlib.pyplot as plt
+import numpy as np
+A simple example
+Matplotlib graphs your data on Figures (e.g., windows, Jupyter widgets, etc.), each of which can
+contain one or more Axes, an area where points can be specified in terms of x-y coordinates (or
+theta-r in a polar plot, x-y-z in a 3D plot, etc.). The simplest way of creating a Figure with an
+Axes is using pyplot.subplots. We can then use Axes.plot to draw some data on the Axes, and show to
+display the figure:</p>
+<p>fig, ax = plt.subplots()             # Create a figure containing a single Axes.
+ax.plot([1, 2, 3, 4], [1, 4, 2, 3])  # Plot some data on the Axes.
+plt.show()                           # Show the figure.
+quick start
+Depending on the environment you are working in, plt.show() can be left out. This is for example the
+case with Jupyter notebooks, which automatically show all figures created in a code cell.</p>
+<p>Parts of a Figure
+Here are the components of a Matplotlib Figure.</p>
+<p>../../_images/anatomy.png
+Figure
+The whole figure. The Figure keeps track of all the child Axes, a group of ‘special’ Artists
+(titles, figure legends, colorbars, etc.), and even nested subfigures.</p>
+<p>Typically, you’ll create a new Figure through one of the following functions:</p>
+<p>fig = plt.figure()             # an empty figure with no Axes
+fig, ax = plt.subplots()       # a figure with a single Axes
+fig, axs = plt.subplots(2, 2)  # a figure with a 2x2 grid of Axes
+# a figure with one Axes on the left, and two on the right:
+fig, axs = plt.subplot_mosaic([[‘left’, ‘right_top’],</p>
+<blockquote>
+<div><p>[‘left’, ‘right_bottom’]])</p>
+</div></blockquote>
+<p>subplots() and subplot_mosaic are convenience functions that additionally create Axes objects inside
+the Figure, but you can also manually add Axes later on.</p>
+<p>For more on Figures, including panning and zooming, see Introduction to Figures.</p>
+<p>Axes
+An Axes is an Artist attached to a Figure that contains a region for plotting data, and usually
+includes two (or three in the case of 3D) Axis objects (be aware of the difference between Axes and
+Axis) that provide ticks and tick labels to provide scales for the data in the Axes. Each Axes also
+has a title (set via set_title()), an x-label (set via set_xlabel()), and a y-label set via
+set_ylabel()).</p>
+<p>The Axes methods are the primary interface for configuring most parts of your plot (adding data,
+controlling axis scales and limits, adding labels etc.).</p>
+<p>Axis
+These objects set the scale and limits and generate ticks (the marks on the Axis) and ticklabels
+(strings labeling the ticks). The location of the ticks is determined by a Locator object and the
+ticklabel strings are formatted by a Formatter. The combination of the correct Locator and Formatter
+gives very fine control over the tick locations and labels.</p>
+<p>Artist
+Basically, everything visible on the Figure is an Artist (even Figure, Axes, and Axis objects). This
+includes Text objects, Line2D objects, collections objects, Patch objects, etc. When the Figure is
+rendered, all of the Artists are drawn to the canvas. Most Artists are tied to an Axes; such an
+Artist cannot be shared by multiple Axes, or moved from one to another.</p>
+<p>Types of inputs to plotting functions
+Plotting functions expect numpy.array or numpy.ma.masked_array as input, or objects that can be
+passed to numpy.asarray. Classes that are similar to arrays (‘array-like’) such as pandas data
+objects and numpy.matrix may not work as intended. Common convention is to convert these to
+numpy.array objects prior to plotting. For example, to convert a numpy.matrix</p>
+<p>b = np.matrix([[1, 2], [3, 4]])
+b_asarray = np.asarray(b)
+Most methods will also parse a string-indexable object like a dict, a structured numpy array, or a
+pandas.DataFrame. Matplotlib allows you to provide the data keyword argument and generate plots
+passing the strings corresponding to the x and y variables.</p>
+<p>np.random.seed(19680801)  # seed the random number generator.
+data = {‘a’: np.arange(50),</p>
+<blockquote>
+<div><p>‘c’: np.random.randint(0, 50, 50),
+‘d’: np.random.randn(50)}</p>
+</div></blockquote>
+<p>data[‘b’] = data[‘a’] + 10 * np.random.randn(50)
+data[‘d’] = np.abs(data[‘d’]) * 100</p>
+<p>fig, ax = plt.subplots(figsize=(5, 2.7), layout=’constrained’)
+ax.scatter(‘a’, ‘b’, c=’c’, s=’d’, data=data)
+ax.set_xlabel(‘entry a’)
+ax.set_ylabel(‘entry b’)
+quick start
+Coding styles
+The explicit and the implicit interfaces
+As noted above, there are essentially two ways to use Matplotlib:</p>
+<p>Explicitly create Figures and Axes, and call methods on them (the “object-oriented (OO) style”).</p>
+<p>Rely on pyplot to implicitly create and manage the Figures and Axes, and use pyplot functions for
+plotting.</p>
+<p>See Matplotlib Application Interfaces (APIs) for an explanation of the tradeoffs between the
+implicit and explicit interfaces.</p>
+<p>So one can use the OO-style</p>
+<p>x = np.linspace(0, 2, 100)  # Sample data.</p>
+<p># Note that even in the OO-style, we use <cite>.pyplot.figure</cite> to create the Figure.
+fig, ax = plt.subplots(figsize=(5, 2.7), layout=’constrained’)
+ax.plot(x, x, label=’linear’)  # Plot some data on the Axes.
+ax.plot(x, x**2, label=’quadratic’)  # Plot more data on the Axes…
+ax.plot(x, x**3, label=’cubic’)  # … and some more.
+ax.set_xlabel(‘x label’)  # Add an x-label to the Axes.
+ax.set_ylabel(‘y label’)  # Add a y-label to the Axes.
+ax.set_title(“Simple Plot”)  # Add a title to the Axes.
+ax.legend()  # Add a legend.
+Simple Plot
+or the pyplot-style:</p>
+<p>x = np.linspace(0, 2, 100)  # Sample data.</p>
+<p>plt.figure(figsize=(5, 2.7), layout=’constrained’)
+plt.plot(x, x, label=’linear’)  # Plot some data on the (implicit) Axes.
+plt.plot(x, x**2, label=’quadratic’)  # etc.
+plt.plot(x, x**3, label=’cubic’)
+plt.xlabel(‘x label’)
+plt.ylabel(‘y label’)
+plt.title(“Simple Plot”)
+plt.legend()
+Simple Plot
+(In addition, there is a third approach, for the case when embedding Matplotlib in a GUI
+application, which completely drops pyplot, even for figure creation. See the corresponding section
+in the gallery for more info: Embedding Matplotlib in graphical user interfaces.)</p>
+<p>Matplotlib’s documentation and examples use both the OO and the pyplot styles. In general, we
+suggest using the OO style, particularly for complicated plots, and functions and scripts that are
+intended to be reused as part of a larger project. However, the pyplot style can be very convenient
+for quick interactive work.</p>
+<p>Note</p>
+<p>You may find older examples that use the pylab interface, via from pylab import <a href="#id1"><span class="problematic" id="id2">*</span></a>. This approach is
+strongly deprecated.</p>
+<p>Making a helper functions
+If you need to make the same plots over and over again with different data sets, or want to easily
+wrap Matplotlib methods, use the recommended signature function below.</p>
+<dl class="simple">
+<dt>def my_plotter(ax, data1, data2, param_dict):</dt><dd><p>“””
+A helper function to make a graph.
+“””
+out = ax.plot(data1, data2, <a href="#id3"><span class="problematic" id="id4">**</span></a>param_dict)
+return out</p>
+</dd>
+</dl>
+<p>which you would then use twice to populate two subplots:</p>
+<p>data1, data2, data3, data4 = np.random.randn(4, 100)  # make 4 random data sets
+fig, (ax1, ax2) = plt.subplots(1, 2, figsize=(5, 2.7))
+my_plotter(ax1, data1, data2, {‘marker’: ‘x’})
+my_plotter(ax2, data3, data4, {‘marker’: ‘o’})
+quick start
+Note that if you want to install these as a python package, or any other customizations you could
+use one of the many templates on the web; Matplotlib has one at mpl-cookiecutter</p>
+<p>Styling Artists
+Most plotting methods have styling options for the Artists, accessible either when a plotting method
+is called, or from a “setter” on the Artist. In the plot below we manually set the color, linewidth,
+and linestyle of the Artists created by plot, and we set the linestyle of the second line after the
+fact with set_linestyle.</p>
+<p>fig, ax = plt.subplots(figsize=(5, 2.7))
+x = np.arange(len(data1))
+ax.plot(x, np.cumsum(data1), color=’blue’, linewidth=3, linestyle=’–‘)
+l, = ax.plot(x, np.cumsum(data2), color=’orange’, linewidth=2)
+l.set_linestyle(‘:’)
+quick start
+Colors
+Matplotlib has a very flexible array of colors that are accepted for most Artists; see allowable
+color definitions for a list of specifications. Some Artists will take multiple colors. i.e. for a
+scatter plot, the edge of the markers can be different colors from the interior:</p>
+<p>fig, ax = plt.subplots(figsize=(5, 2.7))
+ax.scatter(data1, data2, s=50, facecolor=’C0’, edgecolor=’k’)
+quick start
+Linewidths, linestyles, and markersizes
+Line widths are typically in typographic points (1 pt = 1/72 inch) and available for Artists that
+have stroked lines. Similarly, stroked lines can have a linestyle. See the linestyles example.</p>
+<p>Marker size depends on the method being used. plot specifies markersize in points, and is generally
+the “diameter” or width of the marker. scatter specifies markersize as approximately proportional to
+the visual area of the marker. There is an array of markerstyles available as string codes (see
+markers), or users can define their own MarkerStyle (see Marker reference):</p>
+<p>fig, ax = plt.subplots(figsize=(5, 2.7))
+ax.plot(data1, ‘o’, label=’data1’)
+ax.plot(data2, ‘d’, label=’data2’)
+ax.plot(data3, ‘v’, label=’data3’)
+ax.plot(data4, ‘s’, label=’data4’)
+ax.legend()
+quick start
+Labelling plots
+Axes labels and text
+set_xlabel, set_ylabel, and set_title are used to add text in the indicated locations (see Text in
+Matplotlib for more discussion). Text can also be directly added to plots using text:</p>
+<p>mu, sigma = 115, 15
+x = mu + sigma * np.random.randn(10000)
+fig, ax = plt.subplots(figsize=(5, 2.7), layout=’constrained’)
+# the histogram of the data
+n, bins, patches = ax.hist(x, 50, density=True, facecolor=’C0’, alpha=0.75)</p>
+<p>ax.set_xlabel(‘Length [cm]’)
+ax.set_ylabel(‘Probability’)
+ax.set_title(‘Aardvark lengthsn (not really)’)
+ax.text(75, .025, r’$mu=115,sigma=15$’)
+ax.axis([55, 175, 0, 0.03])
+ax.grid(True)
+Aardvark lengths  (not really)
+All of the text functions return a matplotlib.text.Text instance. Just as with lines above, you can
+customize the properties by passing keyword arguments into the text functions:</p>
+<p>t = ax.set_xlabel(‘my data’, fontsize=14, color=’red’)
+These properties are covered in more detail in Text properties and layout.</p>
+<p>Using mathematical expressions in text
+Matplotlib accepts TeX equation expressions in any text expression. For example to write the
+expression</p>
+<blockquote>
+<div><p>in the title, you can write a TeX expression surrounded by dollar signs:</p>
+</div></blockquote>
+<p>ax.set_title(r’$sigma_i=15$’)
+where the r preceding the title string signifies that the string is a raw string and not to treat
+backslashes as python escapes. Matplotlib has a built-in TeX expression parser and layout engine,
+and ships its own math fonts – for details see Writing mathematical expressions. You can also use
+LaTeX directly to format your text and incorporate the output directly into your display figures or
+saved postscript – see Text rendering with LaTeX.</p>
+<p>Annotations
+We can also annotate points on a plot, often by connecting an arrow pointing to xy, to a piece of
+text at xytext:</p>
+<p>fig, ax = plt.subplots(figsize=(5, 2.7))</p>
+<p>t = np.arange(0.0, 5.0, 0.01)
+s = np.cos(2 * np.pi * t)
+line, = ax.plot(t, s, lw=2)</p>
+<dl class="simple">
+<dt>ax.annotate(‘local max’, xy=(2, 1), xytext=(3, 1.5),</dt><dd><p>arrowprops=dict(facecolor=’black’, shrink=0.05))</p>
+</dd>
+</dl>
+<p>ax.set_ylim(-2, 2)
+quick start
+In this basic example, both xy and xytext are in data coordinates. There are a variety of other
+coordinate systems one can choose – see Basic annotation and Advanced annotation for details. More
+examples also can be found in Annotate plots.</p>
+<p>Legends
+Often we want to identify lines or markers with a Axes.legend:</p>
+<p>fig, ax = plt.subplots(figsize=(5, 2.7))
+ax.plot(np.arange(len(data1)), data1, label=’data1’)
+ax.plot(np.arange(len(data2)), data2, label=’data2’)
+ax.plot(np.arange(len(data3)), data3, ‘d’, label=’data3’)
+ax.legend()
+quick start
+Legends in Matplotlib are quite flexible in layout, placement, and what Artists they can represent.
+They are discussed in detail in Legend guide.</p>
+<section id="axis-scales-and-ticks">
+<h2>Axis scales and ticks<a class="headerlink" href="#axis-scales-and-ticks" title="Link to this heading">¶</a></h2>
+<p>Each Axes has two (or three) Axis objects representing the x- and y-axis. These control the scale of
+the Axis, the tick locators and the tick formatters. Additional Axes can be attached to display
+further Axis objects.</p>
+<p>Scales
+In addition to the linear scale, Matplotlib supplies non-linear scales, such as a log-scale. Since
+log-scales are used so much there are also direct methods like loglog, semilogx, and semilogy. There
+are a number of scales (see Scales overview for other examples). Here we set the scale manually:</p>
+<p>fig, axs = plt.subplots(1, 2, figsize=(5, 2.7), layout=’constrained’)
+xdata = np.arange(len(data1))  # make an ordinal for this
+data = 10**data1
+axs[0].plot(xdata, data)</p>
+<p>axs[1].set_yscale(‘log’)
+axs[1].plot(xdata, data)
+quick start
+The scale sets the mapping from data values to spacing along the Axis. This happens in both
+directions, and gets combined into a transform, which is the way that Matplotlib maps from data
+coordinates to Axes, Figure, or screen coordinates. See Transformations Tutorial.</p>
+<p>Tick locators and formatters
+Each Axis has a tick locator and formatter that choose where along the Axis objects to put tick
+marks. A simple interface to this is set_xticks:</p>
+<p>fig, axs = plt.subplots(2, 1, layout=’constrained’)
+axs[0].plot(xdata, data1)
+axs[0].set_title(‘Automatic ticks’)</p>
+<p>axs[1].plot(xdata, data1)
+axs[1].set_xticks(np.arange(0, 100, 30), [‘zero’, ‘30’, ‘sixty’, ‘90’])
+axs[1].set_yticks([-1.5, 0, 1.5])  # note that we don’t need to specify labels
+axs[1].set_title(‘Manual ticks’)
+Automatic ticks, Manual ticks
+Different scales can have different locators and formatters; for instance the log-scale above uses
+LogLocator and LogFormatter. See Tick locators and Tick formatters for other formatters and locators
+and information for writing your own.</p>
+<p>Plotting dates and strings
+Matplotlib can handle plotting arrays of dates and arrays of strings, as well as floating point
+numbers. These get special locators and formatters as appropriate. For dates:</p>
+<p>from matplotlib.dates import ConciseDateFormatter</p>
+<p>fig, ax = plt.subplots(figsize=(5, 2.7), layout=’constrained’)
+dates = np.arange(np.datetime64(‘2021-11-15’), np.datetime64(‘2021-12-25’),</p>
+<blockquote>
+<div><p>np.timedelta64(1, ‘h’))</p>
+</div></blockquote>
+<p>data = np.cumsum(np.random.randn(len(dates)))
+ax.plot(dates, data)
+ax.xaxis.set_major_formatter(ConciseDateFormatter(ax.xaxis.get_major_locator()))
+quick start
+For more information see the date examples (e.g. Date tick labels)</p>
+<p>For strings, we get categorical plotting (see: Plotting categorical variables).</p>
+<p>fig, ax = plt.subplots(figsize=(5, 2.7), layout=’constrained’)
+categories = [‘turnips’, ‘rutabaga’, ‘cucumber’, ‘pumpkins’]</p>
+<p>ax.bar(categories, np.random.rand(len(categories)))
+quick start
+One caveat about categorical plotting is that some methods of parsing text files return a list of
+strings, even if the strings all represent numbers or dates. If you pass 1000 strings, Matplotlib
+will think you meant 1000 categories and will add 1000 ticks to your plot!</p>
+<p>Additional Axis objects
+Plotting data of different magnitude in one chart may require an additional y-axis. Such an Axis can
+be created by using twinx to add a new Axes with an invisible x-axis and a y-axis positioned at the
+right (analogously for twiny). See Plots with different scales for another example.</p>
+<p>Similarly, you can add a secondary_xaxis or secondary_yaxis having a different scale than the main
+Axis to represent the data in different scales or units. See Secondary Axis for further examples.</p>
+<p>fig, (ax1, ax3) = plt.subplots(1, 2, figsize=(7, 2.7), layout=’constrained’)
+l1, = ax1.plot(t, s)
+ax2 = ax1.twinx()
+l2, = ax2.plot(t, range(len(t)), ‘C1’)
+ax2.legend([l1, l2], [‘Sine (left)’, ‘Straight (right)’])</p>
+<p>ax3.plot(t, s)
+ax3.set_xlabel(‘Angle [rad]’)
+ax4 = ax3.secondary_xaxis(‘top’, (np.rad2deg, np.deg2rad))
+ax4.set_xlabel(‘Angle [°]’)
+quick start</p>
+</section>
+<section id="color-mapped-data">
+<h2>Color mapped data<a class="headerlink" href="#color-mapped-data" title="Link to this heading">¶</a></h2>
+<p>Often we want to have a third dimension in a plot represented by colors in a colormap. Matplotlib
+has a number of plot types that do this:</p>
+<p>from matplotlib.colors import LogNorm</p>
+<p>X, Y = np.meshgrid(np.linspace(-3, 3, 128), np.linspace(-3, 3, 128))
+Z = (1 - X/2 + X**5 + Y**3) * np.exp(-X**2 - Y**2)</p>
+<p>fig, axs = plt.subplots(2, 2, layout=’constrained’)
+pc = axs[0, 0].pcolormesh(X, Y, Z, vmin=-1, vmax=1, cmap=’RdBu_r’)
+fig.colorbar(pc, ax=axs[0, 0])
+axs[0, 0].set_title(‘pcolormesh()’)</p>
+<p>co = axs[0, 1].contourf(X, Y, Z, levels=np.linspace(-1.25, 1.25, 11))
+fig.colorbar(co, ax=axs[0, 1])
+axs[0, 1].set_title(‘contourf()’)</p>
+<p>pc = axs[1, 0].imshow(Z**2 * 100, cmap=’plasma’, norm=LogNorm(vmin=0.01, vmax=100))
+fig.colorbar(pc, ax=axs[1, 0], extend=’both’)
+axs[1, 0].set_title(‘imshow() with LogNorm()’)</p>
+<p>pc = axs[1, 1].scatter(data1, data2, c=data3, cmap=’RdBu_r’)
+fig.colorbar(pc, ax=axs[1, 1], extend=’both’)
+axs[1, 1].set_title(‘scatter()’)
+pcolormesh(), contourf(), imshow() with LogNorm(), scatter()
+Colormaps
+These are all examples of Artists that derive from ScalarMappable objects. They all can set a linear
+mapping between vmin and vmax into the colormap specified by cmap. Matplotlib has many colormaps to
+choose from (Choosing Colormaps in Matplotlib) you can make your own (Creating Colormaps in
+Matplotlib) or download as third-party packages.</p>
+<p>Normalizations
+Sometimes we want a non-linear mapping of the data to the colormap, as in the LogNorm example above.
+We do this by supplying the ScalarMappable with the norm argument instead of vmin and vmax. More
+normalizations are shown at Colormap normalization.</p>
+<p>Colorbars
+Adding a colorbar gives a key to relate the color back to the underlying data. Colorbars are
+figure-level Artists, and are attached to a ScalarMappable (where they get their information about
+the norm and colormap) and usually steal space from a parent Axes. Placement of colorbars can be
+complex: see Placing colorbars for details. You can also change the appearance of colorbars with the
+extend keyword to add arrows to the ends, and shrink and aspect to control the size. Finally, the
+colorbar will have default locators and formatters appropriate to the norm. These can be changed as
+for other Axis objects.</p>
+</section>
+<section id="working-with-multiple-figures-and-axes">
+<h2>Working with multiple Figures and Axes<a class="headerlink" href="#working-with-multiple-figures-and-axes" title="Link to this heading">¶</a></h2>
+<p>You can open multiple Figures with multiple calls to fig = plt.figure() or fig2, ax =
+plt.subplots(). By keeping the object references you can add Artists to either Figure.</p>
+<p>Multiple Axes can be added a number of ways, but the most basic is plt.subplots() as used above. One
+can achieve more complex layouts, with Axes objects spanning columns or rows, using subplot_mosaic.</p>
+<dl class="simple">
+<dt>fig, axd = plt.subplot_mosaic([[‘upleft’, ‘right’],</dt><dd><p>[‘lowleft’, ‘right’]], layout=’constrained’)</p>
+</dd>
+</dl>
+<p>axd[‘upleft’].set_title(‘upleft’)
+axd[‘lowleft’].set_title(‘lowleft’)
+axd[‘right’].set_title(‘right’)
+upleft, right, lowleft
+Matplotlib has quite sophisticated tools for arranging Axes: See Arranging multiple Axes in a Figure
+and Complex and semantic figure composition (subplot_mosaic).</p>
+</section>
+<section id="more-reading">
+<h2>More reading<a class="headerlink" href="#more-reading" title="Link to this heading">¶</a></h2>
+<p>For more plot types see Plot types and the API reference, in particular the Axes API.</p>
+<p>Total running time of the script: (0 minutes 8.275 seconds)</p>
+<p>Download Jupyter notebook: quick_start.ipynb</p>
+<p>Download Python source code: quick_start.py</p>
+<p>Download zipped: quick_start.zip</p>
+</section>
+</section>
+
+
+          </div>
+          
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="Main">
+        <div class="sphinxsidebarwrapper">
+<h1 class="logo"><a href="../index.html">Numerical_Analysis_2E_Walter</a></h1>
+
+
+
+
+
+
+
+
+
+<search id="searchbox" style="display: none" role="search">
+    <div class="searchformwrapper">
+    <form class="search" action="../search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" placeholder="Search"/>
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</search>
+<script>document.getElementById('searchbox').style.display = "block"</script><h3>Navigation</h3>
+<p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../Numerical_Analysis_2E_Walter_C01.html">Numerical_Analysis_2E_Walter_C01</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../nifti.html">Manejo de imágenes de Resonancia Magnética</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="index2.html">Matplotlib</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="Tutorials.html">Tutorials</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Using_Matplotlib-Axes_and_subplots.html">Axes and subplots</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Using_Matplotlib-Figures_and_backends.html">Figures and backends</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Quick start guide</a></li>
+<li class="toctree-l2"><a class="reference internal" href="doc01.html">Figure</a></li>
+<li class="toctree-l2"><a class="reference internal" href="doc01.html#axes">Axes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="doc03.html">API Reference</a></li>
+<li class="toctree-l2"><a class="reference internal" href="matplotlib_pyplot.html">matplotlib.pyplot</a></li>
+</ul>
+</li>
+</ul>
+
+<div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="../index.html">Documentation overview</a><ul>
+  <li><a href="index2.html">Matplotlib</a><ul>
+      <li>Previous: <a href="Using_Matplotlib-Figures_and_backends.html" title="previous chapter">Figures and backends</a></li>
+      <li>Next: <a href="Using_Matplotlib.html" title="next chapter">&lt;no title&gt;</a></li>
+  </ul></li>
+  </ul></li>
+</ul>
+</div>
+
+
+
+
+
+
+
+
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &#169;2025, leopoldo.
+      
+      |
+      Powered by <a href="https://www.sphinx-doc.org/">Sphinx 8.2.3</a>
+      &amp; <a href="https://alabaster.readthedocs.io">Alabaster 1.0.0</a>
+      
+      |
+      <a href="../_sources/Matplotlib_RST/Using_Matplotlib-Quick_start_guide.rst.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+  </body>
+</html>

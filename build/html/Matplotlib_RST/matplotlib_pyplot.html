@@ -1,0 +1,487 @@
+<!DOCTYPE html>
+
+<html lang="en" data-content_root="../">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>matplotlib.pyplot &#8212; Numerical_Analysis_2E_Walter 1.0 documentation</title>
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=d1102ebc" />
+    <link rel="stylesheet" type="text/css" href="../_static/basic.css?v=b08954a9" />
+    <link rel="stylesheet" type="text/css" href="../_static/alabaster.css?v=27fed22d" />
+    <script src="../_static/documentation_options.js?v=f2a433a1"></script>
+    <script src="../_static/doctools.js?v=9bcbadda"></script>
+    <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="prev" title="API Reference" href="doc03.html" />
+   
+  <link rel="stylesheet" href="../_static/custom.css" type="text/css" />
+  
+
+  
+  
+
+  </head><body>
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          
+
+          <div class="body" role="main">
+            
+  <section id="matplotlib-pyplot">
+<h1>matplotlib.pyplot<a class="headerlink" href="#matplotlib-pyplot" title="Link to this heading">¶</a></h1>
+<p><a class="reference external" href="https://matplotlib.org/stable/api/pyplot_summary.html">https://matplotlib.org/stable/api/pyplot_summary.html</a></p>
+<p>matplotlib.pyplot is a state-based interface to matplotlib. It provides an implicit, MATLAB-like,
+way of plotting. It also opens figures on your screen, and acts as the figure GUI manager.</p>
+<p>pyplot is mainly intended for interactive plots and simple cases of programmatic plot generation:</p>
+<div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+
+<span class="n">x</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mf">0.1</span><span class="p">)</span>
+<span class="n">y</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">sin</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+<p>The explicit object-oriented API is recommended for complex plots, though pyplot is still usually
+used to create the figure and often the Axes in the figure. See pyplot.figure, pyplot.subplots, and
+pyplot.subplot_mosaic to create figures, and Axes API for the plotting methods on an Axes:</p>
+<div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+
+<span class="n">x</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mf">0.1</span><span class="p">)</span>
+<span class="n">y</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">sin</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+<span class="n">fig</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">()</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+<p>See Matplotlib Application Interfaces (APIs) for an explanation of the tradeoffs between the
+implicit and explicit interfaces.</p>
+<section id="managing-figure-and-axes">
+<h2>Managing Figure and Axes<a class="headerlink" href="#managing-figure-and-axes" title="Link to this heading">¶</a></h2>
+<p><code class="docutils literal notranslate"><span class="pre">axes</span></code></p>
+<p>Add an Axes to the current figure and make it the current Axes.</p>
+<p><a href="#id1"><span class="problematic" id="id2">``</span></a>cla</p>
+<p>Clear the current Axes.</p>
+<p><a href="#id3"><span class="problematic" id="id4">``</span></a>clf</p>
+<p>Clear the current figure.</p>
+<p><a href="#id5"><span class="problematic" id="id6">``</span></a>close</p>
+<p>Close a figure window, and unregister it from pyplot.</p>
+<p><a href="#id7"><span class="problematic" id="id8">``</span></a>delaxes</p>
+<p>Remove an Axes (defaulting to the current Axes) from its figure.</p>
+<p><a href="#id9"><span class="problematic" id="id10">``</span></a>fignum_exists</p>
+<p>Return whether the figure with the given id exists.</p>
+<p><a href="#id11"><span class="problematic" id="id12">``</span></a>figure</p>
+<p>Create a new figure, or activate an existing figure.</p>
+<p><a href="#id13"><span class="problematic" id="id14">``</span></a>gca</p>
+<p>Get the current Axes.</p>
+<p><a href="#id15"><span class="problematic" id="id16">``</span></a>gcf</p>
+<p>Get the current figure.</p>
+<p><a href="#id17"><span class="problematic" id="id18">``</span></a>get_figlabels</p>
+<p>Return a list of existing figure labels.</p>
+<p><a href="#id19"><span class="problematic" id="id20">``</span></a>get_fignums</p>
+<p>Return a list of existing figure numbers.</p>
+<p><a href="#id21"><span class="problematic" id="id22">``</span></a>sca</p>
+<p>Set the current Axes to ax and the current Figure to the parent of ax.</p>
+<p>subplot</p>
+<p>Add an Axes to the current figure or retrieve an existing Axes.</p>
+<p>subplot2grid</p>
+<p>Create a subplot at a specific location inside a regular grid.</p>
+<p>subplot_mosaic</p>
+<p>Build a layout of Axes based on ASCII art or nested lists.</p>
+<p>subplots</p>
+<p>Create a figure and a set of subplots.</p>
+<p>twinx</p>
+<p>Make and return a second Axes that shares the x-axis.</p>
+<p>twiny</p>
+<p>Make and return a second Axes that shares the y-axis.</p>
+<p>Adding data to the plot
+Basic
+plot</p>
+<p>Plot y versus x as lines and/or markers.</p>
+<p>errorbar</p>
+<p>Plot y versus x as lines and/or markers with attached errorbars.</p>
+<p>scatter</p>
+<p>A scatter plot of y vs.</p>
+<p>plot_date</p>
+<p>[Deprecated] Plot coercing the axis to treat floats as dates.</p>
+<p>step</p>
+<p>Make a step plot.</p>
+<p>loglog</p>
+<p>Make a plot with log scaling on both the x- and y-axis.</p>
+<p>semilogx</p>
+<p>Make a plot with log scaling on the x-axis.</p>
+<p>semilogy</p>
+<p>Make a plot with log scaling on the y-axis.</p>
+<p>fill_between</p>
+<p>Fill the area between two horizontal curves.</p>
+<p>fill_betweenx</p>
+<p>Fill the area between two vertical curves.</p>
+<p>bar</p>
+<p>Make a bar plot.</p>
+<p>barh</p>
+<p>Make a horizontal bar plot.</p>
+<p>bar_label</p>
+<p>Label a bar plot.</p>
+<p>stem</p>
+<p>Create a stem plot.</p>
+<p>eventplot</p>
+<p>Plot identical parallel lines at the given positions.</p>
+<p>pie</p>
+<p>Plot a pie chart.</p>
+<p>stackplot</p>
+<p>Draw a stacked area plot or a streamgraph.</p>
+<p>broken_barh</p>
+<p>Plot a horizontal sequence of rectangles.</p>
+<p>vlines</p>
+<p>Plot vertical lines at each x from ymin to ymax.</p>
+<p>hlines</p>
+<p>Plot horizontal lines at each y from xmin to xmax.</p>
+<p>fill</p>
+<p>Plot filled polygons.</p>
+<p>polar</p>
+<p>Make a polar plot.</p>
+<p>Spans
+axhline</p>
+<p>Add a horizontal line spanning the whole or fraction of the Axes.</p>
+<p>axhspan</p>
+<p>Add a horizontal span (rectangle) across the Axes.</p>
+<p>axvline</p>
+<p>Add a vertical line spanning the whole or fraction of the Axes.</p>
+<p>axvspan</p>
+<p>Add a vertical span (rectangle) across the Axes.</p>
+<p>axline</p>
+<p>Add an infinitely long straight line.</p>
+<p>Spectral
+acorr</p>
+<p>Plot the autocorrelation of x.</p>
+<p>angle_spectrum</p>
+<p>Plot the angle spectrum.</p>
+<p>cohere</p>
+<p>Plot the coherence between x and y.</p>
+<p>csd</p>
+<p>Plot the cross-spectral density.</p>
+<p>magnitude_spectrum</p>
+<p>Plot the magnitude spectrum.</p>
+<p>phase_spectrum</p>
+<p>Plot the phase spectrum.</p>
+<p>psd</p>
+<p>Plot the power spectral density.</p>
+<p>specgram</p>
+<p>Plot a spectrogram.</p>
+<p>xcorr</p>
+<p>Plot the cross correlation between x and y.</p>
+<p>Statistics
+ecdf</p>
+<p>Compute and plot the empirical cumulative distribution function of x.</p>
+<p>boxplot</p>
+<p>Draw a box and whisker plot.</p>
+<p>violinplot</p>
+<p>Make a violin plot.</p>
+<p>Binned
+hexbin</p>
+<p>Make a 2D hexagonal binning plot of points x, y.</p>
+<p>hist</p>
+<p>Compute and plot a histogram.</p>
+<p>hist2d</p>
+<p>Make a 2D histogram plot.</p>
+<p>stairs</p>
+<p>Draw a stepwise constant function as a line or a filled plot.</p>
+<p>Contours
+clabel</p>
+<p>Label a contour plot.</p>
+<p>contour</p>
+<p>Plot contour lines.</p>
+<p>contourf</p>
+<p>Plot filled contours.</p>
+<p>2D arrays
+imshow</p>
+<p>Display data as an image, i.e., on a 2D regular raster.</p>
+<p>matshow</p>
+<p>Display a 2D array as a matrix in a new figure window.</p>
+<p>pcolor</p>
+<p>Create a pseudocolor plot with a non-regular rectangular grid.</p>
+<p>pcolormesh</p>
+<p>Create a pseudocolor plot with a non-regular rectangular grid.</p>
+<p>spy</p>
+<p>Plot the sparsity pattern of a 2D array.</p>
+<p>figimage</p>
+<p>Add a non-resampled image to the figure.</p>
+<p>Unstructured triangles
+triplot</p>
+<p>Draw an unstructured triangular grid as lines and/or markers.</p>
+<p>tripcolor</p>
+<p>Create a pseudocolor plot of an unstructured triangular grid.</p>
+<p>tricontour</p>
+<p>Draw contour lines on an unstructured triangular grid.</p>
+<p>tricontourf</p>
+<p>Draw contour regions on an unstructured triangular grid.</p>
+<p>Text and annotations
+annotate</p>
+<p>Annotate the point xy with text text.</p>
+<p>text</p>
+<p>Add text to the Axes.</p>
+<p>figtext</p>
+<p>Add text to figure.</p>
+<p>table</p>
+<p>Add a table to an Axes.</p>
+<p>arrow</p>
+<p>[Discouraged] Add an arrow to the Axes.</p>
+<p>figlegend</p>
+<p>Place a legend on the figure.</p>
+<p>legend</p>
+<p>Place a legend on the Axes.</p>
+<p>Vector fields
+barbs</p>
+<p>Plot a 2D field of wind barbs.</p>
+<p>quiver</p>
+<p>Plot a 2D field of arrows.</p>
+<p>quiverkey</p>
+<p>Add a key to a quiver plot.</p>
+<p>streamplot</p>
+<p>Draw streamlines of a vector flow.</p>
+<p>Axis configuration
+autoscale</p>
+<p>Autoscale the axis view to the data (toggle).</p>
+<p>axis</p>
+<p>Convenience method to get or set some axis properties.</p>
+<p>box</p>
+<p>Turn the Axes box on or off on the current Axes.</p>
+<p>grid</p>
+<p>Configure the grid lines.</p>
+<p>locator_params</p>
+<p>Control behavior of major tick locators.</p>
+<p>minorticks_off</p>
+<p>Remove minor ticks from the Axes.</p>
+<p>minorticks_on</p>
+<p>Display minor ticks on the Axes.</p>
+<p>rgrids</p>
+<p>Get or set the radial gridlines on the current polar plot.</p>
+<p>thetagrids</p>
+<p>Get or set the theta gridlines on the current polar plot.</p>
+<p>tick_params</p>
+<p>Change the appearance of ticks, tick labels, and gridlines.</p>
+<p>ticklabel_format</p>
+<p>Configure the ScalarFormatter used by default for linear Axes.</p>
+<p>xlabel</p>
+<p>Set the label for the x-axis.</p>
+<p>xlim</p>
+<p>Get or set the x limits of the current Axes.</p>
+<p>xscale</p>
+<p>Set the xaxis’ scale.</p>
+<p>xticks</p>
+<p>Get or set the current tick locations and labels of the x-axis.</p>
+<p>ylabel</p>
+<p>Set the label for the y-axis.</p>
+<p>ylim</p>
+<p>Get or set the y-limits of the current Axes.</p>
+<p>yscale</p>
+<p>Set the yaxis’ scale.</p>
+<p>yticks</p>
+<p>Get or set the current tick locations and labels of the y-axis.</p>
+<p>suptitle</p>
+<p>Add a centered super title to the figure.</p>
+<p>title</p>
+<p>Set a title for the Axes.</p>
+<p>Layout
+margins</p>
+<p>Set or retrieve margins around the data for autoscaling axis limits.</p>
+<p>subplots_adjust</p>
+<p>Adjust the subplot layout parameters.</p>
+<p>subplot_tool</p>
+<p>Launch a subplot tool window for a figure.</p>
+<p>tight_layout</p>
+<p>Adjust the padding between and around subplots.</p>
+<p>Colormapping
+clim</p>
+<p>Set the color limits of the current image.</p>
+<p>colorbar</p>
+<p>Add a colorbar to a plot.</p>
+<p>gci</p>
+<p>Get the current colorable artist.</p>
+<p>sci</p>
+<p>Set the current image.</p>
+<p>get_cmap</p>
+<p>Get a colormap instance, defaulting to rc values if name is None.</p>
+<p>set_cmap</p>
+<p>Set the default colormap, and applies it to the current image if any.</p>
+<p>imread</p>
+<p>Read an image from a file into an array.</p>
+<p>imsave</p>
+<p>Colormap and save an array as an image file.</p>
+<p>Colormaps are available via the colormap registry matplotlib.colormaps. For convenience this
+registry is available in pyplot as</p>
+<p>matplotlib.pyplot.colormaps[source]
+Container for colormaps that are known to Matplotlib by name.</p>
+<p>The universal registry instance is matplotlib.colormaps. There should be no need for users to
+instantiate ColormapRegistry themselves.</p>
+<p>Read access uses a dict-like interface mapping names to Colormaps:</p>
+<p>import matplotlib as mpl
+cmap = mpl.colormaps[‘viridis’]
+Returned Colormaps are copies, so that their modification does not change the global definition of
+the colormap.</p>
+<p>Additional colormaps can be added via ColormapRegistry.register:</p>
+<p>mpl.colormaps.register(my_colormap)
+To get a list of all registered colormaps, you can do:</p>
+<p>from matplotlib import colormaps
+list(colormaps)
+Additionally, there are shortcut functions to set builtin colormaps; e.g. plt.viridis() is
+equivalent to plt.set_cmap(‘viridis’).</p>
+<p>matplotlib.pyplot.color_sequences[source]
+Container for sequences of colors that are known to Matplotlib by name.</p>
+<p>The universal registry instance is matplotlib.color_sequences. There should be no need for users to
+instantiate ColorSequenceRegistry themselves.</p>
+<p>Read access uses a dict-like interface mapping names to lists of colors:</p>
+<p>import matplotlib as mpl
+colors = mpl.color_sequences[‘tab10’]
+For a list of built in color sequences, see Named color sequences. The returned lists are copies, so
+that their modification does not change the global definition of the color sequence.</p>
+<p>Additional color sequences can be added via ColorSequenceRegistry.register:</p>
+<p>mpl.color_sequences.register(‘rgb’, [‘r’, ‘g’, ‘b’])
+Configuration
+rc</p>
+<p>Set the current rcParams. group is the grouping for the rc, e.g., for lines.linewidth the group is
+lines, for axes.facecolor, the group is axes, and so on. Group may also be a list or tuple of group
+names, e.g., (xtick, ytick). kwargs is a dictionary attribute name/value pairs, e.g.,::.</p>
+<p>rc_context</p>
+<p>Return a context manager for temporarily changing rcParams.</p>
+<p>rcdefaults</p>
+<p>Restore the rcParams from Matplotlib’s internal default style.</p>
+<p>Output
+draw</p>
+<p>Redraw the current figure.</p>
+<p>draw_if_interactive</p>
+<p>Redraw the current figure if in interactive mode.</p>
+<p>ioff</p>
+<p>Disable interactive mode.</p>
+<p>ion</p>
+<p>Enable interactive mode.</p>
+<p>install_repl_displayhook</p>
+<p>Connect to the display hook of the current shell.</p>
+<p>isinteractive</p>
+<p>Return whether plots are updated after every plotting command.</p>
+<p>pause</p>
+<p>Run the GUI event loop for interval seconds.</p>
+<p>savefig</p>
+<p>Save the current figure as an image or vector graphic to a file.</p>
+<p>show</p>
+<p>Display all open figures.</p>
+<p>switch_backend</p>
+<p>Set the pyplot backend.</p>
+<p>uninstall_repl_displayhook</p>
+<p>Disconnect from the display hook of the current shell.</p>
+<p>Other
+connect</p>
+<p>Bind function func to event s.</p>
+<p>disconnect</p>
+<p>Disconnect the callback with id cid.</p>
+<p>findobj</p>
+<p>Find artist objects.</p>
+<p>get</p>
+<p>Return the value of an Artist’s property, or print all of them.</p>
+<p>getp</p>
+<p>Return the value of an Artist’s property, or print all of them.</p>
+<p>get_current_fig_manager</p>
+<p>Return the figure manager of the current figure.</p>
+<p>ginput</p>
+<p>Blocking call to interact with a figure.</p>
+<p>new_figure_manager</p>
+<p>Create a new figure manager instance.</p>
+<p>set_loglevel</p>
+<p>Configure Matplotlib’s logging levels.</p>
+<p>setp</p>
+<p>Set one or more properties on an Artist, or list allowed values.</p>
+<p>waitforbuttonpress</p>
+<p>Blocking call to interact with the figure.</p>
+<p>xkcd</p>
+<p>Turn on xkcd sketch-style drawing mode.</p>
+</section>
+</section>
+
+
+          </div>
+          
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="Main">
+        <div class="sphinxsidebarwrapper">
+<h1 class="logo"><a href="../index.html">Numerical_Analysis_2E_Walter</a></h1>
+
+
+
+
+
+
+
+
+
+<search id="searchbox" style="display: none" role="search">
+    <div class="searchformwrapper">
+    <form class="search" action="../search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" placeholder="Search"/>
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</search>
+<script>document.getElementById('searchbox').style.display = "block"</script><h3>Navigation</h3>
+<p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../Numerical_Analysis_2E_Walter_C01.html">Numerical_Analysis_2E_Walter_C01</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../nifti.html">Manejo de imágenes de Resonancia Magnética</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="index2.html">Matplotlib</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="Tutorials.html">Tutorials</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Using_Matplotlib-Axes_and_subplots.html">Axes and subplots</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Using_Matplotlib-Figures_and_backends.html">Figures and backends</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Using_Matplotlib-Quick_start_guide.html">Quick start guide</a></li>
+<li class="toctree-l2"><a class="reference internal" href="doc01.html">Figure</a></li>
+<li class="toctree-l2"><a class="reference internal" href="doc01.html#axes">Axes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="doc03.html">API Reference</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">matplotlib.pyplot</a></li>
+</ul>
+</li>
+</ul>
+
+<div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="../index.html">Documentation overview</a><ul>
+  <li><a href="index2.html">Matplotlib</a><ul>
+      <li>Previous: <a href="doc03.html" title="previous chapter">API Reference</a></li>
+  </ul></li>
+  </ul></li>
+</ul>
+</div>
+
+
+
+
+
+
+
+
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &#169;2025, leopoldo.
+      
+      |
+      Powered by <a href="https://www.sphinx-doc.org/">Sphinx 8.2.3</a>
+      &amp; <a href="https://alabaster.readthedocs.io">Alabaster 1.0.0</a>
+      
+      |
+      <a href="../_sources/Matplotlib_RST/matplotlib_pyplot.rst.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+  </body>
+</html>

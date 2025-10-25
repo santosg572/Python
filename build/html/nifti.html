@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+
+<html lang="en" data-content_root="./">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Manejo de imágenes de Resonancia Magnética &#8212; Numerical_Analysis_2E_Walter 1.0 documentation</title>
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=d1102ebc" />
+    <link rel="stylesheet" type="text/css" href="_static/basic.css?v=b08954a9" />
+    <link rel="stylesheet" type="text/css" href="_static/alabaster.css?v=27fed22d" />
+    <script src="_static/documentation_options.js?v=f2a433a1"></script>
+    <script src="_static/doctools.js?v=9bcbadda"></script>
+    <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="prev" title="Numerical_Analysis_2E_Walter_C01" href="Numerical_Analysis_2E_Walter_C01.html" />
+   
+  <link rel="stylesheet" href="_static/custom.css" type="text/css" />
+  
+
+  
+  
+
+  </head><body>
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          
+
+          <div class="body" role="main">
+            
+  <section id="manejo-de-imagenes-de-resonancia-magnetica">
+<h1>Manejo de imágenes de Resonancia Magnética<a class="headerlink" href="#manejo-de-imagenes-de-resonancia-magnetica" title="Link to this heading">¶</a></h1>
+<p><strong>Manejo de ambientes con:</strong>  <code class="docutils literal notranslate"><span class="pre">conda</span></code></p>
+<ul class="simple">
+<li><p>conda env list</p></li>
+<li><p>conda create -n test_env python=3.10</p></li>
+<li><p>conda activate test_env</p></li>
+<li><p>conda deactivate</p></li>
+</ul>
+<p><strong>Instalación de módulo:</strong> <code class="docutils literal notranslate"><span class="pre">nibabel</span></code></p>
+<div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="n">pip</span> <span class="n">install</span> <span class="n">nibabel</span>
+</pre></div>
+</div>
+<p><strong>Ejercicio.</strong></p>
+<ol class="arabic simple">
+<li><p>Bajar datos de <code class="docutils literal notranslate"><span class="pre">dropbox</span></code></p></li>
+</ol>
+<p><a class="reference external" href="https://www.dropbox.com/scl/fi/4axgbxi67ta40e53i2ya0/sub-01_T1w.nii.gz?rlkey=avy8w0o1ee3a3mu5yg1r8h11w&amp;st=jqa2fqbz&amp;dl=0">datos</a></p>
+<ol class="arabic simple" start="2">
+<li><p>Listo las primeras instrucciones para leer la imagen de resonancia magnética..</p></li>
+</ol>
+<div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">nibabel</span> <span class="k">as</span> <span class="nn">nib</span>
+<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+
+<span class="c1"># Load a NIfTI file</span>
+
+<span class="n">nifti_img</span> <span class="o">=</span> <span class="n">nib</span><span class="o">.</span><span class="n">load</span><span class="p">(</span><span class="s1">&#39;sub-01_T1w.nii.gz&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+<ol class="arabic simple" start="3">
+<li><p>Hacer lo que hay que hacer.</p></li>
+</ol>
+</section>
+
+
+          </div>
+          
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="Main">
+        <div class="sphinxsidebarwrapper">
+<h1 class="logo"><a href="index.html">Numerical_Analysis_2E_Walter</a></h1>
+
+
+
+
+
+
+
+
+
+<search id="searchbox" style="display: none" role="search">
+    <div class="searchformwrapper">
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" placeholder="Search"/>
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</search>
+<script>document.getElementById('searchbox').style.display = "block"</script><h3>Navigation</h3>
+<p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="Numerical_Analysis_2E_Walter_C01.html">Numerical_Analysis_2E_Walter_C01</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Manejo de imágenes de Resonancia Magnética</a></li>
+</ul>
+
+<div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="index.html">Documentation overview</a><ul>
+      <li>Previous: <a href="Numerical_Analysis_2E_Walter_C01.html" title="previous chapter">Numerical_Analysis_2E_Walter_C01</a></li>
+  </ul></li>
+</ul>
+</div>
+
+
+
+
+
+
+
+
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &#169;2025, leopoldo.
+      
+      |
+      Powered by <a href="https://www.sphinx-doc.org/">Sphinx 8.2.3</a>
+      &amp; <a href="https://alabaster.readthedocs.io">Alabaster 1.0.0</a>
+      
+      |
+      <a href="_sources/nifti.rst.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+  </body>
+</html>
