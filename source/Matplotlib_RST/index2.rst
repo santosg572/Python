@@ -1,5 +1,6 @@
 Matplotlib
-==========
+**********
+
 
 .. toctree::
    :maxdepth: 2

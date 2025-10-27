@@ -3,17 +3,27 @@ import matplotlib.pyplot as plt
 import numpy as np
 
 # Load a NIfTI file
-nifti_img = nib.load('sub-01_T1w.nii.gz')
 
-img = np.zeros((432,432))
+nifti_img = nib.load('Datos_Curso/sub-01_task-rest_bold.nii.gz')
 
-image_data = nifti_img.get_fdata()
+print(type(nifti_img))
 
-print(image_data.shape)
+datosIMG = nifti_img.get_fdata()
 
-sagital = image_data[80,:,:]
+print(type(datosIMG))
+
+print(datosIMG.shape)
+
+#img = np.zeros((432,432))
+
+#image_data = nifti_img.get_fdata()
+
+#print(image_data.shape)
+
+#sagital = image_data[80,:,:]
 #plt.imshow(sagital)
 
+'''
 img[0:256,0:256] = sagital
 
 coronal = image_data[:,100,:]
@@ -35,5 +45,5 @@ img[256:432, 0:256] = axial
 plt.imshow(img)
 plt.show()
 
-
+'''
 
