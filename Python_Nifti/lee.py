@@ -4,7 +4,9 @@ import numpy as np
 
 # Load a NIfTI file
 
-nifti_img = nib.load('Datos_Curso/sub-01_task-rest_bold.nii.gz')
+file = 'Datos_Curso/sub-01_T1w.nii.gz'
+
+nifti_img = nib.load(file)
 
 print(type(nifti_img))
 
@@ -14,36 +16,33 @@ print(type(datosIMG))
 
 print(datosIMG.shape)
 
-#img = np.zeros((432,432))
+img = np.zeros((432,432))
 
-#image_data = nifti_img.get_fdata()
 
-#print(image_data.shape)
+sagital = datosIMG[80,:,:]
+#sagital = np.rot90(sagital)
 
-#sagital = image_data[80,:,:]
-#plt.imshow(sagital)
+img[:256,:256] = sagital
 
-'''
-img[0:256,0:256] = sagital
-
-coronal = image_data[:,100,:]
+coronal = datosIMG[:,100,:]
+coronal = np.rot90(coronal)
 print(coronal.shape)
 
-imgt = np.rot90(coronal)
-print(imgt)
- 
-img[0:256, 256:432] = imgt
+img[:256,256:] = coronal
 
-#plt.imshow(coronal)
-
-axial = image_data[:,:,100]
+axial = datosIMG[:,:,100]
 print(axial.shape)
 
-img[256:432, 0:256] = axial
-#plt.imshow(axial)
-
+img[256:, :256] = axial
 plt.imshow(img)
 plt.show()
 
+'''
+img[256:432, 0:256] = axial
+#plt.imshow(axial)
+
+
+plt.imshow(img)
+plt.show()
 '''
 
