@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+
+<html lang="en" data-content_root="./">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Frame &#8212; Numerical_Analysis_2E_Walter 1.0 documentation</title>
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=5ecbeea2" />
+    <link rel="stylesheet" type="text/css" href="_static/alabaster.css?v=12dfc556" />
+    <script src="_static/documentation_options.js?v=f2a433a1"></script>
+    <script src="_static/doctools.js?v=9a2dae69"></script>
+    <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Button" href="button.html" />
+    <link rel="prev" title="Welcome to Numerical_Analysis_2E_Walter’s documentation!" href="index.html" />
+   
+  <link rel="stylesheet" href="_static/custom.css" type="text/css" />
+  
+
+  
+  
+
+  </head><body>
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          
+
+          <div class="body" role="main">
+            
+  <section id="frame">
+<h1>Frame<a class="headerlink" href="#frame" title="Link to this heading">¶</a></h1>
+<p>Un Frame en Tkinter es un widget de tipo contenedor que se utiliza para agrupar y organizar otros widgets dentro de una ventana. Funciona como una “caja” rectangular que
+ayuda a dividir una interfaz gráfica en secciones, facilitando la gestión del diseño y la disposición de los elementos de la aplicación.
+This video demonstrates how to create a Frame in Tkinter with a red background and other properties:</p>
+<p><strong>Características principales</strong></p>
+<ul class="simple">
+<li><p>Contenedor de widgets: Su función principal es agrupar otros widgets (como botones, etiquetas, campos de texto) y colocarlos dentro de él.</p></li>
+<li><p>Organización de la interfaz: Permite estructurar una interfaz compleja en secciones más pequeñas y manejables, lo que mejora la organización visual y la gestión del</p></li>
+</ul>
+<p>código.
+* Apariencia personalizable: Puedes configurar su ancho, alto, color de fondo, borde y estilo de relieve para que se adapte a tus necesidades de diseño.
+* Jerarquía de widgets: Los widgets dentro de un Frame pueden ser gestionados por gestores de geometría como pack, que a su vez pueden anidar otros Frames, creando una
+jerarquía de elementos en la aplicación.</p>
+<p>This video explains the hierarchical structure of Tkinter Frames with a simple analogy:</p>
+<p><strong>Ejemplo de uso</strong></p>
+<ol class="arabic simple">
+<li><p>Importar la biblioteca Tkinter.</p></li>
+<li><p>Crear una ventana principal.</p></li>
+<li><p>Instanciar un Frame especificando la ventana como su “padre” (master).</p></li>
+<li><p>Añadir otros widgets al Frame, en lugar de directamente a la ventana, indicando el Frame como su master al crearlos.</p></li>
+<li><p>Usar un gestor de geometría como pack() para mostrar el Frame en la ventana.</p></li>
+</ol>
+<p>This video shows how to create a Frame and place buttons inside it, demonstrating the concept of placing widgets within a Frame:</p>
+<hr class="docutils" />
+<p>Python ofrece múltiples opciones para desarrollar interfaces gráficas de usuario (GUI). De entre todos los métodos, Tkinter es el más utilizado. Se trata de una interfaz
+estándar de Python para el kit de herramientas Tk, incluido con Python . Crear una GUI con Python y Tkinter es la forma más rápida y sencilla de desarrollar aplicaciones
+GUI.</p>
+<p><strong>Nota:</strong>  Para más información, puede leer nuestro artículo.</p>
+<ol class="arabic simple">
+<li><p>¿Qué son los widgets?</p></li>
+<li><p>Descripción general de Python Tkinter</p></li>
+<li><p>Tutorial de Python Tkinter</p></li>
+</ol>
+<p><strong>¿Qué es un Frame en Tkinter?</strong></p>
+<p>Un marco es una región rectangular en la pantalla. También puede usarse como clase base para implementar widgets complejos. Se utiliza para organizar un grupo de widgets.</p>
+<p><strong>Sintaxis del widget Frame de Tkinter</strong></p>
+<p>A continuación se muestra la sintaxis para usar el widget de marco.</p>
+<p><strong>Sintaxis:   w = frame( maestro, opciones)</strong></p>
+<p><strong>Parámetros:</strong></p>
+<ul class="simple">
+<li><p>maestro : Este parámetro se utiliza para representar la ventana principal.</p></li>
+<li><p>Opciones : Hay muchas opciones disponibles que pueden utilizarse como pares clave-valor separados por comas.</p></li>
+</ul>
+<p><strong>Opciones de marcos Tkinter</strong></p>
+<p>Las siguientes son opciones de uso común que se pueden utilizar con este widget:</p>
+<ul class="simple">
+<li><p>bg: Esta opción se utilizaba para representar el color de fondo normal que se mostraba detrás de la etiqueta y el indicador.</p></li>
+<li><p>bd: Esta opción se utiliza para representar el tamaño del borde alrededor del indicador y el valor predeterminado es de 2 píxeles.</p></li>
+<li><p>cursor: Al usar esta opción, el cursor del ratón cambiará a ese patrón cuando esté sobre el marco.</p></li>
+<li><p>altura: La dimensión vertical del nuevo marco.</p></li>
+<li><p>highlightcolor: Esta opción se utilizaba para representar el color del resaltado de enfoque cuando el marco tenía el enfoque.</p></li>
+<li><p>highlightthickness: Esta opción se utilizaba para representar el color del resaltado de enfoque cuando el fotograma no estaba enfocado.</p></li>
+<li><p>highlightbackground: Esta opción se utilizaba para representar el grosor del resaltado de enfoque.</p></li>
+<li><p>relieve: El tipo de borde del marco. Su valor predeterminado es plano.</p></li>
+<li><p>Ancho: Esta opción solía representar el ancho del marco.</p></li>
+</ul>
+<p><strong>Ejemplo de widget de marco en Tkinter</strong></p>
+<p>En este ejemplo, el código que se muestra a continuación define funciones para crear widgets de Tkinter con opciones personalizadas, lo que facilita su creación con menos
+líneas de código. Genera una interfaz gráfica de usuario (GUI) con una ventana principal que contiene un marco, etiquetas y botones, todos con opciones específicas como el
+color de fondo, el tamaño del borde, el estilo del cursor y más, lo que mejora la coherencia visual y la usabilidad.</p>
+<div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w">  </span><span class="nn">tkinter</span><span class="w">  </span><span class="k">as</span><span class="w">  </span><span class="nn">tk</span>
+</pre></div>
+</div>
+<dl>
+<dt>​   # Función para crear widgets con todas las opciones</dt><dd><dl class="simple">
+<dt>def  crear_widget ( padre , tipo_widget , ** opciones ):</dt><dd><p>Devuelve  widget_type ( padre , ** opciones )</p>
+</dd>
+</dl>
+</dd>
+<dt>​   # Crea la ventana principal</dt><dd><p>ventana  =  crear_widget ( Ninguno , tk . Tk )
+ventana.título ( “Ejemplo de interfaz gráfica de usuario “ )</p>
+</dd>
+<dt>​   # Crea un widget de marco con todas las opciones</dt><dd><dl class="simple">
+<dt>marco  =  crear_widget ( ventana , tk . Marco , bg = ‘azul claro’ , bd = 3 , cursor = ‘mano2’ , altura = 100 ,</dt><dd><p>color de resaltado = ‘rojo’ , grosor de resaltado = 2 , fondo de resaltado = ‘negro’ ,
+relieve = tk . ELEVADO , ancho = 200 )</p>
+</dd>
+</dl>
+<p>marco.pack ( padx = 20 , pady = 20 )​​</p>
+</dd>
+<dt>​   # Crear widget de etiqueta con todas las opciones</dt><dd><dl class="simple">
+<dt>etiqueta  =  crear_widget ( marco , tk . Etiqueta , texto = ‘GeeksForGeeks’ , fuente = ‘50’ , fondo = ‘azul claro’ , ancho = 3 , cursor = ‘mano2’ ,</dt><dd><p>color de resaltado = ‘rojo’ , grosor de resaltado = 2 , fondo de resaltado = ‘negro’ ,
+alivio = tk . ELEVADO )</p>
+</dd>
+</dl>
+<p>etiqueta . paquete ()</p>
+</dd>
+<dt>​   # Crea un marco para los botones</dt><dd><dl class="simple">
+<dt>button_frame  =  create_widget ( window , tk . Frame , bg = ‘lightblue’ , bd = 3 , cursor = ‘hand2’ , height = 50 ,</dt><dd><p>color de resaltado = ‘rojo’ , grosor de resaltado = 2 , fondo de resaltado = ‘negro’ ,
+relieve = tk . ELEVADO , ancho = 200 )</p>
+</dd>
+</dl>
+<p>button_frame.pack ( pady = 10 )​​</p>
+</dd>
+<dt>​   # Función para crear botones con todas las opciones</dt><dd><dl class="simple">
+<dt>def  crear_botón ( padre , texto , fg ):</dt><dd><dl class="simple">
+<dt>return  create_widget ( parent , tk.Button , text = text , fg = fg , bg = ‘ lightblue’ , bd = 3 , cursor = ‘ hand2’ ,</dt><dd><p>color de resaltado = ‘rojo’ , grosor de resaltado = 2 , fondo de resaltado = ‘negro’ ,
+alivio = tk . ELEVADO )</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</dd>
+<dt>​   # Crear botones</dt><dd><dl class="simple">
+<dt>botones_info  = [( “Geeks1” , “rojo” ), ( “Geeks2” , “marrón” ), ( “Geeks3” , “azul” ),</dt><dd><p>( “Geeks4” , “verde” ), ( “Geeks5” , “verde” ), ( “Geeks6” , “verde” )]</p>
+</dd>
+</dl>
+</dd>
+<dt>​   para  texto , fg  en  buttons_info :</dt><dd><p>botón  =  crear_botón ( marco_botón , texto = texto , fg = fg )
+botón . pack ( lado = tk . LEFT )</p>
+</dd>
+<dt>​   # Ejecutar el bucle de eventos de Tkinter</dt><dd><p>ventana.bucle principal ( )</p>
+</dd>
+</dl>
+</section>
+
+
+          </div>
+          
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="Main">
+        <div class="sphinxsidebarwrapper">
+<h1 class="logo"><a href="index.html">Numerical_Analysis_2E_Walter</a></h1>
+
+
+
+
+
+
+
+
+<h3>Navigation</h3>
+<p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Frame</a></li>
+<li class="toctree-l1"><a class="reference internal" href="button.html">Button</a></li>
+<li class="toctree-l1"><a class="reference internal" href="checkbutton.html">Checkbutton</a></li>
+<li class="toctree-l1"><a class="reference internal" href="entry.html">Entry</a></li>
+<li class="toctree-l1"><a class="reference internal" href="label.html">Label</a></li>
+</ul>
+
+<div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="index.html">Documentation overview</a><ul>
+      <li>Previous: <a href="index.html" title="previous chapter">Welcome to Numerical_Analysis_2E_Walter’s documentation!</a></li>
+      <li>Next: <a href="button.html" title="next chapter">Button</a></li>
+  </ul></li>
+</ul>
+</div>
+<search id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</search>
+<script>document.getElementById('searchbox').style.display = "block"</script>
+
+
+
+
+
+
+
+
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &#169;2025, leopoldo.
+      
+      |
+      Powered by <a href="https://www.sphinx-doc.org/">Sphinx 7.4.7</a>
+      &amp; <a href="https://alabaster.readthedocs.io">Alabaster 0.7.16</a>
+      
+      |
+      <a href="_sources/Frame.rst.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+  </body>
+</html>

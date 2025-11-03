@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+
+<html lang="en" data-content_root="./">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Button &#8212; Numerical_Analysis_2E_Walter 1.0 documentation</title>
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=5ecbeea2" />
+    <link rel="stylesheet" type="text/css" href="_static/alabaster.css?v=12dfc556" />
+    <script src="_static/documentation_options.js?v=f2a433a1"></script>
+    <script src="_static/doctools.js?v=9a2dae69"></script>
+    <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Checkbutton" href="checkbutton.html" />
+    <link rel="prev" title="Frame" href="Frame.html" />
+   
+  <link rel="stylesheet" href="_static/custom.css" type="text/css" />
+  
+
+  
+  
+
+  </head><body>
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          
+
+          <div class="body" role="main">
+            
+  <section id="button">
+<h1>Button<a class="headerlink" href="#button" title="Link to this heading">¶</a></h1>
+<p>The Tkinter Button widget is a fundamental element in Python’s Tkinter library for creating graphical user interfaces (GUIs). It allows users to trigger actions or events
+by clicking it.</p>
+<p><strong>Creating a Tkinter Button:</strong></p>
+<ul class="simple">
+<li><p>Import Tkinter: Begin by importing the Tkinter module.</p></li>
+</ul>
+<div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">tkinter</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">tk</span>
+</pre></div>
+</div>
+<p>Create a root window: Instantiate a Tk object, which represents the main application window.</p>
+<div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="n">root</span> <span class="o">=</span> <span class="n">tk</span><span class="o">.</span><span class="n">Tk</span><span class="p">()</span>
+</pre></div>
+</div>
+<p>Define a callback function (optional): If the button is intended to perform an action, define a Python function or method that will be executed when the button is clicked.</p>
+<div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span><span class="w"> </span><span class="nf">on_button_click</span><span class="p">():</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Button clicked!&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Create the Button widget: Instantiate a tk.Button object, passing the parent widget (usually root) and configuring its properties.</p>
+<div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="n">button</span> <span class="o">=</span> <span class="n">tk</span><span class="o">.</span><span class="n">Button</span><span class="p">(</span><span class="n">root</span><span class="p">,</span> <span class="n">text</span><span class="o">=</span><span class="s2">&quot;Click Me&quot;</span><span class="p">,</span> <span class="n">command</span><span class="o">=</span><span class="n">on_button_click</span><span class="p">)</span>
+</pre></div>
+</div>
+<ul class="simple">
+<li><p><strong>text</strong>: Sets the label displayed on the button.</p></li>
+<li><p><strong>command</strong>: Specifies the function or method to be called when the button is pressed.</p></li>
+<li><p><strong>Pack or place the button</strong>: Use a layout manager (like pack, grid, or place) to position the button within the parent window.</p></li>
+</ul>
+<div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="n">button</span><span class="o">.</span><span class="n">pack</span><span class="p">()</span> <span class="c1"># or button.grid(row=0, column=0) or button.place(x=50, y=50)</span>
+</pre></div>
+</div>
+<p>Start the main event loop: Call root.mainloop() to run the Tkinter event loop, which listens for user interactions and updates the GUI.</p>
+<div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="n">root</span><span class="o">.</span><span class="n">mainloop</span><span class="p">()</span>
+</pre></div>
+</div>
+<p><strong>Common Button Options:</strong></p>
+<ul class="simple">
+<li><p>text: The text displayed on the button.</p></li>
+<li><p>command: The function to call when the button is clicked.</p></li>
+<li><p>bg (background): The normal background color of the button.</p></li>
+<li><p>fg (foreground): The normal foreground (text) color.</p></li>
+<li><p>cactivebackground: Background color when the button is hovered over.</p></li>
+<li><p>activeforeground: Foreground color when the button is hovered over.</p></li>
+<li><p>font: The font used for the button’s text.</p></li>
+<li><p>image: An image to display on the button instead of text.</p></li>
+<li><p>state: Sets the button’s state (e.g., tk.NORMAL, tk.DISABLED).</p></li>
+</ul>
+<p><strong>Example:</strong></p>
+<div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">tkinter</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">tk</span>
+
+<span class="k">def</span><span class="w"> </span><span class="nf">greet</span><span class="p">():</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Hello from the button!&quot;</span><span class="p">)</span>
+
+<span class="n">root</span> <span class="o">=</span> <span class="n">tk</span><span class="o">.</span><span class="n">Tk</span><span class="p">()</span>
+<span class="n">root</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s2">&quot;Button Example&quot;</span><span class="p">)</span>
+
+<span class="n">my_button</span> <span class="o">=</span> <span class="n">tk</span><span class="o">.</span><span class="n">Button</span><span class="p">(</span><span class="n">root</span><span class="p">,</span> <span class="n">text</span><span class="o">=</span><span class="s2">&quot;Say Hello&quot;</span><span class="p">,</span> <span class="n">command</span><span class="o">=</span><span class="n">greet</span><span class="p">,</span> <span class="n">bg</span><span class="o">=</span><span class="s2">&quot;lightblue&quot;</span><span class="p">,</span> <span class="n">fg</span><span class="o">=</span><span class="s2">&quot;darkblue&quot;</span><span class="p">)</span>
+<span class="n">my_button</span><span class="o">.</span><span class="n">pack</span><span class="p">(</span><span class="n">pady</span><span class="o">=</span><span class="mi">20</span><span class="p">)</span>
+
+<span class="n">root</span><span class="o">.</span><span class="n">mainloop</span><span class="p">()</span>
+</pre></div>
+</div>
+<hr class="docutils" />
+<p>Python Tkinter - Create Button Widget</p>
+<p>The Tkinter Button widget is a graphical control element used in Python’s Tkinter library to create clickable buttons in a graphical user interface (GUI). It provides a
+way for users to trigger actions or events when clicked.</p>
+<p><strong>Tkinter Button Widget Syntax</strong></p>
+<p>The syntax to use the button widget is given below.</p>
+<div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="n">Button</span><span class="p">(</span><span class="n">parent</span><span class="p">,</span> <span class="n">options</span><span class="p">)</span>
+</pre></div>
+</div>
+<p><strong>Parameters</strong></p>
+<ul class="simple">
+<li><p>parent: This parameter is used to represents the parent window.</p></li>
+<li><p>options:There are many options which are available and they can be used as key-value pairs separated by commas.</p></li>
+</ul>
+<p><strong>Tkinter Button Options</strong></p>
+<ul class="simple">
+<li><p>activebackground: Background color when the button is under the cursor.</p></li>
+<li><p>activeforeground: Foreground color when the button is under the cursor.</p></li>
+<li><p>anchor: Specifies the position of the content (text or image) inside the button.</p></li>
+<li><p>bd or borderwidth: Width of the border around the outside of the button</p></li>
+<li><p>bg or background: Normal background color.</p></li>
+<li><p>command: Function or method to be called when the button is clicked.</p></li>
+<li><p>cursor: Selects the cursor to be shown when the mouse is over the button.</p></li>
+<li><p>text: Text displayed on the button.</p></li>
+<li><p>disabledforeground: Foreground color is used when the button is disabled.</p></li>
+<li><p>fg or foreground: Normal foreground (text) color.</p></li>
+<li><p>font: Text font to be used for the button’s label.</p></li>
+<li><p>height: Height of the button in text lines</p></li>
+<li><p>highlightbackground: Color of the focus highlight when the widget does not have focus.</p></li>
+<li><p>highlightcolor: The color of the focus highlight when the widget has focus.</p></li>
+<li><p>highlightthickness: Thickness of the focus highlight.</p></li>
+<li><p>image: Image to be displayed on the button (instead of text).</p></li>
+<li><p>justify: tk.LEFT to left-justify each line; tk.CENTER to center them; or tk.RIGHT to right-justify.</p></li>
+<li><p>overrelief: The relief style to be used while the mouse is on the button; default relief is tk.RAISED.</p></li>
+<li><p>padx, pady: padding left and right of the text. / padding above and below the text.</p></li>
+<li><p>width: Width of the button in letters (if displaying text) or pixels (if displaying an image).</p></li>
+<li><p>underline: Default is -1, underline=1 would underline the second character of the button’s text.</p></li>
+<li><p>width: Width of the button in letters</p></li>
+<li><p>wraplength: If this value is set to a positive number, the text lines will be wrapped to fit within this length.</p></li>
+</ul>
+<p><strong>Methods</strong></p>
+<p>1. flash(): Causes the button to flash several times between active and normal colors. Leaves the button in the state it was in originally. Ignored if the button is
+disabled.</p>
+<ol class="arabic simple" start="2">
+<li><p>invoke(): Calls the button’s command callback, and returns what that function returns. Has no effect if the button is disabled or there is no callback.</p></li>
+</ol>
+<p><strong>Creating a Button using Tkinter</strong></p>
+<p>In this example, below code uses the tkinter library to create a graphical user interface. It defines a function, button_clicked(), which prints a message when called.
+Then, it creates a tkinter window (root) and a button within it, configured with various options like text, color, font, and behavior.</p>
+<div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">tkinter</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">tk</span>
+
+<span class="k">def</span><span class="w"> </span><span class="nf">button_clicked</span><span class="p">():</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Button clicked!&quot;</span><span class="p">)</span>
+
+<span class="n">root</span> <span class="o">=</span> <span class="n">tk</span><span class="o">.</span><span class="n">Tk</span><span class="p">()</span>
+
+<span class="c1"># Creating a button with specified options</span>
+<span class="n">button</span> <span class="o">=</span> <span class="n">tk</span><span class="o">.</span><span class="n">Button</span><span class="p">(</span><span class="n">root</span><span class="p">,</span>
+                <span class="n">text</span><span class="o">=</span><span class="s2">&quot;Click Me&quot;</span><span class="p">,</span>
+                <span class="n">command</span><span class="o">=</span><span class="n">button_clicked</span><span class="p">,</span>
+                <span class="n">activebackground</span><span class="o">=</span><span class="s2">&quot;blue&quot;</span><span class="p">,</span>
+                <span class="n">activeforeground</span><span class="o">=</span><span class="s2">&quot;white&quot;</span><span class="p">,</span>
+                <span class="n">anchor</span><span class="o">=</span><span class="s2">&quot;center&quot;</span><span class="p">,</span>
+                <span class="n">bd</span><span class="o">=</span><span class="mi">3</span><span class="p">,</span>
+                <span class="n">bg</span><span class="o">=</span><span class="s2">&quot;lightgray&quot;</span><span class="p">,</span>
+                <span class="n">cursor</span><span class="o">=</span><span class="s2">&quot;hand2&quot;</span><span class="p">,</span>
+                <span class="n">disabledforeground</span><span class="o">=</span><span class="s2">&quot;gray&quot;</span><span class="p">,</span>
+                <span class="n">fg</span><span class="o">=</span><span class="s2">&quot;black&quot;</span><span class="p">,</span>
+                <span class="n">font</span><span class="o">=</span><span class="p">(</span><span class="s2">&quot;Arial&quot;</span><span class="p">,</span> <span class="mi">12</span><span class="p">),</span>
+                <span class="n">height</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span>
+                <span class="n">highlightbackground</span><span class="o">=</span><span class="s2">&quot;black&quot;</span><span class="p">,</span>
+                <span class="n">highlightcolor</span><span class="o">=</span><span class="s2">&quot;green&quot;</span><span class="p">,</span>
+                <span class="n">highlightthickness</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span>
+                <span class="n">justify</span><span class="o">=</span><span class="s2">&quot;center&quot;</span><span class="p">,</span>
+                <span class="n">overrelief</span><span class="o">=</span><span class="s2">&quot;raised&quot;</span><span class="p">,</span>
+                <span class="n">padx</span><span class="o">=</span><span class="mi">10</span><span class="p">,</span>
+                <span class="n">pady</span><span class="o">=</span><span class="mi">5</span><span class="p">,</span>
+                <span class="n">width</span><span class="o">=</span><span class="mi">15</span><span class="p">,</span>
+                <span class="n">wraplength</span><span class="o">=</span><span class="mi">100</span><span class="p">)</span>
+
+<span class="n">button</span><span class="o">.</span><span class="n">pack</span><span class="p">(</span><span class="n">padx</span><span class="o">=</span><span class="mi">20</span><span class="p">,</span> <span class="n">pady</span><span class="o">=</span><span class="mi">20</span><span class="p">)</span>
+
+<span class="n">root</span><span class="o">.</span><span class="n">mainloop</span><span class="p">()</span>
+</pre></div>
+</div>
+<p><strong>Creation of Button without using TK Themed Widget</strong></p>
+<p>Creation of Button using tk themed widget (tkinter.ttk). This will give you the effects of modern graphics. Effects will change from one OS to another because it is
+basically for the appearance.</p>
+<p>As you can observe that BORDER is not present in 2nd output because tkinter.ttk does not support border. Also, when you hover the mouse over both the buttons ttk.Button
+will change its color and become light blue (effects may change from one OS to another) because it supports modern graphics while in the case of a simple Button it won’t
+change color as it does not support modern graphics.</p>
+<div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="c1"># import tkinter module</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">tkinter</span><span class="w"> </span><span class="kn">import</span> <span class="o">*</span>
+
+<span class="c1"># Following will import tkinter.ttk module and</span>
+<span class="c1"># automatically override all the widgets</span>
+<span class="c1"># which are present in tkinter module.</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">tkinter.ttk</span><span class="w"> </span><span class="kn">import</span> <span class="o">*</span>
+
+<span class="c1"># Create Object</span>
+<span class="n">root</span> <span class="o">=</span> <span class="n">Tk</span><span class="p">()</span>
+
+<span class="c1"># Initialize tkinter window with dimensions 100x100</span>
+<span class="n">root</span><span class="o">.</span><span class="n">geometry</span><span class="p">(</span><span class="s1">&#39;100x100&#39;</span><span class="p">)</span>
+
+<span class="n">btn</span> <span class="o">=</span> <span class="n">Button</span><span class="p">(</span><span class="n">root</span><span class="p">,</span> <span class="n">text</span> <span class="o">=</span> <span class="s1">&#39;Click me !&#39;</span><span class="p">,</span>
+             <span class="n">command</span> <span class="o">=</span> <span class="n">root</span><span class="o">.</span><span class="n">destroy</span><span class="p">)</span>
+
+<span class="c1"># Set the position of button on the top of window</span>
+<span class="n">btn</span><span class="o">.</span><span class="n">pack</span><span class="p">(</span><span class="n">side</span> <span class="o">=</span> <span class="s1">&#39;top&#39;</span><span class="p">)</span>
+
+<span class="n">root</span><span class="o">.</span><span class="n">mainloop</span><span class="p">()</span>
+</pre></div>
+</div>
+<p><strong>Note:</strong> The tkinter.ttk module provides access to the Tk-themed widget set, introduced in Tk 8.5. If Python has not been compiled against Tk 8.5, this module can still
+be
+accessed if Tile has been installed. The former method using Tk 8.5 provides additional benefits including anti-aliased font rendering under X11 and window transparency.
+The basic idea for tkinter.ttk is to separate, to the extent possible, the code implementing a widget’s behavior from the code implementing its appearance. tkinter.ttk is
+used to create modern GUI (Graphical User Interface) applications that cannot be achieved by tkinter itself.</p>
+<p><strong>Note:</strong> For more reference, you can read our article:</p>
+<ol class="arabic simple">
+<li><p>What is Widgets</p></li>
+<li><p>Python Tkinter Overview</p></li>
+<li><p>Python Tkinter Tutorial</p></li>
+</ol>
+</section>
+
+
+          </div>
+          
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="Main">
+        <div class="sphinxsidebarwrapper">
+<h1 class="logo"><a href="index.html">Numerical_Analysis_2E_Walter</a></h1>
+
+
+
+
+
+
+
+
+<h3>Navigation</h3>
+<p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="Frame.html">Frame</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Button</a></li>
+<li class="toctree-l1"><a class="reference internal" href="checkbutton.html">Checkbutton</a></li>
+<li class="toctree-l1"><a class="reference internal" href="entry.html">Entry</a></li>
+<li class="toctree-l1"><a class="reference internal" href="label.html">Label</a></li>
+</ul>
+
+<div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="index.html">Documentation overview</a><ul>
+      <li>Previous: <a href="Frame.html" title="previous chapter">Frame</a></li>
+      <li>Next: <a href="checkbutton.html" title="next chapter">Checkbutton</a></li>
+  </ul></li>
+</ul>
+</div>
+<search id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</search>
+<script>document.getElementById('searchbox').style.display = "block"</script>
+
+
+
+
+
+
+
+
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &#169;2025, leopoldo.
+      
+      |
+      Powered by <a href="https://www.sphinx-doc.org/">Sphinx 7.4.7</a>
+      &amp; <a href="https://alabaster.readthedocs.io">Alabaster 0.7.16</a>
+      
+      |
+      <a href="_sources/button.rst.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+  </body>
+</html>
