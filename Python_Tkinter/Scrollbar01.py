@@ -13,8 +13,9 @@ scroll_bar = Scrollbar(root)
 dd = dir(scroll_bar)
 
 for ss in dd:
-  print('---------------------------- ' + ss + ' ---------------------------------')
-  print(help(eval('scroll_bar.'+ss)))
+  if ss[0] != '_':
+    print('&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&& ' + ss + ' &&&&&&&&&&&&&&&&&&&&&&&&&&&&&&')
+    print(help(eval('scroll_bar.'+ss)))
 
 
 
