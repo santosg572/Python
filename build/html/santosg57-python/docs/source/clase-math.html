@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+
+<html lang="en" data-content_root="../../../">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Clase math &#8212; Numerical_Analysis_2E_Walter 1.0 documentation</title>
+    <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css?v=5ecbeea2" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/alabaster.css?v=12dfc556" />
+    <script src="../../../_static/documentation_options.js?v=f2a433a1"></script>
+    <script src="../../../_static/doctools.js?v=9a2dae69"></script>
+    <script src="../../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" />
+    <link rel="next" title="Cálculo" href="michael-spivak.html" />
+    <link rel="prev" title="Clase turtle" href="clase-turtle.html" />
+   
+  <link rel="stylesheet" href="../../../_static/custom.css" type="text/css" />
+  
+
+  
+  
+
+  </head><body>
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          
+
+          <div class="body" role="main">
+            
+  <section id="clase-math">
+<h1>Clase math<a class="headerlink" href="#clase-math" title="Link to this heading">¶</a></h1>
+<div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">math</span>
+</pre></div>
+</div>
+<p><strong>Algunos métodos:</strong></p>
+<p><code class="docutils literal notranslate"><span class="pre">'acos',</span> <span class="pre">'acosh',</span> <span class="pre">'asin',</span> <span class="pre">'asinh',</span> <span class="pre">'atan',</span> <span class="pre">'atan2',</span> <span class="pre">'atanh',</span> <span class="pre">'cbrt',</span> <span class="pre">'ceil',</span> <span class="pre">'comb',</span> <span class="pre">'copysign',</span> <span class="pre">'cos',</span> <span class="pre">'cosh',</span> <span class="pre">'degrees',</span> <span class="pre">'dist',</span> <span class="pre">'e',</span> <span class="pre">'erf',</span> <span class="pre">'erfc',</span> <span class="pre">'exp',</span> <span class="pre">'exp2',</span> <span class="pre">'expm1',</span> <span class="pre">'fabs',</span> <span class="pre">'factorial',</span> <span class="pre">'floor',</span> <span class="pre">'fma',</span> <span class="pre">'fmod',</span> <span class="pre">'frexp',</span> <span class="pre">'fsum',</span> <span class="pre">'gamma',</span> <span class="pre">'gcd',</span> <span class="pre">'hypot',</span> <span class="pre">'inf',</span> <span class="pre">'isclose',</span> <span class="pre">'isfinite',</span> <span class="pre">'isinf',</span> <span class="pre">'isnan',</span> <span class="pre">'isqrt',</span> <span class="pre">'lcm',</span> <span class="pre">'ldexp',</span> <span class="pre">'lgamma',</span> <span class="pre">'log',</span> <span class="pre">'log10',</span> <span class="pre">'log1p',</span> <span class="pre">'log2',</span> <span class="pre">'modf',</span> <span class="pre">'nan',</span> <span class="pre">'nextafter',</span> <span class="pre">'perm',</span> <span class="pre">'pi',</span> <span class="pre">'pow',</span> <span class="pre">'prod',</span> <span class="pre">'radians',</span> <span class="pre">'remainder',</span> <span class="pre">'sin',</span> <span class="pre">'sinh',</span> <span class="pre">'sqrt',</span> <span class="pre">'sumprod',</span> <span class="pre">'tan',</span> <span class="pre">'tanh',</span> <span class="pre">'tau',</span> <span class="pre">'trunc',</span> <span class="pre">'ulp'</span></code></p>
+<p><strong>Ayuda</strong></p>
+<div class="highlight-Bash notranslate"><div class="highlight"><pre><span></span>atan<span class="w"> </span>-<span class="w"> </span>Return<span class="w"> </span>the<span class="w"> </span>arc<span class="w"> </span>tangent<span class="w"> </span><span class="o">(</span>measured<span class="w"> </span><span class="k">in</span><span class="w"> </span>radians<span class="o">)</span><span class="w"> </span>of<span class="w"> </span>x.
+<span class="w">       </span>The<span class="w"> </span>result<span class="w"> </span>is<span class="w"> </span>between<span class="w"> </span>-pi/2<span class="w"> </span>and<span class="w"> </span>pi/2.
+
+cbrt<span class="w"> </span>-<span class="w"> </span>Return<span class="w"> </span>the<span class="w"> </span>cube<span class="w"> </span>root<span class="w"> </span>of<span class="w"> </span>x.
+
+ceil<span class="w"> </span>-<span class="w"> </span>Return<span class="w"> </span>the<span class="w"> </span>ceiling<span class="w"> </span>of<span class="w"> </span>x<span class="w"> </span>as<span class="w"> </span>an<span class="w"> </span>Integral.
+<span class="w">       </span>This<span class="w"> </span>is<span class="w"> </span>the<span class="w"> </span>smallest<span class="w"> </span>integer<span class="w"> </span>&gt;<span class="o">=</span><span class="w"> </span>x.
+
+comb<span class="o">(</span>n,k<span class="o">)</span><span class="w"> </span>-<span class="w"> </span>combNumber<span class="w"> </span>of<span class="w"> </span>ways<span class="w"> </span>to<span class="w"> </span>choose<span class="w"> </span>k<span class="w"> </span>items<span class="w"> </span>from<span class="w"> </span>n<span class="w"> </span>items<span class="w"> </span>without<span class="w"> </span>repetition<span class="w"> </span>and<span class="w"> </span>without<span class="w"> </span>order.
+</pre></div>
+</div>
+<p><strong>Algunos Ejemplos:</strong></p>
+<div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">math</span>
+
+<span class="n">math</span><span class="o">.</span><span class="n">pi</span>
+
+<span class="n">math</span><span class="o">.</span><span class="n">sin</span><span class="p">(</span><span class="n">math</span><span class="o">.</span><span class="n">pi</span><span class="o">/</span><span class="mi">2</span><span class="p">)</span>
+
+<span class="n">math</span><span class="o">.</span><span class="n">cos</span><span class="p">(</span><span class="n">math</span><span class="o">.</span><span class="n">pi</span><span class="o">/</span><span class="mi">2</span><span class="p">)</span>
+
+<span class="n">math</span><span class="o">.</span><span class="n">log10</span><span class="p">(</span><span class="mi">1000</span><span class="p">)</span>
+
+<span class="n">math</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="mi">1024</span><span class="p">)</span>
+</pre></div>
+</div>
+</section>
+
+
+          </div>
+          
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="Main">
+        <div class="sphinxsidebarwrapper">
+<h1 class="logo"><a href="../../../index.html">Numerical_Analysis_2E_Walter</a></h1>
+
+
+
+
+
+
+
+
+<h3>Navigation</h3>
+<p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../../nifti.html">Manejo de imágenes de Resonancia Magnética</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../Matplotlib_RST/index2.html">Matplotlib</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="index99.html">Introducción al Lenguaje de Programación con “PYTHON”</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="index99.html#contenido">Contenido</a></li>
+</ul>
+</li>
+</ul>
+
+<div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="../../../index.html">Documentation overview</a><ul>
+  <li><a href="index99.html">Introducción al Lenguaje de Programación con “PYTHON”</a><ul>
+      <li>Previous: <a href="clase-turtle.html" title="previous chapter">Clase turtle</a></li>
+      <li>Next: <a href="michael-spivak.html" title="next chapter">Cálculo</a></li>
+  </ul></li>
+  </ul></li>
+</ul>
+</div>
+<search id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../../../search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</search>
+<script>document.getElementById('searchbox').style.display = "block"</script>
+
+
+
+
+
+
+
+
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &#169;2025, leopoldo.
+      
+      |
+      Powered by <a href="https://www.sphinx-doc.org/">Sphinx 7.4.7</a>
+      &amp; <a href="https://alabaster.readthedocs.io">Alabaster 0.7.16</a>
+      
+      |
+      <a href="../../../_sources/santosg57-python/docs/source/clase-math.rst.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+  </body>
+</html>

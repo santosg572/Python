@@ -1,0 +1,1461 @@
+<!DOCTYPE html>
+
+<html lang="en" data-content_root="../../../../../">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>NumPy: the absolute basics for beginners &#8212; Numerical_Analysis_2E_Walter 1.0 documentation</title>
+    <link rel="stylesheet" type="text/css" href="../../../../../_static/pygments.css?v=5ecbeea2" />
+    <link rel="stylesheet" type="text/css" href="../../../../../_static/alabaster.css?v=12dfc556" />
+    <script src="../../../../../_static/documentation_options.js?v=f2a433a1"></script>
+    <script src="../../../../../_static/doctools.js?v=9a2dae69"></script>
+    <script src="../../../../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <link rel="index" title="Index" href="../../../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../../../search.html" />
+   
+  <link rel="stylesheet" href="../../../../../_static/custom.css" type="text/css" />
+  
+
+  
+  
+
+  </head><body>
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          
+
+          <div class="body" role="main">
+            
+  <section id="numpy-the-absolute-basics-for-beginners">
+<h1>NumPy: the absolute basics for beginners<a class="headerlink" href="#numpy-the-absolute-basics-for-beginners" title="Link to this heading">¶</a></h1>
+<p><a class="reference external" href="https://numpy.org/doc/2.3/user/absolute_beginners.html">https://numpy.org/doc/2.3/user/absolute_beginners.html</a></p>
+<p>Welcome to the absolute beginner’s guide to NumPy!</p>
+<p>NumPy (Numerical Python) is an open source Python library that’s widely used in science and engineering. The NumPy library contains multidimensional array data structures, such as the homogeneous, N-dimensional ndarray, and a large library of functions that operate efficiently on these data structures. Learn more about NumPy at What is NumPy, and if you have comments or suggestions, please reach out!</p>
+<p>NumPy (Python numérico) es una biblioteca de Python de código abierto ampliamente utilizada en ciencia e ingeniería. Contiene estructuras de datos de matriz multidimensionales, como el ndarray homogéneo de N dimensiones, y una amplia biblioteca de funciones que operan eficientemente con estas estructuras de datos. Obtenga más información sobre NumPy en ¿Qué es NumPy? Si tiene comentarios o sugerencias, no dude en contactarnos.</p>
+<section id="how-to-import-numpy">
+<h2>How to import NumPy<a class="headerlink" href="#how-to-import-numpy" title="Link to this heading">¶</a></h2>
+<p>After installing NumPy, it may be imported into Python code like:</p>
+<div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span>
+</pre></div>
+</div>
+<p>This widespread convention allows access to NumPy features with a short, recognizable prefix (np.) while distinguishing NumPy features from others that have the same name.</p>
+<p>Esta convención generalizada permite el acceso a las características de NumPy con un prefijo corto y reconocible (np.) al tiempo que distingue las características de NumPy de otras que tienen el mismo nombre.</p>
+</section>
+<section id="reading-the-example-code">
+<h2>Reading the example code<a class="headerlink" href="#reading-the-example-code" title="Link to this heading">¶</a></h2>
+<p>Throughout the NumPy documentation, you will find blocks that look like:</p>
+<div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="n">a</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">],</span>
+           <span class="p">[</span><span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">]])</span>
+
+<span class="n">a</span><span class="o">.</span><span class="n">shape</span>
+<span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Text preceded by <code class="docutils literal notranslate"><span class="pre">&gt;&gt;&gt;</span></code> or <code class="docutils literal notranslate"><span class="pre">...</span></code> is input, the code that you would enter in a script or at a Python prompt. Everything else is output, the results of running your code. Note that &gt;&gt;&gt; and … are not part of the code and may cause an error if entered at a Python prompt.</p>
+<p>El texto precedido por &gt;&gt;&gt; o … es la entrada, el código que se introduciría en un script o en el prompt de Python. Todo lo demás es la salida, el resultado de la ejecución del código. Tenga en cuenta que &gt;&gt;&gt; y … no forman parte del código y pueden causar un error si se introducen en el prompt de Python.</p>
+<p>To run the code in the examples, you can copy and paste it into a Python script or REPL, or use the experimental interactive examples in the browser provided in various locations in the documentation.</p>
+<p>Para ejecutar el código de los ejemplos, puede copiarlo y pegarlo en un script de Python o REPL, o utilizar los ejemplos interactivos experimentales en el navegador que se proporcionan en varias ubicaciones de la documentación.</p>
+</section>
+<section id="why-use-numpy">
+<h2>Why use NumPy?<a class="headerlink" href="#why-use-numpy" title="Link to this heading">¶</a></h2>
+<p>Python lists are excellent, general-purpose containers. They can be “heterogeneous”, meaning that they can contain elements of a variety of types, and they are quite fast when used to perform individual operations on a handful of elements.</p>
+<p>Las listas de Python son excelentes contenedores de propósito general. Pueden ser “heterogéneas”, lo que significa que pueden contener elementos de diversos tipos, y son bastante rápidas cuando se utilizan para realizar operaciones individuales con un puñado de elementos.</p>
+<p>Depending on the characteristics of the data and the types of operations that need to be performed, other containers may be more appropriate; by exploiting these characteristics, we can improve speed, reduce memory consumption, and offer a high-level syntax for performing a variety of common processing tasks. NumPy shines when there are large quantities of “homogeneous” (same-type) data to be processed on the CPU.</p>
+<p>Dependiendo de las características de los datos y los tipos de operaciones que se deban realizar, otros contenedores pueden ser más apropiados. Al aprovechar estas características, podemos mejorar la velocidad, reducir el consumo de memoria y ofrecer una sintaxis de alto nivel para realizar diversas tareas de procesamiento comunes. NumPy destaca cuando se procesan grandes cantidades de datos homogéneos (del mismo tipo) en la CPU.</p>
+</section>
+<section id="what-is-an-array">
+<h2>What is an “array”?<a class="headerlink" href="#what-is-an-array" title="Link to this heading">¶</a></h2>
+<p>In computer programming, an array is a structure for storing and retrieving data. We often talk about an array as if it were a grid in space, with each cell storing one element of the data. For instance, if each element of the data were a number, we might visualize a “one-dimensional” array like a list:</p>
+<p>En programación informática, un array es una estructura para almacenar y recuperar datos. A menudo hablamos de un array como si fuera una cuadrícula en el espacio, donde cada celda almacena un elemento de los datos. Por ejemplo, si cada elemento de los datos fuera un número, podríamos visualizar un array unidimensional como una lista:</p>
+<p>A two-dimensional array would be like a table:</p>
+<p>A three-dimensional array would be like a set of tables, perhaps stacked as though they were printed on separate pages. In NumPy, this idea is generalized to an arbitrary number of dimensions, and so the fundamental array class is called ndarray: it represents an “N-dimensional array”.</p>
+<p>Un array tridimensional sería como un conjunto de tablas, quizás apiladas como si estuvieran impresas en páginas separadas. En NumPy, esta idea se generaliza a un número arbitrario de dimensiones, por lo que la clase fundamental del array se llama ndarray: representa un “array N-dimensional”.</p>
+<p>Most NumPy arrays have some restrictions. For instance:</p>
+<p>La mayoría de los arrays de NumPy tienen algunas restricciones. Por ejemplo:</p>
+<ul class="simple">
+<li><p>All elements of the array must be of the same type of data.</p></li>
+<li><p>Once created, the total size of the array can’t change.</p></li>
+<li><p>The shape must be “rectangular”, not “jagged”; e.g., each row of a two-dimensional array must have the same number of columns.</p></li>
+</ul>
+<p>La forma debe ser “rectangular”, no “dentada”; por ejemplo, cada fila de una matriz bidimensional debe tener el mismo número de columnas.</p>
+<p>When these conditions are met, NumPy exploits these characteristics to make the array faster, more memory efficient, and more convenient to use than less restrictive data structures.</p>
+<p>Cuando se cumplen estas condiciones, NumPy aprovecha estas características para hacer que la matriz sea más rápida, más eficiente en el uso de la memoria y más cómoda de usar que las estructuras de datos menos restrictivas.</p>
+<p>For the remainder of this document, we will use the word “array” to refer to an instance of ndarray.</p>
+</section>
+<section id="array-fundamentals">
+<h2>Array fundamentals<a class="headerlink" href="#array-fundamentals" title="Link to this heading">¶</a></h2>
+<p>One way to initialize an array is using a Python sequence, such as a list. For example:</p>
+<p>Una forma de inicializar un array es usar una secuencia de Python, como una lista. Por ejemplo:</p>
+<div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="n">a</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">])</span>
+
+<span class="n">a</span>
+<span class="n">array</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">])</span>
+</pre></div>
+</div>
+<p>Elements of an array can be accessed in various ways. For instance, we can access an individual element of this array as we would access an element in the original list: using the integer index of the element within square brackets.</p>
+<p>Se puede acceder a los elementos de un array de varias maneras. Por ejemplo, podemos acceder a un elemento individual de este array como lo haríamos con un elemento de la lista original: usando el índice entero del elemento entre corchetes.</p>
+<div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="n">a</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+<span class="mi">1</span>
+</pre></div>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>As with built-in Python sequences, NumPy arrays are “0-indexed”: the first element of the array is accessed using index 0, not 1.</p>
+</div>
+<p>Like the original list, the array is mutable.</p>
+<p>Al igual que la lista original, la matriz es mutable.</p>
+<div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="n">a</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">=</span> <span class="mi">10</span>
+
+<span class="n">a</span>
+<span class="n">array</span><span class="p">([</span><span class="mi">10</span><span class="p">,</span>  <span class="mi">2</span><span class="p">,</span>  <span class="mi">3</span><span class="p">,</span>  <span class="mi">4</span><span class="p">,</span>  <span class="mi">5</span><span class="p">,</span>  <span class="mi">6</span><span class="p">])</span>
+</pre></div>
+</div>
+<p>Also like the original list, Python slice notation can be used for indexing.</p>
+<p>Además de la lista original, la notación de segmentos de Python se puede utilizar para indexar.</p>
+<div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="n">a</span><span class="p">[:</span><span class="mi">3</span><span class="p">]</span>
+<span class="n">array</span><span class="p">([</span><span class="mi">10</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">])</span>
+</pre></div>
+</div>
+<p>One major difference is that slice indexing of a list copies the elements into a new list, but slicing an array returns a view: an object that refers to the data in the original array. The original array can be mutated using the view.</p>
+<p>Una diferencia importante es que la indexación de una lista mediante segmentos copia los elementos en una nueva lista, mientras que la segmentación de un array devuelve una vista: un objeto que hace referencia a los datos del array original. El array original se puede modificar mediante la vista.</p>
+<div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="n">b</span> <span class="o">=</span> <span class="n">a</span><span class="p">[</span><span class="mi">3</span><span class="p">:]</span>
+
+<span class="n">b</span>
+<span class="n">array</span><span class="p">([</span><span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">])</span>
+
+<span class="n">b</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">=</span> <span class="mi">40</span>
+
+<span class="n">a</span>
+<span class="n">array</span><span class="p">([</span> <span class="mi">10</span><span class="p">,</span>  <span class="mi">2</span><span class="p">,</span>  <span class="mi">3</span><span class="p">,</span> <span class="mi">40</span><span class="p">,</span>  <span class="mi">5</span><span class="p">,</span>  <span class="mi">6</span><span class="p">])</span>
+</pre></div>
+</div>
+<p>See Copies and views for a more comprehensive explanation of when array operations return views rather than copies.</p>
+<p>Consulte Copias y vistas para obtener una explicación más completa de cuándo las operaciones de matriz devuelven vistas en lugar de copias.</p>
+<p>Two- and higher-dimensional arrays can be initialized from nested Python sequences:</p>
+<div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="n">a</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">],</span> <span class="p">[</span><span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">8</span><span class="p">],</span> <span class="p">[</span><span class="mi">9</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">11</span><span class="p">,</span> <span class="mi">12</span><span class="p">]])</span>
+
+<span class="n">a</span>
+<span class="n">array</span><span class="p">([[</span> <span class="mi">1</span><span class="p">,</span>  <span class="mi">2</span><span class="p">,</span>  <span class="mi">3</span><span class="p">,</span>  <span class="mi">4</span><span class="p">],</span>
+    <span class="p">[</span> <span class="mi">5</span><span class="p">,</span>  <span class="mi">6</span><span class="p">,</span>  <span class="mi">7</span><span class="p">,</span>  <span class="mi">8</span><span class="p">],</span>
+    <span class="p">[</span> <span class="mi">9</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">11</span><span class="p">,</span> <span class="mi">12</span><span class="p">]])</span>
+</pre></div>
+</div>
+<p>In NumPy, a dimension of an array is sometimes referred to as an “axis”. This terminology may be useful to disambiguate between the dimensionality of an array and the dimensionality of the data represented by the array. For instance, the array a could represent three points, each lying within a four-dimensional space, but a has only two “axes”.</p>
+<p>En NumPy, la dimensión de un array se denomina a veces “eje”. Esta terminología puede ser útil para distinguir entre la dimensionalidad de un array y la de los datos que este representa. Por ejemplo, el array a podría representar tres puntos, cada uno dentro de un espacio de cuatro dimensiones, pero a solo tiene dos “ejes”.</p>
+<p>Another difference between an array and a list of lists is that an element of the array can be accessed by specifying the index along each axis within a single set of square brackets, separated by commas. For instance, the element 8 is in row 1 and column 3:</p>
+<p>Otra diferencia entre un array y una lista de listas es que se puede acceder a un elemento del array especificando el índice en cada eje dentro de un único par de corchetes, separados por comas. Por ejemplo, el elemento 8 está en la fila 1 y la columna 3:</p>
+<div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="n">a</span><span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">3</span><span class="p">]</span>
+<span class="mi">8</span>
+</pre></div>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>It is familiar practice in mathematics to refer to elements of a matrix by the row index first and the column index second. This happens to be true for two-dimensional arrays, but a better mental model is to think of the column index as coming last and the row index as second to last. This generalizes to arrays with any number of dimensions.</p>
+</div>
+<p>Es una práctica habitual en matemáticas referirse a los elementos de una matriz primero por el índice de fila y después por el de columna. Esto es cierto para matrices bidimensionales, pero un modelo mental más adecuado consiste en pensar en el índice de columna como último y el de fila como penúltimo. Esto se generaliza a matrices con cualquier número de dimensiones.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>You might hear of a 0-D (zero-dimensional) array referred to as a “scalar”, a 1-D (one-dimensional) array as a “vector”, a 2-D (two-dimensional) array as a “matrix”, or an N-D (N-dimensional, where “N” is typically an integer greater than 2) array as a “tensor”. For clarity, it is best to avoid the mathematical terms when referring to an array because the mathematical objects with these names behave differently than arrays (e.g. “matrix” multiplication is fundamentally different from “array” multiplication), and there are other objects in the scientific Python ecosystem that have these names (e.g. the fundamental data structure of PyTorch is the “tensor”).</p>
+</div>
+<p>Es posible que haya oído hablar de un array 0-D (de dimensión cero) como “escalar”, un array 1-D (unidimensional) como “vector”, un array 2-D (bidimensional) como “matriz” o un array N-D (N-dimensional, donde “N” suele ser un entero mayor que 2) como “tensor”. Para mayor claridad, es mejor evitar los términos matemáticos al referirse a un array, ya que los objetos matemáticos con estos nombres se comportan de forma diferente a los arrays (p. ej., la multiplicación de “matriz” es fundamentalmente distinta de la multiplicación de “array”), y existen otros objetos en el ecosistema científico de Python que tienen estos nombres (p. ej., la estructura de datos fundamental de PyTorch es el “tensor”).</p>
+</section>
+<section id="array-attributes">
+<h2>Array attributes<a class="headerlink" href="#array-attributes" title="Link to this heading">¶</a></h2>
+<p>This section covers the ndim, shape, size, and dtype attributes of an array.</p>
+<p>The number of dimensions of an array is contained in the ndim attribute.</p>
+<div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="n">a</span><span class="o">.</span><span class="n">ndim</span>
+<span class="mi">2</span>
+</pre></div>
+</div>
+<p>The shape of an array is a tuple of non-negative integers that specify the number of elements along each dimension.</p>
+<div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="n">a</span><span class="o">.</span><span class="n">shape</span>
+<span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">)</span>
+
+<span class="nb">len</span><span class="p">(</span><span class="n">a</span><span class="o">.</span><span class="n">shape</span><span class="p">)</span> <span class="o">==</span> <span class="n">a</span><span class="o">.</span><span class="n">ndim</span>
+<span class="kc">True</span>
+</pre></div>
+</div>
+<p>The fixed, total number of elements in array is contained in the size attribute.</p>
+<div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="n">a</span><span class="o">.</span><span class="n">size</span>
+<span class="mi">12</span>
+
+<span class="kn">import</span><span class="w"> </span><span class="nn">math</span>
+
+<span class="n">a</span><span class="o">.</span><span class="n">size</span> <span class="o">==</span> <span class="n">math</span><span class="o">.</span><span class="n">prod</span><span class="p">(</span><span class="n">a</span><span class="o">.</span><span class="n">shape</span><span class="p">)</span>
+<span class="kc">True</span>
+</pre></div>
+</div>
+<p>Arrays are typically “homogeneous”, meaning that they contain elements of only one “data type”. The data type is recorded in the dtype attribute.</p>
+<div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="n">a</span><span class="o">.</span><span class="n">dtype</span>
+<span class="n">dtype</span><span class="p">(</span><span class="s1">&#39;int64&#39;</span><span class="p">)</span>  <span class="c1"># &quot;int&quot; for integer, &quot;64&quot; for 64-bit</span>
+</pre></div>
+</div>
+<p>Read more about array attributes here and learn about array objects here.</p>
+</section>
+<section id="how-to-create-a-basic-array">
+<h2>How to create a basic array<a class="headerlink" href="#how-to-create-a-basic-array" title="Link to this heading">¶</a></h2>
+<p>This section covers np.zeros(), np.ones(), np.empty(), np.arange(), np.linspace()</p>
+<p>Besides creating an array from a sequence of elements, you can easily create an array filled with 0’s:</p>
+<div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
+<span class="n">array</span><span class="p">([</span><span class="mf">0.</span><span class="p">,</span> <span class="mf">0.</span><span class="p">])</span>
+</pre></div>
+</div>
+<p>Or an array filled with 1’s:</p>
+<div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="n">np</span><span class="o">.</span><span class="n">ones</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
+<span class="n">array</span><span class="p">([</span><span class="mf">1.</span><span class="p">,</span> <span class="mf">1.</span><span class="p">])</span>
+</pre></div>
+</div>
+<p>Or even an empty array! The function empty creates an array whose initial content is random and depends on the state of the memory. The reason to use empty over zeros (or something similar) is speed - just make sure to fill every element afterwards!</p>
+<p>¡O incluso un array vacío! La función empty crea un array cuyo contenido inicial es aleatorio y depende del estado de la memoria. La razón para usar empty sobre ceros (o algo similar) es la velocidad; ¡solo asegúrate de llenar cada elemento después!</p>
+<div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Create an empty array with 2 elements</span>
+
+<span class="n">np</span><span class="o">.</span><span class="n">empty</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
+<span class="n">array</span><span class="p">([</span><span class="mf">3.14</span><span class="p">,</span> <span class="mf">42.</span>  <span class="p">])</span>  <span class="c1"># may vary</span>
+</pre></div>
+</div>
+<p>You can create an array with a range of elements:</p>
+<div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="mi">4</span><span class="p">)</span>
+<span class="n">array</span><span class="p">([</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">])</span>
+</pre></div>
+</div>
+<p>And even an array that contains a range of evenly spaced intervals. To do this, you will specify the first number, last number, and the step size.</p>
+<div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mi">9</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span>
+<span class="n">array</span><span class="p">([</span><span class="mi">2</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">8</span><span class="p">])</span>
+</pre></div>
+</div>
+<p>You can also use np.linspace() to create an array with values that are spaced linearly in a specified interval:</p>
+<div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="n">num</span><span class="o">=</span><span class="mi">5</span><span class="p">)</span>
+<span class="n">array</span><span class="p">([</span> <span class="mf">0.</span> <span class="p">,</span>  <span class="mf">2.5</span><span class="p">,</span>  <span class="mf">5.</span> <span class="p">,</span>  <span class="mf">7.5</span><span class="p">,</span> <span class="mf">10.</span> <span class="p">])</span>
+</pre></div>
+</div>
+<p><strong>Specifying your data type</strong></p>
+<p>While the default data type is floating point (np.float64), you can explicitly specify which data type you want using the dtype keyword.</p>
+<p>Si bien el tipo de datos predeterminado es punto flotante (np.float64), puede especificar explícitamente qué tipo de datos desea utilizando la palabra clave dtype.</p>
+<div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="n">x</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">ones</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="n">dtype</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">int64</span><span class="p">)</span>
+
+<span class="n">x</span>
+<span class="n">array</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">])</span>
+</pre></div>
+</div>
+<p>Learn more about creating arrays here</p>
+</section>
+<section id="adding-removing-and-sorting-elements">
+<h2>Adding, removing, and sorting elements<a class="headerlink" href="#adding-removing-and-sorting-elements" title="Link to this heading">¶</a></h2>
+<p>This section covers np.sort(), np.concatenate()</p>
+<p>Sorting an array is simple with np.sort(). You can specify the axis, kind, and order when you call the function.</p>
+<p>If you start with this array:</p>
+<div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="n">arr</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mi">2</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">8</span><span class="p">])</span>
+</pre></div>
+</div>
+<p>You can quickly sort the numbers in ascending order with:</p>
+<div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="n">np</span><span class="o">.</span><span class="n">sort</span><span class="p">(</span><span class="n">arr</span><span class="p">)</span>
+<span class="n">array</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">8</span><span class="p">])</span>
+</pre></div>
+</div>
+<p>In addition to sort, which returns a sorted copy of an array, you can use:</p>
+<ul class="simple">
+<li><p>argsort, which is an indirect sort along a specified axis,</p></li>
+<li><p>lexsort, which is an indirect stable sort on multiple keys,</p></li>
+<li><p>searchsorted, which will find elements in a sorted array, and</p></li>
+<li><p>partition, which is a partial sort.</p></li>
+</ul>
+<p>To read more about sorting an array, see: sort.</p>
+<p>If you start with these arrays:</p>
+<div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="n">a</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">])</span>
+
+<span class="n">b</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">8</span><span class="p">])</span>
+</pre></div>
+</div>
+<p>You can concatenate them with np.concatenate().</p>
+<div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="n">np</span><span class="o">.</span><span class="n">concatenate</span><span class="p">((</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">))</span>
+<span class="n">array</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">8</span><span class="p">])</span>
+</pre></div>
+</div>
+<p>Or, if you start with these arrays:</p>
+<div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="n">x</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">],</span> <span class="p">[</span><span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">]])</span>
+
+<span class="n">y</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([[</span><span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">]])</span>
+</pre></div>
+</div>
+<p>You can concatenate them with:</p>
+<div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="n">np</span><span class="o">.</span><span class="n">concatenate</span><span class="p">((</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">),</span> <span class="n">axis</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
+<span class="n">array</span><span class="p">([[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">],</span>
+    <span class="p">[</span><span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">],</span>
+    <span class="p">[</span><span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">]])</span>
+</pre></div>
+</div>
+<p>In order to remove elements from an array, it’s simple to use indexing to select the elements that you want to keep.</p>
+<p>To read more about concatenate, see: concatenate.</p>
+</section>
+<section id="how-do-you-know-the-shape-and-size-of-an-array">
+<h2>How do you know the shape and size of an array?<a class="headerlink" href="#how-do-you-know-the-shape-and-size-of-an-array" title="Link to this heading">¶</a></h2>
+<p>This section covers ndarray.ndim, ndarray.size, ndarray.shape</p>
+<p>ndarray.ndim will tell you the number of axes, or dimensions, of the array.</p>
+<p>ndarray.size will tell you the total number of elements of the array. This is the product of the elements of the array’s shape.</p>
+<p>ndarray.shape will display a tuple of integers that indicate the number of elements stored along each dimension of the array. If, for example, you have a 2-D array with 2 rows and 3 columns, the shape of your array is (2, 3).</p>
+<p>For example, if you create this array:</p>
+<div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="n">array_example</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([[[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">],</span>
+
+                        <span class="p">[</span><span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">7</span><span class="p">]],</span>
+
+
+                       <span class="p">[[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">],</span>
+
+                        <span class="p">[</span><span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">7</span><span class="p">]],</span>
+
+
+                       <span class="p">[[</span><span class="mi">0</span> <span class="p">,</span><span class="mi">1</span> <span class="p">,</span><span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">],</span>
+
+                        <span class="p">[</span><span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">7</span><span class="p">]]])</span>
+</pre></div>
+</div>
+<p>To find the number of dimensions of the array, run:</p>
+<div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="n">array_example</span><span class="o">.</span><span class="n">ndim</span>
+<span class="mi">3</span>
+</pre></div>
+</div>
+<p>To find the total number of elements in the array, run:</p>
+<div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="n">array_example</span><span class="o">.</span><span class="n">size</span>
+<span class="mi">24</span>
+</pre></div>
+</div>
+<p>And to find the shape of your array, run:</p>
+<div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="n">array_example</span><span class="o">.</span><span class="n">shape</span>
+<span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">4</span><span class="p">)</span>
+</pre></div>
+</div>
+</section>
+<section id="can-you-reshape-an-array">
+<h2>Can you reshape an array?<a class="headerlink" href="#can-you-reshape-an-array" title="Link to this heading">¶</a></h2>
+<p>This section covers arr.reshape()</p>
+<p>Yes!</p>
+<p>Using arr.reshape() will give a new shape to an array without changing the data. Just remember that when you use the reshape method, the array you want to produce needs to have the same number of elements as the original array. If you start with an array with 12 elements, you’ll need to make sure that your new array also has a total of 12 elements.</p>
+<p>If you start with this array:</p>
+<div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="n">a</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="mi">6</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">a</span><span class="p">)</span>
+<span class="p">[</span><span class="mi">0</span> <span class="mi">1</span> <span class="mi">2</span> <span class="mi">3</span> <span class="mi">4</span> <span class="mi">5</span><span class="p">]</span>
+</pre></div>
+</div>
+<p>You can use reshape() to reshape your array. For example, you can reshape this array to an array with three rows and two columns:</p>
+<div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="n">b</span> <span class="o">=</span> <span class="n">a</span><span class="o">.</span><span class="n">reshape</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">b</span><span class="p">)</span>
+<span class="p">[[</span><span class="mi">0</span> <span class="mi">1</span><span class="p">]</span>
+ <span class="p">[</span><span class="mi">2</span> <span class="mi">3</span><span class="p">]</span>
+ <span class="p">[</span><span class="mi">4</span> <span class="mi">5</span><span class="p">]]</span>
+</pre></div>
+</div>
+<p>With np.reshape, you can specify a few optional parameters:</p>
+<div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="n">np</span><span class="o">.</span><span class="n">reshape</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">shape</span><span class="o">=</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">6</span><span class="p">),</span> <span class="n">order</span><span class="o">=</span><span class="s1">&#39;C&#39;</span><span class="p">)</span>
+<span class="n">array</span><span class="p">([[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">]])</span>
+</pre></div>
+</div>
+<p>a is the array to be reshaped.</p>
+<p>shape is the new shape you want. You can specify an integer or a tuple of integers. If you specify an integer, the result will be an array of that length. The shape should be compatible with the original shape.</p>
+<p>order: C means to read/write the elements using C-like index order, F means to read/write the elements using Fortran-like index order, A means to read/write the elements in Fortran-like index order if a is Fortran contiguous in memory, C-like order otherwise. (This is an optional parameter and doesn’t need to be specified.)</p>
+<p>If you want to learn more about C and Fortran order, you can read more about the internal organization of NumPy arrays here. Essentially, C and Fortran orders have to do with how indices correspond to the order the array is stored in memory. In Fortran, when moving through the elements of a two-dimensional array as it is stored in memory, the first index is the most rapidly varying index. As the first index moves to the next row as it changes, the matrix is stored one column at a time. This is why Fortran is thought of as a Column-major language. In C on the other hand, the last index changes the most rapidly. The matrix is stored by rows, making it a Row-major language. What you do for C or Fortran depends on whether it’s more important to preserve the indexing convention or not reorder the data.</p>
+<p>Learn more about shape manipulation here.</p>
+</section>
+<section id="how-to-convert-a-1d-array-into-a-2d-array-how-to-add-a-new-axis-to-an-array">
+<h2>How to convert a 1D array into a 2D array (how to add a new axis to an array)<a class="headerlink" href="#how-to-convert-a-1d-array-into-a-2d-array-how-to-add-a-new-axis-to-an-array" title="Link to this heading">¶</a></h2>
+<p>This section covers np.newaxis, np.expand_dims</p>
+<p>You can use np.newaxis and np.expand_dims to increase the dimensions of your existing array.</p>
+<p>Using np.newaxis will increase the dimensions of your array by one dimension when used once. This means that a 1D array will become a 2D array, a 2D array will become a 3D array, and so on.</p>
+<p>For example, if you start with this array:</p>
+<div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="n">a</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">])</span>
+
+<span class="n">a</span><span class="o">.</span><span class="n">shape</span>
+<span class="p">(</span><span class="mi">6</span><span class="p">,)</span>
+</pre></div>
+</div>
+<p>You can use np.newaxis to add a new axis:</p>
+<div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="n">a2</span> <span class="o">=</span> <span class="n">a</span><span class="p">[</span><span class="n">np</span><span class="o">.</span><span class="n">newaxis</span><span class="p">,</span> <span class="p">:]</span>
+
+<span class="n">a2</span><span class="o">.</span><span class="n">shape</span>
+<span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">6</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>You can explicitly convert a 1D array to either a row vector or a column vector using np.newaxis. For example, you can convert a 1D array to a row vector by inserting an axis along the first dimension:</p>
+<div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="n">row_vector</span> <span class="o">=</span> <span class="n">a</span><span class="p">[</span><span class="n">np</span><span class="o">.</span><span class="n">newaxis</span><span class="p">,</span> <span class="p">:]</span>
+
+<span class="n">row_vector</span><span class="o">.</span><span class="n">shape</span>
+<span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">6</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Or, for a column vector, you can insert an axis along the second dimension:</p>
+<div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="n">col_vector</span> <span class="o">=</span> <span class="n">a</span><span class="p">[:,</span> <span class="n">np</span><span class="o">.</span><span class="n">newaxis</span><span class="p">]</span>
+
+<span class="n">col_vector</span><span class="o">.</span><span class="n">shape</span>
+<span class="p">(</span><span class="mi">6</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>You can also expand an array by inserting a new axis at a specified position with np.expand_dims.</p>
+<p>For example, if you start with this array:</p>
+<div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="n">a</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">])</span>
+
+<span class="n">a</span><span class="o">.</span><span class="n">shape</span>
+<span class="p">(</span><span class="mi">6</span><span class="p">,)</span>
+</pre></div>
+</div>
+<p>You can use np.expand_dims to add an axis at index position 1 with:</p>
+<div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="n">b</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">expand_dims</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+
+<span class="n">b</span><span class="o">.</span><span class="n">shape</span>
+<span class="p">(</span><span class="mi">6</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>You can add an axis at index position 0 with:</p>
+<div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="n">c</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">expand_dims</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">axis</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
+
+<span class="n">c</span><span class="o">.</span><span class="n">shape</span>
+<span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">6</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Find more information about newaxis here and expand_dims at expand_dims.</p>
+</section>
+<section id="indexing-and-slicing">
+<h2>Indexing and slicing<a class="headerlink" href="#indexing-and-slicing" title="Link to this heading">¶</a></h2>
+<p>You can index and slice NumPy arrays in the same ways you can slice Python lists.</p>
+<div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="n">data</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">])</span>
+
+<span class="n">data</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span>
+<span class="mi">2</span>
+
+<span class="n">data</span><span class="p">[</span><span class="mi">0</span><span class="p">:</span><span class="mi">2</span><span class="p">]</span>
+<span class="n">array</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">])</span>
+
+<span class="n">data</span><span class="p">[</span><span class="mi">1</span><span class="p">:]</span>
+<span class="n">array</span><span class="p">([</span><span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">])</span>
+
+<span class="n">data</span><span class="p">[</span><span class="o">-</span><span class="mi">2</span><span class="p">:]</span>
+<span class="n">array</span><span class="p">([</span><span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">])</span>
+</pre></div>
+</div>
+<p>You can visualize it this way:</p>
+<p>../_images/np_indexing.png</p>
+<p>You may want to take a section of your array or specific array elements to use in further analysis or additional operations. To do that, you’ll need to subset, slice, and/or index your arrays.</p>
+<p>If you want to select values from your array that fulfill certain conditions, it’s straightforward with NumPy.</p>
+<p>For example, if you start with this array:</p>
+<div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="n">a</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">],</span> <span class="p">[</span><span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">8</span><span class="p">],</span> <span class="p">[</span><span class="mi">9</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">11</span><span class="p">,</span> <span class="mi">12</span><span class="p">]])</span>
+</pre></div>
+</div>
+<p>You can easily print all of the values in the array that are less than 5.</p>
+<div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">a</span><span class="p">[</span><span class="n">a</span> <span class="o">&lt;</span> <span class="mi">5</span><span class="p">])</span>
+<span class="p">[</span><span class="mi">1</span> <span class="mi">2</span> <span class="mi">3</span> <span class="mi">4</span><span class="p">]</span>
+</pre></div>
+</div>
+<p>You can also select, for example, numbers that are equal to or greater than 5, and use that condition to index an array.</p>
+<div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="n">five_up</span> <span class="o">=</span> <span class="p">(</span><span class="n">a</span> <span class="o">&gt;=</span> <span class="mi">5</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">a</span><span class="p">[</span><span class="n">five_up</span><span class="p">])</span>
+<span class="p">[</span> <span class="mi">5</span>  <span class="mi">6</span>  <span class="mi">7</span>  <span class="mi">8</span>  <span class="mi">9</span> <span class="mi">10</span> <span class="mi">11</span> <span class="mi">12</span><span class="p">]</span>
+</pre></div>
+</div>
+<p>You can select elements that are divisible by 2:</p>
+<div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="n">divisible_by_2</span> <span class="o">=</span> <span class="n">a</span><span class="p">[</span><span class="n">a</span><span class="o">%</span><span class="mi">2</span><span class="o">==</span><span class="mi">0</span><span class="p">]</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">divisible_by_2</span><span class="p">)</span>
+<span class="p">[</span> <span class="mi">2</span>  <span class="mi">4</span>  <span class="mi">6</span>  <span class="mi">8</span> <span class="mi">10</span> <span class="mi">12</span><span class="p">]</span>
+</pre></div>
+</div>
+<p>Or you can select elements that satisfy two conditions using the &amp; and | operators:</p>
+<div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="n">c</span> <span class="o">=</span> <span class="n">a</span><span class="p">[(</span><span class="n">a</span> <span class="o">&gt;</span> <span class="mi">2</span><span class="p">)</span> <span class="o">&amp;</span> <span class="p">(</span><span class="n">a</span> <span class="o">&lt;</span> <span class="mi">11</span><span class="p">)]</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">c</span><span class="p">)</span>
+<span class="p">[</span> <span class="mi">3</span>  <span class="mi">4</span>  <span class="mi">5</span>  <span class="mi">6</span>  <span class="mi">7</span>  <span class="mi">8</span>  <span class="mi">9</span> <span class="mi">10</span><span class="p">]</span>
+</pre></div>
+</div>
+<p>You can also make use of the logical operators &amp; and | in order to return boolean values that specify whether or not the values in an array fulfill a certain condition. This can be useful with arrays that contain names or other categorical values.</p>
+<div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="n">five_up</span> <span class="o">=</span> <span class="p">(</span><span class="n">a</span> <span class="o">&gt;</span> <span class="mi">5</span><span class="p">)</span> <span class="o">|</span> <span class="p">(</span><span class="n">a</span> <span class="o">==</span> <span class="mi">5</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">five_up</span><span class="p">)</span>
+<span class="p">[[</span><span class="kc">False</span> <span class="kc">False</span> <span class="kc">False</span> <span class="kc">False</span><span class="p">]</span>
+ <span class="p">[</span> <span class="kc">True</span>  <span class="kc">True</span>  <span class="kc">True</span>  <span class="kc">True</span><span class="p">]</span>
+ <span class="p">[</span> <span class="kc">True</span>  <span class="kc">True</span>  <span class="kc">True</span> <span class="kc">True</span><span class="p">]]</span>
+</pre></div>
+</div>
+<p>You can also use np.nonzero() to select elements or indices from an array.</p>
+<p>Starting with this array:</p>
+<div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="n">a</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">],</span> <span class="p">[</span><span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">8</span><span class="p">],</span> <span class="p">[</span><span class="mi">9</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">11</span><span class="p">,</span> <span class="mi">12</span><span class="p">]])</span>
+</pre></div>
+</div>
+<p>You can use np.nonzero() to print the indices of elements that are, for example, less than 5:</p>
+<div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="n">b</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">nonzero</span><span class="p">(</span><span class="n">a</span> <span class="o">&lt;</span> <span class="mi">5</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">b</span><span class="p">)</span>
+<span class="p">(</span><span class="n">array</span><span class="p">([</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">]),</span> <span class="n">array</span><span class="p">([</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">]))</span>
+</pre></div>
+</div>
+<p>In this example, a tuple of arrays was returned: one for each dimension. The first array represents the row indices where these values are found, and the second array represents the column indices where the values are found.</p>
+<p>If you want to generate a list of coordinates where the elements exist, you can zip the arrays, iterate over the list of coordinates, and print them. For example:</p>
+<div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="n">list_of_coordinates</span><span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="nb">zip</span><span class="p">(</span><span class="n">b</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">b</span><span class="p">[</span><span class="mi">1</span><span class="p">]))</span>
+</pre></div>
+</div>
+<p>for coord in list_of_coordinates:</p>
+<div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">coord</span><span class="p">)</span>
+<span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">int64</span><span class="p">(</span><span class="mi">0</span><span class="p">),</span> <span class="n">np</span><span class="o">.</span><span class="n">int64</span><span class="p">(</span><span class="mi">0</span><span class="p">))</span>
+<span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">int64</span><span class="p">(</span><span class="mi">0</span><span class="p">),</span> <span class="n">np</span><span class="o">.</span><span class="n">int64</span><span class="p">(</span><span class="mi">1</span><span class="p">))</span>
+<span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">int64</span><span class="p">(</span><span class="mi">0</span><span class="p">),</span> <span class="n">np</span><span class="o">.</span><span class="n">int64</span><span class="p">(</span><span class="mi">2</span><span class="p">))</span>
+<span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">int64</span><span class="p">(</span><span class="mi">0</span><span class="p">),</span> <span class="n">np</span><span class="o">.</span><span class="n">int64</span><span class="p">(</span><span class="mi">3</span><span class="p">))</span>
+</pre></div>
+</div>
+<p>You can also use np.nonzero() to print the elements in an array that are less than 5 with:</p>
+<div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">a</span><span class="p">[</span><span class="n">b</span><span class="p">])</span>
+<span class="p">[</span><span class="mi">1</span> <span class="mi">2</span> <span class="mi">3</span> <span class="mi">4</span><span class="p">]</span>
+</pre></div>
+</div>
+<p>If the element you’re looking for doesn’t exist in the array, then the returned array of indices will be empty. For example:</p>
+<div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="n">not_there</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">nonzero</span><span class="p">(</span><span class="n">a</span> <span class="o">==</span> <span class="mi">42</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">not_there</span><span class="p">)</span>
+<span class="p">(</span><span class="n">array</span><span class="p">([],</span> <span class="n">dtype</span><span class="o">=</span><span class="n">int64</span><span class="p">),</span> <span class="n">array</span><span class="p">([],</span> <span class="n">dtype</span><span class="o">=</span><span class="n">int64</span><span class="p">))</span>
+</pre></div>
+</div>
+<p>Learn more about indexing and slicing here and here.</p>
+<p>Read more about using the nonzero function at: nonzero.</p>
+</section>
+<section id="how-to-create-an-array-from-existing-data">
+<h2>How to create an array from existing data<a class="headerlink" href="#how-to-create-an-array-from-existing-data" title="Link to this heading">¶</a></h2>
+<p>This section covers slicing and indexing, np.vstack(), np.hstack(), np.hsplit(), .view(), copy()</p>
+<p>You can easily create a new array from a section of an existing array.</p>
+<p>Let’s say you have this array:</p>
+<div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="n">a</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span>  <span class="mi">2</span><span class="p">,</span>  <span class="mi">3</span><span class="p">,</span>  <span class="mi">4</span><span class="p">,</span>  <span class="mi">5</span><span class="p">,</span>  <span class="mi">6</span><span class="p">,</span>  <span class="mi">7</span><span class="p">,</span>  <span class="mi">8</span><span class="p">,</span>  <span class="mi">9</span><span class="p">,</span> <span class="mi">10</span><span class="p">])</span>
+</pre></div>
+</div>
+<p>You can create a new array from a section of your array any time by specifying where you want to slice your array.</p>
+<div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="n">arr1</span> <span class="o">=</span> <span class="n">a</span><span class="p">[</span><span class="mi">3</span><span class="p">:</span><span class="mi">8</span><span class="p">]</span>
+
+<span class="n">arr1</span>
+<span class="n">array</span><span class="p">([</span><span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">8</span><span class="p">])</span>
+</pre></div>
+</div>
+<p>Here, you grabbed a section of your array from index position 3 through index position 8 but not including position 8 itself.</p>
+<p>Reminder: Array indexes begin at 0. This means the first element of the array is at index 0, the second element is at index 1, and so on.</p>
+<p>You can also stack two existing arrays, both vertically and horizontally. Let’s say you have two arrays, a1 and a2:</p>
+<div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="n">a1</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">],</span>
+
+            <span class="p">[</span><span class="mi">2</span><span class="p">,</span> <span class="mi">2</span><span class="p">]])</span>
+
+<span class="n">a2</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([[</span><span class="mi">3</span><span class="p">,</span> <span class="mi">3</span><span class="p">],</span>
+
+            <span class="p">[</span><span class="mi">4</span><span class="p">,</span> <span class="mi">4</span><span class="p">]])</span>
+</pre></div>
+</div>
+<p>You can stack them vertically with vstack:</p>
+<div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="n">np</span><span class="o">.</span><span class="n">vstack</span><span class="p">((</span><span class="n">a1</span><span class="p">,</span> <span class="n">a2</span><span class="p">))</span>
+<span class="n">array</span><span class="p">([[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">],</span>
+    <span class="p">[</span><span class="mi">2</span><span class="p">,</span> <span class="mi">2</span><span class="p">],</span>
+    <span class="p">[</span><span class="mi">3</span><span class="p">,</span> <span class="mi">3</span><span class="p">],</span>
+    <span class="p">[</span><span class="mi">4</span><span class="p">,</span> <span class="mi">4</span><span class="p">]])</span>
+</pre></div>
+</div>
+<p>Or stack them horizontally with hstack:</p>
+<div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="n">np</span><span class="o">.</span><span class="n">hstack</span><span class="p">((</span><span class="n">a1</span><span class="p">,</span> <span class="n">a2</span><span class="p">))</span>
+<span class="n">array</span><span class="p">([[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">3</span><span class="p">],</span>
+    <span class="p">[</span><span class="mi">2</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">4</span><span class="p">]])</span>
+</pre></div>
+</div>
+<p>You can split an array into several smaller arrays using hsplit. You can specify either the number of equally shaped arrays to return or the columns after which the division should occur.</p>
+<p>Let’s say you have this array:</p>
+<div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="n">x</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">25</span><span class="p">)</span><span class="o">.</span><span class="n">reshape</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mi">12</span><span class="p">)</span>
+
+<span class="n">x</span>
+<span class="n">array</span><span class="p">([[</span> <span class="mi">1</span><span class="p">,</span>  <span class="mi">2</span><span class="p">,</span>  <span class="mi">3</span><span class="p">,</span>  <span class="mi">4</span><span class="p">,</span>  <span class="mi">5</span><span class="p">,</span>  <span class="mi">6</span><span class="p">,</span>  <span class="mi">7</span><span class="p">,</span>  <span class="mi">8</span><span class="p">,</span>  <span class="mi">9</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">11</span><span class="p">,</span> <span class="mi">12</span><span class="p">],</span>
+    <span class="p">[</span><span class="mi">13</span><span class="p">,</span> <span class="mi">14</span><span class="p">,</span> <span class="mi">15</span><span class="p">,</span> <span class="mi">16</span><span class="p">,</span> <span class="mi">17</span><span class="p">,</span> <span class="mi">18</span><span class="p">,</span> <span class="mi">19</span><span class="p">,</span> <span class="mi">20</span><span class="p">,</span> <span class="mi">21</span><span class="p">,</span> <span class="mi">22</span><span class="p">,</span> <span class="mi">23</span><span class="p">,</span> <span class="mi">24</span><span class="p">]])</span>
+</pre></div>
+</div>
+<p>If you wanted to split this array into three equally shaped arrays, you would run:</p>
+<div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="n">np</span><span class="o">.</span><span class="n">hsplit</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="mi">3</span><span class="p">)</span>
+  <span class="p">[</span><span class="n">array</span><span class="p">([[</span> <span class="mi">1</span><span class="p">,</span>  <span class="mi">2</span><span class="p">,</span>  <span class="mi">3</span><span class="p">,</span>  <span class="mi">4</span><span class="p">],</span>
+      <span class="p">[</span><span class="mi">13</span><span class="p">,</span> <span class="mi">14</span><span class="p">,</span> <span class="mi">15</span><span class="p">,</span> <span class="mi">16</span><span class="p">]]),</span> <span class="n">array</span><span class="p">([[</span> <span class="mi">5</span><span class="p">,</span>  <span class="mi">6</span><span class="p">,</span>  <span class="mi">7</span><span class="p">,</span>  <span class="mi">8</span><span class="p">],</span>
+      <span class="p">[</span><span class="mi">17</span><span class="p">,</span> <span class="mi">18</span><span class="p">,</span> <span class="mi">19</span><span class="p">,</span> <span class="mi">20</span><span class="p">]]),</span> <span class="n">array</span><span class="p">([[</span> <span class="mi">9</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">11</span><span class="p">,</span> <span class="mi">12</span><span class="p">],</span>
+      <span class="p">[</span><span class="mi">21</span><span class="p">,</span> <span class="mi">22</span><span class="p">,</span> <span class="mi">23</span><span class="p">,</span> <span class="mi">24</span><span class="p">]])]</span>
+</pre></div>
+</div>
+<p>If you wanted to split your array after the third and fourth column, you’d run:</p>
+<div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="n">np</span><span class="o">.</span><span class="n">hsplit</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">))</span>
+  <span class="p">[</span><span class="n">array</span><span class="p">([[</span> <span class="mi">1</span><span class="p">,</span>  <span class="mi">2</span><span class="p">,</span>  <span class="mi">3</span><span class="p">],</span>
+      <span class="p">[</span><span class="mi">13</span><span class="p">,</span> <span class="mi">14</span><span class="p">,</span> <span class="mi">15</span><span class="p">]]),</span> <span class="n">array</span><span class="p">([[</span> <span class="mi">4</span><span class="p">],</span>
+      <span class="p">[</span><span class="mi">16</span><span class="p">]]),</span> <span class="n">array</span><span class="p">([[</span> <span class="mi">5</span><span class="p">,</span>  <span class="mi">6</span><span class="p">,</span>  <span class="mi">7</span><span class="p">,</span>  <span class="mi">8</span><span class="p">,</span>  <span class="mi">9</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">11</span><span class="p">,</span> <span class="mi">12</span><span class="p">],</span>
+      <span class="p">[</span><span class="mi">17</span><span class="p">,</span> <span class="mi">18</span><span class="p">,</span> <span class="mi">19</span><span class="p">,</span> <span class="mi">20</span><span class="p">,</span> <span class="mi">21</span><span class="p">,</span> <span class="mi">22</span><span class="p">,</span> <span class="mi">23</span><span class="p">,</span> <span class="mi">24</span><span class="p">]])]</span>
+</pre></div>
+</div>
+<p>Learn more about stacking and splitting arrays here.</p>
+<p>You can use the view method to create a new array object that looks at the same data as the original array (a shallow copy).</p>
+<p>Views are an important NumPy concept! NumPy functions, as well as operations like indexing and slicing, will return views whenever possible. This saves memory and is faster (no copy of the data has to be made). However it’s important to be aware of this - modifying data in a view also modifies the original array!</p>
+<p>Let’s say you create this array:</p>
+<div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="n">a</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">],</span> <span class="p">[</span><span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">8</span><span class="p">],</span> <span class="p">[</span><span class="mi">9</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">11</span><span class="p">,</span> <span class="mi">12</span><span class="p">]])</span>
+</pre></div>
+</div>
+<p>Now we create an array b1 by slicing a and modify the first element of b1. This will modify the corresponding element in a as well!</p>
+<div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="n">b1</span> <span class="o">=</span> <span class="n">a</span><span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="p">:]</span>
+
+<span class="n">b1</span>
+<span class="n">array</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">])</span>
+
+<span class="n">b1</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">=</span> <span class="mi">99</span>
+
+<span class="n">b1</span>
+<span class="n">array</span><span class="p">([</span><span class="mi">99</span><span class="p">,</span>  <span class="mi">2</span><span class="p">,</span>  <span class="mi">3</span><span class="p">,</span>  <span class="mi">4</span><span class="p">])</span>
+
+<span class="n">a</span>
+<span class="n">array</span><span class="p">([[</span><span class="mi">99</span><span class="p">,</span>  <span class="mi">2</span><span class="p">,</span>  <span class="mi">3</span><span class="p">,</span>  <span class="mi">4</span><span class="p">],</span>
+    <span class="p">[</span> <span class="mi">5</span><span class="p">,</span>  <span class="mi">6</span><span class="p">,</span>  <span class="mi">7</span><span class="p">,</span>  <span class="mi">8</span><span class="p">],</span>
+    <span class="p">[</span> <span class="mi">9</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">11</span><span class="p">,</span> <span class="mi">12</span><span class="p">]])</span>
+</pre></div>
+</div>
+<p>Using the copy method will make a complete copy of the array and its data (a deep copy). To use this on your array, you could run:</p>
+<div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="n">b2</span> <span class="o">=</span> <span class="n">a</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span>
+</pre></div>
+</div>
+<p>Learn more about copies and views here.</p>
+</section>
+<section id="basic-array-operations">
+<h2>Basic array operations<a class="headerlink" href="#basic-array-operations" title="Link to this heading">¶</a></h2>
+<p>This section covers addition, subtraction, multiplication, division, and more</p>
+<p>Once you’ve created your arrays, you can start to work with them. Let’s say, for example, that you’ve created two arrays, one called “data” and one called “ones”
+../_images/np_array_dataones.png</p>
+<p>You can add the arrays together with the plus sign.</p>
+<div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="n">data</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">])</span>
+
+<span class="n">ones</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">ones</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="n">dtype</span><span class="o">=</span><span class="nb">int</span><span class="p">)</span>
+
+<span class="n">data</span> <span class="o">+</span> <span class="n">ones</span>
+<span class="n">array</span><span class="p">([</span><span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">])</span>
+</pre></div>
+</div>
+<p>../_images/np_data_plus_ones.png</p>
+<p>You can, of course, do more than just addition!</p>
+<div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="n">data</span> <span class="o">-</span> <span class="n">ones</span>
+<span class="n">array</span><span class="p">([</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">])</span>
+
+<span class="n">data</span> <span class="o">*</span> <span class="n">data</span>
+<span class="n">array</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span> <span class="mi">4</span><span class="p">])</span>
+
+<span class="n">data</span> <span class="o">/</span> <span class="n">data</span>
+<span class="n">array</span><span class="p">([</span><span class="mf">1.</span><span class="p">,</span> <span class="mf">1.</span><span class="p">])</span>
+</pre></div>
+</div>
+<p>../_images/np_sub_mult_divide.png</p>
+<p>Basic operations are simple with NumPy. If you want to find the sum of the elements in an array, you’d use sum(). This works for 1D arrays, 2D arrays, and arrays in higher dimensions.</p>
+<div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="n">a</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">])</span>
+
+<span class="n">a</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span>
+<span class="mi">10</span>
+</pre></div>
+</div>
+<p>To add the rows or the columns in a 2D array, you would specify the axis.</p>
+<p>If you start with this array:</p>
+<div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="n">b</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">],</span> <span class="p">[</span><span class="mi">2</span><span class="p">,</span> <span class="mi">2</span><span class="p">]])</span>
+</pre></div>
+</div>
+<p>You can sum over the axis of rows with:</p>
+<div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="n">b</span><span class="o">.</span><span class="n">sum</span><span class="p">(</span><span class="n">axis</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
+<span class="n">array</span><span class="p">([</span><span class="mi">3</span><span class="p">,</span> <span class="mi">3</span><span class="p">])</span>
+</pre></div>
+</div>
+<p>You can sum over the axis of columns with:</p>
+<div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="n">b</span><span class="o">.</span><span class="n">sum</span><span class="p">(</span><span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+<span class="n">array</span><span class="p">([</span><span class="mi">2</span><span class="p">,</span> <span class="mi">4</span><span class="p">])</span>
+</pre></div>
+</div>
+<p>Learn more about basic operations here.</p>
+</section>
+<section id="broadcasting">
+<h2>Broadcasting<a class="headerlink" href="#broadcasting" title="Link to this heading">¶</a></h2>
+<p>There are times when you might want to carry out an operation between an array and a single number (also called an operation between a vector and a scalar) or between arrays of two different sizes. For example, your array (we’ll call it “data”) might contain information about distance in miles but you want to convert the information to kilometers. You can perform this operation with:</p>
+<div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="n">data</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mf">1.0</span><span class="p">,</span> <span class="mf">2.0</span><span class="p">])</span>
+
+<span class="n">data</span> <span class="o">*</span> <span class="mf">1.6</span>
+<span class="n">array</span><span class="p">([</span><span class="mf">1.6</span><span class="p">,</span> <span class="mf">3.2</span><span class="p">])</span>
+</pre></div>
+</div>
+<p>../_images/np_multiply_broadcasting.png</p>
+<p>NumPy understands that the multiplication should happen with each cell. That concept is called broadcasting. Broadcasting is a mechanism that allows NumPy to perform operations on arrays of different shapes. The dimensions of your array must be compatible, for example, when the dimensions of both arrays are equal or when one of them is 1. If the dimensions are not compatible, you will get a ValueError.</p>
+<p>Learn more about broadcasting here.</p>
+</section>
+<section id="more-useful-array-operations">
+<h2>More useful array operations<a class="headerlink" href="#more-useful-array-operations" title="Link to this heading">¶</a></h2>
+<p>This section covers maximum, minimum, sum, mean, product, standard deviation, and more</p>
+<p>NumPy also performs aggregation functions. In addition to min, max, and sum, you can easily run mean to get the average, prod to get the result of multiplying the elements together, std to get the standard deviation, and more.</p>
+<div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="n">data</span><span class="o">.</span><span class="n">max</span><span class="p">()</span>
+<span class="mf">2.0</span>
+
+<span class="n">data</span><span class="o">.</span><span class="n">min</span><span class="p">()</span>
+<span class="mf">1.0</span>
+
+<span class="n">data</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span>
+<span class="mf">3.0</span>
+</pre></div>
+</div>
+<p>../_images/np_aggregation.png</p>
+<p>Let’s start with this array, called “a”</p>
+<div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="n">a</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([[</span><span class="mf">0.45053314</span><span class="p">,</span> <span class="mf">0.17296777</span><span class="p">,</span> <span class="mf">0.34376245</span><span class="p">,</span> <span class="mf">0.5510652</span><span class="p">],</span>
+
+           <span class="p">[</span><span class="mf">0.54627315</span><span class="p">,</span> <span class="mf">0.05093587</span><span class="p">,</span> <span class="mf">0.40067661</span><span class="p">,</span> <span class="mf">0.55645993</span><span class="p">],</span>
+
+           <span class="p">[</span><span class="mf">0.12697628</span><span class="p">,</span> <span class="mf">0.82485143</span><span class="p">,</span> <span class="mf">0.26590556</span><span class="p">,</span> <span class="mf">0.56917101</span><span class="p">]])</span>
+</pre></div>
+</div>
+<p>It’s very common to want to aggregate along a row or column. By default, every NumPy aggregation function will return the aggregate of the entire array. To find the sum or the minimum of the elements in your array, run:</p>
+<div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="n">a</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span>
+<span class="mf">4.8595784</span>
+</pre></div>
+</div>
+<p>Or:</p>
+<div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="n">a</span><span class="o">.</span><span class="n">min</span><span class="p">()</span>
+<span class="mf">0.05093587</span>
+</pre></div>
+</div>
+<p>You can specify on which axis you want the aggregation function to be computed. For example, you can find the minimum value within each column by specifying axis=0.</p>
+<div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="n">a</span><span class="o">.</span><span class="n">min</span><span class="p">(</span><span class="n">axis</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
+<span class="n">array</span><span class="p">([</span><span class="mf">0.12697628</span><span class="p">,</span> <span class="mf">0.05093587</span><span class="p">,</span> <span class="mf">0.26590556</span><span class="p">,</span> <span class="mf">0.5510652</span> <span class="p">])</span>
+</pre></div>
+</div>
+<p>The four values listed above correspond to the number of columns in your array. With a four-column array, you will get four values as your result.</p>
+<p>Read more about array methods here.</p>
+</section>
+<section id="creating-matrices">
+<h2>Creating matrices<a class="headerlink" href="#creating-matrices" title="Link to this heading">¶</a></h2>
+<p>You can pass Python lists of lists to create a 2-D array (or “matrix”) to represent them in NumPy.</p>
+<div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="n">data</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">],</span> <span class="p">[</span><span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">],</span> <span class="p">[</span><span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">]])</span>
+
+<span class="n">data</span>
+<span class="n">array</span><span class="p">([[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">],</span>
+    <span class="p">[</span><span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">],</span>
+    <span class="p">[</span><span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">]])</span>
+</pre></div>
+</div>
+<p>../_images/np_create_matrix.png</p>
+<p>Indexing and slicing operations are useful when you’re manipulating matrices:</p>
+<div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="n">data</span><span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">]</span>
+<span class="mi">2</span>
+
+<span class="n">data</span><span class="p">[</span><span class="mi">1</span><span class="p">:</span><span class="mi">3</span><span class="p">]</span>
+<span class="n">array</span><span class="p">([[</span><span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">],</span>
+    <span class="p">[</span><span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">]])</span>
+
+<span class="n">data</span><span class="p">[</span><span class="mi">0</span><span class="p">:</span><span class="mi">2</span><span class="p">,</span> <span class="mi">0</span><span class="p">]</span>
+<span class="n">array</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span> <span class="mi">3</span><span class="p">])</span>
+</pre></div>
+</div>
+<p>../_images/np_matrix_indexing.png</p>
+<p>You can aggregate matrices the same way you aggregated vectors:</p>
+<div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="n">data</span><span class="o">.</span><span class="n">max</span><span class="p">()</span>
+<span class="mi">6</span>
+
+<span class="n">data</span><span class="o">.</span><span class="n">min</span><span class="p">()</span>
+<span class="mi">1</span>
+
+<span class="n">data</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span>
+<span class="mi">21</span>
+</pre></div>
+</div>
+<p>../_images/np_matrix_aggregation.png</p>
+<p>You can aggregate all the values in a matrix and you can aggregate them across columns or rows using the axis parameter. To illustrate this point, let’s look at a slightly modified dataset:</p>
+<div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="n">data</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">],</span> <span class="p">[</span><span class="mi">5</span><span class="p">,</span> <span class="mi">3</span><span class="p">],</span> <span class="p">[</span><span class="mi">4</span><span class="p">,</span> <span class="mi">6</span><span class="p">]])</span>
+
+<span class="n">data</span>
+<span class="n">array</span><span class="p">([[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">],</span>
+    <span class="p">[</span><span class="mi">5</span><span class="p">,</span> <span class="mi">3</span><span class="p">],</span>
+    <span class="p">[</span><span class="mi">4</span><span class="p">,</span> <span class="mi">6</span><span class="p">]])</span>
+
+<span class="n">data</span><span class="o">.</span><span class="n">max</span><span class="p">(</span><span class="n">axis</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
+<span class="n">array</span><span class="p">([</span><span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">])</span>
+
+<span class="n">data</span><span class="o">.</span><span class="n">max</span><span class="p">(</span><span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+<span class="n">array</span><span class="p">([</span><span class="mi">2</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">])</span>
+</pre></div>
+</div>
+<p>../_images/np_matrix_aggregation_row.png</p>
+<p>Once you’ve created your matrices, you can add and multiply them using arithmetic operators if you have two matrices that are the same size.</p>
+<div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="n">data</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">],</span> <span class="p">[</span><span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">]])</span>
+
+<span class="n">ones</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">],</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">]])</span>
+
+<span class="n">data</span> <span class="o">+</span> <span class="n">ones</span>
+<span class="n">array</span><span class="p">([[</span><span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">],</span>
+    <span class="p">[</span><span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">]])</span>
+</pre></div>
+</div>
+<p>../_images/np_matrix_arithmetic.png</p>
+<p>You can do these arithmetic operations on matrices of different sizes, but only if one matrix has only one column or one row. In this case, NumPy will use its broadcast rules for the operation.</p>
+<div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="n">data</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">],</span> <span class="p">[</span><span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">],</span> <span class="p">[</span><span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">]])</span>
+
+<span class="n">ones_row</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">]])</span>
+
+<span class="n">data</span> <span class="o">+</span> <span class="n">ones_row</span>
+<span class="n">array</span><span class="p">([[</span><span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">],</span>
+    <span class="p">[</span><span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">],</span>
+    <span class="p">[</span><span class="mi">6</span><span class="p">,</span> <span class="mi">7</span><span class="p">]])</span>
+</pre></div>
+</div>
+<p>../_images/np_matrix_broadcasting.png</p>
+<p>Be aware that when NumPy prints N-dimensional arrays, the last axis is looped over the fastest while the first axis is the slowest. For instance:</p>
+<div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="n">np</span><span class="o">.</span><span class="n">ones</span><span class="p">((</span><span class="mi">4</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">2</span><span class="p">))</span>
+<span class="n">array</span><span class="p">([[[</span><span class="mf">1.</span><span class="p">,</span> <span class="mf">1.</span><span class="p">],</span>
+     <span class="p">[</span><span class="mf">1.</span><span class="p">,</span> <span class="mf">1.</span><span class="p">],</span>
+     <span class="p">[</span><span class="mf">1.</span><span class="p">,</span> <span class="mf">1.</span><span class="p">]],</span>
+
+    <span class="p">[[</span><span class="mf">1.</span><span class="p">,</span> <span class="mf">1.</span><span class="p">],</span>
+     <span class="p">[</span><span class="mf">1.</span><span class="p">,</span> <span class="mf">1.</span><span class="p">],</span>
+     <span class="p">[</span><span class="mf">1.</span><span class="p">,</span> <span class="mf">1.</span><span class="p">]],</span>
+
+    <span class="p">[[</span><span class="mf">1.</span><span class="p">,</span> <span class="mf">1.</span><span class="p">],</span>
+     <span class="p">[</span><span class="mf">1.</span><span class="p">,</span> <span class="mf">1.</span><span class="p">],</span>
+     <span class="p">[</span><span class="mf">1.</span><span class="p">,</span> <span class="mf">1.</span><span class="p">]],</span>
+
+    <span class="p">[[</span><span class="mf">1.</span><span class="p">,</span> <span class="mf">1.</span><span class="p">],</span>
+     <span class="p">[</span><span class="mf">1.</span><span class="p">,</span> <span class="mf">1.</span><span class="p">],</span>
+     <span class="p">[</span><span class="mf">1.</span><span class="p">,</span> <span class="mf">1.</span><span class="p">]]])</span>
+</pre></div>
+</div>
+<p>There are often instances where we want NumPy to initialize the values of an array. NumPy offers functions like ones() and zeros(), and the random.Generator class for random number generation for that. All you need to do is pass in the number of elements you want it to generate:</p>
+<div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="n">np</span><span class="o">.</span><span class="n">ones</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span>
+<span class="n">array</span><span class="p">([</span><span class="mf">1.</span><span class="p">,</span> <span class="mf">1.</span><span class="p">,</span> <span class="mf">1.</span><span class="p">])</span>
+
+<span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span>
+<span class="n">array</span><span class="p">([</span><span class="mf">0.</span><span class="p">,</span> <span class="mf">0.</span><span class="p">,</span> <span class="mf">0.</span><span class="p">])</span>
+
+<span class="n">rng</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">default_rng</span><span class="p">()</span>  <span class="c1"># the simplest way to generate random numbers</span>
+
+<span class="n">rng</span><span class="o">.</span><span class="n">random</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span>
+<span class="n">array</span><span class="p">([</span><span class="mf">0.63696169</span><span class="p">,</span> <span class="mf">0.26978671</span><span class="p">,</span> <span class="mf">0.04097352</span><span class="p">])</span>
+</pre></div>
+</div>
+<p>../_images/np_ones_zeros_random.png</p>
+<p>You can also use ones(), zeros(), and random() to create a 2D array if you give them a tuple describing the dimensions of the matrix:</p>
+<div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="n">np</span><span class="o">.</span><span class="n">ones</span><span class="p">((</span><span class="mi">3</span><span class="p">,</span> <span class="mi">2</span><span class="p">))</span>
+<span class="n">array</span><span class="p">([[</span><span class="mf">1.</span><span class="p">,</span> <span class="mf">1.</span><span class="p">],</span>
+    <span class="p">[</span><span class="mf">1.</span><span class="p">,</span> <span class="mf">1.</span><span class="p">],</span>
+    <span class="p">[</span><span class="mf">1.</span><span class="p">,</span> <span class="mf">1.</span><span class="p">]])</span>
+
+<span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">((</span><span class="mi">3</span><span class="p">,</span> <span class="mi">2</span><span class="p">))</span>
+<span class="n">array</span><span class="p">([[</span><span class="mf">0.</span><span class="p">,</span> <span class="mf">0.</span><span class="p">],</span>
+    <span class="p">[</span><span class="mf">0.</span><span class="p">,</span> <span class="mf">0.</span><span class="p">],</span>
+    <span class="p">[</span><span class="mf">0.</span><span class="p">,</span> <span class="mf">0.</span><span class="p">]])</span>
+
+<span class="n">rng</span><span class="o">.</span><span class="n">random</span><span class="p">((</span><span class="mi">3</span><span class="p">,</span> <span class="mi">2</span><span class="p">))</span>
+<span class="n">array</span><span class="p">([[</span><span class="mf">0.01652764</span><span class="p">,</span> <span class="mf">0.81327024</span><span class="p">],</span>
+    <span class="p">[</span><span class="mf">0.91275558</span><span class="p">,</span> <span class="mf">0.60663578</span><span class="p">],</span>
+    <span class="p">[</span><span class="mf">0.72949656</span><span class="p">,</span> <span class="mf">0.54362499</span><span class="p">]])</span>  <span class="c1"># may vary</span>
+</pre></div>
+</div>
+<p>../_images/np_ones_zeros_matrix.png</p>
+<p>Read more about creating arrays, filled with 0’s, 1’s, other values or uninitialized, at array creation routines.</p>
+</section>
+<section id="generating-random-numbers">
+<h2>Generating random numbers<a class="headerlink" href="#generating-random-numbers" title="Link to this heading">¶</a></h2>
+<p>The use of random number generation is an important part of the configuration and evaluation of many numerical and machine learning algorithms. Whether you need to randomly initialize weights in an artificial neural network, split data into random sets, or randomly shuffle your dataset, being able to generate random numbers (actually, repeatable pseudo-random numbers) is essential.</p>
+<p>With Generator.integers, you can generate random integers from low (remember that this is inclusive with NumPy) to high (exclusive). You can set endpoint=True to make the high number inclusive.</p>
+<p>You can generate a 2 x 4 array of random integers between 0 and 4 with:</p>
+<div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="n">rng</span><span class="o">.</span><span class="n">integers</span><span class="p">(</span><span class="mi">5</span><span class="p">,</span> <span class="n">size</span><span class="o">=</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mi">4</span><span class="p">))</span>
+<span class="n">array</span><span class="p">([[</span><span class="mi">2</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">],</span>
+    <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">4</span><span class="p">]])</span>  <span class="c1"># may vary</span>
+</pre></div>
+</div>
+<p>Read more about random number generation here.</p>
+</section>
+<section id="how-to-get-unique-items-and-counts">
+<h2>How to get unique items and counts<a class="headerlink" href="#how-to-get-unique-items-and-counts" title="Link to this heading">¶</a></h2>
+<p>This section covers np.unique()</p>
+<p>You can find the unique elements in an array easily with np.unique.</p>
+<p>For example, if you start with this array:</p>
+<div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="n">a</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mi">11</span><span class="p">,</span> <span class="mi">11</span><span class="p">,</span> <span class="mi">12</span><span class="p">,</span> <span class="mi">13</span><span class="p">,</span> <span class="mi">14</span><span class="p">,</span> <span class="mi">15</span><span class="p">,</span> <span class="mi">16</span><span class="p">,</span> <span class="mi">17</span><span class="p">,</span> <span class="mi">12</span><span class="p">,</span> <span class="mi">13</span><span class="p">,</span> <span class="mi">11</span><span class="p">,</span> <span class="mi">14</span><span class="p">,</span> <span class="mi">18</span><span class="p">,</span> <span class="mi">19</span><span class="p">,</span> <span class="mi">20</span><span class="p">])</span>
+</pre></div>
+</div>
+<p>you can use np.unique to print the unique values in your array:</p>
+<div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="n">unique_values</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">unique</span><span class="p">(</span><span class="n">a</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">unique_values</span><span class="p">)</span>
+<span class="p">[</span><span class="mi">11</span> <span class="mi">12</span> <span class="mi">13</span> <span class="mi">14</span> <span class="mi">15</span> <span class="mi">16</span> <span class="mi">17</span> <span class="mi">18</span> <span class="mi">19</span> <span class="mi">20</span><span class="p">]</span>
+</pre></div>
+</div>
+<p>To get the indices of unique values in a NumPy array (an array of first index positions of unique values in the array), just pass the return_index argument in np.unique() as well as your array.</p>
+<div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="n">unique_values</span><span class="p">,</span> <span class="n">indices_list</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">unique</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">return_index</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">indices_list</span><span class="p">)</span>
+<span class="p">[</span> <span class="mi">0</span>  <span class="mi">2</span>  <span class="mi">3</span>  <span class="mi">4</span>  <span class="mi">5</span>  <span class="mi">6</span>  <span class="mi">7</span> <span class="mi">12</span> <span class="mi">13</span> <span class="mi">14</span><span class="p">]</span>
+</pre></div>
+</div>
+<p>You can pass the return_counts argument in np.unique() along with your array to get the frequency count of unique values in a NumPy array.</p>
+<div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="n">unique_values</span><span class="p">,</span> <span class="n">occurrence_count</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">unique</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">return_counts</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">occurrence_count</span><span class="p">)</span>
+<span class="p">[</span><span class="mi">3</span> <span class="mi">2</span> <span class="mi">2</span> <span class="mi">2</span> <span class="mi">1</span> <span class="mi">1</span> <span class="mi">1</span> <span class="mi">1</span> <span class="mi">1</span> <span class="mi">1</span><span class="p">]</span>
+</pre></div>
+</div>
+<p>This also works with 2D arrays! If you start with this array:</p>
+<div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="n">a_2d</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">],</span> <span class="p">[</span><span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">8</span><span class="p">],</span> <span class="p">[</span><span class="mi">9</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">11</span><span class="p">,</span> <span class="mi">12</span><span class="p">],</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">]])</span>
+</pre></div>
+</div>
+<p>You can find unique values with:</p>
+<div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="n">unique_values</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">unique</span><span class="p">(</span><span class="n">a_2d</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">unique_values</span><span class="p">)</span>
+<span class="p">[</span> <span class="mi">1</span>  <span class="mi">2</span>  <span class="mi">3</span>  <span class="mi">4</span>  <span class="mi">5</span>  <span class="mi">6</span>  <span class="mi">7</span>  <span class="mi">8</span>  <span class="mi">9</span> <span class="mi">10</span> <span class="mi">11</span> <span class="mi">12</span><span class="p">]</span>
+</pre></div>
+</div>
+<p>If the axis argument isn’t passed, your 2D array will be flattened.</p>
+<p>If you want to get the unique rows or columns, make sure to pass the axis argument. To find the unique rows, specify axis=0 and for columns, specify axis=1.</p>
+<div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="n">unique_rows</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">unique</span><span class="p">(</span><span class="n">a_2d</span><span class="p">,</span> <span class="n">axis</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">unique_rows</span><span class="p">)</span>
+<span class="p">[[</span> <span class="mi">1</span>  <span class="mi">2</span>  <span class="mi">3</span>  <span class="mi">4</span><span class="p">]</span>
+ <span class="p">[</span> <span class="mi">5</span>  <span class="mi">6</span>  <span class="mi">7</span>  <span class="mi">8</span><span class="p">]</span>
+ <span class="p">[</span> <span class="mi">9</span> <span class="mi">10</span> <span class="mi">11</span> <span class="mi">12</span><span class="p">]]</span>
+</pre></div>
+</div>
+<p>To get the unique rows, index position, and occurrence count, you can use:</p>
+<div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="n">unique_rows</span><span class="p">,</span> <span class="n">indices</span><span class="p">,</span> <span class="n">occurrence_count</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">unique</span><span class="p">(</span>
+
+  <span class="n">a_2d</span><span class="p">,</span> <span class="n">axis</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">return_counts</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">return_index</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">unique_rows</span><span class="p">)</span>
+<span class="p">[[</span> <span class="mi">1</span>  <span class="mi">2</span>  <span class="mi">3</span>  <span class="mi">4</span><span class="p">]</span>
+ <span class="p">[</span> <span class="mi">5</span>  <span class="mi">6</span>  <span class="mi">7</span>  <span class="mi">8</span><span class="p">]</span>
+ <span class="p">[</span> <span class="mi">9</span> <span class="mi">10</span> <span class="mi">11</span> <span class="mi">12</span><span class="p">]]</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">indices</span><span class="p">)</span>
+<span class="p">[</span><span class="mi">0</span> <span class="mi">1</span> <span class="mi">2</span><span class="p">]</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">occurrence_count</span><span class="p">)</span>
+<span class="p">[</span><span class="mi">2</span> <span class="mi">1</span> <span class="mi">1</span><span class="p">]</span>
+</pre></div>
+</div>
+<p>To learn more about finding the unique elements in an array, see unique.</p>
+</section>
+<section id="transposing-and-reshaping-a-matrix">
+<h2>Transposing and reshaping a matrix<a class="headerlink" href="#transposing-and-reshaping-a-matrix" title="Link to this heading">¶</a></h2>
+<p>This section covers arr.reshape(), arr.transpose(), arr.T</p>
+<p>It’s common to need to transpose your matrices. NumPy arrays have the property T that allows you to transpose a matrix.
+../_images/np_transposing_reshaping.png</p>
+<p>You may also need to switch the dimensions of a matrix. This can happen when, for example, you have a model that expects a certain input shape that is different from your dataset. This is where the reshape method can be useful. You simply need to pass in the new dimensions that you want for the matrix.</p>
+<div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="n">data</span><span class="o">.</span><span class="n">reshape</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">)</span>
+<span class="n">array</span><span class="p">([[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">],</span>
+    <span class="p">[</span><span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">]])</span>
+
+<span class="n">data</span><span class="o">.</span><span class="n">reshape</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span>
+<span class="n">array</span><span class="p">([[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">],</span>
+    <span class="p">[</span><span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">],</span>
+    <span class="p">[</span><span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">]])</span>
+</pre></div>
+</div>
+<p>../_images/np_reshape.png</p>
+<p>You can also use .transpose() to reverse or change the axes of an array according to the values you specify.</p>
+<p>If you start with this array:</p>
+<div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="n">arr</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="mi">6</span><span class="p">)</span><span class="o">.</span><span class="n">reshape</span><span class="p">((</span><span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">))</span>
+
+<span class="n">arr</span>
+<span class="n">array</span><span class="p">([[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">],</span>
+    <span class="p">[</span><span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">]])</span>
+</pre></div>
+</div>
+<p>You can transpose your array with arr.transpose().</p>
+<div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="n">arr</span><span class="o">.</span><span class="n">transpose</span><span class="p">()</span>
+<span class="n">array</span><span class="p">([[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">3</span><span class="p">],</span>
+    <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">4</span><span class="p">],</span>
+    <span class="p">[</span><span class="mi">2</span><span class="p">,</span> <span class="mi">5</span><span class="p">]])</span>
+</pre></div>
+</div>
+<p>You can also use arr.T:</p>
+<div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="n">arr</span><span class="o">.</span><span class="n">T</span>
+<span class="n">array</span><span class="p">([[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">3</span><span class="p">],</span>
+    <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">4</span><span class="p">],</span>
+    <span class="p">[</span><span class="mi">2</span><span class="p">,</span> <span class="mi">5</span><span class="p">]])</span>
+</pre></div>
+</div>
+<p>To learn more about transposing and reshaping arrays, see transpose and reshape.</p>
+</section>
+<section id="how-to-reverse-an-array">
+<h2>How to reverse an array<a class="headerlink" href="#how-to-reverse-an-array" title="Link to this heading">¶</a></h2>
+<p>This section covers np.flip()</p>
+<p>NumPy’s np.flip() function allows you to flip, or reverse, the contents of an array along an axis. When using np.flip(), specify the array you would like to reverse and the axis. If you don’t specify the axis, NumPy will reverse the contents along all of the axes of your input array.</p>
+<p><strong>Reversing a 1D array</strong></p>
+<p>If you begin with a 1D array like this one:</p>
+<div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="n">arr</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">8</span><span class="p">])</span>
+</pre></div>
+</div>
+<p>You can reverse it with:</p>
+<div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="n">reversed_arr</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">flip</span><span class="p">(</span><span class="n">arr</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>If you want to print your reversed array, you can run:</p>
+<div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Reversed Array: &#39;</span><span class="p">,</span> <span class="n">reversed_arr</span><span class="p">)</span>
+<span class="n">Reversed</span> <span class="n">Array</span><span class="p">:</span>  <span class="p">[</span><span class="mi">8</span> <span class="mi">7</span> <span class="mi">6</span> <span class="mi">5</span> <span class="mi">4</span> <span class="mi">3</span> <span class="mi">2</span> <span class="mi">1</span><span class="p">]</span>
+</pre></div>
+</div>
+<p><strong>Reversing a 2D array</strong></p>
+<p>A 2D array works much the same way.</p>
+<p>If you start with this array:</p>
+<div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="n">arr_2d</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">],</span> <span class="p">[</span><span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">8</span><span class="p">],</span> <span class="p">[</span><span class="mi">9</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">11</span><span class="p">,</span> <span class="mi">12</span><span class="p">]])</span>
+</pre></div>
+</div>
+<p>You can reverse the content in all of the rows and all of the columns with:</p>
+<div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="n">reversed_arr</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">flip</span><span class="p">(</span><span class="n">arr_2d</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">reversed_arr</span><span class="p">)</span>
+<span class="p">[[</span><span class="mi">12</span> <span class="mi">11</span> <span class="mi">10</span>  <span class="mi">9</span><span class="p">]</span>
+ <span class="p">[</span> <span class="mi">8</span>  <span class="mi">7</span>  <span class="mi">6</span>  <span class="mi">5</span><span class="p">]</span>
+ <span class="p">[</span> <span class="mi">4</span>  <span class="mi">3</span>  <span class="mi">2</span>  <span class="mi">1</span><span class="p">]]</span>
+</pre></div>
+</div>
+<p>You can easily reverse only the rows with:</p>
+<div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="n">reversed_arr_rows</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">flip</span><span class="p">(</span><span class="n">arr_2d</span><span class="p">,</span> <span class="n">axis</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">reversed_arr_rows</span><span class="p">)</span>
+<span class="p">[[</span> <span class="mi">9</span> <span class="mi">10</span> <span class="mi">11</span> <span class="mi">12</span><span class="p">]</span>
+ <span class="p">[</span> <span class="mi">5</span>  <span class="mi">6</span>  <span class="mi">7</span>  <span class="mi">8</span><span class="p">]</span>
+ <span class="p">[</span> <span class="mi">1</span>  <span class="mi">2</span>  <span class="mi">3</span>  <span class="mi">4</span><span class="p">]]</span>
+</pre></div>
+</div>
+<p>Or reverse only the columns with:</p>
+<div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="n">reversed_arr_columns</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">flip</span><span class="p">(</span><span class="n">arr_2d</span><span class="p">,</span> <span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">reversed_arr_columns</span><span class="p">)</span>
+<span class="p">[[</span> <span class="mi">4</span>  <span class="mi">3</span>  <span class="mi">2</span>  <span class="mi">1</span><span class="p">]</span>
+ <span class="p">[</span> <span class="mi">8</span>  <span class="mi">7</span>  <span class="mi">6</span>  <span class="mi">5</span><span class="p">]</span>
+ <span class="p">[</span><span class="mi">12</span> <span class="mi">11</span> <span class="mi">10</span>  <span class="mi">9</span><span class="p">]]</span>
+</pre></div>
+</div>
+<p>You can also reverse the contents of only one column or row. For example, you can reverse the contents of the row at index position 1 (the second row):</p>
+<div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="n">arr_2d</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">flip</span><span class="p">(</span><span class="n">arr_2d</span><span class="p">[</span><span class="mi">1</span><span class="p">])</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">arr_2d</span><span class="p">)</span>
+<span class="p">[[</span> <span class="mi">1</span>  <span class="mi">2</span>  <span class="mi">3</span>  <span class="mi">4</span><span class="p">]</span>
+ <span class="p">[</span> <span class="mi">8</span>  <span class="mi">7</span>  <span class="mi">6</span>  <span class="mi">5</span><span class="p">]</span>
+ <span class="p">[</span> <span class="mi">9</span> <span class="mi">10</span> <span class="mi">11</span> <span class="mi">12</span><span class="p">]]</span>
+</pre></div>
+</div>
+<p>You can also reverse the column at index position 1 (the second column):</p>
+<div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="n">arr_2d</span><span class="p">[:,</span><span class="mi">1</span><span class="p">]</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">flip</span><span class="p">(</span><span class="n">arr_2d</span><span class="p">[:,</span><span class="mi">1</span><span class="p">])</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">arr_2d</span><span class="p">)</span>
+<span class="p">[[</span> <span class="mi">1</span> <span class="mi">10</span>  <span class="mi">3</span>  <span class="mi">4</span><span class="p">]</span>
+ <span class="p">[</span> <span class="mi">8</span>  <span class="mi">7</span>  <span class="mi">6</span>  <span class="mi">5</span><span class="p">]</span>
+ <span class="p">[</span> <span class="mi">9</span>  <span class="mi">2</span> <span class="mi">11</span> <span class="mi">12</span><span class="p">]]</span>
+</pre></div>
+</div>
+<p>Read more about reversing arrays at flip.</p>
+</section>
+<section id="reshaping-and-flattening-multidimensional-arrays">
+<h2>Reshaping and flattening multidimensional arrays<a class="headerlink" href="#reshaping-and-flattening-multidimensional-arrays" title="Link to this heading">¶</a></h2>
+<p>This section covers .flatten(), ravel()</p>
+<p>There are two popular ways to flatten an array: .flatten() and .ravel(). The primary difference between the two is that the new array created using ravel() is actually a reference to the parent array (i.e., a “view”). This means that any changes to the new array will affect the parent array as well. Since ravel does not create a copy, it’s memory efficient.</p>
+<p>If you start with this array:</p>
+<div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="n">x</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">],</span> <span class="p">[</span><span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">8</span><span class="p">],</span> <span class="p">[</span><span class="mi">9</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">11</span><span class="p">,</span> <span class="mi">12</span><span class="p">]])</span>
+</pre></div>
+</div>
+<p>You can use flatten to flatten your array into a 1D array.</p>
+<div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="n">x</span><span class="o">.</span><span class="n">flatten</span><span class="p">()</span>
+<span class="n">array</span><span class="p">([</span> <span class="mi">1</span><span class="p">,</span>  <span class="mi">2</span><span class="p">,</span>  <span class="mi">3</span><span class="p">,</span>  <span class="mi">4</span><span class="p">,</span>  <span class="mi">5</span><span class="p">,</span>  <span class="mi">6</span><span class="p">,</span>  <span class="mi">7</span><span class="p">,</span>  <span class="mi">8</span><span class="p">,</span>  <span class="mi">9</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">11</span><span class="p">,</span> <span class="mi">12</span><span class="p">])</span>
+</pre></div>
+</div>
+<p>When you use flatten, changes to your new array won’t change the parent array.</p>
+<p>For example:</p>
+<div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="n">a1</span> <span class="o">=</span> <span class="n">x</span><span class="o">.</span><span class="n">flatten</span><span class="p">()</span>
+
+<span class="n">a1</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">=</span> <span class="mi">99</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>  <span class="c1"># Original array</span>
+<span class="p">[[</span> <span class="mi">1</span>  <span class="mi">2</span>  <span class="mi">3</span>  <span class="mi">4</span><span class="p">]</span>
+ <span class="p">[</span> <span class="mi">5</span>  <span class="mi">6</span>  <span class="mi">7</span>  <span class="mi">8</span><span class="p">]</span>
+ <span class="p">[</span> <span class="mi">9</span> <span class="mi">10</span> <span class="mi">11</span> <span class="mi">12</span><span class="p">]]</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">a1</span><span class="p">)</span>  <span class="c1"># New array</span>
+<span class="p">[</span><span class="mi">99</span>  <span class="mi">2</span>  <span class="mi">3</span>  <span class="mi">4</span>  <span class="mi">5</span>  <span class="mi">6</span>  <span class="mi">7</span>  <span class="mi">8</span>  <span class="mi">9</span> <span class="mi">10</span> <span class="mi">11</span> <span class="mi">12</span><span class="p">]</span>
+</pre></div>
+</div>
+<p>But when you use ravel, the changes you make to the new array will affect the parent array.</p>
+<p>For example:</p>
+<div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="n">a2</span> <span class="o">=</span> <span class="n">x</span><span class="o">.</span><span class="n">ravel</span><span class="p">()</span>
+
+<span class="n">a2</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">=</span> <span class="mi">98</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>  <span class="c1"># Original array</span>
+<span class="p">[[</span><span class="mi">98</span>  <span class="mi">2</span>  <span class="mi">3</span>  <span class="mi">4</span><span class="p">]</span>
+ <span class="p">[</span> <span class="mi">5</span>  <span class="mi">6</span>  <span class="mi">7</span>  <span class="mi">8</span><span class="p">]</span>
+ <span class="p">[</span> <span class="mi">9</span> <span class="mi">10</span> <span class="mi">11</span> <span class="mi">12</span><span class="p">]]</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">a2</span><span class="p">)</span>  <span class="c1"># New array</span>
+<span class="p">[</span><span class="mi">98</span>  <span class="mi">2</span>  <span class="mi">3</span>  <span class="mi">4</span>  <span class="mi">5</span>  <span class="mi">6</span>  <span class="mi">7</span>  <span class="mi">8</span>  <span class="mi">9</span> <span class="mi">10</span> <span class="mi">11</span> <span class="mi">12</span><span class="p">]</span>
+</pre></div>
+</div>
+<p>Read more about flatten at ndarray.flatten and ravel at ravel.</p>
+</section>
+<section id="how-to-access-the-docstring-for-more-information">
+<h2>How to access the docstring for more information<a class="headerlink" href="#how-to-access-the-docstring-for-more-information" title="Link to this heading">¶</a></h2>
+<p>This section covers help(), ?, ??</p>
+<p>When it comes to the data science ecosystem, Python and NumPy are built with the user in mind. One of the best examples of this is the built-in access to documentation. Every object contains the reference to a string, which is known as the docstring. In most cases, this docstring contains a quick and concise summary of the object and how to use it. Python has a built-in help() function that can help you access this information. This means that nearly any time you need more information, you can use help() to quickly find the information that you need.</p>
+<p>For example:</p>
+<div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="n">help</span><span class="p">(</span><span class="nb">max</span><span class="p">)</span>
+<span class="n">Help</span> <span class="n">on</span> <span class="n">built</span><span class="o">-</span><span class="ow">in</span> <span class="n">function</span> <span class="nb">max</span> <span class="ow">in</span> <span class="n">module</span> <span class="n">builtins</span><span class="p">:</span>
+
+<span class="nb">max</span><span class="p">(</span><span class="o">...</span><span class="p">)</span>
+ <span class="nb">max</span><span class="p">(</span><span class="n">iterable</span><span class="p">,</span> <span class="o">*</span><span class="p">[,</span> <span class="n">default</span><span class="o">=</span><span class="n">obj</span><span class="p">,</span> <span class="n">key</span><span class="o">=</span><span class="n">func</span><span class="p">])</span> <span class="o">-&gt;</span> <span class="n">value</span>
+ <span class="nb">max</span><span class="p">(</span><span class="n">arg1</span><span class="p">,</span> <span class="n">arg2</span><span class="p">,</span> <span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">*</span><span class="p">[,</span> <span class="n">key</span><span class="o">=</span><span class="n">func</span><span class="p">])</span> <span class="o">-&gt;</span> <span class="n">value</span>
+
+ <span class="n">With</span> <span class="n">a</span> <span class="n">single</span> <span class="n">iterable</span> <span class="n">argument</span><span class="p">,</span> <span class="k">return</span> <span class="n">its</span> <span class="n">biggest</span> <span class="n">item</span><span class="o">.</span> <span class="n">The</span>
+ <span class="n">default</span> <span class="n">keyword</span><span class="o">-</span><span class="n">only</span> <span class="n">argument</span> <span class="n">specifies</span> <span class="n">an</span> <span class="nb">object</span> <span class="n">to</span> <span class="k">return</span> <span class="k">if</span>
+ <span class="n">the</span> <span class="n">provided</span> <span class="n">iterable</span> <span class="ow">is</span> <span class="n">empty</span><span class="o">.</span>
+ <span class="n">With</span> <span class="n">two</span> <span class="ow">or</span> <span class="n">more</span> <span class="n">arguments</span><span class="p">,</span> <span class="k">return</span> <span class="n">the</span> <span class="n">largest</span> <span class="n">argument</span><span class="o">.</span>
+</pre></div>
+</div>
+<p>Because access to additional information is so useful, IPython uses the ? character as a shorthand for accessing this documentation along with other relevant information. IPython is a command shell for interactive computing in multiple languages. You can find more information about IPython here.</p>
+<p>For example:</p>
+<div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="n">In</span> <span class="p">[</span><span class="mi">0</span><span class="p">]:</span> <span class="nb">max</span><span class="err">?</span>
+<span class="nb">max</span><span class="p">(</span><span class="n">iterable</span><span class="p">,</span> <span class="o">*</span><span class="p">[,</span> <span class="n">default</span><span class="o">=</span><span class="n">obj</span><span class="p">,</span> <span class="n">key</span><span class="o">=</span><span class="n">func</span><span class="p">])</span> <span class="o">-&gt;</span> <span class="n">value</span>
+<span class="nb">max</span><span class="p">(</span><span class="n">arg1</span><span class="p">,</span> <span class="n">arg2</span><span class="p">,</span> <span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">*</span><span class="p">[,</span> <span class="n">key</span><span class="o">=</span><span class="n">func</span><span class="p">])</span> <span class="o">-&gt;</span> <span class="n">value</span>
+
+<span class="n">With</span> <span class="n">a</span> <span class="n">single</span> <span class="n">iterable</span> <span class="n">argument</span><span class="p">,</span> <span class="k">return</span> <span class="n">its</span> <span class="n">biggest</span> <span class="n">item</span><span class="o">.</span> <span class="n">The</span>
+<span class="n">default</span> <span class="n">keyword</span><span class="o">-</span><span class="n">only</span> <span class="n">argument</span> <span class="n">specifies</span> <span class="n">an</span> <span class="nb">object</span> <span class="n">to</span> <span class="k">return</span> <span class="k">if</span>
+<span class="n">the</span> <span class="n">provided</span> <span class="n">iterable</span> <span class="ow">is</span> <span class="n">empty</span><span class="o">.</span>
+<span class="n">With</span> <span class="n">two</span> <span class="ow">or</span> <span class="n">more</span> <span class="n">arguments</span><span class="p">,</span> <span class="k">return</span> <span class="n">the</span> <span class="n">largest</span> <span class="n">argument</span><span class="o">.</span>
+<span class="n">Type</span><span class="p">:</span>      <span class="n">builtin_function_or_method</span>
+</pre></div>
+</div>
+<p>You can even use this notation for object methods and objects themselves.</p>
+<p>Let’s say you create this array:</p>
+<div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="n">a</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">])</span>
+</pre></div>
+</div>
+<p>Then you can obtain a lot of useful information (first details about a itself, followed by the docstring of ndarray of which a is an instance):</p>
+<div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="n">In</span> <span class="p">[</span><span class="mi">1</span><span class="p">]:</span> <span class="n">a</span><span class="err">?</span>
+<span class="n">Type</span><span class="p">:</span>            <span class="n">ndarray</span>
+<span class="n">String</span> <span class="n">form</span><span class="p">:</span>     <span class="p">[</span><span class="mi">1</span> <span class="mi">2</span> <span class="mi">3</span> <span class="mi">4</span> <span class="mi">5</span> <span class="mi">6</span><span class="p">]</span>
+<span class="n">Length</span><span class="p">:</span>          <span class="mi">6</span>
+<span class="n">File</span><span class="p">:</span>            <span class="o">~/</span><span class="n">anaconda3</span><span class="o">/</span><span class="n">lib</span><span class="o">/</span><span class="n">python3</span><span class="mf">.9</span><span class="o">/</span><span class="n">site</span><span class="o">-</span><span class="n">packages</span><span class="o">/</span><span class="n">numpy</span><span class="o">/</span><span class="fm">__init__</span><span class="o">.</span><span class="n">py</span>
+<span class="n">Docstring</span><span class="p">:</span>       <span class="o">&lt;</span><span class="n">no</span> <span class="n">docstring</span><span class="o">&gt;</span>
+<span class="n">Class</span> <span class="n">docstring</span><span class="p">:</span>
+<span class="n">ndarray</span><span class="p">(</span><span class="n">shape</span><span class="p">,</span> <span class="n">dtype</span><span class="o">=</span><span class="nb">float</span><span class="p">,</span> <span class="n">buffer</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">offset</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span>
+     <span class="n">strides</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">order</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span>
+
+<span class="n">An</span> <span class="n">array</span> <span class="nb">object</span> <span class="n">represents</span> <span class="n">a</span> <span class="n">multidimensional</span><span class="p">,</span> <span class="n">homogeneous</span> <span class="n">array</span>
+<span class="n">of</span> <span class="n">fixed</span><span class="o">-</span><span class="n">size</span> <span class="n">items</span><span class="o">.</span>  <span class="n">An</span> <span class="n">associated</span> <span class="n">data</span><span class="o">-</span><span class="nb">type</span> <span class="nb">object</span> <span class="n">describes</span> <span class="n">the</span>
+<span class="nb">format</span> <span class="n">of</span> <span class="n">each</span> <span class="n">element</span> <span class="ow">in</span> <span class="n">the</span> <span class="n">array</span> <span class="p">(</span><span class="n">its</span> <span class="n">byte</span><span class="o">-</span><span class="n">order</span><span class="p">,</span> <span class="n">how</span> <span class="n">many</span> <span class="nb">bytes</span> <span class="n">it</span>
+<span class="n">occupies</span> <span class="ow">in</span> <span class="n">memory</span><span class="p">,</span> <span class="n">whether</span> <span class="n">it</span> <span class="ow">is</span> <span class="n">an</span> <span class="n">integer</span><span class="p">,</span> <span class="n">a</span> <span class="n">floating</span> <span class="n">point</span> <span class="n">number</span><span class="p">,</span>
+<span class="ow">or</span> <span class="n">something</span> <span class="k">else</span><span class="p">,</span> <span class="n">etc</span><span class="o">.</span><span class="p">)</span>
+
+<span class="n">Arrays</span> <span class="n">should</span> <span class="n">be</span> <span class="n">constructed</span> <span class="n">using</span> <span class="err">`</span><span class="n">array</span><span class="err">`</span><span class="p">,</span> <span class="err">`</span><span class="n">zeros</span><span class="err">`</span> <span class="ow">or</span> <span class="err">`</span><span class="n">empty</span><span class="err">`</span> <span class="p">(</span><span class="n">refer</span>
+<span class="n">to</span> <span class="n">the</span> <span class="n">See</span> <span class="n">Also</span> <span class="n">section</span> <span class="n">below</span><span class="p">)</span><span class="o">.</span>  <span class="n">The</span> <span class="n">parameters</span> <span class="n">given</span> <span class="n">here</span> <span class="n">refer</span> <span class="n">to</span>
+<span class="n">a</span> <span class="n">low</span><span class="o">-</span><span class="n">level</span> <span class="n">method</span> <span class="p">(</span><span class="err">`</span><span class="n">ndarray</span><span class="p">(</span><span class="o">...</span><span class="p">)</span><span class="err">`</span><span class="p">)</span> <span class="k">for</span> <span class="n">instantiating</span> <span class="n">an</span> <span class="n">array</span><span class="o">.</span>
+
+<span class="n">For</span> <span class="n">more</span> <span class="n">information</span><span class="p">,</span> <span class="n">refer</span> <span class="n">to</span> <span class="n">the</span> <span class="err">`</span><span class="n">numpy</span><span class="err">`</span> <span class="n">module</span> <span class="ow">and</span> <span class="n">examine</span> <span class="n">the</span>
+<span class="n">methods</span> <span class="ow">and</span> <span class="n">attributes</span> <span class="n">of</span> <span class="n">an</span> <span class="n">array</span><span class="o">.</span>
+
+<span class="n">Parameters</span>
+<span class="o">----------</span>
+<span class="p">(</span><span class="k">for</span> <span class="n">the</span> <span class="fm">__new__</span> <span class="n">method</span><span class="p">;</span> <span class="n">see</span> <span class="n">Notes</span> <span class="n">below</span><span class="p">)</span>
+
+<span class="n">shape</span> <span class="p">:</span> <span class="nb">tuple</span> <span class="n">of</span> <span class="n">ints</span>
+     <span class="n">Shape</span> <span class="n">of</span> <span class="n">created</span> <span class="n">array</span><span class="o">.</span>
+<span class="o">...</span>
+</pre></div>
+</div>
+<p>This also works for functions and other objects that you create. Just remember to include a docstring with your function using a string literal (“”” “”” or ‘’’ ‘’’ around your documentation).</p>
+<p>For example, if you create this function:</p>
+<div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span><span class="w"> </span><span class="nf">double</span><span class="p">(</span><span class="n">a</span><span class="p">):</span>
+
+<span class="w">  </span><span class="sd">&#39;&#39;&#39;Return a * 2&#39;&#39;&#39;</span>
+
+  <span class="k">return</span> <span class="n">a</span> <span class="o">*</span> <span class="mi">2</span>
+</pre></div>
+</div>
+<p>You can obtain information about the function:</p>
+<div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="n">In</span> <span class="p">[</span><span class="mi">2</span><span class="p">]:</span> <span class="n">double</span><span class="err">?</span>
+<span class="n">Signature</span><span class="p">:</span> <span class="n">double</span><span class="p">(</span><span class="n">a</span><span class="p">)</span>
+<span class="n">Docstring</span><span class="p">:</span> <span class="n">Return</span> <span class="n">a</span> <span class="o">*</span> <span class="mi">2</span>
+<span class="n">File</span><span class="p">:</span>      <span class="o">~/</span><span class="n">Desktop</span><span class="o">/&lt;</span><span class="n">ipython</span><span class="o">-</span><span class="nb">input</span><span class="o">-</span><span class="mi">23</span><span class="o">-</span><span class="n">b5adf20be596</span><span class="o">&gt;</span>
+<span class="n">Type</span><span class="p">:</span>      <span class="n">function</span>
+</pre></div>
+</div>
+<p>You can reach another level of information by reading the source code of the object you’re interested in. Using a double question mark (??) allows you to access the source code.</p>
+<p>For example:</p>
+<div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="n">In</span><span class="p">[</span><span class="mi">3</span><span class="p">]:</span> <span class="n">double</span><span class="err">??</span>
+<span class="n">Signature</span><span class="p">:</span> <span class="n">double</span><span class="p">(</span><span class="n">a</span><span class="p">)</span>
+<span class="n">Source</span><span class="p">:</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">double</span><span class="p">(</span><span class="n">a</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&#39;&#39;&#39;Return a * 2&#39;&#39;&#39;</span>
+    <span class="k">return</span> <span class="n">a</span> <span class="o">*</span> <span class="mi">2</span>
+<span class="n">File</span><span class="p">:</span>      <span class="o">~/</span><span class="n">Desktop</span><span class="o">/&lt;</span><span class="n">ipython</span><span class="o">-</span><span class="nb">input</span><span class="o">-</span><span class="mi">23</span><span class="o">-</span><span class="n">b5adf20be596</span><span class="o">&gt;</span>
+<span class="n">Type</span><span class="p">:</span>      <span class="n">function</span>
+</pre></div>
+</div>
+<p>If the object in question is compiled in a language other than Python, using ?? will return the same information as ?. You’ll find this with a lot of built-in objects and types, for example:</p>
+<div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="n">In</span> <span class="p">[</span><span class="mi">4</span><span class="p">]:</span> <span class="nb">len</span><span class="err">?</span>
+<span class="n">Signature</span><span class="p">:</span> <span class="nb">len</span><span class="p">(</span><span class="n">obj</span><span class="p">,</span> <span class="o">/</span><span class="p">)</span>
+<span class="n">Docstring</span><span class="p">:</span> <span class="n">Return</span> <span class="n">the</span> <span class="n">number</span> <span class="n">of</span> <span class="n">items</span> <span class="ow">in</span> <span class="n">a</span> <span class="n">container</span><span class="o">.</span>
+<span class="n">Type</span><span class="p">:</span>      <span class="n">builtin_function_or_method</span>
+</pre></div>
+</div>
+<p>and :</p>
+<div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="n">In</span> <span class="p">[</span><span class="mi">5</span><span class="p">]:</span> <span class="nb">len</span><span class="err">??</span>
+<span class="n">Signature</span><span class="p">:</span> <span class="nb">len</span><span class="p">(</span><span class="n">obj</span><span class="p">,</span> <span class="o">/</span><span class="p">)</span>
+<span class="n">Docstring</span><span class="p">:</span> <span class="n">Return</span> <span class="n">the</span> <span class="n">number</span> <span class="n">of</span> <span class="n">items</span> <span class="ow">in</span> <span class="n">a</span> <span class="n">container</span><span class="o">.</span>
+<span class="n">Type</span><span class="p">:</span>      <span class="n">builtin_function_or_method</span>
+</pre></div>
+</div>
+<p>have the same output because they were compiled in a programming language other than Python.</p>
+</section>
+<section id="working-with-mathematical-formulas">
+<h2>Working with mathematical formulas<a class="headerlink" href="#working-with-mathematical-formulas" title="Link to this heading">¶</a></h2>
+<p>The ease of implementing mathematical formulas that work on arrays is one of the things that make NumPy so widely used in the scientific Python community.</p>
+<p>For example, this is the mean square error formula (a central formula used in supervised machine learning models that deal with regression):
+../_images/np_MSE_formula.png</p>
+<p>Implementing this formula is simple and straightforward in NumPy:
+../_images/np_MSE_implementation.png</p>
+<p>What makes this work so well is that predictions and labels can contain one or a thousand values. They only need to be the same size.</p>
+<p>You can visualize it this way:
+../_images/np_mse_viz1.png</p>
+<p>In this example, both the predictions and labels vectors contain three values, meaning n has a value of three. After we carry out subtractions the values in the vector are squared. Then NumPy sums the values, and your result is the error value for that prediction and a score for the quality of the model.
+../_images/np_mse_viz2.png ../_images/np_MSE_explanation2.png</p>
+</section>
+<section id="how-to-save-and-load-numpy-objects">
+<h2>How to save and load NumPy objects<a class="headerlink" href="#how-to-save-and-load-numpy-objects" title="Link to this heading">¶</a></h2>
+<p>This section covers np.save, np.savez, np.savetxt, np.load, np.loadtxt</p>
+<p>You will, at some point, want to save your arrays to disk and load them back without having to re-run the code. Fortunately, there are several ways to save and load objects with NumPy. The ndarray objects can be saved to and loaded from the disk files with loadtxt and savetxt functions that handle normal text files, load and save functions that handle NumPy binary files with a .npy file extension, and a savez function that handles NumPy files with a .npz file extension.</p>
+<p>The .npy and .npz files store data, shape, dtype, and other information required to reconstruct the ndarray in a way that allows the array to be correctly retrieved, even when the file is on another machine with different architecture.</p>
+<p>If you want to store a single ndarray object, store it as a .npy file using np.save. If you want to store more than one ndarray object in a single file, save it as a .npz file using np.savez. You can also save several arrays into a single file in compressed npz format with savez_compressed.</p>
+<p>It’s easy to save and load an array with np.save(). Just make sure to specify the array you want to save and a file name. For example, if you create this array:</p>
+<div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="n">a</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">])</span>
+</pre></div>
+</div>
+<p>You can save it as “filename.npy” with:</p>
+<div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="n">np</span><span class="o">.</span><span class="n">save</span><span class="p">(</span><span class="s1">&#39;filename&#39;</span><span class="p">,</span> <span class="n">a</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>You can use np.load() to reconstruct your array.</p>
+<div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="n">b</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">load</span><span class="p">(</span><span class="s1">&#39;filename.npy&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>If you want to check your array, you can run:</p>
+<div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">b</span><span class="p">)</span>
+<span class="p">[</span><span class="mi">1</span> <span class="mi">2</span> <span class="mi">3</span> <span class="mi">4</span> <span class="mi">5</span> <span class="mi">6</span><span class="p">]</span>
+</pre></div>
+</div>
+<p>You can save a NumPy array as a plain text file like a .csv or .txt file with np.savetxt.</p>
+<p>For example, if you create this array:</p>
+<div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="n">csv_arr</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">8</span><span class="p">])</span>
+</pre></div>
+</div>
+<p>You can easily save it as a .csv file with the name “new_file.csv” like this:</p>
+<div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="n">np</span><span class="o">.</span><span class="n">savetxt</span><span class="p">(</span><span class="s1">&#39;new_file.csv&#39;</span><span class="p">,</span> <span class="n">csv_arr</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>You can quickly and easily load your saved text file using loadtxt():</p>
+<div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="n">np</span><span class="o">.</span><span class="n">loadtxt</span><span class="p">(</span><span class="s1">&#39;new_file.csv&#39;</span><span class="p">)</span>
+<span class="n">array</span><span class="p">([</span><span class="mf">1.</span><span class="p">,</span> <span class="mf">2.</span><span class="p">,</span> <span class="mf">3.</span><span class="p">,</span> <span class="mf">4.</span><span class="p">,</span> <span class="mf">5.</span><span class="p">,</span> <span class="mf">6.</span><span class="p">,</span> <span class="mf">7.</span><span class="p">,</span> <span class="mf">8.</span><span class="p">])</span>
+</pre></div>
+</div>
+<p>The savetxt() and loadtxt() functions accept additional optional parameters such as header, footer, and delimiter. While text files can be easier for sharing, .npy and .npz files are smaller and faster to read. If you need more sophisticated handling of your text file (for example, if you need to work with lines that contain missing values), you will want to use the genfromtxt function.</p>
+<p>With savetxt, you can specify headers, footers, comments, and more.</p>
+<p>Learn more about input and output routines here.</p>
+</section>
+<section id="importing-and-exporting-a-csv">
+<h2>Importing and exporting a CSV<a class="headerlink" href="#importing-and-exporting-a-csv" title="Link to this heading">¶</a></h2>
+<p>It’s simple to read in a CSV that contains existing information. The best and easiest way to do this is to use Pandas.</p>
+<div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">pandas</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">pd</span>
+
+<span class="c1"># If all of your columns are the same type:</span>
+
+<span class="n">x</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">&#39;music.csv&#39;</span><span class="p">,</span> <span class="n">header</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span><span class="o">.</span><span class="n">values</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+<span class="p">[[</span><span class="s1">&#39;Billie Holiday&#39;</span> <span class="s1">&#39;Jazz&#39;</span> <span class="mi">1300000</span> <span class="mi">27000000</span><span class="p">]</span>
+ <span class="p">[</span><span class="s1">&#39;Jimmie Hendrix&#39;</span> <span class="s1">&#39;Rock&#39;</span> <span class="mi">2700000</span> <span class="mi">70000000</span><span class="p">]</span>
+ <span class="p">[</span><span class="s1">&#39;Miles Davis&#39;</span> <span class="s1">&#39;Jazz&#39;</span> <span class="mi">1500000</span> <span class="mi">48000000</span><span class="p">]</span>
+ <span class="p">[</span><span class="s1">&#39;SIA&#39;</span> <span class="s1">&#39;Pop&#39;</span> <span class="mi">2000000</span> <span class="mi">74000000</span><span class="p">]]</span>
+
+<span class="c1"># You can also simply select the columns you need:</span>
+
+<span class="n">x</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">&#39;music.csv&#39;</span><span class="p">,</span> <span class="n">usecols</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;Artist&#39;</span><span class="p">,</span> <span class="s1">&#39;Plays&#39;</span><span class="p">])</span><span class="o">.</span><span class="n">values</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+<span class="p">[[</span><span class="s1">&#39;Billie Holiday&#39;</span> <span class="mi">27000000</span><span class="p">]</span>
+ <span class="p">[</span><span class="s1">&#39;Jimmie Hendrix&#39;</span> <span class="mi">70000000</span><span class="p">]</span>
+ <span class="p">[</span><span class="s1">&#39;Miles Davis&#39;</span> <span class="mi">48000000</span><span class="p">]</span>
+ <span class="p">[</span><span class="s1">&#39;SIA&#39;</span> <span class="mi">74000000</span><span class="p">]]</span>
+</pre></div>
+</div>
+<p>../_images/np_pandas.png</p>
+<p>It’s simple to use Pandas in order to export your array as well. If you are new to NumPy, you may want to create a Pandas dataframe from the values in your array and then write the data frame to a CSV file with Pandas.</p>
+<p>If you created this array “a”</p>
+<div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="n">a</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([[</span><span class="o">-</span><span class="mf">2.58289208</span><span class="p">,</span>  <span class="mf">0.43014843</span><span class="p">,</span> <span class="o">-</span><span class="mf">1.24082018</span><span class="p">,</span> <span class="mf">1.59572603</span><span class="p">],</span>
+
+           <span class="p">[</span> <span class="mf">0.99027828</span><span class="p">,</span> <span class="mf">1.17150989</span><span class="p">,</span>  <span class="mf">0.94125714</span><span class="p">,</span> <span class="o">-</span><span class="mf">0.14692469</span><span class="p">],</span>
+
+           <span class="p">[</span> <span class="mf">0.76989341</span><span class="p">,</span>  <span class="mf">0.81299683</span><span class="p">,</span> <span class="o">-</span><span class="mf">0.95068423</span><span class="p">,</span> <span class="mf">0.11769564</span><span class="p">],</span>
+
+           <span class="p">[</span> <span class="mf">0.20484034</span><span class="p">,</span>  <span class="mf">0.34784527</span><span class="p">,</span>  <span class="mf">1.96979195</span><span class="p">,</span> <span class="mf">0.51992837</span><span class="p">]])</span>
+</pre></div>
+</div>
+<p>You could create a Pandas dataframe</p>
+<div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">a</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">df</span><span class="p">)</span>
+       <span class="mi">0</span>         <span class="mi">1</span>         <span class="mi">2</span>         <span class="mi">3</span>
+<span class="mi">0</span> <span class="o">-</span><span class="mf">2.582892</span>  <span class="mf">0.430148</span> <span class="o">-</span><span class="mf">1.240820</span>  <span class="mf">1.595726</span>
+<span class="mi">1</span>  <span class="mf">0.990278</span>  <span class="mf">1.171510</span>  <span class="mf">0.941257</span> <span class="o">-</span><span class="mf">0.146925</span>
+<span class="mi">2</span>  <span class="mf">0.769893</span>  <span class="mf">0.812997</span> <span class="o">-</span><span class="mf">0.950684</span>  <span class="mf">0.117696</span>
+<span class="mi">3</span>  <span class="mf">0.204840</span>  <span class="mf">0.347845</span>  <span class="mf">1.969792</span>  <span class="mf">0.519928</span>
+</pre></div>
+</div>
+<p>You can easily save your dataframe with:</p>
+<div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="n">df</span><span class="o">.</span><span class="n">to_csv</span><span class="p">(</span><span class="s1">&#39;pd.csv&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>And read your CSV with:</p>
+<div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="n">data</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">&#39;pd.csv&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>../_images/np_readcsv.png</p>
+<p>You can also save your array with the NumPy savetxt method.</p>
+<div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="n">np</span><span class="o">.</span><span class="n">savetxt</span><span class="p">(</span><span class="s1">&#39;np.csv&#39;</span><span class="p">,</span> <span class="n">a</span><span class="p">,</span> <span class="n">fmt</span><span class="o">=</span><span class="s1">&#39;</span><span class="si">%.2f</span><span class="s1">&#39;</span><span class="p">,</span> <span class="n">delimiter</span><span class="o">=</span><span class="s1">&#39;,&#39;</span><span class="p">,</span> <span class="n">header</span><span class="o">=</span><span class="s1">&#39;1,  2,  3,  4&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>If you’re using the command line, you can read your saved CSV any time with a command such as:</p>
+<div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="err">$</span> <span class="n">cat</span> <span class="n">np</span><span class="o">.</span><span class="n">csv</span>
+<span class="c1">#  1,  2,  3,  4</span>
+<span class="o">-</span><span class="mf">2.58</span><span class="p">,</span><span class="mf">0.43</span><span class="p">,</span><span class="o">-</span><span class="mf">1.24</span><span class="p">,</span><span class="mf">1.60</span>
+<span class="mf">0.99</span><span class="p">,</span><span class="mf">1.17</span><span class="p">,</span><span class="mf">0.94</span><span class="p">,</span><span class="o">-</span><span class="mf">0.15</span>
+<span class="mf">0.77</span><span class="p">,</span><span class="mf">0.81</span><span class="p">,</span><span class="o">-</span><span class="mf">0.95</span><span class="p">,</span><span class="mf">0.12</span>
+<span class="mf">0.20</span><span class="p">,</span><span class="mf">0.35</span><span class="p">,</span><span class="mf">1.97</span><span class="p">,</span><span class="mf">0.52</span>
+</pre></div>
+</div>
+<p>Or you can open the file any time with a text editor!</p>
+<p>If you’re interested in learning more about Pandas, take a look at the official Pandas documentation. Learn how to install Pandas with the official Pandas installation information.</p>
+</section>
+<section id="plotting-arrays-with-matplotlib">
+<h2>Plotting arrays with Matplotlib<a class="headerlink" href="#plotting-arrays-with-matplotlib" title="Link to this heading">¶</a></h2>
+<p>If you need to generate a plot for your values, it’s very simple with Matplotlib.</p>
+<p>For example, you may have an array like this one:</p>
+<div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="n">a</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mi">2</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">14</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">9</span><span class="p">,</span> <span class="mi">18</span><span class="p">,</span> <span class="mi">20</span><span class="p">,</span> <span class="mi">22</span><span class="p">])</span>
+</pre></div>
+</div>
+<p>If you already have Matplotlib installed, you can import it with:</p>
+<div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">matplotlib.pyplot</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">plt</span>
+
+<span class="c1"># If you&#39;re using Jupyter Notebook, you may also want to run the following</span>
+<span class="c1"># line of code to display your code in the notebook:</span>
+
+<span class="o">%</span><span class="n">matplotlib</span> <span class="n">inline</span>
+</pre></div>
+</div>
+<p>All you need to do to plot your values is run:</p>
+<div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">a</span><span class="p">)</span>
+
+<span class="c1"># If you are running from a command line, you may need to do this:</span>
+<span class="c1"># &gt;&gt;&gt; plt.show()</span>
+</pre></div>
+</div>
+<p>../_images/matplotlib1.png</p>
+<p>For example, you can plot a 1D array like this:</p>
+<div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="n">x</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">20</span><span class="p">)</span>
+
+<span class="n">y</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">20</span><span class="p">)</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="s1">&#39;purple&#39;</span><span class="p">)</span> <span class="c1"># line</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="s1">&#39;o&#39;</span><span class="p">)</span>      <span class="c1"># dots</span>
+</pre></div>
+</div>
+<p>../_images/matplotlib2.png</p>
+<p>With Matplotlib, you have access to an enormous number of visualization options.</p>
+<div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="n">fig</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">()</span>
+
+<span class="n">ax</span> <span class="o">=</span> <span class="n">fig</span><span class="o">.</span><span class="n">add_subplot</span><span class="p">(</span><span class="n">projection</span><span class="o">=</span><span class="s1">&#39;3d&#39;</span><span class="p">)</span>
+
+<span class="n">X</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="o">-</span><span class="mi">5</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mf">0.15</span><span class="p">)</span>
+
+<span class="n">Y</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="o">-</span><span class="mi">5</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mf">0.15</span><span class="p">)</span>
+
+<span class="n">X</span><span class="p">,</span> <span class="n">Y</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">meshgrid</span><span class="p">(</span><span class="n">X</span><span class="p">,</span> <span class="n">Y</span><span class="p">)</span>
+
+<span class="n">R</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="n">X</span><span class="o">**</span><span class="mi">2</span> <span class="o">+</span> <span class="n">Y</span><span class="o">**</span><span class="mi">2</span><span class="p">)</span>
+
+<span class="n">Z</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">sin</span><span class="p">(</span><span class="n">R</span><span class="p">)</span>
+
+<span class="n">ax</span><span class="o">.</span><span class="n">plot_surface</span><span class="p">(</span><span class="n">X</span><span class="p">,</span> <span class="n">Y</span><span class="p">,</span> <span class="n">Z</span><span class="p">,</span> <span class="n">rstride</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">cstride</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">cmap</span><span class="o">=</span><span class="s1">&#39;viridis&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>../_images/matplotlib3.png</p>
+<p>To read more about Matplotlib and what it can do, take a look at the official documentation. For directions regarding installing Matplotlib, see the official installation section.</p>
+<p>Image credits: Jay Alammar <a class="reference external" href="https://jalammar.github.io/">https://jalammar.github.io/</a></p>
+</section>
+</section>
+
+
+          </div>
+          
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="Main">
+        <div class="sphinxsidebarwrapper">
+<h1 class="logo"><a href="../../../../../index.html">Numerical_Analysis_2E_Walter</a></h1>
+
+
+
+
+
+
+
+
+<h3>Navigation</h3>
+<p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../nifti.html">Manejo de imágenes de Resonancia Magnética</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../Matplotlib_RST/index2.html">Matplotlib</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../index99.html">Introducción al Lenguaje de Programación con “PYTHON”</a></li>
+</ul>
+
+<div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="../../../../../index.html">Documentation overview</a><ul>
+  </ul></li>
+</ul>
+</div>
+<search id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../../../../../search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</search>
+<script>document.getElementById('searchbox').style.display = "block"</script>
+
+
+
+
+
+
+
+
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &#169;2025, leopoldo.
+      
+      |
+      Powered by <a href="https://www.sphinx-doc.org/">Sphinx 7.4.7</a>
+      &amp; <a href="https://alabaster.readthedocs.io">Alabaster 0.7.16</a>
+      
+      |
+      <a href="../../../../../_sources/santosg57-python/docs/source/Matplotlib/Python_Numpy/doc01.rst.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+  </body>
+</html>

@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+
+<html lang="en" data-content_root="../../../">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Clase02-ago0921 &#8212; Numerical_Analysis_2E_Walter 1.0 documentation</title>
+    <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css?v=5ecbeea2" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/alabaster.css?v=12dfc556" />
+    <script src="../../../_static/documentation_options.js?v=f2a433a1"></script>
+    <script src="../../../_static/doctools.js?v=9a2dae69"></script>
+    <script src="../../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" />
+    <link rel="next" title="Trabajo Iterativo" href="trabajo-iterativo.html" />
+    <link rel="prev" title="Sistemas de Numeración" href="conceptos_matematicos.html" />
+   
+  <link rel="stylesheet" href="../../../_static/custom.css" type="text/css" />
+  
+
+  
+  
+
+  </head><body>
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          
+
+          <div class="body" role="main">
+            
+  <section id="clase02-ago0921">
+<h1>Clase02-ago0921<a class="headerlink" href="#clase02-ago0921" title="Link to this heading">¶</a></h1>
+<ol class="arabic simple">
+<li><p>Números</p></li>
+<li><p>Operadores aritméticos: +, -, <em>, *</em>, /, %, //</p></li>
+<li><p>Operadores de comparación: &lt; &lt;=, &gt;, &gt;=, ==, !=</p></li>
+<li><p>Operadores Lógicos: <code class="docutils literal notranslate"><span class="pre">and,</span> <span class="pre">or,</span> <span class="pre">not</span></code></p></li>
+<li><p>String’s (cadenas de caracteres): ‘hola’, “hola”</p></li>
+<li><p>Estructuras de Datos: <code class="docutils literal notranslate"><span class="pre">listas,</span> <span class="pre">tutplas,</span> <span class="pre">diccionarios</span></code></p></li>
+<li><p>Clase <code class="docutils literal notranslate"><span class="pre">math</span></code></p></li>
+<li><p>Clase <cite>random`</cite></p></li>
+<li><p>Módulos: <code class="docutils literal notranslate"><span class="pre">turtle</span></code></p></li>
+</ol>
+<p>Ejemplos.</p>
+<div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="mi">4</span><span class="o">*</span><span class="mi">3</span>
+
+<span class="mi">2</span><span class="o">**</span><span class="mi">3</span>
+
+<span class="nb">type</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
+
+<span class="nb">type</span><span class="p">(</span><span class="mf">2.0</span><span class="p">)</span>
+
+<span class="n">x</span> <span class="o">=</span> <span class="mi">2</span><span class="o">/</span><span class="mi">3</span>
+<span class="nb">type</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+
+<span class="n">x</span> <span class="o">=</span> <span class="mi">2</span><span class="o">+</span><span class="mi">3</span><span class="o">*</span><span class="mi">4</span>
+
+<span class="n">x</span> <span class="o">=</span> <span class="p">(</span><span class="mi">2</span><span class="o">+</span><span class="mi">3</span><span class="p">)</span><span class="o">*</span><span class="mi">4</span>
+
+<span class="p">(</span><span class="mi">2</span><span class="o">+</span><span class="mi">4</span><span class="p">)</span> <span class="o">/</span> <span class="p">(</span><span class="mi">2</span><span class="o">+</span><span class="mi">1</span><span class="p">)</span>
+
+<span class="mi">2</span> <span class="o">+</span> <span class="mi">2</span><span class="o">*</span><span class="p">(</span><span class="mi">1</span><span class="o">+</span><span class="mi">3</span><span class="p">)</span> <span class="o">/</span> <span class="mi">2</span> <span class="o">+</span> <span class="mi">3</span>
+
+<span class="mi">5</span> <span class="o">%</span> <span class="mi">2</span>
+
+<span class="mi">4</span> <span class="o">%</span> <span class="mi">2</span>
+
+<span class="mi">15</span> <span class="o">//</span> <span class="mi">2</span>
+
+<span class="mi">8</span> <span class="o">//</span> <span class="mi">2</span>
+</pre></div>
+</div>
+<p>Ejemplos 2</p>
+<div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="mi">3</span> <span class="o">==</span> <span class="mi">3</span>
+
+<span class="mi">3</span> <span class="o">&gt;</span> <span class="mi">3</span>
+
+<span class="mi">3</span> <span class="o">&gt;</span> <span class="mi">3</span> <span class="ow">and</span> <span class="mi">4</span> <span class="o">&gt;</span> <span class="mi">3</span>
+
+<span class="mi">3</span> <span class="o">&gt;</span> <span class="mi">3</span> <span class="ow">or</span> <span class="mi">4</span> <span class="o">&gt;</span> <span class="mi">3</span>
+
+<span class="ow">not</span> <span class="mi">3</span> <span class="o">==</span> <span class="mi">3</span> <span class="ow">or</span> <span class="mi">3</span> <span class="o">&lt;</span> <span class="mi">4</span>
+</pre></div>
+</div>
+<p>Cadenas de Caracteres o Strings</p>
+<div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="n">s1</span> <span class="o">=</span> <span class="s1">&#39;Hola Mundo&#39;</span>
+</pre></div>
+</div>
+<p>Es lo mismo</p>
+<div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="n">s2</span> <span class="o">=</span> <span class="s2">&quot;Hola Mundo&quot;</span>
+
+<span class="nb">type</span><span class="p">(</span><span class="n">s2</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Si quieres o necesitas que un string ocupe más de una línea, entonces debes encerrar el texto entre tres comillas simples ‘’’…’’’ o dobles
+“””…”””.</p>
+<div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="n">s</span> <span class="o">=</span> <span class="s1">&#39;&#39;&#39;</span>
+<span class="s1">Este string</span>
+<span class="s1">ocupa más</span>
+<span class="s1">de</span>
+<span class="s1">una línea&#39;&#39;&#39;</span>
+</pre></div>
+</div>
+<p>Concatenando string’s</p>
+<div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="n">hola</span> <span class="o">=</span> <span class="s1">&#39;hola&#39;</span>
+<span class="n">s</span> <span class="o">=</span> <span class="n">hola</span> <span class="o">+</span> <span class="s1">&#39;  Mundo&#39;</span>
+</pre></div>
+</div>
+</section>
+
+
+          </div>
+          
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="Main">
+        <div class="sphinxsidebarwrapper">
+<h1 class="logo"><a href="../../../index.html">Numerical_Analysis_2E_Walter</a></h1>
+
+
+
+
+
+
+
+
+<h3>Navigation</h3>
+<p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../../nifti.html">Manejo de imágenes de Resonancia Magnética</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../Matplotlib_RST/index2.html">Matplotlib</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="index99.html">Introducción al Lenguaje de Programación con “PYTHON”</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="index99.html#contenido">Contenido</a></li>
+</ul>
+</li>
+</ul>
+
+<div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="../../../index.html">Documentation overview</a><ul>
+  <li><a href="index99.html">Introducción al Lenguaje de Programación con “PYTHON”</a><ul>
+      <li>Previous: <a href="conceptos_matematicos.html" title="previous chapter">Sistemas de Numeración</a></li>
+      <li>Next: <a href="trabajo-iterativo.html" title="next chapter">Trabajo Iterativo</a></li>
+  </ul></li>
+  </ul></li>
+</ul>
+</div>
+<search id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../../../search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</search>
+<script>document.getElementById('searchbox').style.display = "block"</script>
+
+
+
+
+
+
+
+
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &#169;2025, leopoldo.
+      
+      |
+      Powered by <a href="https://www.sphinx-doc.org/">Sphinx 7.4.7</a>
+      &amp; <a href="https://alabaster.readthedocs.io">Alabaster 0.7.16</a>
+      
+      |
+      <a href="../../../_sources/santosg57-python/docs/source/clase02.rst.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+  </body>
+</html>

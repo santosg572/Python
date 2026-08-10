@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+
+<html lang="en" data-content_root="../../../">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Listas &#8212; Numerical_Analysis_2E_Walter 1.0 documentation</title>
+    <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css?v=5ecbeea2" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/alabaster.css?v=12dfc556" />
+    <script src="../../../_static/documentation_options.js?v=f2a433a1"></script>
+    <script src="../../../_static/doctools.js?v=9a2dae69"></script>
+    <script src="../../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" />
+    <link rel="next" title="Ejemplos_sep2825" href="ejemplos_sep0825.html" />
+    <link rel="prev" title="Clase - sep0825" href="clase_sep0825.html" />
+   
+  <link rel="stylesheet" href="../../../_static/custom.css" type="text/css" />
+  
+
+  
+  
+
+  </head><body>
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          
+
+          <div class="body" role="main">
+            
+  <section id="listas">
+<h1>Listas<a class="headerlink" href="#listas" title="Link to this heading">¶</a></h1>
+<p>Una lista es una estructura de datos.</p>
+<p>Algunos ejemplos</p>
+<div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="n">x</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">33</span><span class="p">,</span><span class="mi">5</span><span class="p">,</span><span class="mi">6</span><span class="p">,</span><span class="mi">7</span><span class="p">,</span><span class="mi">8</span><span class="p">]</span>
+
+<span class="n">y</span> <span class="o">=</span> <span class="p">[]</span>
+</pre></div>
+</div>
+<div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="n">z</span> <span class="o">=</span> <span class="s1">&#39;dasda123&#39;</span>
+<span class="n">z</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="n">z</span><span class="p">)</span>
+<span class="n">z</span>
+</pre></div>
+</div>
+<p>Algunos methodos:</p>
+<p><strong>‘append’, ‘clear’, ‘copy’, ‘count’, ‘extend’, ‘index’, ‘insert’, ‘pop’, ‘remove’, ‘reverse’,
+‘sort’</strong></p>
+<p>Ejemplos:</p>
+<p>Consideremos el siguiente texto:</p>
+<p>The fly’s genetic tools to label and manipulate neurons havebeen extensively used to characterize single
+cells or circuitsof a few neurons involved in specific functions. However, itremains unclear how specific
+temporal activity patterns inneurons affect circuit function, and how different circuitsinteract with each
+other to guide coherent outcomes such asbehavior. Some properties might also emerge at a more glo-bal level
+from synergistic or antagonistic interactions ofmany neurons or small circuits in a way that cannot be
+pre-dicted when considering individual elements. Hence, on topof studying all or none effects by manipulating
+individualneurons in behavioral assays, which can have the advantageof being performed with high throughput
+in freely behavinganimals, it is important to study the dynamics of popula-tions of neurons, even if this has
+so far only been achievedin head-fixed dissected flies.One simple example of how dynamical propertiesstrongly
+shape information propagation is the concept ofresonance. An oscillating system, such as a pendulum,
+willrespond very differently when excited by inputs of differentrhythms. Some input frequencies will induce
+very littleresponse, yet the right frequency will lead to large oscilla-tions, indicating a strong
+transmission of energy. Whenmore than two dynamical elements interact, the resultingdynamics becomes harder
+to understand and predict. Thefield of complexity and dynamical systems (as exemplifiedbelow) helps
+understand the properties of such systems.</p>
+<p>Ejemplos:</p>
+<div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="nb">type</span><span class="p">(</span><span class="n">xx</span><span class="p">)</span>
+
+<span class="nb">len</span><span class="p">(</span><span class="n">xx</span><span class="p">)</span>
+
+<span class="n">xx</span> <span class="o">=</span> <span class="n">xx</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s1">&#39;</span><span class="se">\n</span><span class="s1">&#39;</span><span class="p">,</span><span class="s1">&#39;&#39;</span><span class="p">)</span>
+<span class="n">y1</span> <span class="o">=</span> <span class="n">xx</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s1">&#39; &#39;</span><span class="p">)</span>
+<span class="nb">type</span><span class="p">(</span><span class="n">y1</span><span class="p">)</span>
+<span class="nb">len</span><span class="p">(</span><span class="n">y1</span><span class="p">)</span>
+
+<span class="n">palabras</span><span class="o">=</span><span class="nb">set</span><span class="p">(</span><span class="n">y1</span><span class="p">)</span>
+<span class="nb">type</span><span class="p">(</span><span class="n">palabras</span><span class="p">)</span>
+<span class="nb">len</span><span class="p">(</span><span class="n">palabras</span><span class="p">)</span>
+
+<span class="n">palabras</span><span class="o">=</span><span class="nb">list</span><span class="p">(</span><span class="n">palabras</span><span class="p">)</span>
+<span class="nb">type</span><span class="p">(</span><span class="n">palabras</span><span class="p">)</span>
+<span class="nb">len</span><span class="p">(</span><span class="n">palabras</span><span class="p">)</span>
+
+<span class="n">palabras</span><span class="o">.</span><span class="n">sort</span><span class="p">()</span>
+
+<span class="n">palabras</span><span class="o">.</span><span class="n">remove</span><span class="p">(</span><span class="s1">&#39;(as&#39;</span><span class="p">)</span>
+
+<span class="n">palabras</span><span class="o">.</span><span class="n">pop</span><span class="p">()</span>
+
+<span class="n">palabras</span><span class="o">.</span><span class="n">index</span><span class="p">(</span><span class="s1">&#39;littleresponse,&#39;</span><span class="p">)</span>
+
+<span class="n">palabras</span><span class="o">.</span><span class="n">index</span><span class="p">(</span><span class="s1">&#39;oscilla-tions,&#39;</span><span class="p">)</span>
+
+<span class="n">palabras</span><span class="o">.</span><span class="n">insert</span><span class="p">(</span><span class="mi">112</span><span class="p">,</span> <span class="s1">&#39;oscillations&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</section>
+
+
+          </div>
+          
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="Main">
+        <div class="sphinxsidebarwrapper">
+<h1 class="logo"><a href="../../../index.html">Numerical_Analysis_2E_Walter</a></h1>
+
+
+
+
+
+
+
+
+<h3>Navigation</h3>
+<p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../../nifti.html">Manejo de imágenes de Resonancia Magnética</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../Matplotlib_RST/index2.html">Matplotlib</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="index99.html">Introducción al Lenguaje de Programación con “PYTHON”</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="index99.html#contenido">Contenido</a></li>
+</ul>
+</li>
+</ul>
+
+<div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="../../../index.html">Documentation overview</a><ul>
+  <li><a href="index99.html">Introducción al Lenguaje de Programación con “PYTHON”</a><ul>
+  <li><a href="clase_sep0825.html">Clase - sep0825</a><ul>
+      <li>Previous: <a href="clase_sep0825.html" title="previous chapter">Clase - sep0825</a></li>
+      <li>Next: <a href="ejemplos_sep0825.html" title="next chapter">Ejemplos_sep2825</a></li>
+  </ul></li>
+  </ul></li>
+  </ul></li>
+</ul>
+</div>
+<search id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../../../search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</search>
+<script>document.getElementById('searchbox').style.display = "block"</script>
+
+
+
+
+
+
+
+
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &#169;2025, leopoldo.
+      
+      |
+      Powered by <a href="https://www.sphinx-doc.org/">Sphinx 7.4.7</a>
+      &amp; <a href="https://alabaster.readthedocs.io">Alabaster 0.7.16</a>
+      
+      |
+      <a href="../../../_sources/santosg57-python/docs/source/listas.rst.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+  </body>
+</html>
