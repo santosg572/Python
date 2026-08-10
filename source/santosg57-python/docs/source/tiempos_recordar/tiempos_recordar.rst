@@ -141,5 +141,79 @@ computacional y la ingeniería de alto rendimiento.
 
 * Evolución constante desde versiones clásicas (como Fortran 77) hasta estándares modernos (Fortran 90 y posteriores).
 
+**Install and Verify GFortran**
+
+* Update your package lists:
+
+sudo apt update
+
+* Install the compiler:
+
+sudo apt install gfortran
+
+* Check the installed version:
+
+gfortran --version
+
+**Compile a Test Program**
+
+* Create a new file named test.f90 with a text editor.
+
+* Add a simple print statement:
+
+**f90**
+
+print *, "Hello,  World!"
+
+end
+
+* Compile the code:
+
+gfortran test.f90 -o test
+
+* Run the program:
+
+./test
+
+**Ejemplo de Lenguaje C**
+
+.. code:: Bash
+
+   #include <stdio.h>
+
+   int main() {
+      printf("Hola, mundo!\n");
+      return 0;
+   }
+
+.. code:: Bash
+
+   gcc ejem.c 
+
+.. code:: Bash
+
+   ./a.out 
+
+** Ejemplo de lenguaje de Programación C++**
+
+.. code:: Bash
+
+   #include <iostream>
+   using namespace std;
+
+   int main() {
+     cout << "Hola, Mundo!2" << endl;
+     return 0;
+   }
+
+.. code:: Bash
+
+   g++ ejemmm.cpp 
+
+.. code:: Bash
+
+   ./a.out 
+
+
 aa `AQUi <https://www.python.org/downloads>`_
 

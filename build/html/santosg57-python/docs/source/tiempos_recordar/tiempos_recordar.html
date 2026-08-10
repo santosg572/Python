@@ -132,6 +132,35 @@ computacional y la ingeniería de alto rendimiento.</p>
 <li><p>Gran velocidad en cálculos con matrices.</p></li>
 <li><p>Evolución constante desde versiones clásicas (como Fortran 77) hasta estándares modernos (Fortran 90 y posteriores).</p></li>
 </ul>
+<p><strong>Install and Verify GFortran</strong></p>
+<ul class="simple">
+<li><p>Update your package lists:</p></li>
+</ul>
+<p>sudo apt update</p>
+<ul class="simple">
+<li><p>Install the compiler:</p></li>
+</ul>
+<p>sudo apt install gfortran</p>
+<ul class="simple">
+<li><p>Check the installed version:</p></li>
+</ul>
+<p>gfortran –version</p>
+<p><strong>Compile a Test Program</strong></p>
+<ul class="simple">
+<li><p>Create a new file named test.f90 with a text editor.</p></li>
+<li><p>Add a simple print statement:</p></li>
+</ul>
+<p><strong>f90</strong></p>
+<p>print <a href="#id1"><span class="problematic" id="id2">*</span></a>, “Hello,  World!”
+end</p>
+<ul class="simple">
+<li><p>Compile the code:</p></li>
+</ul>
+<p>gfortran test.f90 -o test</p>
+<ul class="simple">
+<li><p>Run the program:</p></li>
+</ul>
+<p>./test</p>
 <p>aa <a class="reference external" href="https://www.python.org/downloads">AQUi</a></p>
 </section>
 
