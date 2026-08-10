@@ -16,6 +16,7 @@ Welcome to Numerical_Analysis_2E_Walter's documentation!
    Numerical_Analysis_2E_Walter_C01
    nifti
    Matplotlib_RST/index2
+   santosg57-python/docs/source/index99.rst
 
 Indices and tables
 ==================
