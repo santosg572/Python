@@ -6,6 +6,8 @@ conda activate test_env
 
 conda deactivate
 
+dddd
+
 
 pip install nibabel
 
