@@ -164,6 +164,7 @@ gfortran --version
 **f90**
 
 print *, "Hello,  World!"
+
 end
 
 * Compile the code:
@@ -173,6 +174,46 @@ gfortran test.f90 -o test
 * Run the program:
 
 ./test
+
+**Ejemplo de Lenguaje C**
+
+.. code:: Bash
+
+   #include <stdio.h>
+
+   int main() {
+      printf("Hola, mundo!\n");
+      return 0;
+   }
+
+.. code:: Bash
+
+   gcc ejem.c 
+
+.. code:: Bash
+
+   ./a.out 
+
+** Ejemplo de lenguaje de Programación C++**
+
+.. code:: Bash
+
+   #include <iostream>
+   using namespace std;
+
+   int main() {
+     cout << "Hola, Mundo!2" << endl;
+     return 0;
+   }
+
+.. code:: Bash
+
+   g++ ejemmm.cpp 
+
+.. code:: Bash
+
+   ./a.out 
+
 
 aa `AQUi <https://www.python.org/downloads>`_
 
