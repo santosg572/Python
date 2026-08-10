@@ -17,6 +17,7 @@ Contenido
 
    tiempos_recordar/tiempos_recordar
    poo/poo
+   numeros_binarios
    temario
    calificaciones
    bibliografia/bibliografia
