@@ -1,0 +1,14 @@
+/home/santosg/santosg57-python
+creaHTML.py
+curso.html
+dir_M10D12Y25.html
+dir_M10D12Y25.txt
+docs
+figF.py
+gen.sh
+lumache.py
+pyproject.toml
+README.rst
+saca_dir.sh
+santosg57-python_M10D12Y25.txt
+sube_git.sh

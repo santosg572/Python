@@ -1,0 +1,8 @@
+https://numpy.org/
+
+https://jupyterlab.readthedocs.io/en/latest/
+
+
+https://en.wikipedia.org/wiki/L-system
+
+
