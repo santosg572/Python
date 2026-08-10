@@ -10,8 +10,8 @@ Cinvestav.
 
 **Temas de investigación**: Estudio de los mecanismos responsables de diversos patrones de 
 disparo 
-neuronal. Estudio del mecanismo del acople excitación-contracción en músculo estriado de 
-anfibio. rvaldios@fisio.cinvestav.mx
+neuronal. Estudio del mecanismo del :doc:`acople excitación-contracción en músculo estriado de 
+anfibio <acople_excitacion>`. rvaldios@fisio.cinvestav.mx
 
 **PDF-1134**
 
