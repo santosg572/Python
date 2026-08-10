@@ -1,7 +1,7 @@
 Números Binarios
 ================
 
-Enteros		Binario
+Enteros	Binario
 
 0		0	= :math:`0 \times 2^0`
 
