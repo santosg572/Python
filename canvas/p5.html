@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+    canvas { border: 1px solid #ccc; }
+  </style>
+</head>
+<body>
+
+  <!-- The canvas element serves as the container -->
+  <canvas id="myCanvas" width="400" height="200"></canvas>
+
+  <script>
+    // 1. Get the canvas element
+    const canvas = document.getElementById("myCanvas");
+    
+    // 2. Get the 2D rendering context
+    const ctx = canvas.getContext("2d");
+
+    // 3. Draw a filled red rectangle (x, y, width, height)
+    ctx.fillStyle = "#FF0000";
+    ctx.fillRect(20, 20, 150, 100);
+
+    // 4. Draw an outlined blue square
+    ctx.strokeStyle = "blue";
+    ctx.lineWidth = 5;
+    ctx.strokeRect(200, 20, 100, 100);
+  </script>
+
+</body>
+</html>
+
+

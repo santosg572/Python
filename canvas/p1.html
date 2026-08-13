@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>JavaScript Canvas Graphics</title>
+    <style>
+        body { display: flex; justify-content: center; align-items: center; height: 100vh; margin: 
+0; background: #f0f0f0; }
+        canvas { background: white; border: 2px solid #333; }
+    </style>
+</head>
+<body>
+
+    <!-- 1. Define the Canvas Element -->
+    <canvas id="myCanvas" width="500" height="400"></canvas>
+
+    <script>
+        // 2. Access the Canvas and its 2D Context
+        const canvas = document.getElementById('myCanvas');
+        const ctx = canvas.getContext('2d');
+
+        // 3. Draw a filled Blue Rectangle
+        ctx.fillStyle = 'royalblue';
+        ctx.fillRect(50, 50, 150, 100); // parameters: (x, y, width, height)
+
+        // 4. Draw a Green Outline Circle
+        ctx.beginPath();
+        ctx.arc(350, 100, 50, 0, Math.PI * 2); // parameters: (x, y, radius, startAngle, endAngle)
+        ctx.strokeStyle = 'forestgreen';
+        ctx.lineWidth = 5;
+        ctx.stroke();
+
+        // 5. Draw a Red Triangle Path
+        ctx.beginPath();
+        ctx.moveTo(100, 300); // Start point
+        ctx.lineTo(200, 200); // Second point
+        ctx.lineTo(300, 300); // Third point
+        ctx.closePath();      // Back to start
+        ctx.fillStyle = 'crimson';
+        ctx.fill();
+    </script>
+
+</body>
+</html>
+
+

@@ -1,0 +1,18 @@
+<canvas id="textCanvas" width="400" height="150" style="border:1px solid #ccc;"></canvas>
+
+<script>
+  const txtCanvas = document.getElementById("textCanvas");
+  const ctx = txtCanvas.getContext("2d");
+
+  // Create a linear gradient (x0, y0, x1, y1)
+  const gradient = ctx.createLinearGradient(0, 0, txtCanvas.width, 0);
+  gradient.addColorStop(0, "orange");
+  gradient.addColorStop(1, "red");
+
+  // Fill text with the gradient
+  ctx.font = "bold 30px Arial";
+  ctx.fillStyle = gradient;
+  ctx.fillText("Hello HTML Canvas!", 30, 80);
+</script>
+
+

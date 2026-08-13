@@ -1,0 +1,21 @@
+<canvas id="pathCanvas" width="400" height="200" style="border:1px solid #ccc;"></canvas>
+
+<script>
+  const c = document.getElementById("pathCanvas");
+  const ctx = c.getContext("2d");
+
+  // Example A: Drawing a simple diagonal line
+  ctx.beginPath();       // Start a new path
+  ctx.moveTo(10, 10);    // Move pen to starting point (x, y)
+  ctx.lineTo(150, 100);  // Draw line to target point (x, y)
+  ctx.strokeStyle = "green";
+  ctx.stroke();          // Render the line
+
+  // Example B: Drawing a filled circle
+  ctx.beginPath();
+  // arc(x, y, radius, startAngle, endAngle) -> Math.PI * 2 creates a full circle
+  ctx.arc(280, 80, 50, 0, 2 * Math.PI);
+  ctx.fillStyle = "purple";
+  ctx.fill();            // Fill the inside of the circle
+</script>
+

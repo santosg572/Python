@@ -1,0 +1,36 @@
+<canvas id="animCanvas" width="400" height="200" style="border:1px solid #ccc;"></canvas>
+
+<script>
+  const canvasAnim = document.getElementById("animCanvas");
+  const ctxAnim = canvasAnim.getContext("2d");
+
+  let x = 0; // Starting X coordinate
+  let speed = 2;
+
+  function animate() {
+    // Clear the previous frame entirely
+    ctxAnim.clearRect(0, 0, canvasAnim.width, canvasAnim.height);
+
+    // Draw the moving ball
+    ctxAnim.beginPath();
+    ctxAnim.arc(x, 100, 20, 0, Math.PI * 2);
+    ctxAnim.fillStyle = "teal";
+    ctxAnim.fill();
+
+    // Increment position
+    x += speed;
+
+    // Bounce off the right/left edges
+    if (x > canvasAnim.width - 20 || x < 20) {
+      speed = -speed;
+    }
+
+    // Schedule the next frame refresh
+    requestAnimationFrame(animate);
+  }
+
+  // Start the animation loop
+  animate();
+</script>
+
+
