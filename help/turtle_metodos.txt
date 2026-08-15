@@ -1,0 +1,14 @@
+pygame 2.6.1 (SDL 2.28.4, Python 3.12.2)
+Hello from the pygame community. https://www.pygame.org/contribute.html
+Help on function up in turtle:
+
+turtle.up = up()
+    Pull the pen up -- no drawing when moving.
+
+    Aliases: penup | pu | up
+
+    No argument
+
+    Example:
+    >>> penup()
+

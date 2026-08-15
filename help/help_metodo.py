@@ -19,5 +19,6 @@ import sys
 #dd = 'open'
 
 dd = sys.argv[1]
+com = sys.argv[2]
 
-help(dd)
+help(dd+'.'+com)

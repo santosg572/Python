@@ -1,3 +1,4 @@
+import pandas
 import pygame
 import numpy 
 import matplotlib.pyplot
@@ -20,4 +21,5 @@ import sys
 
 dd = sys.argv[1]
 
-help(dd)
+print(dir(eval(dd)))
+
