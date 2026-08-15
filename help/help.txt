@@ -1,0 +1,29 @@
+Welcome to Python 3.12's help utility! If this is your first time using
+Python, you should definitely check out the tutorial at
+https://docs.python.org/3.12/tutorial/.
+
+Enter the name of any module, keyword, or topic to get help on writing
+Python programs and using Python modules.  To get a list of available
+modules, keywords, symbols, or topics, enter "modules", "keywords",
+"symbols", or "topics".
+
+Each module also comes with a one-line summary of what it does; to list
+the modules whose name or summary contain a given string such as "spam",
+enter "modules spam".
+
+To quit this help utility and return to the interpreter,
+enter "q" or "quit".
+
+help> No Python documentation found for 'dd'.
+Use help() to get the interactive help utility.
+Use help(str) for help on the str class.
+
+help> No Python documentation found for 'dd'.
+Use help() to get the interactive help utility.
+Use help(str) for help on the str class.
+
+help> 
+You are now leaving help and returning to the Python interpreter.
+If you want to ask for help on a particular object directly from the
+interpreter, you can type "help(object)".  Executing "help('string')"
+has the same effect as typing a particular string at the help> prompt.
