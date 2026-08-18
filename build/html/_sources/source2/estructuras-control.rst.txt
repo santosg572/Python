@@ -1,6 +1,26 @@
 Estructuras de Control
 ======================
 
+Valores Lógicos en Python: ``False``, ``True``
+
+Opreradores Lógicos: ``or``, ``ànd``, 
+
+Ejemplos:
+
+.. code:: Python
+
+   False and False
+   
+   False or False
+
+   False and True
+
+   False or True
+
+   5 > 5 or "Si" == 'si'
+
+   5 >= 5 or "Si" == 'si'
+ 
 Las estructuras de control sirven para dos propositos fundamentales en la programación.
 
 1. Ejecutar una serie de instrucciones en base al valor de una condición.
