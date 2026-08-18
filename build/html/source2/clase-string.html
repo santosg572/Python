@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+
+<html lang="en" data-content_root="../">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Clase String &#8212; Numerical_Analysis_2E_Walter 1.0 documentation</title>
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=d1102ebc" />
+    <link rel="stylesheet" type="text/css" href="../_static/basic.css?v=b08954a9" />
+    <link rel="stylesheet" type="text/css" href="../_static/alabaster.css?v=27fed22d" />
+    <script src="../_static/documentation_options.js?v=f2a433a1"></script>
+    <script src="../_static/doctools.js?v=9bcbadda"></script>
+    <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Clase turtle" href="clase-turtle.html" />
+    <link rel="prev" title="Clase random" href="clase-random.html" />
+   
+  <link rel="stylesheet" href="../_static/custom.css" type="text/css" />
+  
+
+  
+  
+
+  </head><body>
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          
+
+          <div class="body" role="main">
+            
+  <section id="clase-string">
+<h1>Clase String<a class="headerlink" href="#clase-string" title="Link to this heading">¶</a></h1>
+<div class="highlight-Bash notranslate"><div class="highlight"><pre><span></span>&gt;&gt;&gt;<span class="w"> </span><span class="nv">x</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">&#39;&#39;&#39;</span>
+<span class="s1">...  hola</span>
+<span class="s1">...  como estas,</span>
+<span class="s1">...  yo estoy bien&#39;&#39;&#39;</span>
+&gt;&gt;&gt;
+&gt;&gt;&gt;<span class="w"> </span>x
+<span class="s1">&#39;\n hola\n como estas,\n yo estoy bien&#39;</span>
+&gt;&gt;&gt;
+&gt;&gt;&gt;<span class="w"> </span>len<span class="o">(</span>x<span class="o">)</span>
+<span class="m">34</span>
+&gt;&gt;&gt;<span class="w"> </span>type<span class="o">(</span>x<span class="o">)</span>
+&lt;class<span class="w"> </span><span class="s1">&#39;str&#39;</span>&gt;
+&gt;&gt;&gt;
+
+
+&gt;&gt;&gt;<span class="w"> </span><span class="nv">y1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;1234&quot;</span>
+&gt;&gt;&gt;<span class="w"> </span><span class="nv">y2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">&#39;1234&#39;</span>
+&gt;&gt;&gt;<span class="w"> </span><span class="nv">y1</span><span class="w"> </span><span class="o">==</span><span class="w"> </span>y2
+</pre></div>
+</div>
+<p>Algunos métodos de la clase string:</p>
+<p><code class="docutils literal notranslate"><span class="pre">'capitalize',</span> <span class="pre">'casefold',</span> <span class="pre">'center',</span> <span class="pre">'count',</span> <span class="pre">'encode',</span> <span class="pre">'endswith',</span> <span class="pre">'expandtabs',</span> <span class="pre">'find',</span> <span class="pre">'format',</span> <span class="pre">'format_map',</span> <span class="pre">'index',</span> <span class="pre">'isalnum',</span> <span class="pre">'isalpha',</span> <span class="pre">'isascii',</span> <span class="pre">'isdecimal',</span> <span class="pre">'isdigit',</span> <span class="pre">'isidentifier',</span> <span class="pre">'islower',</span> <span class="pre">'isnumeric',</span> <span class="pre">'isprintable',</span> <span class="pre">'isspace',</span> <span class="pre">'istitle',</span> <span class="pre">'isupper',</span> <span class="pre">'join',</span> <span class="pre">'ljust',</span> <span class="pre">'lower',</span> <span class="pre">'lstrip',</span> <span class="pre">'maketrans',</span> <span class="pre">'partition',</span> <span class="pre">'removeprefix',</span> <span class="pre">'removesuffix',</span> <span class="pre">'replace',</span> <span class="pre">'rfind',</span> <span class="pre">'rindex',</span> <span class="pre">'rjust',</span> <span class="pre">'rpartition',</span> <span class="pre">'rsplit',</span> <span class="pre">'rstrip',</span> <span class="pre">'split',</span> <span class="pre">'splitlines',</span> <span class="pre">'startswith',</span> <span class="pre">'strip',</span> <span class="pre">'swapcase',</span> <span class="pre">'title',</span> <span class="pre">'translate',</span> <span class="pre">'upper',</span> <span class="pre">'zfill'</span></code></p>
+<p><strong>Ayuda</strong></p>
+<div class="highlight-Bash notranslate"><div class="highlight"><pre><span></span>capitalize<span class="o">()</span><span class="w"> </span>method<span class="w"> </span>of<span class="w"> </span>builtins.str<span class="w"> </span>instance
+<span class="w">    </span>Return<span class="w"> </span>a<span class="w"> </span>capitalized<span class="w"> </span>version<span class="w"> </span>of<span class="w"> </span>the<span class="w"> </span>string.
+
+<span class="w">    </span>More<span class="w"> </span>specifically,<span class="w"> </span>make<span class="w"> </span>the<span class="w"> </span>first<span class="w"> </span>character<span class="w"> </span>have<span class="w"> </span>upper<span class="w"> </span><span class="k">case</span><span class="w"> </span>and<span class="w"> </span>the<span class="w"> </span>rest<span class="w"> </span>lower
+<span class="w">    </span><span class="k">case</span>.
+
+count<span class="o">(</span>sub<span class="o">[</span>,<span class="w"> </span>start<span class="o">[</span>,<span class="w"> </span>end<span class="o">]]</span>,<span class="w"> </span>/<span class="o">)</span><span class="w"> </span>method<span class="w"> </span>of<span class="w"> </span>builtins.str<span class="w"> </span>instance
+<span class="w">    </span>Return<span class="w"> </span>the<span class="w"> </span>number<span class="w"> </span>of<span class="w"> </span>non-overlapping<span class="w"> </span>occurrences<span class="w"> </span>of<span class="w"> </span>substring<span class="w"> </span>sub<span class="w"> </span><span class="k">in</span><span class="w"> </span>string<span class="w"> </span>S<span class="o">[</span>start:end<span class="o">]</span>.
+
+find<span class="o">(</span>sub<span class="o">[</span>,<span class="w"> </span>start<span class="o">[</span>,<span class="w"> </span>end<span class="o">]]</span>,<span class="w"> </span>/<span class="o">)</span><span class="w"> </span>method<span class="w"> </span>of<span class="w"> </span>builtins.str<span class="w"> </span>instance
+<span class="w">    </span>Return<span class="w"> </span>the<span class="w"> </span>lowest<span class="w"> </span>index<span class="w"> </span><span class="k">in</span><span class="w"> </span>S<span class="w"> </span>where<span class="w"> </span>substring<span class="w"> </span>sub<span class="w"> </span>is<span class="w"> </span>found,<span class="w"> </span>such<span class="w"> </span>that<span class="w"> </span>sub<span class="w"> </span>is<span class="w"> </span>contained<span class="w"> </span>within<span class="w"> </span>S<span class="o">[</span>start:end<span class="o">]</span>.
+
+index<span class="o">(</span>sub<span class="o">[</span>,<span class="w"> </span>start<span class="o">[</span>,<span class="w"> </span>end<span class="o">]]</span>,<span class="w"> </span>/<span class="o">)</span><span class="w"> </span>method<span class="w"> </span>of<span class="w"> </span>builtins.str<span class="w"> </span>instance
+<span class="w">    </span>Return<span class="w"> </span>the<span class="w"> </span>lowest<span class="w"> </span>index<span class="w"> </span><span class="k">in</span><span class="w"> </span>S<span class="w"> </span>where<span class="w"> </span>substring<span class="w"> </span>sub<span class="w"> </span>is<span class="w"> </span>found,<span class="w"> </span>such<span class="w"> </span>that<span class="w"> </span>sub<span class="w"> </span>is<span class="w"> </span>contained<span class="w"> </span>within<span class="w"> </span>S<span class="o">[</span>start:end<span class="o">]</span>.
+
+lower<span class="o">()</span><span class="w"> </span>method<span class="w"> </span>of<span class="w"> </span>builtins.str<span class="w"> </span>instance
+<span class="w">    </span>Return<span class="w"> </span>a<span class="w"> </span>copy<span class="w"> </span>of<span class="w"> </span>the<span class="w"> </span>string<span class="w"> </span>converted<span class="w"> </span>to<span class="w"> </span>lowercase.
+
+replace<span class="o">(</span>old,<span class="w"> </span>new,<span class="w"> </span>/,<span class="w"> </span><span class="nv">count</span><span class="o">=</span>-1<span class="o">)</span><span class="w"> </span>method<span class="w"> </span>of<span class="w"> </span>builtins.str<span class="w"> </span>instance
+<span class="w">    </span>Return<span class="w"> </span>a<span class="w"> </span>copy<span class="w"> </span>with<span class="w"> </span>all<span class="w"> </span>occurrences<span class="w"> </span>of<span class="w"> </span>substring<span class="w"> </span>old<span class="w"> </span>replaced<span class="w"> </span>by<span class="w"> </span>new.
+
+split<span class="o">(</span><span class="nv">sep</span><span class="o">=</span>None,<span class="w"> </span><span class="nv">maxsplit</span><span class="o">=</span>-1<span class="o">)</span><span class="w"> </span>method<span class="w"> </span>of<span class="w"> </span>builtins.str<span class="w"> </span>instance
+<span class="w">    </span>Return<span class="w"> </span>a<span class="w"> </span>list<span class="w"> </span>of<span class="w"> </span>the<span class="w"> </span>substrings<span class="w"> </span><span class="k">in</span><span class="w"> </span>the<span class="w"> </span>string,<span class="w"> </span>using<span class="w"> </span>sep<span class="w"> </span>as<span class="w"> </span>the<span class="w"> </span>separator<span class="w"> </span>string.
+
+<span class="w">    </span>sep
+<span class="w">      </span>The<span class="w"> </span>separator<span class="w"> </span>used<span class="w"> </span>to<span class="w"> </span>split<span class="w"> </span>the<span class="w"> </span>string.
+</pre></div>
+</div>
+<p><strong>Ejemplos</strong></p>
+<div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="n">pp</span> <span class="o">=</span> <span class="s1">&#39;&#39;&#39;ya no se encantarán mis ojos en tus ojos,</span>
+<span class="s1">ya no se endulzará junto a ti mi dolor.</span>
+
+<span class="s1">Pero hacia donde vaya llevaré tu mirada</span>
+<span class="s1">y hacia donde camines llevarás mi dolor.</span>
+
+<span class="s1">Fui tuyo, fuiste mía. ¿Qué más? Juntos hicimos</span>
+<span class="s1">un recodo en la ruta donde el amor pasó.</span>
+
+<span class="s1">Fui tuyo, fuiste mía. Tu serás del que te ame,</span>
+<span class="s1">del que corte en tu huerto lo que he sembrado yo.</span>
+
+<span class="s1">Yo me voy. Estoy triste: pero siempre estoy triste.</span>
+<span class="s1">Vengo desde tus brazos. No sé hacia dónde voy.</span>
+
+<span class="s1">...Desde tu corazón me dice adiós un niño.</span>
+<span class="s1">Y yo le digo adiós.&#39;&#39;&#39;</span>
+</pre></div>
+</div>
+<div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="nb">len</span><span class="p">(</span><span class="n">pp</span><span class="p">)</span>
+
+<span class="n">pp</span><span class="o">.</span><span class="n">capitalize</span><span class="p">()</span>
+
+<span class="n">pp</span><span class="o">.</span><span class="n">count</span><span class="p">(</span><span class="s1">&#39;m&#39;</span><span class="p">)</span>
+
+<span class="n">pp</span><span class="o">.</span><span class="n">count</span><span class="p">(</span><span class="s1">&#39;mi&#39;</span><span class="p">)</span>
+
+<span class="n">pp</span><span class="o">.</span><span class="n">count</span><span class="p">(</span><span class="s1">&#39;corazón&#39;</span><span class="p">)</span>
+
+<span class="n">pp</span><span class="o">.</span><span class="n">count</span><span class="p">(</span><span class="s1">&#39;</span><span class="se">\n</span><span class="s1">&#39;</span><span class="p">)</span>
+
+<span class="n">pp</span><span class="o">.</span><span class="n">count</span><span class="p">(</span><span class="s1">&#39;x&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="n">pp</span><span class="o">.</span><span class="n">find</span><span class="p">(</span><span class="s1">&#39;x&#39;</span><span class="p">)</span>
+
+<span class="n">pp</span><span class="o">.</span><span class="n">find</span><span class="p">(</span><span class="s1">&#39;ojos&#39;</span><span class="p">)</span>
+
+<span class="n">pp</span><span class="o">.</span><span class="n">find</span><span class="p">(</span><span class="s1">&#39;ojos&#39;</span><span class="p">,</span> <span class="mi">25</span><span class="p">)</span>
+
+<span class="n">pp</span><span class="o">.</span><span class="n">find</span><span class="p">(</span><span class="s1">&#39;ojos&#39;</span><span class="p">,</span> <span class="mi">37</span><span class="p">)</span>
+
+<span class="n">pp</span><span class="o">.</span><span class="n">islower</span><span class="p">()</span>
+
+<span class="n">pp</span><span class="o">.</span><span class="n">lower</span><span class="p">()</span>
+
+<span class="n">pp</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s1">&#39;</span><span class="se">\n</span><span class="s1">&#39;</span><span class="p">,</span> <span class="s1">&#39; &#39;</span><span class="p">)</span>
+
+<span class="n">yy</span> <span class="o">=</span> <span class="n">pp</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s1">&#39;Ya no se&#39;</span><span class="p">,</span> <span class="s1">&#39;Para tí mi Dulcinea: </span><span class="se">\n\n</span><span class="s1"> Ya no se&#39;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">yy</span><span class="p">)</span>
+
+<span class="n">ww</span> <span class="o">=</span> <span class="n">pp</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s1">&#39;</span><span class="se">\n</span><span class="s1">&#39;</span><span class="p">)</span>
+
+<span class="n">ww</span>
+
+<span class="nb">len</span><span class="p">(</span><span class="n">ww</span><span class="p">)</span>
+
+<span class="nb">type</span><span class="p">(</span><span class="n">ww</span><span class="p">)</span>
+
+<span class="k">for</span> <span class="n">ss</span> <span class="ow">in</span> <span class="n">ww</span><span class="p">:</span>
+  <span class="nb">print</span><span class="p">(</span><span class="n">ss</span><span class="p">)</span>
+
+<span class="n">ww</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span>
+
+<span class="n">ww</span><span class="p">[</span><span class="mi">4</span><span class="p">]</span>
+
+<span class="n">ww</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>
+</pre></div>
+</div>
+</section>
+
+
+          </div>
+          
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="Main">
+        <div class="sphinxsidebarwrapper">
+<h1 class="logo"><a href="../index.html">Numerical_Analysis_2E_Walter</a></h1>
+
+
+
+
+
+
+
+
+
+<search id="searchbox" style="display: none" role="search">
+    <div class="searchformwrapper">
+    <form class="search" action="../search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" placeholder="Search"/>
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</search>
+<script>document.getElementById('searchbox').style.display = "block"</script><h3>Navigation</h3>
+<p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../nifti.html">Manejo de imágenes de Resonancia Magnética</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Matplotlib_RST/index2.html">Matplotlib</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="index99.html">Introducción al Lenguaje de Programación con “PYTHON”</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="index99.html#contenido">Contenido</a></li>
+</ul>
+</li>
+</ul>
+
+<div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="../index.html">Documentation overview</a><ul>
+  <li><a href="index99.html">Introducción al Lenguaje de Programación con “PYTHON”</a><ul>
+      <li>Previous: <a href="clase-random.html" title="previous chapter">Clase random</a></li>
+      <li>Next: <a href="clase-turtle.html" title="next chapter">Clase turtle</a></li>
+  </ul></li>
+  </ul></li>
+</ul>
+</div>
+
+
+
+
+
+
+
+
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &#169;2025, leopoldo.
+      
+      |
+      Powered by <a href="https://www.sphinx-doc.org/">Sphinx 8.2.3</a>
+      &amp; <a href="https://alabaster.readthedocs.io">Alabaster 1.0.0</a>
+      
+      |
+      <a href="../_sources/source2/clase-string.rst.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+  </body>
+</html>

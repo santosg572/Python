@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+
+<html lang="en" data-content_root="../../../">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Array creation &#8212; Numerical_Analysis_2E_Walter 1.0 documentation</title>
+    <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css?v=d1102ebc" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/basic.css?v=b08954a9" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/alabaster.css?v=27fed22d" />
+    <script src="../../../_static/documentation_options.js?v=f2a433a1"></script>
+    <script src="../../../_static/doctools.js?v=9bcbadda"></script>
+    <script src="../../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" />
+   
+  <link rel="stylesheet" href="../../../_static/custom.css" type="text/css" />
+  
+
+  
+  
+
+  </head><body>
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          
+
+          <div class="body" role="main">
+            
+  <section id="array-creation">
+<h1>Array creation<a class="headerlink" href="#array-creation" title="Link to this heading">¶</a></h1>
+<p><a class="reference external" href="https://numpy.org/doc/2.3/user/basics.creation.html">https://numpy.org/doc/2.3/user/basics.creation.html</a></p>
+<p>See also</p>
+<p>Array creation routines
+Introduction</p>
+<p>There are 6 general mechanisms for creating arrays:</p>
+<blockquote>
+<div><p>Conversion from other Python structures (i.e. lists and tuples)</p>
+<p>Intrinsic NumPy array creation functions (e.g. arange, ones, zeros, etc.)</p>
+<p>Replicating, joining, or mutating existing arrays</p>
+<p>Reading arrays from disk, either from standard or custom formats</p>
+<p>Creating arrays from raw bytes through the use of strings or buffers</p>
+<p>Use of special library functions (e.g., random)</p>
+</div></blockquote>
+<p>You can use these methods to create ndarrays or Structured arrays. This document will cover general methods for ndarray creation.
+1) Converting Python sequences to NumPy arrays</p>
+<p>NumPy arrays can be defined using Python sequences such as lists and tuples. Lists and tuples are defined using […] and (…), respectively. Lists and tuples can define ndarray creation:</p>
+<blockquote>
+<div><p>a list of numbers will create a 1D array,</p>
+<p>a list of lists will create a 2D array,</p>
+<p>further nested lists will create higher-dimensional arrays. In general, any array object is called an ndarray in NumPy.</p>
+</div></blockquote>
+<p>import numpy as np</p>
+<p>a1D = np.array([1, 2, 3, 4])</p>
+<p>a2D = np.array([[1, 2], [3, 4]])</p>
+<p>a3D = np.array([[[1, 2], [3, 4]], [[5, 6], [7, 8]]])</p>
+<p>When you use numpy.array to define a new array, you should consider the dtype of the elements in the array, which can be specified explicitly. This feature gives you more control over the underlying data structures and how the elements are handled in C/C++ functions. When values do not fit and you are using a dtype, NumPy may raise an error:</p>
+<p>import numpy as np</p>
+<p>np.array([127, 128, 129], dtype=np.int8)
+Traceback (most recent call last):
+…
+OverflowError: Python integer 128 out of bounds for int8</p>
+<p>An 8-bit signed integer represents integers from -128 to 127. Assigning the int8 array to integers outside of this range results in overflow. This feature can often be misunderstood. If you perform calculations with mismatching dtypes, you can get unwanted results, for example:</p>
+<p>import numpy as np</p>
+<p>a = np.array([2, 3, 4], dtype=np.uint32)</p>
+<p>b = np.array([5, 6, 7], dtype=np.uint32)</p>
+<p>c_unsigned32 = a - b</p>
+<p>print(‘unsigned c:’, c_unsigned32, c_unsigned32.dtype)
+unsigned c: [4294967293 4294967293 4294967293] uint32</p>
+<p>c_signed32 = a - b.astype(np.int32)</p>
+<p>print(‘signed c:’, c_signed32, c_signed32.dtype)
+signed c: [-3 -3 -3] int64</p>
+<p>Notice when you perform operations with two arrays of the same dtype: uint32, the resulting array is the same type. When you perform operations with different dtype, NumPy will assign a new type that satisfies all of the array elements involved in the computation, here uint32 and int32 can both be represented in as int64.</p>
+<p>The default NumPy behavior is to create arrays in either 32 or 64-bit signed integers (platform dependent and matches C long size) or double precision floating point numbers. If you expect your integer arrays to be a specific type, then you need to specify the dtype while you create the array.
+2) Intrinsic NumPy array creation functions</p>
+<p>NumPy has over 40 built-in functions for creating arrays as laid out in the Array creation routines. These functions can be split into roughly three categories, based on the dimension of the array they create:</p>
+<blockquote>
+<div><p>1D arrays</p>
+<p>2D arrays</p>
+<p>ndarrays</p>
+</div></blockquote>
+<p>1 - 1D array creation functions</p>
+<p>The 1D array creation functions e.g. numpy.linspace and numpy.arange generally need at least two inputs, start and stop.</p>
+<p>numpy.arange creates arrays with regularly incrementing values. Check the documentation for complete information and examples. A few examples are shown:</p>
+<p>import numpy as np</p>
+<p>np.arange(10)
+array([0, 1, 2, 3, 4, 5, 6, 7, 8, 9])</p>
+<p>np.arange(2, 10, dtype=float)
+array([2., 3., 4., 5., 6., 7., 8., 9.])</p>
+<p>np.arange(2, 3, 0.1)
+array([2. , 2.1, 2.2, 2.3, 2.4, 2.5, 2.6, 2.7, 2.8, 2.9])</p>
+<p>Note: best practice for numpy.arange is to use integer start, end, and step values. There are some subtleties regarding dtype. In the second example, the dtype is defined. In the third example, the array is dtype=float to accommodate the step size of 0.1. Due to roundoff error, the stop value is sometimes included.</p>
+<p>numpy.linspace will create arrays with a specified number of elements, and spaced equally between the specified beginning and end values. For example:</p>
+<p>import numpy as np</p>
+<p>np.linspace(1., 4., 6)
+array([1. ,  1.6,  2.2,  2.8,  3.4,  4. ])</p>
+<p>The advantage of this creation function is that you guarantee the number of elements and the starting and end point. The previous arange(start, stop, step) will not include the value stop.
+2 - 2D array creation functions</p>
+<p>The 2D array creation functions e.g. numpy.eye, numpy.diag, and numpy.vander define properties of special matrices represented as 2D arrays.</p>
+<p>np.eye(n, m) defines a 2D identity matrix. The elements where i=j (row index and column index are equal) are 1 and the rest are 0, as such:</p>
+<p>import numpy as np</p>
+<p>np.eye(3)
+array([[1., 0., 0.],</p>
+<blockquote>
+<div><p>[0., 1., 0.],
+[0., 0., 1.]])</p>
+</div></blockquote>
+<p>np.eye(3, 5)
+array([[1., 0., 0., 0., 0.],</p>
+<blockquote>
+<div><p>[0., 1., 0., 0., 0.],
+[0., 0., 1., 0., 0.]])</p>
+</div></blockquote>
+<p>numpy.diag can define either a square 2D array with given values along the diagonal or if given a 2D array returns a 1D array that is only the diagonal elements. The two array creation functions can be helpful while doing linear algebra, as such:</p>
+<p>import numpy as np</p>
+<p>np.diag([1, 2, 3])
+array([[1, 0, 0],</p>
+<blockquote>
+<div><p>[0, 2, 0],
+[0, 0, 3]])</p>
+</div></blockquote>
+<p>np.diag([1, 2, 3], 1)
+array([[0, 1, 0, 0],</p>
+<blockquote>
+<div><p>[0, 0, 2, 0],
+[0, 0, 0, 3],
+[0, 0, 0, 0]])</p>
+</div></blockquote>
+<p>a = np.array([[1, 2], [3, 4]])</p>
+<p>np.diag(a)
+array([1, 4])</p>
+<p>vander(x, n) defines a Vandermonde matrix as a 2D NumPy array. Each column of the Vandermonde matrix is a decreasing power of the input 1D array or list or tuple, x where the highest polynomial order is n-1. This array creation routine is helpful in generating linear least squares models, as such:</p>
+<p>import numpy as np</p>
+<p>np.vander(np.linspace(0, 2, 5), 2)
+array([[0. , 1. ],</p>
+<blockquote>
+<div><p>[0.5, 1. ],
+[1. , 1. ],
+[1.5, 1. ],
+[2. , 1. ]])</p>
+</div></blockquote>
+<p>np.vander([1, 2, 3, 4], 2)
+array([[1, 1],</p>
+<blockquote>
+<div><p>[2, 1],
+[3, 1],
+[4, 1]])</p>
+</div></blockquote>
+<p>np.vander((1, 2, 3, 4), 4)
+array([[ 1,  1,  1,  1],</p>
+<blockquote>
+<div><p>[ 8,  4,  2,  1],
+[27,  9,  3,  1],
+[64, 16,  4,  1]])</p>
+</div></blockquote>
+<p>3 - general ndarray creation functions</p>
+<p>The ndarray creation functions e.g. numpy.ones, numpy.zeros, and random define arrays based upon the desired shape. The ndarray creation functions can create arrays with any dimension by specifying how many dimensions and length along that dimension in a tuple or list.</p>
+<p>numpy.zeros will create an array filled with 0 values with the specified shape. The default dtype is float64:</p>
+<p>import numpy as np</p>
+<p>np.zeros((2, 3))
+array([[0., 0., 0.],</p>
+<blockquote>
+<div><p>[0., 0., 0.]])</p>
+</div></blockquote>
+<p>np.zeros((2, 3, 2))
+array([[[0., 0.],</p>
+<blockquote>
+<div><blockquote>
+<div><p>[0., 0.],
+[0., 0.]],</p>
+</div></blockquote>
+<dl class="simple">
+<dt>[[0., 0.],</dt><dd><p>[0., 0.],
+[0., 0.]]])</p>
+</dd>
+</dl>
+</div></blockquote>
+<p>numpy.ones will create an array filled with 1 values. It is identical to zeros in all other respects as such:</p>
+<p>import numpy as np</p>
+<p>np.ones((2, 3))
+array([[1., 1., 1.],</p>
+<blockquote>
+<div><p>[1., 1., 1.]])</p>
+</div></blockquote>
+<p>np.ones((2, 3, 2))
+array([[[1., 1.],</p>
+<blockquote>
+<div><blockquote>
+<div><p>[1., 1.],
+[1., 1.]],</p>
+</div></blockquote>
+<dl class="simple">
+<dt>[[1., 1.],</dt><dd><p>[1., 1.],
+[1., 1.]]])</p>
+</dd>
+</dl>
+</div></blockquote>
+<p>The random method of the result of default_rng will create an array filled with random values between 0 and 1. It is included with the numpy.random library. Below, two arrays are created with shapes (2,3) and (2,3,2), respectively. The seed is set to 42 so you can reproduce these pseudorandom numbers:</p>
+<p>import numpy as np</p>
+<p>from numpy.random import default_rng</p>
+<p>default_rng(42).random((2,3))
+array([[0.77395605, 0.43887844, 0.85859792],</p>
+<blockquote>
+<div><p>[0.69736803, 0.09417735, 0.97562235]])</p>
+</div></blockquote>
+<p>default_rng(42).random((2,3,2))
+array([[[0.77395605, 0.43887844],</p>
+<blockquote>
+<div><blockquote>
+<div><p>[0.85859792, 0.69736803],
+[0.09417735, 0.97562235]],</p>
+</div></blockquote>
+<dl class="simple">
+<dt>[[0.7611397 , 0.78606431],</dt><dd><p>[0.12811363, 0.45038594],
+[0.37079802, 0.92676499]]])</p>
+</dd>
+</dl>
+</div></blockquote>
+<p>numpy.indices will create a set of arrays (stacked as a one-higher dimensioned array), one per dimension with each representing variation in that dimension:</p>
+<p>import numpy as np</p>
+<p>np.indices((3,3))
+array([[[0, 0, 0],</p>
+<blockquote>
+<div><blockquote>
+<div><p>[1, 1, 1],
+[2, 2, 2]],</p>
+</div></blockquote>
+<dl class="simple">
+<dt>[[0, 1, 2],</dt><dd><p>[0, 1, 2],
+[0, 1, 2]]])</p>
+</dd>
+</dl>
+</div></blockquote>
+<p>This is particularly useful for evaluating functions of multiple dimensions on a regular grid.
+3) Replicating, joining, or mutating existing arrays</p>
+<p>Once you have created arrays, you can replicate, join, or mutate those existing arrays to create new arrays. When you assign an array or its elements to a new variable, you have to explicitly numpy.copy the array, otherwise the variable is a view into the original array. Consider the following example:</p>
+<p>import numpy as np</p>
+<p>a = np.array([1, 2, 3, 4, 5, 6])</p>
+<p>b = a[:2]</p>
+<p>b += 1</p>
+<p>print(‘a =’, a, ‘; b =’, b)
+a = [2 3 3 4 5 6] ; b = [2 3]</p>
+<p>In this example, you did not create a new array. You created a variable, b that viewed the first 2 elements of a. When you added 1 to b you would get the same result by adding 1 to a[:2]. If you want to create a new array, use the numpy.copy array creation routine as such:</p>
+<p>import numpy as np</p>
+<p>a = np.array([1, 2, 3, 4])</p>
+<p>b = a[:2].copy()</p>
+<p>b += 1</p>
+<p>print(‘a = ‘, a, ‘b = ‘, b)
+a =  [1 2 3 4] b =  [2 3]</p>
+<p>For more information and examples look at Copies and Views.</p>
+<p>There are a number of routines to join existing arrays e.g. numpy.vstack, numpy.hstack, and numpy.block. Here is an example of joining four 2-by-2 arrays into a 4-by-4 array using block:</p>
+<p>import numpy as np</p>
+<p>A = np.ones((2, 2))</p>
+<p>B = np.eye(2, 2)</p>
+<p>C = np.zeros((2, 2))</p>
+<p>D = np.diag((-3, -4))</p>
+<p>np.block([[A, B], [C, D]])
+array([[ 1.,  1.,  1.,  0.],</p>
+<blockquote>
+<div><p>[ 1.,  1.,  0.,  1.],
+[ 0.,  0., -3.,  0.],
+[ 0.,  0.,  0., -4.]])</p>
+</div></blockquote>
+<p>Other routines use similar syntax to join ndarrays. Check the routine’s documentation for further examples and syntax.
+4) Reading arrays from disk, either from standard or custom formats</p>
+<p>This is the most common case of large array creation. The details depend greatly on the format of data on disk. This section gives general pointers on how to handle various formats. For more detailed examples of IO look at How to Read and Write files.
+Standard binary formats</p>
+<p>Various fields have standard formats for array data. The following lists the ones with known Python libraries to read them and return NumPy arrays (there may be others for which it is possible to read and convert to NumPy arrays so check the last section as well)</p>
+<p>HDF5: h5py
+FITS: Astropy</p>
+<p>Examples of formats that cannot be read directly but for which it is not hard to convert are those formats supported by libraries like PIL (able to read and write many image formats such as jpg, png, etc).
+Common ASCII formats</p>
+<p>Delimited files such as comma separated value (csv) and tab separated value (tsv) files are used for programs like Excel and LabView. Python functions can read and parse these files line-by-line. NumPy has two standard routines for importing a file with delimited data numpy.loadtxt and numpy.genfromtxt. These functions have more involved use cases in Reading and writing files. A simple example given a simple.csv:</p>
+<p>$ cat simple.csv
+x, y
+0, 0
+1, 1
+2, 4
+3, 9</p>
+<p>Importing simple.csv is accomplished using numpy.loadtxt:</p>
+<p>import numpy as np</p>
+<p>np.loadtxt(‘simple.csv’, delimiter = ‘,’, skiprows = 1)
+array([[0., 0.],</p>
+<blockquote>
+<div><p>[1., 1.],
+[2., 4.],
+[3., 9.]])</p>
+</div></blockquote>
+<p>More generic ASCII files can be read using scipy.io and Pandas.
+5) Creating arrays from raw bytes through the use of strings or buffers</p>
+<p>There are a variety of approaches one can use. If the file has a relatively simple format then one can write a simple I/O library and use the NumPy fromfile() function and .tofile() method to read and write NumPy arrays directly (mind your byteorder though!) If a good C or C++ library exists that read the data, one can wrap that library with a variety of techniques though that certainly is much more work and requires significantly more advanced knowledge to interface with C or C++.
+6) Use of special library functions (e.g., SciPy, pandas, and OpenCV)
+NumPy is the fundamental library for array containers in the Python Scientific Computing stack. Many Python libraries, including SciPy, Pandas, and OpenCV, use NumPy ndarrays as the common format for data exchange, These libraries can create, operate on, and work with NumPy arrays.</p>
+</section>
+
+
+          </div>
+          
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="Main">
+        <div class="sphinxsidebarwrapper">
+<h1 class="logo"><a href="../../../index.html">Numerical_Analysis_2E_Walter</a></h1>
+
+
+
+
+
+
+
+
+
+<search id="searchbox" style="display: none" role="search">
+    <div class="searchformwrapper">
+    <form class="search" action="../../../search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" placeholder="Search"/>
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</search>
+<script>document.getElementById('searchbox').style.display = "block"</script><h3>Navigation</h3>
+<p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../nifti.html">Manejo de imágenes de Resonancia Magnética</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../Matplotlib_RST/index2.html">Matplotlib</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../index99.html">Introducción al Lenguaje de Programación con “PYTHON”</a></li>
+</ul>
+
+<div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="../../../index.html">Documentation overview</a><ul>
+  </ul></li>
+</ul>
+</div>
+
+
+
+
+
+
+
+
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &#169;2025, leopoldo.
+      
+      |
+      Powered by <a href="https://www.sphinx-doc.org/">Sphinx 8.2.3</a>
+      &amp; <a href="https://alabaster.readthedocs.io">Alabaster 1.0.0</a>
+      
+      |
+      <a href="../../../_sources/source2/Matplotlib/Python_Numpy/doc03.rst.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+  </body>
+</html>

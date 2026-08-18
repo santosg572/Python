@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+
+<html lang="en" data-content_root="../../../">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Data types &#8212; Numerical_Analysis_2E_Walter 1.0 documentation</title>
+    <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css?v=d1102ebc" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/basic.css?v=b08954a9" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/alabaster.css?v=27fed22d" />
+    <script src="../../../_static/documentation_options.js?v=f2a433a1"></script>
+    <script src="../../../_static/doctools.js?v=9bcbadda"></script>
+    <script src="../../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" />
+   
+  <link rel="stylesheet" href="../../../_static/custom.css" type="text/css" />
+  
+
+  
+  
+
+  </head><body>
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          
+
+          <div class="body" role="main">
+            
+  <section id="data-types">
+<h1>Data types<a class="headerlink" href="#data-types" title="Link to this heading">¶</a></h1>
+<p><a class="reference external" href="https://numpy.org/doc/2.3/user/basics.types.html">https://numpy.org/doc/2.3/user/basics.types.html</a></p>
+<p>See also</p>
+<p>Data type objects
+Array types and conversions between types</p>
+<p>NumPy supports a much greater variety of numerical types than Python does. This section shows which are available, and how to modify an array’s data-type.</p>
+<p>NumPy numerical types are instances of numpy.dtype (data-type) objects, each having unique characteristics. Once you have imported NumPy using import numpy as np you can create arrays with a specified dtype using the scalar types in the numpy top-level API, e.g. numpy.bool, numpy.float32, etc.</p>
+<p>These scalar types as arguments to the dtype keyword that many numpy functions or methods accept. For example:</p>
+<p>z = np.arange(3, dtype=np.uint8)</p>
+<p>z
+array([0, 1, 2], dtype=uint8)</p>
+<p>Array types can also be referred to by character codes, for example:</p>
+<p>np.array([1, 2, 3], dtype=’f’)
+array([1.,  2.,  3.], dtype=float32)</p>
+<p>np.array([1, 2, 3], dtype=’d’)
+array([1.,  2.,  3.], dtype=float64)</p>
+<p>See Specifying and constructing data types for more information about specifying and constructing data type objects, including how to specify parameters like the byte order.</p>
+<p>To convert the type of an array, use the .astype() method. For example:</p>
+<p>z.astype(np.float64)
+array([0.,  1.,  2.])</p>
+<p>Note that, above, we could have used the Python float object as a dtype instead of numpy.float64. NumPy knows that int refers to <a href="#id3"><span class="problematic" id="id4">numpy.int_</span></a>, bool means numpy.bool, that float is numpy.float64 and complex is numpy.complex128. The other data-types do not have Python equivalents.</p>
+<p>To determine the type of an array, look at the dtype attribute:</p>
+<p>z.dtype
+dtype(‘uint8’)</p>
+<p>dtype objects also contain information about the type, such as its bit-width and its byte-order. The data type can also be used indirectly to query properties of the type, such as whether it is an integer:</p>
+<p>d = np.dtype(np.int64)</p>
+<p>d
+dtype(‘int64’)</p>
+<p>np.issubdtype(d, np.integer)
+True</p>
+<p>np.issubdtype(d, np.floating)
+False</p>
+<p>Numerical Data Types</p>
+<p>There are 5 basic numerical types representing booleans (bool), integers (int), unsigned integers (uint) floating point (float) and complex. A basic numerical type name combined with a numeric bitsize defines a concrete type. The bitsize is the number of bits that are needed to represent a single value in memory. For example, numpy.float64 is a 64 bit floating point data type. Some types, such as <a href="#id5"><span class="problematic" id="id6">numpy.int_</span></a> and numpy.intp, have differing bitsizes, dependent on the platforms (e.g. 32-bit vs. 64-bit CPU architectures). This should be taken into account when interfacing with low-level code (such as C or Fortran) where the raw memory is addressed.
+Data Types for Strings and Bytes</p>
+<p>In addition to numerical types, NumPy also supports storing unicode strings, via the <a href="#id7"><span class="problematic" id="id8">numpy.str_</span></a> dtype (U character code), null-terminated byte sequences via <a href="#id9"><span class="problematic" id="id10">numpy.bytes_</span></a> (S character code), and arbitrary byte sequences, via numpy.void (V character code).</p>
+<p>All of the above are fixed-width data types. They are parameterized by a width, in either bytes or unicode points, that a single data element in the array must fit inside. This means that storing an array of byte sequences or strings using this dtype requires knowing or calculating the sizes of the longest text or byte sequence in advance.</p>
+<p>As an example, we can create an array storing the words “hello” and “world!”:</p>
+<p>np.array([“hello”, “world!”])
+array([‘hello’, ‘world!’], dtype=’&lt;U6’)</p>
+<p>Here the data type is detected as a unicode string that is a maximum of 6 code points long, enough to store both entries without truncation. If we specify a shorter or longer data type, the string is either truncated or zero-padded to fit in the specified width:</p>
+<p>np.array([“hello”, “world!”], dtype=”U5”)
+array([‘hello’, ‘world’], dtype=’&lt;U5’)</p>
+<p>np.array([“hello”, “world!”], dtype=”U7”)
+array([‘hello’, ‘world!’], dtype=’&lt;U7’)</p>
+<p>We can see the zero-padding a little more clearly if we use the bytes data type and ask NumPy to print out the bytes in the array buffer:</p>
+<p>np.array([“hello”, “world”], dtype=”S7”).tobytes()
+b’hellox00x00worldx00x00’</p>
+<p>Each entry is padded with two extra null bytes. Note however that NumPy cannot tell the difference between intentionally stored trailing nulls and padding nulls:</p>
+<p>x = [b”hello00”, b”world”]</p>
+<p>a = np.array(x, dtype=”S7”)</p>
+<p>print(a[0])
+b”hello”</p>
+<p>a[0] == x[0]
+False</p>
+<p>If you need to store and round-trip any trailing null bytes, you will need to use an unstructured void data type:</p>
+<p>a = np.array(x, dtype=”V7”)</p>
+<p>a
+array([b’x68x65x6Cx6Cx6Fx00x00’, b’x77x6Fx72x6Cx64x00x00’],</p>
+<blockquote>
+<div><p>dtype=’<a href="#id1"><span class="problematic" id="id2">|</span></a>V7’)</p>
+</div></blockquote>
+<p>a[0] == np.void(x[0])
+True</p>
+<p>Advanced types, not listed above, are explored in section Structured arrays.
+Relationship Between NumPy Data Types and C Data Types</p>
+<p>NumPy provides both bit sized type names and names based on the names of C types. Since the definition of C types are platform dependent, this means the explicitly bit sized should be preferred to avoid platform-dependent behavior in programs using NumPy.</p>
+<p>To ease integration with C code, where it is more natural to refer to platform-dependent C types, NumPy also provides type aliases that correspond to the C types for the platform. Some dtypes have trailing underscore to avoid confusion with builtin python type names, such as <a href="#id11"><span class="problematic" id="id12">numpy.bool_</span></a>.</p>
+<p>Canonical Python API name</p>
+<p>Python API “C-like” name</p>
+<p>Actual C type</p>
+<p>Description</p>
+<p>numpy.bool or <a href="#id13"><span class="problematic" id="id14">numpy.bool_</span></a></p>
+<p>N/A</p>
+<p>bool (defined in stdbool.h)</p>
+<p>Boolean (True or False) stored as a byte.</p>
+<p>numpy.int8</p>
+<p>numpy.byte</p>
+<p>signed char</p>
+<p>Platform-defined integer type with 8 bits.</p>
+<p>numpy.uint8</p>
+<p>numpy.ubyte</p>
+<p>unsigned char</p>
+<p>Platform-defined integer type with 8 bits without sign.</p>
+<p>numpy.int16</p>
+<p>numpy.short</p>
+<p>short</p>
+<p>Platform-defined integer type with 16 bits.</p>
+<p>numpy.uint16</p>
+<p>numpy.ushort</p>
+<p>unsigned short</p>
+<p>Platform-defined integer type with 16 bits without sign.</p>
+<p>numpy.int32</p>
+<p>numpy.intc</p>
+<p>int</p>
+<p>Platform-defined integer type with 32 bits.</p>
+<p>numpy.uint32</p>
+<p>numpy.uintc</p>
+<p>unsigned int</p>
+<p>Platform-defined integer type with 32 bits without sign.</p>
+<p>numpy.intp</p>
+<p>N/A</p>
+<p>ssize_t/Py_ssize_t</p>
+<p>Platform-defined integer of size size_t; used e.g. for sizes.</p>
+<p>numpy.uintp</p>
+<p>N/A</p>
+<p>size_t</p>
+<p>Platform-defined integer type capable of storing the maximum allocation size.</p>
+<p>N/A</p>
+<p>‘p’</p>
+<p>intptr_t</p>
+<p>Guaranteed to hold pointers. Character code only (Python and C).</p>
+<p>N/A</p>
+<p>‘P’</p>
+<p>uintptr_t</p>
+<p>Guaranteed to hold pointers. Character code only (Python and C).</p>
+<p>numpy.int32 or numpy.int64</p>
+<p>numpy.long</p>
+<p>long</p>
+<p>Platform-defined integer type with at least 32 bits.</p>
+<p>numpy.uint32 or numpy.uint64</p>
+<p>numpy.ulong</p>
+<p>unsigned long</p>
+<p>Platform-defined integer type with at least 32 bits without sign.</p>
+<p>N/A</p>
+<p>numpy.longlong</p>
+<p>long long</p>
+<p>Platform-defined integer type with at least 64 bits.</p>
+<p>N/A</p>
+<p>numpy.ulonglong</p>
+<p>unsigned long long</p>
+<p>Platform-defined integer type with at least 64 bits without sign.</p>
+<p>numpy.float16</p>
+<p>numpy.half</p>
+<p>N/A</p>
+<p>Half precision float: sign bit, 5 bits exponent, 10 bits mantissa.</p>
+<p>numpy.float32</p>
+<p>numpy.single</p>
+<p>float</p>
+<p>Platform-defined single precision float: typically sign bit, 8 bits exponent, 23 bits mantissa.</p>
+<p>numpy.float64</p>
+<p>numpy.double</p>
+<p>double</p>
+<p>Platform-defined double precision float: typically sign bit, 11 bits exponent, 52 bits mantissa.</p>
+<p>numpy.float96 or numpy.float128</p>
+<p>numpy.longdouble</p>
+<p>long double</p>
+<p>Platform-defined extended-precision float.</p>
+<p>numpy.complex64</p>
+<p>numpy.csingle</p>
+<p>float complex</p>
+<p>Complex number, represented by two single-precision floats (real and imaginary components).</p>
+<p>numpy.complex128</p>
+<p>numpy.cdouble</p>
+<p>double complex</p>
+<p>Complex number, represented by two double-precision floats (real and imaginary components).</p>
+<p>numpy.complex192 or numpy.complex256</p>
+<p>numpy.clongdouble</p>
+<p>long double complex</p>
+<p>Complex number, represented by two extended-precision floats (real and imaginary components).</p>
+<p>Since many of these have platform-dependent definitions, a set of fixed-size aliases are provided (See Sized aliases).
+Array scalars</p>
+<p>NumPy generally returns elements of arrays as array scalars (a scalar with an associated dtype). Array scalars differ from Python scalars, but for the most part they can be used interchangeably (the primary exception is for versions of Python older than v2.x, where integer array scalars cannot act as indices for lists and tuples). There are some exceptions, such as when code requires very specific attributes of a scalar or when it checks specifically whether a value is a Python scalar. Generally, problems are easily fixed by explicitly converting array scalars to Python scalars, using the corresponding Python type function (e.g., int, float, complex, str).</p>
+<p>The primary advantage of using array scalars is that they preserve the array type (Python may not have a matching scalar type available, e.g. int16). Therefore, the use of array scalars ensures identical behaviour between arrays and scalars, irrespective of whether the value is inside an array or not. NumPy scalars also have many of the same methods arrays do.
+Overflow errors</p>
+<p>The fixed size of NumPy numeric types may cause overflow errors when a value requires more memory than available in the data type. For example, numpy.power evaluates 100 ** 9 correctly for 64-bit integers, but gives -1486618624 (incorrect) for a 32-bit integer.</p>
+<p>np.power(100, 9, dtype=np.int64)
+1000000000000000000</p>
+<p>np.power(100, 9, dtype=np.int32)
+np.int32(-1486618624)</p>
+<p>The behaviour of NumPy and Python integer types differs significantly for integer overflows and may confuse users expecting NumPy integers to behave similar to Python’s int. Unlike NumPy, the size of Python’s int is flexible. This means Python integers may expand to accommodate any integer and will not overflow.</p>
+<p>NumPy provides numpy.iinfo and numpy.finfo to verify the minimum or maximum values of NumPy integer and floating point values respectively</p>
+<p>np.iinfo(int) # Bounds of the default integer on this system.
+iinfo(min=-9223372036854775808, max=9223372036854775807, dtype=int64)</p>
+<p>np.iinfo(np.int32) # Bounds of a 32-bit integer
+iinfo(min=-2147483648, max=2147483647, dtype=int32)</p>
+<p>np.iinfo(np.int64) # Bounds of a 64-bit integer
+iinfo(min=-9223372036854775808, max=9223372036854775807, dtype=int64)</p>
+<p>If 64-bit integers are still too small the result may be cast to a floating point number. Floating point numbers offer a larger, but inexact, range of possible values.</p>
+<p>np.power(100, 100, dtype=np.int64) # Incorrect even with 64-bit int
+0</p>
+<p>np.power(100, 100, dtype=np.float64)
+1e+200</p>
+<p>Floating point precision</p>
+<p>Many functions in NumPy, especially those in numpy.linalg, involve floating-point arithmetic, which can introduce small inaccuracies due to the way computers represent decimal numbers. For instance, when performing basic arithmetic operations involving floating-point numbers:</p>
+<p>0.3 - 0.2 - 0.1  # This does not equal 0 due to floating-point precision
+-2.7755575615628914e-17</p>
+<p>To handle such cases, it’s advisable to use functions like np.isclose to compare values, rather than checking for exact equality:</p>
+<p>np.isclose(0.3 - 0.2 - 0.1, 0, rtol=1e-05)  # Check for closeness to 0
+True</p>
+<p>In this example, np.isclose accounts for the minor inaccuracies that occur in floating-point calculations by applying a relative tolerance, ensuring that results within a small threshold are considered close.</p>
+<p>For information about precision in calculations, see Floating-Point Arithmetic.
+Extended precision</p>
+<p>Python’s floating-point numbers are usually 64-bit floating-point numbers, nearly equivalent to numpy.float64. In some unusual situations it may be useful to use floating-point numbers with more precision. Whether this is possible in numpy depends on the hardware and on the development environment: specifically, x86 machines provide hardware floating-point with 80-bit precision, and while most C compilers provide this as their long double type, MSVC (standard for Windows builds) makes long double identical to double (64 bits). NumPy makes the compiler’s long double available as numpy.longdouble (and np.clongdouble for the complex numbers). You can find out what your numpy provides with np.finfo(np.longdouble).</p>
+<p>NumPy does not provide a dtype with more precision than C’s long double; in particular, the 128-bit IEEE quad precision data type (FORTRAN’s REAL*16) is not available.</p>
+<p>For efficient memory alignment, numpy.longdouble is usually stored padded with zero bits, either to 96 or 128 bits. Which is more efficient depends on hardware and development environment; typically on 32-bit systems they are padded to 96 bits, while on 64-bit systems they are typically padded to 128 bits. np.longdouble is padded to the system default; np.float96 and np.float128 are provided for users who want specific padding. In spite of the names, np.float96 and np.float128 provide only as much precision as np.longdouble, that is, 80 bits on most x86 machines and 64 bits in standard Windows builds.</p>
+<p>Be warned that even if numpy.longdouble offers more precision than python float, it is easy to lose that extra precision, since python often forces values to pass through float. For example, the % formatting operator requires its arguments to be converted to standard python types, and it is therefore impossible to preserve extended precision even if many decimal places are requested. It can be useful to test your code with the value 1 + np.finfo(np.longdouble).eps.</p>
+</section>
+
+
+          </div>
+          
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="Main">
+        <div class="sphinxsidebarwrapper">
+<h1 class="logo"><a href="../../../index.html">Numerical_Analysis_2E_Walter</a></h1>
+
+
+
+
+
+
+
+
+
+<search id="searchbox" style="display: none" role="search">
+    <div class="searchformwrapper">
+    <form class="search" action="../../../search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" placeholder="Search"/>
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</search>
+<script>document.getElementById('searchbox').style.display = "block"</script><h3>Navigation</h3>
+<p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../nifti.html">Manejo de imágenes de Resonancia Magnética</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../Matplotlib_RST/index2.html">Matplotlib</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../index99.html">Introducción al Lenguaje de Programación con “PYTHON”</a></li>
+</ul>
+
+<div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="../../../index.html">Documentation overview</a><ul>
+  </ul></li>
+</ul>
+</div>
+
+
+
+
+
+
+
+
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &#169;2025, leopoldo.
+      
+      |
+      Powered by <a href="https://www.sphinx-doc.org/">Sphinx 8.2.3</a>
+      &amp; <a href="https://alabaster.readthedocs.io">Alabaster 1.0.0</a>
+      
+      |
+      <a href="../../../_sources/source2/Matplotlib/Python_Numpy/doc07.rst.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+  </body>
+</html>

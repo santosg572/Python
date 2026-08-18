@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+
+<html lang="en" data-content_root="../../">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Axes layout &#8212; Numerical_Analysis_2E_Walter 1.0 documentation</title>
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=d1102ebc" />
+    <link rel="stylesheet" type="text/css" href="../../_static/basic.css?v=b08954a9" />
+    <link rel="stylesheet" type="text/css" href="../../_static/alabaster.css?v=27fed22d" />
+    <script src="../../_static/documentation_options.js?v=f2a433a1"></script>
+    <script src="../../_static/doctools.js?v=9bcbadda"></script>
+    <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+   
+  <link rel="stylesheet" href="../../_static/custom.css" type="text/css" />
+  
+
+  
+  
+
+  </head><body>
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          
+
+          <div class="body" role="main">
+            
+  <p>Axes and subplots</p>
+<p><a class="reference external" href="https://matplotlib.org/stable/users/explain/axes/index.html">https://matplotlib.org/stable/users/explain/axes/index.html</a></p>
+<p>Axes and subplots
+Matplotlib Axes are the gateway to creating your data visualizations. Once an Axes is placed on a
+figure there are many methods that can be used to add data to the Axes. An Axes typically has a pair
+of Axis Artists that define the data coordinate system, and include methods to add annotations like
+x- and y-labels, titles, and legends.</p>
+<p>(Source code, 2x.png, png)</p>
+<p>Introduction to Axes (or Subplots)
+Creating Axes
+Axes plotting methods
+Axes labelling and annotation
+Axes limits, scales, and ticking
+Axes layout
+Arranging multiple Axes in a Figure
+Placing colorbars
+Autoscaling axes
+Axis scales
+loglog and semilogx/y
+Other built-in scales
+Optional arguments for scales
+Arbitrary function scales
+What is a “scale”?
+Axis ticks
+Manual location and formats
+Locators and Formatters
+Styling ticks (tick parameters)
+Plotting dates and strings
+Date conversion
+String conversion: categorical plots
+Determine converter, formatter, and locator on an axis
+More about “unit” support
+Legends
+Controlling the legend entries
+Creating artists specifically for adding to the legend (aka. Proxy artists)
+Legend location
+Multiple legends on the same Axes
+Legend handlers
+Subplot mosaic
+String short-hand
+Axes spanning multiple rows/columns
+Controlling mosaic creation
+Controlling subplot creation
+Nested list input
+Constrained layout guide
+Tight layout guide (mildly discouraged)</p>
+<p>Introduction to Axes (or Subplots)
+Matplotlib Axes are the gateway to creating your data visualizations. Once an Axes is placed on a
+figure there are many methods that can be used to add data to the Axes. An Axes typically has a pair
+of Axis Artists that define the data coordinate system, and include methods to add annotations like
+x- and y-labels, titles, and legends.</p>
+<p>../../../_images/anatomy.png
+Anatomy of a Figure
+In the picture above, the Axes object was created with ax = fig.subplots(). Everything else on the
+figure was created with methods on this ax object, or can be accessed from it. If we want to change
+the label on the x-axis, we call ax.set_xlabel(‘New Label’), if we want to plot some data we call
+ax.plot(x, y). Indeed, in the figure above, the only Artist that is not part of the Axes is the
+Figure itself, so the axes.Axes class is really the gateway to much of Matplotlib’s functionality.</p>
+<p>Note that Axes are so fundamental to the operation of Matplotlib that a lot of material here is
+duplicate of that in Quick start guide.</p>
+<p>Creating Axes
+import matplotlib.pyplot as plt
+import numpy as np</p>
+<dl class="simple">
+<dt>fig, axs = plt.subplots(ncols=2, nrows=2, figsize=(3.5, 2.5),</dt><dd><p>layout=”constrained”)</p>
+</dd>
+</dl>
+<p># for each Axes, add an artist, in this case a nice label in the middle…
+for row in range(2):</p>
+<blockquote>
+<div><dl class="simple">
+<dt>for col in range(2):</dt><dd><dl class="simple">
+<dt>axs[row, col].annotate(f’axs[{row}, {col}]’, (0.5, 0.5),</dt><dd><p>transform=axs[row, col].transAxes,
+ha=’center’, va=’center’, fontsize=18,
+color=’darkgrey’)</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</div></blockquote>
+<p>fig.suptitle(‘plt.subplots()’)
+(Source code, 2x.png, png)</p>
+<p>Axes are added using methods on Figure objects, or via the pyplot interface. These methods are
+discussed in more detail in Creating Figures and Arranging multiple Axes in a Figure. However, for
+instance add_axes will manually position an Axes on the page. In the example above subplots put a
+grid of subplots on the figure, and axs is a (2, 2) array of Axes, each of which can have data added
+to them.</p>
+<p>There are a number of other methods for adding Axes to a Figure:</p>
+<p>Figure.add_axes: manually position an Axes. fig.add_axes([0, 0, 1, 1]) makes an Axes that fills the
+whole figure.</p>
+<p>pyplot.subplots and Figure.subplots: add a grid of Axes as in the example above. The pyplot version
+returns both the Figure object and an array of Axes. Note that fig, ax = plt.subplots() adds a
+single Axes to a Figure.</p>
+<p>pyplot.subplot_mosaic and Figure.subplot_mosaic: add a grid of named Axes and return a dictionary of
+axes. For fig, axs = plt.subplot_mosaic([[‘left’, ‘right’], [‘bottom’, ‘bottom’]]), axs[‘left’] is
+an Axes in the top row on the left, and axs[‘bottom’] is an Axes that spans both columns on the
+bottom.</p>
+<p>See Arranging multiple Axes in a Figure for more detail on how to arrange grids of Axes on a Figure.</p>
+<p>Axes plotting methods
+Most of the high-level plotting methods are accessed from the axes.Axes class. See the API
+documentation for a full curated list, and Plot types for examples. A basic example is
+axes.Axes.plot:</p>
+<p>fig, ax = plt.subplots(figsize=(4, 3))
+np.random.seed(19680801)
+t = np.arange(100)
+x = np.cumsum(np.random.randn(100))
+lines = ax.plot(t, x)
+(Source code, 2x.png, png)</p>
+<p>Note that plot returns a list of lines Artists which can subsequently be manipulated, as discussed
+in Introduction to Artists.</p>
+<p>A very incomplete list of plotting methods is below. Again, see Plot types for more examples, and
+axes.Axes for the full list of methods.</p>
+<p>Pairwise data</p>
+<p>plot, scatter, bar, step,</p>
+<p>Array objects</p>
+<p>pcolormesh, contour, quiver, streamplot, imshow</p>
+<p>Statistical distributions</p>
+<p>hist, errorbar, hist2d, pie, boxplot, violinplot</p>
+<p>Irregularly gridded data</p>
+<p>tricontour, tripcolor</p>
+<p>Axes labelling and annotation
+Usually we want to label the Axes with an xlabel, ylabel, and title, and often we want to have a
+legend to differentiate plot elements. The Axes class has a number of methods to create these
+annotations.</p>
+<p>fig, ax = plt.subplots(figsize=(5, 3), layout=’constrained’)
+np.random.seed(19680801)
+t = np.arange(200)
+x = np.cumsum(np.random.randn(200))
+y = np.cumsum(np.random.randn(200))
+linesx = ax.plot(t, x, label=’Random walk x’)
+linesy = ax.plot(t, y, label=’Random walk y’)</p>
+<p>ax.set_xlabel(‘Time [s]’)
+ax.set_ylabel(‘Distance [km]’)
+ax.set_title(‘Random walk example’)
+ax.legend()
+(Source code, 2x.png, png)</p>
+<p>These methods are relatively straight-forward, though there are a number of Text properties and
+layout that can be set on the text objects, like fontsize, fontname, horizontalalignment. Legends
+can be much more complicated; see Legend guide for more details.</p>
+<p>Note that text can also be added to axes using text, and annotate. This can be quite sophisticated:
+see Text properties and layout and Annotations for more information.</p>
+<p>Axes limits, scales, and ticking
+Each Axes has two (or more) Axis objects, that can be accessed via xaxis and yaxis properties. These
+have substantial number of methods on them, and for highly customizable Axis-es it is useful to read
+the API at Axis. However, the Axes class offers a number of helpers for the most common of these
+methods. Indeed, the set_xlabel, discussed above, is a helper for the set_label_text.</p>
+<p>Other important methods set the extent on the axes (set_xlim, set_ylim), or more fundamentally the
+scale of the axes. So for instance, we can make an Axis have a logarithmic scale, and zoom in on a
+sub-portion of the data:</p>
+<p>fig, ax = plt.subplots(figsize=(4, 2.5), layout=’constrained’)
+np.random.seed(19680801)
+t = np.arange(200)
+x = 2**np.cumsum(np.random.randn(200))
+linesx = ax.plot(t, x)
+ax.set_yscale(‘log’)
+ax.set_xlim([20, 180])
+(Source code, 2x.png, png)</p>
+<p>The Axes class also has helpers to deal with Axis ticks and their labels. Most straight-forward is
+set_xticks and set_yticks which manually set the tick locations and optionally their labels. Minor
+ticks can be toggled with minorticks_on or minorticks_off.</p>
+<p>Many aspects of Axes ticks and tick labeling can be adjusted using tick_params. For instance, to
+label the top of the axes instead of the bottom,color the ticks red, and color the ticklabels green:</p>
+<p>fig, ax = plt.subplots(figsize=(4, 2.5))
+ax.plot(np.arange(10))
+ax.tick_params(top=True, labeltop=True, color=’red’, axis=’x’,</p>
+<blockquote>
+<div><p>labelcolor=’green’)</p>
+</div></blockquote>
+<p>(Source code, 2x.png, png)</p>
+<p>More fine-grained control on ticks, setting scales, and controlling the Axis can be highly
+customized beyond these Axes-level helpers.</p>
+<section id="axes-layout">
+<h1>Axes layout<a class="headerlink" href="#axes-layout" title="Link to this heading">¶</a></h1>
+<p>Sometimes it is important to set the aspect ratio of a plot in data space, which we can do with
+set_aspect:</p>
+<p>fig, axs = plt.subplots(ncols=2, figsize=(7, 2.5), layout=’constrained’)
+np.random.seed(19680801)
+t = np.arange(200)
+x = np.cumsum(np.random.randn(200))
+axs[0].plot(t, x)
+axs[0].set_title(‘aspect=”auto”’)</p>
+<p>axs[1].plot(t, x)
+axs[1].set_aspect(3)
+axs[1].set_title(‘aspect=3’)
+(Source code, 2x.png, png)</p>
+<blockquote>
+<div><p>On this page</p>
+</div></blockquote>
+<p>Creating Axes
+Axes plotting methods
+Axes labelling and annotation
+Axes limits, scales, and ticking
+Axes layout</p>
+<hr class="docutils" />
+</section>
+
+
+          </div>
+          
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="Main">
+        <div class="sphinxsidebarwrapper">
+<h1 class="logo"><a href="../../index.html">Numerical_Analysis_2E_Walter</a></h1>
+
+
+
+
+
+
+
+
+
+<search id="searchbox" style="display: none" role="search">
+    <div class="searchformwrapper">
+    <form class="search" action="../../search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" placeholder="Search"/>
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</search>
+<script>document.getElementById('searchbox').style.display = "block"</script><h3>Navigation</h3>
+<p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../nifti.html">Manejo de imágenes de Resonancia Magnética</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../Matplotlib_RST/index2.html">Matplotlib</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../index99.html">Introducción al Lenguaje de Programación con “PYTHON”</a></li>
+</ul>
+
+<div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="../../index.html">Documentation overview</a><ul>
+  </ul></li>
+</ul>
+</div>
+
+
+
+
+
+
+
+
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &#169;2025, leopoldo.
+      
+      |
+      Powered by <a href="https://www.sphinx-doc.org/">Sphinx 8.2.3</a>
+      &amp; <a href="https://alabaster.readthedocs.io">Alabaster 1.0.0</a>
+      
+      |
+      <a href="../../_sources/source2/Python_Matplotlib/Using_Matplotlib-Axes_and_subplots.rst.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+  </body>
+</html>

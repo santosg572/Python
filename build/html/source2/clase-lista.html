@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+
+<html lang="en" data-content_root="../">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Clase Lista &#8212; Numerical_Analysis_2E_Walter 1.0 documentation</title>
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=d1102ebc" />
+    <link rel="stylesheet" type="text/css" href="../_static/basic.css?v=b08954a9" />
+    <link rel="stylesheet" type="text/css" href="../_static/alabaster.css?v=27fed22d" />
+    <script src="../_static/documentation_options.js?v=f2a433a1"></script>
+    <script src="../_static/doctools.js?v=9bcbadda"></script>
+    <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Funciones o Métodos" href="funciones.html" />
+    <link rel="prev" title="Clase tupla" href="clase-tupla.html" />
+   
+  <link rel="stylesheet" href="../_static/custom.css" type="text/css" />
+  
+
+  
+  
+
+  </head><body>
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          
+
+          <div class="body" role="main">
+            
+  <section id="clase-lista">
+<h1>Clase Lista<a class="headerlink" href="#clase-lista" title="Link to this heading">¶</a></h1>
+<p>La clase lista representa un tipo de datos estructurado cuyo elementos de la lista pueden cambiar su valor.</p>
+<p>Ejemplos:</p>
+<div class="highlight-Bash notranslate"><div class="highlight"><pre><span></span><span class="nv">l1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="o">[]</span>
+<span class="nv">l2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="o">[</span><span class="m">1</span>,<span class="w"> </span><span class="s1">&#39;1&#39;</span>,<span class="w"> </span><span class="m">2</span>,<span class="w"> </span><span class="s1">&#39;2&#39;</span>,<span class="w"> </span><span class="m">3</span>,<span class="w"> </span><span class="s1">&#39;3&#39;</span><span class="o">]</span>
+<span class="nv">l3</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="o">[</span><span class="s1">&#39;juan&#39;</span><span class="w"> </span>,<span class="w"> </span><span class="s1">&#39;perez&#39;</span><span class="o">]</span>
+<span class="nv">l4</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="o">[</span><span class="s1">&#39;juan&#39;</span>,<span class="w"> </span><span class="m">2381053</span><span class="o">]</span>,<span class="w"> </span><span class="o">[</span><span class="s1">&#39;pedro&#39;</span>,<span class="w"> </span><span class="m">2381052</span><span class="o">]]</span>
+</pre></div>
+</div>
+<p>Métodos de la clase lista:</p>
+<p><code class="docutils literal notranslate"><span class="pre">'append',</span> <span class="pre">'clear',</span> <span class="pre">'copy',</span> <span class="pre">'count',</span> <span class="pre">'extend',</span> <span class="pre">'index',</span> <span class="pre">'insert',</span> <span class="pre">'pop',</span> <span class="pre">'remove',</span> <span class="pre">'reverse',</span> <span class="pre">'sort'</span></code></p>
+<p>Ejemplos:</p>
+<div class="highlight-Bash notranslate"><div class="highlight"><pre><span></span><span class="nv">l1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="o">[]</span>
+l1.append<span class="o">([</span><span class="s1">&#39;María&#39;</span>,<span class="w"> </span><span class="m">2434234</span><span class="o">])</span>
+len<span class="o">(</span>l1<span class="o">)</span>
+l1
+</pre></div>
+</div>
+<div class="highlight-Bash notranslate"><div class="highlight"><pre><span></span><span class="nv">x</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="o">[</span><span class="m">1</span>,3,2,4,5,4,7,4,5,4<span class="o">]</span>
+x,count<span class="o">(</span><span class="m">4</span><span class="o">)</span>
+</pre></div>
+</div>
+<p>Consideremos el siguiente texto:</p>
+<blockquote>
+<div><p>How big is a fractal? When are two fractals similar to one another in some sense? What experimental measurements</p>
+</div></blockquote>
+<p>might we make to tell if two different fractals may be metrically equivalent? What is the same about the two fractals
+in Figure V.131?</p>
+<p>There are various numbers, associated with fractals, which can be used to compare them. They are generally referred to
+as fractal dimensions. They are attempts to quantify a subjective feeling we have about how densely the fractal
+occupies the metric space in which it lies. Fractal dimensions provide an objective means for comparing fractals.</p>
+<p>Ejemplos:</p>
+<div class="highlight-Bash notranslate"><div class="highlight"><pre><span></span><span class="nv">x</span><span class="w"> </span><span class="o">=</span><span class="w"> </span>x.replace<span class="o">(</span><span class="s1">&#39;\n&#39;</span>,<span class="w"> </span><span class="s1">&#39; &#39;</span><span class="o">)</span>
+<span class="nv">y</span><span class="w"> </span><span class="o">=</span><span class="w"> </span>x.split<span class="o">(</span><span class="s1">&#39; &#39;</span><span class="o">)</span>
+type<span class="o">(</span>y<span class="o">)</span>
+y.remove<span class="o">(</span><span class="s1">&#39;V.131?&#39;</span><span class="o">)</span>
+y.pop<span class="o">()</span>
+y.index<span class="o">(</span><span class="s1">&#39;When&#39;</span><span class="o">)</span>
+y.sort<span class="o">()</span>
+</pre></div>
+</div>
+</section>
+
+
+          </div>
+          
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="Main">
+        <div class="sphinxsidebarwrapper">
+<h1 class="logo"><a href="../index.html">Numerical_Analysis_2E_Walter</a></h1>
+
+
+
+
+
+
+
+
+
+<search id="searchbox" style="display: none" role="search">
+    <div class="searchformwrapper">
+    <form class="search" action="../search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" placeholder="Search"/>
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</search>
+<script>document.getElementById('searchbox').style.display = "block"</script><h3>Navigation</h3>
+<p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../nifti.html">Manejo de imágenes de Resonancia Magnética</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Matplotlib_RST/index2.html">Matplotlib</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="index99.html">Introducción al Lenguaje de Programación con “PYTHON”</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="index99.html#contenido">Contenido</a></li>
+</ul>
+</li>
+</ul>
+
+<div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="../index.html">Documentation overview</a><ul>
+  <li><a href="index99.html">Introducción al Lenguaje de Programación con “PYTHON”</a><ul>
+  <li><a href="clase_sep1025.html">Clase-sep1025</a><ul>
+      <li>Previous: <a href="clase-tupla.html" title="previous chapter">Clase tupla</a></li>
+      <li>Next: <a href="funciones.html" title="next chapter">Funciones o Métodos</a></li>
+  </ul></li>
+  </ul></li>
+  </ul></li>
+</ul>
+</div>
+
+
+
+
+
+
+
+
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &#169;2025, leopoldo.
+      
+      |
+      Powered by <a href="https://www.sphinx-doc.org/">Sphinx 8.2.3</a>
+      &amp; <a href="https://alabaster.readthedocs.io">Alabaster 1.0.0</a>
+      
+      |
+      <a href="../_sources/source2/clase-lista.rst.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+  </body>
+</html>
