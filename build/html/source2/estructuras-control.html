@@ -35,19 +35,19 @@
   <section id="estructuras-de-control">
 <h1>Estructuras de Control<a class="headerlink" href="#estructuras-de-control" title="Link to this heading">¶</a></h1>
 <p>Valores Lógicos en Python: <code class="docutils literal notranslate"><span class="pre">False</span></code>, <code class="docutils literal notranslate"><span class="pre">True</span></code></p>
-<p>Opreradores Lógicos: <code class="docutils literal notranslate"><span class="pre">or</span></code>, <code class="docutils literal notranslate"><span class="pre">ànd</span></code>,</p>
+<p>Opreradores Lógicos: <code class="docutils literal notranslate"><span class="pre">or</span></code>, <code class="docutils literal notranslate"><span class="pre">and</span></code>,</p>
 <p>Ejemplos:</p>
-<div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="kc">False</span> <span class="ow">and</span> <span class="kc">False</span>
+<div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="err">$</span> <span class="kc">False</span> <span class="ow">and</span> <span class="kc">False</span>
 
-<span class="kc">False</span> <span class="ow">or</span> <span class="kc">False</span>
+<span class="err">$</span> <span class="kc">False</span> <span class="ow">or</span> <span class="kc">False</span>
 
-<span class="kc">False</span> <span class="ow">and</span> <span class="kc">True</span>
+<span class="err">$</span> <span class="kc">False</span> <span class="ow">and</span> <span class="kc">True</span>
 
-<span class="kc">False</span> <span class="ow">or</span> <span class="kc">True</span>
+<span class="err">$</span> <span class="kc">False</span> <span class="ow">or</span> <span class="kc">True</span>
 
-<span class="mi">5</span> <span class="o">&gt;</span> <span class="mi">5</span> <span class="ow">or</span> <span class="s2">&quot;Si&quot;</span> <span class="o">==</span> <span class="s1">&#39;si&#39;</span>
+<span class="err">$</span> <span class="mi">5</span> <span class="o">&gt;</span> <span class="mi">5</span> <span class="ow">or</span> <span class="s2">&quot;Si&quot;</span> <span class="o">==</span> <span class="s1">&#39;si&#39;</span>
 
-<span class="mi">5</span> <span class="o">&gt;=</span> <span class="mi">5</span> <span class="ow">or</span> <span class="s2">&quot;Si&quot;</span> <span class="o">==</span> <span class="s1">&#39;si&#39;</span>
+<span class="err">$</span> <span class="mi">5</span> <span class="o">&gt;=</span> <span class="mi">5</span> <span class="ow">or</span> <span class="s2">&quot;Si&quot;</span> <span class="o">==</span> <span class="s1">&#39;si&#39;</span>
 </pre></div>
 </div>
 <p>Las estructuras de control sirven para dos propositos fundamentales en la programación.</p>
@@ -76,7 +76,8 @@
 <span class="w">  </span>jinstn
 </pre></div>
 </div>
-<p>Si la condición <code class="docutils literal notranslate"><span class="pre">cond</span></code> es distito de cero entonces ejecua las in* strucciones de otro modo ejecuta las jin* strucciones.</p>
+<p>Si la condición <code class="docutils literal notranslate"><span class="pre">cond</span></code> es distito de cero entonces ejecua las <code class="docutils literal notranslate"><span class="pre">in*</span></code> strucciones de otro modo ejecuta las <code class="docutils literal notranslate"><span class="pre">jin*</span></code>
+instrucciones.</p>
 <p><strong>Algunos ejemplos</strong></p>
 <ol class="arabic simple">
 <li></li>
@@ -85,12 +86,18 @@
   <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;bien, bien&#39;</span><span class="p">)</span>
 </pre></div>
 </div>
+<ol class="arabic simple" start="2">
+<li></li>
+</ol>
 <div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="k">if</span> <span class="kc">False</span><span class="p">:</span>
   <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;bien, bien&#39;</span><span class="p">)</span>
 <span class="k">else</span><span class="p">:</span>
   <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;mal, mal&#39;</span><span class="p">)</span>
 </pre></div>
 </div>
+<ol class="arabic simple" start="3">
+<li></li>
+</ol>
 <div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="k">if</span> <span class="kc">False</span><span class="p">:</span>
   <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;bien, bien&#39;</span><span class="p">)</span>
 <span class="k">elif</span> <span class="kc">True</span><span class="p">:</span>
@@ -99,6 +106,46 @@
   <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;mal, mal&#39;</span><span class="p">)</span>
 </pre></div>
 </div>
+<p><strong>Sentencia:</strong> <code class="docutils literal notranslate"><span class="pre">for</span></code></p>
+<p>La sentencia “for” se utiliza para iterar sobre los elementos de una secuencia (como una cadena, una tupla o una lista) u otro
+objeto iterable:</p>
+<div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">ss</span> <span class="ow">in</span> <span class="n">lis</span><span class="p">:</span>
+  <span class="n">ins1</span>
+  <span class="n">ins2</span>
+  <span class="o">...</span>
+  <span class="n">insn</span>
+</pre></div>
+</div>
+<p>donde:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">ss</span></code> - toma cada valor de la secuencia</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">lis</span></code> - la secuencia para iterar</p></li>
+<li><p>ins1, ins2, …, insn - conjunto de instrucciones que se ejecutan tantas veces como valores de la lista haya.</p></li>
+</ul>
+<p><strong>Ejemplos:</strong></p>
+<ol class="arabic simple">
+<li></li>
+</ol>
+<div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="nb">sum</span> <span class="o">=</span> <span class="mi">0</span>
+
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">10</span><span class="p">):</span>
+  <span class="nb">sum</span> <span class="o">=</span> <span class="nb">sum</span> <span class="o">+</span> <span class="n">i</span>
+
+<span class="nb">print</span> <span class="nb">sum</span>
+</pre></div>
+</div>
+<p>Realiza la suma del 0 al 9, es decir 0+1+2…+9</p>
+<p><strong>Sentencia:</strong> <code class="docutils literal notranslate"><span class="pre">while</span></code></p>
+<p>La instrucción “while” se utiliza para la ejecución repetida mientras una expresión sea verdadera:</p>
+<div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="nb">sum</span> <span class="o">=</span> <span class="mi">0</span>
+<span class="n">i</span> <span class="o">=</span> <span class="mi">0</span>
+<span class="k">for</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="mi">10</span><span class="p">:</span>
+  <span class="nb">sum</span> <span class="o">=</span> <span class="nb">sum</span> <span class="o">+</span> <span class="n">i</span>
+  <span class="n">i</span> <span class="o">=</span> <span class="n">i</span> <span class="o">+</span><span class="mi">1</span>
+<span class="nb">print</span> <span class="nb">sum</span>
+</pre></div>
+</div>
+<p>Realiza la suma del 0 al 9, es decir 0+1+2…+9</p>
 </section>
 
 
