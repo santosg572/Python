@@ -9,17 +9,17 @@ Ejemplos:
 
 .. code:: Python
 
-   $ False and False
+   > False and False
    
-   $ False or False
+   > False or False
 
-   $ False and True
+   > False and True
 
-   $ False or True
+   > False or True
 
-   $ 5 > 5 or "Si" == 'si'
+   > 5 > 5 or "Si" == 'si'
 
-   $ 5 >= 5 or "Si" == 'si'
+   > 5 >= 5 or "Si" == 'si'
  
 Las estructuras de control sirven para dos propositos fundamentales en la programación.
 

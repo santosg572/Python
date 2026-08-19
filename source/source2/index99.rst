@@ -48,4 +48,5 @@ Contenido
    nifti
    tkinter
    Python_Data_Science_Handbook/c01
+   ejercicios_ago1926
 
