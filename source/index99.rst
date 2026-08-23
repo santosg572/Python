@@ -32,18 +32,7 @@ Contenido
    michael-spivak
    calculo-diferencial-integral
    estructuras-control
-   clase_sep0825
-   clase_sep1025
-   clase_sep1725
-   clase_sep2225
-   clase_sep2925
    JupyterLab
-   clase_oct0125
-   clase_oct0625
-   clase_oct0825
-   clase_oct1525
-   clase_oct2025
-   clase_oct2225
    problemas_oct2725
    nifti
    tkinter
