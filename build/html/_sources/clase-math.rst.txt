@@ -15,37 +15,103 @@ Clase math
 
 **Ayuda**
 
-.. code:: Bash
+math.atan = atan(x, /)
+    Return the arc tangent (measured in radians) of x.
 
-   atan - Return the arc tangent (measured in radians) of x.
-          The result is between -pi/2 and pi/2.
+    The result is between -pi/2 and pi/2.
 
-   cbrt - Return the cube root of x.
+math.ceil = ceil(x, /)
+    Return the ceiling of x as an Integral.
 
-   ceil - Return the ceiling of x as an Integral.
-          This is the smallest integer >= x.
+    This is the smallest integer >= x.
 
-   comb(n,k) - combNumber of ways to choose k items from n items without repetition and without order.
+math.comb = comb(n, k, /)
+    Number of ways to choose k items from n items without repetition and without order.
 
-   
+    Evaluates to n! / (k! * (n - k)!) when k <= n and evaluates
+    to zero when k > n.
 
+math.cos = cos(x, /)
+    Return the cosine of x (measured in radians).
 
-**Algunos Ejemplos:**
+math.degrees = degrees(x, /)
+    Convert angle x from radians to degrees.
 
-.. code:: Python
+math.dist = dist(p, q, /)
+    Return the Euclidean distance between two points p and q.
 
-   import math
+math.exp = exp(x, /)
+    Return e raised to the power of x.
 
-   math.pi
+math.fabs = fabs(x, /)
+    Return the absolute value of the float x.
 
-   math.sin(math.pi/2)
+math.factorial = factorial(n, /)
+    Find n!.
 
-   math.cos(math.pi/2)
+math.floor = floor(x, /)
+    Return the floor of x as an Integral.
 
-   math.log10(1000)
+    This is the largest integer <= x.
 
-   math.sqrt(1024)
+math.isfinite = isfinite(x, /)
+    Return True if x is neither an infinity nor a NaN, and False otherwise.
 
+math.isinf = isinf(x, /)
+    Return True if x is a positive or negative infinity, and False otherwise.
 
+math.isnan = isnan(x, /)
+    Return True if x is a NaN (not a number), and False otherwise.
 
+math.isqrt = isqrt(n, /)
+    Return the integer part of the square root of the input.
+
+math.log = log(...)
+    log(x, [base=math.e])
+    Return the logarithm of x to the given base.
+
+    If the base is not specified, returns the natural logarithm (base e) of x.
+
+math.log10 = log10(x, /)
+    Return the base 10 logarithm of x.
+
+math.modf = modf(x, /)
+    Return the fractional and integer parts of x.
+
+    Both results carry the sign of x and are floats.
+
+math.perm = perm(n, k=None, /)
+    Number of ways to choose k items from n items without repetition and with order.
+
+    Evaluates to n! / (n - k)! when k <= n and evaluates
+    to zero when k > n.
+
+    If k is not specified or is None, then k defaults to n
+    and the function returns n!.
+
+math.pow = pow(x, y, /)
+    Return x**y (x to the power of y).
+
+math.prod = prod(iterable, /, *, start=1)
+    Calculate the product of all the elements in the input iterable.
+
+    The default start value for the product is 1.
+
+math.radians = radians(x, /)
+    Convert angle x from degrees to radians.
+
+math.remainder = remainder(x, y, /)
+    Difference between x and the closest integer multiple of y.
+
+math.sin = sin(x, /)
+    Return the sine of x (measured in radians).
+
+math.sqrt = sqrt(x, /)
+    Return the square root of x.
+
+math.tan = tan(x, /)
+    Return the tangent of x (measured in radians).
+
+math.trunc = trunc(x, /)
+    Truncates the Real x to the nearest Integral toward 0.
 

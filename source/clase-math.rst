@@ -20,6 +20,8 @@ math.atan = atan(x, /)
 
     The result is between -pi/2 and pi/2.
 
+    > atan(1)
+
 math.ceil = ceil(x, /)
     Return the ceiling of x as an Integral.
 
