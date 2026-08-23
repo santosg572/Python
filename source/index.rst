@@ -13,5 +13,5 @@ Welcome to Numerical_Analysis_2E_Walter's documentation!
    :maxdepth: 2
    :caption: Contents:
 
-   source2/index99
+   index99
 
