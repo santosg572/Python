@@ -1,20 +1,3 @@
-Clase math
-==========
-
-.. code:: Python
-
-   import math
-
-
-**Algunos métodos:**
-
-``'atan', 'ceil', 'comb', 'cos', 'degrees', 'dist', 'e', 'exp', 'fabs', 'factorial', 'floor', 'fma', 
-'fmod', 'frexp', 'fsum', 'gcd', 'hypot', 'inf', 'isclose', 'isfinite', 'isinf', 'isnan', 'isqrt', 
-'lcm', 'ldexp', 'log', 'log10', 'modf', 'nan', 'perm', 'pi', 'pow', 'prod', 'radians', 
-'remainder', 'sin', 'sqrt', 'tan', 'tau', 'trunc'`` 
-
-**Ayuda**
-
 math.atan = atan(x, /)
     Return the arc tangent (measured in radians) of x.
 

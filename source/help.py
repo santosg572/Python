@@ -1,20 +1,10 @@
 import numpy as np
+import math
 import matplotlib.pyplot as plt
 
-#y = {'pesos':[45, 64, 70], 'edad': 65, 'nombres': ('Juan', 'Pedro')}
+dd =['atan', 'ceil', 'comb', 'cos', 'degrees', 'dist', 'e', 'exp', 'fabs', 'factorial', 'floor', 'fma', 'fmod', 'frexp', 'fsum', 'gcd', 'hypot', 'inf', 'isclose', 'isfinite', 'isinf', 'isnan', 'isqrt', 'lcm', 'ldexp', 'log', 'log10', 'modf', 'nan', 'perm', 'pi', 'pow', 'prod', 'radians', 'remainder', 'sin', 'sqrt', 'tan', 'tau', 'trunc']
 
-
-dd = dir(plt)
-
-print(dd)
-
-print(help(plt.plot))
-
-'''
 for ss in dd:
-  if not ss[0] == '_':
-    print(help(y.ss))
-
-'''
+  print(help('math.'+ss))
 
 
