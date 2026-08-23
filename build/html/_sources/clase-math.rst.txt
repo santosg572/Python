@@ -20,12 +20,14 @@ math.atan = atan(x, /)
 
     The result is between -pi/2 and pi/2.
 
-    > atan(1)
+    > math.atan(1)
 
 math.ceil = ceil(x, /)
     Return the ceiling of x as an Integral.
 
     This is the smallest integer >= x.
+
+    > math.ceil(7.8)
 
 math.comb = comb(n, k, /)
     Number of ways to choose k items from n items without repetition and without order.
@@ -33,15 +35,23 @@ math.comb = comb(n, k, /)
     Evaluates to n! / (k! * (n - k)!) when k <= n and evaluates
     to zero when k > n.
 
+    > math.comb(6,4)
+
 math.cos = cos(x, /)
     Return the cosine of x (measured in radians).
+
+    > math.cos(0)
 
 math.degrees = degrees(x, /)
     Convert angle x from radians to degrees.
 
+    > math.degrees(math.pi/2)
+
 math.dist = dist(p, q, /)
     Return the Euclidean distance between two points p and q.
 
+    > math.dist((1,2),(3,4)
+    
 math.exp = exp(x, /)
     Return e raised to the power of x.
 
