@@ -23,3 +23,5 @@ Contenido
    bibliografia/bibliografia
    software
    conceptos_matematicos
+   clase-math
+

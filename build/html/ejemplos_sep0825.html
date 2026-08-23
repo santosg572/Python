@@ -1,0 +1,139 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="./">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ejemplos_sep2825 &mdash; santosg57-python 0.1 documentation</title>
+      <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=80d5e7a1" />
+      <link rel="stylesheet" type="text/css" href="_static/css/theme.css?v=9edc463e" />
+      <link rel="stylesheet" type="text/css" href="_static/custom.css?v=836bb062" />
+
+  
+      <script src="_static/jquery.js?v=5d32c60e"></script>
+      <script src="_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="_static/documentation_options.js?v=2709fde1"></script>
+      <script src="_static/doctools.js?v=9bcbadda"></script>
+      <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+      <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="index.html" class="icon icon-home">
+            santosg57-python
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+<li class="toctree-l1"><a class="reference internal" href="tiempos_recordar/tiempos_recordar.html">Tiempos para recordar ~ 1987</a></li>
+<li class="toctree-l1"><a class="reference internal" href="poo/poo.html">Programación Orientada a Objetos</a></li>
+<li class="toctree-l1"><a class="reference internal" href="numeros_binarios.html">Números Binarios</a></li>
+<li class="toctree-l1"><a class="reference internal" href="temario.html">Temario</a></li>
+<li class="toctree-l1"><a class="reference internal" href="calificaciones.html">Calificaciones</a></li>
+<li class="toctree-l1"><a class="reference internal" href="bibliografia/bibliografia.html">Bibliografia</a></li>
+<li class="toctree-l1"><a class="reference internal" href="software.html">Software Útil</a></li>
+<li class="toctree-l1"><a class="reference internal" href="conceptos_matematicos.html">Sistemas de Numeración</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">santosg57-python</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">Ejemplos_sep2825</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="_sources/ejemplos_sep0825.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="ejemplos-sep2825">
+<h1>Ejemplos_sep2825<a class="headerlink" href="#ejemplos-sep2825" title="Link to this heading"></a></h1>
+<p><strong>1)</strong></p>
+<p>A partir del siguiente codigo, generar 50 círculos aleatorios en la región [-100, 100]x[-100, 100]. Cuyos
+radios varian entre 10 a 20 unidades y color varia en {‘red’, ‘blue’, ‘green’, ‘black’}.</p>
+<div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">turtle</span>
+
+<span class="n">screen</span> <span class="o">=</span> <span class="n">turtle</span><span class="o">.</span><span class="n">Screen</span><span class="p">()</span>
+
+<span class="n">screen</span><span class="o">.</span><span class="n">setup</span><span class="p">(</span><span class="n">width</span><span class="o">=</span><span class="mi">800</span><span class="p">,</span> <span class="n">height</span><span class="o">=</span><span class="mi">600</span><span class="p">)</span>
+
+<span class="n">t</span> <span class="o">=</span> <span class="n">turtle</span><span class="o">.</span><span class="n">Turtle</span><span class="p">()</span>
+<span class="n">t</span><span class="o">.</span><span class="n">forward</span><span class="p">(</span><span class="mi">100</span><span class="p">)</span>
+
+<span class="n">turtle</span><span class="o">.</span><span class="n">done</span><span class="p">()</span>
+</pre></div>
+</div>
+<p><strong>2)</strong></p>
+<p>Dados las siguientes series de puntos, encontrar la mejor recta <span class="math notranslate nohighlight">\(y= \beta_0 + \beta_1 x\)</span>. Donde:</p>
+<div class="math notranslate nohighlight">
+\[ \begin{align}\begin{aligned}\beta_1 = \frac{\sum_{i=1}^n x_iy_i - n \bar{x} \bar{y}}{\sum_{i=1}^n x_i^2 - \frac{1}{n} (\sum_{i=1}^n x_i)^2}\\\beta_0 = \bar{y} - \beta_1 \bar{x}\end{aligned}\end{align} \]</div>
+<p>x=  1.00  2.00  3.00  4.00  5.00  6.00  7.00  8.00  9.00 10.00 11.00 12.00</p>
+<p>y=  1.23  2.13  1.42 -0.69  4.29  3.64  9.30 10.62  7.42  8.40 12.30 10.30</p>
+<p><strong>3)</strong></p>
+<p>Calcular la integral siguiente en el intervalo [-1,3].</p>
+<div class="math notranslate nohighlight">
+\[\int_{-1}^3 (4-(x-1)^2) dx\]</div>
+<p><strong>4)</strong></p>
+<p>Convertir el número decimal 1024 a número binario y el número binario 110101 a número decimal.</p>
+</section>
+
+
+           </div>
+          </div>
+          <footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2025, santosg57, santosg572@gmail.com.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

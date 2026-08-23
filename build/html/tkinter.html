@@ -1,0 +1,214 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="./">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>tkinter &mdash; santosg57-python 0.1 documentation</title>
+      <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=80d5e7a1" />
+      <link rel="stylesheet" type="text/css" href="_static/css/theme.css?v=9edc463e" />
+      <link rel="stylesheet" type="text/css" href="_static/custom.css?v=836bb062" />
+
+  
+      <script src="_static/jquery.js?v=5d32c60e"></script>
+      <script src="_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="_static/documentation_options.js?v=2709fde1"></script>
+      <script src="_static/doctools.js?v=9bcbadda"></script>
+      <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="index.html" class="icon icon-home">
+            santosg57-python
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+<li class="toctree-l1"><a class="reference internal" href="tiempos_recordar/tiempos_recordar.html">Tiempos para recordar ~ 1987</a></li>
+<li class="toctree-l1"><a class="reference internal" href="poo/poo.html">Programación Orientada a Objetos</a></li>
+<li class="toctree-l1"><a class="reference internal" href="numeros_binarios.html">Números Binarios</a></li>
+<li class="toctree-l1"><a class="reference internal" href="temario.html">Temario</a></li>
+<li class="toctree-l1"><a class="reference internal" href="calificaciones.html">Calificaciones</a></li>
+<li class="toctree-l1"><a class="reference internal" href="bibliografia/bibliografia.html">Bibliografia</a></li>
+<li class="toctree-l1"><a class="reference internal" href="software.html">Software Útil</a></li>
+<li class="toctree-l1"><a class="reference internal" href="conceptos_matematicos.html">Sistemas de Numeración</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">santosg57-python</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">tkinter</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="_sources/tkinter.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="tkinter">
+<h1>tkinter<a class="headerlink" href="#tkinter" title="Link to this heading"></a></h1>
+<p><strong>Ejemplo: ventana</strong></p>
+<div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">tkinter</span>
+<span class="n">window</span> <span class="o">=</span> <span class="n">tkinter</span><span class="o">.</span><span class="n">Tk</span><span class="p">()</span>
+
+<span class="n">window</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s2">&quot;GUI&quot;</span><span class="p">)</span>
+<span class="n">window</span><span class="o">.</span><span class="n">geometry</span><span class="p">(</span><span class="s1">&#39;800x600+100+50&#39;</span><span class="p">)</span>
+<span class="n">window</span><span class="o">.</span><span class="n">mainloop</span><span class="p">()</span>
+</pre></div>
+</div>
+<p><strong>Ejemplo: label</strong></p>
+<div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">tkinter</span>
+<span class="n">window</span> <span class="o">=</span> <span class="n">tkinter</span><span class="o">.</span><span class="n">Tk</span><span class="p">()</span>
+
+<span class="n">window</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s2">&quot;GUI&quot;</span><span class="p">)</span>
+
+<span class="n">label1</span> <span class="o">=</span> <span class="n">tkinter</span><span class="o">.</span><span class="n">Label</span><span class="p">(</span><span class="n">window</span><span class="p">,</span> <span class="n">text</span> <span class="o">=</span> <span class="s2">&quot;Hola como estas?&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">pack</span><span class="p">()</span>
+
+<span class="n">label2</span> <span class="o">=</span> <span class="n">tkinter</span><span class="o">.</span><span class="n">Label</span><span class="p">(</span><span class="n">window</span><span class="p">,</span> <span class="n">text</span> <span class="o">=</span> <span class="s2">&quot;Te estraño!&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">pack</span><span class="p">()</span>
+
+<span class="n">label3</span> <span class="o">=</span> <span class="n">tkinter</span><span class="o">.</span><span class="n">Label</span><span class="p">(</span><span class="n">window</span><span class="p">,</span> <span class="n">bitmap</span> <span class="o">=</span> <span class="s2">&quot;bebe.jpg&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">pack</span><span class="p">()</span>
+
+<span class="n">label4</span> <span class="o">=</span> <span class="n">tkinter</span><span class="o">.</span><span class="n">Label</span><span class="p">(</span><span class="n">window</span><span class="p">,</span> <span class="n">text</span> <span class="o">=</span> <span class="s2">&quot;Te estraño mucho!&quot;</span><span class="p">,</span><span class="n">font</span><span class="o">=</span><span class="p">(</span><span class="s2">&quot;Arial&quot;</span><span class="p">,</span> <span class="mi">24</span><span class="p">))</span>
+<span class="n">label4</span><span class="o">.</span><span class="n">pack</span><span class="p">(</span><span class="n">pady</span><span class="o">=</span><span class="mi">50</span><span class="p">)</span>
+
+<span class="n">window</span><span class="o">.</span><span class="n">mainloop</span><span class="p">()</span>
+</pre></div>
+</div>
+<p><strong>Ejemplo boton</strong></p>
+<div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">tkinter</span>
+<span class="n">window</span> <span class="o">=</span> <span class="n">tkinter</span><span class="o">.</span><span class="n">Tk</span><span class="p">()</span>
+
+<span class="k">def</span> <span class="nf">botones</span><span class="p">(</span><span class="n">x</span> <span class="o">=</span> <span class="s2">&quot;&quot;</span><span class="p">):</span>
+  <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;presiono bel boton&#39;</span><span class="p">)</span>
+  <span class="nb">print</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+
+
+<span class="k">def</span> <span class="nf">fun</span><span class="p">():</span>
+  <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;presiono bel boton&#39;</span><span class="p">)</span>
+
+<span class="n">window</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s2">&quot;Button GUI&quot;</span><span class="p">)</span>
+
+
+<span class="n">boton1</span> <span class="o">=</span> <span class="n">tkinter</span><span class="o">.</span><span class="n">Button</span><span class="p">(</span><span class="n">window</span><span class="p">,</span><span class="n">text</span><span class="o">=</span><span class="s2">&quot;este es un boton&quot;</span><span class="p">)</span>
+<span class="n">boton1</span><span class="o">.</span><span class="n">pack</span><span class="p">()</span>
+
+<span class="n">boton2</span> <span class="o">=</span> <span class="n">tkinter</span><span class="o">.</span><span class="n">Button</span><span class="p">(</span><span class="n">window</span><span class="p">,</span><span class="n">text</span><span class="o">=</span><span class="s2">&quot;boton2 con respuesta&quot;</span><span class="p">,</span> <span class="n">command</span><span class="o">=</span><span class="n">fun</span><span class="p">)</span>
+<span class="n">boton2</span><span class="o">.</span><span class="n">pack</span><span class="p">()</span>
+
+<span class="n">boton3</span> <span class="o">=</span> <span class="n">tkinter</span><span class="o">.</span><span class="n">Button</span><span class="p">(</span><span class="n">window</span><span class="p">,</span><span class="n">text</span><span class="o">=</span><span class="s2">&quot;boton3&quot;</span><span class="p">,</span> <span class="n">command</span><span class="o">=</span><span class="k">lambda</span><span class="p">:</span><span class="n">botones</span><span class="p">(</span><span class="s2">&quot;3&quot;</span><span class="p">))</span>
+<span class="n">boton3</span><span class="o">.</span><span class="n">pack</span><span class="p">()</span>
+
+<span class="n">boton4</span> <span class="o">=</span> <span class="n">tkinter</span><span class="o">.</span><span class="n">Button</span><span class="p">(</span><span class="n">window</span><span class="p">,</span><span class="n">text</span><span class="o">=</span><span class="s2">&quot;boton4&quot;</span><span class="p">,</span> <span class="n">command</span><span class="o">=</span><span class="k">lambda</span><span class="p">:</span><span class="n">botones</span><span class="p">(</span><span class="s2">&quot;4&quot;</span><span class="p">))</span>
+<span class="n">boton4</span><span class="o">.</span><span class="n">pack</span><span class="p">()</span>
+
+<span class="n">tkinter</span><span class="o">.</span><span class="n">mainloop</span><span class="p">()</span>
+</pre></div>
+</div>
+<p><strong>Ejemplo texto</strong></p>
+<div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">tkinter</span>
+<span class="n">window</span> <span class="o">=</span> <span class="n">tkinter</span><span class="o">.</span><span class="n">Tk</span><span class="p">()</span>
+
+<span class="k">def</span> <span class="nf">obten</span><span class="p">():</span>
+  <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;presiono bel boton&#39;</span><span class="p">)</span>
+  <span class="n">xx</span>  <span class="o">=</span> <span class="n">ent1</span><span class="o">.</span><span class="n">get</span><span class="p">()</span>
+  <span class="nb">print</span><span class="p">(</span><span class="n">xx</span><span class="p">)</span>
+
+<span class="n">bot1</span> <span class="o">=</span> <span class="n">tkinter</span><span class="o">.</span><span class="n">Button</span><span class="p">(</span><span class="n">text</span><span class="o">=</span><span class="s2">&quot;obten el texto&quot;</span><span class="p">,</span> <span class="n">command</span><span class="o">=</span><span class="k">lambda</span><span class="p">:</span> <span class="n">obten</span><span class="p">())</span>
+<span class="n">bot1</span><span class="o">.</span><span class="n">pack</span><span class="p">()</span>
+
+<span class="n">ent1</span> <span class="o">=</span> <span class="n">tkinter</span><span class="o">.</span><span class="n">Entry</span><span class="p">()</span>
+<span class="n">ent1</span><span class="o">.</span><span class="n">pack</span><span class="p">()</span>
+
+<span class="n">tkinter</span><span class="o">.</span><span class="n">mainloop</span><span class="p">()</span>
+</pre></div>
+</div>
+<p><strong>Ejemplo RadioBoton</strong></p>
+<div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">tkinter</span>
+
+<span class="k">def</span> <span class="nf">sel</span><span class="p">():</span>
+   <span class="n">selection</span> <span class="o">=</span> <span class="s2">&quot;You selected the option &quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">var</span><span class="o">.</span><span class="n">get</span><span class="p">())</span>
+   <span class="nb">print</span><span class="p">(</span><span class="n">selection</span><span class="p">)</span>
+   <span class="n">label</span><span class="o">.</span><span class="n">config</span><span class="p">(</span><span class="n">text</span> <span class="o">=</span> <span class="n">selection</span><span class="p">)</span>
+
+<span class="n">root</span> <span class="o">=</span> <span class="n">tkinter</span><span class="o">.</span><span class="n">Tk</span><span class="p">()</span>
+<span class="n">root</span><span class="o">.</span><span class="n">geometry</span><span class="p">(</span><span class="s1">&#39;200x100+200+100&#39;</span><span class="p">)</span>
+
+<span class="n">var</span> <span class="o">=</span> <span class="n">tkinter</span><span class="o">.</span><span class="n">IntVar</span><span class="p">()</span>
+
+<span class="n">R1</span> <span class="o">=</span> <span class="n">tkinter</span><span class="o">.</span><span class="n">Radiobutton</span><span class="p">(</span><span class="n">root</span><span class="p">,</span> <span class="n">text</span><span class="o">=</span><span class="s2">&quot;Option 1&quot;</span><span class="p">,</span> <span class="n">variable</span><span class="o">=</span><span class="n">var</span><span class="p">,</span> <span class="n">value</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">command</span><span class="o">=</span><span class="n">sel</span><span class="p">)</span>
+<span class="n">R1</span><span class="o">.</span><span class="n">pack</span><span class="p">()</span>
+
+<span class="n">R2</span> <span class="o">=</span> <span class="n">tkinter</span><span class="o">.</span><span class="n">Radiobutton</span><span class="p">(</span><span class="n">root</span><span class="p">,</span> <span class="n">text</span><span class="o">=</span><span class="s2">&quot;Option 2&quot;</span><span class="p">,</span> <span class="n">variable</span><span class="o">=</span><span class="n">var</span><span class="p">,</span> <span class="n">value</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span> <span class="n">command</span><span class="o">=</span><span class="n">sel</span><span class="p">)</span>
+<span class="n">R2</span><span class="o">.</span><span class="n">pack</span><span class="p">()</span>
+
+<span class="n">R3</span> <span class="o">=</span> <span class="n">tkinter</span><span class="o">.</span><span class="n">Radiobutton</span><span class="p">(</span><span class="n">root</span><span class="p">,</span> <span class="n">text</span><span class="o">=</span><span class="s2">&quot;Option 3&quot;</span><span class="p">,</span> <span class="n">variable</span><span class="o">=</span><span class="n">var</span><span class="p">,</span> <span class="n">value</span><span class="o">=</span><span class="mi">3</span><span class="p">,</span> <span class="n">command</span><span class="o">=</span><span class="n">sel</span><span class="p">)</span>
+<span class="n">R3</span><span class="o">.</span><span class="n">pack</span><span class="p">()</span>
+
+<span class="n">label</span> <span class="o">=</span> <span class="n">tkinter</span><span class="o">.</span><span class="n">Label</span><span class="p">(</span><span class="n">root</span><span class="p">)</span>
+<span class="n">label</span><span class="o">.</span><span class="n">pack</span><span class="p">()</span>
+
+<span class="n">root</span><span class="o">.</span><span class="n">mainloop</span><span class="p">()</span>
+</pre></div>
+</div>
+</section>
+
+
+           </div>
+          </div>
+          <footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2025, santosg57, santosg572@gmail.com.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>
