@@ -13,14 +13,5 @@ Welcome to Numerical_Analysis_2E_Walter's documentation!
    :maxdepth: 2
    :caption: Contents:
 
-   Numerical_Analysis_2E_Walter_C01
-   nifti
-   Matplotlib_RST/index2
    source2/index99
 
-Indices and tables
-==================
-
-* :ref:`genindex`
-* :ref:`modindex`
-* :ref:`search`
