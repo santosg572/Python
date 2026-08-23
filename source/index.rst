@@ -1,17 +1,42 @@
-MI TITULO
-*********
+Introducción al Lenguaje de Programación con "PYTHON"
+===================================
 
-.. Numerical_Analysis_2E_Walter documentation master file, created by
-   sphinx-quickstart on Sat Oct  4 03:33:53 2025.
-   You can adapt this file completely to your liking, but it should at least
-   contain the root `toctree` directive.
+Este curso proporcionará un conjunto de instrucciones (comandos) que son necesarios para escribir programas de computo
+para resolver cuaquier problema que se pueda implementar en lenguaje de programación ``Python``.
 
-Welcome to Numerical_Analysis_2E_Walter's documentation!
-========================================================
+
+.. note::
+
+   Este curso está en desarrollo activo.
+
+
+Contenido
+----------
 
 .. toctree::
-   :maxdepth: 2
-   :caption: Contents:
 
-   index99
+   tiempos_recordar/tiempos_recordar
+   poo/poo
+   numeros_binarios
+   temario
+   calificaciones
+   bibliografia/bibliografia
+   software
+   conceptos_matematicos
+   clase02
+   trabajo-iterativo
+   clase-random
+   clase-string
+   clase-turtle
+   clase-math
+   michael-spivak
+   calculo-diferencial-integral
+   estructuras-control
+   JupyterLab
+   problemas_oct2725
+   nifti
+   tkinter
+   Python_Data_Science_Handbook/c01
+   ejercicios_ago1926
+   clase-tutle 
 
