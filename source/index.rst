@@ -1,4 +1,4 @@
-Introducción al Lenguaje de Programación con "PYTHON"
+Introducción al Lenguaje de Programación con "PYTHON--2"
 ===================================
 
 Este curso proporcionará un conjunto de instrucciones (comandos) que son necesarios para escribir programas de computo
