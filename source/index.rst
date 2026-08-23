@@ -23,20 +23,3 @@ Contenido
    bibliografia/bibliografia
    software
    conceptos_matematicos
-   clase02
-   trabajo-iterativo
-   clase-random
-   clase-string
-   clase-turtle
-   clase-math
-   michael-spivak
-   calculo-diferencial-integral
-   estructuras-control
-   JupyterLab
-   problemas_oct2725
-   nifti
-   tkinter
-   Python_Data_Science_Handbook/c01
-   ejercicios_ago1926
-   clase-tutle 
-
