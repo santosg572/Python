@@ -49,8 +49,7 @@ Definamos la siguientes variables string y podemos hacer los siguiente:
 **Algunos métodos de la clase string:**
 
 
-``'capitalize', 'count', 'find', 'index', 'isalpha', 'isdigit', 
-  'lower', 'replace', 'rfind', 'rindex', 'split', 'translate', 'upper'``
+``'capitalize', 'count', 'find', 'index', 'isalpha', 'isdigit', 'lower', 'replace', 'rfind', 'rindex', 'split', 'translate', 'upper'``
 
 **Ejemplos**
 
