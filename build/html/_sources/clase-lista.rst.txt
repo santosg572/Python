@@ -5,51 +5,56 @@ La clase lista representa un tipo de datos estructurado cuyo elementos de la lis
 
 Ejemplos:
 
-.. code:: Bash
+.. code:: Python
 
    l1 = []
    l2 = [1, '1', 2, '2', 3, '3']
    l3 = ['juan' , 'perez']
-   l4 = ['juan', 2381053], ['pedro', 2381052]]
+   l4 = [['juan', 2381053], ['pedro', 2381052]]
 
-Métodos de la clase lista:
+**Algunas operaciones en listas**
 
-``'append', 'clear', 'copy', 'count', 'extend', 'index', 'insert', 'pop', 'remove', 'reverse', 'sort'``
+.. code:: Python
 
-Ejemplos:
+   x = [5, 7, 6, 8, 9, 2, 3, 6, 8]
 
-.. code:: Bash
+   x[0]
 
-   l1 = []
-   l1.append(['María', 2434234])
-   len(l1)
-   l1
+   x[-1]
 
-.. code:: Bash
+   x[2] = 66
 
-   x = [1,3,2,4,5,4,7,4,5,4]
-   x,count(4)
+   2*x
 
-Consideremos el siguiente texto:
+   x[2:6]
 
-   How big is a fractal? When are two fractals similar to one another in some sense? What experimental measurements 
-might we make to tell if two different fractals may be metrically equivalent? What is the same about the two fractals 
-in Figure V.131?
 
-There are various numbers, associated with fractals, which can be used to compare them. They are generally referred to 
-as fractal dimensions. They are attempts to quantify a subjective feeling we have about how densely the fractal 
-occupies the metric space in which it lies. Fractal dimensions provide an objective means for comparing fractals.
+
+
+**Métodos de la clase lista:**
+
+``'append', 'clear', 'copy', 'count', 'insert', 'pop', 'remove', 'reverse', 'sort'``
 
 Ejemplos:
 
-.. code:: Bash
+.. code:: Python
 
-   x = x.replace('\n', ' ')
-   y = x.split(' ')
-   type(y)
-   y.remove('V.131?')
-   y.pop()
-   y.index('When')
-   y.sort()
+   x = [1, 3, 2, 2,3,5, 6, 3]
+
+   x.append(99)
+
+   y = x.copy()
+
+   x.count(2)
+
+   x.insert(2, 55)
+
+   x.pop()
+
+   x.remove(3)
+
+   x.reverse()
+
+   x.sort()
 
 

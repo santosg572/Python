@@ -82,42 +82,46 @@
 <h1>Clase Lista<a class="headerlink" href="#clase-lista" title="Link to this heading"></a></h1>
 <p>La clase lista representa un tipo de datos estructurado cuyo elementos de la lista pueden cambiar su valor.</p>
 <p>Ejemplos:</p>
-<div class="highlight-Bash notranslate"><div class="highlight"><pre><span></span><span class="nv">l1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="o">[]</span>
-<span class="nv">l2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="o">[</span><span class="m">1</span>,<span class="w"> </span><span class="s1">&#39;1&#39;</span>,<span class="w"> </span><span class="m">2</span>,<span class="w"> </span><span class="s1">&#39;2&#39;</span>,<span class="w"> </span><span class="m">3</span>,<span class="w"> </span><span class="s1">&#39;3&#39;</span><span class="o">]</span>
-<span class="nv">l3</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="o">[</span><span class="s1">&#39;juan&#39;</span><span class="w"> </span>,<span class="w"> </span><span class="s1">&#39;perez&#39;</span><span class="o">]</span>
-<span class="nv">l4</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="o">[</span><span class="s1">&#39;juan&#39;</span>,<span class="w"> </span><span class="m">2381053</span><span class="o">]</span>,<span class="w"> </span><span class="o">[</span><span class="s1">&#39;pedro&#39;</span>,<span class="w"> </span><span class="m">2381052</span><span class="o">]]</span>
+<div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="n">l1</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="n">l2</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="s1">&#39;1&#39;</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="s1">&#39;2&#39;</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="s1">&#39;3&#39;</span><span class="p">]</span>
+<span class="n">l3</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;juan&#39;</span> <span class="p">,</span> <span class="s1">&#39;perez&#39;</span><span class="p">]</span>
+<span class="n">l4</span> <span class="o">=</span> <span class="p">[[</span><span class="s1">&#39;juan&#39;</span><span class="p">,</span> <span class="mi">2381053</span><span class="p">],</span> <span class="p">[</span><span class="s1">&#39;pedro&#39;</span><span class="p">,</span> <span class="mi">2381052</span><span class="p">]]</span>
 </pre></div>
 </div>
-<p>Métodos de la clase lista:</p>
-<p><code class="docutils literal notranslate"><span class="pre">'append',</span> <span class="pre">'clear',</span> <span class="pre">'copy',</span> <span class="pre">'count',</span> <span class="pre">'extend',</span> <span class="pre">'index',</span> <span class="pre">'insert',</span> <span class="pre">'pop',</span> <span class="pre">'remove',</span> <span class="pre">'reverse',</span> <span class="pre">'sort'</span></code></p>
+<p><strong>Algunas operaciones en listas</strong></p>
+<div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="n">x</span> <span class="o">=</span> <span class="p">[</span><span class="mi">5</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">9</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">8</span><span class="p">]</span>
+
+<span class="n">x</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+
+<span class="n">x</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>
+
+<span class="n">x</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span> <span class="o">=</span> <span class="mi">66</span>
+
+<span class="mi">2</span><span class="o">*</span><span class="n">x</span>
+
+<span class="n">x</span><span class="p">[</span><span class="mi">2</span><span class="p">:</span><span class="mi">6</span><span class="p">]</span>
+</pre></div>
+</div>
+<p><strong>Métodos de la clase lista:</strong></p>
+<p><code class="docutils literal notranslate"><span class="pre">'append',</span> <span class="pre">'clear',</span> <span class="pre">'copy',</span> <span class="pre">'count',</span> <span class="pre">'insert',</span> <span class="pre">'pop',</span> <span class="pre">'remove',</span> <span class="pre">'reverse',</span> <span class="pre">'sort'</span></code></p>
 <p>Ejemplos:</p>
-<div class="highlight-Bash notranslate"><div class="highlight"><pre><span></span><span class="nv">l1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="o">[]</span>
-l1.append<span class="o">([</span><span class="s1">&#39;María&#39;</span>,<span class="w"> </span><span class="m">2434234</span><span class="o">])</span>
-len<span class="o">(</span>l1<span class="o">)</span>
-l1
-</pre></div>
-</div>
-<div class="highlight-Bash notranslate"><div class="highlight"><pre><span></span><span class="nv">x</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="o">[</span><span class="m">1</span>,3,2,4,5,4,7,4,5,4<span class="o">]</span>
-x,count<span class="o">(</span><span class="m">4</span><span class="o">)</span>
-</pre></div>
-</div>
-<p>Consideremos el siguiente texto:</p>
-<blockquote>
-<div><p>How big is a fractal? When are two fractals similar to one another in some sense? What experimental measurements</p>
-</div></blockquote>
-<p>might we make to tell if two different fractals may be metrically equivalent? What is the same about the two fractals
-in Figure V.131?</p>
-<p>There are various numbers, associated with fractals, which can be used to compare them. They are generally referred to
-as fractal dimensions. They are attempts to quantify a subjective feeling we have about how densely the fractal
-occupies the metric space in which it lies. Fractal dimensions provide an objective means for comparing fractals.</p>
-<p>Ejemplos:</p>
-<div class="highlight-Bash notranslate"><div class="highlight"><pre><span></span><span class="nv">x</span><span class="w"> </span><span class="o">=</span><span class="w"> </span>x.replace<span class="o">(</span><span class="s1">&#39;\n&#39;</span>,<span class="w"> </span><span class="s1">&#39; &#39;</span><span class="o">)</span>
-<span class="nv">y</span><span class="w"> </span><span class="o">=</span><span class="w"> </span>x.split<span class="o">(</span><span class="s1">&#39; &#39;</span><span class="o">)</span>
-type<span class="o">(</span>y<span class="o">)</span>
-y.remove<span class="o">(</span><span class="s1">&#39;V.131?&#39;</span><span class="o">)</span>
-y.pop<span class="o">()</span>
-y.index<span class="o">(</span><span class="s1">&#39;When&#39;</span><span class="o">)</span>
-y.sort<span class="o">()</span>
+<div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="n">x</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">3</span><span class="p">]</span>
+
+<span class="n">x</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="mi">99</span><span class="p">)</span>
+
+<span class="n">y</span> <span class="o">=</span> <span class="n">x</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span>
+
+<span class="n">x</span><span class="o">.</span><span class="n">count</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
+
+<span class="n">x</span><span class="o">.</span><span class="n">insert</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mi">55</span><span class="p">)</span>
+
+<span class="n">x</span><span class="o">.</span><span class="n">pop</span><span class="p">()</span>
+
+<span class="n">x</span><span class="o">.</span><span class="n">remove</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span>
+
+<span class="n">x</span><span class="o">.</span><span class="n">reverse</span><span class="p">()</span>
+
+<span class="n">x</span><span class="o">.</span><span class="n">sort</span><span class="p">()</span>
 </pre></div>
 </div>
 </section>

@@ -24,5 +24,6 @@ Contenido
    software
    conceptos_matematicos
    clase-string
+   clase-lista
    clase-math
 
