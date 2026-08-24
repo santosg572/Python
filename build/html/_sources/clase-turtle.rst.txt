@@ -1,6 +1,9 @@
 Clase turtle
 ============
 
+La clase turtle de Python es una herramienta gráfica interactiva basada en la documentación de Python que permite controlar un 
+cursor en forma de tortuga para dibujar líneas, figuras y patrones geométricos en una ventana virtual
+
 .. code::Python
 
    import turtle
