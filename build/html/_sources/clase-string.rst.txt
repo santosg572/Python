@@ -1,7 +1,7 @@
 Clase String
 ============
 
-Un string es una secuencia de caracteres o varian linas de caracteres encerradas por los simbolos: ' o ".
+Un string es una secuencia de caracteres o formado de varias linas de caracteres encerradaos por los simbolos: ' o ".
 
 Ejemplos:
 
@@ -49,10 +49,34 @@ Definamos la siguientes variables string y podemos hacer los siguiente:
 **Algunos métodos de la clase string:**
 
 
-``'capitalize', 'count', 'find', 'format', 'format_map', 'index', 'isalpha', 'isdigit', 
+``'capitalize', 'count', 'find', 'index', 'isalpha', 'isdigit', 
   'lower', 'replace', 'rfind', 'rindex', 'split', 'translate', 'upper'``
 
 **Ejemplos**
 
-.. 
+Consideremos el siguiente string y apliquemos algunas funciones:
+
+.. code:: Python
+
+   x = ''' Mi nombre es Leopoldo,
+           vido actualmente en Queretaro,
+           mi novia se llama Olivia y vide 
+           en la Ciudad de Mèxico'''
+
+   x.capitalize()
+
+   x.count('en')
+
+   x.find('en')
+
+   x.find('en', 48)
+
+   x.isalpha()
+
+   x.lower()
+
+   x.replace('Mi', 'my')
+
+   x.split('\n')
+
 
