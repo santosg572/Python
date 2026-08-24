@@ -25,5 +25,6 @@ Contenido
    conceptos_matematicos
    clase-string
    clase-lista
+   estructuras-control
    clase-math
 
