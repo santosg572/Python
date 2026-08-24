@@ -82,127 +82,52 @@
              
   <section id="clase-string">
 <h1>Clase String<a class="headerlink" href="#clase-string" title="Link to this heading"></a></h1>
-<div class="highlight-Bash notranslate"><div class="highlight"><pre><span></span>&gt;&gt;&gt;<span class="w"> </span><span class="nv">x</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">&#39;&#39;&#39;</span>
-<span class="s1">...  hola</span>
-<span class="s1">...  como estas,</span>
-<span class="s1">...  yo estoy bien&#39;&#39;&#39;</span>
-&gt;&gt;&gt;
-&gt;&gt;&gt;<span class="w"> </span>x
-<span class="s1">&#39;\n hola\n como estas,\n yo estoy bien&#39;</span>
-&gt;&gt;&gt;
-&gt;&gt;&gt;<span class="w"> </span>len<span class="o">(</span>x<span class="o">)</span>
-<span class="m">34</span>
-&gt;&gt;&gt;<span class="w"> </span>type<span class="o">(</span>x<span class="o">)</span>
-&lt;class<span class="w"> </span><span class="s1">&#39;str&#39;</span>&gt;
-&gt;&gt;&gt;
-
-
-&gt;&gt;&gt;<span class="w"> </span><span class="nv">y1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;1234&quot;</span>
-&gt;&gt;&gt;<span class="w"> </span><span class="nv">y2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">&#39;1234&#39;</span>
-&gt;&gt;&gt;<span class="w"> </span><span class="nv">y1</span><span class="w"> </span><span class="o">==</span><span class="w"> </span>y2
+<p>Un string es una secuencia de caracteres o varian linas de caracteres encerradas por los simbolos: ‘ o “.</p>
+<p>Ejemplos:</p>
+<ol class="arabic simple">
+<li></li>
+</ol>
+<div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="s1">&#39;Juan Peréz&#39;</span>
 </pre></div>
 </div>
-<p>Algunos métodos de la clase string:</p>
-<p><code class="docutils literal notranslate"><span class="pre">'capitalize',</span> <span class="pre">'casefold',</span> <span class="pre">'center',</span> <span class="pre">'count',</span> <span class="pre">'encode',</span> <span class="pre">'endswith',</span> <span class="pre">'expandtabs',</span> <span class="pre">'find',</span> <span class="pre">'format',</span> <span class="pre">'format_map',</span> <span class="pre">'index',</span> <span class="pre">'isalnum',</span> <span class="pre">'isalpha',</span> <span class="pre">'isascii',</span> <span class="pre">'isdecimal',</span> <span class="pre">'isdigit',</span> <span class="pre">'isidentifier',</span> <span class="pre">'islower',</span> <span class="pre">'isnumeric',</span> <span class="pre">'isprintable',</span> <span class="pre">'isspace',</span> <span class="pre">'istitle',</span> <span class="pre">'isupper',</span> <span class="pre">'join',</span> <span class="pre">'ljust',</span> <span class="pre">'lower',</span> <span class="pre">'lstrip',</span> <span class="pre">'maketrans',</span> <span class="pre">'partition',</span> <span class="pre">'removeprefix',</span> <span class="pre">'removesuffix',</span> <span class="pre">'replace',</span> <span class="pre">'rfind',</span> <span class="pre">'rindex',</span> <span class="pre">'rjust',</span> <span class="pre">'rpartition',</span> <span class="pre">'rsplit',</span> <span class="pre">'rstrip',</span> <span class="pre">'split',</span> <span class="pre">'splitlines',</span> <span class="pre">'startswith',</span> <span class="pre">'strip',</span> <span class="pre">'swapcase',</span> <span class="pre">'title',</span> <span class="pre">'translate',</span> <span class="pre">'upper',</span> <span class="pre">'zfill'</span></code></p>
-<p><strong>Ayuda</strong></p>
-<div class="highlight-Bash notranslate"><div class="highlight"><pre><span></span>capitalize<span class="o">()</span><span class="w"> </span>method<span class="w"> </span>of<span class="w"> </span>builtins.str<span class="w"> </span>instance
-<span class="w">    </span>Return<span class="w"> </span>a<span class="w"> </span>capitalized<span class="w"> </span>version<span class="w"> </span>of<span class="w"> </span>the<span class="w"> </span>string.
-
-<span class="w">    </span>More<span class="w"> </span>specifically,<span class="w"> </span>make<span class="w"> </span>the<span class="w"> </span>first<span class="w"> </span>character<span class="w"> </span>have<span class="w"> </span>upper<span class="w"> </span><span class="k">case</span><span class="w"> </span>and<span class="w"> </span>the<span class="w"> </span>rest<span class="w"> </span>lower
-<span class="w">    </span><span class="k">case</span>.
-
-count<span class="o">(</span>sub<span class="o">[</span>,<span class="w"> </span>start<span class="o">[</span>,<span class="w"> </span>end<span class="o">]]</span>,<span class="w"> </span>/<span class="o">)</span><span class="w"> </span>method<span class="w"> </span>of<span class="w"> </span>builtins.str<span class="w"> </span>instance
-<span class="w">    </span>Return<span class="w"> </span>the<span class="w"> </span>number<span class="w"> </span>of<span class="w"> </span>non-overlapping<span class="w"> </span>occurrences<span class="w"> </span>of<span class="w"> </span>substring<span class="w"> </span>sub<span class="w"> </span><span class="k">in</span><span class="w"> </span>string<span class="w"> </span>S<span class="o">[</span>start:end<span class="o">]</span>.
-
-find<span class="o">(</span>sub<span class="o">[</span>,<span class="w"> </span>start<span class="o">[</span>,<span class="w"> </span>end<span class="o">]]</span>,<span class="w"> </span>/<span class="o">)</span><span class="w"> </span>method<span class="w"> </span>of<span class="w"> </span>builtins.str<span class="w"> </span>instance
-<span class="w">    </span>Return<span class="w"> </span>the<span class="w"> </span>lowest<span class="w"> </span>index<span class="w"> </span><span class="k">in</span><span class="w"> </span>S<span class="w"> </span>where<span class="w"> </span>substring<span class="w"> </span>sub<span class="w"> </span>is<span class="w"> </span>found,<span class="w"> </span>such<span class="w"> </span>that<span class="w"> </span>sub<span class="w"> </span>is<span class="w"> </span>contained<span class="w"> </span>within<span class="w"> </span>S<span class="o">[</span>start:end<span class="o">]</span>.
-
-index<span class="o">(</span>sub<span class="o">[</span>,<span class="w"> </span>start<span class="o">[</span>,<span class="w"> </span>end<span class="o">]]</span>,<span class="w"> </span>/<span class="o">)</span><span class="w"> </span>method<span class="w"> </span>of<span class="w"> </span>builtins.str<span class="w"> </span>instance
-<span class="w">    </span>Return<span class="w"> </span>the<span class="w"> </span>lowest<span class="w"> </span>index<span class="w"> </span><span class="k">in</span><span class="w"> </span>S<span class="w"> </span>where<span class="w"> </span>substring<span class="w"> </span>sub<span class="w"> </span>is<span class="w"> </span>found,<span class="w"> </span>such<span class="w"> </span>that<span class="w"> </span>sub<span class="w"> </span>is<span class="w"> </span>contained<span class="w"> </span>within<span class="w"> </span>S<span class="o">[</span>start:end<span class="o">]</span>.
-
-lower<span class="o">()</span><span class="w"> </span>method<span class="w"> </span>of<span class="w"> </span>builtins.str<span class="w"> </span>instance
-<span class="w">    </span>Return<span class="w"> </span>a<span class="w"> </span>copy<span class="w"> </span>of<span class="w"> </span>the<span class="w"> </span>string<span class="w"> </span>converted<span class="w"> </span>to<span class="w"> </span>lowercase.
-
-replace<span class="o">(</span>old,<span class="w"> </span>new,<span class="w"> </span>/,<span class="w"> </span><span class="nv">count</span><span class="o">=</span>-1<span class="o">)</span><span class="w"> </span>method<span class="w"> </span>of<span class="w"> </span>builtins.str<span class="w"> </span>instance
-<span class="w">    </span>Return<span class="w"> </span>a<span class="w"> </span>copy<span class="w"> </span>with<span class="w"> </span>all<span class="w"> </span>occurrences<span class="w"> </span>of<span class="w"> </span>substring<span class="w"> </span>old<span class="w"> </span>replaced<span class="w"> </span>by<span class="w"> </span>new.
-
-split<span class="o">(</span><span class="nv">sep</span><span class="o">=</span>None,<span class="w"> </span><span class="nv">maxsplit</span><span class="o">=</span>-1<span class="o">)</span><span class="w"> </span>method<span class="w"> </span>of<span class="w"> </span>builtins.str<span class="w"> </span>instance
-<span class="w">    </span>Return<span class="w"> </span>a<span class="w"> </span>list<span class="w"> </span>of<span class="w"> </span>the<span class="w"> </span>substrings<span class="w"> </span><span class="k">in</span><span class="w"> </span>the<span class="w"> </span>string,<span class="w"> </span>using<span class="w"> </span>sep<span class="w"> </span>as<span class="w"> </span>the<span class="w"> </span>separator<span class="w"> </span>string.
-
-<span class="w">    </span>sep
-<span class="w">      </span>The<span class="w"> </span>separator<span class="w"> </span>used<span class="w"> </span>to<span class="w"> </span>split<span class="w"> </span>the<span class="w"> </span>string.
+<ol class="arabic simple" start="2">
+<li></li>
+</ol>
+<div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="s2">&quot;Juan Peréz&quot;</span>
 </pre></div>
 </div>
+<ol class="arabic simple" start="3">
+<li></li>
+</ol>
+<div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="sd">&#39;&#39;&#39;Hola como estas,</span>
+<span class="sd">   yo me encuentro bien,</span>
+<span class="sd">   saludos.&#39;&#39;&#39;</span>
+</pre></div>
+</div>
+<p>Definamos la siguientes variables string y podemos hacer los siguiente:</p>
+<div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="n">x</span> <span class="o">=</span> <span class="s1">&#39;hola como estas&#39;</span>
+
+<span class="n">x</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>  <span class="c1"># muestra el primer caracter</span>
+
+<span class="n">x</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span> <span class="c1"># muestra el ultimo caracter</span>
+
+<span class="n">x</span><span class="p">[:</span><span class="mi">3</span><span class="p">]</span> <span class="c1"># muestra los dos primeros caracteres</span>
+
+<span class="n">x</span><span class="p">[</span><span class="mi">5</span><span class="p">:]</span> <span class="c1"># muestra los caracteres a partir de la posicion 5</span>
+
+<span class="n">x</span><span class="p">[</span><span class="mi">3</span><span class="p">:</span><span class="mi">10</span><span class="p">]</span> <span class="c1"># muestra los caracteres en las posiciones, 3, 4, 5, 6, 7, 8 y 9</span>
+
+<span class="mi">2</span><span class="o">*</span><span class="n">x</span> <span class="c1"># crea un string formado al repetir dos veces el string x</span>
+
+<span class="n">x</span> <span class="o">+</span> <span class="n">x</span> <span class="o">+</span> <span class="n">x</span> <span class="c1"># crea un string formado al repetir tres veces el string x</span>
+</pre></div>
+</div>
+<p><strong>Algunos métodos de la clase string:</strong></p>
+<dl class="simple">
+<dt><a href="#id1"><span class="problematic" id="id2">``</span></a>’capitalize’, ‘count’, ‘find’, ‘format’, ‘format_map’, ‘index’, ‘isalpha’, ‘isdigit’,</dt><dd><p>‘lower’, ‘replace’, ‘rfind’, ‘rindex’, ‘split’, ‘translate’, ‘upper’``</p>
+</dd>
+</dl>
 <p><strong>Ejemplos</strong></p>
-<div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="n">pp</span> <span class="o">=</span> <span class="s1">&#39;&#39;&#39;ya no se encantarán mis ojos en tus ojos,</span>
-<span class="s1">ya no se endulzará junto a ti mi dolor.</span>
-
-<span class="s1">Pero hacia donde vaya llevaré tu mirada</span>
-<span class="s1">y hacia donde camines llevarás mi dolor.</span>
-
-<span class="s1">Fui tuyo, fuiste mía. ¿Qué más? Juntos hicimos</span>
-<span class="s1">un recodo en la ruta donde el amor pasó.</span>
-
-<span class="s1">Fui tuyo, fuiste mía. Tu serás del que te ame,</span>
-<span class="s1">del que corte en tu huerto lo que he sembrado yo.</span>
-
-<span class="s1">Yo me voy. Estoy triste: pero siempre estoy triste.</span>
-<span class="s1">Vengo desde tus brazos. No sé hacia dónde voy.</span>
-
-<span class="s1">...Desde tu corazón me dice adiós un niño.</span>
-<span class="s1">Y yo le digo adiós.&#39;&#39;&#39;</span>
-</pre></div>
-</div>
-<div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="nb">len</span><span class="p">(</span><span class="n">pp</span><span class="p">)</span>
-
-<span class="n">pp</span><span class="o">.</span><span class="n">capitalize</span><span class="p">()</span>
-
-<span class="n">pp</span><span class="o">.</span><span class="n">count</span><span class="p">(</span><span class="s1">&#39;m&#39;</span><span class="p">)</span>
-
-<span class="n">pp</span><span class="o">.</span><span class="n">count</span><span class="p">(</span><span class="s1">&#39;mi&#39;</span><span class="p">)</span>
-
-<span class="n">pp</span><span class="o">.</span><span class="n">count</span><span class="p">(</span><span class="s1">&#39;corazón&#39;</span><span class="p">)</span>
-
-<span class="n">pp</span><span class="o">.</span><span class="n">count</span><span class="p">(</span><span class="s1">&#39;</span><span class="se">\n</span><span class="s1">&#39;</span><span class="p">)</span>
-
-<span class="n">pp</span><span class="o">.</span><span class="n">count</span><span class="p">(</span><span class="s1">&#39;x&#39;</span><span class="p">)</span>
-</pre></div>
-</div>
-<div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="n">pp</span><span class="o">.</span><span class="n">find</span><span class="p">(</span><span class="s1">&#39;x&#39;</span><span class="p">)</span>
-
-<span class="n">pp</span><span class="o">.</span><span class="n">find</span><span class="p">(</span><span class="s1">&#39;ojos&#39;</span><span class="p">)</span>
-
-<span class="n">pp</span><span class="o">.</span><span class="n">find</span><span class="p">(</span><span class="s1">&#39;ojos&#39;</span><span class="p">,</span> <span class="mi">25</span><span class="p">)</span>
-
-<span class="n">pp</span><span class="o">.</span><span class="n">find</span><span class="p">(</span><span class="s1">&#39;ojos&#39;</span><span class="p">,</span> <span class="mi">37</span><span class="p">)</span>
-
-<span class="n">pp</span><span class="o">.</span><span class="n">islower</span><span class="p">()</span>
-
-<span class="n">pp</span><span class="o">.</span><span class="n">lower</span><span class="p">()</span>
-
-<span class="n">pp</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s1">&#39;</span><span class="se">\n</span><span class="s1">&#39;</span><span class="p">,</span> <span class="s1">&#39; &#39;</span><span class="p">)</span>
-
-<span class="n">yy</span> <span class="o">=</span> <span class="n">pp</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s1">&#39;Ya no se&#39;</span><span class="p">,</span> <span class="s1">&#39;Para tí mi Dulcinea: </span><span class="se">\n\n</span><span class="s1"> Ya no se&#39;</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">yy</span><span class="p">)</span>
-
-<span class="n">ww</span> <span class="o">=</span> <span class="n">pp</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s1">&#39;</span><span class="se">\n</span><span class="s1">&#39;</span><span class="p">)</span>
-
-<span class="n">ww</span>
-
-<span class="nb">len</span><span class="p">(</span><span class="n">ww</span><span class="p">)</span>
-
-<span class="nb">type</span><span class="p">(</span><span class="n">ww</span><span class="p">)</span>
-
-<span class="k">for</span> <span class="n">ss</span> <span class="ow">in</span> <span class="n">ww</span><span class="p">:</span>
-  <span class="nb">print</span><span class="p">(</span><span class="n">ss</span><span class="p">)</span>
-
-<span class="n">ww</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span>
-
-<span class="n">ww</span><span class="p">[</span><span class="mi">4</span><span class="p">]</span>
-
-<span class="n">ww</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>
-</pre></div>
-</div>
 </section>
 
 
