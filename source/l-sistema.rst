@@ -17,7 +17,13 @@ Lindenmayer`` , un biólogo teórico y botánico húngaro de la Universidad de U
 * **inicio**   : F
 * **Reglas**   : (F → F+F − F − F+F)
 
-Aquí, **F** significa "avanzar", **+** significa "girar 90° a la izquierda" y **-** significa "girar 90° a la derecha" 
+Aquí, 
+
+* **F** significa "avanzar", 
+
+* **+** significa "girar 90° a la izquierda" y 
+
+* **-** significa "girar 90° a la derecha" 
 
 
 
