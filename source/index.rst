@@ -23,5 +23,6 @@ Contenido
    bibliografia/bibliografia
    software
    conceptos_matematicos
+   clase-string
    clase-math
 
