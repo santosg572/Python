@@ -3,7 +3,7 @@ Ayuda de algunos Métodos de la clase Turtle
 
 **back(distance)**
 
-.. code:: Python
+.. code Python
 
    turtle.back = back(distance)
     Move the turtle backward by distance.
@@ -23,9 +23,7 @@ Ayuda de algunos Métodos de la clase Turtle
     >>> position()
     (-30.00, 0.00)
 
-**begin_fill()**
-
-.. code:: Python
+.. code Python
 
    turtle.begin_fill = begin_fill()
     Called just before drawing a shape to be filled.
@@ -38,9 +36,8 @@ Ayuda de algunos Métodos de la clase Turtle
     >>> circle(60)
     >>> end_fill()
 
-**circle(radius, extent=None, steps=None)**
 
-.. code:: Python
+.. code Python
 
    turtle.circle = circle(radius, extent=None, steps=None)
     Draw a circle with given radius.
@@ -72,14 +69,11 @@ Ayuda de algunos Métodos de la clase Turtle
     >>> circle(50)
     >>> circle(120, 180)  # semicircle
 
-**clear()**
 
-.. code:: Python
+.. code Python
 
    turtle.clear = clear()
     Delete the turtle's drawings from the screen. Do not move 
-
-**color(*args)**
     
 .. code Python
 
@@ -116,9 +110,7 @@ Ayuda de algunos Métodos de la clase Turtle
     ('#285078', '#a0c8f0')
 
 
-**degrees(fullcircle=360.0)**
-
-.. code:: Python
+.. code Python
 
    turtle.degrees = degrees(fullcircle=360.0)
     Set angle measurement units to degrees.
@@ -141,9 +133,7 @@ Ayuda de algunos Métodos de la clase Turtle
     >>> heading()
     100
 
-**delay(delay=None)**
-
-.. code:: Python
+.. code Python
 
    turtle.delay = delay(delay=None)
     Return or set the drawing delay in milliseconds.
@@ -156,9 +146,7 @@ Ayuda de algunos Métodos de la clase Turtle
     >>> delay()
     15
 
-**distance(x, y=None)**
-
-.. code:: Python
+.. code Python
    turtle.distance = distance(x, y=None)
     Return the distance from the turtle to (x,y) in turtle step units.
     
@@ -181,9 +169,7 @@ Ayuda de algunos Métodos de la clase Turtle
     >>> distance(pen)
     77.0
 
-**mainloop()**
-
-.. code:: Python
+.. code Python
 
    turtle.done = mainloop()
     Starts event loop - calling Tkinter's mainloop function.
@@ -197,9 +183,7 @@ Ayuda de algunos Métodos de la clase Turtle
     Example:
     >>> mainloop()
 
-**dot(size=None, *color)**
-
-.. code:: Python
+.. code Python
 
    turtle.dot = dot(size=None, *color)
     Draw a dot with diameter size, using color.
@@ -215,9 +199,7 @@ Ayuda de algunos Métodos de la clase Turtle
     >>> dot()
     >>> fd(50); dot(20, "blue"); fd(50)
 
-**down()**
-
-.. code:: Python
+.. code Python
 
    turtle.down = down()
     Pull the pen down -- drawing when moving.
@@ -229,9 +211,7 @@ Ayuda de algunos Métodos de la clase Turtle
     Example:
     >>> pendown()
 
-**end_fill()**
-
-.. code:: Python
+.. code Python
 
    turtle.end_fill = end_fill()
     Fill the shape drawn after the call begin_fill().
@@ -244,9 +224,7 @@ Ayuda de algunos Métodos de la clase Turtle
     >>> circle(60)
     >>> end_fill()
 
-**fd(distance)**
-
-.. code:: Python
+.. code Python
 
    turtle.fd = fd(distance)
     Move the turtle forward by the specified distance.
@@ -268,8 +246,6 @@ Ayuda de algunos Métodos de la clase Turtle
     >>> forward(-75)
     >>> position()
     (-50.00,0.00)
-
-**fillcolor(*args)**
 
 .. code Python
 
@@ -301,9 +277,8 @@ Ayuda de algunos Métodos de la clase Turtle
     >>> fillcolor(col)
     >>> fillcolor(0, .5, 0)
 
-**forward(distance)**
 
-.. code:: Python
+.. code Python
 
    turtle.forward = forward(distance)
     Move the turtle forward by the specified distance.
@@ -326,9 +301,7 @@ Ayuda de algunos Métodos de la clase Turtle
     >>> position()
     (-50.00,0.00)
 
-**goto(x, y=None)**
-
-.. code:: Python
+.. code Python
 
    turtle.goto = goto(x, y=None)
     Move turtle to an absolute position.
@@ -360,8 +333,6 @@ Ayuda de algunos Métodos de la clase Turtle
     >>> pos()
     (0.00,0.00)
 
-**home()**
-
 .. code:: Python
 
    turtle.home = home()
@@ -374,8 +345,6 @@ Ayuda de algunos Métodos de la clase Turtle
     
     Example:
     >>> home()
-
-**left(angle)**
 
 .. code:: Python
 
@@ -397,8 +366,6 @@ Ayuda de algunos Métodos de la clase Turtle
     >>> left(45)
     >>> heading()
     67.0
-
-**mainloop()**
 
 .. code:: Python
 
