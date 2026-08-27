@@ -58,6 +58,7 @@
 <li class="toctree-l1"><a class="reference internal" href="clase-math.html">Clase math</a></li>
 <li class="toctree-l1 current"><a class="current reference internal" href="#">Clase turtle</a></li>
 <li class="toctree-l1"><a class="reference internal" href="l-sistema.html">Sistema L</a></li>
+<li class="toctree-l1"><a class="reference internal" href="turtle_help.html">Ayuda de algunos Métodos de la clase Turtle</a></li>
 </ul>
 
         </div>
@@ -131,6 +132,640 @@ cursor en forma de tortuga para dibujar líneas, figuras y patrones geométricos
 <span class="n">turtle</span><span class="o">.</span><span class="n">end_fill</span><span class="p">()</span>
 </pre></div>
 </div>
+<p>turtle_dir.txt</p>
+<p><strong>Canvas</strong></p>
+<p><strong>Pen</strong></p>
+<p><strong>RawPen</strong></p>
+<p><strong>RawTurtle</strong></p>
+<p><strong>Screen</strong></p>
+<p><strong>ScrolledCanvas</strong></p>
+<p><strong>Shape</strong></p>
+<p><strong>TK</strong></p>
+<p>TNavigator
+TPen
+Tbuffer
+Terminator
+Turtle
+TurtleGraphicsError
+TurtleScreen
+TurtleScreenBase
+Vec2D
+addshape</p>
+<p><strong>back</strong></p>
+<div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="n">turtle</span><span class="o">.</span><span class="n">back</span> <span class="o">=</span> <span class="n">back</span><span class="p">(</span><span class="n">distance</span><span class="p">)</span>
+ <span class="n">Move</span> <span class="n">the</span> <span class="n">turtle</span> <span class="n">backward</span> <span class="n">by</span> <span class="n">distance</span><span class="o">.</span>
+
+ <span class="n">Aliases</span><span class="p">:</span> <span class="n">back</span> <span class="o">|</span> <span class="n">backward</span> <span class="o">|</span> <span class="n">bk</span>
+
+ <span class="n">Argument</span><span class="p">:</span>
+ <span class="n">distance</span> <span class="o">--</span> <span class="n">a</span> <span class="n">number</span>
+
+ <span class="n">Move</span> <span class="n">the</span> <span class="n">turtle</span> <span class="n">backward</span> <span class="n">by</span> <span class="n">distance</span><span class="p">,</span> <span class="n">opposite</span> <span class="n">to</span> <span class="n">the</span> <span class="n">direction</span> <span class="n">the</span>
+ <span class="n">turtle</span> <span class="ow">is</span> <span class="n">headed</span><span class="o">.</span> <span class="n">Do</span> <span class="ow">not</span> <span class="n">change</span> <span class="n">the</span> <span class="n">turtle</span><span class="s1">&#39;s heading.</span>
+
+ <span class="n">Example</span><span class="p">:</span>
+ <span class="o">&gt;&gt;&gt;</span> <span class="n">position</span><span class="p">()</span>
+ <span class="p">(</span><span class="mf">0.00</span><span class="p">,</span> <span class="mf">0.00</span><span class="p">)</span>
+ <span class="o">&gt;&gt;&gt;</span> <span class="n">backward</span><span class="p">(</span><span class="mi">30</span><span class="p">)</span>
+ <span class="o">&gt;&gt;&gt;</span> <span class="n">position</span><span class="p">()</span>
+ <span class="p">(</span><span class="o">-</span><span class="mf">30.00</span><span class="p">,</span> <span class="mf">0.00</span><span class="p">)</span>
+</pre></div>
+</div>
+<p><strong>backward</strong></p>
+<p><strong>begin_fill</strong></p>
+<div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="n">turtle</span><span class="o">.</span><span class="n">begin_fill</span> <span class="o">=</span> <span class="n">begin_fill</span><span class="p">()</span>
+ <span class="n">Called</span> <span class="n">just</span> <span class="n">before</span> <span class="n">drawing</span> <span class="n">a</span> <span class="n">shape</span> <span class="n">to</span> <span class="n">be</span> <span class="n">filled</span><span class="o">.</span>
+
+ <span class="n">No</span> <span class="n">argument</span><span class="o">.</span>
+
+ <span class="n">Example</span><span class="p">:</span>
+ <span class="o">&gt;&gt;&gt;</span> <span class="n">color</span><span class="p">(</span><span class="s2">&quot;black&quot;</span><span class="p">,</span> <span class="s2">&quot;red&quot;</span><span class="p">)</span>
+ <span class="o">&gt;&gt;&gt;</span> <span class="n">begin_fill</span><span class="p">()</span>
+ <span class="o">&gt;&gt;&gt;</span> <span class="n">circle</span><span class="p">(</span><span class="mi">60</span><span class="p">)</span>
+ <span class="o">&gt;&gt;&gt;</span> <span class="n">end_fill</span><span class="p">()</span>
+</pre></div>
+</div>
+<p><strong>bgcolor</strong></p>
+<div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="n">turtle</span><span class="o">.</span><span class="n">bgcolor</span> <span class="o">=</span> <span class="n">bgcolor</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">)</span>
+ <span class="n">Set</span> <span class="ow">or</span> <span class="k">return</span> <span class="n">backgroundcolor</span> <span class="n">of</span> <span class="n">the</span> <span class="n">TurtleScreen</span><span class="o">.</span>
+
+ <span class="n">Arguments</span> <span class="p">(</span><span class="k">if</span> <span class="n">given</span><span class="p">):</span> <span class="n">a</span> <span class="n">color</span> <span class="n">string</span> <span class="ow">or</span> <span class="n">three</span> <span class="n">numbers</span>
+ <span class="ow">in</span> <span class="n">the</span> <span class="nb">range</span> <span class="mf">0.</span><span class="o">.</span><span class="n">colormode</span> <span class="ow">or</span> <span class="n">a</span> <span class="mi">3</span><span class="o">-</span><span class="nb">tuple</span> <span class="n">of</span> <span class="n">such</span> <span class="n">numbers</span><span class="o">.</span>
+
+ <span class="n">Example</span><span class="p">:</span>
+ <span class="o">&gt;&gt;&gt;</span> <span class="n">bgcolor</span><span class="p">(</span><span class="s2">&quot;orange&quot;</span><span class="p">)</span>
+ <span class="o">&gt;&gt;&gt;</span> <span class="n">bgcolor</span><span class="p">()</span>
+ <span class="s1">&#39;orange&#39;</span>
+ <span class="o">&gt;&gt;&gt;</span> <span class="n">bgcolor</span><span class="p">(</span><span class="mf">0.5</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mf">0.5</span><span class="p">)</span>
+ <span class="o">&gt;&gt;&gt;</span> <span class="n">bgcolor</span><span class="p">()</span>
+ <span class="s1">&#39;#800080&#39;</span>
+</pre></div>
+</div>
+<p><strong>bye</strong></p>
+<div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="n">turtle</span><span class="o">.</span><span class="n">bye</span> <span class="o">=</span> <span class="n">bye</span><span class="p">()</span>
+ <span class="n">Shut</span> <span class="n">the</span> <span class="n">turtlegraphics</span> <span class="n">window</span><span class="o">.</span>
+
+ <span class="n">Example</span><span class="p">:</span>
+ <span class="o">&gt;&gt;&gt;</span> <span class="n">bye</span><span class="p">()</span>
+</pre></div>
+</div>
+<p><strong>circle</strong></p>
+<div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="n">turtle</span><span class="o">.</span><span class="n">circle</span> <span class="o">=</span> <span class="n">circle</span><span class="p">(</span><span class="n">radius</span><span class="p">,</span> <span class="n">extent</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">steps</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span>
+ <span class="n">Draw</span> <span class="n">a</span> <span class="n">circle</span> <span class="k">with</span> <span class="n">given</span> <span class="n">radius</span><span class="o">.</span>
+
+ <span class="n">Arguments</span><span class="p">:</span>
+ <span class="n">radius</span> <span class="o">--</span> <span class="n">a</span> <span class="n">number</span>
+ <span class="n">extent</span> <span class="p">(</span><span class="n">optional</span><span class="p">)</span> <span class="o">--</span> <span class="n">a</span> <span class="n">number</span>
+ <span class="n">steps</span> <span class="p">(</span><span class="n">optional</span><span class="p">)</span> <span class="o">--</span> <span class="n">an</span> <span class="n">integer</span>
+
+ <span class="n">Draw</span> <span class="n">a</span> <span class="n">circle</span> <span class="k">with</span> <span class="n">given</span> <span class="n">radius</span><span class="o">.</span> <span class="n">The</span> <span class="n">center</span> <span class="ow">is</span> <span class="n">radius</span> <span class="n">units</span> <span class="n">left</span>
+ <span class="n">of</span> <span class="n">the</span> <span class="n">turtle</span><span class="p">;</span> <span class="n">extent</span> <span class="o">-</span> <span class="n">an</span> <span class="n">angle</span> <span class="o">-</span> <span class="n">determines</span> <span class="n">which</span> <span class="n">part</span> <span class="n">of</span> <span class="n">the</span>
+ <span class="n">circle</span> <span class="ow">is</span> <span class="n">drawn</span><span class="o">.</span> <span class="n">If</span> <span class="n">extent</span> <span class="ow">is</span> <span class="ow">not</span> <span class="n">given</span><span class="p">,</span> <span class="n">draw</span> <span class="n">the</span> <span class="n">entire</span> <span class="n">circle</span><span class="o">.</span>
+ <span class="n">If</span> <span class="n">extent</span> <span class="ow">is</span> <span class="ow">not</span> <span class="n">a</span> <span class="n">full</span> <span class="n">circle</span><span class="p">,</span> <span class="n">one</span> <span class="n">endpoint</span> <span class="n">of</span> <span class="n">the</span> <span class="n">arc</span> <span class="ow">is</span> <span class="n">the</span>
+ <span class="n">current</span> <span class="n">pen</span> <span class="n">position</span><span class="o">.</span> <span class="n">Draw</span> <span class="n">the</span> <span class="n">arc</span> <span class="ow">in</span> <span class="n">counterclockwise</span> <span class="n">direction</span>
+ <span class="k">if</span> <span class="n">radius</span> <span class="ow">is</span> <span class="n">positive</span><span class="p">,</span> <span class="n">otherwise</span> <span class="ow">in</span> <span class="n">clockwise</span> <span class="n">direction</span><span class="o">.</span> <span class="n">Finally</span>
+ <span class="n">the</span> <span class="n">direction</span> <span class="n">of</span> <span class="n">the</span> <span class="n">turtle</span> <span class="ow">is</span> <span class="n">changed</span> <span class="n">by</span> <span class="n">the</span> <span class="n">amount</span> <span class="n">of</span> <span class="n">extent</span><span class="o">.</span>
+
+ <span class="n">As</span> <span class="n">the</span> <span class="n">circle</span> <span class="ow">is</span> <span class="n">approximated</span> <span class="n">by</span> <span class="n">an</span> <span class="n">inscribed</span> <span class="n">regular</span> <span class="n">polygon</span><span class="p">,</span>
+ <span class="n">steps</span> <span class="n">determines</span> <span class="n">the</span> <span class="n">number</span> <span class="n">of</span> <span class="n">steps</span> <span class="n">to</span> <span class="n">use</span><span class="o">.</span> <span class="n">If</span> <span class="ow">not</span> <span class="n">given</span><span class="p">,</span>
+ <span class="n">it</span> <span class="n">will</span> <span class="n">be</span> <span class="n">calculated</span> <span class="n">automatically</span><span class="o">.</span> <span class="n">Maybe</span> <span class="n">used</span> <span class="n">to</span> <span class="n">draw</span> <span class="n">regular</span>
+ <span class="n">polygons</span><span class="o">.</span>
+
+ <span class="n">call</span><span class="p">:</span> <span class="n">circle</span><span class="p">(</span><span class="n">radius</span><span class="p">)</span>                  <span class="c1"># full circle</span>
+ <span class="o">--</span><span class="ow">or</span><span class="p">:</span> <span class="n">circle</span><span class="p">(</span><span class="n">radius</span><span class="p">,</span> <span class="n">extent</span><span class="p">)</span>          <span class="c1"># arc</span>
+ <span class="o">--</span><span class="ow">or</span><span class="p">:</span> <span class="n">circle</span><span class="p">(</span><span class="n">radius</span><span class="p">,</span> <span class="n">extent</span><span class="p">,</span> <span class="n">steps</span><span class="p">)</span>
+ <span class="o">--</span><span class="ow">or</span><span class="p">:</span> <span class="n">circle</span><span class="p">(</span><span class="n">radius</span><span class="p">,</span> <span class="n">steps</span><span class="o">=</span><span class="mi">6</span><span class="p">)</span>         <span class="c1"># 6-sided polygon</span>
+
+ <span class="n">Example</span><span class="p">:</span>
+ <span class="o">&gt;&gt;&gt;</span> <span class="n">circle</span><span class="p">(</span><span class="mi">50</span><span class="p">)</span>
+ <span class="o">&gt;&gt;&gt;</span> <span class="n">circle</span><span class="p">(</span><span class="mi">120</span><span class="p">,</span> <span class="mi">180</span><span class="p">)</span>  <span class="c1"># semicircle</span>
+</pre></div>
+</div>
+<p><strong>clear</strong></p>
+<div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="n">turtle</span><span class="o">.</span><span class="n">clear</span> <span class="o">=</span> <span class="n">clear</span><span class="p">()</span>
+ <span class="n">Delete</span> <span class="n">the</span> <span class="n">turtle</span><span class="s1">&#39;s drawings from the screen. Do not move</span>
+
+ <span class="n">No</span> <span class="n">arguments</span><span class="o">.</span>
+
+ <span class="n">Delete</span> <span class="n">the</span> <span class="n">turtle</span><span class="s1">&#39;s drawings from the screen. Do not move</span>
+ <span class="n">State</span> <span class="ow">and</span> <span class="n">position</span> <span class="n">of</span> <span class="n">the</span> <span class="n">turtle</span> <span class="k">as</span> <span class="n">well</span> <span class="k">as</span> <span class="n">drawings</span> <span class="n">of</span> <span class="n">other</span>
+ <span class="n">turtles</span> <span class="n">are</span> <span class="ow">not</span> <span class="n">affected</span><span class="o">.</span>
+
+ <span class="n">Examples</span><span class="p">:</span>
+ <span class="o">&gt;&gt;&gt;</span> <span class="n">clear</span><span class="p">()</span>
+</pre></div>
+</div>
+<p><strong>clearscreen</strong></p>
+<blockquote>
+<div><dl>
+<dt>turtle.clearscreen = clearscreen()</dt><dd><p>Delete all drawings and all turtles from the TurtleScreen.</p>
+<p>No argument.</p>
+<p>Reset empty TurtleScreen to its initial state: white background,
+no backgroundimage, no eventbindings and tracing on.</p>
+<p>Example:
+&gt;&gt;&gt; clear()</p>
+<p>Note: this method is not available as function.</p>
+</dd>
+</dl>
+</div></blockquote>
+<p><strong>color</strong></p>
+<div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="n">turtle</span><span class="o">.</span><span class="n">color</span> <span class="o">=</span> <span class="n">color</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">)</span>
+ <span class="n">Return</span> <span class="ow">or</span> <span class="nb">set</span> <span class="n">the</span> <span class="n">pencolor</span> <span class="ow">and</span> <span class="n">fillcolor</span><span class="o">.</span>
+
+ <span class="n">Arguments</span><span class="p">:</span>
+ <span class="n">Several</span> <span class="nb">input</span> <span class="n">formats</span> <span class="n">are</span> <span class="n">allowed</span><span class="o">.</span>
+ <span class="n">They</span> <span class="n">use</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="ow">or</span> <span class="mi">3</span> <span class="n">arguments</span> <span class="k">as</span> <span class="n">follows</span><span class="p">:</span>
+
+ <span class="n">color</span><span class="p">()</span>
+     <span class="n">Return</span> <span class="n">the</span> <span class="n">current</span> <span class="n">pencolor</span> <span class="ow">and</span> <span class="n">the</span> <span class="n">current</span> <span class="n">fillcolor</span>
+     <span class="k">as</span> <span class="n">a</span> <span class="n">pair</span> <span class="n">of</span> <span class="n">color</span> <span class="n">specification</span> <span class="n">strings</span> <span class="k">as</span> <span class="n">are</span> <span class="n">returned</span>
+     <span class="n">by</span> <span class="n">pencolor</span> <span class="ow">and</span> <span class="n">fillcolor</span><span class="o">.</span>
+ <span class="n">color</span><span class="p">(</span><span class="n">colorstring</span><span class="p">),</span> <span class="n">color</span><span class="p">((</span><span class="n">r</span><span class="p">,</span><span class="n">g</span><span class="p">,</span><span class="n">b</span><span class="p">)),</span> <span class="n">color</span><span class="p">(</span><span class="n">r</span><span class="p">,</span><span class="n">g</span><span class="p">,</span><span class="n">b</span><span class="p">)</span>
+     <span class="n">inputs</span> <span class="k">as</span> <span class="ow">in</span> <span class="n">pencolor</span><span class="p">,</span> <span class="nb">set</span> <span class="n">both</span><span class="p">,</span> <span class="n">fillcolor</span> <span class="ow">and</span> <span class="n">pencolor</span><span class="p">,</span>
+     <span class="n">to</span> <span class="n">the</span> <span class="n">given</span> <span class="n">value</span><span class="o">.</span>
+ <span class="n">color</span><span class="p">(</span><span class="n">colorstring1</span><span class="p">,</span> <span class="n">colorstring2</span><span class="p">),</span>
+ <span class="n">color</span><span class="p">((</span><span class="n">r1</span><span class="p">,</span><span class="n">g1</span><span class="p">,</span><span class="n">b1</span><span class="p">),</span> <span class="p">(</span><span class="n">r2</span><span class="p">,</span><span class="n">g2</span><span class="p">,</span><span class="n">b2</span><span class="p">))</span>
+     <span class="n">equivalent</span> <span class="n">to</span> <span class="n">pencolor</span><span class="p">(</span><span class="n">colorstring1</span><span class="p">)</span> <span class="ow">and</span> <span class="n">fillcolor</span><span class="p">(</span><span class="n">colorstring2</span><span class="p">)</span>
+     <span class="ow">and</span> <span class="n">analogously</span><span class="p">,</span> <span class="k">if</span> <span class="n">the</span> <span class="n">other</span> <span class="nb">input</span> <span class="nb">format</span> <span class="ow">is</span> <span class="n">used</span><span class="o">.</span>
+
+ <span class="n">If</span> <span class="n">turtleshape</span> <span class="ow">is</span> <span class="n">a</span> <span class="n">polygon</span><span class="p">,</span> <span class="n">outline</span> <span class="ow">and</span> <span class="n">interior</span> <span class="n">of</span> <span class="n">that</span> <span class="n">polygon</span>
+ <span class="ow">is</span> <span class="n">drawn</span> <span class="k">with</span> <span class="n">the</span> <span class="n">newly</span> <span class="nb">set</span> <span class="n">colors</span><span class="o">.</span>
+ <span class="n">For</span> <span class="n">more</span> <span class="n">info</span> <span class="n">see</span><span class="p">:</span> <span class="n">pencolor</span><span class="p">,</span> <span class="n">fillcolor</span>
+
+ <span class="n">Example</span><span class="p">:</span>
+ <span class="o">&gt;&gt;&gt;</span> <span class="n">color</span><span class="p">(</span><span class="s1">&#39;red&#39;</span><span class="p">,</span> <span class="s1">&#39;green&#39;</span><span class="p">)</span>
+ <span class="o">&gt;&gt;&gt;</span> <span class="n">color</span><span class="p">()</span>
+ <span class="p">(</span><span class="s1">&#39;red&#39;</span><span class="p">,</span> <span class="s1">&#39;green&#39;</span><span class="p">)</span>
+ <span class="o">&gt;&gt;&gt;</span> <span class="n">colormode</span><span class="p">(</span><span class="mi">255</span><span class="p">)</span>
+ <span class="o">&gt;&gt;&gt;</span> <span class="n">color</span><span class="p">((</span><span class="mi">40</span><span class="p">,</span> <span class="mi">80</span><span class="p">,</span> <span class="mi">120</span><span class="p">),</span> <span class="p">(</span><span class="mi">160</span><span class="p">,</span> <span class="mi">200</span><span class="p">,</span> <span class="mi">240</span><span class="p">))</span>
+ <span class="o">&gt;&gt;&gt;</span> <span class="n">color</span><span class="p">()</span>
+ <span class="p">(</span><span class="s1">&#39;#285078&#39;</span><span class="p">,</span> <span class="s1">&#39;#a0c8f0&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p><strong>degrees</strong></p>
+<div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="n">turtle</span><span class="o">.</span><span class="n">degrees</span> <span class="o">=</span> <span class="n">degrees</span><span class="p">(</span><span class="n">fullcircle</span><span class="o">=</span><span class="mf">360.0</span><span class="p">)</span>
+ <span class="n">Set</span> <span class="n">angle</span> <span class="n">measurement</span> <span class="n">units</span> <span class="n">to</span> <span class="n">degrees</span><span class="o">.</span>
+
+ <span class="n">Optional</span> <span class="n">argument</span><span class="p">:</span>
+ <span class="n">fullcircle</span> <span class="o">-</span>  <span class="n">a</span> <span class="n">number</span>
+
+ <span class="n">Set</span> <span class="n">angle</span> <span class="n">measurement</span> <span class="n">units</span><span class="p">,</span> <span class="n">i</span><span class="o">.</span> <span class="n">e</span><span class="o">.</span> <span class="nb">set</span> <span class="n">number</span>
+ <span class="n">of</span> <span class="s1">&#39;degrees&#39;</span> <span class="k">for</span> <span class="n">a</span> <span class="n">full</span> <span class="n">circle</span><span class="o">.</span> <span class="n">Default</span> <span class="n">value</span> <span class="ow">is</span>
+ <span class="mi">360</span> <span class="n">degrees</span><span class="o">.</span>
+
+ <span class="n">Example</span><span class="p">:</span>
+ <span class="o">&gt;&gt;&gt;</span> <span class="n">left</span><span class="p">(</span><span class="mi">90</span><span class="p">)</span>
+ <span class="o">&gt;&gt;&gt;</span> <span class="n">heading</span><span class="p">()</span>
+ <span class="mi">90</span>
+
+ <span class="n">Change</span> <span class="n">angle</span> <span class="n">measurement</span> <span class="n">unit</span> <span class="n">to</span> <span class="n">grad</span> <span class="p">(</span><span class="n">also</span> <span class="n">known</span> <span class="k">as</span> <span class="n">gon</span><span class="p">,</span>
+ <span class="n">grade</span><span class="p">,</span> <span class="ow">or</span> <span class="n">gradian</span> <span class="ow">and</span> <span class="n">equals</span> <span class="mi">1</span><span class="o">/</span><span class="mi">100</span><span class="o">-</span><span class="n">th</span> <span class="n">of</span> <span class="n">the</span> <span class="n">right</span> <span class="n">angle</span><span class="o">.</span><span class="p">)</span>
+ <span class="o">&gt;&gt;&gt;</span> <span class="n">degrees</span><span class="p">(</span><span class="mf">400.0</span><span class="p">)</span>
+ <span class="o">&gt;&gt;&gt;</span> <span class="n">heading</span><span class="p">()</span>
+ <span class="mi">100</span>
+</pre></div>
+</div>
+<p><strong>delay</strong></p>
+<div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="n">turtle</span><span class="o">.</span><span class="n">delay</span> <span class="o">=</span> <span class="n">delay</span><span class="p">(</span><span class="n">delay</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span>
+ <span class="n">Return</span> <span class="ow">or</span> <span class="nb">set</span> <span class="n">the</span> <span class="n">drawing</span> <span class="n">delay</span> <span class="ow">in</span> <span class="n">milliseconds</span><span class="o">.</span>
+
+ <span class="n">Optional</span> <span class="n">argument</span><span class="p">:</span>
+ <span class="n">delay</span> <span class="o">--</span> <span class="n">positive</span> <span class="n">integer</span>
+
+ <span class="n">Example</span><span class="p">:</span>
+ <span class="o">&gt;&gt;&gt;</span> <span class="n">delay</span><span class="p">(</span><span class="mi">15</span><span class="p">)</span>
+ <span class="o">&gt;&gt;&gt;</span> <span class="n">delay</span><span class="p">()</span>
+ <span class="mi">15</span>
+</pre></div>
+</div>
+<p><strong>distance</strong></p>
+<div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="n">turtle</span><span class="o">.</span><span class="n">distance</span> <span class="o">=</span> <span class="n">distance</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span>
+ <span class="n">Return</span> <span class="n">the</span> <span class="n">distance</span> <span class="kn">from</span><span class="w"> </span><span class="nn">the</span> <span class="n">turtle</span> <span class="n">to</span> <span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="n">y</span><span class="p">)</span> <span class="ow">in</span> <span class="n">turtle</span> <span class="n">step</span> <span class="n">units</span><span class="o">.</span>
+
+ <span class="n">Arguments</span><span class="p">:</span>
+ <span class="n">x</span> <span class="o">--</span> <span class="n">a</span> <span class="n">number</span>   <span class="ow">or</span>  <span class="n">a</span> <span class="n">pair</span><span class="o">/</span><span class="n">vector</span> <span class="n">of</span> <span class="n">numbers</span>   <span class="ow">or</span>   <span class="n">a</span> <span class="n">turtle</span> <span class="n">instance</span>
+ <span class="n">y</span> <span class="o">--</span> <span class="n">a</span> <span class="n">number</span>       <span class="kc">None</span>                            <span class="kc">None</span>
+
+ <span class="n">call</span><span class="p">:</span> <span class="n">distance</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">)</span>         <span class="c1"># two coordinates</span>
+ <span class="o">--</span><span class="ow">or</span><span class="p">:</span> <span class="n">distance</span><span class="p">((</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">))</span>       <span class="c1"># a pair (tuple) of coordinates</span>
+ <span class="o">--</span><span class="ow">or</span><span class="p">:</span> <span class="n">distance</span><span class="p">(</span><span class="n">vec</span><span class="p">)</span>          <span class="c1"># e.g. as returned by pos()</span>
+ <span class="o">--</span><span class="ow">or</span><span class="p">:</span> <span class="n">distance</span><span class="p">(</span><span class="n">mypen</span><span class="p">)</span>        <span class="c1"># where mypen is another turtle</span>
+
+ <span class="n">Example</span><span class="p">:</span>
+ <span class="o">&gt;&gt;&gt;</span> <span class="n">pos</span><span class="p">()</span>
+ <span class="p">(</span><span class="mf">0.00</span><span class="p">,</span> <span class="mf">0.00</span><span class="p">)</span>
+ <span class="o">&gt;&gt;&gt;</span> <span class="n">distance</span><span class="p">(</span><span class="mi">30</span><span class="p">,</span><span class="mi">40</span><span class="p">)</span>
+ <span class="mf">50.0</span>
+ <span class="o">&gt;&gt;&gt;</span> <span class="n">pen</span> <span class="o">=</span> <span class="n">Turtle</span><span class="p">()</span>
+ <span class="o">&gt;&gt;&gt;</span> <span class="n">pen</span><span class="o">.</span><span class="n">forward</span><span class="p">(</span><span class="mi">77</span><span class="p">)</span>
+ <span class="o">&gt;&gt;&gt;</span> <span class="n">distance</span><span class="p">(</span><span class="n">pen</span><span class="p">)</span>
+ <span class="mf">77.0</span>
+</pre></div>
+</div>
+<p><strong>done</strong></p>
+<div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="n">turtle</span><span class="o">.</span><span class="n">done</span> <span class="o">=</span> <span class="n">mainloop</span><span class="p">()</span>
+ <span class="n">Starts</span> <span class="n">event</span> <span class="n">loop</span> <span class="o">-</span> <span class="n">calling</span> <span class="n">Tkinter</span><span class="s1">&#39;s mainloop function.</span>
+
+ <span class="n">No</span> <span class="n">argument</span><span class="o">.</span>
+
+ <span class="n">Must</span> <span class="n">be</span> <span class="n">last</span> <span class="n">statement</span> <span class="ow">in</span> <span class="n">a</span> <span class="n">turtle</span> <span class="n">graphics</span> <span class="n">program</span><span class="o">.</span>
+ <span class="n">Must</span> <span class="n">NOT</span> <span class="n">be</span> <span class="n">used</span> <span class="k">if</span> <span class="n">a</span> <span class="n">script</span> <span class="ow">is</span> <span class="n">run</span> <span class="kn">from</span><span class="w"> </span><span class="nn">within</span> <span class="n">IDLE</span> <span class="ow">in</span> <span class="o">-</span><span class="n">n</span> <span class="n">mode</span>
+ <span class="p">(</span><span class="n">No</span> <span class="n">subprocess</span><span class="p">)</span> <span class="o">-</span> <span class="k">for</span> <span class="n">interactive</span> <span class="n">use</span> <span class="n">of</span> <span class="n">turtle</span> <span class="n">graphics</span><span class="o">.</span>
+
+ <span class="n">Example</span><span class="p">:</span>
+ <span class="o">&gt;&gt;&gt;</span> <span class="n">mainloop</span><span class="p">()</span>
+</pre></div>
+</div>
+<p><strong>dot</strong></p>
+<div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="n">turtle</span><span class="o">.</span><span class="n">dot</span> <span class="o">=</span> <span class="n">dot</span><span class="p">(</span><span class="n">size</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="o">*</span><span class="n">color</span><span class="p">)</span>
+ <span class="n">Draw</span> <span class="n">a</span> <span class="n">dot</span> <span class="k">with</span> <span class="n">diameter</span> <span class="n">size</span><span class="p">,</span> <span class="n">using</span> <span class="n">color</span><span class="o">.</span>
+
+ <span class="n">Optional</span> <span class="n">arguments</span><span class="p">:</span>
+ <span class="n">size</span> <span class="o">--</span> <span class="n">an</span> <span class="n">integer</span> <span class="o">&gt;=</span> <span class="mi">1</span> <span class="p">(</span><span class="k">if</span> <span class="n">given</span><span class="p">)</span>
+ <span class="n">color</span> <span class="o">--</span> <span class="n">a</span> <span class="n">colorstring</span> <span class="ow">or</span> <span class="n">a</span> <span class="n">numeric</span> <span class="n">color</span> <span class="nb">tuple</span>
+
+ <span class="n">Draw</span> <span class="n">a</span> <span class="n">circular</span> <span class="n">dot</span> <span class="k">with</span> <span class="n">diameter</span> <span class="n">size</span><span class="p">,</span> <span class="n">using</span> <span class="n">color</span><span class="o">.</span>
+ <span class="n">If</span> <span class="n">size</span> <span class="ow">is</span> <span class="ow">not</span> <span class="n">given</span><span class="p">,</span> <span class="n">the</span> <span class="n">maximum</span> <span class="n">of</span> <span class="n">pensize</span><span class="o">+</span><span class="mi">4</span> <span class="ow">and</span> <span class="mi">2</span><span class="o">*</span><span class="n">pensize</span> <span class="ow">is</span> <span class="n">used</span><span class="o">.</span>
+
+ <span class="n">Example</span><span class="p">:</span>
+ <span class="o">&gt;&gt;&gt;</span> <span class="n">dot</span><span class="p">()</span>
+ <span class="o">&gt;&gt;&gt;</span> <span class="n">fd</span><span class="p">(</span><span class="mi">50</span><span class="p">);</span> <span class="n">dot</span><span class="p">(</span><span class="mi">20</span><span class="p">,</span> <span class="s2">&quot;blue&quot;</span><span class="p">);</span> <span class="n">fd</span><span class="p">(</span><span class="mi">50</span><span class="p">)</span>
+</pre></div>
+</div>
+<p><strong>down</strong></p>
+<div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="n">turtle</span><span class="o">.</span><span class="n">down</span> <span class="o">=</span> <span class="n">down</span><span class="p">()</span>
+ <span class="n">Pull</span> <span class="n">the</span> <span class="n">pen</span> <span class="n">down</span> <span class="o">--</span> <span class="n">drawing</span> <span class="n">when</span> <span class="n">moving</span><span class="o">.</span>
+
+ <span class="n">Aliases</span><span class="p">:</span> <span class="n">pendown</span> <span class="o">|</span> <span class="n">pd</span> <span class="o">|</span> <span class="n">down</span>
+
+ <span class="n">No</span> <span class="n">argument</span><span class="o">.</span>
+
+ <span class="n">Example</span><span class="p">:</span>
+ <span class="o">&gt;&gt;&gt;</span> <span class="n">pendown</span><span class="p">()</span>
+</pre></div>
+</div>
+<p><strong>end_fill</strong></p>
+<div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="n">Fill</span> <span class="n">the</span> <span class="n">shape</span> <span class="n">drawn</span> <span class="n">after</span> <span class="n">the</span> <span class="n">call</span> <span class="n">begin_fill</span><span class="p">()</span><span class="o">.</span>
+
+<span class="n">No</span> <span class="n">argument</span><span class="o">.</span>
+
+<span class="n">Example</span><span class="p">:</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">color</span><span class="p">(</span><span class="s2">&quot;black&quot;</span><span class="p">,</span> <span class="s2">&quot;red&quot;</span><span class="p">)</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">begin_fill</span><span class="p">()</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">circle</span><span class="p">(</span><span class="mi">60</span><span class="p">)</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">end_fill</span><span class="p">()</span>
+</pre></div>
+</div>
+<p><strong>exitonclick</strong></p>
+<div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="n">turtle</span><span class="o">.</span><span class="n">exitonclick</span> <span class="o">=</span> <span class="n">exitonclick</span><span class="p">()</span>
+ <span class="n">Go</span> <span class="n">into</span> <span class="n">mainloop</span> <span class="n">until</span> <span class="n">the</span> <span class="n">mouse</span> <span class="ow">is</span> <span class="n">clicked</span><span class="o">.</span>
+
+ <span class="n">No</span> <span class="n">arguments</span><span class="o">.</span>
+
+ <span class="n">Bind</span> <span class="n">bye</span><span class="p">()</span> <span class="n">method</span> <span class="n">to</span> <span class="n">mouseclick</span> <span class="n">on</span> <span class="n">TurtleScreen</span><span class="o">.</span>
+ <span class="n">If</span> <span class="s2">&quot;using_IDLE&quot;</span> <span class="o">-</span> <span class="n">value</span> <span class="ow">in</span> <span class="n">configuration</span> <span class="n">dictionary</span> <span class="ow">is</span> <span class="kc">False</span>
+ <span class="p">(</span><span class="n">default</span> <span class="n">value</span><span class="p">),</span> <span class="n">enter</span> <span class="n">mainloop</span><span class="o">.</span>
+ <span class="n">If</span> <span class="n">IDLE</span> <span class="k">with</span> <span class="o">-</span><span class="n">n</span> <span class="n">switch</span> <span class="p">(</span><span class="n">no</span> <span class="n">subprocess</span><span class="p">)</span> <span class="ow">is</span> <span class="n">used</span><span class="p">,</span> <span class="n">this</span> <span class="n">value</span> <span class="n">should</span> <span class="n">be</span>
+ <span class="nb">set</span> <span class="n">to</span> <span class="kc">True</span> <span class="ow">in</span> <span class="n">turtle</span><span class="o">.</span><span class="n">cfg</span><span class="o">.</span> <span class="n">In</span> <span class="n">this</span> <span class="n">case</span> <span class="n">IDLE</span><span class="s1">&#39;s mainloop</span>
+ <span class="ow">is</span> <span class="n">active</span> <span class="n">also</span> <span class="k">for</span> <span class="n">the</span> <span class="n">client</span> <span class="n">script</span><span class="o">.</span>
+
+ <span class="n">This</span> <span class="ow">is</span> <span class="n">a</span> <span class="n">method</span> <span class="n">of</span> <span class="n">the</span> <span class="n">Screen</span><span class="o">-</span><span class="k">class</span><span class="w"> </span><span class="nc">and</span> <span class="ow">not</span> <span class="n">available</span> <span class="k">for</span>
+ <span class="n">TurtleScreen</span> <span class="n">instances</span><span class="o">.</span>
+
+ <span class="n">Example</span><span class="p">:</span>
+ <span class="o">&gt;&gt;&gt;</span> <span class="n">exitonclick</span><span class="p">()</span>
+</pre></div>
+</div>
+<p><strong>fd</strong></p>
+<div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="n">turtle</span><span class="o">.</span><span class="n">fd</span> <span class="o">=</span> <span class="n">fd</span><span class="p">(</span><span class="n">distance</span><span class="p">)</span>
+ <span class="n">Move</span> <span class="n">the</span> <span class="n">turtle</span> <span class="n">forward</span> <span class="n">by</span> <span class="n">the</span> <span class="n">specified</span> <span class="n">distance</span><span class="o">.</span>
+
+ <span class="n">Aliases</span><span class="p">:</span> <span class="n">forward</span> <span class="o">|</span> <span class="n">fd</span>
+
+ <span class="n">Argument</span><span class="p">:</span>
+ <span class="n">distance</span> <span class="o">--</span> <span class="n">a</span> <span class="n">number</span> <span class="p">(</span><span class="n">integer</span> <span class="ow">or</span> <span class="nb">float</span><span class="p">)</span>
+
+ <span class="n">Move</span> <span class="n">the</span> <span class="n">turtle</span> <span class="n">forward</span> <span class="n">by</span> <span class="n">the</span> <span class="n">specified</span> <span class="n">distance</span><span class="p">,</span> <span class="ow">in</span> <span class="n">the</span> <span class="n">direction</span>
+ <span class="n">the</span> <span class="n">turtle</span> <span class="ow">is</span> <span class="n">headed</span><span class="o">.</span>
+
+ <span class="n">Example</span><span class="p">:</span>
+ <span class="o">&gt;&gt;&gt;</span> <span class="n">position</span><span class="p">()</span>
+ <span class="p">(</span><span class="mf">0.00</span><span class="p">,</span> <span class="mf">0.00</span><span class="p">)</span>
+ <span class="o">&gt;&gt;&gt;</span> <span class="n">forward</span><span class="p">(</span><span class="mi">25</span><span class="p">)</span>
+ <span class="o">&gt;&gt;&gt;</span> <span class="n">position</span><span class="p">()</span>
+ <span class="p">(</span><span class="mf">25.00</span><span class="p">,</span><span class="mf">0.00</span><span class="p">)</span>
+ <span class="o">&gt;&gt;&gt;</span> <span class="n">forward</span><span class="p">(</span><span class="o">-</span><span class="mi">75</span><span class="p">)</span>
+ <span class="o">&gt;&gt;&gt;</span> <span class="n">position</span><span class="p">()</span>
+ <span class="p">(</span><span class="o">-</span><span class="mf">50.00</span><span class="p">,</span><span class="mf">0.00</span><span class="p">)</span>
+</pre></div>
+</div>
+<p><strong>fillcolor</strong></p>
+<div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="n">turtle</span><span class="o">.</span><span class="n">fillcolor</span> <span class="o">=</span> <span class="n">fillcolor</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">)</span>
+ <span class="n">Return</span> <span class="ow">or</span> <span class="nb">set</span> <span class="n">the</span> <span class="n">fillcolor</span><span class="o">.</span>
+
+ <span class="n">Arguments</span><span class="p">:</span>
+ <span class="n">Four</span> <span class="nb">input</span> <span class="n">formats</span> <span class="n">are</span> <span class="n">allowed</span><span class="p">:</span>
+   <span class="o">-</span> <span class="n">fillcolor</span><span class="p">()</span>
+     <span class="n">Return</span> <span class="n">the</span> <span class="n">current</span> <span class="n">fillcolor</span> <span class="k">as</span> <span class="n">color</span> <span class="n">specification</span> <span class="n">string</span><span class="p">,</span>
+     <span class="n">possibly</span> <span class="ow">in</span> <span class="nb">hex</span><span class="o">-</span><span class="n">number</span> <span class="nb">format</span> <span class="p">(</span><span class="n">see</span> <span class="n">example</span><span class="p">)</span><span class="o">.</span>
+     <span class="n">May</span> <span class="n">be</span> <span class="n">used</span> <span class="k">as</span> <span class="nb">input</span> <span class="n">to</span> <span class="n">another</span> <span class="n">color</span><span class="o">/</span><span class="n">pencolor</span><span class="o">/</span><span class="n">fillcolor</span> <span class="n">call</span><span class="o">.</span>
+   <span class="o">-</span> <span class="n">fillcolor</span><span class="p">(</span><span class="n">colorstring</span><span class="p">)</span>
+     <span class="n">s</span> <span class="ow">is</span> <span class="n">a</span> <span class="n">Tk</span> <span class="n">color</span> <span class="n">specification</span> <span class="n">string</span><span class="p">,</span> <span class="n">such</span> <span class="k">as</span> <span class="s2">&quot;red&quot;</span> <span class="ow">or</span> <span class="s2">&quot;yellow&quot;</span>
+   <span class="o">-</span> <span class="n">fillcolor</span><span class="p">((</span><span class="n">r</span><span class="p">,</span> <span class="n">g</span><span class="p">,</span> <span class="n">b</span><span class="p">))</span>
+     <span class="o">*</span><span class="n">a</span> <span class="nb">tuple</span><span class="o">*</span> <span class="n">of</span> <span class="n">r</span><span class="p">,</span> <span class="n">g</span><span class="p">,</span> <span class="ow">and</span> <span class="n">b</span><span class="p">,</span> <span class="n">which</span> <span class="n">represent</span><span class="p">,</span> <span class="n">an</span> <span class="n">RGB</span> <span class="n">color</span><span class="p">,</span>
+     <span class="ow">and</span> <span class="n">each</span> <span class="n">of</span> <span class="n">r</span><span class="p">,</span> <span class="n">g</span><span class="p">,</span> <span class="ow">and</span> <span class="n">b</span> <span class="n">are</span> <span class="ow">in</span> <span class="n">the</span> <span class="nb">range</span> <span class="mf">0.</span><span class="o">.</span><span class="n">colormode</span><span class="p">,</span>
+     <span class="n">where</span> <span class="n">colormode</span> <span class="ow">is</span> <span class="n">either</span> <span class="mf">1.0</span> <span class="ow">or</span> <span class="mi">255</span>
+   <span class="o">-</span> <span class="n">fillcolor</span><span class="p">(</span><span class="n">r</span><span class="p">,</span> <span class="n">g</span><span class="p">,</span> <span class="n">b</span><span class="p">)</span>
+     <span class="n">r</span><span class="p">,</span> <span class="n">g</span><span class="p">,</span> <span class="ow">and</span> <span class="n">b</span> <span class="n">represent</span> <span class="n">an</span> <span class="n">RGB</span> <span class="n">color</span><span class="p">,</span> <span class="ow">and</span> <span class="n">each</span> <span class="n">of</span> <span class="n">r</span><span class="p">,</span> <span class="n">g</span><span class="p">,</span> <span class="ow">and</span> <span class="n">b</span>
+     <span class="n">are</span> <span class="ow">in</span> <span class="n">the</span> <span class="nb">range</span> <span class="mf">0.</span><span class="o">.</span><span class="n">colormode</span>
+
+ <span class="n">If</span> <span class="n">turtleshape</span> <span class="ow">is</span> <span class="n">a</span> <span class="n">polygon</span><span class="p">,</span> <span class="n">the</span> <span class="n">interior</span> <span class="n">of</span> <span class="n">that</span> <span class="n">polygon</span> <span class="ow">is</span> <span class="n">drawn</span>
+ <span class="k">with</span> <span class="n">the</span> <span class="n">newly</span> <span class="nb">set</span> <span class="n">fillcolor</span><span class="o">.</span>
+
+ <span class="n">Example</span><span class="p">:</span>
+ <span class="o">&gt;&gt;&gt;</span> <span class="n">fillcolor</span><span class="p">(</span><span class="s1">&#39;violet&#39;</span><span class="p">)</span>
+ <span class="o">&gt;&gt;&gt;</span> <span class="n">col</span> <span class="o">=</span> <span class="n">pencolor</span><span class="p">()</span>
+ <span class="o">&gt;&gt;&gt;</span> <span class="n">fillcolor</span><span class="p">(</span><span class="n">col</span><span class="p">)</span>
+ <span class="o">&gt;&gt;&gt;</span> <span class="n">fillcolor</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mf">.5</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span>
+</pre></div>
+</div>
+<p><strong>forward</strong></p>
+<div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="n">turtle</span><span class="o">.</span><span class="n">forward</span> <span class="o">=</span> <span class="n">forward</span><span class="p">(</span><span class="n">distance</span><span class="p">)</span>
+ <span class="n">Move</span> <span class="n">the</span> <span class="n">turtle</span> <span class="n">forward</span> <span class="n">by</span> <span class="n">the</span> <span class="n">specified</span> <span class="n">distance</span><span class="o">.</span>
+
+ <span class="n">Aliases</span><span class="p">:</span> <span class="n">forward</span> <span class="o">|</span> <span class="n">fd</span>
+
+ <span class="n">Argument</span><span class="p">:</span>
+ <span class="n">distance</span> <span class="o">--</span> <span class="n">a</span> <span class="n">number</span> <span class="p">(</span><span class="n">integer</span> <span class="ow">or</span> <span class="nb">float</span><span class="p">)</span>
+
+ <span class="n">Move</span> <span class="n">the</span> <span class="n">turtle</span> <span class="n">forward</span> <span class="n">by</span> <span class="n">the</span> <span class="n">specified</span> <span class="n">distance</span><span class="p">,</span> <span class="ow">in</span> <span class="n">the</span> <span class="n">direction</span>
+ <span class="n">the</span> <span class="n">turtle</span> <span class="ow">is</span> <span class="n">headed</span><span class="o">.</span>
+
+ <span class="n">Example</span><span class="p">:</span>
+ <span class="o">&gt;&gt;&gt;</span> <span class="n">position</span><span class="p">()</span>
+ <span class="p">(</span><span class="mf">0.00</span><span class="p">,</span> <span class="mf">0.00</span><span class="p">)</span>
+ <span class="o">&gt;&gt;&gt;</span> <span class="n">forward</span><span class="p">(</span><span class="mi">25</span><span class="p">)</span>
+ <span class="o">&gt;&gt;&gt;</span> <span class="n">position</span><span class="p">()</span>
+ <span class="p">(</span><span class="mf">25.00</span><span class="p">,</span><span class="mf">0.00</span><span class="p">)</span>
+ <span class="o">&gt;&gt;&gt;</span> <span class="n">forward</span><span class="p">(</span><span class="o">-</span><span class="mi">75</span><span class="p">)</span>
+ <span class="o">&gt;&gt;&gt;</span> <span class="n">position</span><span class="p">()</span>
+ <span class="p">(</span><span class="o">-</span><span class="mf">50.00</span><span class="p">,</span><span class="mf">0.00</span><span class="p">)</span>
+</pre></div>
+</div>
+<p><strong>goto</strong></p>
+<div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="n">turtle</span><span class="o">.</span><span class="n">goto</span> <span class="o">=</span> <span class="n">goto</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span>
+ <span class="n">Move</span> <span class="n">turtle</span> <span class="n">to</span> <span class="n">an</span> <span class="n">absolute</span> <span class="n">position</span><span class="o">.</span>
+
+ <span class="n">Aliases</span><span class="p">:</span> <span class="n">setpos</span> <span class="o">|</span> <span class="n">setposition</span> <span class="o">|</span> <span class="n">goto</span><span class="p">:</span>
+
+ <span class="n">Arguments</span><span class="p">:</span>
+ <span class="n">x</span> <span class="o">--</span> <span class="n">a</span> <span class="n">number</span>      <span class="ow">or</span>     <span class="n">a</span> <span class="n">pair</span><span class="o">/</span><span class="n">vector</span> <span class="n">of</span> <span class="n">numbers</span>
+ <span class="n">y</span> <span class="o">--</span> <span class="n">a</span> <span class="n">number</span>             <span class="kc">None</span>
+
+ <span class="n">call</span><span class="p">:</span> <span class="n">goto</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">)</span>         <span class="c1"># two coordinates</span>
+ <span class="o">--</span><span class="ow">or</span><span class="p">:</span> <span class="n">goto</span><span class="p">((</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">))</span>       <span class="c1"># a pair (tuple) of coordinates</span>
+ <span class="o">--</span><span class="ow">or</span><span class="p">:</span> <span class="n">goto</span><span class="p">(</span><span class="n">vec</span><span class="p">)</span>          <span class="c1"># e.g. as returned by pos()</span>
+
+ <span class="n">Move</span> <span class="n">turtle</span> <span class="n">to</span> <span class="n">an</span> <span class="n">absolute</span> <span class="n">position</span><span class="o">.</span> <span class="n">If</span> <span class="n">the</span> <span class="n">pen</span> <span class="ow">is</span> <span class="n">down</span><span class="p">,</span>
+ <span class="n">a</span> <span class="n">line</span> <span class="n">will</span> <span class="n">be</span> <span class="n">drawn</span><span class="o">.</span> <span class="n">The</span> <span class="n">turtle</span><span class="s1">&#39;s orientation does not change.</span>
+
+ <span class="n">Example</span><span class="p">:</span>
+ <span class="o">&gt;&gt;&gt;</span> <span class="n">tp</span> <span class="o">=</span> <span class="n">pos</span><span class="p">()</span>
+ <span class="o">&gt;&gt;&gt;</span> <span class="n">tp</span>
+ <span class="p">(</span><span class="mf">0.00</span><span class="p">,</span> <span class="mf">0.00</span><span class="p">)</span>
+ <span class="o">&gt;&gt;&gt;</span> <span class="n">setpos</span><span class="p">(</span><span class="mi">60</span><span class="p">,</span><span class="mi">30</span><span class="p">)</span>
+ <span class="o">&gt;&gt;&gt;</span> <span class="n">pos</span><span class="p">()</span>
+ <span class="p">(</span><span class="mf">60.00</span><span class="p">,</span><span class="mf">30.00</span><span class="p">)</span>
+ <span class="o">&gt;&gt;&gt;</span> <span class="n">setpos</span><span class="p">((</span><span class="mi">20</span><span class="p">,</span><span class="mi">80</span><span class="p">))</span>
+ <span class="o">&gt;&gt;&gt;</span> <span class="n">pos</span><span class="p">()</span>
+ <span class="p">(</span><span class="mf">20.00</span><span class="p">,</span><span class="mf">80.00</span><span class="p">)</span>
+ <span class="o">&gt;&gt;&gt;</span> <span class="n">setpos</span><span class="p">(</span><span class="n">tp</span><span class="p">)</span>
+ <span class="o">&gt;&gt;&gt;</span> <span class="n">pos</span><span class="p">()</span>
+ <span class="p">(</span><span class="mf">0.00</span><span class="p">,</span><span class="mf">0.00</span><span class="p">)</span>
+</pre></div>
+</div>
+<p><strong>home</strong></p>
+<div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="n">turtle</span><span class="o">.</span><span class="n">home</span> <span class="o">=</span> <span class="n">home</span><span class="p">()</span>
+ <span class="n">Move</span> <span class="n">turtle</span> <span class="n">to</span> <span class="n">the</span> <span class="n">origin</span> <span class="o">-</span> <span class="n">coordinates</span> <span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">)</span><span class="o">.</span>
+
+ <span class="n">No</span> <span class="n">arguments</span><span class="o">.</span>
+
+ <span class="n">Move</span> <span class="n">turtle</span> <span class="n">to</span> <span class="n">the</span> <span class="n">origin</span> <span class="o">-</span> <span class="n">coordinates</span> <span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">)</span> <span class="ow">and</span> <span class="nb">set</span> <span class="n">its</span>
+ <span class="n">heading</span> <span class="n">to</span> <span class="n">its</span> <span class="n">start</span><span class="o">-</span><span class="n">orientation</span> <span class="p">(</span><span class="n">which</span> <span class="n">depends</span> <span class="n">on</span> <span class="n">mode</span><span class="p">)</span><span class="o">.</span>
+
+ <span class="n">Example</span><span class="p">:</span>
+ <span class="o">&gt;&gt;&gt;</span> <span class="n">home</span><span class="p">()</span>
+</pre></div>
+</div>
+<p><strong>isdown</strong></p>
+<div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="n">turtle</span><span class="o">.</span><span class="n">isdown</span> <span class="o">=</span> <span class="n">isdown</span><span class="p">()</span>
+ <span class="n">Return</span> <span class="kc">True</span> <span class="k">if</span> <span class="n">pen</span> <span class="ow">is</span> <span class="n">down</span><span class="p">,</span> <span class="kc">False</span> <span class="k">if</span> <span class="n">it</span><span class="s1">&#39;s up.</span>
+
+ <span class="n">No</span> <span class="n">argument</span><span class="o">.</span>
+
+ <span class="n">Example</span><span class="p">:</span>
+ <span class="o">&gt;&gt;&gt;</span> <span class="n">penup</span><span class="p">()</span>
+ <span class="o">&gt;&gt;&gt;</span> <span class="n">isdown</span><span class="p">()</span>
+ <span class="kc">False</span>
+ <span class="o">&gt;&gt;&gt;</span> <span class="n">pendown</span><span class="p">()</span>
+ <span class="o">&gt;&gt;&gt;</span> <span class="n">isdown</span><span class="p">()</span>
+ <span class="kc">True</span>
+</pre></div>
+</div>
+<p><strong>left</strong></p>
+<div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="n">turtle</span><span class="o">.</span><span class="n">left</span> <span class="o">=</span> <span class="n">left</span><span class="p">(</span><span class="n">angle</span><span class="p">)</span>
+ <span class="n">Turn</span> <span class="n">turtle</span> <span class="n">left</span> <span class="n">by</span> <span class="n">angle</span> <span class="n">units</span><span class="o">.</span>
+
+ <span class="n">Aliases</span><span class="p">:</span> <span class="n">left</span> <span class="o">|</span> <span class="n">lt</span>
+
+ <span class="n">Argument</span><span class="p">:</span>
+ <span class="n">angle</span> <span class="o">--</span> <span class="n">a</span> <span class="n">number</span> <span class="p">(</span><span class="n">integer</span> <span class="ow">or</span> <span class="nb">float</span><span class="p">)</span>
+
+ <span class="n">Turn</span> <span class="n">turtle</span> <span class="n">left</span> <span class="n">by</span> <span class="n">angle</span> <span class="n">units</span><span class="o">.</span> <span class="p">(</span><span class="n">Units</span> <span class="n">are</span> <span class="n">by</span> <span class="n">default</span> <span class="n">degrees</span><span class="p">,</span>
+ <span class="n">but</span> <span class="n">can</span> <span class="n">be</span> <span class="nb">set</span> <span class="n">via</span> <span class="n">the</span> <span class="n">degrees</span><span class="p">()</span> <span class="ow">and</span> <span class="n">radians</span><span class="p">()</span> <span class="n">functions</span><span class="o">.</span><span class="p">)</span>
+ <span class="n">Angle</span> <span class="n">orientation</span> <span class="n">depends</span> <span class="n">on</span> <span class="n">mode</span><span class="o">.</span> <span class="p">(</span><span class="n">See</span> <span class="n">this</span><span class="o">.</span><span class="p">)</span>
+
+ <span class="n">Example</span><span class="p">:</span>
+ <span class="o">&gt;&gt;&gt;</span> <span class="n">heading</span><span class="p">()</span>
+ <span class="mf">22.0</span>
+ <span class="o">&gt;&gt;&gt;</span> <span class="n">left</span><span class="p">(</span><span class="mi">45</span><span class="p">)</span>
+ <span class="o">&gt;&gt;&gt;</span> <span class="n">heading</span><span class="p">()</span>
+ <span class="mf">67.0</span>
+</pre></div>
+</div>
+<p><strong>mainloop</strong></p>
+<div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="n">turtle</span><span class="o">.</span><span class="n">mainloop</span> <span class="o">=</span> <span class="n">mainloop</span><span class="p">()</span>
+ <span class="n">Starts</span> <span class="n">event</span> <span class="n">loop</span> <span class="o">-</span> <span class="n">calling</span> <span class="n">Tkinter</span><span class="s1">&#39;s mainloop function.</span>
+
+ <span class="n">No</span> <span class="n">argument</span><span class="o">.</span>
+
+ <span class="n">Must</span> <span class="n">be</span> <span class="n">last</span> <span class="n">statement</span> <span class="ow">in</span> <span class="n">a</span> <span class="n">turtle</span> <span class="n">graphics</span> <span class="n">program</span><span class="o">.</span>
+ <span class="n">Must</span> <span class="n">NOT</span> <span class="n">be</span> <span class="n">used</span> <span class="k">if</span> <span class="n">a</span> <span class="n">script</span> <span class="ow">is</span> <span class="n">run</span> <span class="kn">from</span><span class="w"> </span><span class="nn">within</span> <span class="n">IDLE</span> <span class="ow">in</span> <span class="o">-</span><span class="n">n</span> <span class="n">mode</span>
+ <span class="p">(</span><span class="n">No</span> <span class="n">subprocess</span><span class="p">)</span> <span class="o">-</span> <span class="k">for</span> <span class="n">interactive</span> <span class="n">use</span> <span class="n">of</span> <span class="n">turtle</span> <span class="n">graphics</span><span class="o">.</span>
+
+ <span class="n">Example</span><span class="p">:</span>
+ <span class="o">&gt;&gt;&gt;</span> <span class="n">mainloop</span><span class="p">()</span>
+</pre></div>
+</div>
+<p><strong>onclick</strong></p>
+<div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="n">turtle</span><span class="o">.</span><span class="n">onclick</span> <span class="o">=</span> <span class="n">onclick</span><span class="p">(</span><span class="n">fun</span><span class="p">,</span> <span class="n">btn</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">add</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span>
+ <span class="n">Bind</span> <span class="n">fun</span> <span class="n">to</span> <span class="n">mouse</span><span class="o">-</span><span class="n">click</span> <span class="n">event</span> <span class="n">on</span> <span class="n">this</span> <span class="n">turtle</span> <span class="n">on</span> <span class="n">canvas</span><span class="o">.</span>
+
+ <span class="n">Arguments</span><span class="p">:</span>
+ <span class="n">fun</span> <span class="o">--</span>  <span class="n">a</span> <span class="n">function</span> <span class="k">with</span> <span class="n">two</span> <span class="n">arguments</span><span class="p">,</span> <span class="n">to</span> <span class="n">which</span> <span class="n">will</span> <span class="n">be</span> <span class="n">assigned</span>
+         <span class="n">the</span> <span class="n">coordinates</span> <span class="n">of</span> <span class="n">the</span> <span class="n">clicked</span> <span class="n">point</span> <span class="n">on</span> <span class="n">the</span> <span class="n">canvas</span><span class="o">.</span>
+ <span class="n">btn</span> <span class="o">--</span>  <span class="n">number</span> <span class="n">of</span> <span class="n">the</span> <span class="n">mouse</span><span class="o">-</span><span class="n">button</span> <span class="n">defaults</span> <span class="n">to</span> <span class="mi">1</span> <span class="p">(</span><span class="n">left</span> <span class="n">mouse</span> <span class="n">button</span><span class="p">)</span><span class="o">.</span>
+ <span class="n">add</span> <span class="o">--</span>  <span class="kc">True</span> <span class="ow">or</span> <span class="kc">False</span><span class="o">.</span> <span class="n">If</span> <span class="kc">True</span><span class="p">,</span> <span class="n">new</span> <span class="n">binding</span> <span class="n">will</span> <span class="n">be</span> <span class="n">added</span><span class="p">,</span> <span class="n">otherwise</span>
+         <span class="n">it</span> <span class="n">will</span> <span class="n">replace</span> <span class="n">a</span> <span class="n">former</span> <span class="n">binding</span><span class="o">.</span>
+
+ <span class="n">Example</span> <span class="k">for</span> <span class="n">the</span> <span class="n">anonymous</span> <span class="n">turtle</span><span class="p">,</span> <span class="n">i</span><span class="o">.</span> <span class="n">e</span><span class="o">.</span> <span class="n">the</span> <span class="n">procedural</span> <span class="n">way</span><span class="p">:</span>
+
+ <span class="o">&gt;&gt;&gt;</span> <span class="k">def</span><span class="w"> </span><span class="nf">turn</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">):</span>
+ <span class="o">...</span>     <span class="n">left</span><span class="p">(</span><span class="mi">360</span><span class="p">)</span>
+ <span class="o">...</span>
+ <span class="o">&gt;&gt;&gt;</span> <span class="n">onclick</span><span class="p">(</span><span class="n">turn</span><span class="p">)</span>  <span class="c1"># Now clicking into the turtle will turn it.</span>
+ <span class="o">&gt;&gt;&gt;</span> <span class="n">onclick</span><span class="p">(</span><span class="kc">None</span><span class="p">)</span>  <span class="c1"># event-binding will be removed</span>
+</pre></div>
+</div>
+<p><strong>pen</strong></p>
+<div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="n">turtle</span><span class="o">.</span><span class="n">pen</span> <span class="o">=</span> <span class="n">pen</span><span class="p">(</span><span class="n">pen</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="o">**</span><span class="n">pendict</span><span class="p">)</span>
+ <span class="n">Return</span> <span class="ow">or</span> <span class="nb">set</span> <span class="n">the</span> <span class="n">pen</span><span class="s1">&#39;s attributes.</span>
+
+ <span class="n">Arguments</span><span class="p">:</span>
+     <span class="n">pen</span> <span class="o">--</span> <span class="n">a</span> <span class="n">dictionary</span> <span class="k">with</span> <span class="n">some</span> <span class="ow">or</span> <span class="nb">all</span> <span class="n">of</span> <span class="n">the</span> <span class="n">below</span> <span class="n">listed</span> <span class="n">keys</span><span class="o">.</span>
+     <span class="o">**</span><span class="n">pendict</span> <span class="o">--</span> <span class="n">one</span> <span class="ow">or</span> <span class="n">more</span> <span class="n">keyword</span><span class="o">-</span><span class="n">arguments</span> <span class="k">with</span> <span class="n">the</span> <span class="n">below</span>
+                  <span class="n">listed</span> <span class="n">keys</span> <span class="k">as</span> <span class="n">keywords</span><span class="o">.</span>
+
+ <span class="n">Return</span> <span class="ow">or</span> <span class="nb">set</span> <span class="n">the</span> <span class="n">pen</span><span class="s1">&#39;s attributes in a &#39;</span><span class="n">pen</span><span class="o">-</span><span class="n">dictionary</span><span class="s1">&#39;</span>
+ <span class="k">with</span> <span class="n">the</span> <span class="n">following</span> <span class="n">key</span><span class="o">/</span><span class="n">value</span> <span class="n">pairs</span><span class="p">:</span>
+    <span class="s2">&quot;shown&quot;</span>      <span class="p">:</span>   <span class="kc">True</span><span class="o">/</span><span class="kc">False</span>
+    <span class="s2">&quot;pendown&quot;</span>    <span class="p">:</span>   <span class="kc">True</span><span class="o">/</span><span class="kc">False</span>
+    <span class="s2">&quot;pencolor&quot;</span>   <span class="p">:</span>   <span class="n">color</span><span class="o">-</span><span class="n">string</span> <span class="ow">or</span> <span class="n">color</span><span class="o">-</span><span class="nb">tuple</span>
+    <span class="s2">&quot;fillcolor&quot;</span>  <span class="p">:</span>   <span class="n">color</span><span class="o">-</span><span class="n">string</span> <span class="ow">or</span> <span class="n">color</span><span class="o">-</span><span class="nb">tuple</span>
+    <span class="s2">&quot;pensize&quot;</span>    <span class="p">:</span>   <span class="n">positive</span> <span class="n">number</span>
+    <span class="s2">&quot;speed&quot;</span>      <span class="p">:</span>   <span class="n">number</span> <span class="ow">in</span> <span class="nb">range</span> <span class="mf">0..10</span>
+    <span class="s2">&quot;resizemode&quot;</span> <span class="p">:</span>   <span class="s2">&quot;auto&quot;</span> <span class="ow">or</span> <span class="s2">&quot;user&quot;</span> <span class="ow">or</span> <span class="s2">&quot;noresize&quot;</span>
+    <span class="s2">&quot;stretchfactor&quot;</span><span class="p">:</span> <span class="p">(</span><span class="n">positive</span> <span class="n">number</span><span class="p">,</span> <span class="n">positive</span> <span class="n">number</span><span class="p">)</span>
+    <span class="s2">&quot;shearfactor&quot;</span><span class="p">:</span>   <span class="n">number</span>
+    <span class="s2">&quot;outline&quot;</span>    <span class="p">:</span>   <span class="n">positive</span> <span class="n">number</span>
+    <span class="s2">&quot;tilt&quot;</span>       <span class="p">:</span>   <span class="n">number</span>
+
+ <span class="n">This</span> <span class="n">dictionary</span> <span class="n">can</span> <span class="n">be</span> <span class="n">used</span> <span class="k">as</span> <span class="n">argument</span> <span class="k">for</span> <span class="n">a</span> <span class="n">subsequent</span>
+ <span class="n">pen</span><span class="p">()</span><span class="o">-</span><span class="n">call</span> <span class="n">to</span> <span class="n">restore</span> <span class="n">the</span> <span class="n">former</span> <span class="n">pen</span><span class="o">-</span><span class="n">state</span><span class="o">.</span> <span class="n">Moreover</span> <span class="n">one</span>
+ <span class="ow">or</span> <span class="n">more</span> <span class="n">of</span> <span class="n">these</span> <span class="n">attributes</span> <span class="n">can</span> <span class="n">be</span> <span class="n">provided</span> <span class="k">as</span> <span class="n">keyword</span><span class="o">-</span><span class="n">arguments</span><span class="o">.</span>
+ <span class="n">This</span> <span class="n">can</span> <span class="n">be</span> <span class="n">used</span> <span class="n">to</span> <span class="nb">set</span> <span class="n">several</span> <span class="n">pen</span> <span class="n">attributes</span> <span class="ow">in</span> <span class="n">one</span> <span class="n">statement</span><span class="o">.</span>
+
+
+ <span class="n">Examples</span><span class="p">:</span>
+ <span class="o">&gt;&gt;&gt;</span> <span class="n">pen</span><span class="p">(</span><span class="n">fillcolor</span><span class="o">=</span><span class="s2">&quot;black&quot;</span><span class="p">,</span> <span class="n">pencolor</span><span class="o">=</span><span class="s2">&quot;red&quot;</span><span class="p">,</span> <span class="n">pensize</span><span class="o">=</span><span class="mi">10</span><span class="p">)</span>
+ <span class="o">&gt;&gt;&gt;</span> <span class="n">pen</span><span class="p">()</span>
+ <span class="p">{</span><span class="s1">&#39;pensize&#39;</span><span class="p">:</span> <span class="mi">10</span><span class="p">,</span> <span class="s1">&#39;shown&#39;</span><span class="p">:</span> <span class="kc">True</span><span class="p">,</span> <span class="s1">&#39;resizemode&#39;</span><span class="p">:</span> <span class="s1">&#39;auto&#39;</span><span class="p">,</span> <span class="s1">&#39;outline&#39;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
+ <span class="s1">&#39;pencolor&#39;</span><span class="p">:</span> <span class="s1">&#39;red&#39;</span><span class="p">,</span> <span class="s1">&#39;pendown&#39;</span><span class="p">:</span> <span class="kc">True</span><span class="p">,</span> <span class="s1">&#39;fillcolor&#39;</span><span class="p">:</span> <span class="s1">&#39;black&#39;</span><span class="p">,</span>
+ <span class="s1">&#39;stretchfactor&#39;</span><span class="p">:</span> <span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">),</span> <span class="s1">&#39;speed&#39;</span><span class="p">:</span> <span class="mi">3</span><span class="p">,</span> <span class="s1">&#39;shearfactor&#39;</span><span class="p">:</span> <span class="mf">0.0</span><span class="p">}</span>
+ <span class="o">&gt;&gt;&gt;</span> <span class="n">penstate</span><span class="o">=</span><span class="n">pen</span><span class="p">()</span>
+ <span class="o">&gt;&gt;&gt;</span> <span class="n">color</span><span class="p">(</span><span class="s2">&quot;yellow&quot;</span><span class="p">,</span><span class="s2">&quot;&quot;</span><span class="p">)</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">penup</span><span class="p">()</span>
+ <span class="o">&gt;&gt;&gt;</span> <span class="n">pen</span><span class="p">()</span>
+ <span class="p">{</span><span class="s1">&#39;pensize&#39;</span><span class="p">:</span> <span class="mi">10</span><span class="p">,</span> <span class="s1">&#39;shown&#39;</span><span class="p">:</span> <span class="kc">True</span><span class="p">,</span> <span class="s1">&#39;resizemode&#39;</span><span class="p">:</span> <span class="s1">&#39;auto&#39;</span><span class="p">,</span> <span class="s1">&#39;outline&#39;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
+ <span class="s1">&#39;pencolor&#39;</span><span class="p">:</span> <span class="s1">&#39;yellow&#39;</span><span class="p">,</span> <span class="s1">&#39;pendown&#39;</span><span class="p">:</span> <span class="kc">False</span><span class="p">,</span> <span class="s1">&#39;fillcolor&#39;</span><span class="p">:</span> <span class="s1">&#39;&#39;</span><span class="p">,</span>
+ <span class="s1">&#39;stretchfactor&#39;</span><span class="p">:</span> <span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">),</span> <span class="s1">&#39;speed&#39;</span><span class="p">:</span> <span class="mi">3</span><span class="p">,</span> <span class="s1">&#39;shearfactor&#39;</span><span class="p">:</span> <span class="mf">0.0</span><span class="p">}</span>
+ <span class="o">&gt;&gt;&gt;</span> <span class="n">p</span><span class="o">.</span><span class="n">pen</span><span class="p">(</span><span class="n">penstate</span><span class="p">,</span> <span class="n">fillcolor</span><span class="o">=</span><span class="s2">&quot;green&quot;</span><span class="p">)</span>
+ <span class="o">&gt;&gt;&gt;</span> <span class="n">p</span><span class="o">.</span><span class="n">pen</span><span class="p">()</span>
+ <span class="p">{</span><span class="s1">&#39;pensize&#39;</span><span class="p">:</span> <span class="mi">10</span><span class="p">,</span> <span class="s1">&#39;shown&#39;</span><span class="p">:</span> <span class="kc">True</span><span class="p">,</span> <span class="s1">&#39;resizemode&#39;</span><span class="p">:</span> <span class="s1">&#39;auto&#39;</span><span class="p">,</span> <span class="s1">&#39;outline&#39;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
+ <span class="s1">&#39;pencolor&#39;</span><span class="p">:</span> <span class="s1">&#39;red&#39;</span><span class="p">,</span> <span class="s1">&#39;pendown&#39;</span><span class="p">:</span> <span class="kc">True</span><span class="p">,</span> <span class="s1">&#39;fillcolor&#39;</span><span class="p">:</span> <span class="s1">&#39;green&#39;</span><span class="p">,</span>
+ <span class="s1">&#39;stretchfactor&#39;</span><span class="p">:</span> <span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">),</span> <span class="s1">&#39;speed&#39;</span><span class="p">:</span> <span class="mi">3</span><span class="p">,</span> <span class="s1">&#39;shearfactor&#39;</span><span class="p">:</span> <span class="mf">0.0</span><span class="p">}</span>
+</pre></div>
+</div>
+<p><strong>pencolor</strong></p>
+<div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="n">turtle</span><span class="o">.</span><span class="n">pencolor</span> <span class="o">=</span> <span class="n">pencolor</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">)</span>
+ <span class="n">Return</span> <span class="ow">or</span> <span class="nb">set</span> <span class="n">the</span> <span class="n">pencolor</span><span class="o">.</span>
+
+ <span class="n">Arguments</span><span class="p">:</span>
+ <span class="n">Four</span> <span class="nb">input</span> <span class="n">formats</span> <span class="n">are</span> <span class="n">allowed</span><span class="p">:</span>
+   <span class="o">-</span> <span class="n">pencolor</span><span class="p">()</span>
+     <span class="n">Return</span> <span class="n">the</span> <span class="n">current</span> <span class="n">pencolor</span> <span class="k">as</span> <span class="n">color</span> <span class="n">specification</span> <span class="n">string</span><span class="p">,</span>
+     <span class="n">possibly</span> <span class="ow">in</span> <span class="nb">hex</span><span class="o">-</span><span class="n">number</span> <span class="nb">format</span> <span class="p">(</span><span class="n">see</span> <span class="n">example</span><span class="p">)</span><span class="o">.</span>
+     <span class="n">May</span> <span class="n">be</span> <span class="n">used</span> <span class="k">as</span> <span class="nb">input</span> <span class="n">to</span> <span class="n">another</span> <span class="n">color</span><span class="o">/</span><span class="n">pencolor</span><span class="o">/</span><span class="n">fillcolor</span> <span class="n">call</span><span class="o">.</span>
+   <span class="o">-</span> <span class="n">pencolor</span><span class="p">(</span><span class="n">colorstring</span><span class="p">)</span>
+     <span class="n">s</span> <span class="ow">is</span> <span class="n">a</span> <span class="n">Tk</span> <span class="n">color</span> <span class="n">specification</span> <span class="n">string</span><span class="p">,</span> <span class="n">such</span> <span class="k">as</span> <span class="s2">&quot;red&quot;</span> <span class="ow">or</span> <span class="s2">&quot;yellow&quot;</span>
+   <span class="o">-</span> <span class="n">pencolor</span><span class="p">((</span><span class="n">r</span><span class="p">,</span> <span class="n">g</span><span class="p">,</span> <span class="n">b</span><span class="p">))</span>
+     <span class="o">*</span><span class="n">a</span> <span class="nb">tuple</span><span class="o">*</span> <span class="n">of</span> <span class="n">r</span><span class="p">,</span> <span class="n">g</span><span class="p">,</span> <span class="ow">and</span> <span class="n">b</span><span class="p">,</span> <span class="n">which</span> <span class="n">represent</span><span class="p">,</span> <span class="n">an</span> <span class="n">RGB</span> <span class="n">color</span><span class="p">,</span>
+     <span class="ow">and</span> <span class="n">each</span> <span class="n">of</span> <span class="n">r</span><span class="p">,</span> <span class="n">g</span><span class="p">,</span> <span class="ow">and</span> <span class="n">b</span> <span class="n">are</span> <span class="ow">in</span> <span class="n">the</span> <span class="nb">range</span> <span class="mf">0.</span><span class="o">.</span><span class="n">colormode</span><span class="p">,</span>
+     <span class="n">where</span> <span class="n">colormode</span> <span class="ow">is</span> <span class="n">either</span> <span class="mf">1.0</span> <span class="ow">or</span> <span class="mi">255</span>
+   <span class="o">-</span> <span class="n">pencolor</span><span class="p">(</span><span class="n">r</span><span class="p">,</span> <span class="n">g</span><span class="p">,</span> <span class="n">b</span><span class="p">)</span>
+     <span class="n">r</span><span class="p">,</span> <span class="n">g</span><span class="p">,</span> <span class="ow">and</span> <span class="n">b</span> <span class="n">represent</span> <span class="n">an</span> <span class="n">RGB</span> <span class="n">color</span><span class="p">,</span> <span class="ow">and</span> <span class="n">each</span> <span class="n">of</span> <span class="n">r</span><span class="p">,</span> <span class="n">g</span><span class="p">,</span> <span class="ow">and</span> <span class="n">b</span>
+     <span class="n">are</span> <span class="ow">in</span> <span class="n">the</span> <span class="nb">range</span> <span class="mf">0.</span><span class="o">.</span><span class="n">colormode</span>
+
+ <span class="n">If</span> <span class="n">turtleshape</span> <span class="ow">is</span> <span class="n">a</span> <span class="n">polygon</span><span class="p">,</span> <span class="n">the</span> <span class="n">outline</span> <span class="n">of</span> <span class="n">that</span> <span class="n">polygon</span> <span class="ow">is</span> <span class="n">drawn</span>
+ <span class="k">with</span> <span class="n">the</span> <span class="n">newly</span> <span class="nb">set</span> <span class="n">pencolor</span><span class="o">.</span>
+
+ <span class="n">Example</span><span class="p">:</span>
+ <span class="o">&gt;&gt;&gt;</span> <span class="n">pencolor</span><span class="p">(</span><span class="s1">&#39;brown&#39;</span><span class="p">)</span>
+ <span class="o">&gt;&gt;&gt;</span> <span class="n">tup</span> <span class="o">=</span> <span class="p">(</span><span class="mf">0.2</span><span class="p">,</span> <span class="mf">0.8</span><span class="p">,</span> <span class="mf">0.55</span><span class="p">)</span>
+ <span class="o">&gt;&gt;&gt;</span> <span class="n">pencolor</span><span class="p">(</span><span class="n">tup</span><span class="p">)</span>
+ <span class="o">&gt;&gt;&gt;</span> <span class="n">pencolor</span><span class="p">()</span>
+ <span class="s1">&#39;#33cc8c&#39;</span>
+</pre></div>
+</div>
+<p><strong>pendown</strong>
+pensize
+penup
+pos
+position
+pu
+radians
+read_docstrings
+readconfig
+register_shape
+reset
+resetscreen
+resizemode
+right
+rt
+screensize
+seth
+setheading
+setpos
+setposition
+settiltangle
+setundobuffer
+setup
+setworldcoordinates
+setx
+sety
+shape
+shapesize
+shapetransform
+shearfactor
+showturtle
+simpledialog
+speed
+split
+st
+stamp
+sys
+textinput
+tilt
+tiltangle
+time
+title
+towards
+tracer
+turtles
+turtlesize
+types
+undo
+undobufferentries
+up
+update
+width
+window_height
+window_width
+write
+write_docstringdict
+xcor
+ycor
+(base) iMac-de-Fernando:help santosg$</p>
 </section>
 
 

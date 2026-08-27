@@ -87,6 +87,248 @@
   <section id="ayuda-de-algunos-metodos-de-la-clase-turtle">
 <h1>Ayuda de algunos Métodos de la clase Turtle<a class="headerlink" href="#ayuda-de-algunos-metodos-de-la-clase-turtle" title="Link to this heading"></a></h1>
 <p><strong>back(distance)</strong></p>
+<div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="n">turtle</span><span class="o">.</span><span class="n">back</span> <span class="o">=</span> <span class="n">back</span><span class="p">(</span><span class="n">distance</span><span class="p">)</span>
+ <span class="n">Move</span> <span class="n">the</span> <span class="n">turtle</span> <span class="n">backward</span> <span class="n">by</span> <span class="n">distance</span><span class="o">.</span>
+
+ <span class="n">Aliases</span><span class="p">:</span> <span class="n">back</span> <span class="o">|</span> <span class="n">backward</span> <span class="o">|</span> <span class="n">bk</span>
+
+ <span class="n">Argument</span><span class="p">:</span>
+ <span class="n">distance</span> <span class="o">--</span> <span class="n">a</span> <span class="n">number</span>
+
+ <span class="n">Move</span> <span class="n">the</span> <span class="n">turtle</span> <span class="n">backward</span> <span class="n">by</span> <span class="n">distance</span><span class="p">,</span> <span class="n">opposite</span> <span class="n">to</span> <span class="n">the</span> <span class="n">direction</span> <span class="n">the</span>
+ <span class="n">turtle</span> <span class="ow">is</span> <span class="n">headed</span><span class="o">.</span> <span class="n">Do</span> <span class="ow">not</span> <span class="n">change</span> <span class="n">the</span> <span class="n">turtle</span><span class="s1">&#39;s heading.</span>
+
+ <span class="n">Example</span><span class="p">:</span>
+ <span class="o">&gt;&gt;&gt;</span> <span class="n">position</span><span class="p">()</span>
+ <span class="p">(</span><span class="mf">0.00</span><span class="p">,</span> <span class="mf">0.00</span><span class="p">)</span>
+ <span class="o">&gt;&gt;&gt;</span> <span class="n">backward</span><span class="p">(</span><span class="mi">30</span><span class="p">)</span>
+ <span class="o">&gt;&gt;&gt;</span> <span class="n">position</span><span class="p">()</span>
+ <span class="p">(</span><span class="o">-</span><span class="mf">30.00</span><span class="p">,</span> <span class="mf">0.00</span><span class="p">)</span>
+</pre></div>
+</div>
+<p><strong>begin_fill()</strong></p>
+<div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="n">turtle</span><span class="o">.</span><span class="n">begin_fill</span> <span class="o">=</span> <span class="n">begin_fill</span><span class="p">()</span>
+ <span class="n">Called</span> <span class="n">just</span> <span class="n">before</span> <span class="n">drawing</span> <span class="n">a</span> <span class="n">shape</span> <span class="n">to</span> <span class="n">be</span> <span class="n">filled</span><span class="o">.</span>
+
+ <span class="n">No</span> <span class="n">argument</span><span class="o">.</span>
+
+ <span class="n">Example</span><span class="p">:</span>
+ <span class="o">&gt;&gt;&gt;</span> <span class="n">color</span><span class="p">(</span><span class="s2">&quot;black&quot;</span><span class="p">,</span> <span class="s2">&quot;red&quot;</span><span class="p">)</span>
+ <span class="o">&gt;&gt;&gt;</span> <span class="n">begin_fill</span><span class="p">()</span>
+ <span class="o">&gt;&gt;&gt;</span> <span class="n">circle</span><span class="p">(</span><span class="mi">60</span><span class="p">)</span>
+ <span class="o">&gt;&gt;&gt;</span> <span class="n">end_fill</span><span class="p">()</span>
+</pre></div>
+</div>
+<p><strong>circle(radius, extent=None, steps=None)</strong></p>
+<div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="n">turtle</span><span class="o">.</span><span class="n">circle</span> <span class="o">=</span> <span class="n">circle</span><span class="p">(</span><span class="n">radius</span><span class="p">,</span> <span class="n">extent</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">steps</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span>
+ <span class="n">Draw</span> <span class="n">a</span> <span class="n">circle</span> <span class="k">with</span> <span class="n">given</span> <span class="n">radius</span><span class="o">.</span>
+
+ <span class="n">Arguments</span><span class="p">:</span>
+ <span class="n">radius</span> <span class="o">--</span> <span class="n">a</span> <span class="n">number</span>
+ <span class="n">extent</span> <span class="p">(</span><span class="n">optional</span><span class="p">)</span> <span class="o">--</span> <span class="n">a</span> <span class="n">number</span>
+ <span class="n">steps</span> <span class="p">(</span><span class="n">optional</span><span class="p">)</span> <span class="o">--</span> <span class="n">an</span> <span class="n">integer</span>
+
+ <span class="n">Draw</span> <span class="n">a</span> <span class="n">circle</span> <span class="k">with</span> <span class="n">given</span> <span class="n">radius</span><span class="o">.</span> <span class="n">The</span> <span class="n">center</span> <span class="ow">is</span> <span class="n">radius</span> <span class="n">units</span> <span class="n">left</span>
+ <span class="n">of</span> <span class="n">the</span> <span class="n">turtle</span><span class="p">;</span> <span class="n">extent</span> <span class="o">-</span> <span class="n">an</span> <span class="n">angle</span> <span class="o">-</span> <span class="n">determines</span> <span class="n">which</span> <span class="n">part</span> <span class="n">of</span> <span class="n">the</span>
+ <span class="n">circle</span> <span class="ow">is</span> <span class="n">drawn</span><span class="o">.</span> <span class="n">If</span> <span class="n">extent</span> <span class="ow">is</span> <span class="ow">not</span> <span class="n">given</span><span class="p">,</span> <span class="n">draw</span> <span class="n">the</span> <span class="n">entire</span> <span class="n">circle</span><span class="o">.</span>
+ <span class="n">If</span> <span class="n">extent</span> <span class="ow">is</span> <span class="ow">not</span> <span class="n">a</span> <span class="n">full</span> <span class="n">circle</span><span class="p">,</span> <span class="n">one</span> <span class="n">endpoint</span> <span class="n">of</span> <span class="n">the</span> <span class="n">arc</span> <span class="ow">is</span> <span class="n">the</span>
+ <span class="n">current</span> <span class="n">pen</span> <span class="n">position</span><span class="o">.</span> <span class="n">Draw</span> <span class="n">the</span> <span class="n">arc</span> <span class="ow">in</span> <span class="n">counterclockwise</span> <span class="n">direction</span>
+ <span class="k">if</span> <span class="n">radius</span> <span class="ow">is</span> <span class="n">positive</span><span class="p">,</span> <span class="n">otherwise</span> <span class="ow">in</span> <span class="n">clockwise</span> <span class="n">direction</span><span class="o">.</span> <span class="n">Finally</span>
+ <span class="n">the</span> <span class="n">direction</span> <span class="n">of</span> <span class="n">the</span> <span class="n">turtle</span> <span class="ow">is</span> <span class="n">changed</span> <span class="n">by</span> <span class="n">the</span> <span class="n">amount</span> <span class="n">of</span> <span class="n">extent</span><span class="o">.</span>
+
+ <span class="n">As</span> <span class="n">the</span> <span class="n">circle</span> <span class="ow">is</span> <span class="n">approximated</span> <span class="n">by</span> <span class="n">an</span> <span class="n">inscribed</span> <span class="n">regular</span> <span class="n">polygon</span><span class="p">,</span>
+ <span class="n">steps</span> <span class="n">determines</span> <span class="n">the</span> <span class="n">number</span> <span class="n">of</span> <span class="n">steps</span> <span class="n">to</span> <span class="n">use</span><span class="o">.</span> <span class="n">If</span> <span class="ow">not</span> <span class="n">given</span><span class="p">,</span>
+ <span class="n">it</span> <span class="n">will</span> <span class="n">be</span> <span class="n">calculated</span> <span class="n">automatically</span><span class="o">.</span> <span class="n">Maybe</span> <span class="n">used</span> <span class="n">to</span> <span class="n">draw</span> <span class="n">regular</span>
+ <span class="n">polygons</span><span class="o">.</span>
+
+ <span class="n">call</span><span class="p">:</span> <span class="n">circle</span><span class="p">(</span><span class="n">radius</span><span class="p">)</span>                  <span class="c1"># full circle</span>
+ <span class="o">--</span><span class="ow">or</span><span class="p">:</span> <span class="n">circle</span><span class="p">(</span><span class="n">radius</span><span class="p">,</span> <span class="n">extent</span><span class="p">)</span>          <span class="c1"># arc</span>
+ <span class="o">--</span><span class="ow">or</span><span class="p">:</span> <span class="n">circle</span><span class="p">(</span><span class="n">radius</span><span class="p">,</span> <span class="n">extent</span><span class="p">,</span> <span class="n">steps</span><span class="p">)</span>
+ <span class="o">--</span><span class="ow">or</span><span class="p">:</span> <span class="n">circle</span><span class="p">(</span><span class="n">radius</span><span class="p">,</span> <span class="n">steps</span><span class="o">=</span><span class="mi">6</span><span class="p">)</span>         <span class="c1"># 6-sided polygon</span>
+
+ <span class="n">Example</span><span class="p">:</span>
+ <span class="o">&gt;&gt;&gt;</span> <span class="n">circle</span><span class="p">(</span><span class="mi">50</span><span class="p">)</span>
+ <span class="o">&gt;&gt;&gt;</span> <span class="n">circle</span><span class="p">(</span><span class="mi">120</span><span class="p">,</span> <span class="mi">180</span><span class="p">)</span>  <span class="c1"># semicircle</span>
+</pre></div>
+</div>
+<p><strong>clear()</strong></p>
+<div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="n">turtle</span><span class="o">.</span><span class="n">clear</span> <span class="o">=</span> <span class="n">clear</span><span class="p">()</span>
+ <span class="n">Delete</span> <span class="n">the</span> <span class="n">turtle</span><span class="s1">&#39;s drawings from the screen. Do not move</span>
+</pre></div>
+</div>
+<p><strong>color(*args)</strong></p>
+<p><strong>degrees(fullcircle=360.0)</strong></p>
+<div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="n">turtle</span><span class="o">.</span><span class="n">degrees</span> <span class="o">=</span> <span class="n">degrees</span><span class="p">(</span><span class="n">fullcircle</span><span class="o">=</span><span class="mf">360.0</span><span class="p">)</span>
+ <span class="n">Set</span> <span class="n">angle</span> <span class="n">measurement</span> <span class="n">units</span> <span class="n">to</span> <span class="n">degrees</span><span class="o">.</span>
+
+ <span class="n">Optional</span> <span class="n">argument</span><span class="p">:</span>
+ <span class="n">fullcircle</span> <span class="o">-</span>  <span class="n">a</span> <span class="n">number</span>
+
+ <span class="n">Set</span> <span class="n">angle</span> <span class="n">measurement</span> <span class="n">units</span><span class="p">,</span> <span class="n">i</span><span class="o">.</span> <span class="n">e</span><span class="o">.</span> <span class="nb">set</span> <span class="n">number</span>
+ <span class="n">of</span> <span class="s1">&#39;degrees&#39;</span> <span class="k">for</span> <span class="n">a</span> <span class="n">full</span> <span class="n">circle</span><span class="o">.</span> <span class="n">Default</span> <span class="n">value</span> <span class="ow">is</span>
+ <span class="mi">360</span> <span class="n">degrees</span><span class="o">.</span>
+
+ <span class="n">Example</span><span class="p">:</span>
+ <span class="o">&gt;&gt;&gt;</span> <span class="n">left</span><span class="p">(</span><span class="mi">90</span><span class="p">)</span>
+ <span class="o">&gt;&gt;&gt;</span> <span class="n">heading</span><span class="p">()</span>
+ <span class="mi">90</span>
+
+ <span class="n">Change</span> <span class="n">angle</span> <span class="n">measurement</span> <span class="n">unit</span> <span class="n">to</span> <span class="n">grad</span> <span class="p">(</span><span class="n">also</span> <span class="n">known</span> <span class="k">as</span> <span class="n">gon</span><span class="p">,</span>
+ <span class="n">grade</span><span class="p">,</span> <span class="ow">or</span> <span class="n">gradian</span> <span class="ow">and</span> <span class="n">equals</span> <span class="mi">1</span><span class="o">/</span><span class="mi">100</span><span class="o">-</span><span class="n">th</span> <span class="n">of</span> <span class="n">the</span> <span class="n">right</span> <span class="n">angle</span><span class="o">.</span><span class="p">)</span>
+ <span class="o">&gt;&gt;&gt;</span> <span class="n">degrees</span><span class="p">(</span><span class="mf">400.0</span><span class="p">)</span>
+ <span class="o">&gt;&gt;&gt;</span> <span class="n">heading</span><span class="p">()</span>
+ <span class="mi">100</span>
+</pre></div>
+</div>
+<p><strong>delay(delay=None)</strong></p>
+<div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="n">turtle</span><span class="o">.</span><span class="n">delay</span> <span class="o">=</span> <span class="n">delay</span><span class="p">(</span><span class="n">delay</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span>
+ <span class="n">Return</span> <span class="ow">or</span> <span class="nb">set</span> <span class="n">the</span> <span class="n">drawing</span> <span class="n">delay</span> <span class="ow">in</span> <span class="n">milliseconds</span><span class="o">.</span>
+
+ <span class="n">Optional</span> <span class="n">argument</span><span class="p">:</span>
+ <span class="n">delay</span> <span class="o">--</span> <span class="n">positive</span> <span class="n">integer</span>
+
+ <span class="n">Example</span><span class="p">:</span>
+ <span class="o">&gt;&gt;&gt;</span> <span class="n">delay</span><span class="p">(</span><span class="mi">15</span><span class="p">)</span>
+ <span class="o">&gt;&gt;&gt;</span> <span class="n">delay</span><span class="p">()</span>
+ <span class="mi">15</span>
+</pre></div>
+</div>
+<p><strong>distance(x, y=None)</strong></p>
+<p><strong>mainloop()</strong></p>
+<div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="n">turtle</span><span class="o">.</span><span class="n">done</span> <span class="o">=</span> <span class="n">mainloop</span><span class="p">()</span>
+ <span class="n">Starts</span> <span class="n">event</span> <span class="n">loop</span> <span class="o">-</span> <span class="n">calling</span> <span class="n">Tkinter</span><span class="s1">&#39;s mainloop function.</span>
+
+ <span class="n">No</span> <span class="n">argument</span><span class="o">.</span>
+
+ <span class="n">Must</span> <span class="n">be</span> <span class="n">last</span> <span class="n">statement</span> <span class="ow">in</span> <span class="n">a</span> <span class="n">turtle</span> <span class="n">graphics</span> <span class="n">program</span><span class="o">.</span>
+ <span class="n">Must</span> <span class="n">NOT</span> <span class="n">be</span> <span class="n">used</span> <span class="k">if</span> <span class="n">a</span> <span class="n">script</span> <span class="ow">is</span> <span class="n">run</span> <span class="kn">from</span><span class="w"> </span><span class="nn">within</span> <span class="n">IDLE</span> <span class="ow">in</span> <span class="o">-</span><span class="n">n</span> <span class="n">mode</span>
+ <span class="p">(</span><span class="n">No</span> <span class="n">subprocess</span><span class="p">)</span> <span class="o">-</span> <span class="k">for</span> <span class="n">interactive</span> <span class="n">use</span> <span class="n">of</span> <span class="n">turtle</span> <span class="n">graphics</span><span class="o">.</span>
+
+ <span class="n">Example</span><span class="p">:</span>
+ <span class="o">&gt;&gt;&gt;</span> <span class="n">mainloop</span><span class="p">()</span>
+</pre></div>
+</div>
+<p><strong>dot(size=None, *color)</strong></p>
+<div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="n">turtle</span><span class="o">.</span><span class="n">dot</span> <span class="o">=</span> <span class="n">dot</span><span class="p">(</span><span class="n">size</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="o">*</span><span class="n">color</span><span class="p">)</span>
+ <span class="n">Draw</span> <span class="n">a</span> <span class="n">dot</span> <span class="k">with</span> <span class="n">diameter</span> <span class="n">size</span><span class="p">,</span> <span class="n">using</span> <span class="n">color</span><span class="o">.</span>
+
+ <span class="n">Optional</span> <span class="n">arguments</span><span class="p">:</span>
+ <span class="n">size</span> <span class="o">--</span> <span class="n">an</span> <span class="n">integer</span> <span class="o">&gt;=</span> <span class="mi">1</span> <span class="p">(</span><span class="k">if</span> <span class="n">given</span><span class="p">)</span>
+ <span class="n">color</span> <span class="o">--</span> <span class="n">a</span> <span class="n">colorstring</span> <span class="ow">or</span> <span class="n">a</span> <span class="n">numeric</span> <span class="n">color</span> <span class="nb">tuple</span>
+
+ <span class="n">Draw</span> <span class="n">a</span> <span class="n">circular</span> <span class="n">dot</span> <span class="k">with</span> <span class="n">diameter</span> <span class="n">size</span><span class="p">,</span> <span class="n">using</span> <span class="n">color</span><span class="o">.</span>
+ <span class="n">If</span> <span class="n">size</span> <span class="ow">is</span> <span class="ow">not</span> <span class="n">given</span><span class="p">,</span> <span class="n">the</span> <span class="n">maximum</span> <span class="n">of</span> <span class="n">pensize</span><span class="o">+</span><span class="mi">4</span> <span class="ow">and</span> <span class="mi">2</span><span class="o">*</span><span class="n">pensize</span> <span class="ow">is</span> <span class="n">used</span><span class="o">.</span>
+
+ <span class="n">Example</span><span class="p">:</span>
+ <span class="o">&gt;&gt;&gt;</span> <span class="n">dot</span><span class="p">()</span>
+ <span class="o">&gt;&gt;&gt;</span> <span class="n">fd</span><span class="p">(</span><span class="mi">50</span><span class="p">);</span> <span class="n">dot</span><span class="p">(</span><span class="mi">20</span><span class="p">,</span> <span class="s2">&quot;blue&quot;</span><span class="p">);</span> <span class="n">fd</span><span class="p">(</span><span class="mi">50</span><span class="p">)</span>
+</pre></div>
+</div>
+<p><strong>down()</strong></p>
+<div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="n">turtle</span><span class="o">.</span><span class="n">down</span> <span class="o">=</span> <span class="n">down</span><span class="p">()</span>
+ <span class="n">Pull</span> <span class="n">the</span> <span class="n">pen</span> <span class="n">down</span> <span class="o">--</span> <span class="n">drawing</span> <span class="n">when</span> <span class="n">moving</span><span class="o">.</span>
+
+ <span class="n">Aliases</span><span class="p">:</span> <span class="n">pendown</span> <span class="o">|</span> <span class="n">pd</span> <span class="o">|</span> <span class="n">down</span>
+
+ <span class="n">No</span> <span class="n">argument</span><span class="o">.</span>
+
+ <span class="n">Example</span><span class="p">:</span>
+ <span class="o">&gt;&gt;&gt;</span> <span class="n">pendown</span><span class="p">()</span>
+</pre></div>
+</div>
+<p><strong>end_fill()</strong></p>
+<div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="n">turtle</span><span class="o">.</span><span class="n">end_fill</span> <span class="o">=</span> <span class="n">end_fill</span><span class="p">()</span>
+ <span class="n">Fill</span> <span class="n">the</span> <span class="n">shape</span> <span class="n">drawn</span> <span class="n">after</span> <span class="n">the</span> <span class="n">call</span> <span class="n">begin_fill</span><span class="p">()</span><span class="o">.</span>
+
+ <span class="n">No</span> <span class="n">argument</span><span class="o">.</span>
+
+ <span class="n">Example</span><span class="p">:</span>
+ <span class="o">&gt;&gt;&gt;</span> <span class="n">color</span><span class="p">(</span><span class="s2">&quot;black&quot;</span><span class="p">,</span> <span class="s2">&quot;red&quot;</span><span class="p">)</span>
+ <span class="o">&gt;&gt;&gt;</span> <span class="n">begin_fill</span><span class="p">()</span>
+ <span class="o">&gt;&gt;&gt;</span> <span class="n">circle</span><span class="p">(</span><span class="mi">60</span><span class="p">)</span>
+ <span class="o">&gt;&gt;&gt;</span> <span class="n">end_fill</span><span class="p">()</span>
+</pre></div>
+</div>
+<p><strong>fd(distance)</strong></p>
+<div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="n">turtle</span><span class="o">.</span><span class="n">fd</span> <span class="o">=</span> <span class="n">fd</span><span class="p">(</span><span class="n">distance</span><span class="p">)</span>
+ <span class="n">Move</span> <span class="n">the</span> <span class="n">turtle</span> <span class="n">forward</span> <span class="n">by</span> <span class="n">the</span> <span class="n">specified</span> <span class="n">distance</span><span class="o">.</span>
+
+ <span class="n">Aliases</span><span class="p">:</span> <span class="n">forward</span> <span class="o">|</span> <span class="n">fd</span>
+
+ <span class="n">Argument</span><span class="p">:</span>
+ <span class="n">distance</span> <span class="o">--</span> <span class="n">a</span> <span class="n">number</span> <span class="p">(</span><span class="n">integer</span> <span class="ow">or</span> <span class="nb">float</span><span class="p">)</span>
+
+ <span class="n">Move</span> <span class="n">the</span> <span class="n">turtle</span> <span class="n">forward</span> <span class="n">by</span> <span class="n">the</span> <span class="n">specified</span> <span class="n">distance</span><span class="p">,</span> <span class="ow">in</span> <span class="n">the</span> <span class="n">direction</span>
+ <span class="n">the</span> <span class="n">turtle</span> <span class="ow">is</span> <span class="n">headed</span><span class="o">.</span>
+
+ <span class="n">Example</span><span class="p">:</span>
+ <span class="o">&gt;&gt;&gt;</span> <span class="n">position</span><span class="p">()</span>
+ <span class="p">(</span><span class="mf">0.00</span><span class="p">,</span> <span class="mf">0.00</span><span class="p">)</span>
+ <span class="o">&gt;&gt;&gt;</span> <span class="n">forward</span><span class="p">(</span><span class="mi">25</span><span class="p">)</span>
+ <span class="o">&gt;&gt;&gt;</span> <span class="n">position</span><span class="p">()</span>
+ <span class="p">(</span><span class="mf">25.00</span><span class="p">,</span><span class="mf">0.00</span><span class="p">)</span>
+ <span class="o">&gt;&gt;&gt;</span> <span class="n">forward</span><span class="p">(</span><span class="o">-</span><span class="mi">75</span><span class="p">)</span>
+ <span class="o">&gt;&gt;&gt;</span> <span class="n">position</span><span class="p">()</span>
+ <span class="p">(</span><span class="o">-</span><span class="mf">50.00</span><span class="p">,</span><span class="mf">0.00</span><span class="p">)</span>
+</pre></div>
+</div>
+<p><strong>fillcolor(*args)</strong></p>
+<p><strong>forward(distance)</strong></p>
+<div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="n">turtle</span><span class="o">.</span><span class="n">forward</span> <span class="o">=</span> <span class="n">forward</span><span class="p">(</span><span class="n">distance</span><span class="p">)</span>
+ <span class="n">Move</span> <span class="n">the</span> <span class="n">turtle</span> <span class="n">forward</span> <span class="n">by</span> <span class="n">the</span> <span class="n">specified</span> <span class="n">distance</span><span class="o">.</span>
+
+ <span class="n">Aliases</span><span class="p">:</span> <span class="n">forward</span> <span class="o">|</span> <span class="n">fd</span>
+
+ <span class="n">Argument</span><span class="p">:</span>
+ <span class="n">distance</span> <span class="o">--</span> <span class="n">a</span> <span class="n">number</span> <span class="p">(</span><span class="n">integer</span> <span class="ow">or</span> <span class="nb">float</span><span class="p">)</span>
+
+ <span class="n">Move</span> <span class="n">the</span> <span class="n">turtle</span> <span class="n">forward</span> <span class="n">by</span> <span class="n">the</span> <span class="n">specified</span> <span class="n">distance</span><span class="p">,</span> <span class="ow">in</span> <span class="n">the</span> <span class="n">direction</span>
+ <span class="n">the</span> <span class="n">turtle</span> <span class="ow">is</span> <span class="n">headed</span><span class="o">.</span>
+
+ <span class="n">Example</span><span class="p">:</span>
+ <span class="o">&gt;&gt;&gt;</span> <span class="n">position</span><span class="p">()</span>
+ <span class="p">(</span><span class="mf">0.00</span><span class="p">,</span> <span class="mf">0.00</span><span class="p">)</span>
+ <span class="o">&gt;&gt;&gt;</span> <span class="n">forward</span><span class="p">(</span><span class="mi">25</span><span class="p">)</span>
+ <span class="o">&gt;&gt;&gt;</span> <span class="n">position</span><span class="p">()</span>
+ <span class="p">(</span><span class="mf">25.00</span><span class="p">,</span><span class="mf">0.00</span><span class="p">)</span>
+ <span class="o">&gt;&gt;&gt;</span> <span class="n">forward</span><span class="p">(</span><span class="o">-</span><span class="mi">75</span><span class="p">)</span>
+ <span class="o">&gt;&gt;&gt;</span> <span class="n">position</span><span class="p">()</span>
+ <span class="p">(</span><span class="o">-</span><span class="mf">50.00</span><span class="p">,</span><span class="mf">0.00</span><span class="p">)</span>
+</pre></div>
+</div>
+<p><strong>goto(x, y=None)</strong></p>
+<div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="n">turtle</span><span class="o">.</span><span class="n">goto</span> <span class="o">=</span> <span class="n">goto</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span>
+ <span class="n">Move</span> <span class="n">turtle</span> <span class="n">to</span> <span class="n">an</span> <span class="n">absolute</span> <span class="n">position</span><span class="o">.</span>
+
+ <span class="n">Aliases</span><span class="p">:</span> <span class="n">setpos</span> <span class="o">|</span> <span class="n">setposition</span> <span class="o">|</span> <span class="n">goto</span><span class="p">:</span>
+
+ <span class="n">Arguments</span><span class="p">:</span>
+ <span class="n">x</span> <span class="o">--</span> <span class="n">a</span> <span class="n">number</span>      <span class="ow">or</span>     <span class="n">a</span> <span class="n">pair</span><span class="o">/</span><span class="n">vector</span> <span class="n">of</span> <span class="n">numbers</span>
+ <span class="n">y</span> <span class="o">--</span> <span class="n">a</span> <span class="n">number</span>             <span class="kc">None</span>
+
+ <span class="n">call</span><span class="p">:</span> <span class="n">goto</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">)</span>         <span class="c1"># two coordinates</span>
+ <span class="o">--</span><span class="ow">or</span><span class="p">:</span> <span class="n">goto</span><span class="p">((</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">))</span>       <span class="c1"># a pair (tuple) of coordinates</span>
+ <span class="o">--</span><span class="ow">or</span><span class="p">:</span> <span class="n">goto</span><span class="p">(</span><span class="n">vec</span><span class="p">)</span>          <span class="c1"># e.g. as returned by pos()</span>
+
+ <span class="n">Move</span> <span class="n">turtle</span> <span class="n">to</span> <span class="n">an</span> <span class="n">absolute</span> <span class="n">position</span><span class="o">.</span> <span class="n">If</span> <span class="n">the</span> <span class="n">pen</span> <span class="ow">is</span> <span class="n">down</span><span class="p">,</span>
+ <span class="n">a</span> <span class="n">line</span> <span class="n">will</span> <span class="n">be</span> <span class="n">drawn</span><span class="o">.</span> <span class="n">The</span> <span class="n">turtle</span><span class="s1">&#39;s orientation does not change.</span>
+
+ <span class="n">Example</span><span class="p">:</span>
+ <span class="o">&gt;&gt;&gt;</span> <span class="n">tp</span> <span class="o">=</span> <span class="n">pos</span><span class="p">()</span>
+ <span class="o">&gt;&gt;&gt;</span> <span class="n">tp</span>
+ <span class="p">(</span><span class="mf">0.00</span><span class="p">,</span> <span class="mf">0.00</span><span class="p">)</span>
+ <span class="o">&gt;&gt;&gt;</span> <span class="n">setpos</span><span class="p">(</span><span class="mi">60</span><span class="p">,</span><span class="mi">30</span><span class="p">)</span>
+ <span class="o">&gt;&gt;&gt;</span> <span class="n">pos</span><span class="p">()</span>
+ <span class="p">(</span><span class="mf">60.00</span><span class="p">,</span><span class="mf">30.00</span><span class="p">)</span>
+ <span class="o">&gt;&gt;&gt;</span> <span class="n">setpos</span><span class="p">((</span><span class="mi">20</span><span class="p">,</span><span class="mi">80</span><span class="p">))</span>
+ <span class="o">&gt;&gt;&gt;</span> <span class="n">pos</span><span class="p">()</span>
+ <span class="p">(</span><span class="mf">20.00</span><span class="p">,</span><span class="mf">80.00</span><span class="p">)</span>
+ <span class="o">&gt;&gt;&gt;</span> <span class="n">setpos</span><span class="p">(</span><span class="n">tp</span><span class="p">)</span>
+ <span class="o">&gt;&gt;&gt;</span> <span class="n">pos</span><span class="p">()</span>
+ <span class="p">(</span><span class="mf">0.00</span><span class="p">,</span><span class="mf">0.00</span><span class="p">)</span>
+</pre></div>
+</div>
+<p><strong>home()</strong></p>
 <div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="n">turtle</span><span class="o">.</span><span class="n">home</span> <span class="o">=</span> <span class="n">home</span><span class="p">()</span>
  <span class="n">Move</span> <span class="n">turtle</span> <span class="n">to</span> <span class="n">the</span> <span class="n">origin</span> <span class="o">-</span> <span class="n">coordinates</span> <span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">)</span><span class="o">.</span>
 
@@ -99,6 +341,7 @@
  <span class="o">&gt;&gt;&gt;</span> <span class="n">home</span><span class="p">()</span>
 </pre></div>
 </div>
+<p><strong>left(angle)</strong></p>
 <div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="n">turtle</span><span class="o">.</span><span class="n">left</span> <span class="o">=</span> <span class="n">left</span><span class="p">(</span><span class="n">angle</span><span class="p">)</span>
  <span class="n">Turn</span> <span class="n">turtle</span> <span class="n">left</span> <span class="n">by</span> <span class="n">angle</span> <span class="n">units</span><span class="o">.</span>
 
@@ -119,6 +362,7 @@
  <span class="mf">67.0</span>
 </pre></div>
 </div>
+<p><strong>mainloop()</strong></p>
 <div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="n">turtle</span><span class="o">.</span><span class="n">mainloop</span> <span class="o">=</span> <span class="n">mainloop</span><span class="p">()</span>
  <span class="n">Starts</span> <span class="n">event</span> <span class="n">loop</span> <span class="o">-</span> <span class="n">calling</span> <span class="n">Tkinter</span><span class="s1">&#39;s mainloop function.</span>
 
