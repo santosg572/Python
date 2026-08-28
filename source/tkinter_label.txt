@@ -1,0 +1,270 @@
+activebackground, activeforeground, anchor,
+ |          background, bitmap, borderwidth, cursor,
+ |          disabledforeground, font, foreground,
+ |          highlightbackground, highlightcolor,
+ |          highlightthickness, image, justify,
+ |          padx, pady, relief, takefocus, text,
+ |          textvariable, underline, wraplength
+
+------------------------------------------------------------------------
+
+------------------------------------------------------------------------
+ 
+------------------------------------------------------------------------
+ 
+------------------------------------------------------------------------
+ 
+------------------------------------------------------------------------
+ 
+------------------------------------------------------------------------
+ 
+------------------------------------------------------------------------
+ 
+------------------------------------------------------------------------
+ 
+------------------------------------------------------------------------
+ 
+------------------------------------------------------------------------
+ 
+------------------------------------------------------------------------
+cursor
+
+In Tkinter, you can customize the mouse cursor by using the cursor attribute when creating a widget or by dynamically modifying it with the .config() method.
+
+How to Change the CursorYou can set the cursor locally on a specific widget or globally across the entire window.
+
+1. On a Specific WidgetThe custom cursor will only appear when the mouse hovers over that specific widget.
+
+import tkinter as tk
+
+root = tk.Tk()
+
+# The cursor changes to a hand when hovering over this button
+button = tk.Button(root, text="Hover Me", cursor="hand2")
+button.pack(padx=20, pady=20)
+
+root.mainloop()
+
+
+2. Globally on the Main WindowYou can change the default cursor for the entire application canvas.
+
+import tkinter as tk
+
+root = tk.Tk()
+root.geometry("300x200")
+
+# Changes the default cursor to a loading spinner
+root.config(cursor="watch") 
+
+root.mainloop()
+
+
+Common Built-in CursorsTkinter supports standard X11 cursor names. Note that their exact visual appearance depends on your operating system.arrow — Standard pointer.hand2 — Clicking/link hand (very common for buttons).watch — Loading/busy spinner.xterm — Text insertion I-beam cursor.cross / crosshair — Precision cross.fleur — Four-way directional moving arrow.sb_v_double_arrow / sb_h_double_arrow — Vertical/horizontal resizing arrows.
+
+Advanced CustomizationsChanging Cursor Colors (X11/Linux & macOS)On supported platforms, you can pass the cursor name followed by a background and foreground color. (Note: This feature is generally unsupported on Windows.)
+
+# Creates a red cross cursor with a blue outline
+button = tk.Button(root, text="Color Cursor", cursor="cross red blue")
+
+
+Using Custom Cursor Files (.cur / .ani)If you are on Windows, you can load an external cursor file by prefixing the file path with an @ symbol.
+
+# The custom cursor file must exist in your directory
+root.config(cursor="@my_custom_cursor.cur")
+
+
+If you want to dive deeper, let me know:What operating system (Windows, macOS, Linux) are you developing on?Are you trying to simulate a "loading/busy" state, or just style a button?I can provide a complete code template tailored to your specific application layout.
+
+ 
+------------------------------------------------------------------------
+borderwidth
+
+In Python's Tkinter, borderwidth (which can be abbreviated as bd) is a configuration option used to change the thickness of the border around a widge
+
+Quick SummaryAliases: You can use borderwidth, border, or bd interchangeably.Value: It accepts an integer representing the width in pixels.Requirement: For the border width to be visually apparent, you usually need to set the relief option to something other than "flat"
+
+For standard widgets (like Label, Button, Frame, or Entry), you can pass borderwidth and relief
+
+import tkinter as tk
+
+root = tk.Tk()
+root.geometry("300x200")
+
+# Create a Label with a visible 5-pixel groove border
+label = tk.tk.Label(root, text="Hello World", borderwidth=5, relief="groove")
+label.pack(pady=20)
+
+# Alternative using the shorthand alias 'bd' and 'solid' style
+button = tk.Button(root, text="Click Me", bd=3, relief="solid")
+button.pack(pady=10)
+
+root.mainloop()
+
+
+2. Themed ttk WidgetsFor themed widgets (ttk), the borderwidth option is handled through styles or specific widget configurations, depending on the widget type and the current operating system theme:
+
+import tkinter as tk
+from tkinter import ttk
+
+root = tk.Tk()
+
+# Configure global style for ttk Frame
+style = ttk.Style()
+style.theme_use('alt') # Some themes like 'alt' allow customized borders
+style.configure('Custom.TFrame', borderwidth=5, relief='sunken')
+
+# Apply style to a ttk Frame
+frame = ttk.Frame(root, style='Custom.TFrame', width=200, height=100)
+frame.pack(pady=20)
+
+root.mainloop()
+
+
+Available Relief StylesTo make your borderwidth visible, combine it with one of these relief string values:"flat": No visible 3D border effect (default for many widgets)."solid": A clean, single-pixel wide line box."raised": Provides a 3D bevel making the widget look like it pops out."sunken": Provides a 3D bevel making the widget look pressed in."groove": A carved-in 3D outline effect."ridge": A raised-up 3D outline effect.
+
+Removing BordersIf you want to completely hide or remove a widget's border, explicitly set borderwidth=0 and highlightthickness=0. This is common practice when styling Entry boxes or custom flat buttons.
+
+ 
+------------------------------------------------------------------------
+bitmap
+
+import tkinter as tk
+
+root = tk.Tk()
+root.title("Built-in Bitmaps")
+
+# List of all 10 available system bitmaps
+bitmaps = ["error", "gray75", "gray50", "gray25", "gray12", 
+           "hourglass", "info", "questhead", "question", "warning"]
+
+# Display each bitmap on a button with a custom foreground color
+for bm in bitmaps:
+    btn = tk.Button(root, bitmap=bm, fg="darkblue")
+    btn.pack(side="left", padx=5, pady=5)
+
+root.mainloop()
+ 
+------------------------------------------------------------------------
+background
+
+import tkinter as tk
+
+root = tk.Tk()
+root.geometry("400x300")
+
+# Set the main window background color
+root.configure(bg="#2c3e50")  # Accepts hex codes or color names like 'blue'
+
+# Child widgets need the bg color matched manually
+label = tk.Label(root, text="Hello World", bg="#2c3e50", fg="white")
+label.pack(pady=20)
+
+root.mainloop()
+ 
+------------------------------------------------------------------------
+ 
+
+activebackground
+
+from tkinter import *
+
+root = Tk()
+root.geometry("200x100")
+
+# Button with a custom active background color
+btn = Button(root, text="Click Me", bg="white", activebackground="red")
+btn.pack(pady=20)
+
+root.mainloop()
+-------------------------------------------------------------------------
+activeforeground
+
+import tkinter as tk
+
+root = tk.Tk()
+root.geometry("200x100")
+
+btn = tk.Button(
+    root, 
+    text="Click Me", 
+    fg="black",               # Normal text color
+    activeforeground="red"    # Text color when clicked
+)
+btn.pack(expand=True)
+
+root.mainloop()
+-------------------------------------------------------------------------
+anchor
+
+In Tkinter, the anchor option controls how text, images, or widgets are positioned or aligned relative to a specific reference point or available space. It uses compass point constants (such as N, S, E, W) or lowercase strings (such as 'n', 's', 'e', 'w') to dictate alignment.
+
+Available Anchor ValuesNW ('nw'): Top-left corner (Northwest)N ('n'): Top-center (North)NE ('ne'): Top-right corner (Northeast)W ('w'): Left-center (West)CENTER ('center'): Exact center (Default for most widgets)E ('e'): Right-center (East)SW ('sw'): Bottom-left corner (Southwest)S ('s'): Bottom-center (South)
+
+import tkinter as tk
+
+root = tk.Tk()
+root.geometry("300x100")
+
+# Aligns the text to the top-left (Northwest) of the label's space
+label = tk.Label(root, text="Hello World", width=30, height=3, bg="lightblue", anchor="nw")
+label.pack(pady=10)
+
+root.mainloop()
+
+
+
+-------------------------------------------------------------------------
+
+-------------------------------------------------------------------------
+
+-------------------------------------------------------------------------
+
+-------------------------------------------------------------------------
+
+-------------------------------------------------------------------------
+
+-------------------------------------------------------------------------
+
+-------------------------------------------------------------------------
+
+-------------------------------------------------------------------------
+
+-------------------------------------------------------------------------
+
+-------------------------------------------------------------------------
+
+-------------------------------------------------------------------------
+
+-------------------------------------------------------------------------
+
+-------------------------------------------------------------------------
+
+-------------------------------------------------------------------------
+
+-------------------------------------------------------------------------
+
+-------------------------------------------------------------------------
+
+-------------------------------------------------------------------------
+
+-------------------------------------------------------------------------
+
+-------------------------------------------------------------------------
+
+-------------------------------------------------------------------------
+
+-------------------------------------------------------------------------
+
+-------------------------------------------------------------------------
+
+-------------------------------------------------------------------------
+
+-------------------------------------------------------------------------
+
+-------------------------------------------------------------------------
+
+-------------------------------------------------------------------------
+
+-------------------------------------------------------------------------
+
+
