@@ -4,136 +4,69 @@ Clase turtle
 La clase turtle de Python es una herramienta gráfica interactiva basada en la documentación de Python que permite controlar un 
 cursor en forma de tortuga para dibujar líneas, figuras y patrones geométricos en una ventana virtual
 
-**Ejemplos**
+``back``
 
-1)
-
-.. code:: Python
-
-   import turtle
-
-   turtle.circle(50)
-
-   turtle.circle(70)
-
-   turtle.clear()
-      
-   turtle.forward(50)
-
-   turtle.left(90)
-
-   turtle.forward(70)  
-
-   turtle.up()
-
-   turtle.left(90)
-
-   turtle.forward(70)
-
-   turtle.down()
-
-   turtle.forward(50)
-
-   turtle.goto(75, 75)
-
-2)
-
-.. code:: Python
-
-   import turtle
-
-   turtle.fillcolor("blue") 
-
-   turtle.begin_fill()
-   turtle.circle(100)
-   turtle.end_fill()
-
-
-turtle_dir.txt
-
-**Canvas**
-
-**Pen**
-
-**RawPen**
-
-**RawTurtle**
-
-**Screen**
-
-**ScrolledCanvas**
-
-**Shape**
-
-**TK**
-
-TNavigator
-TPen
-Tbuffer
-Terminator
-Turtle
-TurtleGraphicsError
-TurtleScreen
-TurtleScreenBase
-Vec2D
-addshape
-
-**back**
-
-.. code:: Python
-
-   turtle.back = back(distance)
-    Move the turtle backward by distance.
- 
-    Aliases: back | backward | bk
+**turtle.back = back(distance)**
     
-    Argument:
-    distance -- a number
+Move the turtle backward by distance.
+ 
+Aliases: back | backward | bk
+    
+Argument:
+
+distance -- a number
         
-    Move the turtle backward by distance, opposite to the direction the
-    turtle is headed. Do not change the turtle's heading.  
+Move the turtle backward by distance, opposite to the direction the
+turtle is headed. Do not change the turtle's heading.  
         
-    Example:
-    >>> position()
+Example:
+
+.. code:: Python
+
+    position()
     (0.00, 0.00)
-    >>> backward(30)
-    >>> position()
+    
+    backward(30)
+    position()
     (-30.00, 0.00)
 
-**backward**
+``begin_fill``
 
-**begin_fill**
+**turtle.begin_fill = begin_fill()**
 
-.. code:: Python
+Called just before drawing a shape to be filled.
 
-   turtle.begin_fill = begin_fill()
-    Called just before drawing a shape to be filled.
+No argument.
 
-    No argument.
-
-    Example:
-    >>> color("black", "red")
-    >>> begin_fill()
-    >>> circle(60)
-    >>> end_fill()
-
-**bgcolor**
+Example:
 
 .. code:: Python
 
-   turtle.bgcolor = bgcolor(*args)
-    Set or return backgroundcolor of the TurtleScreen.
+   color("black", "red")
+   begin_fill()
+   circle(60)
+   end_fill()
+
+``bgcolor``
+
+**turtle.bgcolor = bgcolor(*args)**
+
+Set or return backgroundcolor of the TurtleScreen.
     
-    Arguments (if given): a color string or three numbers
-    in the range 0..colormode or a 3-tuple of such numbers.
+Arguments (if given): a color string or three numbers
+in the range 0..colormode or a 3-tuple of such numbers.
 
-    Example:
-    >>> bgcolor("orange")
-    >>> bgcolor()
-    'orange'
-    >>> bgcolor(0.5,0,0.5)
-    >>> bgcolor()
-    '#800080'   
+Example:
+
+.. code:: Python
+
+   bgcolor("orange")
+   bgcolor()
+   'orange'
+   
+   bgcolor(0.5,0,0.5)
+   bgcolor()
+   '#800080'   
 
 **bye**
 

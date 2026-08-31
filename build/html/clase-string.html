@@ -7,7 +7,7 @@
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Clase String &mdash; santosg57-python 0.1 documentation</title>
-      <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=80d5e7a1" />
+      <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=b86133f3" />
       <link rel="stylesheet" type="text/css" href="_static/css/theme.css?v=9edc463e" />
       <link rel="stylesheet" type="text/css" href="_static/custom.css?v=836bb062" />
 
@@ -15,7 +15,7 @@
       <script src="_static/jquery.js?v=5d32c60e"></script>
       <script src="_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
       <script src="_static/documentation_options.js?v=2709fde1"></script>
-      <script src="_static/doctools.js?v=9bcbadda"></script>
+      <script src="_static/doctools.js?v=9a2dae69"></script>
       <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
     <script src="_static/js/theme.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
@@ -87,7 +87,8 @@
              
   <section id="clase-string">
 <h1>Clase String<a class="headerlink" href="#clase-string" title="Link to this heading"></a></h1>
-<p>Un string es una secuencia de caracteres o formado de varias linas de caracteres encerradaos por los simbolos: ‘ o “.</p>
+<p>Un string es una secuencia de caracteres o formado de varias
+linas de caracteres encerradaos por los simbolos: ‘ ó “.</p>
 <p>Ejemplos:</p>
 <ol class="arabic simple">
 <li></li>
@@ -109,24 +110,17 @@
 <span class="sd">   saludos.&#39;&#39;&#39;</span>
 </pre></div>
 </div>
-<p>Definamos la siguientes variables string y podemos hacer los siguiente:</p>
-<div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="n">x</span> <span class="o">=</span> <span class="s1">&#39;hola como estas&#39;</span>
-
-<span class="n">x</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>  <span class="c1"># muestra el primer caracter</span>
-
-<span class="n">x</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span> <span class="c1"># muestra el ultimo caracter</span>
-
-<span class="n">x</span><span class="p">[:</span><span class="mi">3</span><span class="p">]</span> <span class="c1"># muestra los dos primeros caracteres</span>
-
-<span class="n">x</span><span class="p">[</span><span class="mi">5</span><span class="p">:]</span> <span class="c1"># muestra los caracteres a partir de la posicion 5</span>
-
-<span class="n">x</span><span class="p">[</span><span class="mi">3</span><span class="p">:</span><span class="mi">10</span><span class="p">]</span> <span class="c1"># muestra los caracteres en las posiciones, 3, 4, 5, 6, 7, 8 y 9</span>
-
-<span class="mi">2</span><span class="o">*</span><span class="n">x</span> <span class="c1"># crea un string formado al repetir dos veces el string x</span>
-
-<span class="n">x</span> <span class="o">+</span> <span class="n">x</span> <span class="o">+</span> <span class="n">x</span> <span class="c1"># crea un string formado al repetir tres veces el string x</span>
-</pre></div>
-</div>
+<p>Dada la variable string: <code class="docutils literal notranslate"><span class="pre">x</span> <span class="pre">=</span> <span class="pre">'hola</span> <span class="pre">como</span> <span class="pre">estas'</span></code></p>
+<p>Podemos hacer lo siguiente:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">x[0]</span></code>  # muestra el primer caracter</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">x[-1]</span></code> # muestra el ultimo caracter</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">x[:3]</span></code> # muestra los dos primeros caracteres</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">x[5:]</span></code> # muestra los caracteres a partir de la posicion 5</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">x[3:10]</span></code> # muestra los caracteres en las posiciones, 3, 4, 5, 6, 7, 8 y 9</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">2*x</span></code> # crea un string formado al repetir dos veces el string x</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">x</span> <span class="pre">+</span> <span class="pre">x</span> <span class="pre">+</span> <span class="pre">x</span></code> # crea un string formado al repetir tres veces el string x</p></li>
+</ul>
 <p><strong>Algunos métodos de la clase string:</strong></p>
 <p><code class="docutils literal notranslate"><span class="pre">'capitalize',</span> <span class="pre">'count',</span> <span class="pre">'find',</span> <span class="pre">'index',</span> <span class="pre">'isalpha',</span> <span class="pre">'isdigit',</span> <span class="pre">'lower',</span> <span class="pre">'replace',</span> <span class="pre">'rfind',</span> <span class="pre">'rindex',</span> <span class="pre">'split',</span> <span class="pre">'translate',</span> <span class="pre">'upper'</span></code></p>
 <p><strong>Ejemplos</strong></p>

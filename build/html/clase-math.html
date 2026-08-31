@@ -7,7 +7,7 @@
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Clase math &mdash; santosg57-python 0.1 documentation</title>
-      <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=80d5e7a1" />
+      <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=b86133f3" />
       <link rel="stylesheet" type="text/css" href="_static/css/theme.css?v=9edc463e" />
       <link rel="stylesheet" type="text/css" href="_static/custom.css?v=836bb062" />
 
@@ -15,7 +15,7 @@
       <script src="_static/jquery.js?v=5d32c60e"></script>
       <script src="_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
       <script src="_static/documentation_options.js?v=2709fde1"></script>
-      <script src="_static/doctools.js?v=9bcbadda"></script>
+      <script src="_static/doctools.js?v=9a2dae69"></script>
       <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
     <script src="_static/js/theme.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
@@ -87,7 +87,7 @@
              
   <section id="clase-math">
 <h1>Clase math<a class="headerlink" href="#clase-math" title="Link to this heading"></a></h1>
-<div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">math</span>
+<div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">math</span>
 </pre></div>
 </div>
 <p><strong>Algunos métodos:</strong></p>
@@ -96,79 +96,129 @@
 <span class="pre">'lcm',</span> <span class="pre">'ldexp',</span> <span class="pre">'log',</span> <span class="pre">'log10',</span> <span class="pre">'modf',</span> <span class="pre">'nan',</span> <span class="pre">'perm',</span> <span class="pre">'pi',</span> <span class="pre">'pow',</span> <span class="pre">'prod',</span> <span class="pre">'radians',</span>
 <span class="pre">'remainder',</span> <span class="pre">'sin',</span> <span class="pre">'sqrt',</span> <span class="pre">'tan',</span> <span class="pre">'tau',</span> <span class="pre">'trunc'</span></code></p>
 <p><strong>Ayuda</strong></p>
-<dl>
-<dt>math.atan = atan(x, /)</dt><dd><p>Return the arc tangent (measured in radians) of x.</p>
+<p><code class="docutils literal notranslate"><span class="pre">math.atan</span> <span class="pre">=</span> <span class="pre">atan(x,</span> <span class="pre">/)</span></code></p>
+<blockquote>
+<div><p>Return the arc tangent (measured in radians) of x.</p>
 <p>The result is between -pi/2 and pi/2.</p>
 <p>&gt; math.atan(1)</p>
-</dd>
-<dt>math.ceil = ceil(x, /)</dt><dd><p>Return the ceiling of x as an Integral.</p>
+</div></blockquote>
+<p><code class="docutils literal notranslate"><span class="pre">math.ceil</span> <span class="pre">=</span> <span class="pre">ceil(x,</span> <span class="pre">/)</span></code></p>
+<blockquote>
+<div><p>Return the ceiling of x as an Integral.</p>
 <p>This is the smallest integer &gt;= x.</p>
 <p>&gt; math.ceil(7.8)</p>
-</dd>
-<dt>math.comb = comb(n, k, /)</dt><dd><p>Number of ways to choose k items from n items without repetition and without order.</p>
+</div></blockquote>
+<p><code class="docutils literal notranslate"><span class="pre">math.comb</span> <span class="pre">=</span> <span class="pre">comb(n,</span> <span class="pre">k,</span> <span class="pre">/)</span></code></p>
+<blockquote>
+<div><p>Number of ways to choose k items from n items without repetition and without order.</p>
 <p>Evaluates to n! / (k! * (n - k)!) when k &lt;= n and evaluates
 to zero when k &gt; n.</p>
 <p>&gt; math.comb(6,4)</p>
-</dd>
-<dt>math.cos = cos(x, /)</dt><dd><p>Return the cosine of x (measured in radians).</p>
+</div></blockquote>
+<p><code class="docutils literal notranslate"><span class="pre">math.cos</span> <span class="pre">=</span> <span class="pre">cos(x,</span> <span class="pre">/)</span></code></p>
+<blockquote>
+<div><p>Return the cosine of x (measured in radians).</p>
 <p>&gt; math.cos(0)</p>
-</dd>
-<dt>math.degrees = degrees(x, /)</dt><dd><p>Convert angle x from radians to degrees.</p>
+</div></blockquote>
+<p><code class="docutils literal notranslate"><span class="pre">math.degrees</span> <span class="pre">=</span> <span class="pre">degrees(x,</span> <span class="pre">/)</span></code></p>
+<blockquote>
+<div><p>Convert angle x from radians to degrees.</p>
 <p>&gt; math.degrees(math.pi/2)</p>
-</dd>
-<dt>math.dist = dist(p, q, /)</dt><dd><p>Return the Euclidean distance between two points p and q.</p>
+</div></blockquote>
+<p><code class="docutils literal notranslate"><span class="pre">math.dist</span> <span class="pre">=</span> <span class="pre">dist(p,</span> <span class="pre">q,</span> <span class="pre">/)</span></code></p>
+<blockquote>
+<div><p>Return the Euclidean distance between two points p and q.</p>
 <p>&gt; math.dist((1,2),(3,4)</p>
-</dd>
-<dt>math.exp = exp(x, /)</dt><dd><p>Return e raised to the power of x.</p>
-</dd>
-<dt>math.fabs = fabs(x, /)</dt><dd><p>Return the absolute value of the float x.</p>
-</dd>
-<dt>math.factorial = factorial(n, /)</dt><dd><p>Find n!.</p>
-</dd>
-<dt>math.floor = floor(x, /)</dt><dd><p>Return the floor of x as an Integral.</p>
+</div></blockquote>
+<p><code class="docutils literal notranslate"><span class="pre">math.exp</span> <span class="pre">=</span> <span class="pre">exp(x,</span> <span class="pre">/)</span></code></p>
+<blockquote>
+<div><p>Return e raised to the power of x.</p>
+</div></blockquote>
+<p><code class="docutils literal notranslate"><span class="pre">math.fabs</span> <span class="pre">=</span> <span class="pre">fabs(x,</span> <span class="pre">/)</span></code></p>
+<blockquote>
+<div><p>Return the absolute value of the float x.</p>
+</div></blockquote>
+<p><code class="docutils literal notranslate"><span class="pre">math.factorial</span> <span class="pre">=</span> <span class="pre">factorial(n,</span> <span class="pre">/)</span></code></p>
+<blockquote>
+<div><p>Find n!.</p>
+</div></blockquote>
+<p><code class="docutils literal notranslate"><span class="pre">math.floor</span> <span class="pre">=</span> <span class="pre">floor(x,</span> <span class="pre">/)</span></code></p>
+<blockquote>
+<div><p>Return the floor of x as an Integral.</p>
 <p>This is the largest integer &lt;= x.</p>
-</dd>
-<dt>math.isfinite = isfinite(x, /)</dt><dd><p>Return True if x is neither an infinity nor a NaN, and False otherwise.</p>
-</dd>
-<dt>math.isinf = isinf(x, /)</dt><dd><p>Return True if x is a positive or negative infinity, and False otherwise.</p>
-</dd>
-<dt>math.isnan = isnan(x, /)</dt><dd><p>Return True if x is a NaN (not a number), and False otherwise.</p>
-</dd>
-<dt>math.isqrt = isqrt(n, /)</dt><dd><p>Return the integer part of the square root of the input.</p>
-</dd>
-<dt>math.log = log(…)</dt><dd><p>log(x, [base=math.e])
+</div></blockquote>
+<p><code class="docutils literal notranslate"><span class="pre">math.isfinite</span> <span class="pre">=</span> <span class="pre">isfinite(x,</span> <span class="pre">/)</span></code></p>
+<blockquote>
+<div><p>Return True if x is neither an infinity nor a NaN, and False otherwise.</p>
+</div></blockquote>
+<p><code class="docutils literal notranslate"><span class="pre">math.isinf</span> <span class="pre">=</span> <span class="pre">isinf(x,</span> <span class="pre">/)</span></code></p>
+<blockquote>
+<div><p>Return True if x is a positive or negative infinity, and False otherwise.</p>
+</div></blockquote>
+<p><code class="docutils literal notranslate"><span class="pre">math.isnan</span> <span class="pre">=</span> <span class="pre">isnan(x,</span> <span class="pre">/)</span></code></p>
+<blockquote>
+<div><p>Return True if x is a NaN (not a number), and False otherwise.</p>
+</div></blockquote>
+<p><code class="docutils literal notranslate"><span class="pre">math.isqrt</span> <span class="pre">=</span> <span class="pre">isqrt(n,</span> <span class="pre">/)</span></code></p>
+<blockquote>
+<div><p>Return the integer part of the square root of the input.</p>
+</div></blockquote>
+<p><code class="docutils literal notranslate"><span class="pre">math.log</span> <span class="pre">=</span> <span class="pre">log(...)</span></code></p>
+<blockquote>
+<div><p>log(x, [base=math.e])
 Return the logarithm of x to the given base.</p>
 <p>If the base is not specified, returns the natural logarithm (base e) of x.</p>
-</dd>
-<dt>math.log10 = log10(x, /)</dt><dd><p>Return the base 10 logarithm of x.</p>
-</dd>
-<dt>math.modf = modf(x, /)</dt><dd><p>Return the fractional and integer parts of x.</p>
+</div></blockquote>
+<p><code class="docutils literal notranslate"><span class="pre">math.log10</span> <span class="pre">=</span> <span class="pre">log10(x,</span> <span class="pre">/)</span></code></p>
+<blockquote>
+<div><p>Return the base 10 logarithm of x.</p>
+</div></blockquote>
+<p><code class="docutils literal notranslate"><span class="pre">math.modf</span> <span class="pre">=</span> <span class="pre">modf(x,</span> <span class="pre">/)</span></code></p>
+<blockquote>
+<div><p>Return the fractional and integer parts of x.</p>
 <p>Both results carry the sign of x and are floats.</p>
-</dd>
-<dt>math.perm = perm(n, k=None, /)</dt><dd><p>Number of ways to choose k items from n items without repetition and with order.</p>
+</div></blockquote>
+<p><code class="docutils literal notranslate"><span class="pre">math.perm</span> <span class="pre">=</span> <span class="pre">perm(n,</span> <span class="pre">k=None,</span> <span class="pre">/)</span></code></p>
+<blockquote>
+<div><p>Number of ways to choose k items from n items without repetition and with order.</p>
 <p>Evaluates to n! / (n - k)! when k &lt;= n and evaluates
 to zero when k &gt; n.</p>
 <p>If k is not specified or is None, then k defaults to n
 and the function returns n!.</p>
-</dd>
-<dt>math.pow = pow(x, y, /)</dt><dd><p>Return x**y (x to the power of y).</p>
-</dd>
-<dt>math.prod = prod(iterable, /, <a href="#id1"><span class="problematic" id="id2">*</span></a>, start=1)</dt><dd><p>Calculate the product of all the elements in the input iterable.</p>
+</div></blockquote>
+<p><code class="docutils literal notranslate"><span class="pre">math.pow</span> <span class="pre">=</span> <span class="pre">pow(x,</span> <span class="pre">y,</span> <span class="pre">/)</span></code></p>
+<blockquote>
+<div><p>Return x**y (x to the power of y).</p>
+</div></blockquote>
+<p><code class="docutils literal notranslate"><span class="pre">math.prod</span> <span class="pre">=</span> <span class="pre">prod(iterable,</span> <span class="pre">/,</span> <span class="pre">*,</span> <span class="pre">start=1)</span></code></p>
+<blockquote>
+<div><p>Calculate the product of all the elements in the input iterable.</p>
 <p>The default start value for the product is 1.</p>
-</dd>
-<dt>math.radians = radians(x, /)</dt><dd><p>Convert angle x from degrees to radians.</p>
-</dd>
-<dt>math.remainder = remainder(x, y, /)</dt><dd><p>Difference between x and the closest integer multiple of y.</p>
-</dd>
-<dt>math.sin = sin(x, /)</dt><dd><p>Return the sine of x (measured in radians).</p>
-</dd>
-<dt>math.sqrt = sqrt(x, /)</dt><dd><p>Return the square root of x.</p>
-</dd>
-<dt>math.tan = tan(x, /)</dt><dd><p>Return the tangent of x (measured in radians).</p>
-</dd>
-<dt>math.trunc = trunc(x, /)</dt><dd><p>Truncates the Real x to the nearest Integral toward 0.</p>
-</dd>
-</dl>
+</div></blockquote>
+<p><code class="docutils literal notranslate"><span class="pre">math.radians</span> <span class="pre">=</span> <span class="pre">radians(x,</span> <span class="pre">/)</span></code></p>
+<blockquote>
+<div><p>Convert angle x from degrees to radians.</p>
+</div></blockquote>
+<p><code class="docutils literal notranslate"><span class="pre">math.remainder</span> <span class="pre">=</span> <span class="pre">remainder(x,</span> <span class="pre">y,</span> <span class="pre">/)</span></code></p>
+<blockquote>
+<div><p>Difference between x and the closest integer multiple of y.</p>
+</div></blockquote>
+<p><code class="docutils literal notranslate"><span class="pre">math.sin</span> <span class="pre">=</span> <span class="pre">sin(x,</span> <span class="pre">/)</span></code></p>
+<blockquote>
+<div><p>Return the sine of x (measured in radians).</p>
+</div></blockquote>
+<p><code class="docutils literal notranslate"><span class="pre">math.sqrt</span> <span class="pre">=</span> <span class="pre">sqrt(x,</span> <span class="pre">/)</span></code></p>
+<blockquote>
+<div><p>Return the square root of x.</p>
+</div></blockquote>
+<p><code class="docutils literal notranslate"><span class="pre">math.tan</span> <span class="pre">=</span> <span class="pre">tan(x,</span> <span class="pre">/)</span></code></p>
+<blockquote>
+<div><p>Return the tangent of x (measured in radians).</p>
+</div></blockquote>
+<p><code class="docutils literal notranslate"><span class="pre">math.trunc</span> <span class="pre">=</span> <span class="pre">trunc(x,</span> <span class="pre">/)</span></code></p>
+<blockquote>
+<div><p>Truncates the Real x to the nearest Integral toward 0.</p>
+</div></blockquote>
 </section>
 
 

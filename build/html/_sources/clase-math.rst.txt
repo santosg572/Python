@@ -15,21 +15,24 @@ Clase math
 
 **Ayuda**
 
-math.atan = atan(x, /)
+``math.atan = atan(x, /)``
+
     Return the arc tangent (measured in radians) of x.
 
     The result is between -pi/2 and pi/2.
 
     > math.atan(1)
 
-math.ceil = ceil(x, /)
+``math.ceil = ceil(x, /)``
+
     Return the ceiling of x as an Integral.
 
     This is the smallest integer >= x.
 
     > math.ceil(7.8)
 
-math.comb = comb(n, k, /)
+``math.comb = comb(n, k, /)``
+
     Number of ways to choose k items from n items without repetition and without order.
 
     Evaluates to n! / (k! * (n - k)!) when k <= n and evaluates
@@ -37,62 +40,77 @@ math.comb = comb(n, k, /)
 
     > math.comb(6,4)
 
-math.cos = cos(x, /)
+``math.cos = cos(x, /)``
+
     Return the cosine of x (measured in radians).
 
     > math.cos(0)
 
-math.degrees = degrees(x, /)
+``math.degrees = degrees(x, /)``
+
     Convert angle x from radians to degrees.
 
     > math.degrees(math.pi/2)
 
-math.dist = dist(p, q, /)
+``math.dist = dist(p, q, /)``
+
     Return the Euclidean distance between two points p and q.
 
     > math.dist((1,2),(3,4)
     
-math.exp = exp(x, /)
+``math.exp = exp(x, /)``
+
     Return e raised to the power of x.
 
-math.fabs = fabs(x, /)
+``math.fabs = fabs(x, /)``
+
     Return the absolute value of the float x.
 
-math.factorial = factorial(n, /)
+``math.factorial = factorial(n, /)``
+
     Find n!.
 
-math.floor = floor(x, /)
+``math.floor = floor(x, /)``
+
     Return the floor of x as an Integral.
 
     This is the largest integer <= x.
 
-math.isfinite = isfinite(x, /)
+``math.isfinite = isfinite(x, /)``
+
     Return True if x is neither an infinity nor a NaN, and False otherwise.
 
-math.isinf = isinf(x, /)
+``math.isinf = isinf(x, /)``
+
     Return True if x is a positive or negative infinity, and False otherwise.
 
-math.isnan = isnan(x, /)
+``math.isnan = isnan(x, /)``
+
     Return True if x is a NaN (not a number), and False otherwise.
 
-math.isqrt = isqrt(n, /)
+``math.isqrt = isqrt(n, /)``
+
     Return the integer part of the square root of the input.
 
-math.log = log(...)
+``math.log = log(...)``
+
     log(x, [base=math.e])
     Return the logarithm of x to the given base.
 
     If the base is not specified, returns the natural logarithm (base e) of x.
 
-math.log10 = log10(x, /)
+``math.log10 = log10(x, /)``
+
     Return the base 10 logarithm of x.
 
-math.modf = modf(x, /)
+``math.modf = modf(x, /)``
+
     Return the fractional and integer parts of x.
 
     Both results carry the sign of x and are floats.
 
-math.perm = perm(n, k=None, /)
+``math.perm = perm(n, k=None, /)``
+
     Number of ways to choose k items from n items without repetition and with order.
 
     Evaluates to n! / (n - k)! when k <= n and evaluates
@@ -101,29 +119,37 @@ math.perm = perm(n, k=None, /)
     If k is not specified or is None, then k defaults to n
     and the function returns n!.
 
-math.pow = pow(x, y, /)
+``math.pow = pow(x, y, /)``
+
     Return x**y (x to the power of y).
 
-math.prod = prod(iterable, /, *, start=1)
+``math.prod = prod(iterable, /, *, start=1)``
+
     Calculate the product of all the elements in the input iterable.
 
     The default start value for the product is 1.
 
-math.radians = radians(x, /)
+``math.radians = radians(x, /)``
+
     Convert angle x from degrees to radians.
 
-math.remainder = remainder(x, y, /)
+``math.remainder = remainder(x, y, /)``
+
     Difference between x and the closest integer multiple of y.
 
-math.sin = sin(x, /)
+``math.sin = sin(x, /)``
+
     Return the sine of x (measured in radians).
 
-math.sqrt = sqrt(x, /)
+``math.sqrt = sqrt(x, /)``
+
     Return the square root of x.
 
-math.tan = tan(x, /)
+``math.tan = tan(x, /)``
+
     Return the tangent of x (measured in radians).
 
-math.trunc = trunc(x, /)
+``math.trunc = trunc(x, /)``
+
     Truncates the Real x to the nearest Integral toward 0.
 

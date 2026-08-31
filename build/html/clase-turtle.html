@@ -7,7 +7,7 @@
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Clase turtle &mdash; santosg57-python 0.1 documentation</title>
-      <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=80d5e7a1" />
+      <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=b86133f3" />
       <link rel="stylesheet" type="text/css" href="_static/css/theme.css?v=9edc463e" />
       <link rel="stylesheet" type="text/css" href="_static/custom.css?v=836bb062" />
 
@@ -15,7 +15,7 @@
       <script src="_static/jquery.js?v=5d32c60e"></script>
       <script src="_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
       <script src="_static/documentation_options.js?v=2709fde1"></script>
-      <script src="_static/doctools.js?v=9bcbadda"></script>
+      <script src="_static/doctools.js?v=9a2dae69"></script>
       <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
     <script src="_static/js/theme.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
@@ -89,116 +89,47 @@
 <h1>Clase turtle<a class="headerlink" href="#clase-turtle" title="Link to this heading"></a></h1>
 <p>La clase turtle de Python es una herramienta gráfica interactiva basada en la documentación de Python que permite controlar un
 cursor en forma de tortuga para dibujar líneas, figuras y patrones geométricos en una ventana virtual</p>
-<p><strong>Ejemplos</strong></p>
-<ol class="arabic simple">
-<li></li>
-</ol>
-<div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">turtle</span>
+<p><code class="docutils literal notranslate"><span class="pre">back</span></code></p>
+<p><strong>turtle.back = back(distance)</strong></p>
+<p>Move the turtle backward by distance.</p>
+<p>Aliases: back | backward | bk</p>
+<p>Argument:</p>
+<p>distance – a number</p>
+<p>Move the turtle backward by distance, opposite to the direction the
+turtle is headed. Do not change the turtle’s heading.</p>
+<p>Example:</p>
+<div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="n">position</span><span class="p">()</span>
+<span class="p">(</span><span class="mf">0.00</span><span class="p">,</span> <span class="mf">0.00</span><span class="p">)</span>
 
-<span class="n">turtle</span><span class="o">.</span><span class="n">circle</span><span class="p">(</span><span class="mi">50</span><span class="p">)</span>
-
-<span class="n">turtle</span><span class="o">.</span><span class="n">circle</span><span class="p">(</span><span class="mi">70</span><span class="p">)</span>
-
-<span class="n">turtle</span><span class="o">.</span><span class="n">clear</span><span class="p">()</span>
-
-<span class="n">turtle</span><span class="o">.</span><span class="n">forward</span><span class="p">(</span><span class="mi">50</span><span class="p">)</span>
-
-<span class="n">turtle</span><span class="o">.</span><span class="n">left</span><span class="p">(</span><span class="mi">90</span><span class="p">)</span>
-
-<span class="n">turtle</span><span class="o">.</span><span class="n">forward</span><span class="p">(</span><span class="mi">70</span><span class="p">)</span>
-
-<span class="n">turtle</span><span class="o">.</span><span class="n">up</span><span class="p">()</span>
-
-<span class="n">turtle</span><span class="o">.</span><span class="n">left</span><span class="p">(</span><span class="mi">90</span><span class="p">)</span>
-
-<span class="n">turtle</span><span class="o">.</span><span class="n">forward</span><span class="p">(</span><span class="mi">70</span><span class="p">)</span>
-
-<span class="n">turtle</span><span class="o">.</span><span class="n">down</span><span class="p">()</span>
-
-<span class="n">turtle</span><span class="o">.</span><span class="n">forward</span><span class="p">(</span><span class="mi">50</span><span class="p">)</span>
-
-<span class="n">turtle</span><span class="o">.</span><span class="n">goto</span><span class="p">(</span><span class="mi">75</span><span class="p">,</span> <span class="mi">75</span><span class="p">)</span>
+<span class="n">backward</span><span class="p">(</span><span class="mi">30</span><span class="p">)</span>
+<span class="n">position</span><span class="p">()</span>
+<span class="p">(</span><span class="o">-</span><span class="mf">30.00</span><span class="p">,</span> <span class="mf">0.00</span><span class="p">)</span>
 </pre></div>
 </div>
-<ol class="arabic simple" start="2">
-<li></li>
-</ol>
-<div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">turtle</span>
-
-<span class="n">turtle</span><span class="o">.</span><span class="n">fillcolor</span><span class="p">(</span><span class="s2">&quot;blue&quot;</span><span class="p">)</span>
-
-<span class="n">turtle</span><span class="o">.</span><span class="n">begin_fill</span><span class="p">()</span>
-<span class="n">turtle</span><span class="o">.</span><span class="n">circle</span><span class="p">(</span><span class="mi">100</span><span class="p">)</span>
-<span class="n">turtle</span><span class="o">.</span><span class="n">end_fill</span><span class="p">()</span>
+<p><code class="docutils literal notranslate"><span class="pre">begin_fill</span></code></p>
+<p><strong>turtle.begin_fill = begin_fill()</strong></p>
+<p>Called just before drawing a shape to be filled.</p>
+<p>No argument.</p>
+<p>Example:</p>
+<div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="n">color</span><span class="p">(</span><span class="s2">&quot;black&quot;</span><span class="p">,</span> <span class="s2">&quot;red&quot;</span><span class="p">)</span>
+<span class="n">begin_fill</span><span class="p">()</span>
+<span class="n">circle</span><span class="p">(</span><span class="mi">60</span><span class="p">)</span>
+<span class="n">end_fill</span><span class="p">()</span>
 </pre></div>
 </div>
-<p>turtle_dir.txt</p>
-<p><strong>Canvas</strong></p>
-<p><strong>Pen</strong></p>
-<p><strong>RawPen</strong></p>
-<p><strong>RawTurtle</strong></p>
-<p><strong>Screen</strong></p>
-<p><strong>ScrolledCanvas</strong></p>
-<p><strong>Shape</strong></p>
-<p><strong>TK</strong></p>
-<p>TNavigator
-TPen
-Tbuffer
-Terminator
-Turtle
-TurtleGraphicsError
-TurtleScreen
-TurtleScreenBase
-Vec2D
-addshape</p>
-<p><strong>back</strong></p>
-<div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="n">turtle</span><span class="o">.</span><span class="n">back</span> <span class="o">=</span> <span class="n">back</span><span class="p">(</span><span class="n">distance</span><span class="p">)</span>
- <span class="n">Move</span> <span class="n">the</span> <span class="n">turtle</span> <span class="n">backward</span> <span class="n">by</span> <span class="n">distance</span><span class="o">.</span>
+<p><code class="docutils literal notranslate"><span class="pre">bgcolor</span></code></p>
+<p><strong>turtle.bgcolor = bgcolor(*args)</strong></p>
+<p>Set or return backgroundcolor of the TurtleScreen.</p>
+<p>Arguments (if given): a color string or three numbers
+in the range 0..colormode or a 3-tuple of such numbers.</p>
+<p>Example:</p>
+<div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="n">bgcolor</span><span class="p">(</span><span class="s2">&quot;orange&quot;</span><span class="p">)</span>
+<span class="n">bgcolor</span><span class="p">()</span>
+<span class="s1">&#39;orange&#39;</span>
 
- <span class="n">Aliases</span><span class="p">:</span> <span class="n">back</span> <span class="o">|</span> <span class="n">backward</span> <span class="o">|</span> <span class="n">bk</span>
-
- <span class="n">Argument</span><span class="p">:</span>
- <span class="n">distance</span> <span class="o">--</span> <span class="n">a</span> <span class="n">number</span>
-
- <span class="n">Move</span> <span class="n">the</span> <span class="n">turtle</span> <span class="n">backward</span> <span class="n">by</span> <span class="n">distance</span><span class="p">,</span> <span class="n">opposite</span> <span class="n">to</span> <span class="n">the</span> <span class="n">direction</span> <span class="n">the</span>
- <span class="n">turtle</span> <span class="ow">is</span> <span class="n">headed</span><span class="o">.</span> <span class="n">Do</span> <span class="ow">not</span> <span class="n">change</span> <span class="n">the</span> <span class="n">turtle</span><span class="s1">&#39;s heading.</span>
-
- <span class="n">Example</span><span class="p">:</span>
- <span class="o">&gt;&gt;&gt;</span> <span class="n">position</span><span class="p">()</span>
- <span class="p">(</span><span class="mf">0.00</span><span class="p">,</span> <span class="mf">0.00</span><span class="p">)</span>
- <span class="o">&gt;&gt;&gt;</span> <span class="n">backward</span><span class="p">(</span><span class="mi">30</span><span class="p">)</span>
- <span class="o">&gt;&gt;&gt;</span> <span class="n">position</span><span class="p">()</span>
- <span class="p">(</span><span class="o">-</span><span class="mf">30.00</span><span class="p">,</span> <span class="mf">0.00</span><span class="p">)</span>
-</pre></div>
-</div>
-<p><strong>backward</strong></p>
-<p><strong>begin_fill</strong></p>
-<div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="n">turtle</span><span class="o">.</span><span class="n">begin_fill</span> <span class="o">=</span> <span class="n">begin_fill</span><span class="p">()</span>
- <span class="n">Called</span> <span class="n">just</span> <span class="n">before</span> <span class="n">drawing</span> <span class="n">a</span> <span class="n">shape</span> <span class="n">to</span> <span class="n">be</span> <span class="n">filled</span><span class="o">.</span>
-
- <span class="n">No</span> <span class="n">argument</span><span class="o">.</span>
-
- <span class="n">Example</span><span class="p">:</span>
- <span class="o">&gt;&gt;&gt;</span> <span class="n">color</span><span class="p">(</span><span class="s2">&quot;black&quot;</span><span class="p">,</span> <span class="s2">&quot;red&quot;</span><span class="p">)</span>
- <span class="o">&gt;&gt;&gt;</span> <span class="n">begin_fill</span><span class="p">()</span>
- <span class="o">&gt;&gt;&gt;</span> <span class="n">circle</span><span class="p">(</span><span class="mi">60</span><span class="p">)</span>
- <span class="o">&gt;&gt;&gt;</span> <span class="n">end_fill</span><span class="p">()</span>
-</pre></div>
-</div>
-<p><strong>bgcolor</strong></p>
-<div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="n">turtle</span><span class="o">.</span><span class="n">bgcolor</span> <span class="o">=</span> <span class="n">bgcolor</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">)</span>
- <span class="n">Set</span> <span class="ow">or</span> <span class="k">return</span> <span class="n">backgroundcolor</span> <span class="n">of</span> <span class="n">the</span> <span class="n">TurtleScreen</span><span class="o">.</span>
-
- <span class="n">Arguments</span> <span class="p">(</span><span class="k">if</span> <span class="n">given</span><span class="p">):</span> <span class="n">a</span> <span class="n">color</span> <span class="n">string</span> <span class="ow">or</span> <span class="n">three</span> <span class="n">numbers</span>
- <span class="ow">in</span> <span class="n">the</span> <span class="nb">range</span> <span class="mf">0.</span><span class="o">.</span><span class="n">colormode</span> <span class="ow">or</span> <span class="n">a</span> <span class="mi">3</span><span class="o">-</span><span class="nb">tuple</span> <span class="n">of</span> <span class="n">such</span> <span class="n">numbers</span><span class="o">.</span>
-
- <span class="n">Example</span><span class="p">:</span>
- <span class="o">&gt;&gt;&gt;</span> <span class="n">bgcolor</span><span class="p">(</span><span class="s2">&quot;orange&quot;</span><span class="p">)</span>
- <span class="o">&gt;&gt;&gt;</span> <span class="n">bgcolor</span><span class="p">()</span>
- <span class="s1">&#39;orange&#39;</span>
- <span class="o">&gt;&gt;&gt;</span> <span class="n">bgcolor</span><span class="p">(</span><span class="mf">0.5</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mf">0.5</span><span class="p">)</span>
- <span class="o">&gt;&gt;&gt;</span> <span class="n">bgcolor</span><span class="p">()</span>
- <span class="s1">&#39;#800080&#39;</span>
+<span class="n">bgcolor</span><span class="p">(</span><span class="mf">0.5</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mf">0.5</span><span class="p">)</span>
+<span class="n">bgcolor</span><span class="p">()</span>
+<span class="s1">&#39;#800080&#39;</span>
 </pre></div>
 </div>
 <p><strong>bye</strong></p>
@@ -340,7 +271,7 @@ no backgroundimage, no eventbindings and tracing on.</p>
 </div>
 <p><strong>distance</strong></p>
 <div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="n">turtle</span><span class="o">.</span><span class="n">distance</span> <span class="o">=</span> <span class="n">distance</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span>
- <span class="n">Return</span> <span class="n">the</span> <span class="n">distance</span> <span class="kn">from</span> <span class="nn">the</span> <span class="n">turtle</span> <span class="n">to</span> <span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="n">y</span><span class="p">)</span> <span class="ow">in</span> <span class="n">turtle</span> <span class="n">step</span> <span class="n">units</span><span class="o">.</span>
+ <span class="n">Return</span> <span class="n">the</span> <span class="n">distance</span> <span class="kn">from</span><span class="w"> </span><span class="nn">the</span> <span class="n">turtle</span> <span class="n">to</span> <span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="n">y</span><span class="p">)</span> <span class="ow">in</span> <span class="n">turtle</span> <span class="n">step</span> <span class="n">units</span><span class="o">.</span>
 
  <span class="n">Arguments</span><span class="p">:</span>
  <span class="n">x</span> <span class="o">--</span> <span class="n">a</span> <span class="n">number</span>   <span class="ow">or</span>  <span class="n">a</span> <span class="n">pair</span><span class="o">/</span><span class="n">vector</span> <span class="n">of</span> <span class="n">numbers</span>   <span class="ow">or</span>   <span class="n">a</span> <span class="n">turtle</span> <span class="n">instance</span>
@@ -369,7 +300,7 @@ no backgroundimage, no eventbindings and tracing on.</p>
  <span class="n">No</span> <span class="n">argument</span><span class="o">.</span>
 
  <span class="n">Must</span> <span class="n">be</span> <span class="n">last</span> <span class="n">statement</span> <span class="ow">in</span> <span class="n">a</span> <span class="n">turtle</span> <span class="n">graphics</span> <span class="n">program</span><span class="o">.</span>
- <span class="n">Must</span> <span class="n">NOT</span> <span class="n">be</span> <span class="n">used</span> <span class="k">if</span> <span class="n">a</span> <span class="n">script</span> <span class="ow">is</span> <span class="n">run</span> <span class="kn">from</span> <span class="nn">within</span> <span class="n">IDLE</span> <span class="ow">in</span> <span class="o">-</span><span class="n">n</span> <span class="n">mode</span>
+ <span class="n">Must</span> <span class="n">NOT</span> <span class="n">be</span> <span class="n">used</span> <span class="k">if</span> <span class="n">a</span> <span class="n">script</span> <span class="ow">is</span> <span class="n">run</span> <span class="kn">from</span><span class="w"> </span><span class="nn">within</span> <span class="n">IDLE</span> <span class="ow">in</span> <span class="o">-</span><span class="n">n</span> <span class="n">mode</span>
  <span class="p">(</span><span class="n">No</span> <span class="n">subprocess</span><span class="p">)</span> <span class="o">-</span> <span class="k">for</span> <span class="n">interactive</span> <span class="n">use</span> <span class="n">of</span> <span class="n">turtle</span> <span class="n">graphics</span><span class="o">.</span>
 
  <span class="n">Example</span><span class="p">:</span>
@@ -429,7 +360,7 @@ no backgroundimage, no eventbindings and tracing on.</p>
  <span class="nb">set</span> <span class="n">to</span> <span class="kc">True</span> <span class="ow">in</span> <span class="n">turtle</span><span class="o">.</span><span class="n">cfg</span><span class="o">.</span> <span class="n">In</span> <span class="n">this</span> <span class="n">case</span> <span class="n">IDLE</span><span class="s1">&#39;s mainloop</span>
  <span class="ow">is</span> <span class="n">active</span> <span class="n">also</span> <span class="k">for</span> <span class="n">the</span> <span class="n">client</span> <span class="n">script</span><span class="o">.</span>
 
- <span class="n">This</span> <span class="ow">is</span> <span class="n">a</span> <span class="n">method</span> <span class="n">of</span> <span class="n">the</span> <span class="n">Screen</span><span class="o">-</span><span class="k">class</span> <span class="nc">and</span> <span class="ow">not</span> <span class="n">available</span> <span class="k">for</span>
+ <span class="n">This</span> <span class="ow">is</span> <span class="n">a</span> <span class="n">method</span> <span class="n">of</span> <span class="n">the</span> <span class="n">Screen</span><span class="o">-</span><span class="k">class</span><span class="w"> </span><span class="nc">and</span> <span class="ow">not</span> <span class="n">available</span> <span class="k">for</span>
  <span class="n">TurtleScreen</span> <span class="n">instances</span><span class="o">.</span>
 
  <span class="n">Example</span><span class="p">:</span>
@@ -600,7 +531,7 @@ no backgroundimage, no eventbindings and tracing on.</p>
  <span class="n">No</span> <span class="n">argument</span><span class="o">.</span>
 
  <span class="n">Must</span> <span class="n">be</span> <span class="n">last</span> <span class="n">statement</span> <span class="ow">in</span> <span class="n">a</span> <span class="n">turtle</span> <span class="n">graphics</span> <span class="n">program</span><span class="o">.</span>
- <span class="n">Must</span> <span class="n">NOT</span> <span class="n">be</span> <span class="n">used</span> <span class="k">if</span> <span class="n">a</span> <span class="n">script</span> <span class="ow">is</span> <span class="n">run</span> <span class="kn">from</span> <span class="nn">within</span> <span class="n">IDLE</span> <span class="ow">in</span> <span class="o">-</span><span class="n">n</span> <span class="n">mode</span>
+ <span class="n">Must</span> <span class="n">NOT</span> <span class="n">be</span> <span class="n">used</span> <span class="k">if</span> <span class="n">a</span> <span class="n">script</span> <span class="ow">is</span> <span class="n">run</span> <span class="kn">from</span><span class="w"> </span><span class="nn">within</span> <span class="n">IDLE</span> <span class="ow">in</span> <span class="o">-</span><span class="n">n</span> <span class="n">mode</span>
  <span class="p">(</span><span class="n">No</span> <span class="n">subprocess</span><span class="p">)</span> <span class="o">-</span> <span class="k">for</span> <span class="n">interactive</span> <span class="n">use</span> <span class="n">of</span> <span class="n">turtle</span> <span class="n">graphics</span><span class="o">.</span>
 
  <span class="n">Example</span><span class="p">:</span>
@@ -620,7 +551,7 @@ no backgroundimage, no eventbindings and tracing on.</p>
 
  <span class="n">Example</span> <span class="k">for</span> <span class="n">the</span> <span class="n">anonymous</span> <span class="n">turtle</span><span class="p">,</span> <span class="n">i</span><span class="o">.</span> <span class="n">e</span><span class="o">.</span> <span class="n">the</span> <span class="n">procedural</span> <span class="n">way</span><span class="p">:</span>
 
- <span class="o">&gt;&gt;&gt;</span> <span class="k">def</span> <span class="nf">turn</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">):</span>
+ <span class="o">&gt;&gt;&gt;</span> <span class="k">def</span><span class="w"> </span><span class="nf">turn</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">):</span>
  <span class="o">...</span>     <span class="n">left</span><span class="p">(</span><span class="mi">360</span><span class="p">)</span>
  <span class="o">...</span>
  <span class="o">&gt;&gt;&gt;</span> <span class="n">onclick</span><span class="p">(</span><span class="n">turn</span><span class="p">)</span>  <span class="c1"># Now clicking into the turtle will turn it.</span>
