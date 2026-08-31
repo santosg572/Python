@@ -1,8 +1,23 @@
 clase diccionario
 =================
 
-Es un tipo de dato estructurado cuyos datos se manejan con llaves, es decir 
-para cada dato esta indentificado por una llave.
+Un diccionario en Python es una estructura de datos mutable que guarda información en pares de clave y valor 
+**(key: value)**.
+
+**Características principales**
+
+* **Mutables:** Se pueden agregar, modificar y eliminar elementos después de 
+crearlos.
+
+* **Claves únicas:** Cada clave dentro del diccionario no se puede repetir y debe ser de un tipo 
+inmutable (como cadenas o números).
+
+* **Sin orden numérico:** Los elementos no se buscan por una posición o índice 
+numérico, sino por su nombre de clave
+
+**Creación y uso básico**
+
+Se definen utilizando llaves ``{}`` separando la clave del valor con dos puntos
 
 Ejemplos.
 
