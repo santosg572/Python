@@ -31,4 +31,5 @@ Contenido
    l-sistema
    turtle_help
    clase-diccionario
+   clase_random
 
