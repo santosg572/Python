@@ -2,8 +2,11 @@ Tiempos para recordar ~ 1987
 =====================
 
 .. image:: cinvestav01.jpg
+   :scale: 50%
 
 .. image:: cinvestav02.jpg
+   :scale: 70%
+
 
 **ESTUVE TABAJANDO de 1985 a 1995 CON:**
 
@@ -22,6 +25,7 @@ anfibio <acople_excitacion>`. rvaldios@fisio.cinvestav.mx
 .. image:: pdp01.jpg
 
 .. image:: pdp02.jpg
+   :scale: 50%
 
 .. image:: pdp03.jpg
    :scale: 150%
@@ -55,6 +59,7 @@ familia.
 
 
 .. image:: pdf1134_disco.jpg
+   :scale: 50%
 
 Cartucho de disco duro extraíble como soporte magnético para el almacenamiento de datos. 
 Memorex fundado en 1966 se dedicó inicialmente a la fabricación de discos duros extraíbles. El 

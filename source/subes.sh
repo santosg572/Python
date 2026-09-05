@@ -2,7 +2,7 @@
 
 pwd1=`pwd`
 
-cd  ../
+cd  ../../
 
 ./sube_git.sh
 ./copila.sh

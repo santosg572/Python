@@ -1,7 +1,7 @@
-#!/bin/Bash
+#!/bin/bash
 
 dd=`pwd`
-cd ../../../../../
+cd ../../
 
 ./copila.sh
 
