@@ -6,18 +6,15 @@ Un diccionario en Python es una estructura de datos mutable que guarda informaci
 
 **Características principales**
 
-* **Mutables:** Se pueden agregar, modificar y eliminar elementos después de 
-crearlos.
+* **Mutables:** Se pueden agregar, modificar y eliminar elementos después de crearlos.
 
-* **Claves únicas:** Cada clave dentro del diccionario no se puede repetir y debe ser de un tipo 
-inmutable (como cadenas o números).
+* **Claves únicas:** Cada clave dentro del diccionario no se puede repetir y debe ser de un tipo inmutable (como cadenas o números).
 
-* **Sin orden numérico:** Los elementos no se buscan por una posición o índice 
-numérico, sino por su nombre de clave
+* **Sin orden numérico:** Los elementos no se buscan por una posición o índice numérico, sino por su nombre de clave
 
 **Creación y uso básico**
 
-Se definen utilizando llaves ``{}`` separando la clave del valor con dos puntos
+Se definen utilizando llaves ``{}`` separando la llave y  valor con dos puntos
 
 Ejemplos.
 
