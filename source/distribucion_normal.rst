@@ -1,4 +1,4 @@
-Distribución normal-3
+Distribución normal
 ===================
 
 https://es.wikipedia.org/wiki/Distribuci%C3%B3n_normal
@@ -9,8 +9,26 @@ el gráfico de una función gaussiana.[1][2] Su forma general es:
 
 .. math::
 
-   f(x)= \frac{1}{\sqrt{2\pi \sigma^2}} e^{-\frac{(x - \mu)^2}{2\sigma^2}
+   f(x)= \frac{1}{\sqrt{2\pi \sigma^2}} e^{-\frac{(x - \mu)^2}{2\sigma^2}}, \text{ en } -\infty < x < \infty
 
 
+.. image:: graf_normal.png
+
+.. code.. Python
+
+   import numpy as np
+   import matplotlib.pyplot as plt
+
+   mu = 55
+   sd = 10
+
+   x = np.linspace(mu-4*sd, mu+4*sd, 100)
+
+   ex = (x - mu)**2/(2*sd**2)
+
+   y = np.exp(-1*ex) / np.sqrt(2*np.pi*sd**2)
+
+   plt.plot(x,y)
+   plt.show()
 
 
