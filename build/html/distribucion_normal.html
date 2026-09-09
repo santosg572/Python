@@ -6,7 +6,7 @@
   <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Distribución normal-4 &mdash; santosg57-python 0.1 documentation</title>
+  <title>Distribución normal &mdash; santosg57-python 0.1 documentation</title>
       <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=b86133f3" />
       <link rel="stylesheet" type="text/css" href="_static/css/theme.css?v=9edc463e" />
       <link rel="stylesheet" type="text/css" href="_static/custom.css?v=836bb062" />
@@ -63,7 +63,7 @@
 <li class="toctree-l1"><a class="reference internal" href="clase_random.html">clase_random</a></li>
 <li class="toctree-l1"><a class="reference internal" href="tarea_sep0727.html">TAREA 02. Para entregar el próximo lunes</a></li>
 <li class="toctree-l1"><a class="reference internal" href="modulos.html">Módulos</a></li>
-<li class="toctree-l1 current"><a class="current reference internal" href="#">Distribución normal-4</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Distribución normal</a></li>
 </ul>
 
         </div>
@@ -80,7 +80,7 @@
           <div role="navigation" aria-label="Page navigation">
   <ul class="wy-breadcrumbs">
       <li><a href="index.html" class="icon icon-home" aria-label="Home"></a></li>
-      <li class="breadcrumb-item active">Distribución normal-4</li>
+      <li class="breadcrumb-item active">Distribución normal</li>
       <li class="wy-breadcrumbs-aside">
             <a href="_sources/distribucion_normal.rst.txt" rel="nofollow"> View page source</a>
       </li>
@@ -90,14 +90,32 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
              
-  <section id="distribucion-normal-4">
-<h1>Distribución normal-4<a class="headerlink" href="#distribucion-normal-4" title="Link to this heading"></a></h1>
+  <section id="distribucion-normal">
+<h1>Distribución normal<a class="headerlink" href="#distribucion-normal" title="Link to this heading"></a></h1>
 <p><a class="reference external" href="https://es.wikipedia.org/wiki/Distribuci%C3%B3n_normal">https://es.wikipedia.org/wiki/Distribuci%C3%B3n_normal</a></p>
-<p>En estadística y probabilidad se llama distribución normal, distribución de Gauss, distribución gaussiana a una gráfica de función de
-densidad con forma acampanada y simétrica respecto de un determinado parámetro estadístico. Esta curva se conoce como campana de Gauss y es
-el gráfico de una función gaussiana.[1][2] Su forma general es:</p>
+<p>En estadística y probabilidad se llama <strong>distribución normal</strong>, <strong>distribución de Gauss</strong>, <strong>distribución gaussiana</strong> a una gráfica de
+la función de
+densidad con forma de campana y simétrica respecto de un determinado parámetro estadístico. Su forma general es:</p>
 <div class="math notranslate nohighlight">
-\[f(x)= \frac{1}{\sqrt{2\pi \sigma^2}} e^{-\frac{(x - \mu)^2}{2\sigma^2}}, \text{ en } -\infty &lt; x &lt; \infty\]</div>
+\[\Large f(x)= \frac{1}{\sqrt{2\pi \sigma^2}} e^{-\frac{(x - \mu)^2}{2\sigma^2}}, \text{ en } -\infty &lt; x &lt; \infty\]</div>
+<a class="reference internal image-reference" href="_images/graf_normal.png"><img alt="_images/graf_normal.png" src="_images/graf_normal.png" style="width: 575.0px; height: 407.0px;" />
+</a>
+<div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">matplotlib.pyplot</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">plt</span>
+
+<span class="n">mu</span> <span class="o">=</span> <span class="mi">55</span>
+<span class="n">sd</span> <span class="o">=</span> <span class="mi">10</span>
+
+<span class="n">x</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="n">mu</span><span class="o">-</span><span class="mi">4</span><span class="o">*</span><span class="n">sd</span><span class="p">,</span> <span class="n">mu</span><span class="o">+</span><span class="mi">4</span><span class="o">*</span><span class="n">sd</span><span class="p">,</span> <span class="mi">100</span><span class="p">)</span>
+
+<span class="n">ex</span> <span class="o">=</span> <span class="p">(</span><span class="n">x</span> <span class="o">-</span> <span class="n">mu</span><span class="p">)</span><span class="o">**</span><span class="mi">2</span><span class="o">/</span><span class="p">(</span><span class="mi">2</span><span class="o">*</span><span class="n">sd</span><span class="o">**</span><span class="mi">2</span><span class="p">)</span>
+
+<span class="n">y</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">exp</span><span class="p">(</span><span class="o">-</span><span class="mi">1</span><span class="o">*</span><span class="n">ex</span><span class="p">)</span> <span class="o">/</span> <span class="n">np</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="mi">2</span><span class="o">*</span><span class="n">np</span><span class="o">.</span><span class="n">pi</span><span class="o">*</span><span class="n">sd</span><span class="o">**</span><span class="mi">2</span><span class="p">)</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="n">y</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
 </section>
 
 
