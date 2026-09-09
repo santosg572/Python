@@ -1,4 +1,4 @@
-TAREA 02. Para entregar el proximo lunes 
+TAREA 02. Para entregar el próximo lunes 
 ========================================
 
 * 1. Hacer una función en Python para que calcule el factorial de un número natural.
@@ -47,5 +47,13 @@ Aquí, F y G significan "avanzar", + significa "girar a la izquierda el ángulo"
 
  
 para :math:`\theta \in [0, 2\pi]`
+
+
+6. Dibujar 50 círculos aleatorios en la ventana de tamaño [-200, 200] x [-200, 200] de radio aleatorio entre 10 y 20 
+unidades inclusive. Utilice la función ``circle`` del módulo turtle.
+
+
+
+
 
 

@@ -1,0 +1,16 @@
+Distribución normal-2
+===================
+
+https://es.wikipedia.org/wiki/Distribuci%C3%B3n_normal
+
+En estadística y probabilidad se llama distribución normal, distribución de Gauss, distribución gaussiana a una gráfica de función de 
+densidad con forma acampanada y simétrica respecto de un determinado parámetro estadístico. Esta curva se conoce como campana de Gauss y es 
+el gráfico de una función gaussiana.[1][2] Su forma general es:
+
+.. math::
+
+   f(x)= \frac{1}{\sqrt {2\pi \sigma^{2}}} e^{-\frac{(x-\mu )^{2}}{2\sigma^{2}}
+
+
+
+

@@ -34,4 +34,5 @@ Contenido
    clase_random
    tarea_sep0727
    modulos
+   distribucion_normal
 
