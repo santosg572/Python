@@ -35,4 +35,5 @@ Contenido
    tarea_sep0727
    modulos
    distribucion_normal
+   distribucion_binomial
 

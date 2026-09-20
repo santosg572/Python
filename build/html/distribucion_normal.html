@@ -7,7 +7,7 @@
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Distribución normal &mdash; santosg57-python 0.1 documentation</title>
-      <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=b86133f3" />
+      <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=80d5e7a1" />
       <link rel="stylesheet" type="text/css" href="_static/css/theme.css?v=9edc463e" />
       <link rel="stylesheet" type="text/css" href="_static/custom.css?v=836bb062" />
 
@@ -15,12 +15,13 @@
       <script src="_static/jquery.js?v=5d32c60e"></script>
       <script src="_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
       <script src="_static/documentation_options.js?v=2709fde1"></script>
-      <script src="_static/doctools.js?v=9a2dae69"></script>
+      <script src="_static/doctools.js?v=9bcbadda"></script>
       <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
       <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <script src="_static/js/theme.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Distribución binomial" href="distribucion_binomial.html" />
     <link rel="prev" title="Módulos" href="modulos.html" /> 
 </head>
 
@@ -64,6 +65,7 @@
 <li class="toctree-l1"><a class="reference internal" href="tarea_sep0727.html">TAREA 02. Para entregar el próximo lunes</a></li>
 <li class="toctree-l1"><a class="reference internal" href="modulos.html">Módulos</a></li>
 <li class="toctree-l1 current"><a class="current reference internal" href="#">Distribución normal</a></li>
+<li class="toctree-l1"><a class="reference internal" href="distribucion_binomial.html">Distribución binomial</a></li>
 </ul>
 
         </div>
@@ -95,13 +97,13 @@
 <p><a class="reference external" href="https://es.wikipedia.org/wiki/Distribuci%C3%B3n_normal">https://es.wikipedia.org/wiki/Distribuci%C3%B3n_normal</a></p>
 <p>En estadística y probabilidad se llama <strong>distribución normal</strong>, <strong>distribución de Gauss</strong>, <strong>distribución gaussiana</strong> a una gráfica de
 la función de
-densidad con forma de campana y simétrica respecto de un determinado parámetro estadístico. Su forma general es:</p>
+densidad con forma de campana y simétrica respecto a un determinado parámetro estadístico. Su forma general es:</p>
 <div class="math notranslate nohighlight">
 \[\Large f(x)= \frac{1}{\sqrt{2\pi \sigma^2}} e^{-\frac{(x - \mu)^2}{2\sigma^2}}, \text{ en } -\infty &lt; x &lt; \infty\]</div>
 <a class="reference internal image-reference" href="_images/graf_normal.png"><img alt="_images/graf_normal.png" src="_images/graf_normal.png" style="width: 575.0px; height: 407.0px;" />
 </a>
-<div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span>
-<span class="kn">import</span><span class="w"> </span><span class="nn">matplotlib.pyplot</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">plt</span>
+<div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
 
 <span class="n">mu</span> <span class="o">=</span> <span class="mi">55</span>
 <span class="n">sd</span> <span class="o">=</span> <span class="mi">10</span>
@@ -123,6 +125,7 @@ densidad con forma de campana y simétrica respecto de un determinado parámetro
           </div>
           <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
         <a href="modulos.html" class="btn btn-neutral float-left" title="Módulos" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="distribucion_binomial.html" class="btn btn-neutral float-right" title="Distribución binomial" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
     </div>
 
   <hr/>

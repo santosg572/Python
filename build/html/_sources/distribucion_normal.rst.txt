@@ -5,7 +5,7 @@ https://es.wikipedia.org/wiki/Distribuci%C3%B3n_normal
 
 En estadística y probabilidad se llama **distribución normal**, **distribución de Gauss**, **distribución gaussiana** a una gráfica de 
 la función de 
-densidad con forma de campana y simétrica respecto de un determinado parámetro estadístico. Su forma general es:
+densidad con forma de campana y simétrica respecto a un determinado parámetro estadístico. Su forma general es:
 
 .. math::
 
