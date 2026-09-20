@@ -3,7 +3,6 @@ Algunos métodos
 
 
 &&&&&&&&&&&&&&&&&&&&&&& stem &&&&&&&&&&&&&&&&&&&&&&&&&
-
 Help on function stem in module matplotlib.pyplot:
 
 stem(*args: 'ArrayLike | str', linefmt: 'str | None' = None, markerfmt: 'str | None' = None, basefmt: 'str | None' = None, bottom: 'float' = 0, label: 'str | None' = None, orientation: "Literal['vertical', 'horizontal']" = 'vertical', data: 'DataParamType' = None) -> 'StemContainer'
@@ -15,9 +14,6 @@ stem(*args: 'ArrayLike | str', linefmt: 'str | None' = None, markerfmt: 'str | N
     the *heads* are *y* values. For horizontal stem plots, the *locs* are
     *y* positions, and the *heads* are *x* values.
 
-Un gráfico de tallos (stem plot) traza líneas perpendiculares a una línea base en cada ubicación especificada (`locs`), extendiéndose desde dicha línea hasta los extremos (o «cabezas»), y coloca un marcador en ese punto. En los gráficos de tallos verticales (la opción predeterminada), las ubicaciones corresponden a posiciones en el eje x y los extremos a valores en el eje y; en los gráficos horizontales, las ubicaciones corresponden a posiciones en el eje y y los extremos a valores en el eje x.
-
-
     Call signature::
 
       stem([locs,] heads, linefmt=None, markerfmt=None, basefmt=None)
@@ -26,24 +22,15 @@ Un gráfico de tallos (stem plot) traza líneas perpendiculares a una línea bas
     positional, but all other formats must be provided as keyword
     arguments.
 
-Las posiciones `locs` son opcionales. `linefmt` puede especificarse como argumento posicional, pero todos los demás formatos deben indicarse como argumentos de palabra clave.
-
-
     Parameters
     ----------
     locs : array-like, default: (0, 1, ..., len(heads) - 1)
         For vertical stem plots, the x-positions of the stems.
         For horizontal stem plots, the y-positions of the stems.
 
-Para los gráficos de tallos verticales, las posiciones x de los tallos. Para los gráficos de tallos horizontales, las posiciones y de los tallos.
-
-
     heads : array-like
         For vertical stem plots, the y-values of the stem heads.
         For horizontal stem plots, the x-values of the stem heads.
-
-Para los gráficos de tallos verticales, los valores y de los extremos de los tallos. Para los gráficos de tallos horizontales, los valores x de los extremos de los tallos.
-
 
     linefmt : str, optional
         A string defining the color and/or linestyle of the vertical lines:
@@ -104,9 +91,7 @@ Para los gráficos de tallos verticales, los valores y de los extremos de los ta
         which inspired this method.
 
 None
-
-**&&&&&&&&&&&&&&&&&&&&&&& plot &&&&&&&&&&&&&&&&&&&&&&&&&**
-
+&&&&&&&&&&&&&&&&&&&&&&& plot &&&&&&&&&&&&&&&&&&&&&&&&&
 Help on function plot in module matplotlib.pyplot:
 
 plot(*args: 'float | ArrayLike | str', scalex: 'bool' = True, scaley: 'bool' = True, data: 'DataParamType' = None, **kwargs) -> 'list[Line2D]'
@@ -123,9 +108,6 @@ plot(*args: 'float | ArrayLike | str', scalex: 'bool' = True, scaley: 'bool' = T
     formatting like color, marker and linestyle. It's a shortcut string
     notation described in the *Notes* section below.
 
-El parámetro opcional `fmt` es una forma práctica de definir formatos básicos como el color, el marcador y el estilo de línea. Se trata de una notación abreviada mediante una cadena de texto que se describe en la sección de notas más abajo.
-
-
     >>> plot(x, y)        # plot x and y using default line style and color
     >>> plot(x, y, 'bo')  # plot x and y using blue circle markers
     >>> plot(y)           # plot y using x as index array 0..N-1
@@ -134,9 +116,6 @@ El parámetro opcional `fmt` es una forma práctica de definir formatos básicos
     You can use `.Line2D` properties as keyword arguments for more
     control on the appearance. Line properties and *fmt* can be mixed.
     The following two calls yield identical results:
-
-Puedes utilizar las propiedades de .Line2D como argumentos de palabra clave para tener un mayor control sobre la apariencia. Es posible combinar las propiedades de la línea y el parámetro `fmt`. Las dos llamadas siguientes producen resultados idénticos:
-
 
     >>> plot(x, y, 'go--', linewidth=2, markersize=12)
     >>> plot(x, y, color='green', marker='o', linestyle='dashed',
@@ -151,9 +130,6 @@ Puedes utilizar las propiedades de .Line2D como argumentos de palabra clave para
     data that can be accessed by index ``obj['y']``). Instead of giving
     the data in *x* and *y*, you can provide the object in the *data*
     parameter and just give the labels for *x* and *y*::
-
-Existe una forma práctica de representar gráficamente objetos con datos etiquetados (es decir, datos a los que se puede acceder mediante un índice, como `obj['y']`). En lugar de proporcionar los datos para *x* e *y* por separado, puedes pasar el objeto en el parámetro `data` y especificar únicamente las etiquetas correspondientes a *x* e *y*:
-
 
     >>> plot('xlabel', 'ylabel', data=obj)
 
@@ -409,9 +385,7 @@ Existe una forma práctica de representar gráficamente objetos con datos etique
     (``'green'``) or hex strings (``'#008000'``).
 
 None
-
-**&&&&&&&&&&&&&&&&&&&&&&& boxplot &&&&&&&&&&&&&&&&&&&&&&&&&**
-
+&&&&&&&&&&&&&&&&&&&&&&& boxplot &&&&&&&&&&&&&&&&&&&&&&&&&
 Help on function boxplot in module matplotlib.pyplot:
 
 boxplot(x: 'ArrayLike | Sequence[ArrayLike]', *, notch: 'bool | None' = None, sym: 'str | None' = None, vert: 'bool | None' = None, orientation: "Literal['vertical', 'horizontal']" = 'vertical', whis: 'float | tuple[float, float] | None' = None, positions: 'ArrayLike | None' = None, widths: 'float | ArrayLike | None' = None, patch_artist: 'bool | None' = None, bootstrap: 'int | None' = None, usermedians: 'ArrayLike | None' = None, conf_intervals: 'ArrayLike | None' = None, meanline: 'bool | None' = None, showmeans: 'bool | None' = None, showcaps: 'bool | None' = None, showbox: 'bool | None' = None, showfliers: 'bool | None' = None, boxprops: 'dict[str, Any] | None' = None, tick_labels: 'Sequence[str] | None' = None, flierprops: 'dict[str, Any] | None' = None, medianprops: 'dict[str, Any] | None' = None, meanprops: 'dict[str, Any] | None' = None, capprops: 'dict[str, Any] | None' = None, whiskerprops: 'dict[str, Any] | None' = None, manage_ticks: 'bool' = True, autorange: 'bool' = False, zorder: 'float | None' = None, capwidths: 'float | ArrayLike | None' = None, label: 'Sequence[str] | None' = None, data: 'DataParamType' = None) -> 'dict[str, Any]'
@@ -423,9 +397,6 @@ boxplot(x: 'ArrayLike | Sequence[ArrayLike]', *, notch: 'bool | None' = None, sy
     lying within 1.5x the inter-quartile range (IQR) from the box.
     Flier points are those past the end of the whiskers.
     See https://en.wikipedia.org/wiki/Box_plot for reference.
-
-La caja se extiende desde el primer cuartil (Q1) hasta el tercer cuartil (Q3) de los datos, con una línea que indica la mediana. Los bigotes se extienden desde la caja hasta el punto de datos más alejado que se encuentre dentro de un rango de 1,5 veces el rango intercuartílico (IQR) a partir de la caja. Los valores atípicos (*outliers*) son aquellos puntos situados más allá del extremo de los bigotes. Consulte https://en.wikipedia.org/wiki/Box_plot para más información.
-
 
     .. code-block:: none
 
@@ -453,9 +424,6 @@ La caja se extiende desde el primer cuartil (Q1) hasta el tercer cuartil (Q3) de
         describes how the locations of the notches are computed by
         default, but their locations may also be overridden by setting the
         *conf_intervals* parameter.
-
-Determina si se dibuja un diagrama de caja con muescas (True) o uno rectangular (False). Las muescas representan el intervalo de confianza (IC) alrededor de la mediana. La documentación de *bootstrap* describe cómo se calculan por defecto las posiciones de las muescas, aunque dichas posiciones también pueden modificarse estableciendo el parámetro `conf_intervals`.
-
 
         .. note::
 
@@ -650,9 +618,7 @@ Determina si se dibuja un diagrama de caja con muescas (True) o uno rectangular 
         This is the :ref:`pyplot wrapper <pyplot_interface>` for `.axes.Axes.boxplot`.
 
 None
-
-**&&&&&&&&&&&&&&&&&&&&&&& imread &&&&&&&&&&&&&&&&&&&&&&&&&**
-
+&&&&&&&&&&&&&&&&&&&&&&& imread &&&&&&&&&&&&&&&&&&&&&&&&&
 Help on function imread in module matplotlib.pyplot:
 
 imread(fname: 'str | pathlib.Path | BinaryIO', format: 'str | None' = None) -> 'np.ndarray'
@@ -700,9 +666,7 @@ imread(fname: 'str | pathlib.Path | BinaryIO', format: 'str | None' = None) -> '
         This is equivalent to `matplotlib.image.imread`.
 
 None
-
-**&&&&&&&&&&&&&&&&&&&&&&& imshow &&&&&&&&&&&&&&&&&&&&&&&&&**
-
+&&&&&&&&&&&&&&&&&&&&&&& imshow &&&&&&&&&&&&&&&&&&&&&&&&&
 Help on function imshow in module matplotlib.pyplot:
 
 imshow(X: 'ArrayLike | PIL.Image.Image', cmap: 'str | Colormap | None' = None, norm: 'str | Normalize | None' = None, *, aspect: "Literal['equal', 'auto'] | float | None" = None, interpolation: 'str | None' = None, alpha: 'float | ArrayLike | None' = None, vmin: 'float | None' = None, vmax: 'float | None' = None, colorizer: 'Colorizer | None' = None, origin: "Literal['upper', 'lower'] | None" = None, extent: 'tuple[float, float, float, float] | None' = None, interpolation_stage: "Literal['data', 'rgba', 'auto'] | None" = None, filternorm: 'bool' = True, filterrad: 'float' = 4.0, resample: 'bool | None' = None, url: 'str | None' = None, data: 'DataParamType' = None, **kwargs) -> 'AxesImage'
