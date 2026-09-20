@@ -1,0 +1,7 @@
+Estadística
+===================================
+
+.. toctree::
+
+   estadistica
+

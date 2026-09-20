@@ -38,5 +38,4 @@ Contenido
    distribucion_binomial
    clase_numpy/index_numpy
    clase_matplotlib/index_matplotlib
-   estadistica/index_estadistica
 
