@@ -99,8 +99,8 @@
              
   <section id="algunos-metodos">
 <h1>Algunos métodos<a class="headerlink" href="#algunos-metodos" title="Link to this heading"></a></h1>
-<p>&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp; stem &amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;
-Help on function stem in module matplotlib.pyplot:</p>
+<p>&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp; stem &amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;</p>
+<p>Help on function stem in module matplotlib.pyplot:</p>
 <dl>
 <dt>stem(<a href="#id1"><span class="problematic" id="id2">*</span></a>args: ‘ArrayLike | str’, linefmt: ‘str | None’ = None, markerfmt: ‘str | None’ = None, basefmt: ‘str | None’ = None, bottom: ‘float’ = 0, label: ‘str | None’ = None, orientation: “Literal[‘vertical’, ‘horizontal’]” = ‘vertical’, data: ‘DataParamType’ = None) -&gt; ‘StemContainer’</dt><dd><p>Create a stem plot.</p>
 <p>A stem plot draws lines perpendicular to a baseline at each location
@@ -108,20 +108,37 @@ Help on function stem in module matplotlib.pyplot:</p>
 vertical stem plots (the default), the <em>locs</em> are <em>x</em> positions, and
 the <em>heads</em> are <em>y</em> values. For horizontal stem plots, the <em>locs</em> are
 <em>y</em> positions, and the <em>heads</em> are <em>x</em> values.</p>
-<p>Call signature:</p>
+</dd>
+</dl>
+<p>Un gráfico de tallos (stem plot) traza líneas perpendiculares a una línea base en cada ubicación especificada (<cite>locs</cite>), extendiéndose desde dicha línea hasta los extremos (o «cabezas»), y coloca un marcador en ese punto. En los gráficos de tallos verticales (la opción predeterminada), las ubicaciones corresponden a posiciones en el eje x y los extremos a valores en el eje y; en los gráficos horizontales, las ubicaciones corresponden a posiciones en el eje y y los extremos a valores en el eje x.</p>
+<blockquote>
+<div><p>Call signature:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">stem</span><span class="p">([</span><span class="n">locs</span><span class="p">,]</span> <span class="n">heads</span><span class="p">,</span> <span class="n">linefmt</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">markerfmt</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">basefmt</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span>
 </pre></div>
 </div>
 <p>The <em>locs</em>-positions are optional. <em>linefmt</em> may be provided as
 positional, but all other formats must be provided as keyword
 arguments.</p>
-<dl>
+</div></blockquote>
+<p>Las posiciones <cite>locs</cite> son opcionales. <cite>linefmt</cite> puede especificarse como argumento posicional, pero todos los demás formatos deben indicarse como argumentos de palabra clave.</p>
+<blockquote>
+<div><dl class="simple">
 <dt>locs<span class="classifier">array-like, default: (0, 1, …, len(heads) - 1)</span></dt><dd><p>For vertical stem plots, the x-positions of the stems.
 For horizontal stem plots, the y-positions of the stems.</p>
 </dd>
+</dl>
+</div></blockquote>
+<p>Para los gráficos de tallos verticales, las posiciones x de los tallos. Para los gráficos de tallos horizontales, las posiciones y de los tallos.</p>
+<blockquote>
+<div><dl class="simple">
 <dt>heads<span class="classifier">array-like</span></dt><dd><p>For vertical stem plots, the y-values of the stem heads.
 For horizontal stem plots, the x-values of the stem heads.</p>
 </dd>
+</dl>
+</div></blockquote>
+<p>Para los gráficos de tallos verticales, los valores y de los extremos de los tallos. Para los gráficos de tallos horizontales, los valores x de los extremos de los tallos.</p>
+<blockquote>
+<div><dl>
 <dt>linefmt<span class="classifier">str, optional</span></dt><dd><p>A string defining the color and/or linestyle of the vertical lines:</p>
 <table class="docutils align-default">
 <thead>
@@ -181,11 +198,10 @@ interpreted as <code class="docutils literal notranslate"><span class="pre">data
 <a class="reference external" href="https://www.mathworks.com/help/matlab/ref/stem.html">stem</a>
 which inspired this method.</p>
 </div>
-</dd>
-</dl>
-<p>None
-&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp; plot &amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;
-Help on function plot in module matplotlib.pyplot:</p>
+</div></blockquote>
+<p>None</p>
+<p><strong>&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp; plot &amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;</strong></p>
+<p>Help on function plot in module matplotlib.pyplot:</p>
 <dl>
 <dt>plot(<a href="#id3"><span class="problematic" id="id4">*</span></a>args: ‘float | ArrayLike | str’, scalex: ‘bool’ = True, scaley: ‘bool’ = True, data: ‘DataParamType’ = None, <a href="#id5"><span class="problematic" id="id6">**</span></a>kwargs) -&gt; ‘list[Line2D]’</dt><dd><p>Plot y versus x as lines and/or markers.</p>
 <p>Call signatures:</p>
@@ -197,7 +213,11 @@ Help on function plot in module matplotlib.pyplot:</p>
 <p>The optional parameter <em>fmt</em> is a convenient way for defining basic
 formatting like color, marker and linestyle. It’s a shortcut string
 notation described in the <em>Notes</em> section below.</p>
-<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">plot</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">)</span>        <span class="c1"># plot x and y using default line style and color</span>
+</dd>
+</dl>
+<p>El parámetro opcional <cite>fmt</cite> es una forma práctica de definir formatos básicos como el color, el marcador y el estilo de línea. Se trata de una notación abreviada mediante una cadena de texto que se describe en la sección de notas más abajo.</p>
+<blockquote>
+<div><div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">plot</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">)</span>        <span class="c1"># plot x and y using default line style and color</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">plot</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="s1">&#39;bo&#39;</span><span class="p">)</span>  <span class="c1"># plot x and y using blue circle markers</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">plot</span><span class="p">(</span><span class="n">y</span><span class="p">)</span>           <span class="c1"># plot y using x as index array 0..N-1</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">plot</span><span class="p">(</span><span class="n">y</span><span class="p">,</span> <span class="s1">&#39;r+&#39;</span><span class="p">)</span>     <span class="c1"># ditto, but with red plusses</span>
@@ -206,7 +226,10 @@ notation described in the <em>Notes</em> section below.</p>
 <p>You can use <cite>.Line2D</cite> properties as keyword arguments for more
 control on the appearance. Line properties and <em>fmt</em> can be mixed.
 The following two calls yield identical results:</p>
-<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">plot</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="s1">&#39;go--&#39;</span><span class="p">,</span> <span class="n">linewidth</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span> <span class="n">markersize</span><span class="o">=</span><span class="mi">12</span><span class="p">)</span>
+</div></blockquote>
+<p>Puedes utilizar las propiedades de .Line2D como argumentos de palabra clave para tener un mayor control sobre la apariencia. Es posible combinar las propiedades de la línea y el parámetro <cite>fmt</cite>. Las dos llamadas siguientes producen resultados idénticos:</p>
+<blockquote>
+<div><div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">plot</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="s1">&#39;go--&#39;</span><span class="p">,</span> <span class="n">linewidth</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span> <span class="n">markersize</span><span class="o">=</span><span class="mi">12</span><span class="p">)</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">plot</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;green&#39;</span><span class="p">,</span> <span class="n">marker</span><span class="o">=</span><span class="s1">&#39;o&#39;</span><span class="p">,</span> <span class="n">linestyle</span><span class="o">=</span><span class="s1">&#39;dashed&#39;</span><span class="p">,</span>
 <span class="gp">... </span>     <span class="n">linewidth</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span> <span class="n">markersize</span><span class="o">=</span><span class="mi">12</span><span class="p">)</span>
 </pre></div>
@@ -217,7 +240,10 @@ The following two calls yield identical results:</p>
 data that can be accessed by index <code class="docutils literal notranslate"><span class="pre">obj['y']</span></code>). Instead of giving
 the data in <em>x</em> and <em>y</em>, you can provide the object in the <em>data</em>
 parameter and just give the labels for <em>x</em> and <em>y</em>:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">plot</span><span class="p">(</span><span class="s1">&#39;xlabel&#39;</span><span class="p">,</span> <span class="s1">&#39;ylabel&#39;</span><span class="p">,</span> <span class="n">data</span><span class="o">=</span><span class="n">obj</span><span class="p">)</span>
+</div></blockquote>
+<p>Existe una forma práctica de representar gráficamente objetos con datos etiquetados (es decir, datos a los que se puede acceder mediante un índice, como <cite>obj[‘y’]</cite>). En lugar de proporcionar los datos para <em>x</em> e <em>y</em> por separado, puedes pasar el objeto en el parámetro <cite>data</cite> y especificar únicamente las etiquetas correspondientes a <em>x</em> e <em>y</em>:</p>
+<blockquote>
+<div><div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">plot</span><span class="p">(</span><span class="s1">&#39;xlabel&#39;</span><span class="p">,</span> <span class="s1">&#39;ylabel&#39;</span><span class="p">,</span> <span class="n">data</span><span class="o">=</span><span class="n">obj</span><span class="p">)</span>
 </pre></div>
 </div>
 <p>All indexable objects are supported. This could e.g. be a <cite>dict</cite>, a
@@ -529,11 +555,10 @@ supported, but note that their parsing may be ambiguous.</p>
 <p>If the color is the only part of the format string, you can
 additionally use any  <cite>matplotlib.colors</cite> spec, e.g. full names
 (<code class="docutils literal notranslate"><span class="pre">'green'</span></code>) or hex strings (<code class="docutils literal notranslate"><span class="pre">'#008000'</span></code>).</p>
-</dd>
-</dl>
-<p>None
-&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp; boxplot &amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;
-Help on function boxplot in module matplotlib.pyplot:</p>
+</div></blockquote>
+<p>None</p>
+<p><strong>&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp; boxplot &amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;</strong></p>
+<p>Help on function boxplot in module matplotlib.pyplot:</p>
 <dl>
 <dt>boxplot(x: ‘ArrayLike | Sequence[ArrayLike]’, <a href="#id21"><span class="problematic" id="id22">*</span></a>, notch: ‘bool | None’ = None, sym: ‘str | None’ = None, vert: ‘bool | None’ = None, orientation: “Literal[‘vertical’, ‘horizontal’]” = ‘vertical’, whis: ‘float | tuple[float, float] | None’ = None, positions: ‘ArrayLike | None’ = None, widths: ‘float | ArrayLike | None’ = None, patch_artist: ‘bool | None’ = None, bootstrap: ‘int | None’ = None, usermedians: ‘ArrayLike | None’ = None, conf_intervals: ‘ArrayLike | None’ = None, meanline: ‘bool | None’ = None, showmeans: ‘bool | None’ = None, showcaps: ‘bool | None’ = None, showbox: ‘bool | None’ = None, showfliers: ‘bool | None’ = None, boxprops: ‘dict[str, Any] | None’ = None, tick_labels: ‘Sequence[str] | None’ = None, flierprops: ‘dict[str, Any] | None’ = None, medianprops: ‘dict[str, Any] | None’ = None, meanprops: ‘dict[str, Any] | None’ = None, capprops: ‘dict[str, Any] | None’ = None, whiskerprops: ‘dict[str, Any] | None’ = None, manage_ticks: ‘bool’ = True, autorange: ‘bool’ = False, zorder: ‘float | None’ = None, capwidths: ‘float | ArrayLike | None’ = None, label: ‘Sequence[str] | None’ = None, data: ‘DataParamType’ = None) -&gt; ‘dict[str, Any]’</dt><dd><p>Draw a box and whisker plot.</p>
 <p>The box extends from the first quartile (Q1) to the third
@@ -542,7 +567,11 @@ The whiskers extend from the box to the farthest data point
 lying within 1.5x the inter-quartile range (IQR) from the box.
 Flier points are those past the end of the whiskers.
 See <a class="reference external" href="https://en.wikipedia.org/wiki/Box_plot">https://en.wikipedia.org/wiki/Box_plot</a> for reference.</p>
-<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>     Q1-1.5IQR   Q1   median  Q3   Q3+1.5IQR
+</dd>
+</dl>
+<p>La caja se extiende desde el primer cuartil (Q1) hasta el tercer cuartil (Q3) de los datos, con una línea que indica la mediana. Los bigotes se extienden desde la caja hasta el punto de datos más alejado que se encuentre dentro de un rango de 1,5 veces el rango intercuartílico (IQR) a partir de la caja. Los valores atípicos (<em>outliers</em>) son aquellos puntos situados más allá del extremo de los bigotes. Consulte <a class="reference external" href="https://en.wikipedia.org/wiki/Box_plot">https://en.wikipedia.org/wiki/Box_plot</a> para más información.</p>
+<blockquote>
+<div><div class="highlight-none notranslate"><div class="highlight"><pre><span></span>     Q1-1.5IQR   Q1   median  Q3   Q3+1.5IQR
                   |-----:-----|
   o      |--------|     :     |--------|    o  o
                   |-----:-----|
@@ -564,7 +593,13 @@ boxplot (<cite>False</cite>).  The notches represent the confidence interval
 describes how the locations of the notches are computed by
 default, but their locations may also be overridden by setting the
 <em>conf_intervals</em> parameter.</p>
-<div class="admonition note">
+</dd>
+</dl>
+</div></blockquote>
+<p>Determina si se dibuja un diagrama de caja con muescas (True) o uno rectangular (False). Las muescas representan el intervalo de confianza (IC) alrededor de la mediana. La documentación de <em>bootstrap</em> describe cómo se calculan por defecto las posiciones de las muescas, aunque dichas posiciones también pueden modificarse estableciendo el parámetro <cite>conf_intervals</cite>.</p>
+<blockquote>
+<div><blockquote>
+<div><div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>In cases where the values of the CI are less than the
 lower quartile or greater than the upper quartile, the
@@ -573,7 +608,8 @@ distinctive “flipped” appearance. This is expected
 behavior and consistent with other statistical
 visualization packages.</p>
 </div>
-</dd>
+</div></blockquote>
+<dl>
 <dt>sym<span class="classifier">str, optional</span></dt><dd><p>The default symbol for flier points.  An empty string (‘’) hides
 the fliers.  If <cite>None</cite>, then the fliers default to ‘b+’.  More
 control is provided by the <em>flierprops</em> parameter.</p>
@@ -726,11 +762,10 @@ violinplot : Draw an estimate of the probability density function.</p>
 <p class="admonition-title">Note</p>
 <p>This is the <span class="xref std std-ref">pyplot wrapper</span> for <cite>.axes.Axes.boxplot</cite>.</p>
 </div>
-</dd>
-</dl>
-<p>None
-&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp; imread &amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;
-Help on function imread in module matplotlib.pyplot:</p>
+</div></blockquote>
+<p>None</p>
+<p><strong>&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp; imread &amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;</strong></p>
+<p>Help on function imread in module matplotlib.pyplot:</p>
 <dl>
 <dt>imread(fname: ‘str | pathlib.Path | BinaryIO’, format: ‘str | None’ = None) -&gt; ‘np.ndarray’</dt><dd><p>Read an image from a file into an array.</p>
 <div class="admonition note">
@@ -770,9 +805,9 @@ contents.</p>
 </div>
 </dd>
 </dl>
-<p>None
-&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp; imshow &amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;
-Help on function imshow in module matplotlib.pyplot:</p>
+<p>None</p>
+<p><strong>&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp; imshow &amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;</strong></p>
+<p>Help on function imshow in module matplotlib.pyplot:</p>
 <dl>
 <dt>imshow(X: ‘ArrayLike | PIL.Image.Image’, cmap: ‘str | Colormap | None’ = None, norm: ‘str | Normalize | None’ = None, <a href="#id37"><span class="problematic" id="id38">*</span></a>, aspect: “Literal[‘equal’, ‘auto’] | float | None” = None, interpolation: ‘str | None’ = None, alpha: ‘float | ArrayLike | None’ = None, vmin: ‘float | None’ = None, vmax: ‘float | None’ = None, colorizer: ‘Colorizer | None’ = None, origin: “Literal[‘upper’, ‘lower’] | None” = None, extent: ‘tuple[float, float, float, float] | None’ = None, interpolation_stage: “Literal[‘data’, ‘rgba’, ‘auto’] | None” = None, filternorm: ‘bool’ = True, filterrad: ‘float’ = 4.0, resample: ‘bool | None’ = None, url: ‘str | None’ = None, data: ‘DataParamType’ = None, <a href="#id39"><span class="problematic" id="id40">**</span></a>kwargs) -&gt; ‘AxesImage’</dt><dd><p>Display data as an image, i.e., on a 2D regular raster.</p>
 <p>The input may either be actual RGB(A) data, or 2D scalar data, which
