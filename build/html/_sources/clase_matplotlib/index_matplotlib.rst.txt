@@ -1,0 +1,7 @@
+modulo matplotlib
+===================================
+
+.. toctree::
+
+   dir_matplotlib
+

@@ -1,10 +1,15 @@
 del = 10
 x0 = 0
 y0 = 0
-nx = 10
-ny = 1
+nx = 5
+ny = 5
 cc=.8
 
+file='img_'
+fil = paste(file, nx,'_', ny,'.png', sep='')
+print(fil)
+
+png(fil)
 plot(c(x0, x0+10*del), c(y0, y0+10*del))
 
 for (x in seq(x0, x0+nx*del, del)){
@@ -27,4 +32,6 @@ for (x in seq(x0, x0+(nx-1)*del, del)){
   }
   i = i+1
 }
+
+dev.off()
 
