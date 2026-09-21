@@ -37,7 +37,19 @@ dd = ['amax', 'amin', 'angle',
 'reshape',
 'round', 
 'save', 'savetxt', 
-'shape']
+'shape',
+'sin', 
+'size',
+'sort', 
+'sqrt', 
+'std', 
+'sum',
+'tan',
+'transpose', 
+'unique', 
+'var', 
+'zeros']
+
 
 #dd = ['ndarray', 'ndim','ones','random', 'linspace']
 

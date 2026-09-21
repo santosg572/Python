@@ -37,3 +37,9 @@ Ejemplos
    y = 2*x
    plt.hist(x)
    plt.show()
+
+.. code:: Python
+
+   plt.hist(x, cumulative=True)
+
+

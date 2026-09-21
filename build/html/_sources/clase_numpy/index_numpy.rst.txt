@@ -5,7 +5,7 @@ Módulo Numpy
 
    modulo_numpy
    dir_numpy
-   funciones_numpy
+   help_numpy
    ejemplos_numpy
 
 
