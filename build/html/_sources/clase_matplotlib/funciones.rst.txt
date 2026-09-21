@@ -1,0 +1,39 @@
+funciones
+==========
+
+**bar** 
+
+Crea una grafica de barras
+
+Ejemplos
+
+.. code:: Python
+
+   import matplotlib.pyplot as plt
+   plt.bar(['A', 'B', 'C'], [1, 2, 3])
+   plt.show()
+
+.. code:: Python
+
+   bar(range(3), [1, 2, 3], tick_label=['A', 'B', 'C'])
+**hist**
+
+Crea un histograma
+
+Ejemplos
+
+.. code:: Python
+
+   x = np.array([4,2,3,4,2,4,1,5])
+   plt.hist(x)
+   plt.show()
+
+.. code:: Python
+
+   import numpy as np
+   import matplotlib.pyplot as plt
+
+   x = np.array([4,2,3,4,2,4,1,5])
+   y = 2*x
+   plt.hist(x)
+   plt.show()

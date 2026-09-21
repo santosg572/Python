@@ -6,7 +6,7 @@
   <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Algunos métodos &mdash; santosg57-python 0.1 documentation</title>
+  <title>matplotlib.pyplot &mdash; santosg57-python 0.1 documentation</title>
       <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=80d5e7a1" />
       <link rel="stylesheet" type="text/css" href="../_static/css/theme.css?v=9edc463e" />
       <link rel="stylesheet" type="text/css" href="../_static/custom.css?v=836bb062" />
@@ -20,6 +20,7 @@
     <script src="../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Estadística" href="../estadistica/index_estadistica.html" />
     <link rel="prev" title="dir de matplotlib.pyplot" href="dir_matplotlib.html" /> 
 </head>
 
@@ -67,9 +68,10 @@
 <li class="toctree-l1"><a class="reference internal" href="../clase_numpy/index_numpy.html">Módulo Numpy</a></li>
 <li class="toctree-l1 current"><a class="reference internal" href="index_matplotlib.html">modulo matplotlib</a><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="dir_matplotlib.html">dir de matplotlib.pyplot</a></li>
-<li class="toctree-l2 current"><a class="current reference internal" href="#">Algunos métodos</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">matplotlib.pyplot</a></li>
 </ul>
 </li>
+<li class="toctree-l1"><a class="reference internal" href="../estadistica/index_estadistica.html">Estadística</a></li>
 </ul>
 
         </div>
@@ -87,7 +89,7 @@
   <ul class="wy-breadcrumbs">
       <li><a href="../index.html" class="icon icon-home" aria-label="Home"></a></li>
           <li class="breadcrumb-item"><a href="index_matplotlib.html">modulo matplotlib</a></li>
-      <li class="breadcrumb-item active">Algunos métodos</li>
+      <li class="breadcrumb-item active">matplotlib.pyplot</li>
       <li class="wy-breadcrumbs-aside">
             <a href="../_sources/clase_matplotlib/help_matplotlib.rst.txt" rel="nofollow"> View page source</a>
       </li>
@@ -97,48 +99,844 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
              
-  <section id="algunos-metodos">
-<h1>Algunos métodos<a class="headerlink" href="#algunos-metodos" title="Link to this heading"></a></h1>
-<p>&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp; stem &amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;</p>
-<p>Help on function stem in module matplotlib.pyplot:</p>
+  <section id="matplotlib-pyplot">
+<h1>matplotlib.pyplot<a class="headerlink" href="#matplotlib-pyplot" title="Link to this heading"></a></h1>
+<p>&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp; bar &amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;
+Help on function bar in module matplotlib.pyplot:</p>
 <dl>
-<dt>stem(<a href="#id1"><span class="problematic" id="id2">*</span></a>args: ‘ArrayLike | str’, linefmt: ‘str | None’ = None, markerfmt: ‘str | None’ = None, basefmt: ‘str | None’ = None, bottom: ‘float’ = 0, label: ‘str | None’ = None, orientation: “Literal[‘vertical’, ‘horizontal’]” = ‘vertical’, data: ‘DataParamType’ = None) -&gt; ‘StemContainer’</dt><dd><p>Create a stem plot.</p>
+<dt>bar(x: ‘float | ArrayLike’, height: ‘float | ArrayLike’, width: ‘float | ArrayLike’ = 0.8, bottom: ‘float | ArrayLike | None’ = None, <a href="#id1"><span class="problematic" id="id2">*</span></a>, align: “Literal[‘center’, ‘edge’]” = ‘center’, data: ‘DataParamType’ = None, <a href="#id3"><span class="problematic" id="id4">**</span></a>kwargs) -&gt; ‘BarContainer’</dt><dd><p>Make a bar plot.</p>
+<p>The bars are positioned at <em>x</em> with the given <em>align</em>ment. Their
+dimensions are given by <em>height</em> and <em>width</em>. The vertical baseline
+is <em>bottom</em> (default 0).</p>
+<p>Many parameters can take either a single value applying to all bars
+or a sequence of values, one for each bar.</p>
+<dl>
+<dt>x<span class="classifier">float or array-like</span></dt><dd><p>The x coordinates of the bars. See also <em>align</em> for the
+alignment of the bars to the coordinates.</p>
+<p>Bars are often used for categorical data, i.e. string labels below
+the bars. You can provide a list of strings directly to <em>x</em>.
+<code class="docutils literal notranslate"><span class="pre">bar(['A',</span> <span class="pre">'B',</span> <span class="pre">'C'],</span> <span class="pre">[1,</span> <span class="pre">2,</span> <span class="pre">3])</span></code> is often a shorter and more
+convenient notation compared to
+<code class="docutils literal notranslate"><span class="pre">bar(range(3),</span> <span class="pre">[1,</span> <span class="pre">2,</span> <span class="pre">3],</span> <span class="pre">tick_label=['A',</span> <span class="pre">'B',</span> <span class="pre">'C'])</span></code>. They are
+equivalent as long as the names are unique. The explicit <em>tick_label</em>
+notation draws the names in the sequence given. However, when having
+duplicate values in categorical <em>x</em> data, these values map to the same
+numerical x coordinate, and hence the corresponding bars are drawn on
+top of each other.</p>
+</dd>
+<dt>height<span class="classifier">float or array-like</span></dt><dd><p>The height(s) of the bars.</p>
+<p>Note that if <em>bottom</em> has units (e.g. datetime), <em>height</em> should be in
+units that are a difference from the value of <em>bottom</em> (e.g. timedelta).</p>
+</dd>
+<dt>width<span class="classifier">float or array-like, default: 0.8</span></dt><dd><p>The width(s) of the bars.</p>
+<p>Note that if <em>x</em> has units (e.g. datetime), then <em>width</em> should be in
+units that are a difference (e.g. timedelta) around the <em>x</em> values.</p>
+</dd>
+<dt>bottom<span class="classifier">float or array-like, default: 0</span></dt><dd><p>The y coordinate(s) of the bottom side(s) of the bars.</p>
+<p>Note that if <em>bottom</em> has units, then the y-axis will get a Locator and
+Formatter appropriate for the units (e.g. dates, or categorical).</p>
+</dd>
+<dt>align<span class="classifier">{‘center’, ‘edge’}, default: ‘center’</span></dt><dd><p>Alignment of the bars to the <em>x</em> coordinates:</p>
+<ul class="simple">
+<li><p>‘center’: Center the base on the <em>x</em> positions.</p></li>
+<li><p>‘edge’: Align the left edges of the bars with the <em>x</em> positions.</p></li>
+</ul>
+<p>To align the bars on the right edge pass a negative <em>width</em> and
+<code class="docutils literal notranslate"><span class="pre">align='edge'</span></code>.</p>
+</dd>
+</dl>
+<dl class="simple">
+<dt><cite>.BarContainer</cite></dt><dd><p>Container with all the bars and optionally errorbars.</p>
+</dd>
+</dl>
+<dl>
+<dt>color<span class="classifier"><a href="#id5"><span class="problematic" id="id6">:mpltype:`color`</span></a> or list of <a href="#id7"><span class="problematic" id="id8">:mpltype:`color`</span></a>, optional</span></dt><dd><p>The colors of the bar faces. This is an alias for <em>facecolor</em>.
+If both are given, <em>facecolor</em> takes precedence.</p>
+</dd>
+<dt>facecolor<span class="classifier"><a href="#id9"><span class="problematic" id="id10">:mpltype:`color`</span></a> or list of <a href="#id11"><span class="problematic" id="id12">:mpltype:`color`</span></a>, optional</span></dt><dd><p>The colors of the bar faces.
+If both <em>color</em> and <em>facecolor are given, *facecolor</em> takes precedence.</p>
+</dd>
+<dt>edgecolor<span class="classifier"><a href="#id13"><span class="problematic" id="id14">:mpltype:`color`</span></a> or list of <a href="#id15"><span class="problematic" id="id16">:mpltype:`color`</span></a>, optional</span></dt><dd><p>The colors of the bar edges.</p>
+</dd>
+<dt>linewidth<span class="classifier">float or array-like, optional</span></dt><dd><p>Width of the bar edge(s). If 0, don’t draw edges.</p>
+</dd>
+<dt>tick_label<span class="classifier">str or list of str, optional</span></dt><dd><p>The tick labels of the bars.
+Default: None (Use default numeric labels.)</p>
+</dd>
+<dt>label<span class="classifier">str or list of str, optional</span></dt><dd><p>A single label is attached to the resulting <cite>.BarContainer</cite> as a
+legend label for the whole dataset.
+If a list is provided, it must be the same length as <em>x</em> and
+labels the individual bars. Repeated labels are not de-duplicated
+and will cause repeated label entries, so this is best used when
+bars also differ in style (e.g., by passing a list to <em>color</em>).</p>
+<p>Tip: Use <cite>.bar_label</cite> to place labels on the bars.</p>
+</dd>
+<dt>xerr, yerr<span class="classifier">float or array-like of shape(N,) or shape(2, N), optional</span></dt><dd><p>If not <em>None</em>, add horizontal / vertical errorbars to the bar tips.
+The values are +/- sizes relative to the data:</p>
+<ul class="simple">
+<li><p>scalar: symmetric +/- values for all bars</p></li>
+<li><p>shape(N,): symmetric +/- values for each bar</p></li>
+<li><p>shape(2, N): Separate - and + values for each bar. First row
+contains the lower errors, the second row contains the upper
+errors.</p></li>
+<li><p><em>None</em>: No errorbar. (Default)</p></li>
+</ul>
+<p>This is a convenience shortcut for an extra <cite>~.axes.Axes.errorbar</cite>
+call. See its documentation and
+<span class="xref std std-doc">/gallery/statistics/errorbar_features</span> for an example on
+the usage of <em>xerr</em> and <em>yerr</em>.</p>
+</dd>
+<dt>ecolor<span class="classifier"><a href="#id17"><span class="problematic" id="id18">:mpltype:`color`</span></a> or list of <a href="#id19"><span class="problematic" id="id20">:mpltype:`color`</span></a>, default: ‘black’</span></dt><dd><p>The line color of the errorbars.
+Multiple colors are only supported if the errorbars do not have
+caps. If you need individually colored errorbars with caps, instead
+use explicit <cite>~.axes.Axes.errorbar</cite> calls for each data point.</p>
+</dd>
+<dt>capsize<span class="classifier">float, default: <a href="#id21"><span class="problematic" id="id22">:rc:`errorbar.capsize`</span></a></span></dt><dd><p>The length of the error bar caps in points.</p>
+</dd>
+<dt>error_kw<span class="classifier">dict, optional</span></dt><dd><p>Dictionary of keyword arguments to be passed to the
+<cite>~.Axes.errorbar</cite> method. Values of <em>ecolor</em> or <em>capsize</em> defined
+here take precedence over the independent keyword arguments.</p>
+</dd>
+<dt>log<span class="classifier">bool, default: False</span></dt><dd><p>If <em>True</em>, set the y-axis to be log scale.</p>
+</dd>
+<dt>data<span class="classifier">indexable object, optional</span></dt><dd><p>If given, all parameters also accept a string <code class="docutils literal notranslate"><span class="pre">s</span></code>, which is
+interpreted as <code class="docutils literal notranslate"><span class="pre">data[s]</span></code> if <code class="docutils literal notranslate"><span class="pre">s</span></code> is a key in <code class="docutils literal notranslate"><span class="pre">data</span></code>.</p>
+</dd>
+</dl>
+<p><a href="#id23"><span class="problematic" id="id24">**</span></a>kwargs : <cite>.Rectangle</cite> properties</p>
+<dl class="simple">
+<dt>Properties:</dt><dd><p>agg_filter: a filter function, which takes a (m, n, 3) float array and a dpi value, and returns a (m, n, 3) array and two offsets from the bottom left corner of the image
+alpha: float or None
+angle: unknown
+animated: bool
+antialiased or aa: bool or None
+bounds: (left, bottom, width, height)
+capstyle: <cite>.CapStyle</cite> or {‘butt’, ‘projecting’, ‘round’}
+clip_box: <cite>~matplotlib.transforms.BboxBase</cite> or None
+clip_on: bool
+clip_path: Patch or (Path, Transform) or None
+color: <a href="#id25"><span class="problematic" id="id26">:mpltype:`color`</span></a>
+edgecolor or ec: <a href="#id27"><span class="problematic" id="id28">:mpltype:`color`</span></a> or None
+edgegapcolor: <a href="#id29"><span class="problematic" id="id30">:mpltype:`color`</span></a> or None
+facecolor or fc: <a href="#id31"><span class="problematic" id="id32">:mpltype:`color`</span></a> or None
+figure: <cite>~matplotlib.figure.Figure</cite> or <cite>~matplotlib.figure.SubFigure</cite>
+fill: bool
+gid: str
+hatch: {‘/’, ‘\’, ‘|’, ‘-’, ‘+’, ‘x’, ‘o’, ‘O’, ‘.’, ‘*’}
+hatch_linewidth: unknown
+hatchcolor: <a href="#id33"><span class="problematic" id="id34">:mpltype:`color`</span></a> or ‘edge’ or None
+height: unknown
+in_layout: bool
+joinstyle: <cite>.JoinStyle</cite> or {‘miter’, ‘round’, ‘bevel’}
+label: object
+linestyle or ls: {‘-’, ‘–’, ‘-.’, ‘:’, ‘’, …} or (offset, on-off-seq)
+linewidth or lw: float or None
+mouseover: bool
+path_effects: list of <cite>.AbstractPathEffect</cite>
+picker: None or bool or float or callable
+rasterized: bool
+sketch_params: (scale: float, length: float, randomness: float)
+snap: bool or None
+transform: <cite>~matplotlib.transforms.Transform</cite>
+url: str
+visible: bool
+width: unknown
+x: unknown
+xy: (float, float)
+y: unknown
+zorder: float</p>
+</dd>
+</dl>
+<p>barh : Plot a horizontal bar plot.
+grouped_bar : Plot multiple datasets as grouped bar plot.
+bar_label : Add labels to bars.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>This is the <span class="xref std std-ref">pyplot wrapper</span> for <cite>.axes.Axes.bar</cite>.</p>
+</div>
+<p>Stacked bars can be achieved by passing individual <em>bottom</em> values per
+bar. See <span class="xref std std-doc">/gallery/lines_bars_and_markers/bar_stacked</span>.</p>
+</dd>
+</dl>
+<p>None
+&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp; colormaps &amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;
+Help on ColormapRegistry in module matplotlib.cm object:</p>
+<dl>
+<dt>class ColormapRegistry(collections.abc.Mapping)</dt><dd><div class="line-block">
+<div class="line">ColormapRegistry(cmaps)</div>
+<div class="line"><br /></div>
+<div class="line">Container for colormaps that are known to Matplotlib by name.</div>
+<div class="line"><br /></div>
+<div class="line">The universal registry instance is <cite>matplotlib.colormaps</cite>. There should be</div>
+<div class="line">no need for users to instantiate <cite>.ColormapRegistry</cite> themselves.</div>
+<div class="line"><br /></div>
+<div class="line">Read access uses a dict-like interface mapping names to <cite>.Colormap</cite>s::</div>
+<div class="line"><br /></div>
+<div class="line-block">
+<div class="line">import matplotlib as mpl</div>
+<div class="line">cmap = mpl.colormaps[‘viridis’]</div>
+<div class="line"><br /></div>
+</div>
+<div class="line">Returned <cite>.Colormap</cite>s are copies, so that their modification does not</div>
+<div class="line">change the global definition of the colormap.</div>
+<div class="line"><br /></div>
+<div class="line">Additional colormaps can be added via <cite>.ColormapRegistry.register</cite>::</div>
+<div class="line"><br /></div>
+<div class="line-block">
+<div class="line">mpl.colormaps.register(my_colormap)</div>
+<div class="line"><br /></div>
+</div>
+<div class="line">To get a list of all registered colormaps, you can do::</div>
+<div class="line"><br /></div>
+<div class="line-block">
+<div class="line">from matplotlib import colormaps</div>
+<div class="line">list(colormaps)</div>
+<div class="line"><br /></div>
+</div>
+<div class="line">Method resolution order:</div>
+<div class="line-block">
+<div class="line">ColormapRegistry</div>
+<div class="line">collections.abc.Mapping</div>
+<div class="line">collections.abc.Collection</div>
+<div class="line">collections.abc.Sized</div>
+<div class="line">collections.abc.Iterable</div>
+<div class="line">collections.abc.Container</div>
+<div class="line">builtins.object</div>
+<div class="line"><br /></div>
+</div>
+<div class="line">Methods defined here:</div>
+<div class="line"><br /></div>
+<div class="line">__call__(self)</div>
+<div class="line-block">
+<div class="line">Return a list of the registered colormap names.</div>
+<div class="line"><br /></div>
+<div class="line">This exists only for backward-compatibility in <cite>.pyplot</cite> which had a</div>
+<div class="line"><code class="docutils literal notranslate"><span class="pre">plt.colormaps()</span></code> method. The recommended way to get this list is</div>
+<div class="line">now <code class="docutils literal notranslate"><span class="pre">list(colormaps)</span></code>.</div>
+<div class="line"><br /></div>
+</div>
+<div class="line">__getitem__(self, item)</div>
+<div class="line"><br /></div>
+<div class="line">__init__(self, cmaps)</div>
+<div class="line-block">
+<div class="line">Initialize self.  See help(type(self)) for accurate signature.</div>
+<div class="line"><br /></div>
+</div>
+<div class="line">__iter__(self)</div>
+<div class="line"><br /></div>
+<div class="line">__len__(self)</div>
+<div class="line"><br /></div>
+<div class="line">__str__(self)</div>
+<div class="line-block">
+<div class="line">Return str(self).</div>
+<div class="line"><br /></div>
+</div>
+<div class="line">get_cmap(self, cmap)</div>
+<div class="line-block">
+<div class="line">Return a color map specified through <em>cmap</em>.</div>
+<div class="line"><br /></div>
+<div class="line">Parameters</div>
+<div class="line">———-</div>
+<div class="line">cmap : str or <cite>~matplotlib.colors.Colormap</cite> or None</div>
+<div class="line"><br /></div>
+<div class="line-block">
+<div class="line">- if a <cite>.Colormap</cite>, return it</div>
+<div class="line">- if a string, look it up in <code class="docutils literal notranslate"><span class="pre">mpl.colormaps</span></code></div>
+<div class="line">- if None, return the Colormap defined in <a href="#id35"><span class="problematic" id="id36">:rc:`image.cmap`</span></a></div>
+<div class="line"><br /></div>
+</div>
+<div class="line">Returns</div>
+<div class="line">——-</div>
+<div class="line">Colormap</div>
+<div class="line"><br /></div>
+</div>
+<div class="line">register(self, cmap, <a href="#id37"><span class="problematic" id="id38">*</span></a>, name=None, force=False)</div>
+<div class="line-block">
+<div class="line">Register a new colormap.</div>
+<div class="line"><br /></div>
+<div class="line">The colormap name can then be used as a string argument to any <code class="docutils literal notranslate"><span class="pre">cmap</span></code></div>
+<div class="line">parameter in Matplotlib. It is also available in <code class="docutils literal notranslate"><span class="pre">pyplot.get_cmap</span></code>.</div>
+<div class="line"><br /></div>
+<div class="line">The colormap registry stores a copy of the given colormap, so that</div>
+<div class="line">future changes to the original colormap instance do not affect the</div>
+<div class="line">registered colormap. Think of this as the registry taking a snapshot</div>
+<div class="line">of the colormap at registration.</div>
+<div class="line"><br /></div>
+<div class="line">Parameters</div>
+<div class="line">———-</div>
+<div class="line">cmap : matplotlib.colors.Colormap</div>
+<div class="line-block">
+<div class="line">The colormap to register.</div>
+<div class="line"><br /></div>
+</div>
+<div class="line">name : str, optional</div>
+<div class="line-block">
+<div class="line">The name for the colormap. If not given, <code class="docutils literal notranslate"><span class="pre">cmap.name</span></code> is used.</div>
+<div class="line"><br /></div>
+</div>
+<div class="line">force : bool, default: False</div>
+<div class="line-block">
+<div class="line">If False, a ValueError is raised if trying to overwrite an already</div>
+<div class="line">registered name. True supports overwriting registered colormaps</div>
+<div class="line">other than the builtin colormaps.</div>
+<div class="line"><br /></div>
+</div>
+</div>
+<div class="line">unregister(self, name)</div>
+<div class="line-block">
+<div class="line">Remove a colormap from the registry.</div>
+<div class="line"><br /></div>
+<div class="line">You cannot remove built-in colormaps.</div>
+<div class="line"><br /></div>
+<div class="line">If the named colormap is not registered, returns with no error, raises</div>
+<div class="line">if you try to de-register a default colormap.</div>
+<div class="line"><br /></div>
+<div class="line">.. warning::</div>
+<div class="line"><br /></div>
+<div class="line-block">
+<div class="line">Colormap names are currently a shared namespace that may be used</div>
+<div class="line">by multiple packages. Use <cite>unregister</cite> only if you know you</div>
+<div class="line">have registered that name before. In particular, do not</div>
+<div class="line">unregister just in case to clean the name before registering a</div>
+<div class="line">new colormap.</div>
+<div class="line"><br /></div>
+</div>
+<div class="line">Parameters</div>
+<div class="line">———-</div>
+<div class="line">name : str</div>
+<div class="line-block">
+<div class="line">The name of the colormap to be removed.</div>
+<div class="line"><br /></div>
+</div>
+<div class="line">Raises</div>
+<div class="line">——</div>
+<div class="line">ValueError</div>
+<div class="line-block">
+<div class="line">If you try to remove a default built-in colormap.</div>
+<div class="line"><br /></div>
+</div>
+</div>
+<div class="line">———————————————————————-</div>
+<div class="line">Data descriptors defined here:</div>
+<div class="line"><br /></div>
+<div class="line">__dict__</div>
+<div class="line-block">
+<div class="line">dictionary for instance variables</div>
+<div class="line"><br /></div>
+</div>
+<div class="line">__weakref__</div>
+<div class="line-block">
+<div class="line">list of weak references to the object</div>
+<div class="line"><br /></div>
+</div>
+<div class="line">———————————————————————-</div>
+<div class="line">Data and other attributes defined here:</div>
+<div class="line"><br /></div>
+<div class="line">__abstractmethods__ = frozenset()</div>
+<div class="line"><br /></div>
+<div class="line">———————————————————————-</div>
+<div class="line">Methods inherited from collections.abc.Mapping:</div>
+<div class="line"><br /></div>
+<div class="line">__contains__(self, key)</div>
+<div class="line"><br /></div>
+<div class="line">__eq__(self, other)</div>
+<div class="line-block">
+<div class="line">Return self==value.</div>
+<div class="line"><br /></div>
+</div>
+<div class="line">get(self, key, default=None)</div>
+<div class="line-block">
+<div class="line">D.get(k[,d]) -&gt; D[k] if k in D, else d.  d defaults to None.</div>
+<div class="line"><br /></div>
+</div>
+<div class="line">items(self)</div>
+<div class="line-block">
+<div class="line">D.items() -&gt; a set-like object providing a view on D’s items</div>
+<div class="line"><br /></div>
+</div>
+<div class="line">keys(self)</div>
+<div class="line-block">
+<div class="line">D.keys() -&gt; a set-like object providing a view on D’s keys</div>
+<div class="line"><br /></div>
+</div>
+<div class="line">values(self)</div>
+<div class="line-block">
+<div class="line">D.values() -&gt; an object providing a view on D’s values</div>
+<div class="line"><br /></div>
+</div>
+<div class="line">———————————————————————-</div>
+<div class="line">Data and other attributes inherited from collections.abc.Mapping:</div>
+<div class="line"><br /></div>
+<div class="line">__hash__ = None</div>
+<div class="line"><br /></div>
+<div class="line">__reversed__ = None</div>
+<div class="line"><br /></div>
+<div class="line">———————————————————————-</div>
+<div class="line">Class methods inherited from collections.abc.Collection:</div>
+<div class="line"><br /></div>
+<div class="line">__subclasshook__(C) from abc.ABCMeta</div>
+<div class="line-block">
+<div class="line">Abstract classes can override this to customize issubclass().</div>
+<div class="line"><br /></div>
+<div class="line">This is invoked early on by abc.ABCMeta.__subclasscheck__().</div>
+<div class="line">It should return True, False or NotImplemented.  If it returns</div>
+<div class="line">NotImplemented, the normal algorithm is used.  Otherwise, it</div>
+<div class="line">overrides the normal algorithm (and the outcome is cached).</div>
+<div class="line"><br /></div>
+</div>
+<div class="line">———————————————————————-</div>
+<div class="line">Class methods inherited from collections.abc.Iterable:</div>
+<div class="line"><br /></div>
+<div class="line">__class_getitem__ = GenericAlias(…) from abc.ABCMeta</div>
+<div class="line-block">
+<div class="line">Represent a PEP 585 generic type</div>
+<div class="line"><br /></div>
+<div class="line">E.g. for t = list[int], t.__origin__ is list and t.__args__ is (int,).</div>
+</div>
+</div>
+</dd>
+</dl>
+<p>None
+&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp; draw &amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;
+Help on function draw in module matplotlib.pyplot:</p>
+<dl>
+<dt>draw() -&gt; ‘None’</dt><dd><p>Redraw the current figure.</p>
+<p>This is used to update a figure that has been altered, but not
+automatically re-drawn.  If interactive mode is on (via <cite>.ion()</cite>), this
+should be only rarely needed, but there may be ways to modify the state of
+a figure without marking it as “stale”.  Please report these cases as bugs.</p>
+<p>This is equivalent to calling <code class="docutils literal notranslate"><span class="pre">fig.canvas.draw_idle()</span></code>, where <code class="docutils literal notranslate"><span class="pre">fig</span></code> is
+the current figure.</p>
+<p>.FigureCanvasBase.draw_idle
+.FigureCanvasBase.draw</p>
+</dd>
+</dl>
+<p>None
+&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp; hist &amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;
+Help on function hist in module matplotlib.pyplot:</p>
+<dl>
+<dt>hist(x: ‘ArrayLike | Sequence[ArrayLike]’, bins: ‘int | Sequence[float] | str | None’ = None, <a href="#id39"><span class="problematic" id="id40">*</span></a>, range: ‘tuple[float, float] | None’ = None, density: ‘bool’ = False, weights: ‘ArrayLike | None’ = None, cumulative: ‘bool | float’ = False, bottom: ‘ArrayLike | float | None’ = None, histtype: “Literal[‘bar’, ‘barstacked’, ‘step’, ‘stepfilled’]” = ‘bar’, align: “Literal[‘left’, ‘mid’, ‘right’]” = ‘mid’, orientation: “Literal[‘vertical’, ‘horizontal’]” = ‘vertical’, rwidth: ‘float | None’ = None, log: ‘bool’ = False, color: ‘ColorType | Sequence[ColorType] | None’ = None, label: ‘str | Sequence[str] | None’ = None, stacked: ‘bool’ = False, data: ‘DataParamType’ = None, <a href="#id41"><span class="problematic" id="id42">**</span></a>kwargs) -&gt; ‘tuple[np.ndarray | list[np.ndarray], np.ndarray, BarContainer | Polygon | list[BarContainer | Polygon]]’</dt><dd><p>Compute and plot a histogram.</p>
+<p>This method uses <cite>numpy.histogram</cite> to bin the data in <em>x</em> and count the
+number of values in each bin, then draws the distribution either as a
+<cite>.BarContainer</cite> or <cite>.Polygon</cite>. The <em>bins</em>, <em>range</em>, <em>density</em>, and
+<em>weights</em> parameters are forwarded to <cite>numpy.histogram</cite>.</p>
+<p>If the data has already been binned and counted, use <cite>~.bar</cite> or
+<cite>~.stairs</cite> to plot the distribution:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">counts</span><span class="p">,</span> <span class="n">bins</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">histogram</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">stairs</span><span class="p">(</span><span class="n">counts</span><span class="p">,</span> <span class="n">bins</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Alternatively, plot pre-computed bins and counts using <code class="docutils literal notranslate"><span class="pre">hist()</span></code> by
+treating each bin as a single point with a weight equal to its count:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">plt</span><span class="o">.</span><span class="n">hist</span><span class="p">(</span><span class="n">bins</span><span class="p">[:</span><span class="o">-</span><span class="mi">1</span><span class="p">],</span> <span class="n">bins</span><span class="p">,</span> <span class="n">weights</span><span class="o">=</span><span class="n">counts</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>The data input <em>x</em> can be a singular array, a list of datasets of
+potentially different lengths ([<em>x0</em>, <em>x1</em>, …]), or a 2D ndarray in
+which each column is a dataset. Note that the ndarray form is
+transposed relative to the list form. If the input is an array, then
+the return value is a tuple (<em>n</em>, <em>bins</em>, <em>patches</em>); if the input is a
+sequence of arrays, then the return value is a tuple
+([<em>n0</em>, <em>n1</em>, …], <em>bins</em>, [<em>patches0</em>, <em>patches1</em>, …]).</p>
+<p>Masked arrays are not supported.</p>
+<dl>
+<dt>x<span class="classifier">(n,) array or sequence of (n,) arrays</span></dt><dd><p>Input values, this takes either a single array or a sequence of
+arrays which are not required to be of the same length.</p>
+</dd>
+<dt>bins<span class="classifier">int or sequence or str, default: <a href="#id43"><span class="problematic" id="id44">:rc:`hist.bins`</span></a></span></dt><dd><p>If <em>bins</em> is an integer, it defines the number of equal-width bins
+in the range.</p>
+<p>If <em>bins</em> is a sequence, it defines the bin edges, including the
+left edge of the first bin and the right edge of the last bin;
+in this case, bins may be unequally spaced.  All but the last
+(righthand-most) bin is half-open.  In other words, if <em>bins</em> is:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">]</span>
+</pre></div>
+</div>
+<p>then the first bin is <code class="docutils literal notranslate"><span class="pre">[1,</span> <span class="pre">2)</span></code> (including 1, but excluding 2) and
+the second <code class="docutils literal notranslate"><span class="pre">[2,</span> <span class="pre">3)</span></code>.  The last bin, however, is <code class="docutils literal notranslate"><span class="pre">[3,</span> <span class="pre">4]</span></code>, which
+<em>includes</em> 4.</p>
+<p>If <em>bins</em> is a string, it is one of the binning strategies
+supported by <cite>numpy.histogram_bin_edges</cite>: ‘auto’, ‘fd’, ‘doane’,
+‘scott’, ‘stone’, ‘rice’, ‘sturges’, or ‘sqrt’.</p>
+</dd>
+<dt>range<span class="classifier">tuple or None, default: None</span></dt><dd><p>The lower and upper range of the bins. Lower and upper outliers
+are ignored. If not provided, <em>range</em> is <code class="docutils literal notranslate"><span class="pre">(x.min(),</span> <span class="pre">x.max())</span></code>.
+Range has no effect if <em>bins</em> is a sequence.</p>
+<p>If <em>bins</em> is a sequence or <em>range</em> is specified, autoscaling
+is based on the specified bin range instead of the
+range of x.</p>
+</dd>
+<dt>density<span class="classifier">bool, default: False</span></dt><dd><p>If <code class="docutils literal notranslate"><span class="pre">True</span></code>, draw and return a probability density: each bin
+will display the bin’s raw count divided by the total number of
+counts <em>and the bin width</em>
+(<code class="docutils literal notranslate"><span class="pre">density</span> <span class="pre">=</span> <span class="pre">counts</span> <span class="pre">/</span> <span class="pre">(sum(counts)</span> <span class="pre">*</span> <span class="pre">np.diff(bins))</span></code>),
+so that the area under the histogram integrates to 1
+(<code class="docutils literal notranslate"><span class="pre">np.sum(density</span> <span class="pre">*</span> <span class="pre">np.diff(bins))</span> <span class="pre">==</span> <span class="pre">1</span></code>).</p>
+<p>If <em>stacked</em> is also <code class="docutils literal notranslate"><span class="pre">True</span></code>, the sum of the histograms is
+normalized to 1.</p>
+</dd>
+<dt>weights<span class="classifier">(n,) array-like or None, default: None</span></dt><dd><p>An array of weights, of the same shape as <em>x</em>.  Each value in
+<em>x</em> only contributes its associated weight towards the bin count
+(instead of 1).  If <em>density</em> is <code class="docutils literal notranslate"><span class="pre">True</span></code>, the weights are
+normalized, so that the integral of the density over the range
+remains 1.</p>
+</dd>
+<dt>cumulative<span class="classifier">bool or -1, default: False</span></dt><dd><p>If <code class="docutils literal notranslate"><span class="pre">True</span></code>, then a histogram is computed where each bin gives the
+counts in that bin plus all bins for smaller values. The last bin
+gives the total number of datapoints.</p>
+<p>If <em>density</em> is also <code class="docutils literal notranslate"><span class="pre">True</span></code> then the histogram is normalized such
+that the last bin equals 1.</p>
+<p>If <em>cumulative</em> is a number less than 0 (e.g., -1), the direction
+of accumulation is reversed.  In this case, if <em>density</em> is also
+<code class="docutils literal notranslate"><span class="pre">True</span></code>, then the histogram is normalized such that the first bin
+equals 1.</p>
+</dd>
+<dt>bottom<span class="classifier">array-like or float, default: 0</span></dt><dd><p>Location of the bottom of each bin, i.e. bins are drawn from
+<code class="docutils literal notranslate"><span class="pre">bottom</span></code> to <code class="docutils literal notranslate"><span class="pre">bottom</span> <span class="pre">+</span> <span class="pre">hist(x,</span> <span class="pre">bins)</span></code> If a scalar, the bottom
+of each bin is shifted by the same amount. If an array, each bin
+is shifted independently and the length of bottom must match the
+number of bins. If None, defaults to 0.</p>
+</dd>
+<dt>histtype<span class="classifier">{‘bar’, ‘barstacked’, ‘step’, ‘stepfilled’}, default: ‘bar’</span></dt><dd><p>The type of histogram to draw.</p>
+<ul class="simple">
+<li><p>‘bar’ is a traditional bar-type histogram.  If multiple data
+are given the bars are arranged side by side.</p></li>
+<li><p>‘barstacked’ is a bar-type histogram where multiple
+data are stacked on top of each other.</p></li>
+<li><p>‘step’ generates a lineplot that is by default unfilled.</p></li>
+<li><p>‘stepfilled’ generates a lineplot that is by default filled.</p></li>
+</ul>
+</dd>
+<dt>align<span class="classifier">{‘left’, ‘mid’, ‘right’}, default: ‘mid’</span></dt><dd><p>The horizontal alignment of the histogram bars.</p>
+<ul class="simple">
+<li><p>‘left’: bars are centered on the left bin edges.</p></li>
+<li><p>‘mid’: bars are centered between the bin edges.</p></li>
+<li><p>‘right’: bars are centered on the right bin edges.</p></li>
+</ul>
+</dd>
+<dt>orientation<span class="classifier">{‘vertical’, ‘horizontal’}, default: ‘vertical’</span></dt><dd><p>If ‘horizontal’, <cite>~.Axes.barh</cite> will be used for bar-type histograms
+and the <em>bottom</em> kwarg will be the left edges.</p>
+</dd>
+<dt>rwidth<span class="classifier">float or None, default: None</span></dt><dd><p>The relative width of the bars as a fraction of the bin width.  If
+<code class="docutils literal notranslate"><span class="pre">None</span></code>, automatically compute the width.</p>
+<p>Ignored if <em>histtype</em> is ‘step’ or ‘stepfilled’.</p>
+</dd>
+<dt>log<span class="classifier">bool, default: False</span></dt><dd><p>If <code class="docutils literal notranslate"><span class="pre">True</span></code>, the histogram axis will be set to a log scale.</p>
+</dd>
+<dt>color<span class="classifier"><a href="#id45"><span class="problematic" id="id46">:mpltype:`color`</span></a> or list of <a href="#id47"><span class="problematic" id="id48">:mpltype:`color`</span></a> or None, default: None</span></dt><dd><p>Color or sequence of colors, one per dataset.  Default (<code class="docutils literal notranslate"><span class="pre">None</span></code>)
+uses the standard line color sequence.</p>
+<div class="versionadded">
+<p><span class="versionmodified added">Added in version 3.10: </span>It is now possible to use a single color with multiple datasets.</p>
+</div>
+</dd>
+<dt>label<span class="classifier">str or list of str, optional</span></dt><dd><p>String, or sequence of strings to match multiple datasets.  Bar
+charts yield multiple patches per dataset, but only the first gets
+the label, so that <cite>~.Axes.legend</cite> will work as expected.</p>
+</dd>
+<dt>stacked<span class="classifier">bool, default: False</span></dt><dd><p>If <code class="docutils literal notranslate"><span class="pre">True</span></code>, multiple data are stacked on top of each other If
+<code class="docutils literal notranslate"><span class="pre">False</span></code> multiple data are arranged side by side if histtype is
+‘bar’ or on top of each other if histtype is ‘step’</p>
+</dd>
+</dl>
+<dl>
+<dt>n<span class="classifier">array or list of arrays</span></dt><dd><p>The values of the histogram bins. See <em>density</em> and <em>weights</em> for a
+description of the possible semantics.  If input <em>x</em> is an array,
+then this is an array of length <em>nbins</em>. If input is a sequence of
+arrays <code class="docutils literal notranslate"><span class="pre">[data1,</span> <span class="pre">data2,</span> <span class="pre">...]</span></code>, then this is a list of arrays with
+the values of the histograms for each of the arrays in the same
+order.  The dtype of the array <em>n</em> (or of its element arrays) will
+always be float even if no weighting or normalization is used.</p>
+</dd>
+<dt>bins<span class="classifier">array</span></dt><dd><p>The edges of the bins. Length nbins + 1 (nbins left edges and right
+edge of last bin).  Always a single array even when multiple data
+sets are passed in.</p>
+</dd>
+<dt>patches<span class="classifier"><cite>.BarContainer</cite> or list of a single <cite>.Polygon</cite> or list of such objects</span></dt><dd><p>Container of individual artists used to create the histogram
+or list of such containers if there are multiple input datasets.</p>
+</dd>
+</dl>
+<dl>
+<dt>data<span class="classifier">indexable object, optional</span></dt><dd><p>If given, the following parameters also accept a string <code class="docutils literal notranslate"><span class="pre">s</span></code>, which is
+interpreted as <code class="docutils literal notranslate"><span class="pre">data[s]</span></code> if <code class="docutils literal notranslate"><span class="pre">s</span></code> is a key in <code class="docutils literal notranslate"><span class="pre">data</span></code>:</p>
+<p><em>x</em>, <em>weights</em></p>
+</dd>
+<dt><a href="#id49"><span class="problematic" id="id50">**</span></a>kwargs</dt><dd><p><cite>~matplotlib.patches.Patch</cite> properties. The following properties
+additionally accept a sequence of values corresponding to the
+datasets in <em>x</em>:
+<em>edgecolor</em>, <em>facecolor</em>, <em>linewidth</em>, <em>linestyle</em>, <em>hatch</em>.</p>
+<div class="versionadded">
+<p><span class="versionmodified added">Added in version 3.10: </span>Allowing sequences of values in above listed Patch properties.</p>
+</div>
+</dd>
+</dl>
+<p>hist2d : 2D histogram with rectangular bins
+hexbin : 2D histogram with hexagonal bins
+stairs : Plot a pre-computed histogram
+bar : Plot a pre-computed histogram</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>This is the <span class="xref std std-ref">pyplot wrapper</span> for <cite>.axes.Axes.hist</cite>.</p>
+</div>
+<p>For large numbers of bins (&gt;1000), plotting can be significantly
+accelerated by using <cite>~.Axes.stairs</cite> to plot a pre-computed histogram
+(<code class="docutils literal notranslate"><span class="pre">plt.stairs(*np.histogram(data))</span></code>), or by setting <em>histtype</em> to
+‘step’ or ‘stepfilled’ rather than ‘bar’ or ‘barstacked’.</p>
+</dd>
+</dl>
+<p>None
+&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp; errorbar &amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;
+Help on function errorbar in module matplotlib.pyplot:</p>
+<dl>
+<dt>errorbar(x: ‘float | ArrayLike’, y: ‘float | ArrayLike’, yerr: ‘float | ArrayLike | None’ = None, xerr: ‘float | ArrayLike | None’ = None, fmt: ‘str’ = ‘’, <a href="#id51"><span class="problematic" id="id52">*</span></a>, ecolor: ‘ColorType | None’ = None, elinewidth: ‘float | None’ = None, capsize: ‘float | None’ = None, barsabove: ‘bool’ = False, lolims: ‘bool | ArrayLike’ = False, uplims: ‘bool | ArrayLike’ = False, xlolims: ‘bool | ArrayLike’ = False, xuplims: ‘bool | ArrayLike’ = False, errorevery: ‘int | tuple[int, int]’ = 1, capthick: ‘float | None’ = None, elinestyle: ‘LineStyleType | None’ = None, data: ‘DataParamType’ = None, <a href="#id53"><span class="problematic" id="id54">**</span></a>kwargs) -&gt; ‘ErrorbarContainer’</dt><dd><p>Plot y versus x as lines and/or markers with attached errorbars.</p>
+<p><em>x</em>, <em>y</em> define the data locations, <em>xerr</em>, <em>yerr</em> define the errorbar
+sizes. By default, this draws the data markers/lines as well as the
+errorbars. Use fmt=’none’ to draw errorbars without any data markers.</p>
+<div class="versionadded">
+<p><span class="versionmodified added">Added in version 3.7: </span>Caps and error lines are drawn in polar coordinates on polar plots.</p>
+</div>
+<dl>
+<dt>x, y<span class="classifier">float or array-like</span></dt><dd><p>The data positions.</p>
+</dd>
+<dt>xerr, yerr<span class="classifier">float or array-like, shape(N,) or shape(2, N), optional</span></dt><dd><p>The errorbar sizes:</p>
+<ul class="simple">
+<li><p>scalar: Symmetric +/- values for all data points.</p></li>
+<li><p>shape(N,): Symmetric +/-values for each data point.</p></li>
+<li><p>shape(2, N): Separate - and + values for each bar. First row
+contains the lower errors, the second row contains the upper
+errors.</p></li>
+<li><p><em>None</em>: No errorbar.</p></li>
+</ul>
+<p>All values must be &gt;= 0.</p>
+<p>See <span class="xref std std-doc">/gallery/statistics/errorbar_features</span>
+for an example on the usage of <code class="docutils literal notranslate"><span class="pre">xerr</span></code> and <code class="docutils literal notranslate"><span class="pre">yerr</span></code>.</p>
+</dd>
+<dt>fmt<span class="classifier">str, default: ‘’</span></dt><dd><p>The format for the data points / data lines. See <cite>.plot</cite> for
+details.</p>
+<p>Use ‘none’ (case-insensitive) to plot errorbars without any data
+markers.</p>
+</dd>
+<dt>ecolor<span class="classifier"><a href="#id55"><span class="problematic" id="id56">:mpltype:`color`</span></a>, default: None</span></dt><dd><p>The color of the errorbar lines.  If None, use the color of the
+line connecting the markers.</p>
+</dd>
+<dt>elinewidth<span class="classifier">float, default: None</span></dt><dd><p>The linewidth of the errorbar lines. If None, the linewidth of
+the current style is used.</p>
+</dd>
+<dt>elinestyle<span class="classifier">str or tuple, default: ‘solid’</span></dt><dd><p>The linestyle of the errorbar lines.
+Valid values for linestyles include {‘-’, ‘–’, ‘-.’,</p>
+<blockquote>
+<div><p>‘:’, ‘’, (offset, on-off-seq)}. See <cite>.Line2D.set_linestyle</cite> for a
+complete description.</p>
+</div></blockquote>
+</dd>
+<dt>capsize<span class="classifier">float, default: <a href="#id57"><span class="problematic" id="id58">:rc:`errorbar.capsize`</span></a></span></dt><dd><p>The length of the error bar caps in points.</p>
+</dd>
+<dt>capthick<span class="classifier">float, default: None</span></dt><dd><p>An alias to the keyword argument <em>markeredgewidth</em> (a.k.a. <em>mew</em>).
+This setting is a more sensible name for the property that
+controls the thickness of the error bar cap in points. For
+backwards compatibility, if <em>mew</em> or <em>markeredgewidth</em> are given,
+then they will over-ride <em>capthick</em>. This may change in future
+releases.</p>
+</dd>
+<dt>barsabove<span class="classifier">bool, default: False</span></dt><dd><p>If True, will plot the errorbars above the plot
+symbols. Default is below.</p>
+</dd>
+<dt>lolims, uplims, xlolims, xuplims<span class="classifier">bool or array-like, default: False</span></dt><dd><p>These arguments can be used to indicate that a value gives only
+upper/lower limits.  In that case a caret symbol is used to
+indicate this. <em>lims</em>-arguments may be scalars, or array-likes of
+the same length as <em>xerr</em> and <em>yerr</em>.  To use limits with inverted
+axes, <cite>~.Axes.set_xlim</cite> or <cite>~.Axes.set_ylim</cite> must be called before
+<code class="xref py py-meth docutils literal notranslate"><span class="pre">errorbar()</span></code>.  Note the tricky parameter names: setting e.g.
+<em>lolims</em> to True means that the y-value is a <em>lower</em> limit of the
+True value, so, only an <em>upward</em>-pointing arrow will be drawn!</p>
+</dd>
+<dt>errorevery<span class="classifier">int or (int, int), default: 1</span></dt><dd><p>draws error bars on a subset of the data. <em>errorevery</em> =N draws
+error bars on the points (x[::N], y[::N]).
+<em>errorevery</em> =(start, N) draws error bars on the points
+(x[start::N], y[start::N]). e.g. errorevery=(6, 3)
+adds error bars to the data at (x[6], x[9], x[12], x[15], …).
+Used to avoid overlapping error bars when two series share x-axis
+values.</p>
+</dd>
+</dl>
+<dl class="simple">
+<dt><cite>.ErrorbarContainer</cite></dt><dd><p>The container contains:</p>
+<ul class="simple">
+<li><p>data_line : A <cite>~matplotlib.lines.Line2D</cite> instance of x, y plot markers
+and/or line.</p></li>
+<li><p>caplines : A tuple of <cite>~matplotlib.lines.Line2D</cite> instances of the error
+bar caps.</p></li>
+<li><p>barlinecols : A tuple of <cite>.LineCollection</cite> with the horizontal and
+vertical error ranges.</p></li>
+</ul>
+</dd>
+</dl>
+<dl>
+<dt>data<span class="classifier">indexable object, optional</span></dt><dd><p>If given, the following parameters also accept a string <code class="docutils literal notranslate"><span class="pre">s</span></code>, which is
+interpreted as <code class="docutils literal notranslate"><span class="pre">data[s]</span></code> if <code class="docutils literal notranslate"><span class="pre">s</span></code> is a key in <code class="docutils literal notranslate"><span class="pre">data</span></code>:</p>
+<p><em>x</em>, <em>y</em>, <em>xerr</em>, <em>yerr</em></p>
+</dd>
+<dt><a href="#id59"><span class="problematic" id="id60">**</span></a>kwargs</dt><dd><p>All other keyword arguments are passed on to the <cite>~.Axes.plot</cite> call
+drawing the markers. For example, this code makes big red squares
+with thick green edges:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">yerr</span> <span class="o">=</span> <span class="n">rand</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="mi">10</span><span class="p">)</span>
+<span class="n">errorbar</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">yerr</span><span class="p">,</span> <span class="n">marker</span><span class="o">=</span><span class="s1">&#39;s&#39;</span><span class="p">,</span> <span class="n">mfc</span><span class="o">=</span><span class="s1">&#39;red&#39;</span><span class="p">,</span>
+         <span class="n">mec</span><span class="o">=</span><span class="s1">&#39;green&#39;</span><span class="p">,</span> <span class="n">ms</span><span class="o">=</span><span class="mi">20</span><span class="p">,</span> <span class="n">mew</span><span class="o">=</span><span class="mi">4</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>where <em>mfc</em>, <em>mec</em>, <em>ms</em> and <em>mew</em> are aliases for the longer
+property names, <em>markerfacecolor</em>, <em>markeredgecolor</em>, <em>markersize</em>
+and <em>markeredgewidth</em>.</p>
+<p>Valid kwargs for the marker properties are:</p>
+<ul class="simple">
+<li><p><em>dashes</em></p></li>
+<li><p><em>dash_capstyle</em></p></li>
+<li><p><em>dash_joinstyle</em></p></li>
+<li><p><em>drawstyle</em></p></li>
+<li><p><em>fillstyle</em></p></li>
+<li><p><em>linestyle</em></p></li>
+<li><p><em>marker</em></p></li>
+<li><p><em>markeredgecolor</em></p></li>
+<li><p><em>markeredgewidth</em></p></li>
+<li><p><em>markerfacecolor</em></p></li>
+<li><p><em>markerfacecoloralt</em></p></li>
+<li><p><em>markersize</em></p></li>
+<li><p><em>markevery</em></p></li>
+<li><p><em>solid_capstyle</em></p></li>
+<li><p><em>solid_joinstyle</em></p></li>
+</ul>
+<p>Refer to the corresponding <cite>.Line2D</cite> property for more details:</p>
+<p>Properties:
+agg_filter: a filter function, which takes a (m, n, 3) float array and a dpi value, and returns a (m, n, 3) array and two offsets from the bottom left corner of the image
+alpha: float or None
+animated: bool
+antialiased or aa: bool
+clip_box: <cite>~matplotlib.transforms.BboxBase</cite> or None
+clip_on: bool
+clip_path: Patch or (Path, Transform) or None
+color or c: <a href="#id61"><span class="problematic" id="id62">:mpltype:`color`</span></a>
+dash_capstyle: <cite>.CapStyle</cite> or {‘butt’, ‘projecting’, ‘round’}
+dash_joinstyle: <cite>.JoinStyle</cite> or {‘miter’, ‘round’, ‘bevel’}
+dashes: sequence of floats (on/off ink in points) or (None, None)
+data: (2, N) array or two 1D arrays
+drawstyle or ds: {‘default’, ‘steps’, ‘steps-pre’, ‘steps-mid’, ‘steps-post’}, default: ‘default’
+figure: <cite>~matplotlib.figure.Figure</cite> or <cite>~matplotlib.figure.SubFigure</cite>
+fillstyle: {‘full’, ‘left’, ‘right’, ‘bottom’, ‘top’, ‘none’}
+gapcolor: <a href="#id63"><span class="problematic" id="id64">:mpltype:`color`</span></a> or None
+gid: str
+in_layout: bool
+label: object
+linestyle or ls: {‘-’, ‘–’, ‘-.’, ‘:’, ‘’, …} or (offset, on-off-seq)
+linewidth or lw: float
+marker: marker style string, <cite>~.path.Path</cite> or <cite>~.markers.MarkerStyle</cite>
+markeredgecolor or mec: <a href="#id65"><span class="problematic" id="id66">:mpltype:`color`</span></a>
+markeredgewidth or mew: float
+markerfacecolor or mfc: <a href="#id67"><span class="problematic" id="id68">:mpltype:`color`</span></a>
+markerfacecoloralt or mfcalt: <a href="#id69"><span class="problematic" id="id70">:mpltype:`color`</span></a>
+markersize or ms: float
+markevery: None or int or (int, int) or slice or list[int] or float or (float, float) or list[bool]
+mouseover: bool
+path_effects: list of <cite>.AbstractPathEffect</cite>
+picker: float or callable[[Artist, Event], tuple[bool, dict]]
+pickradius: float
+rasterized: bool
+sketch_params: (scale: float, length: float, randomness: float)
+snap: bool or None
+solid_capstyle: <cite>.CapStyle</cite> or {‘butt’, ‘projecting’, ‘round’}
+solid_joinstyle: <cite>.JoinStyle</cite> or {‘miter’, ‘round’, ‘bevel’}
+transform: unknown
+url: str
+visible: bool
+xdata: 1D array
+ydata: 1D array
+zorder: float</p>
+</dd>
+</dl>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>This is the <span class="xref std std-ref">pyplot wrapper</span> for <cite>.axes.Axes.errorbar</cite>.</p>
+</div>
+</dd>
+</dl>
+<p>None
+&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp; imsave &amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;
+Help on function imsave in module matplotlib.pyplot:</p>
+<dl>
+<dt>imsave(fname: ‘str | os.PathLike | BinaryIO’, arr: ‘ArrayLike’, <a href="#id71"><span class="problematic" id="id72">**</span></a>kwargs) -&gt; ‘None’</dt><dd><p>Colormap and save an array as an image file.</p>
+<p>RGB(A) images are passed through.  Single channel images will be
+colormapped according to <em>cmap</em> and <em>norm</em>.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>If you want to save a single channel image as gray scale please use an
+image I/O library (such as pillow, tifffile, or imageio) directly.</p>
+</div>
+<dl>
+<dt>fname<span class="classifier">str or path-like or file-like</span></dt><dd><p>A path or a file-like object to store the image in.
+If <em>format</em> is not set, then the output format is inferred from the
+extension of <em>fname</em>, if any, and from <a href="#id73"><span class="problematic" id="id74">:rc:`savefig.format`</span></a> otherwise.
+If <em>format</em> is set, it determines the output format.</p>
+</dd>
+<dt>arr<span class="classifier">array-like</span></dt><dd><p>The image data. Accepts NumPy arrays or sequences
+(e.g., lists or tuples). The shape can be one of
+MxN (luminance), MxNx3 (RGB) or MxNx4 (RGBA).</p>
+</dd>
+<dt>vmin, vmax<span class="classifier">float, optional</span></dt><dd><p><em>vmin</em> and <em>vmax</em> set the color scaling for the image by fixing the
+values that map to the colormap color limits. If either <em>vmin</em>
+or <em>vmax</em> is None, that limit is determined from the <em>arr</em>
+min/max value.</p>
+</dd>
+<dt>cmap<span class="classifier">str or <cite>~matplotlib.colors.Colormap</cite>, default: <a href="#id75"><span class="problematic" id="id76">:rc:`image.cmap`</span></a></span></dt><dd><p>A Colormap instance or registered colormap name. The colormap
+maps scalar data to colors. It is ignored for RGB(A) data.</p>
+</dd>
+<dt>format<span class="classifier">str, optional</span></dt><dd><p>The file format, e.g. ‘png’, ‘pdf’, ‘svg’, …  The behavior when this
+is unset is documented under <em>fname</em>.</p>
+</dd>
+<dt>origin<span class="classifier">{‘upper’, ‘lower’}, default: <a href="#id77"><span class="problematic" id="id78">:rc:`image.origin`</span></a></span></dt><dd><p>Indicates whether the <code class="docutils literal notranslate"><span class="pre">(0,</span> <span class="pre">0)</span></code> index of the array is in the upper
+left or lower left corner of the Axes.</p>
+</dd>
+<dt>dpi<span class="classifier">float</span></dt><dd><p>The DPI to store in the metadata of the file.  This does not affect the
+resolution of the output image.  Depending on file format, this may be
+rounded to the nearest integer.</p>
+</dd>
+<dt>metadata<span class="classifier">dict, optional</span></dt><dd><p>Metadata in the image file.  The supported keys depend on the output
+format, see the documentation of the respective backends for more
+information.
+Currently only supported for “png”, “pdf”, “ps”, “eps”, and “svg”.</p>
+</dd>
+<dt>pil_kwargs<span class="classifier">dict, optional</span></dt><dd><p>Keyword arguments passed to <cite>PIL.Image.Image.save</cite>.  If the ‘pnginfo’
+key is present, it completely overrides <em>metadata</em>, including the
+default ‘Software’ key.</p>
+</dd>
+</dl>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>This is equivalent to <cite>matplotlib.image.imsave</cite>.</p>
+</div>
+</dd>
+</dl>
+<p>None
+&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp; stem &amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;
+Help on function stem in module matplotlib.pyplot:</p>
+<dl>
+<dt>stem(<a href="#id79"><span class="problematic" id="id80">*</span></a>args: ‘ArrayLike | str’, linefmt: ‘str | None’ = None, markerfmt: ‘str | None’ = None, basefmt: ‘str | None’ = None, bottom: ‘float’ = 0, label: ‘str | None’ = None, orientation: “Literal[‘vertical’, ‘horizontal’]” = ‘vertical’, data: ‘DataParamType’ = None) -&gt; ‘StemContainer’</dt><dd><p>Create a stem plot.</p>
 <p>A stem plot draws lines perpendicular to a baseline at each location
 <em>locs</em> from the baseline to <em>heads</em>, and places a marker there. For
 vertical stem plots (the default), the <em>locs</em> are <em>x</em> positions, and
 the <em>heads</em> are <em>y</em> values. For horizontal stem plots, the <em>locs</em> are
 <em>y</em> positions, and the <em>heads</em> are <em>x</em> values.</p>
-</dd>
-</dl>
-<p>Un gráfico de tallos (stem plot) traza líneas perpendiculares a una línea base en cada ubicación especificada (<cite>locs</cite>), extendiéndose desde dicha línea hasta los extremos (o «cabezas»), y coloca un marcador en ese punto. En los gráficos de tallos verticales (la opción predeterminada), las ubicaciones corresponden a posiciones en el eje x y los extremos a valores en el eje y; en los gráficos horizontales, las ubicaciones corresponden a posiciones en el eje y y los extremos a valores en el eje x.</p>
-<blockquote>
-<div><p>Call signature:</p>
+<p>Call signature:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">stem</span><span class="p">([</span><span class="n">locs</span><span class="p">,]</span> <span class="n">heads</span><span class="p">,</span> <span class="n">linefmt</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">markerfmt</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">basefmt</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span>
 </pre></div>
 </div>
 <p>The <em>locs</em>-positions are optional. <em>linefmt</em> may be provided as
 positional, but all other formats must be provided as keyword
 arguments.</p>
-</div></blockquote>
-<p>Las posiciones <cite>locs</cite> son opcionales. <cite>linefmt</cite> puede especificarse como argumento posicional, pero todos los demás formatos deben indicarse como argumentos de palabra clave.</p>
-<blockquote>
-<div><dl class="simple">
+<dl>
 <dt>locs<span class="classifier">array-like, default: (0, 1, …, len(heads) - 1)</span></dt><dd><p>For vertical stem plots, the x-positions of the stems.
 For horizontal stem plots, the y-positions of the stems.</p>
 </dd>
-</dl>
-</div></blockquote>
-<p>Para los gráficos de tallos verticales, las posiciones x de los tallos. Para los gráficos de tallos horizontales, las posiciones y de los tallos.</p>
-<blockquote>
-<div><dl class="simple">
 <dt>heads<span class="classifier">array-like</span></dt><dd><p>For vertical stem plots, the y-values of the stem heads.
 For horizontal stem plots, the x-values of the stem heads.</p>
 </dd>
-</dl>
-</div></blockquote>
-<p>Para los gráficos de tallos verticales, los valores y de los extremos de los tallos. Para los gráficos de tallos horizontales, los valores x de los extremos de los tallos.</p>
-<blockquote>
-<div><dl>
 <dt>linefmt<span class="classifier">str, optional</span></dt><dd><p>A string defining the color and/or linestyle of the vertical lines:</p>
 <table class="docutils align-default">
 <thead>
@@ -198,12 +996,13 @@ interpreted as <code class="docutils literal notranslate"><span class="pre">data
 <a class="reference external" href="https://www.mathworks.com/help/matlab/ref/stem.html">stem</a>
 which inspired this method.</p>
 </div>
-</div></blockquote>
-<p>None</p>
-<p><strong>&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp; plot &amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;</strong></p>
-<p>Help on function plot in module matplotlib.pyplot:</p>
+</dd>
+</dl>
+<p>None
+&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp; plot &amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;
+Help on function plot in module matplotlib.pyplot:</p>
 <dl>
-<dt>plot(<a href="#id3"><span class="problematic" id="id4">*</span></a>args: ‘float | ArrayLike | str’, scalex: ‘bool’ = True, scaley: ‘bool’ = True, data: ‘DataParamType’ = None, <a href="#id5"><span class="problematic" id="id6">**</span></a>kwargs) -&gt; ‘list[Line2D]’</dt><dd><p>Plot y versus x as lines and/or markers.</p>
+<dt>plot(<a href="#id81"><span class="problematic" id="id82">*</span></a>args: ‘float | ArrayLike | str’, scalex: ‘bool’ = True, scaley: ‘bool’ = True, data: ‘DataParamType’ = None, <a href="#id83"><span class="problematic" id="id84">**</span></a>kwargs) -&gt; ‘list[Line2D]’</dt><dd><p>Plot y versus x as lines and/or markers.</p>
 <p>Call signatures:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">plot</span><span class="p">([</span><span class="n">x</span><span class="p">],</span> <span class="n">y</span><span class="p">,</span> <span class="p">[</span><span class="n">fmt</span><span class="p">],</span> <span class="o">*</span><span class="p">,</span> <span class="n">data</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
 <span class="n">plot</span><span class="p">([</span><span class="n">x</span><span class="p">],</span> <span class="n">y</span><span class="p">,</span> <span class="p">[</span><span class="n">fmt</span><span class="p">],</span> <span class="p">[</span><span class="n">x2</span><span class="p">],</span> <span class="n">y2</span><span class="p">,</span> <span class="p">[</span><span class="n">fmt2</span><span class="p">],</span> <span class="o">...</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
@@ -213,11 +1012,7 @@ which inspired this method.</p>
 <p>The optional parameter <em>fmt</em> is a convenient way for defining basic
 formatting like color, marker and linestyle. It’s a shortcut string
 notation described in the <em>Notes</em> section below.</p>
-</dd>
-</dl>
-<p>El parámetro opcional <cite>fmt</cite> es una forma práctica de definir formatos básicos como el color, el marcador y el estilo de línea. Se trata de una notación abreviada mediante una cadena de texto que se describe en la sección de notas más abajo.</p>
-<blockquote>
-<div><div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">plot</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">)</span>        <span class="c1"># plot x and y using default line style and color</span>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">plot</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">)</span>        <span class="c1"># plot x and y using default line style and color</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">plot</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="s1">&#39;bo&#39;</span><span class="p">)</span>  <span class="c1"># plot x and y using blue circle markers</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">plot</span><span class="p">(</span><span class="n">y</span><span class="p">)</span>           <span class="c1"># plot y using x as index array 0..N-1</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">plot</span><span class="p">(</span><span class="n">y</span><span class="p">,</span> <span class="s1">&#39;r+&#39;</span><span class="p">)</span>     <span class="c1"># ditto, but with red plusses</span>
@@ -226,10 +1021,7 @@ notation described in the <em>Notes</em> section below.</p>
 <p>You can use <cite>.Line2D</cite> properties as keyword arguments for more
 control on the appearance. Line properties and <em>fmt</em> can be mixed.
 The following two calls yield identical results:</p>
-</div></blockquote>
-<p>Puedes utilizar las propiedades de .Line2D como argumentos de palabra clave para tener un mayor control sobre la apariencia. Es posible combinar las propiedades de la línea y el parámetro <cite>fmt</cite>. Las dos llamadas siguientes producen resultados idénticos:</p>
-<blockquote>
-<div><div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">plot</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="s1">&#39;go--&#39;</span><span class="p">,</span> <span class="n">linewidth</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span> <span class="n">markersize</span><span class="o">=</span><span class="mi">12</span><span class="p">)</span>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">plot</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="s1">&#39;go--&#39;</span><span class="p">,</span> <span class="n">linewidth</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span> <span class="n">markersize</span><span class="o">=</span><span class="mi">12</span><span class="p">)</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">plot</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;green&#39;</span><span class="p">,</span> <span class="n">marker</span><span class="o">=</span><span class="s1">&#39;o&#39;</span><span class="p">,</span> <span class="n">linestyle</span><span class="o">=</span><span class="s1">&#39;dashed&#39;</span><span class="p">,</span>
 <span class="gp">... </span>     <span class="n">linewidth</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span> <span class="n">markersize</span><span class="o">=</span><span class="mi">12</span><span class="p">)</span>
 </pre></div>
@@ -240,10 +1032,7 @@ The following two calls yield identical results:</p>
 data that can be accessed by index <code class="docutils literal notranslate"><span class="pre">obj['y']</span></code>). Instead of giving
 the data in <em>x</em> and <em>y</em>, you can provide the object in the <em>data</em>
 parameter and just give the labels for <em>x</em> and <em>y</em>:</p>
-</div></blockquote>
-<p>Existe una forma práctica de representar gráficamente objetos con datos etiquetados (es decir, datos a los que se puede acceder mediante un índice, como <cite>obj[‘y’]</cite>). En lugar de proporcionar los datos para <em>x</em> e <em>y</em> por separado, puedes pasar el objeto en el parámetro <cite>data</cite> y especificar únicamente las etiquetas correspondientes a <em>x</em> e <em>y</em>:</p>
-<blockquote>
-<div><div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">plot</span><span class="p">(</span><span class="s1">&#39;xlabel&#39;</span><span class="p">,</span> <span class="s1">&#39;ylabel&#39;</span><span class="p">,</span> <span class="n">data</span><span class="o">=</span><span class="n">obj</span><span class="p">)</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">plot</span><span class="p">(</span><span class="s1">&#39;xlabel&#39;</span><span class="p">,</span> <span class="s1">&#39;ylabel&#39;</span><span class="p">,</span> <span class="n">data</span><span class="o">=</span><span class="n">obj</span><span class="p">)</span>
 </pre></div>
 </div>
 <p>All indexable objects are supported. This could e.g. be a <cite>dict</cite>, a
@@ -288,7 +1077,7 @@ parameter.</p>
 ‘style cycle’. The <em>fmt</em> and line property parameters are only
 necessary if you want explicit deviations from these defaults.
 Alternatively, you can also change the style cycle using
-<a href="#id7"><span class="problematic" id="id8">:rc:`axes.prop_cycle`</span></a>.</p>
+<a href="#id85"><span class="problematic" id="id86">:rc:`axes.prop_cycle`</span></a>.</p>
 <dl>
 <dt>x, y<span class="classifier">array-like or float</span></dt><dd><p>The horizontal / vertical coordinates of the data points.
 <em>x</em> values are optional and default to <code class="docutils literal notranslate"><span class="pre">range(len(y))</span></code>.</p>
@@ -326,7 +1115,7 @@ You may suppress the warning by adding an empty format string
 data limits. The values are passed on to
 <cite>~.axes.Axes.autoscale_view</cite>.</p>
 </dd>
-<dt><a href="#id9"><span class="problematic" id="id10">**</span></a>kwargs<span class="classifier"><cite>~matplotlib.lines.Line2D</cite> properties, optional</span></dt><dd><p><em>kwargs</em> are used to specify properties like a line label (for
+<dt><a href="#id87"><span class="problematic" id="id88">**</span></a>kwargs<span class="classifier"><cite>~matplotlib.lines.Line2D</cite> properties, optional</span></dt><dd><p><em>kwargs</em> are used to specify properties like a line label (for
 auto legends), linewidth, antialiasing, marker face color.
 Example:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">plot</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">],</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">],</span> <span class="s1">&#39;go-&#39;</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;line 1&#39;</span><span class="p">,</span> <span class="n">linewidth</span><span class="o">=</span><span class="mi">2</span><span class="p">)</span>
@@ -345,7 +1134,7 @@ antialiased or aa: bool
 clip_box: <cite>~matplotlib.transforms.BboxBase</cite> or None
 clip_on: bool
 clip_path: Patch or (Path, Transform) or None
-color or c: <a href="#id11"><span class="problematic" id="id12">:mpltype:`color`</span></a>
+color or c: <a href="#id89"><span class="problematic" id="id90">:mpltype:`color`</span></a>
 dash_capstyle: <cite>.CapStyle</cite> or {‘butt’, ‘projecting’, ‘round’}
 dash_joinstyle: <cite>.JoinStyle</cite> or {‘miter’, ‘round’, ‘bevel’}
 dashes: sequence of floats (on/off ink in points) or (None, None)
@@ -353,17 +1142,17 @@ data: (2, N) array or two 1D arrays
 drawstyle or ds: {‘default’, ‘steps’, ‘steps-pre’, ‘steps-mid’, ‘steps-post’}, default: ‘default’
 figure: <cite>~matplotlib.figure.Figure</cite> or <cite>~matplotlib.figure.SubFigure</cite>
 fillstyle: {‘full’, ‘left’, ‘right’, ‘bottom’, ‘top’, ‘none’}
-gapcolor: <a href="#id13"><span class="problematic" id="id14">:mpltype:`color`</span></a> or None
+gapcolor: <a href="#id91"><span class="problematic" id="id92">:mpltype:`color`</span></a> or None
 gid: str
 in_layout: bool
 label: object
 linestyle or ls: {‘-’, ‘–’, ‘-.’, ‘:’, ‘’, …} or (offset, on-off-seq)
 linewidth or lw: float
 marker: marker style string, <cite>~.path.Path</cite> or <cite>~.markers.MarkerStyle</cite>
-markeredgecolor or mec: <a href="#id15"><span class="problematic" id="id16">:mpltype:`color`</span></a>
+markeredgecolor or mec: <a href="#id93"><span class="problematic" id="id94">:mpltype:`color`</span></a>
 markeredgewidth or mew: float
-markerfacecolor or mfc: <a href="#id17"><span class="problematic" id="id18">:mpltype:`color`</span></a>
-markerfacecoloralt or mfcalt: <a href="#id19"><span class="problematic" id="id20">:mpltype:`color`</span></a>
+markerfacecolor or mfc: <a href="#id95"><span class="problematic" id="id96">:mpltype:`color`</span></a>
+markerfacecoloralt or mfcalt: <a href="#id97"><span class="problematic" id="id98">:mpltype:`color`</span></a>
 markersize or ms: float
 markevery: None or int or (int, int) or slice or list[int] or float or (float, float) or list[bool]
 mouseover: bool
@@ -555,23 +1344,20 @@ supported, but note that their parsing may be ambiguous.</p>
 <p>If the color is the only part of the format string, you can
 additionally use any  <cite>matplotlib.colors</cite> spec, e.g. full names
 (<code class="docutils literal notranslate"><span class="pre">'green'</span></code>) or hex strings (<code class="docutils literal notranslate"><span class="pre">'#008000'</span></code>).</p>
-</div></blockquote>
-<p>None</p>
-<p><strong>&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp; boxplot &amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;</strong></p>
-<p>Help on function boxplot in module matplotlib.pyplot:</p>
+</dd>
+</dl>
+<p>None
+&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp; boxplot &amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;
+Help on function boxplot in module matplotlib.pyplot:</p>
 <dl>
-<dt>boxplot(x: ‘ArrayLike | Sequence[ArrayLike]’, <a href="#id21"><span class="problematic" id="id22">*</span></a>, notch: ‘bool | None’ = None, sym: ‘str | None’ = None, vert: ‘bool | None’ = None, orientation: “Literal[‘vertical’, ‘horizontal’]” = ‘vertical’, whis: ‘float | tuple[float, float] | None’ = None, positions: ‘ArrayLike | None’ = None, widths: ‘float | ArrayLike | None’ = None, patch_artist: ‘bool | None’ = None, bootstrap: ‘int | None’ = None, usermedians: ‘ArrayLike | None’ = None, conf_intervals: ‘ArrayLike | None’ = None, meanline: ‘bool | None’ = None, showmeans: ‘bool | None’ = None, showcaps: ‘bool | None’ = None, showbox: ‘bool | None’ = None, showfliers: ‘bool | None’ = None, boxprops: ‘dict[str, Any] | None’ = None, tick_labels: ‘Sequence[str] | None’ = None, flierprops: ‘dict[str, Any] | None’ = None, medianprops: ‘dict[str, Any] | None’ = None, meanprops: ‘dict[str, Any] | None’ = None, capprops: ‘dict[str, Any] | None’ = None, whiskerprops: ‘dict[str, Any] | None’ = None, manage_ticks: ‘bool’ = True, autorange: ‘bool’ = False, zorder: ‘float | None’ = None, capwidths: ‘float | ArrayLike | None’ = None, label: ‘Sequence[str] | None’ = None, data: ‘DataParamType’ = None) -&gt; ‘dict[str, Any]’</dt><dd><p>Draw a box and whisker plot.</p>
+<dt>boxplot(x: ‘ArrayLike | Sequence[ArrayLike]’, <a href="#id99"><span class="problematic" id="id100">*</span></a>, notch: ‘bool | None’ = None, sym: ‘str | None’ = None, vert: ‘bool | None’ = None, orientation: “Literal[‘vertical’, ‘horizontal’]” = ‘vertical’, whis: ‘float | tuple[float, float] | None’ = None, positions: ‘ArrayLike | None’ = None, widths: ‘float | ArrayLike | None’ = None, patch_artist: ‘bool | None’ = None, bootstrap: ‘int | None’ = None, usermedians: ‘ArrayLike | None’ = None, conf_intervals: ‘ArrayLike | None’ = None, meanline: ‘bool | None’ = None, showmeans: ‘bool | None’ = None, showcaps: ‘bool | None’ = None, showbox: ‘bool | None’ = None, showfliers: ‘bool | None’ = None, boxprops: ‘dict[str, Any] | None’ = None, tick_labels: ‘Sequence[str] | None’ = None, flierprops: ‘dict[str, Any] | None’ = None, medianprops: ‘dict[str, Any] | None’ = None, meanprops: ‘dict[str, Any] | None’ = None, capprops: ‘dict[str, Any] | None’ = None, whiskerprops: ‘dict[str, Any] | None’ = None, manage_ticks: ‘bool’ = True, autorange: ‘bool’ = False, zorder: ‘float | None’ = None, capwidths: ‘float | ArrayLike | None’ = None, label: ‘Sequence[str] | None’ = None, data: ‘DataParamType’ = None) -&gt; ‘dict[str, Any]’</dt><dd><p>Draw a box and whisker plot.</p>
 <p>The box extends from the first quartile (Q1) to the third
 quartile (Q3) of the data, with a line at the median.
 The whiskers extend from the box to the farthest data point
 lying within 1.5x the inter-quartile range (IQR) from the box.
 Flier points are those past the end of the whiskers.
 See <a class="reference external" href="https://en.wikipedia.org/wiki/Box_plot">https://en.wikipedia.org/wiki/Box_plot</a> for reference.</p>
-</dd>
-</dl>
-<p>La caja se extiende desde el primer cuartil (Q1) hasta el tercer cuartil (Q3) de los datos, con una línea que indica la mediana. Los bigotes se extienden desde la caja hasta el punto de datos más alejado que se encuentre dentro de un rango de 1,5 veces el rango intercuartílico (IQR) a partir de la caja. Los valores atípicos (<em>outliers</em>) son aquellos puntos situados más allá del extremo de los bigotes. Consulte <a class="reference external" href="https://en.wikipedia.org/wiki/Box_plot">https://en.wikipedia.org/wiki/Box_plot</a> para más información.</p>
-<blockquote>
-<div><div class="highlight-none notranslate"><div class="highlight"><pre><span></span>     Q1-1.5IQR   Q1   median  Q3   Q3+1.5IQR
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>     Q1-1.5IQR   Q1   median  Q3   Q3+1.5IQR
                   |-----:-----|
   o      |--------|     :     |--------|    o  o
                   |-----:-----|
@@ -587,19 +1373,13 @@ flier             &lt;-----------&gt;            fliers
 <li><p>2D array: A box is drawn for each column in the array.</p></li>
 </ul>
 </dd>
-<dt>notch<span class="classifier">bool, default: <a href="#id23"><span class="problematic" id="id24">:rc:`boxplot.notch`</span></a></span></dt><dd><p>Whether to draw a notched boxplot (<cite>True</cite>), or a rectangular
+<dt>notch<span class="classifier">bool, default: <a href="#id101"><span class="problematic" id="id102">:rc:`boxplot.notch`</span></a></span></dt><dd><p>Whether to draw a notched boxplot (<cite>True</cite>), or a rectangular
 boxplot (<cite>False</cite>).  The notches represent the confidence interval
 (CI) around the median.  The documentation for <em>bootstrap</em>
 describes how the locations of the notches are computed by
 default, but their locations may also be overridden by setting the
 <em>conf_intervals</em> parameter.</p>
-</dd>
-</dl>
-</div></blockquote>
-<p>Determina si se dibuja un diagrama de caja con muescas (True) o uno rectangular (False). Las muescas representan el intervalo de confianza (IC) alrededor de la mediana. La documentación de <em>bootstrap</em> describe cómo se calculan por defecto las posiciones de las muescas, aunque dichas posiciones también pueden modificarse estableciendo el parámetro <cite>conf_intervals</cite>.</p>
-<blockquote>
-<div><blockquote>
-<div><div class="admonition note">
+<div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>In cases where the values of the CI are less than the
 lower quartile or greater than the upper quartile, the
@@ -608,8 +1388,7 @@ distinctive “flipped” appearance. This is expected
 behavior and consistent with other statistical
 visualization packages.</p>
 </div>
-</div></blockquote>
-<dl>
+</dd>
 <dt>sym<span class="classifier">str, optional</span></dt><dd><p>The default symbol for flier points.  An empty string (‘’) hides
 the fliers.  If <cite>None</cite>, then the fliers default to ‘b+’.  More
 control is provided by the <em>flierprops</em> parameter.</p>
@@ -671,7 +1450,7 @@ automatically set to match the positions. Defaults to
 <dt>widths<span class="classifier">float or array-like</span></dt><dd><p>The widths of the boxes.  The default is 0.5, or <code class="docutils literal notranslate"><span class="pre">0.15*(distance</span>
 <span class="pre">between</span> <span class="pre">extreme</span> <span class="pre">positions)</span></code>, if that is smaller.</p>
 </dd>
-<dt>patch_artist<span class="classifier">bool, default: <a href="#id25"><span class="problematic" id="id26">:rc:`boxplot.patchartist`</span></a></span></dt><dd><p>If <cite>False</cite> produces boxes with the Line2D artist. Otherwise,
+<dt>patch_artist<span class="classifier">bool, default: <a href="#id103"><span class="problematic" id="id104">:rc:`boxplot.patchartist`</span></a></span></dt><dd><p>If <cite>False</cite> produces boxes with the Line2D artist. Otherwise,
 boxes are drawn with Patch artists.</p>
 </dd>
 <dt>tick_labels<span class="classifier">list of str, optional</span></dt><dd><p>The tick labels of each boxplot.
@@ -689,7 +1468,7 @@ the boxplot positions.</p>
 75th percentiles are equal, <em>whis</em> is set to (0, 100) such
 that the whisker ends are at the minimum and maximum of the data.</p>
 </dd>
-<dt>meanline<span class="classifier">bool, default: <a href="#id27"><span class="problematic" id="id28">:rc:`boxplot.meanline`</span></a></span></dt><dd><p>If <cite>True</cite> (and <em>showmeans</em> is <cite>True</cite>), will try to render the
+<dt>meanline<span class="classifier">bool, default: <a href="#id105"><span class="problematic" id="id106">:rc:`boxplot.meanline`</span></a></span></dt><dd><p>If <cite>True</cite> (and <em>showmeans</em> is <cite>True</cite>), will try to render the
 mean as a line spanning the full width of the box according to
 <em>meanprops</em> (see below).  Not recommended if <em>shownotches</em> is also
 True.  Otherwise, means will be shown as points.</p>
@@ -717,13 +1496,13 @@ the whiskers (fliers).</p></li>
 </dd>
 </dl>
 <dl>
-<dt>showcaps<span class="classifier">bool, default: <a href="#id29"><span class="problematic" id="id30">:rc:`boxplot.showcaps`</span></a></span></dt><dd><p>Show the caps on the ends of whiskers.</p>
+<dt>showcaps<span class="classifier">bool, default: <a href="#id107"><span class="problematic" id="id108">:rc:`boxplot.showcaps`</span></a></span></dt><dd><p>Show the caps on the ends of whiskers.</p>
 </dd>
-<dt>showbox<span class="classifier">bool, default: <a href="#id31"><span class="problematic" id="id32">:rc:`boxplot.showbox`</span></a></span></dt><dd><p>Show the central box.</p>
+<dt>showbox<span class="classifier">bool, default: <a href="#id109"><span class="problematic" id="id110">:rc:`boxplot.showbox`</span></a></span></dt><dd><p>Show the central box.</p>
 </dd>
-<dt>showfliers<span class="classifier">bool, default: <a href="#id33"><span class="problematic" id="id34">:rc:`boxplot.showfliers`</span></a></span></dt><dd><p>Show the outliers beyond the caps.</p>
+<dt>showfliers<span class="classifier">bool, default: <a href="#id111"><span class="problematic" id="id112">:rc:`boxplot.showfliers`</span></a></span></dt><dd><p>Show the outliers beyond the caps.</p>
 </dd>
-<dt>showmeans<span class="classifier">bool, default: <a href="#id35"><span class="problematic" id="id36">:rc:`boxplot.showmeans`</span></a></span></dt><dd><p>Show the arithmetic means.</p>
+<dt>showmeans<span class="classifier">bool, default: <a href="#id113"><span class="problematic" id="id114">:rc:`boxplot.showmeans`</span></a></span></dt><dd><p>Show the arithmetic means.</p>
 </dd>
 <dt>capprops<span class="classifier">dict, default: None</span></dt><dd><p>The style of the caps.</p>
 </dd>
@@ -762,10 +1541,11 @@ violinplot : Draw an estimate of the probability density function.</p>
 <p class="admonition-title">Note</p>
 <p>This is the <span class="xref std std-ref">pyplot wrapper</span> for <cite>.axes.Axes.boxplot</cite>.</p>
 </div>
-</div></blockquote>
-<p>None</p>
-<p><strong>&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp; imread &amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;</strong></p>
-<p>Help on function imread in module matplotlib.pyplot:</p>
+</dd>
+</dl>
+<p>None
+&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp; imread &amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;
+Help on function imread in module matplotlib.pyplot:</p>
 <dl>
 <dt>imread(fname: ‘str | pathlib.Path | BinaryIO’, format: ‘str | None’ = None) -&gt; ‘np.ndarray’</dt><dd><p>Read an image from a file into an array.</p>
 <div class="admonition note">
@@ -805,11 +1585,11 @@ contents.</p>
 </div>
 </dd>
 </dl>
-<p>None</p>
-<p><strong>&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp; imshow &amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;</strong></p>
-<p>Help on function imshow in module matplotlib.pyplot:</p>
+<p>None
+&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp; imshow &amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;
+Help on function imshow in module matplotlib.pyplot:</p>
 <dl>
-<dt>imshow(X: ‘ArrayLike | PIL.Image.Image’, cmap: ‘str | Colormap | None’ = None, norm: ‘str | Normalize | None’ = None, <a href="#id37"><span class="problematic" id="id38">*</span></a>, aspect: “Literal[‘equal’, ‘auto’] | float | None” = None, interpolation: ‘str | None’ = None, alpha: ‘float | ArrayLike | None’ = None, vmin: ‘float | None’ = None, vmax: ‘float | None’ = None, colorizer: ‘Colorizer | None’ = None, origin: “Literal[‘upper’, ‘lower’] | None” = None, extent: ‘tuple[float, float, float, float] | None’ = None, interpolation_stage: “Literal[‘data’, ‘rgba’, ‘auto’] | None” = None, filternorm: ‘bool’ = True, filterrad: ‘float’ = 4.0, resample: ‘bool | None’ = None, url: ‘str | None’ = None, data: ‘DataParamType’ = None, <a href="#id39"><span class="problematic" id="id40">**</span></a>kwargs) -&gt; ‘AxesImage’</dt><dd><p>Display data as an image, i.e., on a 2D regular raster.</p>
+<dt>imshow(X: ‘ArrayLike | PIL.Image.Image’, cmap: ‘str | Colormap | None’ = None, norm: ‘str | Normalize | None’ = None, <a href="#id115"><span class="problematic" id="id116">*</span></a>, aspect: “Literal[‘equal’, ‘auto’] | float | None” = None, interpolation: ‘str | None’ = None, alpha: ‘float | ArrayLike | None’ = None, vmin: ‘float | None’ = None, vmax: ‘float | None’ = None, colorizer: ‘Colorizer | None’ = None, origin: “Literal[‘upper’, ‘lower’] | None” = None, extent: ‘tuple[float, float, float, float] | None’ = None, interpolation_stage: “Literal[‘data’, ‘rgba’, ‘auto’] | None” = None, filternorm: ‘bool’ = True, filterrad: ‘float’ = 4.0, resample: ‘bool | None’ = None, url: ‘str | None’ = None, data: ‘DataParamType’ = None, <a href="#id117"><span class="problematic" id="id118">**</span></a>kwargs) -&gt; ‘AxesImage’</dt><dd><p>Display data as an image, i.e., on a 2D regular raster.</p>
 <p>The input may either be actual RGB(A) data, or 2D scalar data, which
 will be rendered as a pseudocolor image. For displaying a grayscale
 image, set up the colormapping using the parameters
@@ -820,7 +1600,7 @@ the image is resampled, because the displayed image size will usually
 not match the size of <em>X</em> (see
 <span class="xref std std-doc">/gallery/images_contours_and_fields/image_antialiasing</span>).
 The resampling can be controlled via the <em>interpolation</em> parameter
-and/or <a href="#id41"><span class="problematic" id="id42">:rc:`image.interpolation`</span></a>.</p>
+and/or <a href="#id119"><span class="problematic" id="id120">:rc:`image.interpolation`</span></a>.</p>
 <dl>
 <dt>X<span class="classifier">array-like or PIL image</span></dt><dd><p>The image data. Supported array shapes are:</p>
 <ul class="simple">
@@ -835,7 +1615,7 @@ i.e. including transparency.</p></li>
 the image.</p>
 <p>Out-of-range RGB(A) values are clipped.</p>
 </dd>
-<dt>cmap<span class="classifier">str or <cite>~matplotlib.colors.Colormap</cite>, default: <a href="#id43"><span class="problematic" id="id44">:rc:`image.cmap`</span></a></span></dt><dd><p>The Colormap instance or registered colormap name used to map scalar data
+<dt>cmap<span class="classifier">str or <cite>~matplotlib.colors.Colormap</cite>, default: <a href="#id121"><span class="problematic" id="id122">:rc:`image.cmap`</span></a></span></dt><dd><p>The Colormap instance or registered colormap name used to map scalar data
 to colors.</p>
 <p>This parameter is ignored if <em>X</em> is RGB(A).</p>
 </dd>
@@ -877,12 +1657,12 @@ coordinates using <em>extent</em>).</p></li>
 that the data fit in the Axes. In general, this will result in
 non-square pixels.</p></li>
 </ul>
-<p>Normally, None (the default) means to use <a href="#id45"><span class="problematic" id="id46">:rc:`image.aspect`</span></a>.  However, if
+<p>Normally, None (the default) means to use <a href="#id123"><span class="problematic" id="id124">:rc:`image.aspect`</span></a>.  However, if
 the image uses a transform that does not contain the axes data transform,
 then None means to not modify the axes aspect at all (in that case, directly
 call <cite>.Axes.set_aspect</cite> if desired).</p>
 </dd>
-<dt>interpolation<span class="classifier">str, default: <a href="#id47"><span class="problematic" id="id48">:rc:`image.interpolation`</span></a></span></dt><dd><p>The interpolation method used.</p>
+<dt>interpolation<span class="classifier">str, default: <a href="#id125"><span class="problematic" id="id126">:rc:`image.interpolation`</span></a></span></dt><dd><p>The interpolation method used.</p>
 <p>Supported values are ‘none’, ‘auto’, ‘nearest’, ‘bilinear’,
 ‘bicubic’, ‘spline16’, ‘spline36’, ‘hanning’, ‘hamming’, ‘hermite’,
 ‘kaiser’, ‘quadric’, ‘catrom’, ‘gaussian’, ‘bessel’, ‘mitchell’,
@@ -929,7 +1709,7 @@ a discussion of image antialiasing.</p>
 If <em>alpha</em> is an array, the alpha blending values are applied pixel
 by pixel, and <em>alpha</em> must have the same shape as <em>X</em>.</p>
 </dd>
-<dt>origin<span class="classifier">{‘upper’, ‘lower’}, default: <a href="#id49"><span class="problematic" id="id50">:rc:`image.origin`</span></a></span></dt><dd><p>Place the [0, 0] index of the array in the upper left or lower
+<dt>origin<span class="classifier">{‘upper’, ‘lower’}, default: <a href="#id127"><span class="problematic" id="id128">:rc:`image.origin`</span></a></span></dt><dd><p>Place the [0, 0] index of the array in the upper left or lower
 left corner of the Axes. The convention (the default) ‘upper’ is
 typically used for matrices and images.</p>
 <p>Note that the vertical axis points upward for ‘lower’
@@ -966,7 +1746,7 @@ filter function must produce a graph of the proper shape.</p>
 <dt>filterrad<span class="classifier">float &gt; 0, default: 4.0</span></dt><dd><p>The filter radius for filters that have a radius parameter, i.e.
 when interpolation is one of: ‘sinc’, ‘lanczos’ or ‘blackman’.</p>
 </dd>
-<dt>resample<span class="classifier">bool, default: <a href="#id51"><span class="problematic" id="id52">:rc:`image.resample`</span></a></span></dt><dd><p>When <em>True</em>, use a full resampling method.  When <em>False</em>, only
+<dt>resample<span class="classifier">bool, default: <a href="#id129"><span class="problematic" id="id130">:rc:`image.resample`</span></a></span></dt><dd><p>When <em>True</em>, use a full resampling method.  When <em>False</em>, only
 resample when the output image is larger than the input image.</p>
 </dd>
 <dt>url<span class="classifier">str, optional</span></dt><dd><p>Set the url of the created <cite>.AxesImage</cite>. See <cite>.Artist.set_url</cite>.</p>
@@ -977,7 +1757,7 @@ resample when the output image is larger than the input image.</p>
 <dt>data<span class="classifier">indexable object, optional</span></dt><dd><p>If given, all parameters also accept a string <code class="docutils literal notranslate"><span class="pre">s</span></code>, which is
 interpreted as <code class="docutils literal notranslate"><span class="pre">data[s]</span></code> if <code class="docutils literal notranslate"><span class="pre">s</span></code> is a key in <code class="docutils literal notranslate"><span class="pre">data</span></code>.</p>
 </dd>
-<dt><a href="#id53"><span class="problematic" id="id54">**</span></a>kwargs<span class="classifier"><cite>~matplotlib.artist.Artist</cite> properties</span></dt><dd><p>These parameters are passed on to the constructor of the
+<dt><a href="#id131"><span class="problematic" id="id132">**</span></a>kwargs<span class="classifier"><cite>~matplotlib.artist.Artist</cite> properties</span></dt><dd><p>These parameters are passed on to the constructor of the
 <cite>.AxesImage</cite> artist.</p>
 </dd>
 </dl>
@@ -1001,6 +1781,550 @@ the color of the pixel, adjusted for its opacity by multiplication.</p></li>
 (unassociated) alpha representation.</p>
 </dd>
 </dl>
+<p>None
+&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp; show &amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;
+Help on function show in module matplotlib.pyplot:</p>
+<dl>
+<dt>show(<a href="#id133"><span class="problematic" id="id134">*</span></a>args, <a href="#id135"><span class="problematic" id="id136">**</span></a>kwargs) -&gt; ‘None’</dt><dd><p>Display all open figures.</p>
+<dl>
+<dt>block<span class="classifier">bool, optional</span></dt><dd><p>Whether to wait for all figures to be closed before returning.</p>
+<p>If <cite>True</cite> block and run the GUI main loop until all figure windows
+are closed.</p>
+<p>If <cite>False</cite> ensure that all figure windows are displayed and return
+immediately.  In this case, you are responsible for ensuring
+that the event loop is running to have responsive figures.</p>
+<p>Defaults to True in non-interactive mode and to False in interactive
+mode (see <cite>.pyplot.isinteractive</cite>).</p>
+</dd>
+</dl>
+<dl class="simple">
+<dt>ion<span class="classifier">Enable interactive mode, which shows / updates the figure after</span></dt><dd><p>every plotting command, so that calling <code class="docutils literal notranslate"><span class="pre">show()</span></code> is not necessary.</p>
+</dd>
+</dl>
+<p>ioff : Disable interactive mode.
+savefig : Save the figure to an image file instead of showing it on screen.</p>
+<p><strong>Saving figures to file and showing a window at the same time</strong></p>
+<p>If you want an image file as well as a user interface window, use
+<cite>.pyplot.savefig</cite> before <cite>.pyplot.show</cite>. At the end of (a blocking)
+<code class="docutils literal notranslate"><span class="pre">show()</span></code> the figure is closed and thus unregistered from pyplot. Calling
+<cite>.pyplot.savefig</cite> afterwards would save a new and thus empty figure. This
+limitation of command order does not apply if the show is non-blocking or
+if you keep a reference to the figure and use <cite>.Figure.savefig</cite>.</p>
+<p><strong>Auto-show in jupyter notebooks</strong></p>
+<p>The jupyter backends (activated via <code class="docutils literal notranslate"><span class="pre">%matplotlib</span> <span class="pre">inline</span></code>,
+<code class="docutils literal notranslate"><span class="pre">%matplotlib</span> <span class="pre">notebook</span></code>, or <code class="docutils literal notranslate"><span class="pre">%matplotlib</span> <span class="pre">widget</span></code>), call <code class="docutils literal notranslate"><span class="pre">show()</span></code> at
+the end of every cell by default. Thus, you usually don’t have to call it
+explicitly there.</p>
+</dd>
+</dl>
+<p>None
+&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp; violinplot &amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;
+Help on function violinplot in module matplotlib.pyplot:</p>
+<dl>
+<dt>violinplot(dataset: ‘ArrayLike | Sequence[ArrayLike]’, positions: ‘ArrayLike | None’ = None, <a href="#id137"><span class="problematic" id="id138">*</span></a>, vert: ‘bool | None’ = None, orientation: “Literal[‘vertical’, ‘horizontal’]” = ‘vertical’, widths: ‘float | ArrayLike’ = 0.5, showmeans: ‘bool’ = False, showextrema: ‘bool’ = True, showmedians: ‘bool’ = False, quantiles: ‘Sequence[float | Sequence[float]] | None’ = None, points: ‘int’ = 100, bw_method: “Literal[‘scott’, ‘silverman’] | float | Callable[[GaussianKDE], float] | None” = None, side: “Literal[‘both’, ‘low’, ‘high’]” = ‘both’, facecolor: ‘Sequence[ColorType] | ColorType | None’ = None, linecolor: ‘Sequence[ColorType] | ColorType | None’ = None, data: ‘DataParamType’ = None) -&gt; ‘dict[str, Collection]’</dt><dd><p>Make a violin plot.</p>
+<p>Make a violin plot for each column of <em>dataset</em> or each vector in
+sequence <em>dataset</em>.  Each filled area extends to represent the
+entire data range, with optional lines at the mean, the median,
+the minimum, the maximum, and user-specified quantiles.</p>
+<dl>
+<dt>dataset<span class="classifier">1D array or sequence of 1D arrays or 2D array</span></dt><dd><p>The input data. Possible values:</p>
+<ul class="simple">
+<li><p>1D array: A single violin is drawn.</p></li>
+<li><p>sequence of 1D arrays: A violin is drawn for each array in the sequence.</p></li>
+<li><p>2D array: A violin is drawn for each column in the array.</p></li>
+</ul>
+<p>Non-finite and masked values are ignored.</p>
+</dd>
+<dt>positions<span class="classifier">array-like, default: [1, 2, …, n]</span></dt><dd><p>The positions of the violins; i.e. coordinates on the x-axis for
+vertical violins (or y-axis for horizontal violins).</p>
+</dd>
+<dt>vert<span class="classifier">bool, optional</span></dt><dd><div class="deprecated">
+<p><span class="versionmodified deprecated">Deprecated since version 3.10: </span>Use <em>orientation</em> instead.</p>
+<p>If this is given during the deprecation period, it overrides
+the <em>orientation</em> parameter.</p>
+</div>
+<p>If True, plots the violins vertically.
+If False, plots the violins horizontally.</p>
+</dd>
+<dt>orientation<span class="classifier">{‘vertical’, ‘horizontal’}, default: ‘vertical’</span></dt><dd><p>If ‘horizontal’, plots the violins horizontally.
+Otherwise, plots the violins vertically.</p>
+<div class="versionadded">
+<p><span class="versionmodified added">Added in version 3.10.</span></p>
+</div>
+</dd>
+<dt>widths<span class="classifier">float or array-like, default: 0.5</span></dt><dd><p>The maximum width of each violin in units of the <em>positions</em> axis.
+The default is 0.5, which is half the available space when using default
+<em>positions</em>.</p>
+</dd>
+<dt>showmeans<span class="classifier">bool, default: False</span></dt><dd><p>Whether to show the mean with a line.</p>
+</dd>
+<dt>showextrema<span class="classifier">bool, default: True</span></dt><dd><p>Whether to show extrema with a line.</p>
+</dd>
+<dt>showmedians<span class="classifier">bool, default: False</span></dt><dd><p>Whether to show the median with a line.</p>
+</dd>
+<dt>quantiles<span class="classifier">array-like, default: None</span></dt><dd><p>If not None, set a list of floats in interval [0, 1] for each violin,
+which stands for the quantiles that will be rendered for that
+violin.</p>
+</dd>
+<dt>points<span class="classifier">int, default: 100</span></dt><dd><p>The number of points to evaluate each of the gaussian kernel density
+estimations at.</p>
+</dd>
+<dt>bw_method<span class="classifier">{‘scott’, ‘silverman’} or float or callable, default: ‘scott’</span></dt><dd><p>The method used to calculate the estimator bandwidth.  If a
+float, this will be used directly as <cite>!kde.factor</cite>.  If a
+callable, it should take a <cite>matplotlib.mlab.GaussianKDE</cite> instance as
+its only parameter and return a float.</p>
+</dd>
+<dt>side<span class="classifier">{‘both’, ‘low’, ‘high’}, default: ‘both’</span></dt><dd><p>‘both’ plots standard violins. ‘low’/’high’ only
+plots the side below/above the positions value.</p>
+</dd>
+<dt>facecolor<span class="classifier"><a href="#id139"><span class="problematic" id="id140">:mpltype:`color`</span></a> or list of <a href="#id141"><span class="problematic" id="id142">:mpltype:`color`</span></a>, optional</span></dt><dd><p>If provided, will set the face color(s) of the violins.</p>
+<div class="versionadded">
+<p><span class="versionmodified added">Added in version 3.11.</span></p>
+</div>
+</dd>
+<dt>linecolor<span class="classifier"><a href="#id143"><span class="problematic" id="id144">:mpltype:`color`</span></a> or list of <a href="#id145"><span class="problematic" id="id146">:mpltype:`color`</span></a>, optional</span></dt><dd><p>If provided, will set the line color(s) of the violins (the
+horizontal and vertical spines and body edges).</p>
+<div class="versionadded">
+<p><span class="versionmodified added">Added in version 3.11.</span></p>
+</div>
+</dd>
+<dt>data<span class="classifier">indexable object, optional</span></dt><dd><p>If given, the following parameters also accept a string <code class="docutils literal notranslate"><span class="pre">s</span></code>, which is
+interpreted as <code class="docutils literal notranslate"><span class="pre">data[s]</span></code> if <code class="docutils literal notranslate"><span class="pre">s</span></code> is a key in <code class="docutils literal notranslate"><span class="pre">data</span></code>:</p>
+<p><em>dataset</em></p>
+</dd>
+</dl>
+<dl class="simple">
+<dt>dict</dt><dd><p>A dictionary mapping each component of the violinplot to a
+list of the corresponding collection instances created. The
+dictionary has the following keys:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">bodies</span></code>: A list of the <cite>~.collections.PolyCollection</cite>
+instances containing the filled area of each violin.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">cmeans</span></code>: A <cite>~.collections.LineCollection</cite> instance that marks
+the mean values of each of the violin’s distribution.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">cmins</span></code>: A <cite>~.collections.LineCollection</cite> instance that marks
+the bottom of each violin’s distribution.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">cmaxes</span></code>: A <cite>~.collections.LineCollection</cite> instance that marks
+the top of each violin’s distribution.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">cbars</span></code>: A <cite>~.collections.LineCollection</cite> instance that marks
+the centers of each violin’s distribution.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">cmedians</span></code>: A <cite>~.collections.LineCollection</cite> instance that
+marks the median values of each of the violin’s distribution.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">cquantiles</span></code>: A <cite>~.collections.LineCollection</cite> instance created
+to identify the quantile values of each of the violin’s
+distribution.</p></li>
+</ul>
+</dd>
+</dl>
+<p>.Axes.violin : Draw a violin from pre-computed statistics.
+boxplot : Draw a box and whisker plot.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>This is the <span class="xref std std-ref">pyplot wrapper</span> for <cite>.axes.Axes.violinplot</cite>.</p>
+</div>
+</dd>
+</dl>
+<p>None
+&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp; time &amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;
+Help on built-in module time:</p>
+<dl>
+<dt>NAME</dt><dd><p>time - This module provides various functions to manipulate time values.</p>
+</dd>
+<dt>DESCRIPTION</dt><dd><p>There are two standard representations of time.  One is the number
+of seconds since the Epoch, in UTC (a.k.a. GMT).  It may be an integer
+or a floating point number (to represent fractions of seconds).
+The Epoch is system-defined; on Unix, it is generally January 1st, 1970.
+The actual value can be retrieved by calling gmtime(0).</p>
+<p>The other representation is a tuple of 9 integers giving local time.
+The tuple items are:</p>
+<blockquote>
+<div><p>year (including century, e.g. 1998)
+month (1-12)
+day (1-31)
+hours (0-23)
+minutes (0-59)
+seconds (0-59)
+weekday (0-6, Monday is 0)
+Julian day (day in the year, 1-366)
+DST (Daylight Savings Time) flag (-1, 0 or 1)</p>
+</div></blockquote>
+<p>If the DST flag is 0, the time is given in the regular time zone;
+if it is 1, the time is given in the DST time zone;
+if it is -1, mktime() should guess based on the date and time.</p>
+</dd>
+<dt>CLASSES</dt><dd><dl>
+<dt>builtins.tuple(builtins.object)</dt><dd><p>struct_time</p>
+</dd>
+<dt>class struct_time(builtins.tuple)</dt><dd><div class="line-block">
+<div class="line">struct_time(iterable=(), /)</div>
+<div class="line"><br /></div>
+<div class="line">The time value as returned by gmtime(), localtime(), and strptime(), and</div>
+<div class="line">accepted by asctime(), mktime() and strftime().  May be considered as a</div>
+<div class="line">sequence of 9 integers.</div>
+<div class="line"><br /></div>
+<div class="line">Note that several fields’ values are not the same as those defined by</div>
+<div class="line">the C language standard for struct tm.  For example, the value of the</div>
+<div class="line">field tm_year is the actual year, not year - 1900.  See individual</div>
+<div class="line">fields’ descriptions for details.</div>
+<div class="line"><br /></div>
+<div class="line">Method resolution order:</div>
+<div class="line-block">
+<div class="line">struct_time</div>
+<div class="line">builtins.tuple</div>
+<div class="line">builtins.object</div>
+<div class="line"><br /></div>
+</div>
+<div class="line">Methods defined here:</div>
+<div class="line"><br /></div>
+<div class="line">__reduce__(…)</div>
+<div class="line-block">
+<div class="line">Helper for pickle.</div>
+<div class="line"><br /></div>
+</div>
+<div class="line">__repr__(self, /)</div>
+<div class="line-block">
+<div class="line">Return repr(self).</div>
+<div class="line"><br /></div>
+</div>
+<div class="line">———————————————————————-</div>
+<div class="line">Static methods defined here:</div>
+<div class="line"><br /></div>
+<div class="line">__new__(<a href="#id147"><span class="problematic" id="id148">*</span></a>args, <a href="#id149"><span class="problematic" id="id150">**</span></a>kwargs) from builtins.type</div>
+<div class="line-block">
+<div class="line">Create and return a new object.  See help(type) for accurate signature.</div>
+<div class="line"><br /></div>
+</div>
+<div class="line">———————————————————————-</div>
+<div class="line">Data descriptors defined here:</div>
+<div class="line"><br /></div>
+<div class="line">tm_gmtoff</div>
+<div class="line-block">
+<div class="line">offset from UTC in seconds</div>
+<div class="line"><br /></div>
+</div>
+<div class="line">tm_hour</div>
+<div class="line-block">
+<div class="line">hours, range [0, 23]</div>
+<div class="line"><br /></div>
+</div>
+<div class="line">tm_isdst</div>
+<div class="line-block">
+<div class="line">1 if summer time is in effect, 0 if not, and -1 if unknown</div>
+<div class="line"><br /></div>
+</div>
+<div class="line">tm_mday</div>
+<div class="line-block">
+<div class="line">day of month, range [1, 31]</div>
+<div class="line"><br /></div>
+</div>
+<div class="line">tm_min</div>
+<div class="line-block">
+<div class="line">minutes, range [0, 59]</div>
+<div class="line"><br /></div>
+</div>
+<div class="line">tm_mon</div>
+<div class="line-block">
+<div class="line">month of year, range [1, 12]</div>
+<div class="line"><br /></div>
+</div>
+<div class="line">tm_sec</div>
+<div class="line-block">
+<div class="line">seconds, range [0, 61])</div>
+<div class="line"><br /></div>
+</div>
+<div class="line">tm_wday</div>
+<div class="line-block">
+<div class="line">day of week, range [0, 6], Monday is 0</div>
+<div class="line"><br /></div>
+</div>
+<div class="line">tm_yday</div>
+<div class="line-block">
+<div class="line">day of year, range [1, 366]</div>
+<div class="line"><br /></div>
+</div>
+<div class="line">tm_year</div>
+<div class="line-block">
+<div class="line">year, for example, 1993</div>
+<div class="line"><br /></div>
+</div>
+<div class="line">tm_zone</div>
+<div class="line-block">
+<div class="line">abbreviation of timezone name</div>
+<div class="line"><br /></div>
+</div>
+<div class="line">———————————————————————-</div>
+<div class="line">Data and other attributes defined here:</div>
+<div class="line"><br /></div>
+<div class="line">__match_args__ = (‘tm_year’, ‘tm_mon’, ‘tm_mday’, ‘tm_hour’, ‘tm_min’,…</div>
+<div class="line"><br /></div>
+<div class="line">n_fields = 11</div>
+<div class="line"><br /></div>
+<div class="line">n_sequence_fields = 9</div>
+<div class="line"><br /></div>
+<div class="line">n_unnamed_fields = 0</div>
+<div class="line"><br /></div>
+<div class="line">———————————————————————-</div>
+<div class="line">Methods inherited from builtins.tuple:</div>
+<div class="line"><br /></div>
+<div class="line">__add__(self, value, /)</div>
+<div class="line-block">
+<div class="line">Return self+value.</div>
+<div class="line"><br /></div>
+</div>
+<div class="line">__contains__(self, key, /)</div>
+<div class="line-block">
+<div class="line">Return bool(key in self).</div>
+<div class="line"><br /></div>
+</div>
+<div class="line">__eq__(self, value, /)</div>
+<div class="line-block">
+<div class="line">Return self==value.</div>
+<div class="line"><br /></div>
+</div>
+<div class="line">__ge__(self, value, /)</div>
+<div class="line-block">
+<div class="line">Return self&gt;=value.</div>
+<div class="line"><br /></div>
+</div>
+<div class="line">__getattribute__(self, name, /)</div>
+<div class="line-block">
+<div class="line">Return getattr(self, name).</div>
+<div class="line"><br /></div>
+</div>
+<div class="line">__getitem__(self, key, /)</div>
+<div class="line-block">
+<div class="line">Return self[key].</div>
+<div class="line"><br /></div>
+</div>
+<div class="line">__getnewargs__(self, /)</div>
+<div class="line"><br /></div>
+<div class="line">__gt__(self, value, /)</div>
+<div class="line-block">
+<div class="line">Return self&gt;value.</div>
+<div class="line"><br /></div>
+</div>
+<div class="line">__hash__(self, /)</div>
+<div class="line-block">
+<div class="line">Return hash(self).</div>
+<div class="line"><br /></div>
+</div>
+<div class="line">__iter__(self, /)</div>
+<div class="line-block">
+<div class="line">Implement iter(self).</div>
+<div class="line"><br /></div>
+</div>
+<div class="line">__le__(self, value, /)</div>
+<div class="line-block">
+<div class="line">Return self&lt;=value.</div>
+<div class="line"><br /></div>
+</div>
+<div class="line">__len__(self, /)</div>
+<div class="line-block">
+<div class="line">Return len(self).</div>
+<div class="line"><br /></div>
+</div>
+<div class="line">__lt__(self, value, /)</div>
+<div class="line-block">
+<div class="line">Return self&lt;value.</div>
+<div class="line"><br /></div>
+</div>
+<div class="line">__mul__(self, value, /)</div>
+<div class="line-block">
+<div class="line">Return self*value.</div>
+<div class="line"><br /></div>
+</div>
+<div class="line">__ne__(self, value, /)</div>
+<div class="line-block">
+<div class="line">Return self!=value.</div>
+<div class="line"><br /></div>
+</div>
+<div class="line">__rmul__(self, value, /)</div>
+<div class="line-block">
+<div class="line">Return value*self.</div>
+<div class="line"><br /></div>
+</div>
+<div class="line">count(self, value, /)</div>
+<div class="line-block">
+<div class="line">Return number of occurrences of value.</div>
+<div class="line"><br /></div>
+</div>
+<div class="line">index(self, value, start=0, stop=9223372036854775807, /)</div>
+<div class="line-block">
+<div class="line">Return first index of value.</div>
+<div class="line"><br /></div>
+<div class="line">Raises ValueError if the value is not present.</div>
+<div class="line"><br /></div>
+</div>
+<div class="line">———————————————————————-</div>
+<div class="line">Class methods inherited from builtins.tuple:</div>
+<div class="line"><br /></div>
+<div class="line">__class_getitem__(…) from builtins.type</div>
+<div class="line-block">
+<div class="line">See PEP 585</div>
+</div>
+</div>
+</dd>
+</dl>
+</dd>
+<dt>FUNCTIONS</dt><dd><dl>
+<dt>asctime(…)</dt><dd><p>asctime([tuple]) -&gt; string</p>
+<p>Convert a time tuple to a string, e.g. ‘Sat Jun 06 16:26:11 1998’.
+When the time tuple is not present, current time as returned by localtime()
+is used.</p>
+</dd>
+<dt>clock_getres(…)</dt><dd><p>clock_getres(clk_id) -&gt; floating point number</p>
+<p>Return the resolution (precision) of the specified clock clk_id.</p>
+</dd>
+<dt>clock_gettime(…)</dt><dd><p>clock_gettime(clk_id) -&gt; float</p>
+<p>Return the time of the specified clock clk_id.</p>
+</dd>
+<dt>clock_gettime_ns(…)</dt><dd><p>clock_gettime_ns(clk_id) -&gt; int</p>
+<p>Return the time of the specified clock clk_id as nanoseconds.</p>
+</dd>
+<dt>clock_settime(…)</dt><dd><p>clock_settime(clk_id, time)</p>
+<p>Set the time of the specified clock clk_id.</p>
+</dd>
+<dt>clock_settime_ns(…)</dt><dd><p>clock_settime_ns(clk_id, time)</p>
+<p>Set the time of the specified clock clk_id with nanoseconds.</p>
+</dd>
+<dt>ctime(…)</dt><dd><p>ctime(seconds) -&gt; string</p>
+<p>Convert a time in seconds since the Epoch to a string in local time.
+This is equivalent to asctime(localtime(seconds)). When the time tuple is
+not present, current time as returned by localtime() is used.</p>
+</dd>
+<dt>get_clock_info(…)</dt><dd><p>get_clock_info(name: str) -&gt; dict</p>
+<p>Get information of the specified clock.</p>
+</dd>
+<dt>gmtime(…)</dt><dd><dl class="simple">
+<dt>gmtime([seconds]) -&gt; (tm_year, tm_mon, tm_mday, tm_hour, tm_min,</dt><dd><p>tm_sec, tm_wday, tm_yday, tm_isdst)</p>
+</dd>
+</dl>
+<p>Convert seconds since the Epoch to a time tuple expressing UTC (a.k.a.
+GMT).  When ‘seconds’ is not passed in, convert the current time instead.</p>
+<p>If the platform supports the tm_gmtoff and tm_zone, they are available as
+attributes only.</p>
+</dd>
+<dt>localtime(…)</dt><dd><dl class="simple">
+<dt>localtime([seconds]) -&gt; (tm_year,tm_mon,tm_mday,tm_hour,tm_min,</dt><dd><p>tm_sec,tm_wday,tm_yday,tm_isdst)</p>
+</dd>
+</dl>
+<p>Convert seconds since the Epoch to a time tuple expressing local time.
+When ‘seconds’ is not passed in, convert the current time instead.</p>
+</dd>
+<dt>mktime(…)</dt><dd><p>mktime(tuple) -&gt; floating point number</p>
+<p>Convert a time tuple in local time to seconds since the Epoch.
+Note that mktime(gmtime(0)) will not generally return zero for most
+time zones; instead the returned value will either be equal to that
+of the timezone or altzone attributes on the time module.</p>
+</dd>
+<dt>monotonic(…)</dt><dd><p>monotonic() -&gt; float</p>
+<p>Monotonic clock, cannot go backward.</p>
+</dd>
+<dt>monotonic_ns(…)</dt><dd><p>monotonic_ns() -&gt; int</p>
+<p>Monotonic clock, cannot go backward, as nanoseconds.</p>
+</dd>
+<dt>perf_counter(…)</dt><dd><p>perf_counter() -&gt; float</p>
+<p>Performance counter for benchmarking.</p>
+</dd>
+<dt>perf_counter_ns(…)</dt><dd><p>perf_counter_ns() -&gt; int</p>
+<p>Performance counter for benchmarking as nanoseconds.</p>
+</dd>
+<dt>process_time(…)</dt><dd><p>process_time() -&gt; float</p>
+<p>Process time for profiling: sum of the kernel and user-space CPU time.</p>
+</dd>
+<dt>process_time_ns(…)</dt><dd><p>process_time() -&gt; int</p>
+<p>Process time for profiling as nanoseconds:
+sum of the kernel and user-space CPU time.</p>
+</dd>
+<dt>sleep(…)</dt><dd><p>sleep(seconds)</p>
+<p>Delay execution for a given number of seconds.  The argument may be
+a floating point number for subsecond precision.</p>
+</dd>
+<dt>strftime(…)</dt><dd><p>strftime(format[, tuple]) -&gt; string</p>
+<p>Convert a time tuple to a string according to a format specification.
+See the library reference manual for formatting codes. When the time tuple
+is not present, current time as returned by localtime() is used.</p>
+<p>Commonly used format codes:</p>
+<p>%Y  Year with century as a decimal number.
+%m  Month as a decimal number [01,12].
+%d  Day of the month as a decimal number [01,31].
+%H  Hour (24-hour clock) as a decimal number [00,23].
+%M  Minute as a decimal number [00,59].
+%S  Second as a decimal number [00,61].
+%z  Time zone offset from UTC.
+%a  Locale’s abbreviated weekday name.
+%A  Locale’s full weekday name.
+%b  Locale’s abbreviated month name.
+%B  Locale’s full month name.
+%c  Locale’s appropriate date and time representation.
+%I  Hour (12-hour clock) as a decimal number [01,12].
+%p  Locale’s equivalent of either AM or PM.</p>
+<p>Other codes may be available on your platform.  See documentation for
+the C library strftime function.</p>
+</dd>
+<dt>strptime(…)</dt><dd><p>strptime(string, format) -&gt; struct_time</p>
+<p>Parse a string to a time tuple according to a format specification.
+See the library reference manual for formatting codes (same as
+strftime()).</p>
+<p>Commonly used format codes:</p>
+<p>%Y  Year with century as a decimal number.
+%m  Month as a decimal number [01,12].
+%d  Day of the month as a decimal number [01,31].
+%H  Hour (24-hour clock) as a decimal number [00,23].
+%M  Minute as a decimal number [00,59].
+%S  Second as a decimal number [00,61].
+%z  Time zone offset from UTC.
+%a  Locale’s abbreviated weekday name.
+%A  Locale’s full weekday name.
+%b  Locale’s abbreviated month name.
+%B  Locale’s full month name.
+%c  Locale’s appropriate date and time representation.
+%I  Hour (12-hour clock) as a decimal number [01,12].
+%p  Locale’s equivalent of either AM or PM.</p>
+<p>Other codes may be available on your platform.  See documentation for
+the C library strftime function.</p>
+</dd>
+<dt>thread_time(…)</dt><dd><p>thread_time() -&gt; float</p>
+<p>Thread time for profiling: sum of the kernel and user-space CPU time.</p>
+</dd>
+<dt>thread_time_ns(…)</dt><dd><p>thread_time() -&gt; int</p>
+<p>Thread time for profiling as nanoseconds:
+sum of the kernel and user-space CPU time.</p>
+</dd>
+<dt>time(…)</dt><dd><p>time() -&gt; floating point number</p>
+<p>Return the current time in seconds since the Epoch.
+Fractions of a second may be present if the system clock provides them.</p>
+</dd>
+<dt>time_ns(…)</dt><dd><p>time_ns() -&gt; int</p>
+<p>Return the current time in nanoseconds since the Epoch.</p>
+</dd>
+<dt>tzset(…)</dt><dd><p>tzset()</p>
+<p>Initialize, or reinitialize, the local timezone to the value stored in
+os.environ[‘TZ’]. The TZ environment variable should be specified in
+standard Unix timezone format as documented in the tzset man page
+(eg. ‘US/Eastern’, ‘Europe/Amsterdam’). Unknown timezones will silently
+fall back to UTC. If the TZ environment variable is not set, the local
+timezone is set to the systems best guess of wallclock time.
+Changing the TZ environment variable without calling tzset <em>may</em> change
+the local timezone used by methods such as localtime, but this behaviour
+should not be relied on.</p>
+</dd>
+</dl>
+</dd>
+<dt>DATA</dt><dd><p>CLOCK_MONOTONIC = 6
+CLOCK_MONOTONIC_RAW = 4
+CLOCK_PROCESS_CPUTIME_ID = 12
+CLOCK_REALTIME = 0
+CLOCK_THREAD_CPUTIME_ID = 16
+CLOCK_UPTIME_RAW = 8
+altzone = 21600
+daylight = 0
+timezone = 21600
+tzname = (‘CST’, ‘CST’)</p>
+</dd>
+<dt>FILE</dt><dd><p>(built-in)</p>
+</dd>
+</dl>
 <p>None</p>
 </section>
 
@@ -1009,6 +2333,7 @@ the color of the pixel, adjusted for its opacity by multiplication.</p></li>
           </div>
           <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
         <a href="dir_matplotlib.html" class="btn btn-neutral float-left" title="dir de matplotlib.pyplot" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="../estadistica/index_estadistica.html" class="btn btn-neutral float-right" title="Estadística" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
     </div>
 
   <hr/>

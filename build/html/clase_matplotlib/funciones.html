@@ -6,7 +6,7 @@
   <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>modulo matplotlib &mdash; santosg57-python 0.1 documentation</title>
+  <title>funciones &mdash; santosg57-python 0.1 documentation</title>
       <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=80d5e7a1" />
       <link rel="stylesheet" type="text/css" href="../_static/css/theme.css?v=9edc463e" />
       <link rel="stylesheet" type="text/css" href="../_static/custom.css?v=836bb062" />
@@ -20,8 +20,8 @@
     <script src="../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="dir de matplotlib.pyplot" href="dir_matplotlib.html" />
-    <link rel="prev" title="Ejemplos" href="../clase_numpy/ejemplos_numpy.html" /> 
+    <link rel="next" title="Estadística" href="../estadistica/index_estadistica.html" />
+    <link rel="prev" title="matplotlib.pyplot" href="help_matplotlib.html" /> 
 </head>
 
 <body class="wy-body-for-nav"> 
@@ -66,10 +66,10 @@
 <li class="toctree-l1"><a class="reference internal" href="../distribucion_normal.html">Distribución normal</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../distribucion_binomial.html">Distribución binomial</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../clase_numpy/index_numpy.html">Módulo Numpy</a></li>
-<li class="toctree-l1 current"><a class="current reference internal" href="#">modulo matplotlib</a><ul>
+<li class="toctree-l1 current"><a class="reference internal" href="index_matplotlib.html">modulo matplotlib</a><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="dir_matplotlib.html">dir de matplotlib.pyplot</a></li>
 <li class="toctree-l2"><a class="reference internal" href="help_matplotlib.html">matplotlib.pyplot</a></li>
-<li class="toctree-l2"><a class="reference internal" href="funciones.html">funciones</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">funciones</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../estadistica/index_estadistica.html">Estadística</a></li>
@@ -89,9 +89,10 @@
           <div role="navigation" aria-label="Page navigation">
   <ul class="wy-breadcrumbs">
       <li><a href="../index.html" class="icon icon-home" aria-label="Home"></a></li>
-      <li class="breadcrumb-item active">modulo matplotlib</li>
+          <li class="breadcrumb-item"><a href="index_matplotlib.html">modulo matplotlib</a></li>
+      <li class="breadcrumb-item active">funciones</li>
       <li class="wy-breadcrumbs-aside">
-            <a href="../_sources/clase_matplotlib/index_matplotlib.rst.txt" rel="nofollow"> View page source</a>
+            <a href="../_sources/clase_matplotlib/funciones.rst.txt" rel="nofollow"> View page source</a>
       </li>
   </ul>
   <hr/>
@@ -99,14 +100,35 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
              
-  <section id="modulo-matplotlib">
-<h1>modulo matplotlib<a class="headerlink" href="#modulo-matplotlib" title="Link to this heading"></a></h1>
-<div class="toctree-wrapper compound">
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="dir_matplotlib.html">dir de matplotlib.pyplot</a></li>
-<li class="toctree-l1"><a class="reference internal" href="help_matplotlib.html">matplotlib.pyplot</a></li>
-<li class="toctree-l1"><a class="reference internal" href="funciones.html">funciones</a></li>
-</ul>
+  <section id="funciones">
+<h1>funciones<a class="headerlink" href="#funciones" title="Link to this heading"></a></h1>
+<p><strong>bar</strong></p>
+<p>Crea una grafica de barras</p>
+<p>Ejemplos</p>
+<div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">bar</span><span class="p">([</span><span class="s1">&#39;A&#39;</span><span class="p">,</span> <span class="s1">&#39;B&#39;</span><span class="p">,</span> <span class="s1">&#39;C&#39;</span><span class="p">],</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">])</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+<div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="n">bar</span><span class="p">(</span><span class="nb">range</span><span class="p">(</span><span class="mi">3</span><span class="p">),</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">],</span> <span class="n">tick_label</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;A&#39;</span><span class="p">,</span> <span class="s1">&#39;B&#39;</span><span class="p">,</span> <span class="s1">&#39;C&#39;</span><span class="p">])</span>
+</pre></div>
+</div>
+<p><strong>hist</strong></p>
+<p>Crea un histograma</p>
+<p>Ejemplos</p>
+<div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="n">x</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mi">4</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">5</span><span class="p">])</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">hist</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+<div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+
+<span class="n">x</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mi">4</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">5</span><span class="p">])</span>
+<span class="n">y</span> <span class="o">=</span> <span class="mi">2</span><span class="o">*</span><span class="n">x</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">hist</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
 </div>
 </section>
 
@@ -114,8 +136,8 @@
            </div>
           </div>
           <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
-        <a href="../clase_numpy/ejemplos_numpy.html" class="btn btn-neutral float-left" title="Ejemplos" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
-        <a href="dir_matplotlib.html" class="btn btn-neutral float-right" title="dir de matplotlib.pyplot" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="help_matplotlib.html" class="btn btn-neutral float-left" title="matplotlib.pyplot" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="../estadistica/index_estadistica.html" class="btn btn-neutral float-right" title="Estadística" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
     </div>
 
   <hr/>

@@ -2,7 +2,7 @@ import matplotlib.pyplot as plt
 
 #dd = dir(plt)
 
-dd = ['stem', 'plot', 'boxplot',  'imread', 'imshow']
+dd = ['bar', 'colormaps', 'draw', 'hist', 'errorbar','imsave', 'stem', 'plot', 'boxplot',  'imread', 'imshow', 'show', 'violinplot', 'time']
 
 for ss in dd:
   print('&&&&&&&&&&&&&&&&&&&&&&& ' + ss + ' &&&&&&&&&&&&&&&&&&&&&&&&&')
