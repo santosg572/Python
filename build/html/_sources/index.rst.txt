@@ -40,3 +40,4 @@ Contenido
    clase_matplotlib/index_matplotlib
    estadistica/index_estadistica
 
+   temarios_libros

@@ -20,7 +20,8 @@
     <script src="../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="prev" title="Alguno métodos de numpy" href="funciones_numpy.html" /> 
+    <link rel="next" title="modulo matplotlib" href="../clase_matplotlib/index_matplotlib.html" />
+    <link rel="prev" title="numpy.fft.ifftshift" href="generated/numpy.fft.ifftshift.html" /> 
 </head>
 
 <body class="wy-body-for-nav"> 
@@ -67,10 +68,13 @@
 <li class="toctree-l1 current"><a class="reference internal" href="index_numpy.html">Módulo Numpy</a><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="modulo_numpy.html">Módulo numpy (Numerical Python)</a></li>
 <li class="toctree-l2"><a class="reference internal" href="dir_numpy.html">dir numpy</a></li>
-<li class="toctree-l2"><a class="reference internal" href="funciones_numpy.html">Alguno métodos de numpy</a></li>
+<li class="toctree-l2"><a class="reference internal" href="help_numpy.html">numpy</a></li>
 <li class="toctree-l2 current"><a class="current reference internal" href="#">Ejemplos</a></li>
 </ul>
 </li>
+<li class="toctree-l1"><a class="reference internal" href="../clase_matplotlib/index_matplotlib.html">modulo matplotlib</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../estadistica/index_estadistica.html">Estadística</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../temarios_libros.html">Temarios Libros</a></li>
 </ul>
 
         </div>
@@ -100,6 +104,17 @@
              
   <section id="ejemplos">
 <h1>Ejemplos<a class="headerlink" href="#ejemplos" title="Link to this heading"></a></h1>
+<p><strong>amax</strong></p>
+<p>Devuelve el máximo de un arreglo o el máximo a lo largo de un eje.</p>
+<p>Ejemplos:</p>
+<div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+
+<span class="n">mat</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">round</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">normal</span><span class="p">(</span><span class="n">loc</span><span class="o">=</span><span class="mi">55</span><span class="p">,</span> <span class="n">scale</span><span class="o">=</span><span class="mi">7</span><span class="p">,</span> <span class="n">size</span><span class="o">=</span><span class="p">(</span><span class="mi">5</span><span class="p">,</span><span class="mi">4</span><span class="p">)))</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">mat</span><span class="o">.</span><span class="n">max</span><span class="p">())</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">max</span><span class="p">(</span><span class="n">mat</span><span class="p">))</span>
+</pre></div>
+</div>
 <p><strong>1)</strong></p>
 <div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
 
@@ -209,7 +224,8 @@
            </div>
           </div>
           <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
-        <a href="funciones_numpy.html" class="btn btn-neutral float-left" title="Alguno métodos de numpy" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="generated/numpy.fft.ifftshift.html" class="btn btn-neutral float-left" title="numpy.fft.ifftshift" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="../clase_matplotlib/index_matplotlib.html" class="btn btn-neutral float-right" title="modulo matplotlib" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
     </div>
 
   <hr/>

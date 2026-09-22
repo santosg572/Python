@@ -1,6 +1,24 @@
 Ejemplos 
 ========
 
+**amax**
+
+Devuelve el máximo de un arreglo o el máximo a lo largo de un eje.
+
+Ejemplos:
+
+.. code:: Python
+
+   import numpy as np
+
+   mat = np.round(np.random.normal(loc=55, scale=7, size=(5,4)))
+
+   print(mat.max())
+   print(np.max(mat))
+
+   
+
+
 **1)**
 
 .. code:: Python
