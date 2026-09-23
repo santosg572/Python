@@ -14,8 +14,22 @@ N = 189. Deseamos seleccionar una muestra aleatoria simple de tamaño 10 de esta
 .. image:: tabla_1_4_3.png
 
 
-** Frecuencias Relativas**
+**Frecuencias Relativas**
 
 .. image:: tabla_2_3_2.png
+
+**Histograma**
+
+.. image:: tabla_2_3_3.png
+
+**Polígono de Frecuencias**
+
+.. image:: figura_2_3_4.png
+
+**Diagramas de tallo y hojas**
+
+.. image:: tallo_hojas.png
+
+
 
 

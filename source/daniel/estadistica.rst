@@ -26,6 +26,10 @@ N = 189. Deseamos seleccionar una muestra aleatoria simple de tamaño 10 de esta
 
 .. image:: figura_2_3_4.png
 
+**Diagramas de tallo y hojas**
+
+.. image:: tallo_hojas.png
+
 
 
 

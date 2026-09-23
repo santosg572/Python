@@ -1,7 +1,7 @@
 Funciones o Métodos
 ===================
 
-Una función es un programa que tiene argumentos de entrada y resultados de salida. Las funciones se definen con la palabra ``def```.
+Una función es un programa que tiene argumentos de entrada y resultados de salida. Las funciones se definen con la palabra ``def``.
 
 Ejemplos:
 
