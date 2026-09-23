@@ -11,4 +11,21 @@ eligieron uno de los tres tratamientos. A modo de ejemplo, consideremos que todo
 N = 189. Deseamos seleccionar una muestra aleatoria simple de tamaño 10 de esta población, cuyas edades se presentan en la Tabla 
 1.4.1.
 
+.. image:: tabla_1_4_3.png
+
+
+**Frecuencias Relativas**
+
+.. image:: tabla_2_3_2.png
+
+**Histograma**
+
+.. image:: tabla_2_3_3.png
+
+**Polígono de Frecuencias**
+
+.. image:: figura_2_3_4.png
+
+
+
 

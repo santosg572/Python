@@ -16,5 +16,5 @@ Contenido
 .. toctree::
 
    distribucion_normal
-   estadistica/index_estadistica
+   daniel/index_estadistica.rst 
 
