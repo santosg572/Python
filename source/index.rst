@@ -15,29 +15,9 @@ Contenido
 
 .. toctree::
 
-   tiempos_recordar/tiempos_recordar
-   poo/poo
-   numeros_binarios
-   temario
-   calificaciones
-   bibliografia/bibliografia
-   software
-   conceptos_matematicos
-   clase-string
-   clase-lista
-   estructuras-control
-   clase-math
-   clase-turtle
-   l-sistema
-   turtle_help
-   clase-diccionario
-   clase_random
-   tarea_sep0727
-   modulos
    distribucion_normal
    distribucion_binomial
    clase_numpy/index_numpy
    clase_matplotlib/index_matplotlib
    estadistica/index_estadistica
 
-   temarios_libros
