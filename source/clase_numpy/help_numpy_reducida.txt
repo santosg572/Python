@@ -1,0 +1,7197 @@
+168948
+&&&&&&&&&&&&&&&&&&&&&& abs
+
+Help on ufunc:
+
+
+
+absolute = <ufunc 'absolute'>
+
+    absolute(x, /, out=None, *, where=True, casting='same_kind', order='K', dtype=None, subok=True[, signature, extobj])
+
+    
+
+    Calculate the absolute value element-wise.
+
+&&&&&&&&&&&&&&&&&&&&&& absolute
+
+Help on ufunc:
+
+
+
+absolute = <ufunc 'absolute'>
+
+    absolute(x, /, out=None, *, where=True, casting='same_kind', order='K', dtype=None, subok=True[, signature, extobj])
+
+    
+
+    Calculate the absolute value element-wise.
+
+&&&&&&&&&&&&&&&&&&&&&& add
+
+Help on ufunc:
+
+
+
+add = <ufunc 'add'>
+
+    add(x1, x2, /, out=None, *, where=True, casting='same_kind', order='K', dtype=None, subok=True[, signature, extobj])
+
+    
+
+    Add arguments element-wise.
+
+&&&&&&&&&&&&&&&&&&&&&& add_docstring
+
+Help on built-in function add_docstring in module numpy.core._multiarray_umath:
+
+
+
+add_docstring(...)
+
+    add_docstring(obj, docstring)
+
+    
+
+    Add a docstring to a built-in obj if possible.
+
+&&&&&&&&&&&&&&&&&&&&&& add_newdoc
+
+Help on function add_newdoc in module numpy.core.function_base:
+
+
+
+add_newdoc(place, obj, doc, warn_on_python=True)
+
+    Add documentation to an existing object, typically one defined in C
+
+    
+
+    The purpose is to allow easier editing of the docstrings without requiring
+
+&&&&&&&&&&&&&&&&&&&&&& add_newdoc_ufunc
+
+Help on built-in function _add_newdoc_ufunc in module numpy.core._multiarray_umath:
+
+
+
+_add_newdoc_ufunc(...)
+
+    add_ufunc_docstring(ufunc, new_docstring)
+
+    
+
+    Replace the docstring for a ufunc with new_docstring.
+
+&&&&&&&&&&&&&&&&&&&&&& all
+
+Help on _ArrayFunctionDispatcher in module numpy:
+
+
+
+all(a, axis=None, out=None, keepdims=<no value>, *, where=<no value>)
+
+    Test whether all array elements along a given axis evaluate to True.
+
+    
+
+    Parameters
+
+&&&&&&&&&&&&&&&&&&&&&& allclose
+
+Help on _ArrayFunctionDispatcher in module numpy:
+
+
+
+allclose(a, b, rtol=1e-05, atol=1e-08, equal_nan=False)
+
+    Returns True if two arrays are element-wise equal within a tolerance.
+
+    
+
+    The tolerance values are positive, typically very small numbers.  The
+
+&&&&&&&&&&&&&&&&&&&&&& alltrue
+
+Help on _ArrayFunctionDispatcher in module numpy:
+
+
+
+alltrue(*args, **kwargs)
+
+    Check if all elements of input array are true.
+
+    
+
+    .. deprecated:: 1.25.0
+
+&&&&&&&&&&&&&&&&&&&&&& amax
+
+Help on _ArrayFunctionDispatcher in module numpy:
+
+
+
+amax(a, axis=None, out=None, keepdims=<no value>, initial=<no value>, where=<no value>)
+
+    Return the maximum of an array or maximum along an axis.
+
+    
+
+    `amax` is an alias of `~numpy.max`.
+
+&&&&&&&&&&&&&&&&&&&&&& amin
+
+Help on _ArrayFunctionDispatcher in module numpy:
+
+
+
+amin(a, axis=None, out=None, keepdims=<no value>, initial=<no value>, where=<no value>)
+
+    Return the minimum of an array or minimum along an axis.
+
+    
+
+    `amin` is an alias of `~numpy.min`.
+
+&&&&&&&&&&&&&&&&&&&&&& angle
+
+Help on _ArrayFunctionDispatcher in module numpy:
+
+
+
+angle(z, deg=False)
+
+    Return the angle of the complex argument.
+
+    
+
+    Parameters
+
+&&&&&&&&&&&&&&&&&&&&&& any
+
+Help on _ArrayFunctionDispatcher in module numpy:
+
+
+
+any(a, axis=None, out=None, keepdims=<no value>, *, where=<no value>)
+
+    Test whether any array element along a given axis evaluates to True.
+
+    
+
+    Returns single boolean if `axis` is ``None``
+
+&&&&&&&&&&&&&&&&&&&&&& append
+
+Help on _ArrayFunctionDispatcher in module numpy:
+
+
+
+append(arr, values, axis=None)
+
+    Append values to the end of an array.
+
+    
+
+    Parameters
+
+&&&&&&&&&&&&&&&&&&&&&& apply_along_axis
+
+Help on _ArrayFunctionDispatcher in module numpy:
+
+
+
+apply_along_axis(func1d, axis, arr, *args, **kwargs)
+
+    Apply a function to 1-D slices along the given axis.
+
+    
+
+    Execute `func1d(a, *args, **kwargs)` where `func1d` operates on 1-D arrays
+
+&&&&&&&&&&&&&&&&&&&&&& apply_over_axes
+
+Help on _ArrayFunctionDispatcher in module numpy:
+
+
+
+apply_over_axes(func, a, axes)
+
+    Apply a function repeatedly over multiple axes.
+
+    
+
+    `func` is called as `res = func(a, axis)`, where `axis` is the first
+
+&&&&&&&&&&&&&&&&&&&&&& arange
+
+Help on built-in function arange in module numpy:
+
+
+
+arange(...)
+
+    arange([start,] stop[, step,], dtype=None, *, like=None)
+
+    
+
+    Return evenly spaced values within a given interval.
+
+&&&&&&&&&&&&&&&&&&&&&& arccos
+
+Help on ufunc:
+
+
+
+arccos = <ufunc 'arccos'>
+
+    arccos(x, /, out=None, *, where=True, casting='same_kind', order='K', dtype=None, subok=True[, signature, extobj])
+
+    
+
+    Trigonometric inverse cosine, element-wise.
+
+&&&&&&&&&&&&&&&&&&&&&& arccosh
+
+Help on ufunc:
+
+
+
+arccosh = <ufunc 'arccosh'>
+
+    arccosh(x, /, out=None, *, where=True, casting='same_kind', order='K', dtype=None, subok=True[, signature, extobj])
+
+    
+
+    Inverse hyperbolic cosine, element-wise.
+
+&&&&&&&&&&&&&&&&&&&&&& arcsin
+
+Help on ufunc:
+
+
+
+arcsin = <ufunc 'arcsin'>
+
+    arcsin(x, /, out=None, *, where=True, casting='same_kind', order='K', dtype=None, subok=True[, signature, extobj])
+
+    
+
+    Inverse sine, element-wise.
+
+&&&&&&&&&&&&&&&&&&&&&& arcsinh
+
+Help on ufunc:
+
+
+
+arcsinh = <ufunc 'arcsinh'>
+
+    arcsinh(x, /, out=None, *, where=True, casting='same_kind', order='K', dtype=None, subok=True[, signature, extobj])
+
+    
+
+    Inverse hyperbolic sine element-wise.
+
+&&&&&&&&&&&&&&&&&&&&&& arctan
+
+Help on ufunc:
+
+
+
+arctan = <ufunc 'arctan'>
+
+    arctan(x, /, out=None, *, where=True, casting='same_kind', order='K', dtype=None, subok=True[, signature, extobj])
+
+    
+
+    Trigonometric inverse tangent, element-wise.
+
+&&&&&&&&&&&&&&&&&&&&&& arctan2
+
+Help on ufunc:
+
+
+
+arctan2 = <ufunc 'arctan2'>
+
+    arctan2(x1, x2, /, out=None, *, where=True, casting='same_kind', order='K', dtype=None, subok=True[, signature, extobj])
+
+    
+
+    Element-wise arc tangent of ``x1/x2`` choosing the quadrant correctly.
+
+&&&&&&&&&&&&&&&&&&&&&& arctanh
+
+Help on ufunc:
+
+
+
+arctanh = <ufunc 'arctanh'>
+
+    arctanh(x, /, out=None, *, where=True, casting='same_kind', order='K', dtype=None, subok=True[, signature, extobj])
+
+    
+
+    Inverse hyperbolic tangent element-wise.
+
+&&&&&&&&&&&&&&&&&&&&&& argmax
+
+Help on _ArrayFunctionDispatcher in module numpy:
+
+
+
+argmax(a, axis=None, out=None, *, keepdims=<no value>)
+
+    Returns the indices of the maximum values along an axis.
+
+    
+
+    Parameters
+
+&&&&&&&&&&&&&&&&&&&&&& argmin
+
+Help on _ArrayFunctionDispatcher in module numpy:
+
+
+
+argmin(a, axis=None, out=None, *, keepdims=<no value>)
+
+    Returns the indices of the minimum values along an axis.
+
+    
+
+    Parameters
+
+&&&&&&&&&&&&&&&&&&&&&& argpartition
+
+Help on _ArrayFunctionDispatcher in module numpy:
+
+
+
+argpartition(a, kth, axis=-1, kind='introselect', order=None)
+
+    Perform an indirect partition along the given axis using the
+
+    algorithm specified by the `kind` keyword. It returns an array of
+
+    indices of the same shape as `a` that index data along the given
+
+&&&&&&&&&&&&&&&&&&&&&& argsort
+
+Help on _ArrayFunctionDispatcher in module numpy:
+
+
+
+argsort(a, axis=-1, kind=None, order=None)
+
+    Returns the indices that would sort an array.
+
+    
+
+    Perform an indirect sort along the given axis using the algorithm specified
+
+&&&&&&&&&&&&&&&&&&&&&& argwhere
+
+Help on _ArrayFunctionDispatcher in module numpy:
+
+
+
+argwhere(a)
+
+    Find the indices of array elements that are non-zero, grouped by element.
+
+    
+
+    Parameters
+
+&&&&&&&&&&&&&&&&&&&&&& around
+
+Help on _ArrayFunctionDispatcher in module numpy:
+
+
+
+around(a, decimals=0, out=None)
+
+    Round an array to the given number of decimals.
+
+    
+
+    `around` is an alias of `~numpy.round`.
+
+&&&&&&&&&&&&&&&&&&&&&& array
+
+Help on built-in function array in module numpy:
+
+
+
+array(...)
+
+    array(object, dtype=None, *, copy=True, order='K', subok=False, ndmin=0,
+
+          like=None)
+
+    
+
+&&&&&&&&&&&&&&&&&&&&&& array2string
+
+Help on _ArrayFunctionDispatcher in module numpy:
+
+
+
+array2string(a, max_line_width=None, precision=None, suppress_small=None, separator=' ', prefix='', style=<no value>, formatter=None, threshold=None, edgeitems=None, sign=None, floatmode=None, suffix='', *, legacy=None)
+
+    Return a string representation of an array.
+
+    
+
+    Parameters
+
+&&&&&&&&&&&&&&&&&&&&&& array_equal
+
+Help on _ArrayFunctionDispatcher in module numpy:
+
+
+
+array_equal(a1, a2, equal_nan=False)
+
+    True if two arrays have the same shape and elements, False otherwise.
+
+    
+
+    Parameters
+
+&&&&&&&&&&&&&&&&&&&&&& array_equiv
+
+Help on _ArrayFunctionDispatcher in module numpy:
+
+
+
+array_equiv(a1, a2)
+
+    Returns True if input arrays are shape consistent and all elements equal.
+
+    
+
+    Shape consistent means they are either the same shape, or one input array
+
+&&&&&&&&&&&&&&&&&&&&&& array_repr
+
+Help on _ArrayFunctionDispatcher in module numpy:
+
+
+
+array_repr(arr, max_line_width=None, precision=None, suppress_small=None)
+
+    Return the string representation of an array.
+
+    
+
+    Parameters
+
+&&&&&&&&&&&&&&&&&&&&&& array_split
+
+Help on _ArrayFunctionDispatcher in module numpy:
+
+
+
+array_split(ary, indices_or_sections, axis=0)
+
+    Split an array into multiple sub-arrays.
+
+    
+
+    Please refer to the ``split`` documentation.  The only difference
+
+&&&&&&&&&&&&&&&&&&&&&& array_str
+
+Help on _ArrayFunctionDispatcher in module numpy:
+
+
+
+array_str(a, max_line_width=None, precision=None, suppress_small=None)
+
+    Return a string representation of the data in an array.
+
+    
+
+    The data in the array is returned as a single string.  This function is
+
+&&&&&&&&&&&&&&&&&&&&&& asanyarray
+
+Help on built-in function asanyarray in module numpy:
+
+
+
+asanyarray(...)
+
+    asanyarray(a, dtype=None, order=None, *, like=None)
+
+    
+
+    Convert the input to an ndarray, but pass ndarray subclasses through.
+
+&&&&&&&&&&&&&&&&&&&&&& asarray
+
+Help on built-in function asarray in module numpy:
+
+
+
+asarray(...)
+
+    asarray(a, dtype=None, order=None, *, like=None)
+
+    
+
+    Convert the input to an array.
+
+&&&&&&&&&&&&&&&&&&&&&& asarray_chkfinite
+
+Help on function asarray_chkfinite in module numpy:
+
+
+
+asarray_chkfinite(a, dtype=None, order=None)
+
+    Convert the input to an array, checking for NaNs or Infs.
+
+    
+
+    Parameters
+
+&&&&&&&&&&&&&&&&&&&&&& ascontiguousarray
+
+Help on built-in function ascontiguousarray in module numpy:
+
+
+
+ascontiguousarray(...)
+
+    ascontiguousarray(a, dtype=None, *, like=None)
+
+    
+
+    Return a contiguous array (ndim >= 1) in memory (C order).
+
+&&&&&&&&&&&&&&&&&&&&&& asfarray
+
+Help on _ArrayFunctionDispatcher in module numpy:
+
+
+
+asfarray(a, dtype=<class 'numpy.float64'>)
+
+    Return an array converted to a float type.
+
+    
+
+    Parameters
+
+&&&&&&&&&&&&&&&&&&&&&& asfortranarray
+
+Help on built-in function asfortranarray in module numpy:
+
+
+
+asfortranarray(...)
+
+    asfortranarray(a, dtype=None, *, like=None)
+
+    
+
+    Return an array (ndim >= 1) laid out in Fortran order in memory.
+
+&&&&&&&&&&&&&&&&&&&&&& asmatrix
+
+Help on function asmatrix in module numpy:
+
+
+
+asmatrix(data, dtype=None)
+
+    Interpret the input as a matrix.
+
+    
+
+    Unlike `matrix`, `asmatrix` does not make a copy if the input is already
+
+&&&&&&&&&&&&&&&&&&&&&& atleast_1d
+
+Help on _ArrayFunctionDispatcher in module numpy:
+
+
+
+atleast_1d(*arys)
+
+    Convert inputs to arrays with at least one dimension.
+
+    
+
+    Scalar inputs are converted to 1-dimensional arrays, whilst
+
+&&&&&&&&&&&&&&&&&&&&&& atleast_2d
+
+Help on _ArrayFunctionDispatcher in module numpy:
+
+
+
+atleast_2d(*arys)
+
+    View inputs as arrays with at least two dimensions.
+
+    
+
+    Parameters
+
+&&&&&&&&&&&&&&&&&&&&&& atleast_3d
+
+Help on _ArrayFunctionDispatcher in module numpy:
+
+
+
+atleast_3d(*arys)
+
+    View inputs as arrays with at least three dimensions.
+
+    
+
+    Parameters
+
+&&&&&&&&&&&&&&&&&&&&&& average
+
+Help on _ArrayFunctionDispatcher in module numpy:
+
+
+
+average(a, axis=None, weights=None, returned=False, *, keepdims=<no value>)
+
+    Compute the weighted average along the specified axis.
+
+    
+
+    Parameters
+
+&&&&&&&&&&&&&&&&&&&&&& bartlett
+
+Help on function bartlett in module numpy:
+
+
+
+bartlett(M)
+
+    Return the Bartlett window.
+
+    
+
+    The Bartlett window is very similar to a triangular window, except
+
+&&&&&&&&&&&&&&&&&&&&&& base_repr
+
+Help on function base_repr in module numpy:
+
+
+
+base_repr(number, base=2, padding=0)
+
+    Return a string representation of a number in the given base system.
+
+    
+
+    Parameters
+
+&&&&&&&&&&&&&&&&&&&&&& binary_repr
+
+Help on function binary_repr in module numpy:
+
+
+
+binary_repr(num, width=None)
+
+    Return the binary representation of the input number as a string.
+
+    
+
+    For negative numbers, if width is not given, a minus sign is added to the
+
+&&&&&&&&&&&&&&&&&&&&&& bincount
+
+Help on _ArrayFunctionDispatcher in module numpy:
+
+
+
+bincount(...)
+
+    bincount(x, /, weights=None, minlength=0)
+
+    
+
+    Count number of occurrences of each value in array of non-negative ints.
+
+&&&&&&&&&&&&&&&&&&&&&& bitwise_and
+
+Help on ufunc:
+
+
+
+bitwise_and = <ufunc 'bitwise_and'>
+
+    bitwise_and(x1, x2, /, out=None, *, where=True, casting='same_kind', order='K', dtype=None, subok=True[, signature, extobj])
+
+    
+
+    Compute the bit-wise AND of two arrays element-wise.
+
+&&&&&&&&&&&&&&&&&&&&&& bitwise_not
+
+Help on ufunc:
+
+
+
+invert = <ufunc 'invert'>
+
+    invert(x, /, out=None, *, where=True, casting='same_kind', order='K', dtype=None, subok=True[, signature, extobj])
+
+    
+
+    Compute bit-wise inversion, or bit-wise NOT, element-wise.
+
+&&&&&&&&&&&&&&&&&&&&&& bitwise_or
+
+Help on ufunc:
+
+
+
+bitwise_or = <ufunc 'bitwise_or'>
+
+    bitwise_or(x1, x2, /, out=None, *, where=True, casting='same_kind', order='K', dtype=None, subok=True[, signature, extobj])
+
+    
+
+    Compute the bit-wise OR of two arrays element-wise.
+
+&&&&&&&&&&&&&&&&&&&&&& bitwise_xor
+
+Help on ufunc:
+
+
+
+bitwise_xor = <ufunc 'bitwise_xor'>
+
+    bitwise_xor(x1, x2, /, out=None, *, where=True, casting='same_kind', order='K', dtype=None, subok=True[, signature, extobj])
+
+    
+
+    Compute the bit-wise XOR of two arrays element-wise.
+
+&&&&&&&&&&&&&&&&&&&&&& blackman
+
+Help on function blackman in module numpy:
+
+
+
+blackman(M)
+
+    Return the Blackman window.
+
+    
+
+    The Blackman window is a taper formed by using the first three
+
+&&&&&&&&&&&&&&&&&&&&&& block
+
+Help on _ArrayFunctionDispatcher in module numpy:
+
+
+
+block(arrays)
+
+    Assemble an nd-array from nested lists of blocks.
+
+    
+
+    Blocks in the innermost lists are concatenated (see `concatenate`) along
+
+&&&&&&&&&&&&&&&&&&&&&& bmat
+
+Help on function bmat in module numpy:
+
+
+
+bmat(obj, ldict=None, gdict=None)
+
+    Build a matrix object from a string, nested sequence, or array.
+
+    
+
+    Parameters
+
+&&&&&&&&&&&&&&&&&&&&&& bool_
+
+Help on class bool_ in module numpy:
+
+
+
+class bool_(generic)
+
+ |  Boolean type (True or False), stored as a byte.
+
+ |  
+
+ |  .. warning::
+
+&&&&&&&&&&&&&&&&&&&&&& broadcast
+
+Help on class broadcast in module numpy:
+
+
+
+class broadcast(builtins.object)
+
+ |  Produce an object that mimics broadcasting.
+
+ |  
+
+ |  Parameters
+
+&&&&&&&&&&&&&&&&&&&&&& broadcast_arrays
+
+Help on _ArrayFunctionDispatcher in module numpy:
+
+
+
+broadcast_arrays(*args, subok=False)
+
+    Broadcast any number of arrays against each other.
+
+    
+
+    Parameters
+
+&&&&&&&&&&&&&&&&&&&&&& broadcast_shapes
+
+Help on function broadcast_shapes in module numpy:
+
+
+
+broadcast_shapes(*args)
+
+    Broadcast the input shapes into a single shape.
+
+    
+
+    :ref:`Learn more about broadcasting here <basics.broadcasting>`.
+
+&&&&&&&&&&&&&&&&&&&&&& broadcast_to
+
+Help on _ArrayFunctionDispatcher in module numpy:
+
+
+
+broadcast_to(array, shape, subok=False)
+
+    Broadcast an array to a new shape.
+
+    
+
+    Parameters
+
+&&&&&&&&&&&&&&&&&&&&&& busday_count
+
+Help on _ArrayFunctionDispatcher in module numpy:
+
+
+
+busday_count(...)
+
+    busday_count(begindates, enddates, weekmask='1111100', holidays=[], busdaycal=None, out=None)
+
+    
+
+    Counts the number of valid days between `begindates` and
+
+&&&&&&&&&&&&&&&&&&&&&& busday_offset
+
+Help on _ArrayFunctionDispatcher in module numpy:
+
+
+
+busday_offset(...)
+
+    busday_offset(dates, offsets, roll='raise', weekmask='1111100', holidays=None, busdaycal=None, out=None)
+
+    
+
+    First adjusts the date to fall on a valid day according to
+
+&&&&&&&&&&&&&&&&&&&&&& busdaycalendar
+
+Help on class busdaycalendar in module numpy:
+
+
+
+class busdaycalendar(builtins.object)
+
+ |  busdaycalendar(weekmask='1111100', holidays=None)
+
+ |  
+
+ |  A business day calendar object that efficiently stores information
+
+&&&&&&&&&&&&&&&&&&&&&& byte
+
+Help on class int8 in module numpy:
+
+
+
+class int8(signedinteger)
+
+ |  Signed integer type, compatible with C ``char``.
+
+ |  
+
+ |  :Character code: ``'b'``
+
+&&&&&&&&&&&&&&&&&&&&&& byte_bounds
+
+Help on function byte_bounds in module numpy.lib.utils:
+
+
+
+byte_bounds(a)
+
+    Returns pointers to the end-points of an array.
+
+    
+
+    Parameters
+
+&&&&&&&&&&&&&&&&&&&&&& bytes_
+
+Help on class bytes_ in module numpy:
+
+
+
+class bytes_(builtins.bytes, character)
+
+ |  A byte string.
+
+ |  
+
+ |  When used in arrays, this type strips trailing null bytes.
+
+&&&&&&&&&&&&&&&&&&&&&& c_
+
+Help on CClass in module numpy.lib.index_tricks object:
+
+
+
+class CClass(AxisConcatenator)
+
+ |  Translates slice objects to concatenation along the second axis.
+
+ |  
+
+ |  This is short-hand for ``np.r_['-1,2,0', index expression]``, which is
+
+&&&&&&&&&&&&&&&&&&&&&& can_cast
+
+Help on _ArrayFunctionDispatcher in module numpy:
+
+
+
+can_cast(...)
+
+    can_cast(from_, to, casting='safe')
+
+    
+
+    Returns True if cast between data types can occur according to the
+
+&&&&&&&&&&&&&&&&&&&&&& cast
+
+Help on _typedict in module numpy.core.numerictypes object:
+
+
+
+class _typedict(builtins.dict)
+
+ |  Base object for a dictionary for look-up with any alias for an array dtype.
+
+ |  
+
+ |  Instances of `_typedict` can not be used as dictionaries directly,
+
+&&&&&&&&&&&&&&&&&&&&&& cbrt
+
+Help on ufunc:
+
+
+
+cbrt = <ufunc 'cbrt'>
+
+    cbrt(x, /, out=None, *, where=True, casting='same_kind', order='K', dtype=None, subok=True[, signature, extobj])
+
+    
+
+    Return the cube-root of an array, element-wise.
+
+&&&&&&&&&&&&&&&&&&&&&& cdouble
+
+Help on class complex128 in module numpy:
+
+
+
+class complex128(complexfloating, builtins.complex)
+
+ |  complex128(real=0, imag=0)
+
+ |  
+
+ |  Complex number type composed of two double-precision floating-point
+
+&&&&&&&&&&&&&&&&&&&&&& ceil
+
+Help on ufunc:
+
+
+
+ceil = <ufunc 'ceil'>
+
+    ceil(x, /, out=None, *, where=True, casting='same_kind', order='K', dtype=None, subok=True[, signature, extobj])
+
+    
+
+    Return the ceiling of the input, element-wise.
+
+&&&&&&&&&&&&&&&&&&&&&& cfloat
+
+Help on class complex128 in module numpy:
+
+
+
+class complex128(complexfloating, builtins.complex)
+
+ |  complex128(real=0, imag=0)
+
+ |  
+
+ |  Complex number type composed of two double-precision floating-point
+
+&&&&&&&&&&&&&&&&&&&&&& char
+
+Help on module numpy.core.defchararray in numpy.core:
+
+
+
+NAME
+
+    numpy.core.defchararray
+
+
+
+DESCRIPTION
+
+&&&&&&&&&&&&&&&&&&&&&& character
+
+Help on class character in module numpy:
+
+
+
+class character(flexible)
+
+ |  Abstract base class of all character string scalar types.
+
+ |  
+
+ |  Method resolution order:
+
+&&&&&&&&&&&&&&&&&&&&&& chararray
+
+Help on class chararray in module numpy:
+
+
+
+class chararray(ndarray)
+
+ |  chararray(shape, itemsize=1, unicode=False, buffer=None, offset=0, strides=None, order='C')
+
+ |  
+
+ |  chararray(shape, itemsize=1, unicode=False, buffer=None, offset=0,
+
+&&&&&&&&&&&&&&&&&&&&&& choose
+
+Help on _ArrayFunctionDispatcher in module numpy:
+
+
+
+choose(a, choices, out=None, mode='raise')
+
+    Construct an array from an index array and a list of arrays to choose from.
+
+    
+
+    First of all, if confused or uncertain, definitely look at the Examples -
+
+&&&&&&&&&&&&&&&&&&&&&& clip
+
+Help on _ArrayFunctionDispatcher in module numpy:
+
+
+
+clip(a, a_min, a_max, out=None, **kwargs)
+
+    Clip (limit) the values in an array.
+
+    
+
+    Given an interval, values outside the interval are clipped to
+
+&&&&&&&&&&&&&&&&&&&&&& clongdouble
+
+Help on class clongdouble in module numpy:
+
+
+
+class clongdouble(complexfloating)
+
+ |  Complex number type composed of two extended-precision floating-point
+
+ |  numbers.
+
+ |  
+
+&&&&&&&&&&&&&&&&&&&&&& clongfloat
+
+Help on class clongdouble in module numpy:
+
+
+
+class clongdouble(complexfloating)
+
+ |  Complex number type composed of two extended-precision floating-point
+
+ |  numbers.
+
+ |  
+
+&&&&&&&&&&&&&&&&&&&&&& column_stack
+
+Help on _ArrayFunctionDispatcher in module numpy:
+
+
+
+column_stack(tup)
+
+    Stack 1-D arrays as columns into a 2-D array.
+
+    
+
+    Take a sequence of 1-D arrays and stack them as columns
+
+&&&&&&&&&&&&&&&&&&&&&& common_type
+
+Help on _ArrayFunctionDispatcher in module numpy:
+
+
+
+common_type(*arrays)
+
+    Return a scalar type which is common to the input arrays.
+
+    
+
+    The return type will always be an inexact (i.e. floating point) scalar
+
+&&&&&&&&&&&&&&&&&&&&&& compare_chararrays
+
+Help on built-in function compare_chararrays in module numpy.core._multiarray_umath:
+
+
+
+compare_chararrays(...)
+
+    compare_chararrays(a1, a2, cmp, rstrip)
+
+    
+
+    Performs element-wise comparison of two string arrays using the
+
+&&&&&&&&&&&&&&&&&&&&&& compat
+
+Help on package numpy.compat in numpy:
+
+
+
+NAME
+
+    numpy.compat - Compatibility module.
+
+
+
+DESCRIPTION
+
+&&&&&&&&&&&&&&&&&&&&&& complex128
+
+Help on class complex128 in module numpy:
+
+
+
+class complex128(complexfloating, builtins.complex)
+
+ |  complex128(real=0, imag=0)
+
+ |  
+
+ |  Complex number type composed of two double-precision floating-point
+
+&&&&&&&&&&&&&&&&&&&&&& complex256
+
+Help on class clongdouble in module numpy:
+
+
+
+class clongdouble(complexfloating)
+
+ |  Complex number type composed of two extended-precision floating-point
+
+ |  numbers.
+
+ |  
+
+&&&&&&&&&&&&&&&&&&&&&& complex64
+
+Help on class complex64 in module numpy:
+
+
+
+class complex64(complexfloating)
+
+ |  Complex number type composed of two single-precision floating-point
+
+ |  numbers.
+
+ |  
+
+&&&&&&&&&&&&&&&&&&&&&& complex_
+
+Help on class complex128 in module numpy:
+
+
+
+class complex128(complexfloating, builtins.complex)
+
+ |  complex128(real=0, imag=0)
+
+ |  
+
+ |  Complex number type composed of two double-precision floating-point
+
+&&&&&&&&&&&&&&&&&&&&&& complexfloating
+
+Help on class complexfloating in module numpy:
+
+
+
+class complexfloating(inexact)
+
+ |  Abstract base class of all complex number scalar types that are made up of
+
+ |  floating-point numbers.
+
+ |  
+
+&&&&&&&&&&&&&&&&&&&&&& compress
+
+Help on _ArrayFunctionDispatcher in module numpy:
+
+
+
+compress(condition, a, axis=None, out=None)
+
+    Return selected slices of an array along given axis.
+
+    
+
+    When working along a given axis, a slice along that axis is returned in
+
+&&&&&&&&&&&&&&&&&&&&&& concatenate
+
+Help on _ArrayFunctionDispatcher in module numpy:
+
+
+
+concatenate(...)
+
+    concatenate((a1, a2, ...), axis=0, out=None, dtype=None, casting="same_kind")
+
+    
+
+    Join a sequence of arrays along an existing axis.
+
+&&&&&&&&&&&&&&&&&&&&&& conj
+
+Help on ufunc:
+
+
+
+conjugate = <ufunc 'conjugate'>
+
+    conjugate(x, /, out=None, *, where=True, casting='same_kind', order='K', dtype=None, subok=True[, signature, extobj])
+
+    
+
+    Return the complex conjugate, element-wise.
+
+&&&&&&&&&&&&&&&&&&&&&& conjugate
+
+Help on ufunc:
+
+
+
+conjugate = <ufunc 'conjugate'>
+
+    conjugate(x, /, out=None, *, where=True, casting='same_kind', order='K', dtype=None, subok=True[, signature, extobj])
+
+    
+
+    Return the complex conjugate, element-wise.
+
+&&&&&&&&&&&&&&&&&&&&&& convolve
+
+Help on _ArrayFunctionDispatcher in module numpy:
+
+
+
+convolve(a, v, mode='full')
+
+    Returns the discrete, linear convolution of two one-dimensional sequences.
+
+    
+
+    The convolution operator is often seen in signal processing, where it
+
+&&&&&&&&&&&&&&&&&&&&&& copy
+
+Help on _ArrayFunctionDispatcher in module numpy:
+
+
+
+copy(a, order='K', subok=False)
+
+    Return an array copy of the given object.
+
+    
+
+    Parameters
+
+&&&&&&&&&&&&&&&&&&&&&& copysign
+
+Help on ufunc:
+
+
+
+copysign = <ufunc 'copysign'>
+
+    copysign(x1, x2, /, out=None, *, where=True, casting='same_kind', order='K', dtype=None, subok=True[, signature, extobj])
+
+    
+
+    Change the sign of x1 to that of x2, element-wise.
+
+&&&&&&&&&&&&&&&&&&&&&& copyto
+
+Help on _ArrayFunctionDispatcher in module numpy:
+
+
+
+copyto(...)
+
+    copyto(dst, src, casting='same_kind', where=True)
+
+    
+
+    Copies values from one array to another, broadcasting as necessary.
+
+&&&&&&&&&&&&&&&&&&&&&& corrcoef
+
+Help on _ArrayFunctionDispatcher in module numpy:
+
+
+
+corrcoef(x, y=None, rowvar=True, bias=<no value>, ddof=<no value>, *, dtype=None)
+
+    Return Pearson product-moment correlation coefficients.
+
+    
+
+    Please refer to the documentation for `cov` for more detail.  The
+
+&&&&&&&&&&&&&&&&&&&&&& correlate
+
+Help on _ArrayFunctionDispatcher in module numpy:
+
+
+
+correlate(a, v, mode='valid')
+
+    Cross-correlation of two 1-dimensional sequences.
+
+    
+
+    This function computes the correlation as generally defined in signal
+
+&&&&&&&&&&&&&&&&&&&&&& cos
+
+Help on ufunc:
+
+
+
+cos = <ufunc 'cos'>
+
+    cos(x, /, out=None, *, where=True, casting='same_kind', order='K', dtype=None, subok=True[, signature, extobj])
+
+    
+
+    Cosine element-wise.
+
+&&&&&&&&&&&&&&&&&&&&&& cosh
+
+Help on ufunc:
+
+
+
+cosh = <ufunc 'cosh'>
+
+    cosh(x, /, out=None, *, where=True, casting='same_kind', order='K', dtype=None, subok=True[, signature, extobj])
+
+    
+
+    Hyperbolic cosine, element-wise.
+
+&&&&&&&&&&&&&&&&&&&&&& count_nonzero
+
+Help on _ArrayFunctionDispatcher in module numpy:
+
+
+
+count_nonzero(a, axis=None, *, keepdims=False)
+
+    Counts the number of non-zero values in the array ``a``.
+
+    
+
+    The word "non-zero" is in reference to the Python 2.x
+
+&&&&&&&&&&&&&&&&&&&&&& cov
+
+Help on _ArrayFunctionDispatcher in module numpy:
+
+
+
+cov(m, y=None, rowvar=True, bias=False, ddof=None, fweights=None, aweights=None, *, dtype=None)
+
+    Estimate a covariance matrix, given data and weights.
+
+    
+
+    Covariance indicates the level to which two variables vary together.
+
+&&&&&&&&&&&&&&&&&&&&&& cross
+
+Help on _ArrayFunctionDispatcher in module numpy:
+
+
+
+cross(a, b, axisa=-1, axisb=-1, axisc=-1, axis=None)
+
+    Return the cross product of two (arrays of) vectors.
+
+    
+
+    The cross product of `a` and `b` in :math:`R^3` is a vector perpendicular
+
+&&&&&&&&&&&&&&&&&&&&&& csingle
+
+Help on class complex64 in module numpy:
+
+
+
+class complex64(complexfloating)
+
+ |  Complex number type composed of two single-precision floating-point
+
+ |  numbers.
+
+ |  
+
+&&&&&&&&&&&&&&&&&&&&&& ctypeslib
+
+Help on module numpy.ctypeslib in numpy:
+
+
+
+NAME
+
+    numpy.ctypeslib
+
+
+
+DESCRIPTION
+
+&&&&&&&&&&&&&&&&&&&&&& cumprod
+
+Help on _ArrayFunctionDispatcher in module numpy:
+
+
+
+cumprod(a, axis=None, dtype=None, out=None)
+
+    Return the cumulative product of elements along a given axis.
+
+    
+
+    Parameters
+
+&&&&&&&&&&&&&&&&&&&&&& cumproduct
+
+Help on _ArrayFunctionDispatcher in module numpy:
+
+
+
+cumproduct(*args, **kwargs)
+
+    Return the cumulative product over the given axis.
+
+    
+
+    .. deprecated:: 1.25.0
+
+&&&&&&&&&&&&&&&&&&&&&& cumsum
+
+Help on _ArrayFunctionDispatcher in module numpy:
+
+
+
+cumsum(a, axis=None, dtype=None, out=None)
+
+    Return the cumulative sum of the elements along a given axis.
+
+    
+
+    Parameters
+
+&&&&&&&&&&&&&&&&&&&&&& datetime64
+
+Help on class datetime64 in module numpy:
+
+
+
+class datetime64(generic)
+
+ |  If created from a 64-bit integer, it represents an offset from
+
+ |  ``1970-01-01T00:00:00``.
+
+ |  If created from string, the string can be in ISO 8601 date
+
+&&&&&&&&&&&&&&&&&&&&&& datetime_as_string
+
+Help on _ArrayFunctionDispatcher in module numpy:
+
+
+
+datetime_as_string(...)
+
+    datetime_as_string(arr, unit=None, timezone='naive', casting='same_kind')
+
+    
+
+    Convert an array of datetimes into an array of strings.
+
+&&&&&&&&&&&&&&&&&&&&&& datetime_data
+
+Help on built-in function datetime_data in module numpy:
+
+
+
+datetime_data(...)
+
+    datetime_data(dtype, /)
+
+    
+
+    Get information about the step size of a date or time type.
+
+&&&&&&&&&&&&&&&&&&&&&& deg2rad
+
+Help on ufunc:
+
+
+
+deg2rad = <ufunc 'deg2rad'>
+
+    deg2rad(x, /, out=None, *, where=True, casting='same_kind', order='K', dtype=None, subok=True[, signature, extobj])
+
+    
+
+    Convert angles from degrees to radians.
+
+&&&&&&&&&&&&&&&&&&&&&& degrees
+
+Help on ufunc:
+
+
+
+degrees = <ufunc 'degrees'>
+
+    degrees(x, /, out=None, *, where=True, casting='same_kind', order='K', dtype=None, subok=True[, signature, extobj])
+
+    
+
+    Convert angles from radians to degrees.
+
+&&&&&&&&&&&&&&&&&&&&&& delete
+
+Help on _ArrayFunctionDispatcher in module numpy:
+
+
+
+delete(arr, obj, axis=None)
+
+    Return a new array with sub-arrays along an axis deleted. For a one
+
+    dimensional array, this returns those entries not returned by
+
+    `arr[obj]`.
+
+&&&&&&&&&&&&&&&&&&&&&& deprecate
+
+Help on function deprecate in module numpy.lib.utils:
+
+
+
+deprecate(*args, **kwargs)
+
+    Issues a DeprecationWarning, adds warning to `old_name`'s
+
+    docstring, rebinds ``old_name.__name__`` and returns the new
+
+    function object.
+
+&&&&&&&&&&&&&&&&&&&&&& deprecate_with_doc
+
+Help on function deprecate_with_doc in module numpy.lib.utils:
+
+
+
+deprecate_with_doc(msg)
+
+    Deprecates a function and includes the deprecation in its docstring.
+
+    
+
+    This function is used as a decorator. It returns an object that can be
+
+&&&&&&&&&&&&&&&&&&&&&& diag
+
+Help on _ArrayFunctionDispatcher in module numpy:
+
+
+
+diag(v, k=0)
+
+    Extract a diagonal or construct a diagonal array.
+
+    
+
+    See the more detailed documentation for ``numpy.diagonal`` if you use this
+
+&&&&&&&&&&&&&&&&&&&&&& diag_indices
+
+Help on function diag_indices in module numpy:
+
+
+
+diag_indices(n, ndim=2)
+
+    Return the indices to access the main diagonal of an array.
+
+    
+
+    This returns a tuple of indices that can be used to access the main
+
+&&&&&&&&&&&&&&&&&&&&&& diag_indices_from
+
+Help on _ArrayFunctionDispatcher in module numpy:
+
+
+
+diag_indices_from(arr)
+
+    Return the indices to access the main diagonal of an n-dimensional array.
+
+    
+
+    See `diag_indices` for full details.
+
+&&&&&&&&&&&&&&&&&&&&&& diagflat
+
+Help on _ArrayFunctionDispatcher in module numpy:
+
+
+
+diagflat(v, k=0)
+
+    Create a two-dimensional array with the flattened input as a diagonal.
+
+    
+
+    Parameters
+
+&&&&&&&&&&&&&&&&&&&&&& diagonal
+
+Help on _ArrayFunctionDispatcher in module numpy:
+
+
+
+diagonal(a, offset=0, axis1=0, axis2=1)
+
+    Return specified diagonals.
+
+    
+
+    If `a` is 2-D, returns the diagonal of `a` with the given offset,
+
+&&&&&&&&&&&&&&&&&&&&&& diff
+
+Help on _ArrayFunctionDispatcher in module numpy:
+
+
+
+diff(a, n=1, axis=-1, prepend=<no value>, append=<no value>)
+
+    Calculate the n-th discrete difference along the given axis.
+
+    
+
+    The first difference is given by ``out[i] = a[i+1] - a[i]`` along
+
+&&&&&&&&&&&&&&&&&&&&&& digitize
+
+Help on _ArrayFunctionDispatcher in module numpy:
+
+
+
+digitize(x, bins, right=False)
+
+    Return the indices of the bins to which each value in input array belongs.
+
+    
+
+    =========  =============  ============================
+
+&&&&&&&&&&&&&&&&&&&&&& disp
+
+Help on function disp in module numpy.lib.function_base:
+
+
+
+disp(mesg, device=None, linefeed=True)
+
+    Display a message on a device.
+
+    
+
+    Parameters
+
+&&&&&&&&&&&&&&&&&&&&&& divide
+
+Help on ufunc:
+
+
+
+divide = <ufunc 'divide'>
+
+    divide(x1, x2, /, out=None, *, where=True, casting='same_kind', order='K', dtype=None, subok=True[, signature, extobj])
+
+    
+
+    Divide arguments element-wise.
+
+&&&&&&&&&&&&&&&&&&&&&& divmod
+
+Help on ufunc:
+
+
+
+divmod = <ufunc 'divmod'>
+
+    divmod(x1, x2[, out1, out2], / [, out=(None, None)], *, where=True, casting='same_kind', order='K', dtype=None, subok=True[, signature, extobj])
+
+    
+
+    Return element-wise quotient and remainder simultaneously.
+
+&&&&&&&&&&&&&&&&&&&&&& dot
+
+Help on _ArrayFunctionDispatcher in module numpy:
+
+
+
+dot(...)
+
+    dot(a, b, out=None)
+
+    
+
+    Dot product of two arrays. Specifically,
+
+&&&&&&&&&&&&&&&&&&&&&& double
+
+Help on class float64 in module numpy:
+
+
+
+class float64(floating, builtins.float)
+
+ |  float64(x=0, /)
+
+ |  
+
+ |  Double-precision floating-point number type, compatible with Python `float`
+
+&&&&&&&&&&&&&&&&&&&&&& dsplit
+
+Help on _ArrayFunctionDispatcher in module numpy:
+
+
+
+dsplit(ary, indices_or_sections)
+
+    Split array into multiple sub-arrays along the 3rd axis (depth).
+
+    
+
+    Please refer to the `split` documentation.  `dsplit` is equivalent
+
+&&&&&&&&&&&&&&&&&&&&&& dstack
+
+Help on _ArrayFunctionDispatcher in module numpy:
+
+
+
+dstack(tup)
+
+    Stack arrays in sequence depth wise (along third axis).
+
+    
+
+    This is equivalent to concatenation along the third axis after 2-D arrays
+
+&&&&&&&&&&&&&&&&&&&&&& dtype
+
+Help on class dtype in module numpy:
+
+
+
+class dtype(builtins.object)
+
+ |  dtype(dtype, align=False, copy=False, [metadata])
+
+ |  
+
+ |  Create a data type object.
+
+&&&&&&&&&&&&&&&&&&&&&& dtypes
+
+Help on module numpy.dtypes in numpy:
+
+
+
+NAME
+
+    numpy.dtypes
+
+
+
+DESCRIPTION
+
+&&&&&&&&&&&&&&&&&&&&&& e
+
+Help on float object:
+
+
+
+class float(object)
+
+ |  float(x=0, /)
+
+ |  
+
+ |  Convert a string or number to a floating point number, if possible.
+
+&&&&&&&&&&&&&&&&&&&&&& ediff1d
+
+Help on _ArrayFunctionDispatcher in module numpy:
+
+
+
+ediff1d(ary, to_end=None, to_begin=None)
+
+    The differences between consecutive elements of an array.
+
+    
+
+    Parameters
+
+&&&&&&&&&&&&&&&&&&&&&& einsum
+
+Help on _ArrayFunctionDispatcher in module numpy:
+
+
+
+einsum(*operands, out=None, optimize=False, **kwargs)
+
+    einsum(subscripts, *operands, out=None, dtype=None, order='K',
+
+           casting='safe', optimize=False)
+
+    
+
+&&&&&&&&&&&&&&&&&&&&&& einsum_path
+
+Help on _ArrayFunctionDispatcher in module numpy:
+
+
+
+einsum_path(*operands, optimize='greedy', einsum_call=False)
+
+    einsum_path(subscripts, *operands, optimize='greedy')
+
+    
+
+    Evaluates the lowest cost contraction order for an einsum expression by
+
+&&&&&&&&&&&&&&&&&&&&&& emath
+
+Help on module numpy.lib.scimath in numpy.lib:
+
+
+
+NAME
+
+    numpy.lib.scimath
+
+
+
+DESCRIPTION
+
+&&&&&&&&&&&&&&&&&&&&&& empty
+
+Help on built-in function empty in module numpy:
+
+
+
+empty(...)
+
+    empty(shape, dtype=float, order='C', *, like=None)
+
+    
+
+    Return a new array of given shape and type, without initializing entries.
+
+&&&&&&&&&&&&&&&&&&&&&& empty_like
+
+Help on _ArrayFunctionDispatcher in module numpy:
+
+
+
+empty_like(...)
+
+    empty_like(prototype, dtype=None, order='K', subok=True, shape=None)
+
+    
+
+    Return a new array with the same shape and type as a given array.
+
+&&&&&&&&&&&&&&&&&&&&&& equal
+
+Help on ufunc:
+
+
+
+equal = <ufunc 'equal'>
+
+    equal(x1, x2, /, out=None, *, where=True, casting='same_kind', order='K', dtype=None, subok=True[, signature, extobj])
+
+    
+
+    Return (x1 == x2) element-wise.
+
+&&&&&&&&&&&&&&&&&&&&&& errstate
+
+Help on class errstate in module numpy:
+
+
+
+class errstate(contextlib.ContextDecorator)
+
+ |  errstate(*, call=<numpy.core._ufunc_config._unspecified object at 0x109064550>, **kwargs)
+
+ |  
+
+ |  errstate(**kwargs)
+
+&&&&&&&&&&&&&&&&&&&&&& euler_gamma
+
+Help on float object:
+
+
+
+class float(object)
+
+ |  float(x=0, /)
+
+ |  
+
+ |  Convert a string or number to a floating point number, if possible.
+
+&&&&&&&&&&&&&&&&&&&&&& exceptions
+
+Help on module numpy.exceptions in numpy:
+
+
+
+NAME
+
+    numpy.exceptions
+
+
+
+DESCRIPTION
+
+&&&&&&&&&&&&&&&&&&&&&& exp
+
+Help on ufunc:
+
+
+
+exp = <ufunc 'exp'>
+
+    exp(x, /, out=None, *, where=True, casting='same_kind', order='K', dtype=None, subok=True[, signature, extobj])
+
+    
+
+    Calculate the exponential of all elements in the input array.
+
+&&&&&&&&&&&&&&&&&&&&&& exp2
+
+Help on ufunc:
+
+
+
+exp2 = <ufunc 'exp2'>
+
+    exp2(x, /, out=None, *, where=True, casting='same_kind', order='K', dtype=None, subok=True[, signature, extobj])
+
+    
+
+    Calculate `2**p` for all `p` in the input array.
+
+&&&&&&&&&&&&&&&&&&&&&& expand_dims
+
+Help on _ArrayFunctionDispatcher in module numpy:
+
+
+
+expand_dims(a, axis)
+
+    Expand the shape of an array.
+
+    
+
+    Insert a new axis that will appear at the `axis` position in the expanded
+
+&&&&&&&&&&&&&&&&&&&&&& expm1
+
+Help on ufunc:
+
+
+
+expm1 = <ufunc 'expm1'>
+
+    expm1(x, /, out=None, *, where=True, casting='same_kind', order='K', dtype=None, subok=True[, signature, extobj])
+
+    
+
+    Calculate ``exp(x) - 1`` for all elements in the array.
+
+&&&&&&&&&&&&&&&&&&&&&& extract
+
+Help on _ArrayFunctionDispatcher in module numpy:
+
+
+
+extract(condition, arr)
+
+    Return the elements of an array that satisfy some condition.
+
+    
+
+    This is equivalent to ``np.compress(ravel(condition), ravel(arr))``.  If
+
+&&&&&&&&&&&&&&&&&&&&&& eye
+
+Help on function eye in module numpy:
+
+
+
+eye(N, M=None, k=0, dtype=<class 'float'>, order='C', *, like=None)
+
+    Return a 2-D array with ones on the diagonal and zeros elsewhere.
+
+    
+
+    Parameters
+
+&&&&&&&&&&&&&&&&&&&&&& fabs
+
+Help on ufunc:
+
+
+
+fabs = <ufunc 'fabs'>
+
+    fabs(x, /, out=None, *, where=True, casting='same_kind', order='K', dtype=None, subok=True[, signature, extobj])
+
+    
+
+    Compute the absolute values element-wise.
+
+&&&&&&&&&&&&&&&&&&&&&& fastCopyAndTranspose
+
+Help on built-in function fastCopyAndTranspose in module numpy.core._multiarray_umath:
+
+
+
+fastCopyAndTranspose(...)
+
+    fastCopyAndTranspose(a)
+
+    
+
+    .. deprecated:: 1.24
+
+&&&&&&&&&&&&&&&&&&&&&& fft
+
+Help on package numpy.fft in numpy:
+
+
+
+NAME
+
+    numpy.fft
+
+
+
+DESCRIPTION
+
+&&&&&&&&&&&&&&&&&&&&&& fill_diagonal
+
+Help on _ArrayFunctionDispatcher in module numpy:
+
+
+
+fill_diagonal(a, val, wrap=False)
+
+    Fill the main diagonal of the given array of any dimensionality.
+
+    
+
+    For an array `a` with ``a.ndim >= 2``, the diagonal is the list of
+
+&&&&&&&&&&&&&&&&&&&&&& find_common_type
+
+Help on function find_common_type in module numpy:
+
+
+
+find_common_type(array_types, scalar_types)
+
+    Determine common type following standard coercion rules.
+
+    
+
+    .. deprecated:: NumPy 1.25
+
+&&&&&&&&&&&&&&&&&&&&&& finfo
+
+Help on class finfo in module numpy:
+
+
+
+class finfo(builtins.object)
+
+ |  finfo(dtype)
+
+ |  
+
+ |  finfo(dtype)
+
+&&&&&&&&&&&&&&&&&&&&&& fix
+
+Help on _ArrayFunctionDispatcher in module numpy:
+
+
+
+fix(x, out=None)
+
+    Round to nearest integer towards zero.
+
+    
+
+    Round an array of floats element-wise to nearest integer towards zero.
+
+&&&&&&&&&&&&&&&&&&&&&& flatiter
+
+Help on class flatiter in module numpy:
+
+
+
+class flatiter(builtins.object)
+
+ |  Flat iterator object to iterate over arrays.
+
+ |  
+
+ |  A `flatiter` iterator is returned by ``x.flat`` for any array `x`.
+
+&&&&&&&&&&&&&&&&&&&&&& flatnonzero
+
+Help on _ArrayFunctionDispatcher in module numpy:
+
+
+
+flatnonzero(a)
+
+    Return indices that are non-zero in the flattened version of a.
+
+    
+
+    This is equivalent to ``np.nonzero(np.ravel(a))[0]``.
+
+&&&&&&&&&&&&&&&&&&&&&& flexible
+
+Help on class flexible in module numpy:
+
+
+
+class flexible(generic)
+
+ |  Abstract base class of all scalar types without predefined length.
+
+ |  The actual size of these types depends on the specific `np.dtype`
+
+ |  instantiation.
+
+&&&&&&&&&&&&&&&&&&&&&& flip
+
+Help on _ArrayFunctionDispatcher in module numpy:
+
+
+
+flip(m, axis=None)
+
+    Reverse the order of elements in an array along the given axis.
+
+    
+
+    The shape of the array is preserved, but the elements are reordered.
+
+&&&&&&&&&&&&&&&&&&&&&& fliplr
+
+Help on _ArrayFunctionDispatcher in module numpy:
+
+
+
+fliplr(m)
+
+    Reverse the order of elements along axis 1 (left/right).
+
+    
+
+    For a 2-D array, this flips the entries in each row in the left/right
+
+&&&&&&&&&&&&&&&&&&&&&& flipud
+
+Help on _ArrayFunctionDispatcher in module numpy:
+
+
+
+flipud(m)
+
+    Reverse the order of elements along axis 0 (up/down).
+
+    
+
+    For a 2-D array, this flips the entries in each column in the up/down
+
+&&&&&&&&&&&&&&&&&&&&&& float128
+
+Help on class longdouble in module numpy:
+
+
+
+class longdouble(floating)
+
+ |  Extended-precision floating-point number type, compatible with C
+
+ |  ``long double`` but not necessarily with IEEE 754 quadruple-precision.
+
+ |  
+
+&&&&&&&&&&&&&&&&&&&&&& float16
+
+Help on class float16 in module numpy:
+
+
+
+class float16(floating)
+
+ |  Half-precision floating-point number type.
+
+ |  
+
+ |  :Character code: ``'e'``
+
+&&&&&&&&&&&&&&&&&&&&&& float32
+
+Help on class float32 in module numpy:
+
+
+
+class float32(floating)
+
+ |  Single-precision floating-point number type, compatible with C ``float``.
+
+ |  
+
+ |  :Character code: ``'f'``
+
+&&&&&&&&&&&&&&&&&&&&&& float64
+
+Help on class float64 in module numpy:
+
+
+
+class float64(floating, builtins.float)
+
+ |  float64(x=0, /)
+
+ |  
+
+ |  Double-precision floating-point number type, compatible with Python `float`
+
+&&&&&&&&&&&&&&&&&&&&&& float_
+
+Help on class float64 in module numpy:
+
+
+
+class float64(floating, builtins.float)
+
+ |  float64(x=0, /)
+
+ |  
+
+ |  Double-precision floating-point number type, compatible with Python `float`
+
+&&&&&&&&&&&&&&&&&&&&&& float_power
+
+Help on ufunc:
+
+
+
+float_power = <ufunc 'float_power'>
+
+    float_power(x1, x2, /, out=None, *, where=True, casting='same_kind', order='K', dtype=None, subok=True[, signature, extobj])
+
+    
+
+    First array elements raised to powers from second array, element-wise.
+
+&&&&&&&&&&&&&&&&&&&&&& floating
+
+Help on class floating in module numpy:
+
+
+
+class floating(inexact)
+
+ |  Abstract base class of all floating-point scalar types.
+
+ |  
+
+ |  Method resolution order:
+
+&&&&&&&&&&&&&&&&&&&&&& floor
+
+Help on ufunc:
+
+
+
+floor = <ufunc 'floor'>
+
+    floor(x, /, out=None, *, where=True, casting='same_kind', order='K', dtype=None, subok=True[, signature, extobj])
+
+    
+
+    Return the floor of the input, element-wise.
+
+&&&&&&&&&&&&&&&&&&&&&& floor_divide
+
+Help on ufunc:
+
+
+
+floor_divide = <ufunc 'floor_divide'>
+
+    floor_divide(x1, x2, /, out=None, *, where=True, casting='same_kind', order='K', dtype=None, subok=True[, signature, extobj])
+
+    
+
+    Return the largest integer smaller or equal to the division of the inputs.
+
+&&&&&&&&&&&&&&&&&&&&&& fmax
+
+Help on ufunc:
+
+
+
+fmax = <ufunc 'fmax'>
+
+    fmax(x1, x2, /, out=None, *, where=True, casting='same_kind', order='K', dtype=None, subok=True[, signature, extobj])
+
+    
+
+    Element-wise maximum of array elements.
+
+&&&&&&&&&&&&&&&&&&&&&& fmin
+
+Help on ufunc:
+
+
+
+fmin = <ufunc 'fmin'>
+
+    fmin(x1, x2, /, out=None, *, where=True, casting='same_kind', order='K', dtype=None, subok=True[, signature, extobj])
+
+    
+
+    Element-wise minimum of array elements.
+
+&&&&&&&&&&&&&&&&&&&&&& fmod
+
+Help on ufunc:
+
+
+
+fmod = <ufunc 'fmod'>
+
+    fmod(x1, x2, /, out=None, *, where=True, casting='same_kind', order='K', dtype=None, subok=True[, signature, extobj])
+
+    
+
+    Returns the element-wise remainder of division.
+
+&&&&&&&&&&&&&&&&&&&&&& format_float_positional
+
+Help on function format_float_positional in module numpy:
+
+
+
+format_float_positional(x, precision=None, unique=True, fractional=True, trim='k', sign=False, pad_left=None, pad_right=None, min_digits=None)
+
+    Format a floating-point scalar as a decimal string in positional notation.
+
+    
+
+    Provides control over rounding, trimming and padding. Uses and assumes
+
+&&&&&&&&&&&&&&&&&&&&&& format_float_scientific
+
+Help on function format_float_scientific in module numpy:
+
+
+
+format_float_scientific(x, precision=None, unique=True, trim='k', sign=False, pad_left=None, exp_digits=None, min_digits=None)
+
+    Format a floating-point scalar as a decimal string in scientific notation.
+
+    
+
+    Provides control over rounding, trimming and padding. Uses and assumes
+
+&&&&&&&&&&&&&&&&&&&&&& format_parser
+
+Help on class format_parser in module numpy:
+
+
+
+class format_parser(builtins.object)
+
+ |  format_parser(formats, names, titles, aligned=False, byteorder=None)
+
+ |  
+
+ |  Class to convert formats, names, titles description to a dtype.
+
+&&&&&&&&&&&&&&&&&&&&&& frexp
+
+Help on ufunc:
+
+
+
+frexp = <ufunc 'frexp'>
+
+    frexp(x[, out1, out2], / [, out=(None, None)], *, where=True, casting='same_kind', order='K', dtype=None, subok=True[, signature, extobj])
+
+    
+
+    Decompose the elements of x into mantissa and twos exponent.
+
+&&&&&&&&&&&&&&&&&&&&&& from_dlpack
+
+Help on built-in function from_dlpack in module numpy:
+
+
+
+from_dlpack(...)
+
+    from_dlpack(x, /)
+
+    
+
+    Create a NumPy array from an object implementing the ``__dlpack__``
+
+&&&&&&&&&&&&&&&&&&&&&& frombuffer
+
+Help on built-in function frombuffer in module numpy:
+
+
+
+frombuffer(...)
+
+    frombuffer(buffer, dtype=float, count=-1, offset=0, *, like=None)
+
+    
+
+    Interpret a buffer as a 1-dimensional array.
+
+&&&&&&&&&&&&&&&&&&&&&& fromfile
+
+Help on built-in function fromfile in module numpy:
+
+
+
+fromfile(...)
+
+    fromfile(file, dtype=float, count=-1, sep='', offset=0, *, like=None)
+
+    
+
+    Construct an array from data in a text or binary file.
+
+&&&&&&&&&&&&&&&&&&&&&& fromfunction
+
+Help on function fromfunction in module numpy:
+
+
+
+fromfunction(function, shape, *, dtype=<class 'float'>, like=None, **kwargs)
+
+    Construct an array by executing a function over each coordinate.
+
+    
+
+    The resulting array therefore has a value ``fn(x, y, z)`` at
+
+&&&&&&&&&&&&&&&&&&&&&& fromiter
+
+Help on built-in function fromiter in module numpy:
+
+
+
+fromiter(...)
+
+    fromiter(iter, dtype, count=-1, *, like=None)
+
+    
+
+    Create a new 1-dimensional array from an iterable object.
+
+&&&&&&&&&&&&&&&&&&&&&& frompyfunc
+
+Help on built-in function frompyfunc in module numpy:
+
+
+
+frompyfunc(...)
+
+    frompyfunc(func, /, nin, nout, *[, identity])
+
+    
+
+    Takes an arbitrary Python function and returns a NumPy ufunc.
+
+&&&&&&&&&&&&&&&&&&&&&& fromregex
+
+Help on function fromregex in module numpy:
+
+
+
+fromregex(file, regexp, dtype, encoding=None)
+
+    Construct an array from a text file, using regular expression parsing.
+
+    
+
+    The returned array is always a structured array, and is constructed from
+
+&&&&&&&&&&&&&&&&&&&&&& fromstring
+
+Help on built-in function fromstring in module numpy:
+
+
+
+fromstring(...)
+
+    fromstring(string, dtype=float, count=-1, *, sep, like=None)
+
+    
+
+    A new 1-D array initialized from text data in a string.
+
+&&&&&&&&&&&&&&&&&&&&&& full
+
+Help on function full in module numpy:
+
+
+
+full(shape, fill_value, dtype=None, order='C', *, like=None)
+
+    Return a new array of given shape and type, filled with `fill_value`.
+
+    
+
+    Parameters
+
+&&&&&&&&&&&&&&&&&&&&&& full_like
+
+Help on _ArrayFunctionDispatcher in module numpy:
+
+
+
+full_like(a, fill_value, dtype=None, order='K', subok=True, shape=None)
+
+    Return a full array with the same shape and type as a given array.
+
+    
+
+    Parameters
+
+&&&&&&&&&&&&&&&&&&&&&& gcd
+
+Help on ufunc:
+
+
+
+gcd = <ufunc 'gcd'>
+
+    gcd(x1, x2, /, out=None, *, where=True, casting='same_kind', order='K', dtype=None, subok=True[, signature, extobj])
+
+    
+
+    Returns the greatest common divisor of ``|x1|`` and ``|x2|``
+
+&&&&&&&&&&&&&&&&&&&&&& generic
+
+Help on class generic in module numpy:
+
+
+
+class generic(builtins.object)
+
+ |  Base class for numpy scalar types.
+
+ |  
+
+ |  Class from which most (all?) numpy scalar types are derived.  For
+
+&&&&&&&&&&&&&&&&&&&&&& genfromtxt
+
+Help on function genfromtxt in module numpy:
+
+
+
+genfromtxt(fname, dtype=<class 'float'>, comments='#', delimiter=None, skip_header=0, skip_footer=0, converters=None, missing_values=None, filling_values=None, usecols=None, names=None, excludelist=None, deletechars=" !#$%&'()*+,-./:;<=>?@[\\]^{|}~", replace_space='_', autostrip=False, case_sensitive=True, defaultfmt='f%i', unpack=None, usemask=False, loose=True, invalid_raise=True, max_rows=None, encoding='bytes', *, ndmin=0, like=None)
+
+    Load data from a text file, with missing values handled as specified.
+
+    
+
+    Each line past the first `skip_header` lines is split at the `delimiter`
+
+&&&&&&&&&&&&&&&&&&&&&& geomspace
+
+Help on _ArrayFunctionDispatcher in module numpy:
+
+
+
+geomspace(start, stop, num=50, endpoint=True, dtype=None, axis=0)
+
+    Return numbers spaced evenly on a log scale (a geometric progression).
+
+    
+
+    This is similar to `logspace`, but with endpoints specified directly.
+
+&&&&&&&&&&&&&&&&&&&&&& get_array_wrap
+
+Help on function get_array_wrap in module numpy.lib.shape_base:
+
+
+
+get_array_wrap(*args)
+
+    Find the wrapper for the array with the highest priority.
+
+    
+
+    In case of ties, leftmost wins. If no wrapper is found, return None
+
+&&&&&&&&&&&&&&&&&&&&&& get_include
+
+Help on function get_include in module numpy.lib.utils:
+
+
+
+get_include()
+
+    Return the directory that contains the NumPy \*.h header files.
+
+    
+
+    Extension modules that need to compile against NumPy should use this
+
+&&&&&&&&&&&&&&&&&&&&&& get_printoptions
+
+Help on function get_printoptions in module numpy:
+
+
+
+get_printoptions()
+
+    Return the current print options.
+
+    
+
+    Returns
+
+&&&&&&&&&&&&&&&&&&&&&& getbufsize
+
+Help on function getbufsize in module numpy:
+
+
+
+getbufsize()
+
+    Return the size of the buffer used in ufuncs.
+
+    
+
+    Returns
+
+&&&&&&&&&&&&&&&&&&&&&& geterr
+
+Help on function geterr in module numpy:
+
+
+
+geterr()
+
+    Get the current way of handling floating-point errors.
+
+    
+
+    Returns
+
+&&&&&&&&&&&&&&&&&&&&&& geterrcall
+
+Help on function geterrcall in module numpy:
+
+
+
+geterrcall()
+
+    Return the current callback function used on floating-point errors.
+
+    
+
+    When the error handling for a floating-point error (one of "divide",
+
+&&&&&&&&&&&&&&&&&&&&&& geterrobj
+
+Help on built-in function geterrobj in module numpy:
+
+
+
+geterrobj(...)
+
+    geterrobj()
+
+    
+
+    Return the current object that defines floating-point error handling.
+
+&&&&&&&&&&&&&&&&&&&&&& gradient
+
+Help on _ArrayFunctionDispatcher in module numpy:
+
+
+
+gradient(f, *varargs, axis=None, edge_order=1)
+
+    Return the gradient of an N-dimensional array.
+
+    
+
+    The gradient is computed using second order accurate central differences
+
+&&&&&&&&&&&&&&&&&&&&&& greater
+
+Help on ufunc:
+
+
+
+greater = <ufunc 'greater'>
+
+    greater(x1, x2, /, out=None, *, where=True, casting='same_kind', order='K', dtype=None, subok=True[, signature, extobj])
+
+    
+
+    Return the truth value of (x1 > x2) element-wise.
+
+&&&&&&&&&&&&&&&&&&&&&& greater_equal
+
+Help on ufunc:
+
+
+
+greater_equal = <ufunc 'greater_equal'>
+
+    greater_equal(x1, x2, /, out=None, *, where=True, casting='same_kind', order='K', dtype=None, subok=True[, signature, extobj])
+
+    
+
+    Return the truth value of (x1 >= x2) element-wise.
+
+&&&&&&&&&&&&&&&&&&&&&& half
+
+Help on class float16 in module numpy:
+
+
+
+class float16(floating)
+
+ |  Half-precision floating-point number type.
+
+ |  
+
+ |  :Character code: ``'e'``
+
+&&&&&&&&&&&&&&&&&&&&&& hamming
+
+Help on function hamming in module numpy:
+
+
+
+hamming(M)
+
+    Return the Hamming window.
+
+    
+
+    The Hamming window is a taper formed by using a weighted cosine.
+
+&&&&&&&&&&&&&&&&&&&&&& hanning
+
+Help on function hanning in module numpy:
+
+
+
+hanning(M)
+
+    Return the Hanning window.
+
+    
+
+    The Hanning window is a taper formed by using a weighted cosine.
+
+&&&&&&&&&&&&&&&&&&&&&& heaviside
+
+Help on ufunc:
+
+
+
+heaviside = <ufunc 'heaviside'>
+
+    heaviside(x1, x2, /, out=None, *, where=True, casting='same_kind', order='K', dtype=None, subok=True[, signature, extobj])
+
+    
+
+    Compute the Heaviside step function.
+
+&&&&&&&&&&&&&&&&&&&&&& histogram
+
+Help on _ArrayFunctionDispatcher in module numpy:
+
+
+
+histogram(a, bins=10, range=None, density=None, weights=None)
+
+    Compute the histogram of a dataset.
+
+    
+
+    Parameters
+
+&&&&&&&&&&&&&&&&&&&&&& histogram2d
+
+Help on _ArrayFunctionDispatcher in module numpy:
+
+
+
+histogram2d(x, y, bins=10, range=None, density=None, weights=None)
+
+    Compute the bi-dimensional histogram of two data samples.
+
+    
+
+    Parameters
+
+&&&&&&&&&&&&&&&&&&&&&& histogram_bin_edges
+
+Help on _ArrayFunctionDispatcher in module numpy:
+
+
+
+histogram_bin_edges(a, bins=10, range=None, weights=None)
+
+    Function to calculate only the edges of the bins used by the `histogram`
+
+    function.
+
+    
+
+&&&&&&&&&&&&&&&&&&&&&& histogramdd
+
+Help on _ArrayFunctionDispatcher in module numpy:
+
+
+
+histogramdd(sample, bins=10, range=None, density=None, weights=None)
+
+    Compute the multidimensional histogram of some data.
+
+    
+
+    Parameters
+
+&&&&&&&&&&&&&&&&&&&&&& hsplit
+
+Help on _ArrayFunctionDispatcher in module numpy:
+
+
+
+hsplit(ary, indices_or_sections)
+
+    Split an array into multiple sub-arrays horizontally (column-wise).
+
+    
+
+    Please refer to the `split` documentation.  `hsplit` is equivalent
+
+&&&&&&&&&&&&&&&&&&&&&& hstack
+
+Help on _ArrayFunctionDispatcher in module numpy:
+
+
+
+hstack(tup, *, dtype=None, casting='same_kind')
+
+    Stack arrays in sequence horizontally (column wise).
+
+    
+
+    This is equivalent to concatenation along the second axis, except for 1-D
+
+&&&&&&&&&&&&&&&&&&&&&& hypot
+
+Help on ufunc:
+
+
+
+hypot = <ufunc 'hypot'>
+
+    hypot(x1, x2, /, out=None, *, where=True, casting='same_kind', order='K', dtype=None, subok=True[, signature, extobj])
+
+    
+
+    Given the "legs" of a right triangle, return its hypotenuse.
+
+&&&&&&&&&&&&&&&&&&&&&& i0
+
+Help on _ArrayFunctionDispatcher in module numpy:
+
+
+
+i0(x)
+
+    Modified Bessel function of the first kind, order 0.
+
+    
+
+    Usually denoted :math:`I_0`.
+
+&&&&&&&&&&&&&&&&&&&&&& identity
+
+Help on function identity in module numpy:
+
+
+
+identity(n, dtype=None, *, like=None)
+
+    Return the identity array.
+
+    
+
+    The identity array is a square array with ones on
+
+&&&&&&&&&&&&&&&&&&&&&& iinfo
+
+Help on class iinfo in module numpy:
+
+
+
+class iinfo(builtins.object)
+
+ |  iinfo(int_type)
+
+ |  
+
+ |  iinfo(type)
+
+&&&&&&&&&&&&&&&&&&&&&& imag
+
+Help on _ArrayFunctionDispatcher in module numpy:
+
+
+
+imag(val)
+
+    Return the imaginary part of the complex argument.
+
+    
+
+    Parameters
+
+&&&&&&&&&&&&&&&&&&&&&& in1d
+
+Help on _ArrayFunctionDispatcher in module numpy:
+
+
+
+in1d(ar1, ar2, assume_unique=False, invert=False, *, kind=None)
+
+    Test whether each element of a 1-D array is also present in a second array.
+
+    
+
+    Returns a boolean array the same length as `ar1` that is True
+
+&&&&&&&&&&&&&&&&&&&&&& index_exp
+
+Help on IndexExpression in module numpy.lib.index_tricks object:
+
+
+
+class IndexExpression(builtins.object)
+
+ |  IndexExpression(maketuple)
+
+ |  
+
+ |  A nicer way to build up index tuples for arrays.
+
+&&&&&&&&&&&&&&&&&&&&&& indices
+
+Help on function indices in module numpy:
+
+
+
+indices(dimensions, dtype=<class 'int'>, sparse=False)
+
+    Return an array representing the indices of a grid.
+
+    
+
+    Compute an array where the subarrays contain index values 0, 1, ...
+
+&&&&&&&&&&&&&&&&&&&&&& inexact
+
+Help on class inexact in module numpy:
+
+
+
+class inexact(number)
+
+ |  Abstract base class of all numeric scalar types with a (potentially)
+
+ |  inexact representation of the values in its range, such as
+
+ |  floating-point numbers.
+
+&&&&&&&&&&&&&&&&&&&&&& inf
+
+Help on float object:
+
+
+
+class float(object)
+
+ |  float(x=0, /)
+
+ |  
+
+ |  Convert a string or number to a floating point number, if possible.
+
+&&&&&&&&&&&&&&&&&&&&&& info
+
+Help on function info in module numpy:
+
+
+
+info(object=None, maxwidth=76, output=None, toplevel='numpy')
+
+    Get help information for an array, function, class, or module.
+
+    
+
+    Parameters
+
+&&&&&&&&&&&&&&&&&&&&&& infty
+
+Help on float object:
+
+
+
+class float(object)
+
+ |  float(x=0, /)
+
+ |  
+
+ |  Convert a string or number to a floating point number, if possible.
+
+&&&&&&&&&&&&&&&&&&&&&& inner
+
+Help on _ArrayFunctionDispatcher in module numpy:
+
+
+
+inner(...)
+
+    inner(a, b, /)
+
+    
+
+    Inner product of two arrays.
+
+&&&&&&&&&&&&&&&&&&&&&& insert
+
+Help on _ArrayFunctionDispatcher in module numpy:
+
+
+
+insert(arr, obj, values, axis=None)
+
+    Insert values along the given axis before the given indices.
+
+    
+
+    Parameters
+
+&&&&&&&&&&&&&&&&&&&&&& int16
+
+Help on class int16 in module numpy:
+
+
+
+class int16(signedinteger)
+
+ |  Signed integer type, compatible with C ``short``.
+
+ |  
+
+ |  :Character code: ``'h'``
+
+&&&&&&&&&&&&&&&&&&&&&& int32
+
+Help on class int32 in module numpy:
+
+
+
+class int32(signedinteger)
+
+ |  Signed integer type, compatible with C ``int``.
+
+ |  
+
+ |  :Character code: ``'i'``
+
+&&&&&&&&&&&&&&&&&&&&&& int64
+
+Help on class int64 in module numpy:
+
+
+
+class int64(signedinteger)
+
+ |  Signed integer type, compatible with Python `int` and C ``long``.
+
+ |  
+
+ |  :Character code: ``'l'``
+
+&&&&&&&&&&&&&&&&&&&&&& int8
+
+Help on class int8 in module numpy:
+
+
+
+class int8(signedinteger)
+
+ |  Signed integer type, compatible with C ``char``.
+
+ |  
+
+ |  :Character code: ``'b'``
+
+&&&&&&&&&&&&&&&&&&&&&& int_
+
+Help on class int64 in module numpy:
+
+
+
+class int64(signedinteger)
+
+ |  Signed integer type, compatible with Python `int` and C ``long``.
+
+ |  
+
+ |  :Character code: ``'l'``
+
+&&&&&&&&&&&&&&&&&&&&&& intc
+
+Help on class int32 in module numpy:
+
+
+
+class int32(signedinteger)
+
+ |  Signed integer type, compatible with C ``int``.
+
+ |  
+
+ |  :Character code: ``'i'``
+
+&&&&&&&&&&&&&&&&&&&&&& integer
+
+Help on class integer in module numpy:
+
+
+
+class integer(number)
+
+ |  Abstract base class of all integer scalar types.
+
+ |  
+
+ |  Method resolution order:
+
+&&&&&&&&&&&&&&&&&&&&&& interp
+
+Help on _ArrayFunctionDispatcher in module numpy:
+
+
+
+interp(x, xp, fp, left=None, right=None, period=None)
+
+    One-dimensional linear interpolation for monotonically increasing sample points.
+
+    
+
+    Returns the one-dimensional piecewise linear interpolant to a function
+
+&&&&&&&&&&&&&&&&&&&&&& intersect1d
+
+Help on _ArrayFunctionDispatcher in module numpy:
+
+
+
+intersect1d(ar1, ar2, assume_unique=False, return_indices=False)
+
+    Find the intersection of two arrays.
+
+    
+
+    Return the sorted, unique values that are in both of the input arrays.
+
+&&&&&&&&&&&&&&&&&&&&&& intp
+
+Help on class int64 in module numpy:
+
+
+
+class int64(signedinteger)
+
+ |  Signed integer type, compatible with Python `int` and C ``long``.
+
+ |  
+
+ |  :Character code: ``'l'``
+
+&&&&&&&&&&&&&&&&&&&&&& invert
+
+Help on ufunc:
+
+
+
+invert = <ufunc 'invert'>
+
+    invert(x, /, out=None, *, where=True, casting='same_kind', order='K', dtype=None, subok=True[, signature, extobj])
+
+    
+
+    Compute bit-wise inversion, or bit-wise NOT, element-wise.
+
+&&&&&&&&&&&&&&&&&&&&&& is_busday
+
+Help on _ArrayFunctionDispatcher in module numpy:
+
+
+
+is_busday(...)
+
+    is_busday(dates, weekmask='1111100', holidays=None, busdaycal=None, out=None)
+
+    
+
+    Calculates which of the given dates are valid days, and which are not.
+
+&&&&&&&&&&&&&&&&&&&&&& isclose
+
+Help on _ArrayFunctionDispatcher in module numpy:
+
+
+
+isclose(a, b, rtol=1e-05, atol=1e-08, equal_nan=False)
+
+    Returns a boolean array where two arrays are element-wise equal within a
+
+    tolerance.
+
+    
+
+&&&&&&&&&&&&&&&&&&&&&& iscomplex
+
+Help on _ArrayFunctionDispatcher in module numpy:
+
+
+
+iscomplex(x)
+
+    Returns a bool array, where True if input element is complex.
+
+    
+
+    What is tested is whether the input has a non-zero imaginary part, not if
+
+&&&&&&&&&&&&&&&&&&&&&& iscomplexobj
+
+Help on _ArrayFunctionDispatcher in module numpy:
+
+
+
+iscomplexobj(x)
+
+    Check for a complex type or an array of complex numbers.
+
+    
+
+    The type of the input is checked, not the value. Even if the input
+
+&&&&&&&&&&&&&&&&&&&&&& isfinite
+
+Help on ufunc:
+
+
+
+isfinite = <ufunc 'isfinite'>
+
+    isfinite(x, /, out=None, *, where=True, casting='same_kind', order='K', dtype=None, subok=True[, signature, extobj])
+
+    
+
+    Test element-wise for finiteness (not infinity and not Not a Number).
+
+&&&&&&&&&&&&&&&&&&&&&& isfortran
+
+Help on function isfortran in module numpy:
+
+
+
+isfortran(a)
+
+    Check if the array is Fortran contiguous but *not* C contiguous.
+
+    
+
+    This function is obsolete and, because of changes due to relaxed stride
+
+&&&&&&&&&&&&&&&&&&&&&& isin
+
+Help on _ArrayFunctionDispatcher in module numpy:
+
+
+
+isin(element, test_elements, assume_unique=False, invert=False, *, kind=None)
+
+    Calculates ``element in test_elements``, broadcasting over `element` only.
+
+    Returns a boolean array of the same shape as `element` that is True
+
+    where an element of `element` is in `test_elements` and False otherwise.
+
+&&&&&&&&&&&&&&&&&&&&&& isinf
+
+Help on ufunc:
+
+
+
+isinf = <ufunc 'isinf'>
+
+    isinf(x, /, out=None, *, where=True, casting='same_kind', order='K', dtype=None, subok=True[, signature, extobj])
+
+    
+
+    Test element-wise for positive or negative infinity.
+
+&&&&&&&&&&&&&&&&&&&&&& isnan
+
+Help on ufunc:
+
+
+
+isnan = <ufunc 'isnan'>
+
+    isnan(x, /, out=None, *, where=True, casting='same_kind', order='K', dtype=None, subok=True[, signature, extobj])
+
+    
+
+    Test element-wise for NaN and return result as a boolean array.
+
+&&&&&&&&&&&&&&&&&&&&&& isnat
+
+Help on ufunc:
+
+
+
+isnat = <ufunc 'isnat'>
+
+    isnat(x, /, out=None, *, where=True, casting='same_kind', order='K', dtype=None, subok=True[, signature, extobj])
+
+    
+
+    Test element-wise for NaT (not a time) and return result as a boolean array.
+
+&&&&&&&&&&&&&&&&&&&&&& isneginf
+
+Help on _ArrayFunctionDispatcher in module numpy:
+
+
+
+isneginf(x, out=None)
+
+    Test element-wise for negative infinity, return result as bool array.
+
+    
+
+    Parameters
+
+&&&&&&&&&&&&&&&&&&&&&& isposinf
+
+Help on _ArrayFunctionDispatcher in module numpy:
+
+
+
+isposinf(x, out=None)
+
+    Test element-wise for positive infinity, return result as bool array.
+
+    
+
+    Parameters
+
+&&&&&&&&&&&&&&&&&&&&&& isreal
+
+Help on _ArrayFunctionDispatcher in module numpy:
+
+
+
+isreal(x)
+
+    Returns a bool array, where True if input element is real.
+
+    
+
+    If element has complex type with zero complex part, the return value
+
+&&&&&&&&&&&&&&&&&&&&&& isrealobj
+
+Help on _ArrayFunctionDispatcher in module numpy:
+
+
+
+isrealobj(x)
+
+    Return True if x is a not complex type or an array of complex numbers.
+
+    
+
+    The type of the input is checked, not the value. So even if the input
+
+&&&&&&&&&&&&&&&&&&&&&& isscalar
+
+Help on function isscalar in module numpy:
+
+
+
+isscalar(element)
+
+    Returns True if the type of `element` is a scalar type.
+
+    
+
+    Parameters
+
+&&&&&&&&&&&&&&&&&&&&&& issctype
+
+Help on function issctype in module numpy:
+
+
+
+issctype(rep)
+
+    Determines whether the given object represents a scalar data-type.
+
+    
+
+    Parameters
+
+&&&&&&&&&&&&&&&&&&&&&& issubclass_
+
+Help on function issubclass_ in module numpy:
+
+
+
+issubclass_(arg1, arg2)
+
+    Determine if a class is a subclass of a second class.
+
+    
+
+    `issubclass_` is equivalent to the Python built-in ``issubclass``,
+
+&&&&&&&&&&&&&&&&&&&&&& issubdtype
+
+Help on function issubdtype in module numpy:
+
+
+
+issubdtype(arg1, arg2)
+
+    Returns True if first argument is a typecode lower/equal in type hierarchy.
+
+    
+
+    This is like the builtin :func:`issubclass`, but for `dtype`\ s.
+
+&&&&&&&&&&&&&&&&&&&&&& issubsctype
+
+Help on function issubsctype in module numpy:
+
+
+
+issubsctype(arg1, arg2)
+
+    Determine if the first argument is a subclass of the second argument.
+
+    
+
+    Parameters
+
+&&&&&&&&&&&&&&&&&&&&&& iterable
+
+Help on function iterable in module numpy:
+
+
+
+iterable(y)
+
+    Check whether or not an object can be iterated over.
+
+    
+
+    Parameters
+
+&&&&&&&&&&&&&&&&&&&&&& ix_
+
+Help on _ArrayFunctionDispatcher in module numpy:
+
+
+
+ix_(*args)
+
+    Construct an open mesh from multiple sequences.
+
+    
+
+    This function takes N 1-D sequences and returns N outputs with N
+
+&&&&&&&&&&&&&&&&&&&&&& kaiser
+
+Help on function kaiser in module numpy:
+
+
+
+kaiser(M, beta)
+
+    Return the Kaiser window.
+
+    
+
+    The Kaiser window is a taper formed by using a Bessel function.
+
+&&&&&&&&&&&&&&&&&&&&&& kron
+
+Help on _ArrayFunctionDispatcher in module numpy:
+
+
+
+kron(a, b)
+
+    Kronecker product of two arrays.
+
+    
+
+    Computes the Kronecker product, a composite array made of blocks of the
+
+&&&&&&&&&&&&&&&&&&&&&& lcm
+
+Help on ufunc:
+
+
+
+lcm = <ufunc 'lcm'>
+
+    lcm(x1, x2, /, out=None, *, where=True, casting='same_kind', order='K', dtype=None, subok=True[, signature, extobj])
+
+    
+
+    Returns the lowest common multiple of ``|x1|`` and ``|x2|``
+
+&&&&&&&&&&&&&&&&&&&&&& ldexp
+
+Help on ufunc:
+
+
+
+ldexp = <ufunc 'ldexp'>
+
+    ldexp(x1, x2, /, out=None, *, where=True, casting='same_kind', order='K', dtype=None, subok=True[, signature, extobj])
+
+    
+
+    Returns x1 * 2**x2, element-wise.
+
+&&&&&&&&&&&&&&&&&&&&&& left_shift
+
+Help on ufunc:
+
+
+
+left_shift = <ufunc 'left_shift'>
+
+    left_shift(x1, x2, /, out=None, *, where=True, casting='same_kind', order='K', dtype=None, subok=True[, signature, extobj])
+
+    
+
+    Shift the bits of an integer to the left.
+
+&&&&&&&&&&&&&&&&&&&&&& less
+
+Help on ufunc:
+
+
+
+less = <ufunc 'less'>
+
+    less(x1, x2, /, out=None, *, where=True, casting='same_kind', order='K', dtype=None, subok=True[, signature, extobj])
+
+    
+
+    Return the truth value of (x1 < x2) element-wise.
+
+&&&&&&&&&&&&&&&&&&&&&& less_equal
+
+Help on ufunc:
+
+
+
+less_equal = <ufunc 'less_equal'>
+
+    less_equal(x1, x2, /, out=None, *, where=True, casting='same_kind', order='K', dtype=None, subok=True[, signature, extobj])
+
+    
+
+    Return the truth value of (x1 <= x2) element-wise.
+
+&&&&&&&&&&&&&&&&&&&&&& lexsort
+
+Help on _ArrayFunctionDispatcher in module numpy:
+
+
+
+lexsort(...)
+
+    lexsort(keys, axis=-1)
+
+    
+
+    Perform an indirect stable sort using a sequence of keys.
+
+&&&&&&&&&&&&&&&&&&&&&& lib
+
+Help on package numpy.lib in numpy:
+
+
+
+NAME
+
+    numpy.lib
+
+
+
+DESCRIPTION
+
+&&&&&&&&&&&&&&&&&&&&&& linalg
+
+Help on package numpy.linalg in numpy:
+
+
+
+NAME
+
+    numpy.linalg
+
+
+
+DESCRIPTION
+
+&&&&&&&&&&&&&&&&&&&&&& linspace
+
+Help on _ArrayFunctionDispatcher in module numpy:
+
+
+
+linspace(start, stop, num=50, endpoint=True, retstep=False, dtype=None, axis=0)
+
+    Return evenly spaced numbers over a specified interval.
+
+    
+
+    Returns `num` evenly spaced samples, calculated over the
+
+&&&&&&&&&&&&&&&&&&&&&& little_endian
+
+Help on bool object:
+
+
+
+class bool(int)
+
+ |  bool(x) -> bool
+
+ |  
+
+ |  Returns True when the argument x is true, False otherwise.
+
+&&&&&&&&&&&&&&&&&&&&&& load
+
+Help on function load in module numpy:
+
+
+
+load(file, mmap_mode=None, allow_pickle=False, fix_imports=True, encoding='ASCII', *, max_header_size=10000)
+
+    Load arrays or pickled objects from ``.npy``, ``.npz`` or pickled files.
+
+    
+
+    .. warning:: Loading files that contain object arrays uses the ``pickle``
+
+&&&&&&&&&&&&&&&&&&&&&& loadtxt
+
+Help on function loadtxt in module numpy:
+
+
+
+loadtxt(fname, dtype=<class 'float'>, comments='#', delimiter=None, converters=None, skiprows=0, usecols=None, unpack=False, ndmin=0, encoding='bytes', max_rows=None, *, quotechar=None, like=None)
+
+    Load data from a text file.
+
+    
+
+    Parameters
+
+&&&&&&&&&&&&&&&&&&&&&& log
+
+Help on ufunc:
+
+
+
+log = <ufunc 'log'>
+
+    log(x, /, out=None, *, where=True, casting='same_kind', order='K', dtype=None, subok=True[, signature, extobj])
+
+    
+
+    Natural logarithm, element-wise.
+
+&&&&&&&&&&&&&&&&&&&&&& log10
+
+Help on ufunc:
+
+
+
+log10 = <ufunc 'log10'>
+
+    log10(x, /, out=None, *, where=True, casting='same_kind', order='K', dtype=None, subok=True[, signature, extobj])
+
+    
+
+    Return the base 10 logarithm of the input array, element-wise.
+
+&&&&&&&&&&&&&&&&&&&&&& log1p
+
+Help on ufunc:
+
+
+
+log1p = <ufunc 'log1p'>
+
+    log1p(x, /, out=None, *, where=True, casting='same_kind', order='K', dtype=None, subok=True[, signature, extobj])
+
+    
+
+    Return the natural logarithm of one plus the input array, element-wise.
+
+&&&&&&&&&&&&&&&&&&&&&& log2
+
+Help on ufunc:
+
+
+
+log2 = <ufunc 'log2'>
+
+    log2(x, /, out=None, *, where=True, casting='same_kind', order='K', dtype=None, subok=True[, signature, extobj])
+
+    
+
+    Base-2 logarithm of `x`.
+
+&&&&&&&&&&&&&&&&&&&&&& logaddexp
+
+Help on ufunc:
+
+
+
+logaddexp = <ufunc 'logaddexp'>
+
+    logaddexp(x1, x2, /, out=None, *, where=True, casting='same_kind', order='K', dtype=None, subok=True[, signature, extobj])
+
+    
+
+    Logarithm of the sum of exponentiations of the inputs.
+
+&&&&&&&&&&&&&&&&&&&&&& logaddexp2
+
+Help on ufunc:
+
+
+
+logaddexp2 = <ufunc 'logaddexp2'>
+
+    logaddexp2(x1, x2, /, out=None, *, where=True, casting='same_kind', order='K', dtype=None, subok=True[, signature, extobj])
+
+    
+
+    Logarithm of the sum of exponentiations of the inputs in base-2.
+
+&&&&&&&&&&&&&&&&&&&&&& logical_and
+
+Help on ufunc:
+
+
+
+logical_and = <ufunc 'logical_and'>
+
+    logical_and(x1, x2, /, out=None, *, where=True, casting='same_kind', order='K', dtype=None, subok=True[, signature, extobj])
+
+    
+
+    Compute the truth value of x1 AND x2 element-wise.
+
+&&&&&&&&&&&&&&&&&&&&&& logical_not
+
+Help on ufunc:
+
+
+
+logical_not = <ufunc 'logical_not'>
+
+    logical_not(x, /, out=None, *, where=True, casting='same_kind', order='K', dtype=None, subok=True[, signature, extobj])
+
+    
+
+    Compute the truth value of NOT x element-wise.
+
+&&&&&&&&&&&&&&&&&&&&&& logical_or
+
+Help on ufunc:
+
+
+
+logical_or = <ufunc 'logical_or'>
+
+    logical_or(x1, x2, /, out=None, *, where=True, casting='same_kind', order='K', dtype=None, subok=True[, signature, extobj])
+
+    
+
+    Compute the truth value of x1 OR x2 element-wise.
+
+&&&&&&&&&&&&&&&&&&&&&& logical_xor
+
+Help on ufunc:
+
+
+
+logical_xor = <ufunc 'logical_xor'>
+
+    logical_xor(x1, x2, /, out=None, *, where=True, casting='same_kind', order='K', dtype=None, subok=True[, signature, extobj])
+
+    
+
+    Compute the truth value of x1 XOR x2, element-wise.
+
+&&&&&&&&&&&&&&&&&&&&&& logspace
+
+Help on _ArrayFunctionDispatcher in module numpy:
+
+
+
+logspace(start, stop, num=50, endpoint=True, base=10.0, dtype=None, axis=0)
+
+    Return numbers spaced evenly on a log scale.
+
+    
+
+    In linear space, the sequence starts at ``base ** start``
+
+&&&&&&&&&&&&&&&&&&&&&& longcomplex
+
+Help on class clongdouble in module numpy:
+
+
+
+class clongdouble(complexfloating)
+
+ |  Complex number type composed of two extended-precision floating-point
+
+ |  numbers.
+
+ |  
+
+&&&&&&&&&&&&&&&&&&&&&& longdouble
+
+Help on class longdouble in module numpy:
+
+
+
+class longdouble(floating)
+
+ |  Extended-precision floating-point number type, compatible with C
+
+ |  ``long double`` but not necessarily with IEEE 754 quadruple-precision.
+
+ |  
+
+&&&&&&&&&&&&&&&&&&&&&& longfloat
+
+Help on class longdouble in module numpy:
+
+
+
+class longdouble(floating)
+
+ |  Extended-precision floating-point number type, compatible with C
+
+ |  ``long double`` but not necessarily with IEEE 754 quadruple-precision.
+
+ |  
+
+&&&&&&&&&&&&&&&&&&&&&& longlong
+
+Help on class longlong in module numpy:
+
+
+
+class longlong(signedinteger)
+
+ |  Signed integer type, compatible with C ``long long``.
+
+ |  
+
+ |  :Character code: ``'q'``
+
+&&&&&&&&&&&&&&&&&&&&&& lookfor
+
+Help on function lookfor in module numpy:
+
+
+
+lookfor(what, module=None, import_modules=True, regenerate=False, output=None)
+
+    Do a keyword search on docstrings.
+
+    
+
+    A list of objects that matched the search is displayed,
+
+&&&&&&&&&&&&&&&&&&&&&& ma
+
+Help on package numpy.ma in numpy:
+
+
+
+NAME
+
+    numpy.ma
+
+
+
+DESCRIPTION
+
+&&&&&&&&&&&&&&&&&&&&&& mask_indices
+
+Help on function mask_indices in module numpy:
+
+
+
+mask_indices(n, mask_func, k=0)
+
+    Return the indices to access (n, n) arrays, given a masking function.
+
+    
+
+    Assume `mask_func` is a function that, for a square array a of size
+
+&&&&&&&&&&&&&&&&&&&&&& mat
+
+Help on function asmatrix in module numpy:
+
+
+
+asmatrix(data, dtype=None)
+
+    Interpret the input as a matrix.
+
+    
+
+    Unlike `matrix`, `asmatrix` does not make a copy if the input is already
+
+&&&&&&&&&&&&&&&&&&&&&& matmul
+
+Help on ufunc:
+
+
+
+matmul = <ufunc 'matmul'>
+
+    matmul(x1, x2, /, out=None, *, casting='same_kind', order='K', dtype=None, subok=True[, signature, extobj, axes, axis])
+
+    
+
+    Matrix product of two arrays.
+
+&&&&&&&&&&&&&&&&&&&&&& matrix
+
+Help on class matrix in module numpy:
+
+
+
+class matrix(ndarray)
+
+ |  matrix(data, dtype=None, copy=True)
+
+ |  
+
+ |  matrix(data, dtype=None, copy=True)
+
+&&&&&&&&&&&&&&&&&&&&&& max
+
+Help on _ArrayFunctionDispatcher in module numpy:
+
+
+
+max(a, axis=None, out=None, keepdims=<no value>, initial=<no value>, where=<no value>)
+
+    Return the maximum of an array or maximum along an axis.
+
+    
+
+    Parameters
+
+&&&&&&&&&&&&&&&&&&&&&& maximum
+
+Help on ufunc:
+
+
+
+maximum = <ufunc 'maximum'>
+
+    maximum(x1, x2, /, out=None, *, where=True, casting='same_kind', order='K', dtype=None, subok=True[, signature, extobj])
+
+    
+
+    Element-wise maximum of array elements.
+
+&&&&&&&&&&&&&&&&&&&&&& maximum_sctype
+
+Help on function maximum_sctype in module numpy:
+
+
+
+maximum_sctype(t)
+
+    Return the scalar type of highest precision of the same kind as the input.
+
+    
+
+    Parameters
+
+&&&&&&&&&&&&&&&&&&&&&& may_share_memory
+
+Help on _ArrayFunctionDispatcher in module numpy:
+
+
+
+may_share_memory(...)
+
+    may_share_memory(a, b, /, max_work=None)
+
+    
+
+    Determine if two arrays might share memory
+
+&&&&&&&&&&&&&&&&&&&&&& mean
+
+Help on _ArrayFunctionDispatcher in module numpy:
+
+
+
+mean(a, axis=None, dtype=None, out=None, keepdims=<no value>, *, where=<no value>)
+
+    Compute the arithmetic mean along the specified axis.
+
+    
+
+    Returns the average of the array elements.  The average is taken over
+
+&&&&&&&&&&&&&&&&&&&&&& median
+
+Help on _ArrayFunctionDispatcher in module numpy:
+
+
+
+median(a, axis=None, out=None, overwrite_input=False, keepdims=False)
+
+    Compute the median along the specified axis.
+
+    
+
+    Returns the median of the array elements.
+
+&&&&&&&&&&&&&&&&&&&&&& memmap
+
+Help on class memmap in module numpy:
+
+
+
+class memmap(ndarray)
+
+ |  memmap(filename, dtype=<class 'numpy.uint8'>, mode='r+', offset=0, shape=None, order='C')
+
+ |  
+
+ |  Create a memory-map to an array stored in a *binary* file on disk.
+
+&&&&&&&&&&&&&&&&&&&&&& meshgrid
+
+Help on _ArrayFunctionDispatcher in module numpy:
+
+
+
+meshgrid(*xi, copy=True, sparse=False, indexing='xy')
+
+    Return a list of coordinate matrices from coordinate vectors.
+
+    
+
+    Make N-D coordinate arrays for vectorized evaluations of
+
+&&&&&&&&&&&&&&&&&&&&&& mgrid
+
+Help on MGridClass in module numpy.lib.index_tricks object:
+
+
+
+class MGridClass(nd_grid)
+
+ |  An instance which returns a dense multi-dimensional "meshgrid".
+
+ |  
+
+ |  An instance which returns a dense (or fleshed out) mesh-grid
+
+&&&&&&&&&&&&&&&&&&&&&& min
+
+Help on _ArrayFunctionDispatcher in module numpy:
+
+
+
+min(a, axis=None, out=None, keepdims=<no value>, initial=<no value>, where=<no value>)
+
+    Return the minimum of an array or minimum along an axis.
+
+    
+
+    Parameters
+
+&&&&&&&&&&&&&&&&&&&&&& min_scalar_type
+
+Help on _ArrayFunctionDispatcher in module numpy:
+
+
+
+min_scalar_type(...)
+
+    min_scalar_type(a, /)
+
+    
+
+    For scalar ``a``, returns the data type with the smallest size
+
+&&&&&&&&&&&&&&&&&&&&&& minimum
+
+Help on ufunc:
+
+
+
+minimum = <ufunc 'minimum'>
+
+    minimum(x1, x2, /, out=None, *, where=True, casting='same_kind', order='K', dtype=None, subok=True[, signature, extobj])
+
+    
+
+    Element-wise minimum of array elements.
+
+&&&&&&&&&&&&&&&&&&&&&& mintypecode
+
+Help on function mintypecode in module numpy:
+
+
+
+mintypecode(typechars, typeset='GDFgdf', default='d')
+
+    Return the character for the minimum-size type to which given types can
+
+    be safely cast.
+
+    
+
+&&&&&&&&&&&&&&&&&&&&&& mod
+
+Help on ufunc:
+
+
+
+remainder = <ufunc 'remainder'>
+
+    remainder(x1, x2, /, out=None, *, where=True, casting='same_kind', order='K', dtype=None, subok=True[, signature, extobj])
+
+    
+
+    Returns the element-wise remainder of division.
+
+&&&&&&&&&&&&&&&&&&&&&& modf
+
+Help on ufunc:
+
+
+
+modf = <ufunc 'modf'>
+
+    modf(x[, out1, out2], / [, out=(None, None)], *, where=True, casting='same_kind', order='K', dtype=None, subok=True[, signature, extobj])
+
+    
+
+    Return the fractional and integral parts of an array, element-wise.
+
+&&&&&&&&&&&&&&&&&&&&&& moveaxis
+
+Help on _ArrayFunctionDispatcher in module numpy:
+
+
+
+moveaxis(a, source, destination)
+
+    Move axes of an array to new positions.
+
+    
+
+    Other axes remain in their original order.
+
+&&&&&&&&&&&&&&&&&&&&&& msort
+
+Help on _ArrayFunctionDispatcher in module numpy:
+
+
+
+msort(a)
+
+    Return a copy of an array sorted along the first axis.
+
+    
+
+    .. deprecated:: 1.24
+
+&&&&&&&&&&&&&&&&&&&&&& multiply
+
+Help on ufunc:
+
+
+
+multiply = <ufunc 'multiply'>
+
+    multiply(x1, x2, /, out=None, *, where=True, casting='same_kind', order='K', dtype=None, subok=True[, signature, extobj])
+
+    
+
+    Multiply arguments element-wise.
+
+&&&&&&&&&&&&&&&&&&&&&& nan
+
+Help on float object:
+
+
+
+class float(object)
+
+ |  float(x=0, /)
+
+ |  
+
+ |  Convert a string or number to a floating point number, if possible.
+
+&&&&&&&&&&&&&&&&&&&&&& nan_to_num
+
+Help on _ArrayFunctionDispatcher in module numpy:
+
+
+
+nan_to_num(x, copy=True, nan=0.0, posinf=None, neginf=None)
+
+    Replace NaN with zero and infinity with large finite numbers (default
+
+    behaviour) or with the numbers defined by the user using the `nan`,
+
+    `posinf` and/or `neginf` keywords.
+
+&&&&&&&&&&&&&&&&&&&&&& nanargmax
+
+Help on _ArrayFunctionDispatcher in module numpy:
+
+
+
+nanargmax(a, axis=None, out=None, *, keepdims=<no value>)
+
+    Return the indices of the maximum values in the specified axis ignoring
+
+    NaNs. For all-NaN slices ``ValueError`` is raised. Warning: the
+
+    results cannot be trusted if a slice contains only NaNs and -Infs.
+
+&&&&&&&&&&&&&&&&&&&&&& nanargmin
+
+Help on _ArrayFunctionDispatcher in module numpy:
+
+
+
+nanargmin(a, axis=None, out=None, *, keepdims=<no value>)
+
+    Return the indices of the minimum values in the specified axis ignoring
+
+    NaNs. For all-NaN slices ``ValueError`` is raised. Warning: the results
+
+    cannot be trusted if a slice contains only NaNs and Infs.
+
+&&&&&&&&&&&&&&&&&&&&&& nancumprod
+
+Help on _ArrayFunctionDispatcher in module numpy:
+
+
+
+nancumprod(a, axis=None, dtype=None, out=None)
+
+    Return the cumulative product of array elements over a given axis treating Not a
+
+    Numbers (NaNs) as one.  The cumulative product does not change when NaNs are
+
+    encountered and leading NaNs are replaced by ones.
+
+&&&&&&&&&&&&&&&&&&&&&& nancumsum
+
+Help on _ArrayFunctionDispatcher in module numpy:
+
+
+
+nancumsum(a, axis=None, dtype=None, out=None)
+
+    Return the cumulative sum of array elements over a given axis treating Not a
+
+    Numbers (NaNs) as zero.  The cumulative sum does not change when NaNs are
+
+    encountered and leading NaNs are replaced by zeros.
+
+&&&&&&&&&&&&&&&&&&&&&& nanmax
+
+Help on _ArrayFunctionDispatcher in module numpy:
+
+
+
+nanmax(a, axis=None, out=None, keepdims=<no value>, initial=<no value>, where=<no value>)
+
+    Return the maximum of an array or maximum along an axis, ignoring any
+
+    NaNs.  When all-NaN slices are encountered a ``RuntimeWarning`` is
+
+    raised and NaN is returned for that slice.
+
+&&&&&&&&&&&&&&&&&&&&&& nanmean
+
+Help on _ArrayFunctionDispatcher in module numpy:
+
+
+
+nanmean(a, axis=None, dtype=None, out=None, keepdims=<no value>, *, where=<no value>)
+
+    Compute the arithmetic mean along the specified axis, ignoring NaNs.
+
+    
+
+    Returns the average of the array elements.  The average is taken over
+
+&&&&&&&&&&&&&&&&&&&&&& nanmedian
+
+Help on _ArrayFunctionDispatcher in module numpy:
+
+
+
+nanmedian(a, axis=None, out=None, overwrite_input=False, keepdims=<no value>)
+
+    Compute the median along the specified axis, while ignoring NaNs.
+
+    
+
+    Returns the median of the array elements.
+
+&&&&&&&&&&&&&&&&&&&&&& nanmin
+
+Help on _ArrayFunctionDispatcher in module numpy:
+
+
+
+nanmin(a, axis=None, out=None, keepdims=<no value>, initial=<no value>, where=<no value>)
+
+    Return minimum of an array or minimum along an axis, ignoring any NaNs.
+
+    When all-NaN slices are encountered a ``RuntimeWarning`` is raised and
+
+    Nan is returned for that slice.
+
+&&&&&&&&&&&&&&&&&&&&&& nanpercentile
+
+Help on _ArrayFunctionDispatcher in module numpy:
+
+
+
+nanpercentile(a, q, axis=None, out=None, overwrite_input=False, method='linear', keepdims=<no value>, *, interpolation=None)
+
+    Compute the qth percentile of the data along the specified axis,
+
+    while ignoring nan values.
+
+    
+
+&&&&&&&&&&&&&&&&&&&&&& nanprod
+
+Help on _ArrayFunctionDispatcher in module numpy:
+
+
+
+nanprod(a, axis=None, dtype=None, out=None, keepdims=<no value>, initial=<no value>, where=<no value>)
+
+    Return the product of array elements over a given axis treating Not a
+
+    Numbers (NaNs) as ones.
+
+    
+
+&&&&&&&&&&&&&&&&&&&&&& nanquantile
+
+Help on _ArrayFunctionDispatcher in module numpy:
+
+
+
+nanquantile(a, q, axis=None, out=None, overwrite_input=False, method='linear', keepdims=<no value>, *, interpolation=None)
+
+    Compute the qth quantile of the data along the specified axis,
+
+    while ignoring nan values.
+
+    Returns the qth quantile(s) of the array elements.
+
+&&&&&&&&&&&&&&&&&&&&&& nanstd
+
+Help on _ArrayFunctionDispatcher in module numpy:
+
+
+
+nanstd(a, axis=None, dtype=None, out=None, ddof=0, keepdims=<no value>, *, where=<no value>)
+
+    Compute the standard deviation along the specified axis, while
+
+    ignoring NaNs.
+
+    
+
+&&&&&&&&&&&&&&&&&&&&&& nansum
+
+Help on _ArrayFunctionDispatcher in module numpy:
+
+
+
+nansum(a, axis=None, dtype=None, out=None, keepdims=<no value>, initial=<no value>, where=<no value>)
+
+    Return the sum of array elements over a given axis treating Not a
+
+    Numbers (NaNs) as zero.
+
+    
+
+&&&&&&&&&&&&&&&&&&&&&& nanvar
+
+Help on _ArrayFunctionDispatcher in module numpy:
+
+
+
+nanvar(a, axis=None, dtype=None, out=None, ddof=0, keepdims=<no value>, *, where=<no value>)
+
+    Compute the variance along the specified axis, while ignoring NaNs.
+
+    
+
+    Returns the variance of the array elements, a measure of the spread of
+
+&&&&&&&&&&&&&&&&&&&&&& nbytes
+
+Help on _typedict in module numpy.core.numerictypes object:
+
+
+
+class _typedict(builtins.dict)
+
+ |  Base object for a dictionary for look-up with any alias for an array dtype.
+
+ |  
+
+ |  Instances of `_typedict` can not be used as dictionaries directly,
+
+&&&&&&&&&&&&&&&&&&&&&& ndarray
+
+Help on class ndarray in module numpy:
+
+
+
+class ndarray(builtins.object)
+
+ |  ndarray(shape, dtype=float, buffer=None, offset=0,
+
+ |          strides=None, order=None)
+
+ |  
+
+&&&&&&&&&&&&&&&&&&&&&& ndenumerate
+
+Help on class ndenumerate in module numpy:
+
+
+
+class ndenumerate(builtins.object)
+
+ |  ndenumerate(arr)
+
+ |  
+
+ |  Multidimensional index iterator.
+
+&&&&&&&&&&&&&&&&&&&&&& ndim
+
+Help on _ArrayFunctionDispatcher in module numpy:
+
+
+
+ndim(a)
+
+    Return the number of dimensions of an array.
+
+    
+
+    Parameters
+
+&&&&&&&&&&&&&&&&&&&&&& ndindex
+
+Help on class ndindex in module numpy:
+
+
+
+class ndindex(builtins.object)
+
+ |  ndindex(*shape)
+
+ |  
+
+ |  An N-dimensional iterator object to index arrays.
+
+&&&&&&&&&&&&&&&&&&&&&& nditer
+
+Help on class nditer in module numpy:
+
+
+
+class nditer(builtins.object)
+
+ |  nditer(op, flags=None, op_flags=None, op_dtypes=None, order='K', casting='safe', op_axes=None, itershape=None, buffersize=0)
+
+ |  
+
+ |  Efficient multi-dimensional iterator object to iterate over arrays.
+
+&&&&&&&&&&&&&&&&&&&&&& negative
+
+Help on ufunc:
+
+
+
+negative = <ufunc 'negative'>
+
+    negative(x, /, out=None, *, where=True, casting='same_kind', order='K', dtype=None, subok=True[, signature, extobj])
+
+    
+
+    Numerical negative, element-wise.
+
+&&&&&&&&&&&&&&&&&&&&&& nested_iters
+
+Help on built-in function nested_iters in module numpy:
+
+
+
+nested_iters(...)
+
+    nested_iters(op, axes, flags=None, op_flags=None, op_dtypes=None,     order="K", casting="safe", buffersize=0)
+
+    
+
+    Create nditers for use in nested loops
+
+&&&&&&&&&&&&&&&&&&&&&& newaxis
+
+Help on NoneType object:
+
+
+
+class NoneType(object)
+
+ |  Methods defined here:
+
+ |  
+
+ |  __bool__(self, /)
+
+&&&&&&&&&&&&&&&&&&&&&& nextafter
+
+Help on ufunc:
+
+
+
+nextafter = <ufunc 'nextafter'>
+
+    nextafter(x1, x2, /, out=None, *, where=True, casting='same_kind', order='K', dtype=None, subok=True[, signature, extobj])
+
+    
+
+    Return the next floating-point value after x1 towards x2, element-wise.
+
+&&&&&&&&&&&&&&&&&&&&&& nonzero
+
+Help on _ArrayFunctionDispatcher in module numpy:
+
+
+
+nonzero(a)
+
+    Return the indices of the elements that are non-zero.
+
+    
+
+    Returns a tuple of arrays, one for each dimension of `a`,
+
+&&&&&&&&&&&&&&&&&&&&&& not_equal
+
+Help on ufunc:
+
+
+
+not_equal = <ufunc 'not_equal'>
+
+    not_equal(x1, x2, /, out=None, *, where=True, casting='same_kind', order='K', dtype=None, subok=True[, signature, extobj])
+
+    
+
+    Return (x1 != x2) element-wise.
+
+&&&&&&&&&&&&&&&&&&&&&& numarray
+
+No Python documentation found for 'removed'.
+
+Use help() to get the interactive help utility.
+
+Use help(str) for help on the str class.
+
+
+
+None
+
+&&&&&&&&&&&&&&&&&&&&&& number
+
+&&&&&&&&&&&&&&&&&&&&&& obj2sctype
+
+Help on function obj2sctype in module numpy:
+
+
+
+obj2sctype(rep, default=None)
+
+    Return the scalar dtype or NumPy equivalent of Python type of an object.
+
+    
+
+    Parameters
+
+&&&&&&&&&&&&&&&&&&&&&& object_
+
+Help on class object_ in module numpy:
+
+
+
+class object_(generic)
+
+ |  Any Python object.
+
+ |  
+
+ |  :Character code: ``'O'``
+
+&&&&&&&&&&&&&&&&&&&&&& ogrid
+
+Help on OGridClass in module numpy.lib.index_tricks object:
+
+
+
+class OGridClass(nd_grid)
+
+ |  An instance which returns an open multi-dimensional "meshgrid".
+
+ |  
+
+ |  An instance which returns an open (i.e. not fleshed out) mesh-grid
+
+&&&&&&&&&&&&&&&&&&&&&& oldnumeric
+
+No Python documentation found for 'removed'.
+
+Use help() to get the interactive help utility.
+
+Use help(str) for help on the str class.
+
+
+
+None
+
+&&&&&&&&&&&&&&&&&&&&&& ones
+
+&&&&&&&&&&&&&&&&&&&&&& ones_like
+
+Help on _ArrayFunctionDispatcher in module numpy:
+
+
+
+ones_like(a, dtype=None, order='K', subok=True, shape=None)
+
+    Return an array of ones with the same shape and type as a given array.
+
+    
+
+    Parameters
+
+&&&&&&&&&&&&&&&&&&&&&& outer
+
+Help on _ArrayFunctionDispatcher in module numpy:
+
+
+
+outer(a, b, out=None)
+
+    Compute the outer product of two vectors.
+
+    
+
+    Given two vectors `a` and `b` of length ``M`` and ``N``, repsectively,
+
+&&&&&&&&&&&&&&&&&&&&&& packbits
+
+Help on _ArrayFunctionDispatcher in module numpy:
+
+
+
+packbits(...)
+
+    packbits(a, /, axis=None, bitorder='big')
+
+    
+
+    Packs the elements of a binary-valued array into bits in a uint8 array.
+
+&&&&&&&&&&&&&&&&&&&&&& pad
+
+Help on _ArrayFunctionDispatcher in module numpy:
+
+
+
+pad(array, pad_width, mode='constant', **kwargs)
+
+    Pad an array.
+
+    
+
+    Parameters
+
+&&&&&&&&&&&&&&&&&&&&&& partition
+
+Help on _ArrayFunctionDispatcher in module numpy:
+
+
+
+partition(a, kth, axis=-1, kind='introselect', order=None)
+
+    Return a partitioned copy of an array.
+
+    
+
+    Creates a copy of the array with its elements rearranged in such a
+
+&&&&&&&&&&&&&&&&&&&&&& percentile
+
+Help on _ArrayFunctionDispatcher in module numpy:
+
+
+
+percentile(a, q, axis=None, out=None, overwrite_input=False, method='linear', keepdims=False, *, interpolation=None)
+
+    Compute the q-th percentile of the data along the specified axis.
+
+    
+
+    Returns the q-th percentile(s) of the array elements.
+
+&&&&&&&&&&&&&&&&&&&&&& pi
+
+Help on float object:
+
+
+
+class float(object)
+
+ |  float(x=0, /)
+
+ |  
+
+ |  Convert a string or number to a floating point number, if possible.
+
+&&&&&&&&&&&&&&&&&&&&&& piecewise
+
+Help on _ArrayFunctionDispatcher in module numpy:
+
+
+
+piecewise(x, condlist, funclist, *args, **kw)
+
+    Evaluate a piecewise-defined function.
+
+    
+
+    Given a set of conditions and corresponding functions, evaluate each
+
+&&&&&&&&&&&&&&&&&&&&&& place
+
+Help on _ArrayFunctionDispatcher in module numpy:
+
+
+
+place(arr, mask, vals)
+
+    Change elements of an array based on conditional and input values.
+
+    
+
+    Similar to ``np.copyto(arr, vals, where=mask)``, the difference is that
+
+&&&&&&&&&&&&&&&&&&&&&& poly
+
+Help on _ArrayFunctionDispatcher in module numpy:
+
+
+
+poly(seq_of_zeros)
+
+    Find the coefficients of a polynomial with the given sequence of roots.
+
+    
+
+    .. note::
+
+&&&&&&&&&&&&&&&&&&&&&& poly1d
+
+Help on class poly1d in module numpy:
+
+
+
+class poly1d(builtins.object)
+
+ |  poly1d(c_or_r, r=False, variable=None)
+
+ |  
+
+ |  A one-dimensional polynomial class.
+
+&&&&&&&&&&&&&&&&&&&&&& polyadd
+
+Help on _ArrayFunctionDispatcher in module numpy:
+
+
+
+polyadd(a1, a2)
+
+    Find the sum of two polynomials.
+
+    
+
+    .. note::
+
+&&&&&&&&&&&&&&&&&&&&&& polyder
+
+Help on _ArrayFunctionDispatcher in module numpy:
+
+
+
+polyder(p, m=1)
+
+    Return the derivative of the specified order of a polynomial.
+
+    
+
+    .. note::
+
+&&&&&&&&&&&&&&&&&&&&&& polydiv
+
+Help on _ArrayFunctionDispatcher in module numpy:
+
+
+
+polydiv(u, v)
+
+    Returns the quotient and remainder of polynomial division.
+
+    
+
+    .. note::
+
+&&&&&&&&&&&&&&&&&&&&&& polyfit
+
+Help on _ArrayFunctionDispatcher in module numpy:
+
+
+
+polyfit(x, y, deg, rcond=None, full=False, w=None, cov=False)
+
+    Least squares polynomial fit.
+
+    
+
+    .. note::
+
+&&&&&&&&&&&&&&&&&&&&&& polyint
+
+Help on _ArrayFunctionDispatcher in module numpy:
+
+
+
+polyint(p, m=1, k=None)
+
+    Return an antiderivative (indefinite integral) of a polynomial.
+
+    
+
+    .. note::
+
+&&&&&&&&&&&&&&&&&&&&&& polymul
+
+Help on _ArrayFunctionDispatcher in module numpy:
+
+
+
+polymul(a1, a2)
+
+    Find the product of two polynomials.
+
+    
+
+    .. note::
+
+&&&&&&&&&&&&&&&&&&&&&& polynomial
+
+Help on package numpy.polynomial in numpy:
+
+
+
+NAME
+
+    numpy.polynomial - A sub-package for efficiently dealing with polynomials.
+
+
+
+DESCRIPTION
+
+&&&&&&&&&&&&&&&&&&&&&& polysub
+
+Help on _ArrayFunctionDispatcher in module numpy:
+
+
+
+polysub(a1, a2)
+
+    Difference (subtraction) of two polynomials.
+
+    
+
+    .. note::
+
+&&&&&&&&&&&&&&&&&&&&&& polyval
+
+Help on _ArrayFunctionDispatcher in module numpy:
+
+
+
+polyval(p, x)
+
+    Evaluate a polynomial at specific values.
+
+    
+
+    .. note::
+
+&&&&&&&&&&&&&&&&&&&&&& positive
+
+Help on ufunc:
+
+
+
+positive = <ufunc 'positive'>
+
+    positive(x, /, out=None, *, where=True, casting='same_kind', order='K', dtype=None, subok=True[, signature, extobj])
+
+    
+
+    Numerical positive, element-wise.
+
+&&&&&&&&&&&&&&&&&&&&&& power
+
+Help on ufunc:
+
+
+
+power = <ufunc 'power'>
+
+    power(x1, x2, /, out=None, *, where=True, casting='same_kind', order='K', dtype=None, subok=True[, signature, extobj])
+
+    
+
+    First array elements raised to powers from second array, element-wise.
+
+&&&&&&&&&&&&&&&&&&&&&& printoptions
+
+Help on function printoptions in module numpy:
+
+
+
+printoptions(*args, **kwargs)
+
+    Context manager for setting print options.
+
+    
+
+    Set print options for the scope of the `with` block, and restore the old
+
+&&&&&&&&&&&&&&&&&&&&&& prod
+
+Help on _ArrayFunctionDispatcher in module numpy:
+
+
+
+prod(a, axis=None, dtype=None, out=None, keepdims=<no value>, initial=<no value>, where=<no value>)
+
+    Return the product of array elements over a given axis.
+
+    
+
+    Parameters
+
+&&&&&&&&&&&&&&&&&&&&&& product
+
+Help on _ArrayFunctionDispatcher in module numpy:
+
+
+
+product(*args, **kwargs)
+
+    Return the product of array elements over a given axis.
+
+    
+
+    .. deprecated:: 1.25.0
+
+&&&&&&&&&&&&&&&&&&&&&& promote_types
+
+Help on built-in function promote_types in module numpy:
+
+
+
+promote_types(...)
+
+    promote_types(type1, type2)
+
+    
+
+    Returns the data type with the smallest size and smallest scalar
+
+&&&&&&&&&&&&&&&&&&&&&& ptp
+
+Help on _ArrayFunctionDispatcher in module numpy:
+
+
+
+ptp(a, axis=None, out=None, keepdims=<no value>)
+
+    Range of values (maximum - minimum) along an axis.
+
+    
+
+    The name of the function comes from the acronym for 'peak to peak'.
+
+&&&&&&&&&&&&&&&&&&&&&& put
+
+Help on _ArrayFunctionDispatcher in module numpy:
+
+
+
+put(a, ind, v, mode='raise')
+
+    Replaces specified elements of an array with given values.
+
+    
+
+    The indexing works on the flattened target array. `put` is roughly
+
+&&&&&&&&&&&&&&&&&&&&&& put_along_axis
+
+Help on _ArrayFunctionDispatcher in module numpy:
+
+
+
+put_along_axis(arr, indices, values, axis)
+
+    Put values into the destination array by matching 1d index and data slices.
+
+    
+
+    This iterates over matching 1d slices oriented along the specified axis in
+
+&&&&&&&&&&&&&&&&&&&&&& putmask
+
+Help on _ArrayFunctionDispatcher in module numpy:
+
+
+
+putmask(...)
+
+    putmask(a, mask, values)
+
+    
+
+    Changes elements of an array based on conditional and input values.
+
+&&&&&&&&&&&&&&&&&&&&&& quantile
+
+Help on _ArrayFunctionDispatcher in module numpy:
+
+
+
+quantile(a, q, axis=None, out=None, overwrite_input=False, method='linear', keepdims=False, *, interpolation=None)
+
+    Compute the q-th quantile of the data along the specified axis.
+
+    
+
+    .. versionadded:: 1.15.0
+
+&&&&&&&&&&&&&&&&&&&&&& r_
+
+Help on RClass in module numpy.lib.index_tricks object:
+
+
+
+class RClass(AxisConcatenator)
+
+ |  Translates slice objects to concatenation along the first axis.
+
+ |  
+
+ |  This is a simple way to build up arrays quickly. There are two use cases.
+
+&&&&&&&&&&&&&&&&&&&&&& rad2deg
+
+Help on ufunc:
+
+
+
+rad2deg = <ufunc 'rad2deg'>
+
+    rad2deg(x, /, out=None, *, where=True, casting='same_kind', order='K', dtype=None, subok=True[, signature, extobj])
+
+    
+
+    Convert angles from radians to degrees.
+
+&&&&&&&&&&&&&&&&&&&&&& radians
+
+Help on ufunc:
+
+
+
+radians = <ufunc 'radians'>
+
+    radians(x, /, out=None, *, where=True, casting='same_kind', order='K', dtype=None, subok=True[, signature, extobj])
+
+    
+
+    Convert angles from degrees to radians.
+
+&&&&&&&&&&&&&&&&&&&&&& random
+
+Help on package numpy.random in numpy:
+
+
+
+NAME
+
+    numpy.random
+
+
+
+DESCRIPTION
+
+&&&&&&&&&&&&&&&&&&&&&& ravel
+
+Help on _ArrayFunctionDispatcher in module numpy:
+
+
+
+ravel(a, order='C')
+
+    Return a contiguous flattened array.
+
+    
+
+    A 1-D array, containing the elements of the input, is returned.  A copy is
+
+&&&&&&&&&&&&&&&&&&&&&& ravel_multi_index
+
+Help on _ArrayFunctionDispatcher in module numpy:
+
+
+
+ravel_multi_index(...)
+
+    ravel_multi_index(multi_index, dims, mode='raise', order='C')
+
+    
+
+    Converts a tuple of index arrays into an array of flat
+
+&&&&&&&&&&&&&&&&&&&&&& real
+
+Help on _ArrayFunctionDispatcher in module numpy:
+
+
+
+real(val)
+
+    Return the real part of the complex argument.
+
+    
+
+    Parameters
+
+&&&&&&&&&&&&&&&&&&&&&& real_if_close
+
+Help on _ArrayFunctionDispatcher in module numpy:
+
+
+
+real_if_close(a, tol=100)
+
+    If input is complex with all imaginary parts close to zero, return
+
+    real parts.
+
+    
+
+&&&&&&&&&&&&&&&&&&&&&& rec
+
+Help on module numpy.core.records in numpy.core:
+
+
+
+NAME
+
+    numpy.core.records
+
+
+
+DESCRIPTION
+
+&&&&&&&&&&&&&&&&&&&&&& recarray
+
+Help on class recarray in module numpy:
+
+
+
+class recarray(ndarray)
+
+ |  recarray(shape, dtype=None, buf=None, offset=0, strides=None, formats=None, names=None, titles=None, byteorder=None, aligned=False, order='C')
+
+ |  
+
+ |  Construct an ndarray that allows field access using attributes.
+
+&&&&&&&&&&&&&&&&&&&&&& recfromcsv
+
+Help on function recfromcsv in module numpy.lib.npyio:
+
+
+
+recfromcsv(fname, **kwargs)
+
+    Load ASCII data stored in a comma-separated file.
+
+    
+
+    The returned array is a record array (if ``usemask=False``, see
+
+&&&&&&&&&&&&&&&&&&&&&& recfromtxt
+
+Help on function recfromtxt in module numpy.lib.npyio:
+
+
+
+recfromtxt(fname, **kwargs)
+
+    Load ASCII data from a file and return it in a record array.
+
+    
+
+    If ``usemask=False`` a standard `recarray` is returned,
+
+&&&&&&&&&&&&&&&&&&&&&& reciprocal
+
+Help on ufunc:
+
+
+
+reciprocal = <ufunc 'reciprocal'>
+
+    reciprocal(x, /, out=None, *, where=True, casting='same_kind', order='K', dtype=None, subok=True[, signature, extobj])
+
+    
+
+    Return the reciprocal of the argument, element-wise.
+
+&&&&&&&&&&&&&&&&&&&&&& record
+
+Help on class record in module numpy:
+
+
+
+class record(void)
+
+ |  A data-type scalar that allows field access as attribute lookup.
+
+ |  
+
+ |  Method resolution order:
+
+&&&&&&&&&&&&&&&&&&&&&& remainder
+
+Help on ufunc:
+
+
+
+remainder = <ufunc 'remainder'>
+
+    remainder(x1, x2, /, out=None, *, where=True, casting='same_kind', order='K', dtype=None, subok=True[, signature, extobj])
+
+    
+
+    Returns the element-wise remainder of division.
+
+&&&&&&&&&&&&&&&&&&&&&& repeat
+
+Help on _ArrayFunctionDispatcher in module numpy:
+
+
+
+repeat(a, repeats, axis=None)
+
+    Repeat each element of an array after themselves
+
+    
+
+    Parameters
+
+&&&&&&&&&&&&&&&&&&&&&& require
+
+Help on function require in module numpy:
+
+
+
+require(a, dtype=None, requirements=None, *, like=None)
+
+    Return an ndarray of the provided type that satisfies requirements.
+
+    
+
+    This function is useful to be sure that an array with the correct flags
+
+&&&&&&&&&&&&&&&&&&&&&& reshape
+
+Help on _ArrayFunctionDispatcher in module numpy:
+
+
+
+reshape(a, newshape, order='C')
+
+    Gives a new shape to an array without changing its data.
+
+    
+
+    Parameters
+
+&&&&&&&&&&&&&&&&&&&&&& resize
+
+Help on _ArrayFunctionDispatcher in module numpy:
+
+
+
+resize(a, new_shape)
+
+    Return a new array with the specified shape.
+
+    
+
+    If the new array is larger than the original array, then the new
+
+&&&&&&&&&&&&&&&&&&&&&& result_type
+
+Help on _ArrayFunctionDispatcher in module numpy:
+
+
+
+result_type(...)
+
+    result_type(*arrays_and_dtypes)
+
+    
+
+    Returns the type that results from applying the NumPy
+
+&&&&&&&&&&&&&&&&&&&&&& right_shift
+
+Help on ufunc:
+
+
+
+right_shift = <ufunc 'right_shift'>
+
+    right_shift(x1, x2, /, out=None, *, where=True, casting='same_kind', order='K', dtype=None, subok=True[, signature, extobj])
+
+    
+
+    Shift the bits of an integer to the right.
+
+&&&&&&&&&&&&&&&&&&&&&& rint
+
+Help on ufunc:
+
+
+
+rint = <ufunc 'rint'>
+
+    rint(x, /, out=None, *, where=True, casting='same_kind', order='K', dtype=None, subok=True[, signature, extobj])
+
+    
+
+    Round elements of the array to the nearest integer.
+
+&&&&&&&&&&&&&&&&&&&&&& roll
+
+Help on _ArrayFunctionDispatcher in module numpy:
+
+
+
+roll(a, shift, axis=None)
+
+    Roll array elements along a given axis.
+
+    
+
+    Elements that roll beyond the last position are re-introduced at
+
+&&&&&&&&&&&&&&&&&&&&&& rollaxis
+
+Help on _ArrayFunctionDispatcher in module numpy:
+
+
+
+rollaxis(a, axis, start=0)
+
+    Roll the specified axis backwards, until it lies in a given position.
+
+    
+
+    This function continues to be supported for backward compatibility, but you
+
+&&&&&&&&&&&&&&&&&&&&&& roots
+
+Help on _ArrayFunctionDispatcher in module numpy:
+
+
+
+roots(p)
+
+    Return the roots of a polynomial with coefficients given in p.
+
+    
+
+    .. note::
+
+&&&&&&&&&&&&&&&&&&&&&& rot90
+
+Help on _ArrayFunctionDispatcher in module numpy:
+
+
+
+rot90(m, k=1, axes=(0, 1))
+
+    Rotate an array by 90 degrees in the plane specified by axes.
+
+    
+
+    Rotation direction is from the first towards the second axis.
+
+&&&&&&&&&&&&&&&&&&&&&& round
+
+Help on _ArrayFunctionDispatcher in module numpy:
+
+
+
+round(a, decimals=0, out=None)
+
+    Evenly round to the given number of decimals.
+
+    
+
+    Parameters
+
+&&&&&&&&&&&&&&&&&&&&&& round_
+
+Help on _ArrayFunctionDispatcher in module numpy:
+
+
+
+round_(a, decimals=0, out=None)
+
+    Round an array to the given number of decimals.
+
+    
+
+    `~numpy.round_` is a disrecommended backwards-compatibility
+
+&&&&&&&&&&&&&&&&&&&&&& row_stack
+
+Help on _ArrayFunctionDispatcher in module numpy:
+
+
+
+vstack(tup, *, dtype=None, casting='same_kind')
+
+    Stack arrays in sequence vertically (row wise).
+
+    
+
+    This is equivalent to concatenation along the first axis after 1-D arrays
+
+&&&&&&&&&&&&&&&&&&&&&& s_
+
+Help on IndexExpression in module numpy.lib.index_tricks object:
+
+
+
+class IndexExpression(builtins.object)
+
+ |  IndexExpression(maketuple)
+
+ |  
+
+ |  A nicer way to build up index tuples for arrays.
+
+&&&&&&&&&&&&&&&&&&&&&& safe_eval
+
+Help on function safe_eval in module numpy.lib.utils:
+
+
+
+safe_eval(source)
+
+    Protected string evaluation.
+
+    
+
+    Evaluate a string containing a Python literal expression without
+
+&&&&&&&&&&&&&&&&&&&&&& save
+
+Help on _ArrayFunctionDispatcher in module numpy:
+
+
+
+save(file, arr, allow_pickle=True, fix_imports=True)
+
+    Save an array to a binary file in NumPy ``.npy`` format.
+
+    
+
+    Parameters
+
+&&&&&&&&&&&&&&&&&&&&&& savetxt
+
+Help on _ArrayFunctionDispatcher in module numpy:
+
+
+
+savetxt(fname, X, fmt='%.18e', delimiter=' ', newline='\n', header='', footer='', comments='# ', encoding=None)
+
+    Save an array to a text file.
+
+    
+
+    Parameters
+
+&&&&&&&&&&&&&&&&&&&&&& savez
+
+Help on _ArrayFunctionDispatcher in module numpy:
+
+
+
+savez(file, *args, **kwds)
+
+    Save several arrays into a single file in uncompressed ``.npz`` format.
+
+    
+
+    Provide arrays as keyword arguments to store them under the
+
+&&&&&&&&&&&&&&&&&&&&&& savez_compressed
+
+Help on _ArrayFunctionDispatcher in module numpy:
+
+
+
+savez_compressed(file, *args, **kwds)
+
+    Save several arrays into a single file in compressed ``.npz`` format.
+
+    
+
+    Provide arrays as keyword arguments to store them under the
+
+&&&&&&&&&&&&&&&&&&&&&& sctype2char
+
+Help on function sctype2char in module numpy:
+
+
+
+sctype2char(sctype)
+
+    Return the string representation of a scalar dtype.
+
+    
+
+    Parameters
+
+&&&&&&&&&&&&&&&&&&&&&& sctypeDict
+
+Help on dict object:
+
+
+
+class dict(object)
+
+ |  dict() -> new empty dictionary
+
+ |  dict(mapping) -> new dictionary initialized from a mapping object's
+
+ |      (key, value) pairs
+
+&&&&&&&&&&&&&&&&&&&&&& sctypes
+
+Help on dict object:
+
+
+
+class dict(object)
+
+ |  dict() -> new empty dictionary
+
+ |  dict(mapping) -> new dictionary initialized from a mapping object's
+
+ |      (key, value) pairs
+
+&&&&&&&&&&&&&&&&&&&&&& searchsorted
+
+Help on _ArrayFunctionDispatcher in module numpy:
+
+
+
+searchsorted(a, v, side='left', sorter=None)
+
+    Find indices where elements should be inserted to maintain order.
+
+    
+
+    Find the indices into a sorted array `a` such that, if the
+
+&&&&&&&&&&&&&&&&&&&&&& select
+
+Help on _ArrayFunctionDispatcher in module numpy:
+
+
+
+select(condlist, choicelist, default=0)
+
+    Return an array drawn from elements in choicelist, depending on conditions.
+
+    
+
+    Parameters
+
+&&&&&&&&&&&&&&&&&&&&&& set_numeric_ops
+
+Help on built-in function set_numeric_ops in module numpy:
+
+
+
+set_numeric_ops(...)
+
+    set_numeric_ops(op1=func1, op2=func2, ...)
+
+    
+
+    Set numerical operators for array objects.
+
+&&&&&&&&&&&&&&&&&&&&&& set_printoptions
+
+Help on function set_printoptions in module numpy:
+
+
+
+set_printoptions(precision=None, threshold=None, edgeitems=None, linewidth=None, suppress=None, nanstr=None, infstr=None, formatter=None, sign=None, floatmode=None, *, legacy=None)
+
+    Set printing options.
+
+    
+
+    These options determine the way floating point numbers, arrays and
+
+&&&&&&&&&&&&&&&&&&&&&& set_string_function
+
+Help on function set_string_function in module numpy.core.arrayprint:
+
+
+
+set_string_function(f, repr=True)
+
+    Set a Python function to be used when pretty printing arrays.
+
+    
+
+    Parameters
+
+&&&&&&&&&&&&&&&&&&&&&& setbufsize
+
+Help on function setbufsize in module numpy:
+
+
+
+setbufsize(size)
+
+    Set the size of the buffer used in ufuncs.
+
+    
+
+    Parameters
+
+&&&&&&&&&&&&&&&&&&&&&& setdiff1d
+
+Help on _ArrayFunctionDispatcher in module numpy:
+
+
+
+setdiff1d(ar1, ar2, assume_unique=False)
+
+    Find the set difference of two arrays.
+
+    
+
+    Return the unique values in `ar1` that are not in `ar2`.
+
+&&&&&&&&&&&&&&&&&&&&&& seterr
+
+Help on function seterr in module numpy:
+
+
+
+seterr(all=None, divide=None, over=None, under=None, invalid=None)
+
+    Set how floating-point errors are handled.
+
+    
+
+    Note that operations on integer scalar types (such as `int16`) are
+
+&&&&&&&&&&&&&&&&&&&&&& seterrcall
+
+Help on function seterrcall in module numpy:
+
+
+
+seterrcall(func)
+
+    Set the floating-point error callback function or log object.
+
+    
+
+    There are two ways to capture floating-point error messages.  The first
+
+&&&&&&&&&&&&&&&&&&&&&& seterrobj
+
+Help on built-in function seterrobj in module numpy:
+
+
+
+seterrobj(...)
+
+    seterrobj(errobj, /)
+
+    
+
+    Set the object that defines floating-point error handling.
+
+&&&&&&&&&&&&&&&&&&&&&& setxor1d
+
+Help on _ArrayFunctionDispatcher in module numpy:
+
+
+
+setxor1d(ar1, ar2, assume_unique=False)
+
+    Find the set exclusive-or of two arrays.
+
+    
+
+    Return the sorted, unique values that are in only one (not both) of the
+
+&&&&&&&&&&&&&&&&&&&&&& shape
+
+Help on _ArrayFunctionDispatcher in module numpy:
+
+
+
+shape(a)
+
+    Return the shape of an array.
+
+    
+
+    Parameters
+
+&&&&&&&&&&&&&&&&&&&&&& shares_memory
+
+Help on _ArrayFunctionDispatcher in module numpy:
+
+
+
+shares_memory(...)
+
+    shares_memory(a, b, /, max_work=None)
+
+    
+
+    Determine if two arrays share memory.
+
+&&&&&&&&&&&&&&&&&&&&&& short
+
+Help on class int16 in module numpy:
+
+
+
+class int16(signedinteger)
+
+ |  Signed integer type, compatible with C ``short``.
+
+ |  
+
+ |  :Character code: ``'h'``
+
+&&&&&&&&&&&&&&&&&&&&&& show_config
+
+Help on function show in module numpy.__config__:
+
+
+
+show(mode='stdout')
+
+    Show libraries and system information on which NumPy was built
+
+    and is being used
+
+    
+
+&&&&&&&&&&&&&&&&&&&&&& show_runtime
+
+Help on function show_runtime in module numpy.lib.utils:
+
+
+
+show_runtime()
+
+    Print information about various resources in the system
+
+    including available intrinsic support and BLAS/LAPACK library
+
+    in use
+
+&&&&&&&&&&&&&&&&&&&&&& sign
+
+Help on ufunc:
+
+
+
+sign = <ufunc 'sign'>
+
+    sign(x, /, out=None, *, where=True, casting='same_kind', order='K', dtype=None, subok=True[, signature, extobj])
+
+    
+
+    Returns an element-wise indication of the sign of a number.
+
+&&&&&&&&&&&&&&&&&&&&&& signbit
+
+Help on ufunc:
+
+
+
+signbit = <ufunc 'signbit'>
+
+    signbit(x, /, out=None, *, where=True, casting='same_kind', order='K', dtype=None, subok=True[, signature, extobj])
+
+    
+
+    Returns element-wise True where signbit is set (less than zero).
+
+&&&&&&&&&&&&&&&&&&&&&& signedinteger
+
+Help on class signedinteger in module numpy:
+
+
+
+class signedinteger(integer)
+
+ |  Abstract base class of all signed integer scalar types.
+
+ |  
+
+ |  Method resolution order:
+
+&&&&&&&&&&&&&&&&&&&&&& sin
+
+Help on ufunc:
+
+
+
+sin = <ufunc 'sin'>
+
+    sin(x, /, out=None, *, where=True, casting='same_kind', order='K', dtype=None, subok=True[, signature, extobj])
+
+    
+
+    Trigonometric sine, element-wise.
+
+&&&&&&&&&&&&&&&&&&&&&& sinc
+
+Help on _ArrayFunctionDispatcher in module numpy:
+
+
+
+sinc(x)
+
+    Return the normalized sinc function.
+
+    
+
+    The sinc function is equal to :math:`\sin(\pi x)/(\pi x)` for any argument
+
+&&&&&&&&&&&&&&&&&&&&&& single
+
+Help on class float32 in module numpy:
+
+
+
+class float32(floating)
+
+ |  Single-precision floating-point number type, compatible with C ``float``.
+
+ |  
+
+ |  :Character code: ``'f'``
+
+&&&&&&&&&&&&&&&&&&&&&& singlecomplex
+
+Help on class complex64 in module numpy:
+
+
+
+class complex64(complexfloating)
+
+ |  Complex number type composed of two single-precision floating-point
+
+ |  numbers.
+
+ |  
+
+&&&&&&&&&&&&&&&&&&&&&& sinh
+
+Help on ufunc:
+
+
+
+sinh = <ufunc 'sinh'>
+
+    sinh(x, /, out=None, *, where=True, casting='same_kind', order='K', dtype=None, subok=True[, signature, extobj])
+
+    
+
+    Hyperbolic sine, element-wise.
+
+&&&&&&&&&&&&&&&&&&&&&& size
+
+Help on _ArrayFunctionDispatcher in module numpy:
+
+
+
+size(a, axis=None)
+
+    Return the number of elements along a given axis.
+
+    
+
+    Parameters
+
+&&&&&&&&&&&&&&&&&&&&&& sometrue
+
+Help on _ArrayFunctionDispatcher in module numpy:
+
+
+
+sometrue(*args, **kwargs)
+
+    Check whether some values are true.
+
+    
+
+    Refer to `any` for full documentation.
+
+&&&&&&&&&&&&&&&&&&&&&& sort
+
+Help on _ArrayFunctionDispatcher in module numpy:
+
+
+
+sort(a, axis=-1, kind=None, order=None)
+
+    Return a sorted copy of an array.
+
+    
+
+    Parameters
+
+&&&&&&&&&&&&&&&&&&&&&& sort_complex
+
+Help on _ArrayFunctionDispatcher in module numpy:
+
+
+
+sort_complex(a)
+
+    Sort a complex array using the real part first, then the imaginary part.
+
+    
+
+    Parameters
+
+&&&&&&&&&&&&&&&&&&&&&& source
+
+Help on function source in module numpy:
+
+
+
+source(object, output=<_io.TextIOWrapper name='<stdout>' mode='w' encoding='utf-8'>)
+
+    Print or write to a file the source code for a NumPy object.
+
+    
+
+    The source code is only returned for objects written in Python. Many
+
+&&&&&&&&&&&&&&&&&&&&&& spacing
+
+Help on ufunc:
+
+
+
+spacing = <ufunc 'spacing'>
+
+    spacing(x, /, out=None, *, where=True, casting='same_kind', order='K', dtype=None, subok=True[, signature, extobj])
+
+    
+
+    Return the distance between x and the nearest adjacent number.
+
+&&&&&&&&&&&&&&&&&&&&&& split
+
+Help on _ArrayFunctionDispatcher in module numpy:
+
+
+
+split(ary, indices_or_sections, axis=0)
+
+    Split an array into multiple sub-arrays as views into `ary`.
+
+    
+
+    Parameters
+
+&&&&&&&&&&&&&&&&&&&&&& sqrt
+
+Help on ufunc:
+
+
+
+sqrt = <ufunc 'sqrt'>
+
+    sqrt(x, /, out=None, *, where=True, casting='same_kind', order='K', dtype=None, subok=True[, signature, extobj])
+
+    
+
+    Return the non-negative square-root of an array, element-wise.
+
+&&&&&&&&&&&&&&&&&&&&&& square
+
+Help on ufunc:
+
+
+
+square = <ufunc 'square'>
+
+    square(x, /, out=None, *, where=True, casting='same_kind', order='K', dtype=None, subok=True[, signature, extobj])
+
+    
+
+    Return the element-wise square of the input.
+
+&&&&&&&&&&&&&&&&&&&&&& squeeze
+
+Help on _ArrayFunctionDispatcher in module numpy:
+
+
+
+squeeze(a, axis=None)
+
+    Remove axes of length one from `a`.
+
+    
+
+    Parameters
+
+&&&&&&&&&&&&&&&&&&&&&& stack
+
+Help on _ArrayFunctionDispatcher in module numpy:
+
+
+
+stack(arrays, axis=0, out=None, *, dtype=None, casting='same_kind')
+
+    Join a sequence of arrays along a new axis.
+
+    
+
+    The ``axis`` parameter specifies the index of the new axis in the
+
+&&&&&&&&&&&&&&&&&&&&&& std
+
+Help on _ArrayFunctionDispatcher in module numpy:
+
+
+
+std(a, axis=None, dtype=None, out=None, ddof=0, keepdims=<no value>, *, where=<no value>)
+
+    Compute the standard deviation along the specified axis.
+
+    
+
+    Returns the standard deviation, a measure of the spread of a distribution,
+
+&&&&&&&&&&&&&&&&&&&&&& str_
+
+Help on class str_ in module numpy:
+
+
+
+class str_(builtins.str, character)
+
+ |  A unicode string.
+
+ |  
+
+ |  This type strips trailing null codepoints.
+
+&&&&&&&&&&&&&&&&&&&&&& string_
+
+Help on class bytes_ in module numpy:
+
+
+
+class bytes_(builtins.bytes, character)
+
+ |  A byte string.
+
+ |  
+
+ |  When used in arrays, this type strips trailing null bytes.
+
+&&&&&&&&&&&&&&&&&&&&&& subtract
+
+Help on ufunc:
+
+
+
+subtract = <ufunc 'subtract'>
+
+    subtract(x1, x2, /, out=None, *, where=True, casting='same_kind', order='K', dtype=None, subok=True[, signature, extobj])
+
+    
+
+    Subtract arguments, element-wise.
+
+&&&&&&&&&&&&&&&&&&&&&& sum
+
+Help on _ArrayFunctionDispatcher in module numpy:
+
+
+
+sum(a, axis=None, dtype=None, out=None, keepdims=<no value>, initial=<no value>, where=<no value>)
+
+    Sum of array elements over a given axis.
+
+    
+
+    Parameters
+
+&&&&&&&&&&&&&&&&&&&&&& swapaxes
+
+Help on _ArrayFunctionDispatcher in module numpy:
+
+
+
+swapaxes(a, axis1, axis2)
+
+    Interchange two axes of an array.
+
+    
+
+    Parameters
+
+&&&&&&&&&&&&&&&&&&&&&& take
+
+Help on _ArrayFunctionDispatcher in module numpy:
+
+
+
+take(a, indices, axis=None, out=None, mode='raise')
+
+    Take elements from an array along an axis.
+
+    
+
+    When axis is not None, this function does the same thing as "fancy"
+
+&&&&&&&&&&&&&&&&&&&&&& take_along_axis
+
+Help on _ArrayFunctionDispatcher in module numpy:
+
+
+
+take_along_axis(arr, indices, axis)
+
+    Take values from the input array by matching 1d index and data slices.
+
+    
+
+    This iterates over matching 1d slices oriented along the specified axis in
+
+&&&&&&&&&&&&&&&&&&&&&& tan
+
+Help on ufunc:
+
+
+
+tan = <ufunc 'tan'>
+
+    tan(x, /, out=None, *, where=True, casting='same_kind', order='K', dtype=None, subok=True[, signature, extobj])
+
+    
+
+    Compute tangent element-wise.
+
+&&&&&&&&&&&&&&&&&&&&&& tanh
+
+Help on ufunc:
+
+
+
+tanh = <ufunc 'tanh'>
+
+    tanh(x, /, out=None, *, where=True, casting='same_kind', order='K', dtype=None, subok=True[, signature, extobj])
+
+    
+
+    Compute hyperbolic tangent element-wise.
+
+&&&&&&&&&&&&&&&&&&&&&& tensordot
+
+Help on _ArrayFunctionDispatcher in module numpy:
+
+
+
+tensordot(a, b, axes=2)
+
+    Compute tensor dot product along specified axes.
+
+    
+
+    Given two tensors, `a` and `b`, and an array_like object containing
+
+&&&&&&&&&&&&&&&&&&&&&& test
+
+Help on PytestTester in module numpy._pytesttester object:
+
+
+
+class PytestTester(builtins.object)
+
+ |  PytestTester(module_name)
+
+ |  
+
+ |  Pytest test runner.
+
+&&&&&&&&&&&&&&&&&&&&&& testing
+
+Help on package numpy.testing in numpy:
+
+
+
+NAME
+
+    numpy.testing - Common test support for all numpy test scripts.
+
+
+
+DESCRIPTION
+
+&&&&&&&&&&&&&&&&&&&&&& tile
+
+Help on _ArrayFunctionDispatcher in module numpy:
+
+
+
+tile(A, reps)
+
+    Construct an array by repeating A the number of times given by reps.
+
+    
+
+    If `reps` has length ``d``, the result will have dimension of
+
+&&&&&&&&&&&&&&&&&&&&&& timedelta64
+
+Help on class timedelta64 in module numpy:
+
+
+
+class timedelta64(signedinteger)
+
+ |  A timedelta stored as a 64-bit integer.
+
+ |  
+
+ |  See :ref:`arrays.datetime` for more information.
+
+&&&&&&&&&&&&&&&&&&&&&& trace
+
+Help on _ArrayFunctionDispatcher in module numpy:
+
+
+
+trace(a, offset=0, axis1=0, axis2=1, dtype=None, out=None)
+
+    Return the sum along diagonals of the array.
+
+    
+
+    If `a` is 2-D, the sum along its diagonal with the given offset
+
+&&&&&&&&&&&&&&&&&&&&&& tracemalloc_domain
+
+Help on int object:
+
+
+
+class int(object)
+
+ |  int([x]) -> integer
+
+ |  int(x, base=10) -> integer
+
+ |  
+
+&&&&&&&&&&&&&&&&&&&&&& transpose
+
+Help on _ArrayFunctionDispatcher in module numpy:
+
+
+
+transpose(a, axes=None)
+
+    Returns an array with axes transposed.
+
+    
+
+    For a 1-D array, this returns an unchanged view of the original array, as a
+
+&&&&&&&&&&&&&&&&&&&&&& trapz
+
+Help on _ArrayFunctionDispatcher in module numpy:
+
+
+
+trapz(y, x=None, dx=1.0, axis=-1)
+
+    Integrate along the given axis using the composite trapezoidal rule.
+
+    
+
+    If `x` is provided, the integration happens in sequence along its
+
+&&&&&&&&&&&&&&&&&&&&&& tri
+
+Help on function tri in module numpy:
+
+
+
+tri(N, M=None, k=0, dtype=<class 'float'>, *, like=None)
+
+    An array with ones at and below the given diagonal and zeros elsewhere.
+
+    
+
+    Parameters
+
+&&&&&&&&&&&&&&&&&&&&&& tril
+
+Help on _ArrayFunctionDispatcher in module numpy:
+
+
+
+tril(m, k=0)
+
+    Lower triangle of an array.
+
+    
+
+    Return a copy of an array with elements above the `k`-th diagonal zeroed.
+
+&&&&&&&&&&&&&&&&&&&&&& tril_indices
+
+Help on function tril_indices in module numpy:
+
+
+
+tril_indices(n, k=0, m=None)
+
+    Return the indices for the lower-triangle of an (n, m) array.
+
+    
+
+    Parameters
+
+&&&&&&&&&&&&&&&&&&&&&& tril_indices_from
+
+Help on _ArrayFunctionDispatcher in module numpy:
+
+
+
+tril_indices_from(arr, k=0)
+
+    Return the indices for the lower-triangle of arr.
+
+    
+
+    See `tril_indices` for full details.
+
+&&&&&&&&&&&&&&&&&&&&&& trim_zeros
+
+Help on _ArrayFunctionDispatcher in module numpy:
+
+
+
+trim_zeros(filt, trim='fb')
+
+    Trim the leading and/or trailing zeros from a 1-D array or sequence.
+
+    
+
+    Parameters
+
+&&&&&&&&&&&&&&&&&&&&&& triu
+
+Help on _ArrayFunctionDispatcher in module numpy:
+
+
+
+triu(m, k=0)
+
+    Upper triangle of an array.
+
+    
+
+    Return a copy of an array with the elements below the `k`-th diagonal
+
+&&&&&&&&&&&&&&&&&&&&&& triu_indices
+
+Help on function triu_indices in module numpy:
+
+
+
+triu_indices(n, k=0, m=None)
+
+    Return the indices for the upper-triangle of an (n, m) array.
+
+    
+
+    Parameters
+
+&&&&&&&&&&&&&&&&&&&&&& triu_indices_from
+
+Help on _ArrayFunctionDispatcher in module numpy:
+
+
+
+triu_indices_from(arr, k=0)
+
+    Return the indices for the upper-triangle of arr.
+
+    
+
+    See `triu_indices` for full details.
+
+&&&&&&&&&&&&&&&&&&&&&& true_divide
+
+Help on ufunc:
+
+
+
+divide = <ufunc 'divide'>
+
+    divide(x1, x2, /, out=None, *, where=True, casting='same_kind', order='K', dtype=None, subok=True[, signature, extobj])
+
+    
+
+    Divide arguments element-wise.
+
+&&&&&&&&&&&&&&&&&&&&&& trunc
+
+Help on ufunc:
+
+
+
+trunc = <ufunc 'trunc'>
+
+    trunc(x, /, out=None, *, where=True, casting='same_kind', order='K', dtype=None, subok=True[, signature, extobj])
+
+    
+
+    Return the truncated value of the input, element-wise.
+
+&&&&&&&&&&&&&&&&&&&&&& typecodes
+
+Help on dict object:
+
+
+
+class dict(object)
+
+ |  dict() -> new empty dictionary
+
+ |  dict(mapping) -> new dictionary initialized from a mapping object's
+
+ |      (key, value) pairs
+
+&&&&&&&&&&&&&&&&&&&&&& typename
+
+Help on function typename in module numpy:
+
+
+
+typename(char)
+
+    Return a description for the given data type code.
+
+    
+
+    Parameters
+
+&&&&&&&&&&&&&&&&&&&&&& ubyte
+
+Help on class uint8 in module numpy:
+
+
+
+class uint8(unsignedinteger)
+
+ |  Unsigned integer type, compatible with C ``unsigned char``.
+
+ |  
+
+ |  :Character code: ``'B'``
+
+&&&&&&&&&&&&&&&&&&&&&& ufunc
+
+Help on class ufunc in module numpy:
+
+
+
+class ufunc(builtins.object)
+
+ |  Functions that operate element by element on whole arrays.
+
+ |  
+
+ |  To see the documentation for a specific ufunc, use `info`.  For
+
+&&&&&&&&&&&&&&&&&&&&&& uint
+
+Help on class uint64 in module numpy:
+
+
+
+class uint64(unsignedinteger)
+
+ |  Unsigned integer type, compatible with C ``unsigned long``.
+
+ |  
+
+ |  :Character code: ``'L'``
+
+&&&&&&&&&&&&&&&&&&&&&& uint16
+
+Help on class uint16 in module numpy:
+
+
+
+class uint16(unsignedinteger)
+
+ |  Unsigned integer type, compatible with C ``unsigned short``.
+
+ |  
+
+ |  :Character code: ``'H'``
+
+&&&&&&&&&&&&&&&&&&&&&& uint32
+
+Help on class uint32 in module numpy:
+
+
+
+class uint32(unsignedinteger)
+
+ |  Unsigned integer type, compatible with C ``unsigned int``.
+
+ |  
+
+ |  :Character code: ``'I'``
+
+&&&&&&&&&&&&&&&&&&&&&& uint64
+
+Help on class uint64 in module numpy:
+
+
+
+class uint64(unsignedinteger)
+
+ |  Unsigned integer type, compatible with C ``unsigned long``.
+
+ |  
+
+ |  :Character code: ``'L'``
+
+&&&&&&&&&&&&&&&&&&&&&& uint8
+
+Help on class uint8 in module numpy:
+
+
+
+class uint8(unsignedinteger)
+
+ |  Unsigned integer type, compatible with C ``unsigned char``.
+
+ |  
+
+ |  :Character code: ``'B'``
+
+&&&&&&&&&&&&&&&&&&&&&& uintc
+
+Help on class uint32 in module numpy:
+
+
+
+class uint32(unsignedinteger)
+
+ |  Unsigned integer type, compatible with C ``unsigned int``.
+
+ |  
+
+ |  :Character code: ``'I'``
+
+&&&&&&&&&&&&&&&&&&&&&& uintp
+
+Help on class uint64 in module numpy:
+
+
+
+class uint64(unsignedinteger)
+
+ |  Unsigned integer type, compatible with C ``unsigned long``.
+
+ |  
+
+ |  :Character code: ``'L'``
+
+&&&&&&&&&&&&&&&&&&&&&& ulonglong
+
+Help on class ulonglong in module numpy:
+
+
+
+class ulonglong(unsignedinteger)
+
+ |  Signed integer type, compatible with C ``unsigned long long``.
+
+ |  
+
+ |  :Character code: ``'Q'``
+
+&&&&&&&&&&&&&&&&&&&&&& unicode_
+
+Help on class str_ in module numpy:
+
+
+
+class str_(builtins.str, character)
+
+ |  A unicode string.
+
+ |  
+
+ |  This type strips trailing null codepoints.
+
+&&&&&&&&&&&&&&&&&&&&&& union1d
+
+Help on _ArrayFunctionDispatcher in module numpy:
+
+
+
+union1d(ar1, ar2)
+
+    Find the union of two arrays.
+
+    
+
+    Return the unique, sorted array of values that are in either of the two
+
+&&&&&&&&&&&&&&&&&&&&&& unique
+
+Help on _ArrayFunctionDispatcher in module numpy:
+
+
+
+unique(ar, return_index=False, return_inverse=False, return_counts=False, axis=None, *, equal_nan=True)
+
+    Find the unique elements of an array.
+
+    
+
+    Returns the sorted unique elements of an array. There are three optional
+
+&&&&&&&&&&&&&&&&&&&&&& unpackbits
+
+Help on _ArrayFunctionDispatcher in module numpy:
+
+
+
+unpackbits(...)
+
+    unpackbits(a, /, axis=None, count=None, bitorder='big')
+
+    
+
+    Unpacks elements of a uint8 array into a binary-valued output array.
+
+&&&&&&&&&&&&&&&&&&&&&& unravel_index
+
+Help on _ArrayFunctionDispatcher in module numpy:
+
+
+
+unravel_index(...)
+
+    unravel_index(indices, shape, order='C')
+
+    
+
+    Converts a flat index or array of flat indices into a tuple
+
+&&&&&&&&&&&&&&&&&&&&&& unsignedinteger
+
+Help on class unsignedinteger in module numpy:
+
+
+
+class unsignedinteger(integer)
+
+ |  Abstract base class of all unsigned integer scalar types.
+
+ |  
+
+ |  Method resolution order:
+
+&&&&&&&&&&&&&&&&&&&&&& unwrap
+
+Help on _ArrayFunctionDispatcher in module numpy:
+
+
+
+unwrap(p, discont=None, axis=-1, *, period=6.283185307179586)
+
+    Unwrap by taking the complement of large deltas with respect to the period.
+
+    
+
+    This unwraps a signal `p` by changing elements which have an absolute
+
+&&&&&&&&&&&&&&&&&&&&&& ushort
+
+Help on class uint16 in module numpy:
+
+
+
+class uint16(unsignedinteger)
+
+ |  Unsigned integer type, compatible with C ``unsigned short``.
+
+ |  
+
+ |  :Character code: ``'H'``
+
+&&&&&&&&&&&&&&&&&&&&&& vander
+
+Help on _ArrayFunctionDispatcher in module numpy:
+
+
+
+vander(x, N=None, increasing=False)
+
+    Generate a Vandermonde matrix.
+
+    
+
+    The columns of the output matrix are powers of the input vector. The
+
+&&&&&&&&&&&&&&&&&&&&&& var
+
+Help on _ArrayFunctionDispatcher in module numpy:
+
+
+
+var(a, axis=None, dtype=None, out=None, ddof=0, keepdims=<no value>, *, where=<no value>)
+
+    Compute the variance along the specified axis.
+
+    
+
+    Returns the variance of the array elements, a measure of the spread of a
+
+&&&&&&&&&&&&&&&&&&&&&& vdot
+
+Help on _ArrayFunctionDispatcher in module numpy:
+
+
+
+vdot(...)
+
+    vdot(a, b, /)
+
+    
+
+    Return the dot product of two vectors.
+
+&&&&&&&&&&&&&&&&&&&&&& vectorize
+
+Help on class vectorize in module numpy:
+
+
+
+class vectorize(builtins.object)
+
+ |  vectorize(pyfunc=<no value>, otypes=None, doc=None, excluded=None, cache=False, signature=None)
+
+ |  
+
+ |  vectorize(pyfunc=np._NoValue, otypes=None, doc=None, excluded=None,
+
+&&&&&&&&&&&&&&&&&&&&&& version
+
+Help on module numpy.version in numpy:
+
+
+
+NAME
+
+    numpy.version
+
+
+
+DATA
+
+&&&&&&&&&&&&&&&&&&&&&& void
+
+Help on class void in module numpy:
+
+
+
+class void(flexible)
+
+ |  np.void(length_or_data, /, dtype=None)
+
+ |  
+
+ |  Create a new structured or unstructured void scalar.
+
+&&&&&&&&&&&&&&&&&&&&&& vsplit
+
+Help on _ArrayFunctionDispatcher in module numpy:
+
+
+
+vsplit(ary, indices_or_sections)
+
+    Split an array into multiple sub-arrays vertically (row-wise).
+
+    
+
+    Please refer to the ``split`` documentation.  ``vsplit`` is equivalent
+
+&&&&&&&&&&&&&&&&&&&&&& vstack
+
+Help on _ArrayFunctionDispatcher in module numpy:
+
+
+
+vstack(tup, *, dtype=None, casting='same_kind')
+
+    Stack arrays in sequence vertically (row wise).
+
+    
+
+    This is equivalent to concatenation along the first axis after 1-D arrays
+
+&&&&&&&&&&&&&&&&&&&&&& where
+
+Help on _ArrayFunctionDispatcher in module numpy:
+
+
+
+where(...)
+
+    where(condition, [x, y], /)
+
+    
+
+    Return elements chosen from `x` or `y` depending on `condition`.
+
+&&&&&&&&&&&&&&&&&&&&&& who
+
+Help on function who in module numpy.lib.utils:
+
+
+
+who(vardict=None)
+
+    Print the NumPy arrays in the given dictionary.
+
+    
+
+    If there is no dictionary passed in or `vardict` is None then returns
+
+&&&&&&&&&&&&&&&&&&&&&& zeros
+
+Help on built-in function zeros in module numpy:
+
+
+
+zeros(...)
+
+    zeros(shape, dtype=float, order='C', *, like=None)
+
+    
+
+    Return a new array of given shape and type, filled with zeros.
+
+&&&&&&&&&&&&&&&&&&&&&& zeros_like
+
+Help on _ArrayFunctionDispatcher in module numpy:
+
+
+
+zeros_like(a, dtype=None, order='K', subok=True, shape=None)
+
+    Return an array of zeros with the same shape and type as a given array.
+
+    
+
+    Parameters
+

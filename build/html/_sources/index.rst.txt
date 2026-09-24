@@ -16,6 +16,7 @@ Contenido
 .. toctree::
 
    funciones
+   clase_numpy/index_numpy
    distribucion_normal
    daniel/index_estadistica.rst 
 

@@ -1,12 +1,13 @@
 import matplotlib.pyplot as plt
 
-#dd = dir(plt)
-
-dd = ['bar', 'colormaps', 'draw', 'hist', 'errorbar','imsave', 'stem', 'plot', 'boxplot',  'imread', 'imshow', 'show', 'violinplot', 'time']
+dd = dir(plt)
 
 for ss in dd:
-  print('&&&&&&&&&&&&&&&&&&&&&&& ' + ss + ' &&&&&&&&&&&&&&&&&&&&&&&&&')
-  print(help(eval('plt.'+ss)))
+  cc = ss[0]
+  if not cc.isupper():
+    if not (cc == '_'):
+      print('&&&&&&&&&&&&&&&&&&&&&&& ' + ss )
+      print(help(eval('plt.'+ss)))
 
 
 

@@ -1,0 +1,1288 @@
+&&&&&&&&&&&&&&&&&&&&&&& acorr
+Help on function acorr in module matplotlib.pyplot:
+
+acorr(x: 'ArrayLike', *, data=None, **kwargs) -> 'tuple[np.ndarray, np.ndarray, LineCollection | Line2D, Line2D | None]'
+    Plot the autocorrelation of *x*.
+    
+    Parameters
+&&&&&&&&&&&&&&&&&&&&&&& angle_spectrum
+Help on function angle_spectrum in module matplotlib.pyplot:
+
+angle_spectrum(x: 'ArrayLike', Fs: 'float | None' = None, Fc: 'int | None' = None, window: 'Callable[[ArrayLike], ArrayLike] | ArrayLike | None' = None, pad_to: 'int | None' = None, sides: "Literal['default', 'onesided', 'twosided'] | None" = None, *, data=None, **kwargs) -> 'tuple[np.ndarray, np.ndarray, Line2D]'
+    Plot the angle spectrum.
+    
+    Compute the angle spectrum (wrapped phase spectrum) of *x*.
+&&&&&&&&&&&&&&&&&&&&&&& annotate
+Help on function annotate in module matplotlib.pyplot:
+
+annotate(text: 'str', xy: 'tuple[float, float]', xytext: 'tuple[float, float] | None' = None, xycoords: 'str | Artist | Transform | Callable[[RendererBase], Bbox | Transform] | tuple[float, float]' = 'data', textcoords: 'str | Artist | Transform | Callable[[RendererBase], Bbox | Transform] | tuple[float, float] | None' = None, arrowprops: 'dict[str, Any] | None' = None, annotation_clip: 'bool | None' = None, **kwargs) -> 'Annotation'
+    Annotate the point *xy* with text *text*.
+    
+    In the simplest form, the text is placed at *xy*.
+&&&&&&&&&&&&&&&&&&&&&&& annotations
+Help on _Feature in module __future__ object:
+
+class _Feature(builtins.object)
+ |  _Feature(optionalRelease, mandatoryRelease, compiler_flag)
+ |  
+ |  Methods defined here:
+&&&&&&&&&&&&&&&&&&&&&&& arrow
+Help on function arrow in module matplotlib.pyplot:
+
+arrow(x: 'float', y: 'float', dx: 'float', dy: 'float', **kwargs) -> 'FancyArrow'
+    Add an arrow to the Axes.
+    
+    This draws an arrow from ``(x, y)`` to ``(x+dx, y+dy)``.
+&&&&&&&&&&&&&&&&&&&&&&& autoscale
+Help on function autoscale in module matplotlib.pyplot:
+
+autoscale(enable: 'bool' = True, axis: "Literal['both', 'x', 'y']" = 'both', tight: 'bool | None' = None) -> 'None'
+    Autoscale the axis view to the data (toggle).
+    
+    Convenience method for simple axis view autoscaling.
+&&&&&&&&&&&&&&&&&&&&&&& autumn
+Help on function autumn in module matplotlib.pyplot:
+
+autumn() -> 'None'
+    Set the colormap to 'autumn'.
+    
+    This changes the default colormap as well as the colormap of the current
+&&&&&&&&&&&&&&&&&&&&&&& axes
+Help on function axes in module matplotlib.pyplot:
+
+axes(arg: 'None | tuple[float, float, float, float]' = None, **kwargs) -> 'matplotlib.axes.Axes'
+    Add an Axes to the current figure and make it the current Axes.
+    
+    Call signatures::
+&&&&&&&&&&&&&&&&&&&&&&& axhline
+Help on function axhline in module matplotlib.pyplot:
+
+axhline(y: 'float' = 0, xmin: 'float' = 0, xmax: 'float' = 1, **kwargs) -> 'Line2D'
+    Add a horizontal line across the Axes.
+    
+    Parameters
+&&&&&&&&&&&&&&&&&&&&&&& axhspan
+Help on function axhspan in module matplotlib.pyplot:
+
+axhspan(ymin: 'float', ymax: 'float', xmin: 'float' = 0, xmax: 'float' = 1, **kwargs) -> 'Rectangle'
+    Add a horizontal span (rectangle) across the Axes.
+    
+    The rectangle spans from *ymin* to *ymax* vertically, and, by default,
+&&&&&&&&&&&&&&&&&&&&&&& axis
+Help on function axis in module matplotlib.pyplot:
+
+axis(arg: 'tuple[float, float, float, float] | bool | str | None' = None, /, *, emit: 'bool' = True, **kwargs) -> 'tuple[float, float, float, float]'
+    Convenience method to get or set some axis properties.
+    
+    Call signatures::
+&&&&&&&&&&&&&&&&&&&&&&& axline
+Help on function axline in module matplotlib.pyplot:
+
+axline(xy1: 'tuple[float, float]', xy2: 'tuple[float, float] | None' = None, *, slope: 'float | None' = None, **kwargs) -> 'AxLine'
+    Add an infinitely long straight line.
+    
+    The line can be defined either by two points *xy1* and *xy2*, or
+&&&&&&&&&&&&&&&&&&&&&&& axvline
+Help on function axvline in module matplotlib.pyplot:
+
+axvline(x: 'float' = 0, ymin: 'float' = 0, ymax: 'float' = 1, **kwargs) -> 'Line2D'
+    Add a vertical line across the Axes.
+    
+    Parameters
+&&&&&&&&&&&&&&&&&&&&&&& axvspan
+Help on function axvspan in module matplotlib.pyplot:
+
+axvspan(xmin: 'float', xmax: 'float', ymin: 'float' = 0, ymax: 'float' = 1, **kwargs) -> 'Rectangle'
+    Add a vertical span (rectangle) across the Axes.
+    
+    The rectangle spans from *xmin* to *xmax* horizontally, and, by
+&&&&&&&&&&&&&&&&&&&&&&& backend_registry
+Help on BackendRegistry in module matplotlib.backends.registry object:
+
+class BackendRegistry(builtins.object)
+ |  Registry of backends available within Matplotlib.
+ |  
+ |  This is the single source of truth for available backends.
+&&&&&&&&&&&&&&&&&&&&&&& bar
+Help on function bar in module matplotlib.pyplot:
+
+bar(x: 'float | ArrayLike', height: 'float | ArrayLike', width: 'float | ArrayLike' = 0.8, bottom: 'float | ArrayLike | None' = None, *, align: "Literal['center', 'edge']" = 'center', data=None, **kwargs) -> 'BarContainer'
+    Make a bar plot.
+    
+    The bars are positioned at *x* with the given *align*\ment. Their
+&&&&&&&&&&&&&&&&&&&&&&& bar_label
+Help on function bar_label in module matplotlib.pyplot:
+
+bar_label(container: 'BarContainer', labels: 'ArrayLike | None' = None, *, fmt: 'str | Callable[[float], str]' = '%g', label_type: "Literal['center', 'edge']" = 'edge', padding: 'float' = 0, **kwargs) -> 'list[Annotation]'
+    Label a bar plot.
+    
+    Adds labels to bars in the given `.BarContainer`.
+&&&&&&&&&&&&&&&&&&&&&&& barbs
+Help on function barbs in module matplotlib.pyplot:
+
+barbs(*args, data=None, **kwargs) -> 'Barbs'
+    Plot a 2D field of wind barbs.
+    
+    Call signature::
+&&&&&&&&&&&&&&&&&&&&&&& barh
+Help on function barh in module matplotlib.pyplot:
+
+barh(y: 'float | ArrayLike', width: 'float | ArrayLike', height: 'float | ArrayLike' = 0.8, left: 'float | ArrayLike | None' = None, *, align: "Literal['center', 'edge']" = 'center', data=None, **kwargs) -> 'BarContainer'
+    Make a horizontal bar plot.
+    
+    The bars are positioned at *y* with the given *align*\ment. Their
+&&&&&&&&&&&&&&&&&&&&&&& bone
+Help on function bone in module matplotlib.pyplot:
+
+bone() -> 'None'
+    Set the colormap to 'bone'.
+    
+    This changes the default colormap as well as the colormap of the current
+&&&&&&&&&&&&&&&&&&&&&&& box
+Help on function box in module matplotlib.pyplot:
+
+box(on: 'bool | None' = None) -> 'None'
+    Turn the Axes box on or off on the current Axes.
+    
+    Parameters
+&&&&&&&&&&&&&&&&&&&&&&& boxplot
+Help on function boxplot in module matplotlib.pyplot:
+
+boxplot(x: 'ArrayLike | Sequence[ArrayLike]', notch: 'bool | None' = None, sym: 'str | None' = None, vert: 'bool | None' = None, whis: 'float | tuple[float, float] | None' = None, positions: 'ArrayLike | None' = None, widths: 'float | ArrayLike | None' = None, patch_artist: 'bool | None' = None, bootstrap: 'int | None' = None, usermedians: 'ArrayLike | None' = None, conf_intervals: 'ArrayLike | None' = None, meanline: 'bool | None' = None, showmeans: 'bool | None' = None, showcaps: 'bool | None' = None, showbox: 'bool | None' = None, showfliers: 'bool | None' = None, boxprops: 'dict[str, Any] | None' = None, tick_labels: 'Sequence[str] | None' = None, flierprops: 'dict[str, Any] | None' = None, medianprops: 'dict[str, Any] | None' = None, meanprops: 'dict[str, Any] | None' = None, capprops: 'dict[str, Any] | None' = None, whiskerprops: 'dict[str, Any] | None' = None, manage_ticks: 'bool' = True, autorange: 'bool' = False, zorder: 'float | None' = None, capwidths: 'float | ArrayLike | None' = None, label: 'Sequence[str] | None' = None, *, data=None) -> 'dict[str, Any]'
+    Draw a box and whisker plot.
+    
+    The box extends from the first quartile (Q1) to the third
+&&&&&&&&&&&&&&&&&&&&&&& broken_barh
+Help on function broken_barh in module matplotlib.pyplot:
+
+broken_barh(xranges: 'Sequence[tuple[float, float]]', yrange: 'tuple[float, float]', *, data=None, **kwargs) -> 'PolyCollection'
+    Plot a horizontal sequence of rectangles.
+    
+    A rectangle is drawn for each element of *xranges*. All rectangles
+&&&&&&&&&&&&&&&&&&&&&&& cast
+Help on function cast in module typing:
+
+cast(typ, val)
+    Cast a value to a type.
+    
+    This returns the value unchanged.  To the type checker this
+&&&&&&&&&&&&&&&&&&&&&&& cbook
+Help on module matplotlib.cbook in matplotlib:
+
+NAME
+    matplotlib.cbook
+
+DESCRIPTION
+&&&&&&&&&&&&&&&&&&&&&&& cla
+Help on function cla in module matplotlib.pyplot:
+
+cla() -> 'None'
+    Clear the current Axes.
+
+None
+&&&&&&&&&&&&&&&&&&&&&&& clf
+Help on function clf in module matplotlib.pyplot:
+
+clf() -> 'None'
+    Clear the current figure.
+
+None
+&&&&&&&&&&&&&&&&&&&&&&& close
+Help on function close in module matplotlib.pyplot:
+
+close(fig: "None | int | str | Figure | Literal['all']" = None) -> 'None'
+    Close a figure window.
+    
+    Parameters
+&&&&&&&&&&&&&&&&&&&&&&& cm
+Help on module matplotlib.cm in matplotlib:
+
+NAME
+    matplotlib.cm - Builtin colormaps, colormap handling utilities, and the `ScalarMappable` mixin.
+
+DESCRIPTION
+&&&&&&&&&&&&&&&&&&&&&&& cohere
+Help on function cohere in module matplotlib.pyplot:
+
+cohere(x: 'ArrayLike', y: 'ArrayLike', NFFT: 'int' = 256, Fs: 'float' = 2, Fc: 'int' = 0, detrend: "Literal['none', 'mean', 'linear'] | Callable[[ArrayLike], ArrayLike]" = <function detrend_none at 0x11e3f1430>, window: 'Callable[[ArrayLike], ArrayLike] | ArrayLike' = <function window_hanning at 0x11e3f11f0>, noverlap: 'int' = 0, pad_to: 'int | None' = None, sides: "Literal['default', 'onesided', 'twosided']" = 'default', scale_by_freq: 'bool | None' = None, *, data=None, **kwargs) -> 'tuple[np.ndarray, np.ndarray]'
+    Plot the coherence between *x* and *y*.
+    
+    Coherence is the normalized cross spectral density:
+&&&&&&&&&&&&&&&&&&&&&&& color_sequences
+Help on ColorSequenceRegistry in module matplotlib.colors object:
+
+class ColorSequenceRegistry(collections.abc.Mapping)
+ |  Container for sequences of colors that are known to Matplotlib by name.
+ |  
+ |  The universal registry instance is `matplotlib.color_sequences`. There
+&&&&&&&&&&&&&&&&&&&&&&& colorbar
+Help on function colorbar in module matplotlib.pyplot:
+
+colorbar(mappable: 'ScalarMappable | None' = None, cax: 'matplotlib.axes.Axes | None' = None, ax: 'matplotlib.axes.Axes | Iterable[matplotlib.axes.Axes] | None' = None, **kwargs) -> 'Colorbar'
+    Add a colorbar to a plot.
+    
+    Parameters
+&&&&&&&&&&&&&&&&&&&&&&& colormaps
+Help on ColormapRegistry in module matplotlib.cm object:
+
+class ColormapRegistry(collections.abc.Mapping)
+ |  ColormapRegistry(cmaps)
+ |  
+ |  Container for colormaps that are known to Matplotlib by name.
+&&&&&&&&&&&&&&&&&&&&&&& connect
+Help on function connect in module matplotlib.pyplot:
+
+connect(s: 'str', func: 'Callable[[Event], Any]') -> 'int'
+    Bind function *func* to event *s*.
+    
+    Parameters
+&&&&&&&&&&&&&&&&&&&&&&& contour
+Help on function contour in module matplotlib.pyplot:
+
+contour(*args, data=None, **kwargs) -> 'QuadContourSet'
+    Plot contour lines.
+    
+    Call signature::
+&&&&&&&&&&&&&&&&&&&&&&& contourf
+Help on function contourf in module matplotlib.pyplot:
+
+contourf(*args, data=None, **kwargs) -> 'QuadContourSet'
+    Plot filled contours.
+    
+    Call signature::
+&&&&&&&&&&&&&&&&&&&&&&& cool
+Help on function cool in module matplotlib.pyplot:
+
+cool() -> 'None'
+    Set the colormap to 'cool'.
+    
+    This changes the default colormap as well as the colormap of the current
+&&&&&&&&&&&&&&&&&&&&&&& copper
+Help on function copper in module matplotlib.pyplot:
+
+copper() -> 'None'
+    Set the colormap to 'copper'.
+    
+    This changes the default colormap as well as the colormap of the current
+&&&&&&&&&&&&&&&&&&&&&&& csd
+Help on function csd in module matplotlib.pyplot:
+
+csd(x: 'ArrayLike', y: 'ArrayLike', NFFT: 'int | None' = None, Fs: 'float | None' = None, Fc: 'int | None' = None, detrend: "Literal['none', 'mean', 'linear'] | Callable[[ArrayLike], ArrayLike] | None" = None, window: 'Callable[[ArrayLike], ArrayLike] | ArrayLike | None' = None, noverlap: 'int | None' = None, pad_to: 'int | None' = None, sides: "Literal['default', 'onesided', 'twosided'] | None" = None, scale_by_freq: 'bool | None' = None, return_line: 'bool | None' = None, *, data=None, **kwargs) -> 'tuple[np.ndarray, np.ndarray] | tuple[np.ndarray, np.ndarray, Line2D]'
+    Plot the cross-spectral density.
+    
+    The cross spectral density :math:`P_{xy}` by Welch's average
+&&&&&&&&&&&&&&&&&&&&&&& cycler
+Help on function cycler in module cycler:
+
+cycler(*args, **kwargs)
+    Create a new `Cycler` object from a single positional argument,
+    a pair of positional arguments, or the combination of keyword arguments.
+    
+&&&&&&&&&&&&&&&&&&&&&&& delaxes
+Help on function delaxes in module matplotlib.pyplot:
+
+delaxes(ax: 'matplotlib.axes.Axes | None' = None) -> 'None'
+    Remove an `~.axes.Axes` (defaulting to the current Axes) from its figure.
+
+None
+&&&&&&&&&&&&&&&&&&&&&&& draw
+Help on function draw in module matplotlib.pyplot:
+
+draw() -> 'None'
+    Redraw the current figure.
+    
+    This is used to update a figure that has been altered, but not
+&&&&&&&&&&&&&&&&&&&&&&& draw_all
+Help on method draw_all in module matplotlib._pylab_helpers:
+
+draw_all(force=False) method of builtins.type instance
+    Redraw all stale managed figures, or, if *force* is True, all managed
+    figures.
+
+&&&&&&&&&&&&&&&&&&&&&&& draw_if_interactive
+Help on function draw_if_interactive in module matplotlib.pyplot:
+
+draw_if_interactive(*args, **kwargs)
+    Redraw the current figure if in interactive mode.
+    
+    .. warning::
+&&&&&&&&&&&&&&&&&&&&&&& ecdf
+Help on function ecdf in module matplotlib.pyplot:
+
+ecdf(x: 'ArrayLike', weights: 'ArrayLike | None' = None, *, complementary: 'bool' = False, orientation: "Literal['vertical', 'horizonatal']" = 'vertical', compress: 'bool' = False, data=None, **kwargs) -> 'Line2D'
+    Compute and plot the empirical cumulative distribution function of *x*.
+    
+    .. versionadded:: 3.8
+&&&&&&&&&&&&&&&&&&&&&&& errorbar
+Help on function errorbar in module matplotlib.pyplot:
+
+errorbar(x: 'float | ArrayLike', y: 'float | ArrayLike', yerr: 'float | ArrayLike | None' = None, xerr: 'float | ArrayLike | None' = None, fmt: 'str' = '', ecolor: 'ColorType | None' = None, elinewidth: 'float | None' = None, capsize: 'float | None' = None, barsabove: 'bool' = False, lolims: 'bool | ArrayLike' = False, uplims: 'bool | ArrayLike' = False, xlolims: 'bool | ArrayLike' = False, xuplims: 'bool | ArrayLike' = False, errorevery: 'int | tuple[int, int]' = 1, capthick: 'float | None' = None, *, data=None, **kwargs) -> 'ErrorbarContainer'
+    Plot y versus x as lines and/or markers with attached errorbars.
+    
+    *x*, *y* define the data locations, *xerr*, *yerr* define the errorbar
+&&&&&&&&&&&&&&&&&&&&&&& eventplot
+Help on function eventplot in module matplotlib.pyplot:
+
+eventplot(positions: 'ArrayLike | Sequence[ArrayLike]', orientation: "Literal['horizontal', 'vertical']" = 'horizontal', lineoffsets: 'float | Sequence[float]' = 1, linelengths: 'float | Sequence[float]' = 1, linewidths: 'float | Sequence[float] | None' = None, colors: 'ColorType | Sequence[ColorType] | None' = None, alpha: 'float | Sequence[float] | None' = None, linestyles: 'LineStyleType | Sequence[LineStyleType]' = 'solid', *, data=None, **kwargs) -> 'EventCollection'
+    Plot identical parallel lines at the given positions.
+    
+    This type of plot is commonly used in neuroscience for representing
+&&&&&&&&&&&&&&&&&&&&&&& figaspect
+Help on function figaspect in module matplotlib.figure:
+
+figaspect(arg)
+    Calculate the width and height for a figure with a specified aspect ratio.
+    
+    While the height is taken from :rc:`figure.figsize`, the width is
+&&&&&&&&&&&&&&&&&&&&&&& figimage
+Help on function figimage in module matplotlib.pyplot:
+
+figimage(X: 'ArrayLike', xo: 'int' = 0, yo: 'int' = 0, alpha: 'float | None' = None, norm: 'str | Normalize | None' = None, cmap: 'str | Colormap | None' = None, vmin: 'float | None' = None, vmax: 'float | None' = None, origin: "Literal['upper', 'lower'] | None" = None, resize: 'bool' = False, **kwargs) -> 'FigureImage'
+    Add a non-resampled image to the figure.
+    
+    The image is attached to the lower or upper left corner depending on
+&&&&&&&&&&&&&&&&&&&&&&& figlegend
+Help on function figlegend in module matplotlib.pyplot:
+
+figlegend(*args, **kwargs) -> 'Legend'
+    Place a legend on the figure.
+    
+    Call signatures::
+&&&&&&&&&&&&&&&&&&&&&&& fignum_exists
+Help on function fignum_exists in module matplotlib.pyplot:
+
+fignum_exists(num: 'int | str') -> 'bool'
+    Return whether the figure with the given id exists.
+    
+    Parameters
+&&&&&&&&&&&&&&&&&&&&&&& figtext
+Help on function figtext in module matplotlib.pyplot:
+
+figtext(x: 'float', y: 'float', s: 'str', fontdict: 'dict[str, Any] | None' = None, **kwargs) -> 'Text'
+    Add text to figure.
+    
+    Parameters
+&&&&&&&&&&&&&&&&&&&&&&& figure
+Help on function figure in module matplotlib.pyplot:
+
+figure(num: 'int | str | Figure | SubFigure | None' = None, figsize: 'tuple[float, float] | None' = None, dpi: 'float | None' = None, *, facecolor: 'ColorType | None' = None, edgecolor: 'ColorType | None' = None, frameon: 'bool' = True, FigureClass: 'type[Figure]' = <class 'matplotlib.figure.Figure'>, clear: 'bool' = False, **kwargs) -> 'Figure'
+    Create a new figure, or activate an existing figure.
+    
+    Parameters
+&&&&&&&&&&&&&&&&&&&&&&& fill
+Help on function fill in module matplotlib.pyplot:
+
+fill(*args, data=None, **kwargs) -> 'list[Polygon]'
+    Plot filled polygons.
+    
+    Parameters
+&&&&&&&&&&&&&&&&&&&&&&& fill_between
+Help on function fill_between in module matplotlib.pyplot:
+
+fill_between(x: 'ArrayLike', y1: 'ArrayLike | float', y2: 'ArrayLike | float' = 0, where: 'Sequence[bool] | None' = None, interpolate: 'bool' = False, step: "Literal['pre', 'post', 'mid'] | None" = None, *, data=None, **kwargs) -> 'PolyCollection'
+    Fill the area between two horizontal curves.
+    
+    The curves are defined by the points (*x*, *y1*) and (*x*,
+&&&&&&&&&&&&&&&&&&&&&&& fill_betweenx
+Help on function fill_betweenx in module matplotlib.pyplot:
+
+fill_betweenx(y: 'ArrayLike', x1: 'ArrayLike | float', x2: 'ArrayLike | float' = 0, where: 'Sequence[bool] | None' = None, step: "Literal['pre', 'post', 'mid'] | None" = None, interpolate: 'bool' = False, *, data=None, **kwargs) -> 'PolyCollection'
+    Fill the area between two vertical curves.
+    
+    The curves are defined by the points (*y*, *x1*) and (*y*,
+&&&&&&&&&&&&&&&&&&&&&&& findobj
+Help on function findobj in module matplotlib.pyplot:
+
+findobj(o: 'Artist | None' = None, match: 'Callable[[Artist], bool] | type[Artist] | None' = None, include_self: 'bool' = True) -> 'list[Artist]'
+    Find artist objects.
+    
+    Recursively find all `.Artist` instances contained in the artist.
+&&&&&&&&&&&&&&&&&&&&&&& flag
+Help on function flag in module matplotlib.pyplot:
+
+flag() -> 'None'
+    Set the colormap to 'flag'.
+    
+    This changes the default colormap as well as the colormap of the current
+&&&&&&&&&&&&&&&&&&&&&&& functools
+Help on module functools:
+
+NAME
+    functools - functools.py - Tools for working with functions and callable objects
+
+MODULE REFERENCE
+&&&&&&&&&&&&&&&&&&&&&&& gca
+Help on function gca in module matplotlib.pyplot:
+
+gca() -> 'Axes'
+    Get the current Axes.
+    
+    If there is currently no Axes on this Figure, a new one is created
+&&&&&&&&&&&&&&&&&&&&&&& gcf
+Help on function gcf in module matplotlib.pyplot:
+
+gcf() -> 'Figure'
+    Get the current figure.
+    
+    If there is currently no figure on the pyplot figure stack, a new one is
+&&&&&&&&&&&&&&&&&&&&&&& gci
+Help on function gci in module matplotlib.pyplot:
+
+gci() -> 'ScalarMappable | None'
+    Get the current colorable artist.
+    
+    Specifically, returns the current `.ScalarMappable` instance (`.Image`
+&&&&&&&&&&&&&&&&&&&&&&& get
+Help on function get in module matplotlib.pyplot:
+
+get(obj, *args, **kwargs)
+    Return the value of an `.Artist`'s *property*, or print all of them.
+    
+    Parameters
+&&&&&&&&&&&&&&&&&&&&&&& get_backend
+Help on function get_backend in module matplotlib:
+
+get_backend()
+    Return the name of the current backend.
+    
+    See Also
+&&&&&&&&&&&&&&&&&&&&&&& get_cmap
+Help on function get_cmap in module matplotlib.pyplot:
+
+get_cmap(name: 'Colormap | str | None' = None, lut: 'int | None' = None) -> 'Colormap'
+    Get a colormap instance, defaulting to rc values if *name* is None.
+    
+    Parameters
+&&&&&&&&&&&&&&&&&&&&&&& get_current_fig_manager
+Help on function get_current_fig_manager in module matplotlib.pyplot:
+
+get_current_fig_manager() -> 'FigureManagerBase | None'
+    Return the figure manager of the current figure.
+    
+    The figure manager is a container for the actual backend-depended window
+&&&&&&&&&&&&&&&&&&&&&&& get_figlabels
+Help on function get_figlabels in module matplotlib.pyplot:
+
+get_figlabels() -> 'list[Any]'
+    Return a list of existing figure labels.
+
+None
+&&&&&&&&&&&&&&&&&&&&&&& get_plot_commands
+Help on function get_plot_commands in module matplotlib.pyplot:
+
+get_plot_commands() -> 'list[str]'
+    [*Deprecated*] Get a sorted list of all of the plotting commands.
+    
+    Notes
+&&&&&&&&&&&&&&&&&&&&&&& get_scale_names
+Help on function get_scale_names in module matplotlib.scale:
+
+get_scale_names()
+    Return the names of the available scales.
+
+None
+&&&&&&&&&&&&&&&&&&&&&&& ginput
+Help on function ginput in module matplotlib.pyplot:
+
+ginput(n: 'int' = 1, timeout: 'float' = 30, show_clicks: 'bool' = True, mouse_add: 'MouseButton' = <MouseButton.LEFT: 1>, mouse_pop: 'MouseButton' = <MouseButton.RIGHT: 3>, mouse_stop: 'MouseButton' = <MouseButton.MIDDLE: 2>) -> 'list[tuple[int, int]]'
+    Blocking call to interact with a figure.
+    
+    Wait until the user clicks *n* times on the figure, and return the
+&&&&&&&&&&&&&&&&&&&&&&& gray
+Help on function gray in module matplotlib.pyplot:
+
+gray() -> 'None'
+    Set the colormap to 'gray'.
+    
+    This changes the default colormap as well as the colormap of the current
+&&&&&&&&&&&&&&&&&&&&&&& grid
+Help on function grid in module matplotlib.pyplot:
+
+grid(visible: 'bool | None' = None, which: "Literal['major', 'minor', 'both']" = 'major', axis: "Literal['both', 'x', 'y']" = 'both', **kwargs) -> 'None'
+    Configure the grid lines.
+    
+    Parameters
+&&&&&&&&&&&&&&&&&&&&&&& hexbin
+Help on function hexbin in module matplotlib.pyplot:
+
+hexbin(x: 'ArrayLike', y: 'ArrayLike', C: 'ArrayLike | None' = None, gridsize: 'int | tuple[int, int]' = 100, bins: "Literal['log'] | int | Sequence[float] | None" = None, xscale: "Literal['linear', 'log']" = 'linear', yscale: "Literal['linear', 'log']" = 'linear', extent: 'tuple[float, float, float, float] | None' = None, cmap: 'str | Colormap | None' = None, norm: 'str | Normalize | None' = None, vmin: 'float | None' = None, vmax: 'float | None' = None, alpha: 'float | None' = None, linewidths: 'float | None' = None, edgecolors: "Literal['face', 'none'] | ColorType" = 'face', reduce_C_function: 'Callable[[np.ndarray | list[float]], float]' = <function mean at 0x10f439770>, mincnt: 'int | None' = None, marginals: 'bool' = False, *, data=None, **kwargs) -> 'PolyCollection'
+    Make a 2D hexagonal binning plot of points *x*, *y*.
+    
+    If *C* is *None*, the value of the hexagon is determined by the number
+&&&&&&&&&&&&&&&&&&&&&&& hist
+Help on function hist in module matplotlib.pyplot:
+
+hist(x: 'ArrayLike | Sequence[ArrayLike]', bins: 'int | Sequence[float] | str | None' = None, range: 'tuple[float, float] | None' = None, density: 'bool' = False, weights: 'ArrayLike | None' = None, cumulative: 'bool | float' = False, bottom: 'ArrayLike | float | None' = None, histtype: "Literal['bar', 'barstacked', 'step', 'stepfilled']" = 'bar', align: "Literal['left', 'mid', 'right']" = 'mid', orientation: "Literal['vertical', 'horizontal']" = 'vertical', rwidth: 'float | None' = None, log: 'bool' = False, color: 'ColorType | Sequence[ColorType] | None' = None, label: 'str | Sequence[str] | None' = None, stacked: 'bool' = False, *, data=None, **kwargs) -> 'tuple[np.ndarray | list[np.ndarray], np.ndarray, BarContainer | Polygon | list[BarContainer | Polygon]]'
+    Compute and plot a histogram.
+    
+    This method uses `numpy.histogram` to bin the data in *x* and count the
+&&&&&&&&&&&&&&&&&&&&&&& hist2d
+Help on function hist2d in module matplotlib.pyplot:
+
+hist2d(x: 'ArrayLike', y: 'ArrayLike', bins: 'None | int | tuple[int, int] | ArrayLike | tuple[ArrayLike, ArrayLike]' = 10, range: 'ArrayLike | None' = None, density: 'bool' = False, weights: 'ArrayLike | None' = None, cmin: 'float | None' = None, cmax: 'float | None' = None, *, data=None, **kwargs) -> 'tuple[np.ndarray, np.ndarray, np.ndarray, QuadMesh]'
+    Make a 2D histogram plot.
+    
+    Parameters
+&&&&&&&&&&&&&&&&&&&&&&& hlines
+Help on function hlines in module matplotlib.pyplot:
+
+hlines(y: 'float | ArrayLike', xmin: 'float | ArrayLike', xmax: 'float | ArrayLike', colors: 'ColorType | Sequence[ColorType] | None' = None, linestyles: 'LineStyleType' = 'solid', label: 'str' = '', *, data=None, **kwargs) -> 'LineCollection'
+    Plot horizontal lines at each *y* from *xmin* to *xmax*.
+    
+    Parameters
+&&&&&&&&&&&&&&&&&&&&&&& hot
+Help on function hot in module matplotlib.pyplot:
+
+hot() -> 'None'
+    Set the colormap to 'hot'.
+    
+    This changes the default colormap as well as the colormap of the current
+&&&&&&&&&&&&&&&&&&&&&&& hsv
+Help on function hsv in module matplotlib.pyplot:
+
+hsv() -> 'None'
+    Set the colormap to 'hsv'.
+    
+    This changes the default colormap as well as the colormap of the current
+&&&&&&&&&&&&&&&&&&&&&&& importlib
+Help on package importlib:
+
+NAME
+    importlib - A pure Python implementation of import.
+
+MODULE REFERENCE
+&&&&&&&&&&&&&&&&&&&&&&& imread
+Help on function imread in module matplotlib.pyplot:
+
+imread(fname: 'str | pathlib.Path | BinaryIO', format: 'str | None' = None) -> 'np.ndarray'
+    Read an image from a file into an array.
+    
+    .. note::
+&&&&&&&&&&&&&&&&&&&&&&& imsave
+Help on function imsave in module matplotlib.pyplot:
+
+imsave(fname: 'str | os.PathLike | BinaryIO', arr: 'ArrayLike', **kwargs) -> 'None'
+    Colormap and save an array as an image file.
+    
+    RGB(A) images are passed through.  Single channel images will be
+&&&&&&&&&&&&&&&&&&&&&&& imshow
+Help on function imshow in module matplotlib.pyplot:
+
+imshow(X: 'ArrayLike | PIL.Image.Image', cmap: 'str | Colormap | None' = None, norm: 'str | Normalize | None' = None, *, aspect: "Literal['equal', 'auto'] | float | None" = None, interpolation: 'str | None' = None, alpha: 'float | ArrayLike | None' = None, vmin: 'float | None' = None, vmax: 'float | None' = None, origin: "Literal['upper', 'lower'] | None" = None, extent: 'tuple[float, float, float, float] | None' = None, interpolation_stage: "Literal['data', 'rgba'] | None" = None, filternorm: 'bool' = True, filterrad: 'float' = 4.0, resample: 'bool | None' = None, url: 'str | None' = None, data=None, **kwargs) -> 'AxesImage'
+    Display data as an image, i.e., on a 2D regular raster.
+    
+    The input may either be actual RGB(A) data, or 2D scalar data, which
+&&&&&&&&&&&&&&&&&&&&&&& inferno
+Help on function inferno in module matplotlib.pyplot:
+
+inferno() -> 'None'
+    Set the colormap to 'inferno'.
+    
+    This changes the default colormap as well as the colormap of the current
+&&&&&&&&&&&&&&&&&&&&&&& inspect
+Help on module inspect:
+
+NAME
+    inspect - Get useful information from live Python objects.
+
+MODULE REFERENCE
+&&&&&&&&&&&&&&&&&&&&&&& install_repl_displayhook
+Help on function install_repl_displayhook in module matplotlib.pyplot:
+
+install_repl_displayhook() -> 'None'
+    Connect to the display hook of the current shell.
+    
+    The display hook gets called when the read-evaluate-print-loop (REPL) of
+&&&&&&&&&&&&&&&&&&&&&&& interactive
+Help on function interactive in module matplotlib:
+
+interactive(b)
+    Set whether to redraw after every plotting command (e.g. `.pyplot.xlabel`).
+
+None
+&&&&&&&&&&&&&&&&&&&&&&& ion
+Help on function ion in module matplotlib.pyplot:
+
+ion() -> 'AbstractContextManager'
+    Enable interactive mode.
+    
+    See `.pyplot.isinteractive` for more details.
+&&&&&&&&&&&&&&&&&&&&&&& isinteractive
+Help on function isinteractive in module matplotlib.pyplot:
+
+isinteractive() -> 'bool'
+    Return whether plots are updated after every plotting command.
+    
+    The interactive mode is mainly useful if you build plots from the command
+&&&&&&&&&&&&&&&&&&&&&&& jet
+Help on function jet in module matplotlib.pyplot:
+
+jet() -> 'None'
+    Set the colormap to 'jet'.
+    
+    This changes the default colormap as well as the colormap of the current
+&&&&&&&&&&&&&&&&&&&&&&& legend
+Help on function legend in module matplotlib.pyplot:
+
+legend(*args, **kwargs) -> 'Legend'
+    Place a legend on the Axes.
+    
+    Call signatures::
+&&&&&&&&&&&&&&&&&&&&&&& locator_params
+Help on function locator_params in module matplotlib.pyplot:
+
+locator_params(axis: "Literal['both', 'x', 'y']" = 'both', tight: 'bool | None' = None, **kwargs) -> 'None'
+    Control behavior of major tick locators.
+    
+    Because the locator is involved in autoscaling, `~.Axes.autoscale_view`
+&&&&&&&&&&&&&&&&&&&&&&& logging
+Help on package logging:
+
+NAME
+    logging
+
+MODULE REFERENCE
+&&&&&&&&&&&&&&&&&&&&&&& loglog
+Help on function loglog in module matplotlib.pyplot:
+
+loglog(*args, **kwargs) -> 'list[Line2D]'
+    Make a plot with log scaling on both the x- and y-axis.
+    
+    Call signatures::
+&&&&&&&&&&&&&&&&&&&&&&& magma
+Help on function magma in module matplotlib.pyplot:
+
+magma() -> 'None'
+    Set the colormap to 'magma'.
+    
+    This changes the default colormap as well as the colormap of the current
+&&&&&&&&&&&&&&&&&&&&&&& magnitude_spectrum
+Help on function magnitude_spectrum in module matplotlib.pyplot:
+
+magnitude_spectrum(x: 'ArrayLike', Fs: 'float | None' = None, Fc: 'int | None' = None, window: 'Callable[[ArrayLike], ArrayLike] | ArrayLike | None' = None, pad_to: 'int | None' = None, sides: "Literal['default', 'onesided', 'twosided'] | None" = None, scale: "Literal['default', 'linear', 'dB'] | None" = None, *, data=None, **kwargs) -> 'tuple[np.ndarray, np.ndarray, Line2D]'
+    Plot the magnitude spectrum.
+    
+    Compute the magnitude spectrum of *x*.  Data is padded to a
+&&&&&&&&&&&&&&&&&&&&&&& margins
+Help on function margins in module matplotlib.pyplot:
+
+margins(*margins: 'float', x: 'float | None' = None, y: 'float | None' = None, tight: 'bool | None' = True) -> 'tuple[float, float] | None'
+    Set or retrieve autoscaling margins.
+    
+    The padding added to each limit of the Axes is the *margin*
+&&&&&&&&&&&&&&&&&&&&&&& matplotlib
+Help on package matplotlib:
+
+NAME
+    matplotlib - An object-oriented plotting library.
+
+DESCRIPTION
+&&&&&&&&&&&&&&&&&&&&&&& matshow
+Help on function matshow in module matplotlib.pyplot:
+
+matshow(A: 'ArrayLike', fignum: 'None | int' = None, **kwargs) -> 'AxesImage'
+    Display a 2D array as a matrix in a new figure window.
+    
+    The origin is set at the upper left hand corner.
+&&&&&&&&&&&&&&&&&&&&&&& minorticks_off
+Help on function minorticks_off in module matplotlib.pyplot:
+
+minorticks_off() -> 'None'
+    Remove minor ticks from the Axes.
+    
+    Notes
+&&&&&&&&&&&&&&&&&&&&&&& minorticks_on
+Help on function minorticks_on in module matplotlib.pyplot:
+
+minorticks_on() -> 'None'
+    Display minor ticks on the Axes.
+    
+    Displaying minor ticks may reduce performance; you may turn them off
+&&&&&&&&&&&&&&&&&&&&&&& mlab
+Help on module matplotlib.mlab in matplotlib:
+
+NAME
+    matplotlib.mlab
+
+DESCRIPTION
+&&&&&&&&&&&&&&&&&&&&&&& new_figure_manager
+Help on function new_figure_manager in module matplotlib.pyplot:
+
+new_figure_manager(num, *args, **kwargs)
+    Create a new figure manager instance.
+
+None
+&&&&&&&&&&&&&&&&&&&&&&& np
+Help on package numpy:
+
+NAME
+    numpy
+
+DESCRIPTION
+&&&&&&&&&&&&&&&&&&&&&&& overload
+Help on function overload in module typing:
+
+overload(func)
+    Decorator for overloaded functions/methods.
+    
+    In a stub file, place two or more stub definitions for the same
+&&&&&&&&&&&&&&&&&&&&&&& pause
+Help on function pause in module matplotlib.pyplot:
+
+pause(interval: 'float') -> 'None'
+    Run the GUI event loop for *interval* seconds.
+    
+    If there is an active figure, it will be updated and displayed before the
+&&&&&&&&&&&&&&&&&&&&&&& pcolor
+Help on function pcolor in module matplotlib.pyplot:
+
+pcolor(*args: 'ArrayLike', shading: "Literal['flat', 'nearest', 'auto'] | None" = None, alpha: 'float | None' = None, norm: 'str | Normalize | None' = None, cmap: 'str | Colormap | None' = None, vmin: 'float | None' = None, vmax: 'float | None' = None, data=None, **kwargs) -> 'Collection'
+    Create a pseudocolor plot with a non-regular rectangular grid.
+    
+    Call signature::
+&&&&&&&&&&&&&&&&&&&&&&& pcolormesh
+Help on function pcolormesh in module matplotlib.pyplot:
+
+pcolormesh(*args: 'ArrayLike', alpha: 'float | None' = None, norm: 'str | Normalize | None' = None, cmap: 'str | Colormap | None' = None, vmin: 'float | None' = None, vmax: 'float | None' = None, shading: "Literal['flat', 'nearest', 'gouraud', 'auto'] | None" = None, antialiased: 'bool' = False, data=None, **kwargs) -> 'QuadMesh'
+    Create a pseudocolor plot with a non-regular rectangular grid.
+    
+    Call signature::
+&&&&&&&&&&&&&&&&&&&&&&& phase_spectrum
+Help on function phase_spectrum in module matplotlib.pyplot:
+
+phase_spectrum(x: 'ArrayLike', Fs: 'float | None' = None, Fc: 'int | None' = None, window: 'Callable[[ArrayLike], ArrayLike] | ArrayLike | None' = None, pad_to: 'int | None' = None, sides: "Literal['default', 'onesided', 'twosided'] | None" = None, *, data=None, **kwargs) -> 'tuple[np.ndarray, np.ndarray, Line2D]'
+    Plot the phase spectrum.
+    
+    Compute the phase spectrum (unwrapped angle spectrum) of *x*.
+&&&&&&&&&&&&&&&&&&&&&&& pie
+Help on function pie in module matplotlib.pyplot:
+
+pie(x: 'ArrayLike', explode: 'ArrayLike | None' = None, labels: 'Sequence[str] | None' = None, colors: 'ColorType | Sequence[ColorType] | None' = None, autopct: 'str | Callable[[float], str] | None' = None, pctdistance: 'float' = 0.6, shadow: 'bool' = False, labeldistance: 'float | None' = 1.1, startangle: 'float' = 0, radius: 'float' = 1, counterclock: 'bool' = True, wedgeprops: 'dict[str, Any] | None' = None, textprops: 'dict[str, Any] | None' = None, center: 'tuple[float, float]' = (0, 0), frame: 'bool' = False, rotatelabels: 'bool' = False, *, normalize: 'bool' = True, hatch: 'str | Sequence[str] | None' = None, data=None) -> 'tuple[list[Wedge], list[Text]] | tuple[list[Wedge], list[Text], list[Text]]'
+    Plot a pie chart.
+    
+    Make a pie chart of array *x*.  The fractional area of each wedge is
+&&&&&&&&&&&&&&&&&&&&&&& pink
+Help on function pink in module matplotlib.pyplot:
+
+pink() -> 'None'
+    Set the colormap to 'pink'.
+    
+    This changes the default colormap as well as the colormap of the current
+&&&&&&&&&&&&&&&&&&&&&&& plasma
+Help on function plasma in module matplotlib.pyplot:
+
+plasma() -> 'None'
+    Set the colormap to 'plasma'.
+    
+    This changes the default colormap as well as the colormap of the current
+&&&&&&&&&&&&&&&&&&&&&&& plot
+Help on function plot in module matplotlib.pyplot:
+
+plot(*args: 'float | ArrayLike | str', scalex: 'bool' = True, scaley: 'bool' = True, data=None, **kwargs) -> 'list[Line2D]'
+    Plot y versus x as lines and/or markers.
+    
+    Call signatures::
+&&&&&&&&&&&&&&&&&&&&&&& plot_date
+Help on function plot_date in module matplotlib.pyplot:
+
+plot_date(x: 'ArrayLike', y: 'ArrayLike', fmt: 'str' = 'o', tz: 'str | datetime.tzinfo | None' = None, xdate: 'bool' = True, ydate: 'bool' = False, *, data=None, **kwargs) -> 'list[Line2D]'
+    [*Deprecated*] Plot coercing the axis to treat floats as dates.
+    
+    .. deprecated:: 3.9
+&&&&&&&&&&&&&&&&&&&&&&& polar
+Help on function polar in module matplotlib.pyplot:
+
+polar(*args, **kwargs) -> 'list[Line2D]'
+    Make a polar plot.
+    
+    call signature::
+&&&&&&&&&&&&&&&&&&&&&&& prism
+Help on function prism in module matplotlib.pyplot:
+
+prism() -> 'None'
+    Set the colormap to 'prism'.
+    
+    This changes the default colormap as well as the colormap of the current
+&&&&&&&&&&&&&&&&&&&&&&& psd
+Help on function psd in module matplotlib.pyplot:
+
+psd(x: 'ArrayLike', NFFT: 'int | None' = None, Fs: 'float | None' = None, Fc: 'int | None' = None, detrend: "Literal['none', 'mean', 'linear'] | Callable[[ArrayLike], ArrayLike] | None" = None, window: 'Callable[[ArrayLike], ArrayLike] | ArrayLike | None' = None, noverlap: 'int | None' = None, pad_to: 'int | None' = None, sides: "Literal['default', 'onesided', 'twosided'] | None" = None, scale_by_freq: 'bool | None' = None, return_line: 'bool | None' = None, *, data=None, **kwargs) -> 'tuple[np.ndarray, np.ndarray] | tuple[np.ndarray, np.ndarray, Line2D]'
+    Plot the power spectral density.
+    
+    The power spectral density :math:`P_{xx}` by Welch's average
+&&&&&&&&&&&&&&&&&&&&&&& quiver
+Help on function quiver in module matplotlib.pyplot:
+
+quiver(*args, data=None, **kwargs) -> 'Quiver'
+    Plot a 2D field of arrows.
+    
+    Call signature::
+&&&&&&&&&&&&&&&&&&&&&&& quiverkey
+Help on function quiverkey in module matplotlib.pyplot:
+
+quiverkey(Q: 'Quiver', X: 'float', Y: 'float', U: 'float', label: 'str', **kwargs) -> 'QuiverKey'
+    Add a key to a quiver plot.
+    
+    The positioning of the key depends on *X*, *Y*, *coordinates*, and
+&&&&&&&&&&&&&&&&&&&&&&& rc
+Help on function rc in module matplotlib.pyplot:
+
+rc(group: 'str', **kwargs) -> 'None'
+    Set the current `.rcParams`.  *group* is the grouping for the rc, e.g.,
+    for ``lines.linewidth`` the group is ``lines``, for
+    ``axes.facecolor``, the group is ``axes``, and so on.  Group may
+&&&&&&&&&&&&&&&&&&&&&&& rcParams
+Help on RcParams in module matplotlib object:
+
+class RcParams(collections.abc.MutableMapping, builtins.dict)
+ |  RcParams(*args, **kwargs)
+ |  
+ |  A dict-like key-value store for config parameters, including validation.
+&&&&&&&&&&&&&&&&&&&&&&& rcParamsDefault
+Help on RcParams in module matplotlib object:
+
+class RcParams(collections.abc.MutableMapping, builtins.dict)
+ |  RcParams(*args, **kwargs)
+ |  
+ |  A dict-like key-value store for config parameters, including validation.
+&&&&&&&&&&&&&&&&&&&&&&& rcParamsOrig
+Help on RcParams in module matplotlib object:
+
+class RcParams(collections.abc.MutableMapping, builtins.dict)
+ |  RcParams(*args, **kwargs)
+ |  
+ |  A dict-like key-value store for config parameters, including validation.
+&&&&&&&&&&&&&&&&&&&&&&& rc_context
+Help on function rc_context in module matplotlib.pyplot:
+
+rc_context(rc: 'dict[str, Any] | None' = None, fname: 'str | pathlib.Path | os.PathLike | None' = None) -> 'AbstractContextManager[None]'
+    Return a context manager for temporarily changing rcParams.
+    
+    The :rc:`backend` will not be reset by the context manager.
+&&&&&&&&&&&&&&&&&&&&&&& rcdefaults
+Help on function rcdefaults in module matplotlib.pyplot:
+
+rcdefaults() -> 'None'
+    Restore the `.rcParams` from Matplotlib's internal default style.
+    
+    Style-blacklisted `.rcParams` (defined in
+&&&&&&&&&&&&&&&&&&&&&&& rcsetup
+Help on module matplotlib.rcsetup in matplotlib:
+
+NAME
+    matplotlib.rcsetup
+
+DESCRIPTION
+&&&&&&&&&&&&&&&&&&&&&&& rgrids
+Help on function rgrids in module matplotlib.pyplot:
+
+rgrids(radii: 'ArrayLike | None' = None, labels: 'Sequence[str | Text] | None' = None, angle: 'float | None' = None, fmt: 'str | None' = None, **kwargs) -> 'tuple[list[Line2D], list[Text]]'
+    Get or set the radial gridlines on the current polar plot.
+    
+    Call signatures::
+&&&&&&&&&&&&&&&&&&&&&&& savefig
+Help on function savefig in module matplotlib.pyplot:
+
+savefig(*args, **kwargs) -> 'None'
+    Save the current figure as an image or vector graphic to a file.
+    
+    Call signature::
+&&&&&&&&&&&&&&&&&&&&&&& sca
+Help on function sca in module matplotlib.pyplot:
+
+sca(ax: 'Axes') -> 'None'
+    Set the current Axes to *ax* and the current Figure to the parent of *ax*.
+
+None
+&&&&&&&&&&&&&&&&&&&&&&& sci
+Help on function sci in module matplotlib.pyplot:
+
+sci(im: 'ScalarMappable') -> 'None'
+    Set the current image.
+    
+    This image will be the target of colormap functions like
+&&&&&&&&&&&&&&&&&&&&&&& semilogx
+Help on function semilogx in module matplotlib.pyplot:
+
+semilogx(*args, **kwargs) -> 'list[Line2D]'
+    Make a plot with log scaling on the x-axis.
+    
+    Call signatures::
+&&&&&&&&&&&&&&&&&&&&&&& semilogy
+Help on function semilogy in module matplotlib.pyplot:
+
+semilogy(*args, **kwargs) -> 'list[Line2D]'
+    Make a plot with log scaling on the y-axis.
+    
+    Call signatures::
+&&&&&&&&&&&&&&&&&&&&&&& set_cmap
+Help on function set_cmap in module matplotlib.pyplot:
+
+set_cmap(cmap: 'Colormap | str') -> 'None'
+    Set the default colormap, and applies it to the current image if any.
+    
+    Parameters
+&&&&&&&&&&&&&&&&&&&&&&& set_loglevel
+Help on function set_loglevel in module matplotlib.pyplot:
+
+set_loglevel(*args, **kwargs) -> 'None'
+    Configure Matplotlib's logging levels.
+    
+    Matplotlib uses the standard library `logging` framework under the root
+&&&&&&&&&&&&&&&&&&&&&&& setp
+Help on function setp in module matplotlib.pyplot:
+
+setp(obj, *args, **kwargs)
+    Set one or more properties on an `.Artist`, or list allowed values.
+    
+    Parameters
+&&&&&&&&&&&&&&&&&&&&&&& show
+Help on function show in module matplotlib.pyplot:
+
+show(*, block=None)
+    Display all open figures.
+    
+    Parameters
+&&&&&&&&&&&&&&&&&&&&&&& specgram
+Help on function specgram in module matplotlib.pyplot:
+
+specgram(x: 'ArrayLike', NFFT: 'int | None' = None, Fs: 'float | None' = None, Fc: 'int | None' = None, detrend: "Literal['none', 'mean', 'linear'] | Callable[[ArrayLike], ArrayLike] | None" = None, window: 'Callable[[ArrayLike], ArrayLike] | ArrayLike | None' = None, noverlap: 'int | None' = None, cmap: 'str | Colormap | None' = None, xextent: 'tuple[float, float] | None' = None, pad_to: 'int | None' = None, sides: "Literal['default', 'onesided', 'twosided'] | None" = None, scale_by_freq: 'bool | None' = None, mode: "Literal['default', 'psd', 'magnitude', 'angle', 'phase'] | None" = None, scale: "Literal['default', 'linear', 'dB'] | None" = None, vmin: 'float | None' = None, vmax: 'float | None' = None, *, data=None, **kwargs) -> 'tuple[np.ndarray, np.ndarray, np.ndarray, AxesImage]'
+    Plot a spectrogram.
+    
+    Compute and plot a spectrogram of data in *x*.  Data are split into
+&&&&&&&&&&&&&&&&&&&&&&& spring
+Help on function spring in module matplotlib.pyplot:
+
+spring() -> 'None'
+    Set the colormap to 'spring'.
+    
+    This changes the default colormap as well as the colormap of the current
+&&&&&&&&&&&&&&&&&&&&&&& spy
+Help on function spy in module matplotlib.pyplot:
+
+spy(Z: 'ArrayLike', precision: "float | Literal['present']" = 0, marker: 'str | None' = None, markersize: 'float | None' = None, aspect: "Literal['equal', 'auto'] | float | None" = 'equal', origin: "Literal['upper', 'lower']" = 'upper', **kwargs) -> 'AxesImage'
+    Plot the sparsity pattern of a 2D array.
+    
+    This visualizes the non-zero values of the array.
+&&&&&&&&&&&&&&&&&&&&&&& stackplot
+Help on function stackplot in module matplotlib.pyplot:
+
+stackplot(x, *args, labels=(), colors=None, hatch=None, baseline='zero', data=None, **kwargs)
+    Draw a stacked area plot or a streamgraph.
+    
+    Parameters
+&&&&&&&&&&&&&&&&&&&&&&& stairs
+Help on function stairs in module matplotlib.pyplot:
+
+stairs(values: 'ArrayLike', edges: 'ArrayLike | None' = None, *, orientation: "Literal['vertical', 'horizontal']" = 'vertical', baseline: 'float | ArrayLike | None' = 0, fill: 'bool' = False, data=None, **kwargs) -> 'StepPatch'
+    Draw a stepwise constant function as a line or a filled plot.
+    
+    *edges* define the x-axis positions of the steps. *values* the function values
+&&&&&&&&&&&&&&&&&&&&&&& stem
+Help on function stem in module matplotlib.pyplot:
+
+stem(*args: 'ArrayLike | str', linefmt: 'str | None' = None, markerfmt: 'str | None' = None, basefmt: 'str | None' = None, bottom: 'float' = 0, label: 'str | None' = None, orientation: "Literal['vertical', 'horizontal']" = 'vertical', data=None) -> 'StemContainer'
+    Create a stem plot.
+    
+    A stem plot draws lines perpendicular to a baseline at each location
+&&&&&&&&&&&&&&&&&&&&&&& step
+Help on function step in module matplotlib.pyplot:
+
+step(x: 'ArrayLike', y: 'ArrayLike', *args, where: "Literal['pre', 'post', 'mid']" = 'pre', data=None, **kwargs) -> 'list[Line2D]'
+    Make a step plot.
+    
+    Call signatures::
+&&&&&&&&&&&&&&&&&&&&&&& streamplot
+Help on function streamplot in module matplotlib.pyplot:
+
+streamplot(x, y, u, v, density=1, linewidth=None, color=None, cmap=None, norm=None, arrowsize=1, arrowstyle='-|>', minlength=0.1, transform=None, zorder=None, start_points=None, maxlength=4.0, integration_direction='both', broken_streamlines=True, *, data=None)
+    Draw streamlines of a vector flow.
+    
+    Parameters
+&&&&&&&&&&&&&&&&&&&&&&& style
+Help on package matplotlib.style in matplotlib:
+
+NAME
+    matplotlib.style
+
+PACKAGE CONTENTS
+&&&&&&&&&&&&&&&&&&&&&&& subplot
+Help on function subplot in module matplotlib.pyplot:
+
+subplot(*args, **kwargs) -> 'Axes'
+    Add an Axes to the current figure or retrieve an existing Axes.
+    
+    This is a wrapper of `.Figure.add_subplot` which provides additional
+&&&&&&&&&&&&&&&&&&&&&&& subplot2grid
+Help on function subplot2grid in module matplotlib.pyplot:
+
+subplot2grid(shape: 'tuple[int, int]', loc: 'tuple[int, int]', rowspan: 'int' = 1, colspan: 'int' = 1, fig: 'Figure | None' = None, **kwargs) -> 'matplotlib.axes.Axes'
+    Create a subplot at a specific location inside a regular grid.
+    
+    Parameters
+&&&&&&&&&&&&&&&&&&&&&&& subplot_mosaic
+Help on function subplot_mosaic in module matplotlib.pyplot:
+
+subplot_mosaic(mosaic: 'str | list[HashableList[_T]] | list[HashableList[Hashable]]', *, sharex: 'bool' = False, sharey: 'bool' = False, width_ratios: 'ArrayLike | None' = None, height_ratios: 'ArrayLike | None' = None, empty_sentinel: 'Any' = '.', subplot_kw: 'dict[str, Any] | None' = None, gridspec_kw: 'dict[str, Any] | None' = None, per_subplot_kw: 'dict[str | tuple[str, ...], dict[str, Any]] | dict[_T | tuple[_T, ...], dict[str, Any]] | dict[Hashable | tuple[Hashable, ...], dict[str, Any]] | None' = None, **fig_kw: 'Any') -> 'tuple[Figure, dict[str, matplotlib.axes.Axes]] | tuple[Figure, dict[_T, matplotlib.axes.Axes]] | tuple[Figure, dict[Hashable, matplotlib.axes.Axes]]'
+    Build a layout of Axes based on ASCII art or nested lists.
+    
+    This is a helper function to build complex GridSpec layouts visually.
+&&&&&&&&&&&&&&&&&&&&&&& subplot_tool
+Help on function subplot_tool in module matplotlib.pyplot:
+
+subplot_tool(targetfig: 'Figure | None' = None) -> 'SubplotTool | None'
+    Launch a subplot tool window for a figure.
+    
+    Returns
+&&&&&&&&&&&&&&&&&&&&&&& subplots
+Help on function subplots in module matplotlib.pyplot:
+
+subplots(nrows: 'int' = 1, ncols: 'int' = 1, *, sharex: "bool | Literal['none', 'all', 'row', 'col']" = False, sharey: "bool | Literal['none', 'all', 'row', 'col']" = False, squeeze: 'bool' = True, width_ratios: 'Sequence[float] | None' = None, height_ratios: 'Sequence[float] | None' = None, subplot_kw: 'dict[str, Any] | None' = None, gridspec_kw: 'dict[str, Any] | None' = None, **fig_kw) -> 'tuple[Figure, Any]'
+    Create a figure and a set of subplots.
+    
+    This utility wrapper makes it convenient to create common layouts of
+&&&&&&&&&&&&&&&&&&&&&&& subplots_adjust
+Help on function subplots_adjust in module matplotlib.pyplot:
+
+subplots_adjust(left: 'float | None' = None, bottom: 'float | None' = None, right: 'float | None' = None, top: 'float | None' = None, wspace: 'float | None' = None, hspace: 'float | None' = None) -> 'None'
+    Adjust the subplot layout parameters.
+    
+    Unset parameters are left unmodified; initial values are given by
+&&&&&&&&&&&&&&&&&&&&&&& summer
+Help on function summer in module matplotlib.pyplot:
+
+summer() -> 'None'
+    Set the colormap to 'summer'.
+    
+    This changes the default colormap as well as the colormap of the current
+&&&&&&&&&&&&&&&&&&&&&&& suptitle
+Help on function suptitle in module matplotlib.pyplot:
+
+suptitle(t: 'str', **kwargs) -> 'Text'
+    Add a centered suptitle to the figure.
+    
+    Parameters
+&&&&&&&&&&&&&&&&&&&&&&& switch_backend
+Help on function switch_backend in module matplotlib.pyplot:
+
+switch_backend(newbackend: 'str') -> 'None'
+    Set the pyplot backend.
+    
+    Switching to an interactive backend is possible only if no event loop for
+&&&&&&&&&&&&&&&&&&&&&&& sys
+Help on built-in module sys:
+
+NAME
+    sys
+
+MODULE REFERENCE
+&&&&&&&&&&&&&&&&&&&&&&& table
+Help on function table in module matplotlib.pyplot:
+
+table(cellText=None, cellColours=None, cellLoc='right', colWidths=None, rowLabels=None, rowColours=None, rowLoc='left', colLabels=None, colColours=None, colLoc='center', loc='bottom', bbox=None, edges='closed', **kwargs)
+    Add a table to an `~.axes.Axes`.
+    
+    At least one of *cellText* or *cellColours* must be specified. These
+&&&&&&&&&&&&&&&&&&&&&&& text
+Help on function text in module matplotlib.pyplot:
+
+text(x: 'float', y: 'float', s: 'str', fontdict: 'dict[str, Any] | None' = None, **kwargs) -> 'Text'
+    Add text to the Axes.
+    
+    Add the text *s* to the Axes at location *x*, *y* in data coordinates,
+&&&&&&&&&&&&&&&&&&&&&&& thetagrids
+Help on function thetagrids in module matplotlib.pyplot:
+
+thetagrids(angles: 'ArrayLike | None' = None, labels: 'Sequence[str | Text] | None' = None, fmt: 'str | None' = None, **kwargs) -> 'tuple[list[Line2D], list[Text]]'
+    Get or set the theta gridlines on the current polar plot.
+    
+    Call signatures::
+&&&&&&&&&&&&&&&&&&&&&&& threading
+Help on module threading:
+
+NAME
+    threading - Thread module emulating a subset of Java's threading model.
+
+MODULE REFERENCE
+&&&&&&&&&&&&&&&&&&&&&&& tick_params
+Help on function tick_params in module matplotlib.pyplot:
+
+tick_params(axis: "Literal['both', 'x', 'y']" = 'both', **kwargs) -> 'None'
+    Change the appearance of ticks, tick labels, and gridlines.
+    
+    Tick properties that are not explicitly set using the keyword
+&&&&&&&&&&&&&&&&&&&&&&& ticklabel_format
+Help on function ticklabel_format in module matplotlib.pyplot:
+
+ticklabel_format(*, axis: "Literal['both', 'x', 'y']" = 'both', style: "Literal['', 'sci', 'scientific', 'plain'] | None" = None, scilimits: 'tuple[int, int] | None' = None, useOffset: 'bool | float | None' = None, useLocale: 'bool | None' = None, useMathText: 'bool | None' = None) -> 'None'
+    Configure the `.ScalarFormatter` used by default for linear Axes.
+    
+    If a parameter is not set, the corresponding property of the formatter
+&&&&&&&&&&&&&&&&&&&&&&& tight_layout
+Help on function tight_layout in module matplotlib.pyplot:
+
+tight_layout(*, pad: 'float' = 1.08, h_pad: 'float | None' = None, w_pad: 'float | None' = None, rect: 'tuple[float, float, float, float] | None' = None) -> 'None'
+    Adjust the padding between and around subplots.
+    
+    To exclude an artist on the Axes from the bounding box calculation
+&&&&&&&&&&&&&&&&&&&&&&& time
+Help on built-in module time:
+
+NAME
+    time - This module provides various functions to manipulate time values.
+
+DESCRIPTION
+&&&&&&&&&&&&&&&&&&&&&&& title
+Help on function title in module matplotlib.pyplot:
+
+title(label: 'str', fontdict: 'dict[str, Any] | None' = None, loc: "Literal['left', 'center', 'right'] | None" = None, pad: 'float | None' = None, *, y: 'float | None' = None, **kwargs) -> 'Text'
+    Set a title for the Axes.
+    
+    Set one of the three available Axes titles. The available titles
+&&&&&&&&&&&&&&&&&&&&&&& tricontour
+Help on function tricontour in module matplotlib.pyplot:
+
+tricontour(*args, **kwargs)
+    Draw contour lines on an unstructured triangular grid.
+    
+    Call signatures::
+&&&&&&&&&&&&&&&&&&&&&&& tricontourf
+Help on function tricontourf in module matplotlib.pyplot:
+
+tricontourf(*args, **kwargs)
+    Draw contour regions on an unstructured triangular grid.
+    
+    Call signatures::
+&&&&&&&&&&&&&&&&&&&&&&& tripcolor
+Help on function tripcolor in module matplotlib.pyplot:
+
+tripcolor(*args, alpha=1.0, norm=None, cmap=None, vmin=None, vmax=None, shading='flat', facecolors=None, **kwargs)
+    Create a pseudocolor plot of an unstructured triangular grid.
+    
+    Call signatures::
+&&&&&&&&&&&&&&&&&&&&&&& triplot
+Help on function triplot in module matplotlib.pyplot:
+
+triplot(*args, **kwargs)
+    Draw an unstructured triangular grid as lines and/or markers.
+    
+    Call signatures::
+&&&&&&&&&&&&&&&&&&&&&&& twinx
+Help on function twinx in module matplotlib.pyplot:
+
+twinx(ax: 'matplotlib.axes.Axes | None' = None) -> '_AxesBase'
+    Make and return a second Axes that shares the *x*-axis.  The new Axes will
+    overlay *ax* (or the current Axes if *ax* is *None*), and its ticks will be
+    on the right.
+&&&&&&&&&&&&&&&&&&&&&&& twiny
+Help on function twiny in module matplotlib.pyplot:
+
+twiny(ax: 'matplotlib.axes.Axes | None' = None) -> '_AxesBase'
+    Make and return a second Axes that shares the *y*-axis.  The new Axes will
+    overlay *ax* (or the current Axes if *ax* is *None*), and its ticks will be
+    on the top.
+&&&&&&&&&&&&&&&&&&&&&&& uninstall_repl_displayhook
+Help on function uninstall_repl_displayhook in module matplotlib.pyplot:
+
+uninstall_repl_displayhook() -> 'None'
+    Disconnect from the display hook of the current shell.
+
+None
+&&&&&&&&&&&&&&&&&&&&&&& viridis
+Help on function viridis in module matplotlib.pyplot:
+
+viridis() -> 'None'
+    Set the colormap to 'viridis'.
+    
+    This changes the default colormap as well as the colormap of the current
+&&&&&&&&&&&&&&&&&&&&&&& vlines
+Help on function vlines in module matplotlib.pyplot:
+
+vlines(x: 'float | ArrayLike', ymin: 'float | ArrayLike', ymax: 'float | ArrayLike', colors: 'ColorType | Sequence[ColorType] | None' = None, linestyles: 'LineStyleType' = 'solid', label: 'str' = '', *, data=None, **kwargs) -> 'LineCollection'
+    Plot vertical lines at each *x* from *ymin* to *ymax*.
+    
+    Parameters
+&&&&&&&&&&&&&&&&&&&&&&& waitforbuttonpress
+Help on function waitforbuttonpress in module matplotlib.pyplot:
+
+waitforbuttonpress(timeout: 'float' = -1) -> 'None | bool'
+    Blocking call to interact with the figure.
+    
+    Wait for user input and return True if a key was pressed, False if a
+&&&&&&&&&&&&&&&&&&&&&&& winter
+Help on function winter in module matplotlib.pyplot:
+
+winter() -> 'None'
+    Set the colormap to 'winter'.
+    
+    This changes the default colormap as well as the colormap of the current
+&&&&&&&&&&&&&&&&&&&&&&& xcorr
+Help on function xcorr in module matplotlib.pyplot:
+
+xcorr(x: 'ArrayLike', y: 'ArrayLike', normed: 'bool' = True, detrend: 'Callable[[ArrayLike], ArrayLike]' = <function detrend_none at 0x11e3f1430>, usevlines: 'bool' = True, maxlags: 'int' = 10, *, data=None, **kwargs) -> 'tuple[np.ndarray, np.ndarray, LineCollection | Line2D, Line2D | None]'
+    Plot the cross correlation between *x* and *y*.
+    
+    The correlation with lag k is defined as
+&&&&&&&&&&&&&&&&&&&&&&& xkcd
+Help on function xkcd in module matplotlib.pyplot:
+
+xkcd(scale: 'float' = 1, length: 'float' = 100, randomness: 'float' = 2) -> 'ExitStack'
+    Turn on `xkcd <https://xkcd.com/>`_ sketch-style drawing mode.
+    
+    This will only have an effect on things drawn after this function is called.
+&&&&&&&&&&&&&&&&&&&&&&& xlabel
+Help on function xlabel in module matplotlib.pyplot:
+
+xlabel(xlabel: 'str', fontdict: 'dict[str, Any] | None' = None, labelpad: 'float | None' = None, *, loc: "Literal['left', 'center', 'right'] | None" = None, **kwargs) -> 'Text'
+    Set the label for the x-axis.
+    
+    Parameters
+&&&&&&&&&&&&&&&&&&&&&&& xlim
+Help on function xlim in module matplotlib.pyplot:
+
+xlim(*args, **kwargs) -> 'tuple[float, float]'
+    Get or set the x limits of the current Axes.
+    
+    Call signatures::
+&&&&&&&&&&&&&&&&&&&&&&& xscale
+Help on function xscale in module matplotlib.pyplot:
+
+xscale(value: 'str | ScaleBase', **kwargs) -> 'None'
+    Set the xaxis' scale.
+    
+    Parameters
+&&&&&&&&&&&&&&&&&&&&&&& xticks
+Help on function xticks in module matplotlib.pyplot:
+
+xticks(ticks: 'ArrayLike | None' = None, labels: 'Sequence[str] | None' = None, *, minor: 'bool' = False, **kwargs) -> 'tuple[list[Tick] | np.ndarray, list[Text]]'
+    Get or set the current tick locations and labels of the x-axis.
+    
+    Pass no arguments to return the current values without modifying them.
+&&&&&&&&&&&&&&&&&&&&&&& ylabel
+Help on function ylabel in module matplotlib.pyplot:
+
+ylabel(ylabel: 'str', fontdict: 'dict[str, Any] | None' = None, labelpad: 'float | None' = None, *, loc: "Literal['bottom', 'center', 'top'] | None" = None, **kwargs) -> 'Text'
+    Set the label for the y-axis.
+    
+    Parameters
+&&&&&&&&&&&&&&&&&&&&&&& ylim
+Help on function ylim in module matplotlib.pyplot:
+
+ylim(*args, **kwargs) -> 'tuple[float, float]'
+    Get or set the y-limits of the current Axes.
+    
+    Call signatures::
+&&&&&&&&&&&&&&&&&&&&&&& yscale
+Help on function yscale in module matplotlib.pyplot:
+
+yscale(value: 'str | ScaleBase', **kwargs) -> 'None'
+    Set the yaxis' scale.
+    
+    Parameters
+&&&&&&&&&&&&&&&&&&&&&&& yticks
+Help on function yticks in module matplotlib.pyplot:
+
+yticks(ticks: 'ArrayLike | None' = None, labels: 'Sequence[str] | None' = None, *, minor: 'bool' = False, **kwargs) -> 'tuple[list[Tick] | np.ndarray, list[Text]]'
+    Get or set the current tick locations and labels of the y-axis.
+    
+    Pass no arguments to return the current values without modifying them.
