@@ -1,3 +1,6 @@
+doc02
+=====
+
 https://matplotlib.org/stable/plot_types/index.html
 
 Plot types
