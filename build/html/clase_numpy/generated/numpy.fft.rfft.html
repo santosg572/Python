@@ -7,7 +7,7 @@
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>numpy.fft.rfft &mdash; santosg57-python 0.1 documentation</title>
-      <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=b86133f3" />
+      <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=80d5e7a1" />
       <link rel="stylesheet" type="text/css" href="../../_static/css/theme.css?v=9edc463e" />
       <link rel="stylesheet" type="text/css" href="../../_static/custom.css?v=836bb062" />
 
@@ -15,11 +15,13 @@
       <script src="../../_static/jquery.js?v=5d32c60e"></script>
       <script src="../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
       <script src="../../_static/documentation_options.js?v=2709fde1"></script>
-      <script src="../../_static/doctools.js?v=9a2dae69"></script>
+      <script src="../../_static/doctools.js?v=9bcbadda"></script>
       <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
     <script src="../../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../../genindex.html" />
-    <link rel="search" title="Search" href="../../search.html" /> 
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="numpy.fft.irfft" href="numpy.fft.irfft.html" />
+    <link rel="prev" title="numpy.fft.ifftn" href="numpy.fft.ifftn.html" /> 
 </head>
 
 <body class="wy-body-for-nav"> 
@@ -41,8 +43,39 @@
   </form>
 </div>
         </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
-              <ul>
+              <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="../../funciones.html">Funciones o Métodos</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../index_numpy.html">Módulo Numpy</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../modulo_numpy.html">Módulo numpy (Numerical Python)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../dir_numpy.html">dir numpy</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../help_numpy.html">numpy</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="numpy.fft.fft.html">numpy.fft.fft</a></li>
+<li class="toctree-l3"><a class="reference internal" href="numpy.fft.ifft.html">numpy.fft.ifft</a></li>
+<li class="toctree-l3"><a class="reference internal" href="numpy.fft.fft2.html">numpy.fft.fft2</a></li>
+<li class="toctree-l3"><a class="reference internal" href="numpy.fft.ifft2.html">numpy.fft.ifft2</a></li>
+<li class="toctree-l3"><a class="reference internal" href="numpy.fft.fftn.html">numpy.fft.fftn</a></li>
+<li class="toctree-l3"><a class="reference internal" href="numpy.fft.ifftn.html">numpy.fft.ifftn</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">numpy.fft.rfft</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#numpy.fft.rfft"><code class="docutils literal notranslate"><span class="pre">rfft()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="numpy.fft.irfft.html">numpy.fft.irfft</a></li>
+<li class="toctree-l3"><a class="reference internal" href="numpy.fft.rfft2.html">numpy.fft.rfft2</a></li>
+<li class="toctree-l3"><a class="reference internal" href="numpy.fft.irfft2.html">numpy.fft.irfft2</a></li>
+<li class="toctree-l3"><a class="reference internal" href="numpy.fft.rfftn.html">numpy.fft.rfftn</a></li>
+<li class="toctree-l3"><a class="reference internal" href="numpy.fft.irfftn.html">numpy.fft.irfftn</a></li>
+<li class="toctree-l3"><a class="reference internal" href="numpy.fft.hfft.html">numpy.fft.hfft</a></li>
+<li class="toctree-l3"><a class="reference internal" href="numpy.fft.ihfft.html">numpy.fft.ihfft</a></li>
+<li class="toctree-l3"><a class="reference internal" href="numpy.fft.fftfreq.html">numpy.fft.fftfreq</a></li>
+<li class="toctree-l3"><a class="reference internal" href="numpy.fft.rfftfreq.html">numpy.fft.rfftfreq</a></li>
+<li class="toctree-l3"><a class="reference internal" href="numpy.fft.fftshift.html">numpy.fft.fftshift</a></li>
+<li class="toctree-l3"><a class="reference internal" href="numpy.fft.ifftshift.html">numpy.fft.ifftshift</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../ejemplos_numpy.html">Ejemplos</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../funciones_numpy.html">Alguno métodos de numpy</a></li>
+</ul>
+</li>
 <li class="toctree-l1"><a class="reference internal" href="../../distribucion_normal.html">Distribución normal</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../daniel/index_estadistica.html">Estadística</a></li>
 </ul>
@@ -61,6 +94,8 @@
           <div role="navigation" aria-label="Page navigation">
   <ul class="wy-breadcrumbs">
       <li><a href="../../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="../index_numpy.html">Módulo Numpy</a></li>
+          <li class="breadcrumb-item"><a href="../help_numpy.html">numpy</a></li>
       <li class="breadcrumb-item active">numpy.fft.rfft</li>
       <li class="wy-breadcrumbs-aside">
             <a href="../../_sources/clase_numpy/generated/numpy.fft.rfft.rst.txt" rel="nofollow"> View page source</a>
@@ -166,7 +201,10 @@ exploited to compute only the non-negative frequency terms.</p>
 
            </div>
           </div>
-          <footer>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="numpy.fft.ifftn.html" class="btn btn-neutral float-left" title="numpy.fft.ifftn" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="numpy.fft.irfft.html" class="btn btn-neutral float-right" title="numpy.fft.irfft" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
 
   <hr/>
 
