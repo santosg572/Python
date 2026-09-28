@@ -17,6 +17,6 @@ Contenido
 
    funciones
    numpy/Imagenes/imagenes
-   distribucion_normal
-   daniel/index_estadistica
-
+   numpy_help
+   matplotlyb
+   ejercicio_01

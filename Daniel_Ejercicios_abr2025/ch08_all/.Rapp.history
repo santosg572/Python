@@ -1,0 +1,263 @@
+plot(1:32)
+plot(1:12)
+matrix(1:6, ncol=2)
+?matrix
+analisis_imagenes.rst
+ban = 1
+if (ban) {#
+   print('verdadero')#
+}
+ban = 0
+if (ban) {#
+   print('verdadero')#
+}
+fac <- 1#
+for (i in 2:10){#
+  fac = fac*i#
+}#
+fac
+fac <- 1#
+for (i in 2:4){#
+  fac = fac*i#
+}#
+fac
+fac <- 1#
+i=2#
+while (i < 11){#
+  fac = fac*i#
+  i = i+1#
+}#
+fac
+x = 1.15
+x = 1:15
+summary(x)
+x
+edad = 1:15
+cat('media= ', mean(edad),'\n')#
+cat('mediana= ', median(edad),'\n')#
+cat('desviacion estndar= ', sd(edad),'\n')#
+cat('varianza= ', var(edad),'\n')#
+cat('iqr= ', IQR(edad),'\n')#
+cat('rango= ', range(edad),'\n')
+x = c(4,5,3,2,6,7,4,5,6)
+sort(x)
+y=sort(x)
+y
+np = length(y)
+y[np-3:]
+y[np-3:np]
+y
+y[]
+y[(np-3):np]
+y[(np-2):np]
+x
+y
+x = round(rnorm(15,mean=55, sd=5))
+x
+h = hist(x)
+h
+x
+x1=min(x)
+x2 = max(x)
+br = seq(x1,x2,2)
+h=hist(x,break=br)
+h=hist(x,breaks=br)
+h
+x
+hist(x)
+h <- hist(x)
+class(h)
+h
+h$breaks
+h$mids
+a = 4#
+b = 3#
+c = 1#
+#
+del = b^2 - 4*a*c#
+#
+if (del >= 0){#
+   x1 = (-b + sqrt(del))/ (2*a)#
+   x2 = (-b - sqrt(del))/ (2*a)#
+} else {#
+   x1 = (-b + complex(imaginary= sqrt(-1*del)))/ (2*a)#
+   x2 = (-b - complex(imaginary= sqrt(-1*del)))/ (2*a)#
+}#
+#
+print(c(x1, x2))
+a=2
+b=-3
+c=1
+rm(list=ls())#
+#
+# solucion con la ecuacion  genral#
+#
+a = 4#
+b = 3#
+c = 1#
+#
+del = b^2 - 4*a*c#
+#
+if (del >= 0){#
+   x1 = (-b + sqrt(del))/ (2*a)#
+   x2 = (-b - sqrt(del))/ (2*a)#
+} else {#
+   x1 = (-b + complex(imaginary= sqrt(-1*del)))/ (2*a)#
+   x2 = (-b - complex(imaginary= sqrt(-1*del)))/ (2*a)#
+}#
+#
+print(c(x1, x2))
+a
+a=2
+b=-3
+c=1
+del = b^2 - 4*a*c#
+#
+if (del >= 0){#
+   x1 = (-b + sqrt(del))/ (2*a)#
+   x2 = (-b - sqrt(del))/ (2*a)#
+} else {#
+   x1 = (-b + complex(imaginary= sqrt(-1*del)))/ (2*a)#
+   x2 = (-b - complex(imaginary= sqrt(-1*del)))/ (2*a)#
+}#
+#
+print(c(x1, x2))
+sexo = c("M", "H", "M", "M", "H", "M", "H","H", "M", "M", "H", "M", "M", "H","H", "H", "M", "H", "H", "H", "H",#
+      "M", "H", "M", "H", "H", "H", "H", "H", "M", "H", "H", "H", "M", "M", "M", "H", "H", "M", "H", "M", "H",#
+      "H", "M", "M", "H", "M", "H", "H", "M", "M", "M", "H", "H", "M", "H", "M", "M", "H", "M", "M", "H", "M",#
+      "H", "H", "H", "M", "M", "H", "M", "M", "M", "M", "M", "M", "M", "M", "H", "M", "H", "M", "M", "H", "M",#
+      "H", "H", "M", "M", "H", "H", "H", "H", "M", "M", "M", "H", "H", "M", "M", "H")
+sexo
+m = sexo == 'M'
+m
+nm = sum(m)
+nm
+h = sexo == 'H'
+nh = sum(h)
+nh
+barplot(nm,nh
+)
+barplot(c(nm,nh))
+barplot(c(5,3,6))
+?barplot
+barplot(c(5,3,6), names=c('A', 'B', 'C'))
+barplot(c(5,3,6), names=c('A', 'B', 'C'), col=c('red', 'blue', 'pink'))
+points(c(0,5), c(0,0))
+points(c(0,5), c(0,0), type='l')
+barplot(c(5,3,6), names=c('A', 'B', 'C'), col=c('red', 'blue', 'pink'))
+points(c(0,3), c(0,0), type='l')
+points(c(0,3), c(.1,.1), type='l')
+x1 <- c(52.67, 48.42, 57.46, 56.98, 54.10, 53.05, 56.81, 59.29, 52.60, 58.46, 60.95, 45.30)#
+#
+x2 <- c(50.49, 54.62, 63.45, 52.70, 56.17, 63.27, 65.79, 57.04, 79.00, 61.11, 62.46, 65.82, 63.70, 59.62)#
+#
+x3 <- c(51.68, 46.73, 50.15, 50.70, 54.42, 62.74, 50.47, 46.59, 55.55, 50.84, 53.81, 49.80)
+x1
+x2
+x3
+boxplot(x1,x2,x3)
+summary(x1)
+m1 = mean(x1)
+m2 = mean(x2)
+m3 = mean(x3)
+sd1 = sd(x1)
+sd2 = sd(x2)
+sd3 = sd(x3)
+barplot(c(m1,m2,m3))
+b=barplot(c(m1,m2,m3))
+b
+points(c(b[1], b[1]), c(m1-sd1/sqrt(length(x1)), type='l')
+)
+points(c(b[1], b[1]), c(m1-sd1/sqrt(length(x1),m1+sd1/sqrt(length(x1) ), type='l')
+)
+points(c(b[1], b[1]), c(m1-sd1/sqrt(length(x1),m1+sd1/sqrt(length(x1) ), type='l')
+points(c(b[1], b[1]), c(m1-sd1/sqrt(length(x1)),m1+sd1/sqrt(length(x1)) ), type='l')
+m1
+points(c(b[1], b[1]), c(m1-sd1/sqrt(length(x1)),m1+sd1/sqrt(length(x1)) ), type='l')
+text(b[1], 0, '+')
+b[1]
+text(b[1]+1, 0, '+')
+b
+g <- ggplot(mpg, aes(class))#
+g <- g + geom_bar()#
+print(g)
+library(ggplot2)
+g <- ggplot(mpg, aes(class))#
+g <- g + geom_bar()#
+print(g)
+mpg
+g <- ggplot(mpg, aes(class))
+g
+print(g)
+g <-ggplot(mpg,aes(class))
+print(g)
+g <- ggplot(mpg, aes(class))#
+g <- g + geom_bar()#
+print(g)
+source('rectas.R')
+source('rectas.R')
+source('rectas.R')
+source('rectas.R')
+source('rectas.R')
+source('rectas.R')
+source('rectas.R')
+EXA_C08_S02_01EXA_C08_S02_01
+source('ej_8_2_1.R')
+getwd()
+dir()
+source('ej_8_2_1.R')
+source('ej_8_2_1.R')
+VEN
+atach(datos)
+atach(datos)
+atash(datos)
+attash(datos)
+attach(datos)
+VEN
+is.na(VEN)
+VEN[!is.na(VEN)]
+source('ej_8_2_1.R')
+source('ej_8_2_1.R')
+source('ej_8_2_1.R')
+source('ej_8_2_1.R')
+source('ej_8_2_1.R')
+6312/279
+source('ej_8_2_1.R')
+EXR_C08_S03_01
+source('ej_8_3_1.R')
+dir()
+dir()
+source('ej_8_3_1.R')
+dir()
+source('ej_8_3_1.R')
+dir()
+edad <- rep(1:3, c(5,5,5))
+edad
+edad <- rep(1:5, 3)
+edad
+metodo = rep(1:3, 5)
+metodo
+metodo = rep(1:3, 5, c(5,5,5))
+metodo = rep(1:3, c(5,5,5))
+metodo
+source('ej_8_3_1.R')
+source('ej_8_3_1.R')
+source('ej_8_3_1.R')
+source('ej_8_3_1.R')
+sum(7:11)/5
+source('ej_8_3_1.R')
+source('ej_8_3_1.R')
+source('ej_8_3_1.R')
+mean(c(9,9,9,9,12))
+source('ej_8_3_1.R')
+source('ej_8_3_1.R')
+source('ej_8_3_1.R')
+source('ej_8_3_1.R')
+dir()
+source('ej_8_4_1.R')
+dir()
+source('ej_8_4_1.R')
+source('ej_8_4_1.R')
+source('ej_8_4_1.R')
+source('ej_8_4_1.R')
+source('ej_8_4_1.R')
