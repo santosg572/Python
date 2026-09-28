@@ -1,16 +1,18 @@
-import numpy as np
+import numpy.random as rr
 
-#dd = dir(np)
+dd = dir(rr)
 
-dd = ['abs', 'amax', 'append', 'apply_along_axis', 'apply_over_axes', 'arange', 'around', 'array', 'concatenate', 'cos', 
-'cumsum', 'delete',
-'exp', 'eye', 'fmax', 'histogram', 'histogram2d', 'inf', 'insert', 'linspace', 'log10', 'matrix', 'max', 'mean', 'median', 
-'ones', 'percentile',
-'pi', 'reshape', 'resize', 'round', 'shape', 'sin', 'size', 'sort', 'sqrt', 'sum', 'transpose', 'zeros']
+#print(dd)
 
+k = 1
 for ss in dd:
   ss.replace('\n','')
-  if ss[0] != '_':
-    print('&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&' + ss + ' &&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&')
-    print(help(eval('np.'+ss)))
+  es_mayuscula = ss[0].isupper()
+  ss0 = ss[0]
+ 
+  if not (es_mayuscula or (ss0 == '_')):
+    print('&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&' + str(k) + ' - ' + ss + ' &&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&')
+    k = k+1
+    print(help(eval('rr.'+ss)))
+
 

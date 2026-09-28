@@ -1,0 +1,636 @@
+&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&1 - beta &&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&
+Help on built-in function beta:
+
+beta(...) method of numpy.random.mtrand.RandomState instance
+    beta(a, b, size=None)
+    
+    Draw samples from a Beta distribution.
+    
+    The Beta distribution is a special case of the Dirichlet distribution,
+    and is related to the Gamma distribution.  It has the probability
+    distribution function
+    
+&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&2 - binomial &&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&
+Help on built-in function binomial:
+
+binomial(...) method of numpy.random.mtrand.RandomState instance
+    binomial(n, p, size=None)
+    
+    Draw samples from a binomial distribution.
+    
+    Samples are drawn from a binomial distribution with specified
+    parameters, n trials and p probability of success where
+    n an integer >= 0 and p is in the interval [0,1]. (n may be
+    input as a float, but it is truncated to an integer in use)
+&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&3 - bit_generator &&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&
+Help on module numpy.random.bit_generator in numpy.random:
+
+NAME
+    numpy.random.bit_generator - BitGenerator base class and SeedSequence used to seed the BitGenerators.
+
+DESCRIPTION
+    SeedSequence is derived from Melissa E. O'Neill's C++11 `std::seed_seq`
+    implementation, as it has a lot of nice properties that we want.
+    
+    https://gist.github.com/imneme/540829265469e673d045
+    http://www.pcg-random.org/posts/developing-a-seed_seq-alternative.html
+&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&4 - bytes &&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&
+Help on built-in function bytes:
+
+bytes(...) method of numpy.random.mtrand.RandomState instance
+    bytes(length)
+    
+    Return random bytes.
+    
+    .. note::
+        New code should use the `~numpy.random.Generator.bytes`
+        method of a `~numpy.random.Generator` instance instead;
+        please see the :ref:`random-quick-start`.
+&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&5 - chisquare &&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&
+Help on built-in function chisquare:
+
+chisquare(...) method of numpy.random.mtrand.RandomState instance
+    chisquare(df, size=None)
+    
+    Draw samples from a chi-square distribution.
+    
+    When `df` independent random variables, each with standard normal
+    distributions (mean 0, variance 1), are squared and summed, the
+    resulting distribution is chi-square (see Notes).  This distribution
+    is often used in hypothesis testing.
+&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&6 - choice &&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&
+Help on built-in function choice:
+
+choice(...) method of numpy.random.mtrand.RandomState instance
+    choice(a, size=None, replace=True, p=None)
+    
+    Generates a random sample from a given 1-D array
+    
+    .. versionadded:: 1.7.0
+    
+    .. note::
+        New code should use the `~numpy.random.Generator.choice`
+&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&7 - default_rng &&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&
+Help on built-in function default_rng in module numpy.random._generator:
+
+default_rng(...)
+    default_rng(seed=None)
+    Construct a new Generator with the default BitGenerator (PCG64).
+    
+        Parameters
+        ----------
+        seed : {None, int, array_like[ints], SeedSequence, BitGenerator, Generator}, optional
+            A seed to initialize the `BitGenerator`. If None, then fresh,
+            unpredictable entropy will be pulled from the OS. If an ``int`` or
+&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&8 - dirichlet &&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&
+Help on built-in function dirichlet:
+
+dirichlet(...) method of numpy.random.mtrand.RandomState instance
+    dirichlet(alpha, size=None)
+    
+    Draw samples from the Dirichlet distribution.
+    
+    Draw `size` samples of dimension k from a Dirichlet distribution. A
+    Dirichlet-distributed random variable can be seen as a multivariate
+    generalization of a Beta distribution. The Dirichlet distribution
+    is a conjugate prior of a multinomial distribution in Bayesian
+&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&9 - exponential &&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&
+Help on built-in function exponential:
+
+exponential(...) method of numpy.random.mtrand.RandomState instance
+    exponential(scale=1.0, size=None)
+    
+    Draw samples from an exponential distribution.
+    
+    Its probability density function is
+    
+    .. math:: f(x; \frac{1}{\beta}) = \frac{1}{\beta} \exp(-\frac{x}{\beta}),
+    
+&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&10 - f &&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&
+Help on built-in function f:
+
+f(...) method of numpy.random.mtrand.RandomState instance
+    f(dfnum, dfden, size=None)
+    
+    Draw samples from an F distribution.
+    
+    Samples are drawn from an F distribution with specified parameters,
+    `dfnum` (degrees of freedom in numerator) and `dfden` (degrees of
+    freedom in denominator), where both parameters must be greater than
+    zero.
+&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&11 - gamma &&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&
+Help on built-in function gamma:
+
+gamma(...) method of numpy.random.mtrand.RandomState instance
+    gamma(shape, scale=1.0, size=None)
+    
+    Draw samples from a Gamma distribution.
+    
+    Samples are drawn from a Gamma distribution with specified parameters,
+    `shape` (sometimes designated "k") and `scale` (sometimes designated
+    "theta"), where both parameters are > 0.
+    
+&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&12 - geometric &&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&
+Help on built-in function geometric:
+
+geometric(...) method of numpy.random.mtrand.RandomState instance
+    geometric(p, size=None)
+    
+    Draw samples from the geometric distribution.
+    
+    Bernoulli trials are experiments with one of two outcomes:
+    success or failure (an example of such an experiment is flipping
+    a coin).  The geometric distribution models the number of trials
+    that must be run in order to achieve success.  It is therefore
+&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&13 - get_bit_generator &&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&
+Help on built-in function get_bit_generator in module numpy.random.mtrand:
+
+get_bit_generator(...)
+    Returns the singleton RandomState's bit generator
+    
+    Returns
+    -------
+    BitGenerator
+        The bit generator that underlies the singleton RandomState instance
+    
+    Notes
+&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&14 - get_state &&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&
+Help on built-in function get_state:
+
+get_state(...) method of numpy.random.mtrand.RandomState instance
+    get_state(legacy=True)
+    
+    Return a tuple representing the internal state of the generator.
+    
+    For more details, see `set_state`.
+    
+    Parameters
+    ----------
+&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&15 - gumbel &&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&
+Help on built-in function gumbel:
+
+gumbel(...) method of numpy.random.mtrand.RandomState instance
+    gumbel(loc=0.0, scale=1.0, size=None)
+    
+    Draw samples from a Gumbel distribution.
+    
+    Draw samples from a Gumbel distribution with specified location and
+    scale.  For more information on the Gumbel distribution, see
+    Notes and References below.
+    
+&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&16 - hypergeometric &&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&
+Help on built-in function hypergeometric:
+
+hypergeometric(...) method of numpy.random.mtrand.RandomState instance
+    hypergeometric(ngood, nbad, nsample, size=None)
+    
+    Draw samples from a Hypergeometric distribution.
+    
+    Samples are drawn from a hypergeometric distribution with specified
+    parameters, `ngood` (ways to make a good selection), `nbad` (ways to make
+    a bad selection), and `nsample` (number of items sampled, which is less
+    than or equal to the sum ``ngood + nbad``).
+&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&17 - laplace &&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&
+Help on built-in function laplace:
+
+laplace(...) method of numpy.random.mtrand.RandomState instance
+    laplace(loc=0.0, scale=1.0, size=None)
+    
+    Draw samples from the Laplace or double exponential distribution with
+    specified location (or mean) and scale (decay).
+    
+    The Laplace distribution is similar to the Gaussian/normal distribution,
+    but is sharper at the peak and has fatter tails. It represents the
+    difference between two independent, identically distributed exponential
+&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&18 - logistic &&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&
+Help on built-in function logistic:
+
+logistic(...) method of numpy.random.mtrand.RandomState instance
+    logistic(loc=0.0, scale=1.0, size=None)
+    
+    Draw samples from a logistic distribution.
+    
+    Samples are drawn from a logistic distribution with specified
+    parameters, loc (location or mean, also median), and scale (>0).
+    
+    .. note::
+&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&19 - lognormal &&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&
+Help on built-in function lognormal:
+
+lognormal(...) method of numpy.random.mtrand.RandomState instance
+    lognormal(mean=0.0, sigma=1.0, size=None)
+    
+    Draw samples from a log-normal distribution.
+    
+    Draw samples from a log-normal distribution with specified mean,
+    standard deviation, and array shape.  Note that the mean and standard
+    deviation are not the values for the distribution itself, but of the
+    underlying normal distribution it is derived from.
+&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&20 - logseries &&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&
+Help on built-in function logseries:
+
+logseries(...) method of numpy.random.mtrand.RandomState instance
+    logseries(p, size=None)
+    
+    Draw samples from a logarithmic series distribution.
+    
+    Samples are drawn from a log series distribution with specified
+    shape parameter, 0 <= ``p`` < 1.
+    
+    .. note::
+&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&21 - mtrand &&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&
+Help on module numpy.random.mtrand in numpy.random:
+
+NAME
+    numpy.random.mtrand
+
+CLASSES
+    builtins.object
+        RandomState
+    
+    class RandomState(builtins.object)
+     |  RandomState(seed=None)
+&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&22 - multinomial &&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&
+Help on built-in function multinomial:
+
+multinomial(...) method of numpy.random.mtrand.RandomState instance
+    multinomial(n, pvals, size=None)
+    
+    Draw samples from a multinomial distribution.
+    
+    The multinomial distribution is a multivariate generalization of the
+    binomial distribution.  Take an experiment with one of ``p``
+    possible outcomes.  An example of such an experiment is throwing a dice,
+    where the outcome can be 1 through 6.  Each sample drawn from the
+&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&23 - multivariate_normal &&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&
+Help on built-in function multivariate_normal:
+
+multivariate_normal(...) method of numpy.random.mtrand.RandomState instance
+    multivariate_normal(mean, cov, size=None, check_valid='warn', tol=1e-8)
+    
+    Draw random samples from a multivariate normal distribution.
+    
+    The multivariate normal, multinormal or Gaussian distribution is a
+    generalization of the one-dimensional normal distribution to higher
+    dimensions.  Such a distribution is specified by its mean and
+    covariance matrix.  These parameters are analogous to the mean
+&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&24 - negative_binomial &&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&
+Help on built-in function negative_binomial:
+
+negative_binomial(...) method of numpy.random.mtrand.RandomState instance
+    negative_binomial(n, p, size=None)
+    
+    Draw samples from a negative binomial distribution.
+    
+    Samples are drawn from a negative binomial distribution with specified
+    parameters, `n` successes and `p` probability of success where `n`
+    is > 0 and `p` is in the interval [0, 1].
+    
+&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&25 - noncentral_chisquare &&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&
+Help on built-in function noncentral_chisquare:
+
+noncentral_chisquare(...) method of numpy.random.mtrand.RandomState instance
+    noncentral_chisquare(df, nonc, size=None)
+    
+    Draw samples from a noncentral chi-square distribution.
+    
+    The noncentral :math:`\chi^2` distribution is a generalization of
+    the :math:`\chi^2` distribution.
+    
+    .. note::
+&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&26 - noncentral_f &&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&
+Help on built-in function noncentral_f:
+
+noncentral_f(...) method of numpy.random.mtrand.RandomState instance
+    noncentral_f(dfnum, dfden, nonc, size=None)
+    
+    Draw samples from the noncentral F distribution.
+    
+    Samples are drawn from an F distribution with specified parameters,
+    `dfnum` (degrees of freedom in numerator) and `dfden` (degrees of
+    freedom in denominator), where both parameters > 1.
+    `nonc` is the non-centrality parameter.
+&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&27 - normal &&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&
+Help on built-in function normal:
+
+normal(...) method of numpy.random.mtrand.RandomState instance
+    normal(loc=0.0, scale=1.0, size=None)
+    
+    Draw random samples from a normal (Gaussian) distribution.
+    
+    The probability density function of the normal distribution, first
+    derived by De Moivre and 200 years later by both Gauss and Laplace
+    independently [2]_, is often called the bell curve because of
+    its characteristic shape (see the example below).
+&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&28 - pareto &&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&
+Help on built-in function pareto:
+
+pareto(...) method of numpy.random.mtrand.RandomState instance
+    pareto(a, size=None)
+    
+    Draw samples from a Pareto II or Lomax distribution with
+    specified shape.
+    
+    The Lomax or Pareto II distribution is a shifted Pareto
+    distribution. The classical Pareto distribution can be
+    obtained from the Lomax distribution by adding 1 and
+&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&29 - permutation &&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&
+Help on built-in function permutation:
+
+permutation(...) method of numpy.random.mtrand.RandomState instance
+    permutation(x)
+    
+    Randomly permute a sequence, or return a permuted range.
+    
+    If `x` is a multi-dimensional array, it is only shuffled along its
+    first index.
+    
+    .. note::
+&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&30 - poisson &&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&
+Help on built-in function poisson:
+
+poisson(...) method of numpy.random.mtrand.RandomState instance
+    poisson(lam=1.0, size=None)
+    
+    Draw samples from a Poisson distribution.
+    
+    The Poisson distribution is the limit of the binomial distribution
+    for large N.
+    
+    .. note::
+&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&31 - power &&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&
+Help on built-in function power:
+
+power(...) method of numpy.random.mtrand.RandomState instance
+    power(a, size=None)
+    
+    Draws samples in [0, 1] from a power distribution with positive
+    exponent a - 1.
+    
+    Also known as the power function distribution.
+    
+    .. note::
+&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&32 - rand &&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&
+Help on built-in function rand:
+
+rand(...) method of numpy.random.mtrand.RandomState instance
+    rand(d0, d1, ..., dn)
+    
+    Random values in a given shape.
+    
+    .. note::
+        This is a convenience function for users porting code from Matlab,
+        and wraps `random_sample`. That function takes a
+        tuple to specify the size of the output, which is consistent with
+&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&33 - randint &&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&
+Help on built-in function randint:
+
+randint(...) method of numpy.random.mtrand.RandomState instance
+    randint(low, high=None, size=None, dtype=int)
+    
+    Return random integers from `low` (inclusive) to `high` (exclusive).
+    
+    Return random integers from the "discrete uniform" distribution of
+    the specified dtype in the "half-open" interval [`low`, `high`). If
+    `high` is None (the default), then results are from [0, `low`).
+    
+&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&34 - randn &&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&
+Help on built-in function randn:
+
+randn(...) method of numpy.random.mtrand.RandomState instance
+    randn(d0, d1, ..., dn)
+    
+    Return a sample (or samples) from the "standard normal" distribution.
+    
+    .. note::
+        This is a convenience function for users porting code from Matlab,
+        and wraps `standard_normal`. That function takes a
+        tuple to specify the size of the output, which is consistent with
+&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&35 - random &&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&
+Help on built-in function random:
+
+random(...) method of numpy.random.mtrand.RandomState instance
+    random(size=None)
+    
+    Return random floats in the half-open interval [0.0, 1.0). Alias for
+    `random_sample` to ease forward-porting to the new random API.
+
+None
+&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&36 - random_integers &&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&
+Help on built-in function random_integers:
+&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&37 - random_sample &&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&
+Help on built-in function random_sample:
+
+random_sample(...) method of numpy.random.mtrand.RandomState instance
+    random_sample(size=None)
+    
+    Return random floats in the half-open interval [0.0, 1.0).
+    
+    Results are from the "continuous uniform" distribution over the
+    stated interval.  To sample :math:`Unif[a, b), b > a` multiply
+    the output of `random_sample` by `(b-a)` and add `a`::
+    
+&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&38 - ranf &&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&
+Help on built-in function ranf in module numpy.random.mtrand:
+
+ranf(...)
+    This is an alias of `random_sample`. See `random_sample`  for the complete
+    documentation.
+
+None
+&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&39 - rayleigh &&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&
+Help on built-in function rayleigh:
+
+rayleigh(...) method of numpy.random.mtrand.RandomState instance
+&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&40 - sample &&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&
+Help on built-in function sample in module numpy.random.mtrand:
+
+sample(...)
+    This is an alias of `random_sample`. See `random_sample`  for the complete
+    documentation.
+
+None
+&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&41 - seed &&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&
+Help on built-in function seed in module numpy.random.mtrand:
+
+seed(...)
+&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&42 - set_bit_generator &&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&
+Help on built-in function set_bit_generator in module numpy.random.mtrand:
+
+set_bit_generator(...)
+    Sets the singleton RandomState's bit generator
+    
+    Parameters
+    ----------
+    bitgen
+        A bit generator instance
+    
+    Notes
+&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&43 - set_state &&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&
+Help on built-in function set_state:
+
+set_state(...) method of numpy.random.mtrand.RandomState instance
+    set_state(state)
+    
+    Set the internal state of the generator from a tuple.
+    
+    For use if one has reason to manually (re-)set the internal state of
+    the bit generator used by the RandomState instance. By default,
+    RandomState uses the "Mersenne Twister"[1]_ pseudo-random number
+    generating algorithm.
+&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&44 - shuffle &&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&
+Help on built-in function shuffle:
+
+shuffle(...) method of numpy.random.mtrand.RandomState instance
+    shuffle(x)
+    
+    Modify a sequence in-place by shuffling its contents.
+    
+    This function only shuffles the array along the first axis of a
+    multi-dimensional array. The order of sub-arrays is changed but
+    their contents remains the same.
+    
+&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&45 - standard_cauchy &&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&
+Help on built-in function standard_cauchy:
+
+standard_cauchy(...) method of numpy.random.mtrand.RandomState instance
+    standard_cauchy(size=None)
+    
+    Draw samples from a standard Cauchy distribution with mode = 0.
+    
+    Also known as the Lorentz distribution.
+    
+    .. note::
+        New code should use the
+&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&46 - standard_exponential &&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&
+Help on built-in function standard_exponential:
+
+standard_exponential(...) method of numpy.random.mtrand.RandomState instance
+    standard_exponential(size=None)
+    
+    Draw samples from the standard exponential distribution.
+    
+    `standard_exponential` is identical to the exponential distribution
+    with a scale parameter of 1.
+    
+    .. note::
+&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&47 - standard_gamma &&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&
+Help on built-in function standard_gamma:
+
+standard_gamma(...) method of numpy.random.mtrand.RandomState instance
+    standard_gamma(shape, size=None)
+    
+    Draw samples from a standard Gamma distribution.
+    
+    Samples are drawn from a Gamma distribution with specified parameters,
+    shape (sometimes designated "k") and scale=1.
+    
+    .. note::
+&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&48 - standard_normal &&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&
+Help on built-in function standard_normal:
+
+standard_normal(...) method of numpy.random.mtrand.RandomState instance
+    standard_normal(size=None)
+    
+    Draw samples from a standard Normal distribution (mean=0, stdev=1).
+    
+    .. note::
+        New code should use the
+        `~numpy.random.Generator.standard_normal`
+        method of a `~numpy.random.Generator` instance instead;
+&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&49 - standard_t &&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&
+Help on built-in function standard_t:
+
+standard_t(...) method of numpy.random.mtrand.RandomState instance
+    standard_t(df, size=None)
+    
+    Draw samples from a standard Student's t distribution with `df` degrees
+    of freedom.
+    
+    A special case of the hyperbolic distribution.  As `df` gets
+    large, the result resembles that of the standard normal
+    distribution (`standard_normal`).
+&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&50 - test &&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&
+Help on PytestTester in module numpy._pytesttester object:
+
+class PytestTester(builtins.object)
+ |  PytestTester(module_name)
+ |  
+ |  Pytest test runner.
+ |  
+ |  A test function is typically added to a package's __init__.py like so::
+ |  
+ |    from numpy._pytesttester import PytestTester
+ |    test = PytestTester(__name__).test
+&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&51 - triangular &&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&
+Help on built-in function triangular:
+
+triangular(...) method of numpy.random.mtrand.RandomState instance
+    triangular(left, mode, right, size=None)
+    
+    Draw samples from the triangular distribution over the
+    interval ``[left, right]``.
+    
+    The triangular distribution is a continuous probability
+    distribution with lower limit left, peak at mode, and upper
+    limit right. Unlike the other distributions, these parameters
+&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&52 - uniform &&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&
+Help on built-in function uniform:
+
+uniform(...) method of numpy.random.mtrand.RandomState instance
+    uniform(low=0.0, high=1.0, size=None)
+    
+    Draw samples from a uniform distribution.
+    
+    Samples are uniformly distributed over the half-open interval
+    ``[low, high)`` (includes low, but excludes high).  In other words,
+    any value within the given interval is equally likely to be drawn
+    by `uniform`.
+&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&53 - vonmises &&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&
+Help on built-in function vonmises:
+
+vonmises(...) method of numpy.random.mtrand.RandomState instance
+    vonmises(mu, kappa, size=None)
+    
+    Draw samples from a von Mises distribution.
+    
+    Samples are drawn from a von Mises distribution with specified mode
+    (mu) and dispersion (kappa), on the interval [-pi, pi].
+    
+    The von Mises distribution (also known as the circular normal
+&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&54 - wald &&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&
+Help on built-in function wald:
+
+wald(...) method of numpy.random.mtrand.RandomState instance
+    wald(mean, scale, size=None)
+    
+    Draw samples from a Wald, or inverse Gaussian, distribution.
+    
+    As the scale approaches infinity, the distribution becomes more like a
+    Gaussian. Some references claim that the Wald is an inverse Gaussian
+    with mean equal to 1, but this is by no means universal.
+    
+&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&55 - weibull &&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&
+Help on built-in function weibull:
+
+weibull(...) method of numpy.random.mtrand.RandomState instance
+    weibull(a, size=None)
+    
+    Draw samples from a Weibull distribution.
+    
+    Draw samples from a 1-parameter Weibull distribution with the given
+    shape parameter `a`.
+    
+    .. math:: X = (-ln(U))^{1/a}
+&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&56 - zipf &&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&
+Help on built-in function zipf:
+
+zipf(...) method of numpy.random.mtrand.RandomState instance
+    zipf(a, size=None)
+    
+    Draw samples from a Zipf distribution.
+    
+    Samples are drawn from a Zipf distribution with specified parameter
+    `a` > 1.
+    
+    The Zipf distribution (also known as the zeta distribution) is a
