@@ -1,5 +1,5 @@
-Funciones o Métodos
-===================
+Funciones o Métodos creados por el Usuario
+==========================================
 
 Una función es un programa que tiene argumentos de entrada y resultados de salida. Las funciones se definen con la palabra ``def``.
 

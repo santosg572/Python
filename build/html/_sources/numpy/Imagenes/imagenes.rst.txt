@@ -6,7 +6,7 @@ En el módulo ``numpy`` se tienen estructuras de datos de la siguiente forma:
 **Vector fila**
  
 .. image:: vector_fila.png
-   :scale: 70%
+   :scale:"70%"
 
 **Vector columna**
 

@@ -16,6 +16,7 @@ Contenido
 .. toctree::
 
    funciones
+   numpy/Imagenes/imagenes
    distribucion_normal
    daniel/index_estadistica
 
