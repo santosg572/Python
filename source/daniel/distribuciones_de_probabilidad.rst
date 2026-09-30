@@ -53,4 +53,40 @@ Algunas graficas de la ditribución binomial:
 .. image:: Binomial_distribution_cdf.svg.webp	
    :scale: 50%
 
+**EJEMPLOS**
+
+* EXAMPLE 4.3.2
+
+Los datos del Centro Estatal de Estadísticas de Salud de Carolina del 
+Norte (A-3) indican que el 14 por ciento de las madres admitió fumar uno o más cigarrillos al día durante el embarazo. Si se 
+selecciona una muestra aleatoria de tamaño 10 de esta población, ¿cuál es la probabilidad de que contenga exactamente cuatro 
+madres que admitieron haber fumado durante el embarazo?
+
+**Solución**
+
+Tomamos la probabilidad de que una madre admita fumar como 0.14. Usando la ecuación 4.3.2 encontramos
+
+.. image:: img_4_3_2.png
+
+* EXAMPLE 4.3.3
+
+Suponga que se sabe que el 10 % de una determinada población padece daltonismo. Si se extrae una muestra aleatoria de 25 
+personas de esta población, utilice la Tabla B del apéndice para hallar la probabilidad de que:
+
+a) Cinco o menos serán daltónicos.
+
+Solución P(X <= 5) = .9666
+
+b) Seis o más serán daltónicos.
+
+Solución: P(X >= 6) = .0334
+
+c) Entre seis y nueve, inclusive, serán daltónicos.
+
+Solución: P(6 <= X <= 9) = .0333
+
+d) Dos, tres o cuatro serán daltónicos.
+
+Solución: P(2 <= X <= 4) = .6308
+
 
