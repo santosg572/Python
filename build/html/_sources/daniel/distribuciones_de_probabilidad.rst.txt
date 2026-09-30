@@ -15,7 +15,14 @@ campana de Gauss y es el gráfico de una función gaussiana. Su forma general es
 
 Algunas graficas de la distribución son:
 
-.. image:: Normal_distribution_cdf.png
+**Función de densidad de probabilidad**
 
 .. image:: Normal_distribution_pdf.png
+   :scale: 50%
+
+**Función de distribución de probabilidad**
+
+.. image:: Normal_distribution_cdf.png
+   :scale: 50%
+
  
