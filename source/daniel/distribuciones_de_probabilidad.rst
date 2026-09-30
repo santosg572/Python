@@ -46,10 +46,11 @@ Algunas graficas de la ditribución binomial:
 **Función de probabilidad**
 
 .. image:: Binomial_distribution_pmf.svg.webp
+   :scale: 50%
 
 **Función de distribución acumulada**
 
 .. image:: Binomial_distribution_cdf.svg.webp	
-
+   :scale: 50%
 
 
