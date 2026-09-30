@@ -6,7 +6,7 @@
   <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Probabilidad y Estadística &mdash; santosg57-python 0.1 documentation</title>
+  <title>Algunas distribuciones de Probabilidad &mdash; santosg57-python 0.1 documentation</title>
       <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=b86133f3" />
       <link rel="stylesheet" type="text/css" href="../_static/css/theme.css?v=9edc463e" />
       <link rel="stylesheet" type="text/css" href="../_static/custom.css?v=836bb062" />
@@ -17,11 +17,11 @@
       <script src="../_static/documentation_options.js?v=2709fde1"></script>
       <script src="../_static/doctools.js?v=9a2dae69"></script>
       <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+      <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <script src="../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="Estadística Descriptiva" href="estadistica_descriptiva.html" />
-    <link rel="prev" title="Estadística" href="index_estadistica.html" /> 
+    <link rel="prev" title="Estadística Descriptiva" href="estadistica_descriptiva.html" /> 
 </head>
 
 <body class="wy-body-for-nav"> 
@@ -52,9 +52,9 @@
 <li class="toctree-l1"><a class="reference internal" href="../Python_Analisis_Imagenes/cell_ejemplo/cell.html">Segmentar objetos en imágenes</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../Python_Analisis_Imagenes/creando_imagenes/creando_imagenes.html">Creando Imágenes</a></li>
 <li class="toctree-l1 current"><a class="reference internal" href="index_estadistica.html">Estadística</a><ul class="current">
-<li class="toctree-l2 current"><a class="current reference internal" href="#">Probabilidad y Estadística</a></li>
+<li class="toctree-l2"><a class="reference internal" href="estadistica.html">Probabilidad y Estadística</a></li>
 <li class="toctree-l2"><a class="reference internal" href="estadistica_descriptiva.html">Estadística Descriptiva</a></li>
-<li class="toctree-l2"><a class="reference internal" href="distribuciones_de_probabilidad.html">Algunas distribuciones de Probabilidad</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Algunas distribuciones de Probabilidad</a></li>
 </ul>
 </li>
 </ul>
@@ -74,9 +74,9 @@
   <ul class="wy-breadcrumbs">
       <li><a href="../index.html" class="icon icon-home" aria-label="Home"></a></li>
           <li class="breadcrumb-item"><a href="index_estadistica.html">Estadística</a></li>
-      <li class="breadcrumb-item active">Probabilidad y Estadística</li>
+      <li class="breadcrumb-item active">Algunas distribuciones de Probabilidad</li>
       <li class="wy-breadcrumbs-aside">
-            <a href="../_sources/daniel/estadistica.rst.txt" rel="nofollow"> View page source</a>
+            <a href="../_sources/daniel/distribuciones_de_probabilidad.rst.txt" rel="nofollow"> View page source</a>
       </li>
   </ul>
   <hr/>
@@ -84,34 +84,27 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
              
-  <section id="probabilidad-y-estadistica">
-<h1>Probabilidad y Estadística<a class="headerlink" href="#probabilidad-y-estadistica" title="Link to this heading"></a></h1>
-<p><strong>Libro de referencia para ejercicios</strong></p>
-<img alt="../_images/dani01.png" src="../_images/dani01.png" />
-<p><strong>Ejemplo 1.4.1</strong></p>
-<p>Gold et al. (A-1) estudiaron la eficacia del bupropión de liberación sostenida (SR), un parche de nicotina o ambos para dejar de
-fumar, cuando se administraban conjuntamente con terapia cognitivo-conductual. Pacientes consecutivos que dieron su consentimiento
-eligieron uno de los tres tratamientos. A modo de ejemplo, consideremos que todos estos sujetos constituyen una población de tamaño
-N = 189. Deseamos seleccionar una muestra aleatoria simple de tamaño 10 de esta población, cuyas edades se presentan en la Tabla
-1.4.1.</p>
-<p>A partir de los datos generar las siguientes figuras:</p>
-<img alt="../_images/tabla_1_4_3.png" src="../_images/tabla_1_4_3.png" />
-<p><strong>Frecuencias Relativas</strong></p>
-<img alt="../_images/tabla_2_3_2.png" src="../_images/tabla_2_3_2.png" />
-<p><strong>Histograma</strong></p>
-<img alt="../_images/tabla_2_3_3.png" src="../_images/tabla_2_3_3.png" />
-<p><strong>Polígono de Frecuencias</strong></p>
-<img alt="../_images/figura_2_3_4.png" src="../_images/figura_2_3_4.png" />
-<p><strong>Diagramas de tallo y hojas</strong></p>
-<img alt="../_images/tallo_hojas.png" src="../_images/tallo_hojas.png" />
+  <section id="algunas-distribuciones-de-probabilidad">
+<h1>Algunas distribuciones de Probabilidad<a class="headerlink" href="#algunas-distribuciones-de-probabilidad" title="Link to this heading"></a></h1>
+<p><strong>Continuas</strong></p>
+<ul class="simple">
+<li><p>Distribución Normal</p></li>
+</ul>
+<p>En estadística y probabilidad se llama distribución normal, distribución de Gauss, distribución gaussiana a una gráfica de
+función de densidad con forma acampanada y simétrica respecto de un determinado parámetro estadístico. Esta curva se conoce como
+campana de Gauss y es el gráfico de una función gaussiana. Su forma general es:</p>
+<div class="math notranslate nohighlight">
+\[f(x)={\frac {1}{\sqrt {2\pi \sigma ^{2}}}}e^{-{\frac {(x-\mu )^{2}}{2\sigma ^{2}}}}\]</div>
+<p>Algunas graficas de la distribución son:</p>
+<img alt="../_images/Normal_distribution_cdf.png" src="../_images/Normal_distribution_cdf.png" />
+<img alt="../_images/Normal_distribution_pdf.png" src="../_images/Normal_distribution_pdf.png" />
 </section>
 
 
            </div>
           </div>
           <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
-        <a href="index_estadistica.html" class="btn btn-neutral float-left" title="Estadística" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
-        <a href="estadistica_descriptiva.html" class="btn btn-neutral float-right" title="Estadística Descriptiva" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="estadistica_descriptiva.html" class="btn btn-neutral float-left" title="Estadística Descriptiva" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
     </div>
 
   <hr/>

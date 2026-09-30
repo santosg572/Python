@@ -22,3 +22,5 @@ Contenido
    ejercicio_01
    Python_Analisis_Imagenes/cell_ejemplo/cell
    Python_Analisis_Imagenes/creando_imagenes/creando_imagenes
+   daniel/index_estadistica
+
