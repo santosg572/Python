@@ -22,6 +22,6 @@ Contenido
    ejercicio_01
    Python_Analisis_Imagenes/cell_ejemplo/cell
    Python_Analisis_Imagenes/creando_imagenes/creando_imagenes
-   Python_Analisis_Imagenes/creando_imagenes/Despliega_movie
+   Python_Analisis_Imagenes/Despliega_movie
    daniel/index_estadistica
 
