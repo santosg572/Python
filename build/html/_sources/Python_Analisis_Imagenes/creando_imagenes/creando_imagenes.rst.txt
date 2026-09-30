@@ -3,7 +3,7 @@ Creando Imágenes
 
 El siguiente codigo crea una imagen y la salva en disco.
 
-.. code:: Python
+.. imagen:: Python
 
    import matplotlib.pyplot as plt
    import matplotlib.image as mpimg
