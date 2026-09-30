@@ -30,9 +30,8 @@ Algunas graficas de la distribución son:
 * Distribución binomial
 
 En teoría de la probabilidad y estadística, la distribución binomial o distribución binómica es una distribución de probabilidad 
-discreta que cuenta el número de éxitos en una secuencia de 
-:math:`n` ensayos de Bernoulli independientes entre sí con una probabilidad fija 
-:math:`p``de ocurrencia de éxito entre los ensayos. Un experimento de Bernoulli se caracteriza por ser dicotómico, esto 
+discreta que cuenta el número de éxitos en una secuencia de :math:`n` ensayos de Bernoulli independientes entre sí con una probabilidad fija 
+:math:`p` de ocurrencia de éxito entre los ensayos. Un experimento de Bernoulli se caracteriza por ser dicotómico, esto 
 es, solo dos resultados son posibles; a uno de estos se le denomina “éxito” y tiene una probabilidad de ocurrencia 
 :math:`p`, y al otro se le denomina “fracaso” y tiene una probabilidad :math:`q = 1-p`.
 
@@ -44,8 +43,13 @@ Es posible entonces obtener la probabilidad de k éxitos en una repetición de n
 
 Algunas graficas de la ditribución binomial:
 
-.. image:: Binomial_distribution_cdf.svg.webp	
+**Función de probabilidad**
 
 .. image:: Binomial_distribution_pmf.svg.webp
+
+**Función de distribución acumulada**
+
+.. image:: Binomial_distribution_cdf.svg.webp	
+
 
 
