@@ -80,6 +80,22 @@
 <p>Buscar una receta o algoritmo e implemntarlo en un lenguaje de programación para cuantificar los elementos que conforman la
 siguiente imagen.</p>
 <img alt="../../_images/cell.jpg" src="../../_images/cell.jpg" />
+<p><strong>Programa para leer y desplegar la imagen</strong></p>
+<div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">matplotlib.pyplot</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">plt</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">matplotlib.image</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">mpimg</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span>
+
+<span class="n">file</span> <span class="o">=</span> <span class="s1">&#39;cell.jpg&#39;</span>
+
+<span class="c1"># 1. Leer la imagen JPG</span>
+<span class="n">img</span> <span class="o">=</span> <span class="n">mpimg</span><span class="o">.</span><span class="n">imread</span><span class="p">(</span><span class="n">file</span><span class="p">)</span>
+
+<span class="c1"># 2. Desplegar la imagen</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">imshow</span><span class="p">(</span><span class="n">img</span><span class="p">)</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
 </section>
 
 
