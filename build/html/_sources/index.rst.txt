@@ -20,3 +20,4 @@ Contenido
    numpy_help
    matplotlyb
    ejercicio_01
+   Python_Analisis_Imagenes/cell_ejemplo/cell
