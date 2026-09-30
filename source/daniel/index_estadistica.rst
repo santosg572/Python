@@ -5,4 +5,5 @@ Estadística
 
    estadistica
    estadistica_descriptiva
+   distribuciones_de_probabilidad
 
