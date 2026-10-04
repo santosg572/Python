@@ -1,4 +1,6 @@
-file = 'dir_pandas_help.txt'
+#file = 'dir_pandas_help.txt'
+
+file = 'help_pandas_DataFrame.txt'
 
 fil = open(file, 'r')
 

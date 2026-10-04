@@ -1,5 +1,7 @@
 #!/bin/bash
 
-Rscript $1.R
+sphinx-build -M html source outputdir
+
+./open.sh
 
 

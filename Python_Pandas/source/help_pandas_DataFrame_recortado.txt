@@ -1,0 +1,2288 @@
+&&&&&&&&&&&&&&&&&&&&&&&&&&& abs &&&&&&&&&&&&&&&&&&&&&&&&&&&
+Help on function abs in module pandas.core.generic:
+
+abs(self) -> 'Self'
+    Return a Series/DataFrame with absolute numeric value of each element.
+
+    This function only applies to elements that are all numeric.
+
+    Returns
+    -------
+    abs
+&&&&&&&&&&&&&&&&&&&&&&&&&&& add &&&&&&&&&&&&&&&&&&&&&&&&&&&
+Help on function add in module pandas.core.frame:
+
+add(self, other, axis: 'Axis' = 'columns', level=None, fill_value=None) -> 'DataFrame'
+    Get Addition of dataframe and other, element-wise (binary operator `add`).
+
+    Equivalent to ``dataframe + other``, but with support to substitute a fill_value
+    for missing data in one of the inputs. With reverse version, `radd`.
+
+    Among flexible wrappers (`add`, `sub`, `mul`, `div`, `floordiv`, `mod`, `pow`) to
+    arithmetic operators: `+`, `-`, `*`, `/`, `//`, `%`, `**`.
+&&&&&&&&&&&&&&&&&&&&&&&&&&& add_prefix &&&&&&&&&&&&&&&&&&&&&&&&&&&
+Help on function add_prefix in module pandas.core.generic:
+
+add_prefix(self, prefix: 'str', axis: 'Axis | None' = None) -> 'Self'
+    Prefix labels with string `prefix`.
+
+    For Series, the row labels are prefixed.
+    For DataFrame, the column labels are prefixed.
+
+    Parameters
+    ----------
+&&&&&&&&&&&&&&&&&&&&&&&&&&& add_suffix &&&&&&&&&&&&&&&&&&&&&&&&&&&
+Help on function add_suffix in module pandas.core.generic:
+
+add_suffix(self, suffix: 'str', axis: 'Axis | None' = None) -> 'Self'
+    Suffix labels with string `suffix`.
+
+    For Series, the row labels are suffixed.
+    For DataFrame, the column labels are suffixed.
+
+    Parameters
+    ----------
+&&&&&&&&&&&&&&&&&&&&&&&&&&& agg &&&&&&&&&&&&&&&&&&&&&&&&&&&
+Help on function aggregate in module pandas.core.frame:
+
+aggregate(self, func=None, axis: 'Axis' = 0, *args, **kwargs)
+    Aggregate using one or more operations over the specified axis.
+
+    Parameters
+    ----------
+    func : function, str, list or dict
+        Function to use for aggregating the data. If a function, must either
+        work when passed a DataFrame or when passed to DataFrame.apply.
+&&&&&&&&&&&&&&&&&&&&&&&&&&& aggregate &&&&&&&&&&&&&&&&&&&&&&&&&&&
+Help on function aggregate in module pandas.core.frame:
+
+aggregate(self, func=None, axis: 'Axis' = 0, *args, **kwargs)
+    Aggregate using one or more operations over the specified axis.
+
+    Parameters
+    ----------
+    func : function, str, list or dict
+        Function to use for aggregating the data. If a function, must either
+        work when passed a DataFrame or when passed to DataFrame.apply.
+&&&&&&&&&&&&&&&&&&&&&&&&&&& align &&&&&&&&&&&&&&&&&&&&&&&&&&&
+Help on function align in module pandas.core.generic:
+
+align(self, other: 'NDFrameT', join: 'AlignJoin' = 'outer', axis: 'Axis | None' = None, level: 'Level | None' = None, copy: 'bool_t | None' = None, fill_value: 'Hashable | None' = None, method: 'FillnaOptions | None | lib.NoDefault' = <no_default>, limit: 'int | None | lib.NoDefault' = <no_default>, fill_axis: 'Axis | lib.NoDefault' = <no_default>, broadcast_axis: 'Axis | None | lib.NoDefault' = <no_default>) -> 'tuple[Self, NDFrameT]'
+    Align two objects on their axes with the specified join method.
+
+    Join method is specified for each axis Index.
+
+    Parameters
+    ----------
+    other : DataFrame or Series
+&&&&&&&&&&&&&&&&&&&&&&&&&&& all &&&&&&&&&&&&&&&&&&&&&&&&&&&
+Help on function all in module pandas.core.frame:
+
+all(self, axis: 'Axis | None' = 0, bool_only: 'bool' = False, skipna: 'bool' = True, **kwargs) -> 'Series | bool'
+    Return whether all elements are True, potentially over an axis.
+
+    Returns True unless there at least one element within a series or
+    along a Dataframe axis that is False or equivalent (e.g. zero or
+    empty).
+
+    Parameters
+&&&&&&&&&&&&&&&&&&&&&&&&&&& any &&&&&&&&&&&&&&&&&&&&&&&&&&&
+Help on function any in module pandas.core.frame:
+
+any(self, *, axis: 'Axis | None' = 0, bool_only: 'bool' = False, skipna: 'bool' = True, **kwargs) -> 'Series | bool'
+    Return whether any element is True, potentially over an axis.
+
+    Returns False unless there is at least one element within a series or
+    along a Dataframe axis that is True or equivalent (e.g. non-zero or
+    non-empty).
+
+    Parameters
+&&&&&&&&&&&&&&&&&&&&&&&&&&& apply &&&&&&&&&&&&&&&&&&&&&&&&&&&
+Help on function apply in module pandas.core.frame:
+
+apply(self, func: 'AggFuncType', axis: 'Axis' = 0, raw: 'bool' = False, result_type: "Literal['expand', 'reduce', 'broadcast'] | None" = None, args=(), by_row: "Literal[False, 'compat']" = 'compat', engine: "Literal['python', 'numba']" = 'python', engine_kwargs: 'dict[str, bool] | None' = None, **kwargs)
+    Apply a function along an axis of the DataFrame.
+
+    Objects passed to the function are Series objects whose index is
+    either the DataFrame's index (``axis=0``) or the DataFrame's columns
+    (``axis=1``). By default (``result_type=None``), the final return type
+    is inferred from the return type of the applied function. Otherwise,
+    it depends on the `result_type` argument.
+&&&&&&&&&&&&&&&&&&&&&&&&&&& applymap &&&&&&&&&&&&&&&&&&&&&&&&&&&
+Help on function applymap in module pandas.core.frame:
+
+applymap(self, func: 'PythonFuncType', na_action: 'NaAction | None' = None, **kwargs) -> 'DataFrame'
+    Apply a function to a Dataframe elementwise.
+
+    .. deprecated:: 2.1.0
+
+       DataFrame.applymap has been deprecated. Use DataFrame.map instead.
+
+    This method applies a function that accepts and returns a scalar
+&&&&&&&&&&&&&&&&&&&&&&&&&&& asfreq &&&&&&&&&&&&&&&&&&&&&&&&&&&
+Help on function asfreq in module pandas.core.generic:
+
+asfreq(self, freq: 'Frequency', method: 'FillnaOptions | None' = None, how: "Literal['start', 'end'] | None" = None, normalize: 'bool_t' = False, fill_value: 'Hashable | None' = None) -> 'Self'
+    Convert time series to specified frequency.
+
+    Returns the original data conformed to a new index with the specified
+    frequency.
+
+    If the index of this Series/DataFrame is a :class:`~pandas.PeriodIndex`, the new index
+    is the result of transforming the original index with
+&&&&&&&&&&&&&&&&&&&&&&&&&&& asof &&&&&&&&&&&&&&&&&&&&&&&&&&&
+Help on function asof in module pandas.core.generic:
+
+asof(self, where, subset=None)
+    Return the last row(s) without any NaNs before `where`.
+
+    The last row (for each element in `where`, if list) without any
+    NaN is taken.
+    In case of a :class:`~pandas.DataFrame`, the last row without NaN
+    considering only the subset of columns (if not `None`)
+
+&&&&&&&&&&&&&&&&&&&&&&&&&&& assign &&&&&&&&&&&&&&&&&&&&&&&&&&&
+Help on function assign in module pandas.core.frame:
+
+assign(self, **kwargs) -> 'DataFrame'
+    Assign new columns to a DataFrame.
+
+    Returns a new object with all original columns in addition to new ones.
+    Existing columns that are re-assigned will be overwritten.
+
+    Parameters
+    ----------
+&&&&&&&&&&&&&&&&&&&&&&&&&&& astype &&&&&&&&&&&&&&&&&&&&&&&&&&&
+Help on function astype in module pandas.core.generic:
+
+astype(self, dtype, copy: 'bool_t | None' = None, errors: 'IgnoreRaise' = 'raise') -> 'Self'
+    Cast a pandas object to a specified dtype ``dtype``.
+
+    Parameters
+    ----------
+    dtype : str, data type, Series or Mapping of column name -> data type
+        Use a str, numpy.dtype, pandas.ExtensionDtype or Python type to
+        cast entire pandas object to the same type. Alternatively, use a
+&&&&&&&&&&&&&&&&&&&&&&&&&&& at &&&&&&&&&&&&&&&&&&&&&&&&&&&
+Help on property:
+
+    Access a single value for a row/column label pair.
+
+    Similar to ``loc``, in that both provide label-based lookups. Use
+    ``at`` if you only need to get or set a single value in a DataFrame
+    or Series.
+
+    Raises
+    ------
+&&&&&&&&&&&&&&&&&&&&&&&&&&& at_time &&&&&&&&&&&&&&&&&&&&&&&&&&&
+Help on function at_time in module pandas.core.generic:
+
+at_time(self, time, asof: 'bool_t' = False, axis: 'Axis | None' = None) -> 'Self'
+    Select values at particular time of day (e.g., 9:30AM).
+
+    Parameters
+    ----------
+    time : datetime.time or str
+        The values to select.
+    axis : {0 or 'index', 1 or 'columns'}, default 0
+&&&&&&&&&&&&&&&&&&&&&&&&&&& attrs &&&&&&&&&&&&&&&&&&&&&&&&&&&
+Help on property:
+
+    Dictionary of global attributes of this dataset.
+
+    .. warning::
+
+       attrs is experimental and may change without warning.
+
+    See Also
+    --------
+&&&&&&&&&&&&&&&&&&&&&&&&&&& axes &&&&&&&&&&&&&&&&&&&&&&&&&&&
+Help on property:
+
+    Return a list representing the axes of the DataFrame.
+
+    It has the row axis labels and column axis labels as the only members.
+    They are returned in that order.
+
+    Examples
+    --------
+    >>> df = pd.DataFrame({'col1': [1, 2], 'col2': [3, 4]})
+&&&&&&&&&&&&&&&&&&&&&&&&&&& backfill &&&&&&&&&&&&&&&&&&&&&&&&&&&
+Help on function backfill in module pandas.core.generic:
+
+backfill(self, *, axis: 'None | Axis' = None, inplace: 'bool_t' = False, limit: 'None | int' = None, downcast: 'dict | None | lib.NoDefault' = <no_default>) -> 'Self | None'
+    Fill NA/NaN values by using the next valid observation to fill the gap.
+
+    .. deprecated:: 2.0
+
+        Series/DataFrame.backfill is deprecated. Use Series/DataFrame.bfill instead.
+
+    Returns
+&&&&&&&&&&&&&&&&&&&&&&&&&&& between_time &&&&&&&&&&&&&&&&&&&&&&&&&&&
+Help on function between_time in module pandas.core.generic:
+
+between_time(self, start_time, end_time, inclusive: 'IntervalClosedType' = 'both', axis: 'Axis | None' = None) -> 'Self'
+    Select values between particular times of the day (e.g., 9:00-9:30 AM).
+
+    By setting ``start_time`` to be later than ``end_time``,
+    you can get the times that are *not* between the two times.
+
+    Parameters
+    ----------
+&&&&&&&&&&&&&&&&&&&&&&&&&&& bfill &&&&&&&&&&&&&&&&&&&&&&&&&&&
+Help on function bfill in module pandas.core.generic:
+
+bfill(self, *, axis: 'None | Axis' = None, inplace: 'bool_t' = False, limit: 'None | int' = None, limit_area: "Literal['inside', 'outside'] | None" = None, downcast: 'dict | None | lib.NoDefault' = <no_default>) -> 'Self | None'
+    Fill NA/NaN values by using the next valid observation to fill the gap.
+
+    Parameters
+    ----------
+    axis : {0 or 'index'} for Series, {0 or 'index', 1 or 'columns'} for DataFrame
+        Axis along which to fill missing values. For `Series`
+        this parameter is unused and defaults to 0.
+&&&&&&&&&&&&&&&&&&&&&&&&&&& bool &&&&&&&&&&&&&&&&&&&&&&&&&&&
+Help on function bool in module pandas.core.generic:
+
+bool(self) -> 'bool_t'
+    Return the bool of a single element Series or DataFrame.
+
+    .. deprecated:: 2.1.0
+
+       bool is deprecated and will be removed in future version of pandas.
+       For ``Series`` use ``pandas.Series.item``.
+
+&&&&&&&&&&&&&&&&&&&&&&&&&&& boxplot &&&&&&&&&&&&&&&&&&&&&&&&&&&
+Help on function boxplot_frame in module pandas.plotting._core:
+
+boxplot_frame(self: 'DataFrame', column=None, by=None, ax=None, fontsize: 'int | None' = None, rot: 'int' = 0, grid: 'bool' = True, figsize: 'tuple[float, float] | None' = None, layout=None, return_type=None, backend=None, **kwargs)
+    Make a box plot from DataFrame columns.
+
+    Make a box-and-whisker plot from DataFrame columns, optionally grouped
+    by some other columns. A box plot is a method for graphically depicting
+    groups of numerical data through their quartiles.
+    The box extends from the Q1 to Q3 quartile values of the data,
+    with a line at the median (Q2). The whiskers extend from the edges
+&&&&&&&&&&&&&&&&&&&&&&&&&&& clip &&&&&&&&&&&&&&&&&&&&&&&&&&&
+Help on function clip in module pandas.core.generic:
+
+clip(self, lower=None, upper=None, *, axis: 'Axis | None' = None, inplace: 'bool_t' = False, **kwargs) -> 'Self | None'
+    Trim values at input threshold(s).
+
+    Assigns values outside boundary to boundary values. Thresholds
+    can be singular values or array like, and in the latter case
+    the clipping is performed element-wise in the specified axis.
+
+    Parameters
+&&&&&&&&&&&&&&&&&&&&&&&&&&& columns &&&&&&&&&&&&&&&&&&&&&&&&&&&
+Help on AxisProperty:
+
+    The column labels of the DataFrame.
+
+    Examples
+    --------
+    >>> df = pd.DataFrame({'A': [1, 2], 'B': [3, 4]})
+    >>> df
+         A  B
+    0    1  3
+&&&&&&&&&&&&&&&&&&&&&&&&&&& combine &&&&&&&&&&&&&&&&&&&&&&&&&&&
+Help on function combine in module pandas.core.frame:
+
+combine(self, other: 'DataFrame', func: 'Callable[[Series, Series], Series | Hashable]', fill_value=None, overwrite: 'bool' = True) -> 'DataFrame'
+    Perform column-wise combine with another DataFrame.
+
+    Combines a DataFrame with `other` DataFrame using `func`
+    to element-wise combine columns. The row and column indexes of the
+    resulting DataFrame will be the union of the two.
+
+    Parameters
+&&&&&&&&&&&&&&&&&&&&&&&&&&& combine_first &&&&&&&&&&&&&&&&&&&&&&&&&&&
+Help on function combine_first in module pandas.core.frame:
+
+combine_first(self, other: 'DataFrame') -> 'DataFrame'
+    Update null elements with value in the same location in `other`.
+
+    Combine two DataFrame objects by filling null values in one DataFrame
+    with non-null values from other DataFrame. The row and column indexes
+    of the resulting DataFrame will be the union of the two. The resulting
+    dataframe contains the 'first' dataframe values and overrides the
+    second one values where both first.loc[index, col] and
+&&&&&&&&&&&&&&&&&&&&&&&&&&& compare &&&&&&&&&&&&&&&&&&&&&&&&&&&
+Help on function compare in module pandas.core.frame:
+
+compare(self, other: 'DataFrame', align_axis: 'Axis' = 1, keep_shape: 'bool' = False, keep_equal: 'bool' = False, result_names: 'Suffixes' = ('self', 'other')) -> 'DataFrame'
+    Compare to another DataFrame and show the differences.
+
+    Parameters
+    ----------
+    other : DataFrame
+        Object to compare with.
+
+&&&&&&&&&&&&&&&&&&&&&&&&&&& convert_dtypes &&&&&&&&&&&&&&&&&&&&&&&&&&&
+Help on function convert_dtypes in module pandas.core.generic:
+
+convert_dtypes(self, infer_objects: 'bool_t' = True, convert_string: 'bool_t' = True, convert_integer: 'bool_t' = True, convert_boolean: 'bool_t' = True, convert_floating: 'bool_t' = True, dtype_backend: 'DtypeBackend' = 'numpy_nullable') -> 'Self'
+    Convert columns to the best possible dtypes using dtypes supporting ``pd.NA``.
+
+    Parameters
+    ----------
+    infer_objects : bool, default True
+        Whether object dtypes should be converted to the best possible types.
+    convert_string : bool, default True
+&&&&&&&&&&&&&&&&&&&&&&&&&&& copy &&&&&&&&&&&&&&&&&&&&&&&&&&&
+Help on function copy in module pandas.core.generic:
+
+copy(self, deep: 'bool_t | None' = True) -> 'Self'
+    Make a copy of this object's indices and data.
+
+    When ``deep=True`` (default), a new object will be created with a
+    copy of the calling object's data and indices. Modifications to
+    the data or indices of the copy will not be reflected in the
+    original object (see notes below).
+
+&&&&&&&&&&&&&&&&&&&&&&&&&&& corr &&&&&&&&&&&&&&&&&&&&&&&&&&&
+Help on function corr in module pandas.core.frame:
+
+corr(self, method: 'CorrelationMethod' = 'pearson', min_periods: 'int' = 1, numeric_only: 'bool' = False) -> 'DataFrame'
+    Compute pairwise correlation of columns, excluding NA/null values.
+
+    Parameters
+    ----------
+    method : {'pearson', 'kendall', 'spearman'} or callable
+        Method of correlation:
+
+&&&&&&&&&&&&&&&&&&&&&&&&&&& corrwith &&&&&&&&&&&&&&&&&&&&&&&&&&&
+Help on function corrwith in module pandas.core.frame:
+
+corrwith(self, other: 'DataFrame | Series', axis: 'Axis' = 0, drop: 'bool' = False, method: 'CorrelationMethod' = 'pearson', numeric_only: 'bool' = False) -> 'Series'
+    Compute pairwise correlation.
+
+    Pairwise correlation is computed between rows or columns of
+    DataFrame with rows or columns of Series or DataFrame. DataFrames
+    are first aligned along both axes before computing the
+    correlations.
+
+&&&&&&&&&&&&&&&&&&&&&&&&&&& count &&&&&&&&&&&&&&&&&&&&&&&&&&&
+Help on function count in module pandas.core.frame:
+
+count(self, axis: 'Axis' = 0, numeric_only: 'bool' = False)
+    Count non-NA cells for each column or row.
+
+    The values `None`, `NaN`, `NaT`, ``pandas.NA`` are considered NA.
+
+    Parameters
+    ----------
+    axis : {0 or 'index', 1 or 'columns'}, default 0
+&&&&&&&&&&&&&&&&&&&&&&&&&&& cov &&&&&&&&&&&&&&&&&&&&&&&&&&&
+Help on function cov in module pandas.core.frame:
+
+cov(self, min_periods: 'int | None' = None, ddof: 'int | None' = 1, numeric_only: 'bool' = False) -> 'DataFrame'
+    Compute pairwise covariance of columns, excluding NA/null values.
+
+    Compute the pairwise covariance among the series of a DataFrame.
+    The returned data frame is the `covariance matrix
+    <https://en.wikipedia.org/wiki/Covariance_matrix>`__ of the columns
+    of the DataFrame.
+
+&&&&&&&&&&&&&&&&&&&&&&&&&&& cummax &&&&&&&&&&&&&&&&&&&&&&&&&&&
+Help on function cummax in module pandas.core.frame:
+
+cummax(self, axis: 'Axis | None' = None, skipna: 'bool' = True, *args, **kwargs)
+    Return cumulative maximum over a DataFrame or Series axis.
+
+    Returns a DataFrame or Series of the same size containing the cumulative
+    maximum.
+
+    Parameters
+    ----------
+&&&&&&&&&&&&&&&&&&&&&&&&&&& cummin &&&&&&&&&&&&&&&&&&&&&&&&&&&
+Help on function cummin in module pandas.core.frame:
+
+cummin(self, axis: 'Axis | None' = None, skipna: 'bool' = True, *args, **kwargs)
+    Return cumulative minimum over a DataFrame or Series axis.
+
+    Returns a DataFrame or Series of the same size containing the cumulative
+    minimum.
+
+    Parameters
+    ----------
+&&&&&&&&&&&&&&&&&&&&&&&&&&& cumprod &&&&&&&&&&&&&&&&&&&&&&&&&&&
+Help on function cumprod in module pandas.core.frame:
+
+cumprod(self, axis: 'Axis | None' = None, skipna: 'bool' = True, *args, **kwargs)
+    Return cumulative product over a DataFrame or Series axis.
+
+    Returns a DataFrame or Series of the same size containing the cumulative
+    product.
+
+    Parameters
+    ----------
+&&&&&&&&&&&&&&&&&&&&&&&&&&& cumsum &&&&&&&&&&&&&&&&&&&&&&&&&&&
+Help on function cumsum in module pandas.core.frame:
+
+cumsum(self, axis: 'Axis | None' = None, skipna: 'bool' = True, *args, **kwargs)
+    Return cumulative sum over a DataFrame or Series axis.
+
+    Returns a DataFrame or Series of the same size containing the cumulative
+    sum.
+
+    Parameters
+    ----------
+&&&&&&&&&&&&&&&&&&&&&&&&&&& describe &&&&&&&&&&&&&&&&&&&&&&&&&&&
+Help on function describe in module pandas.core.generic:
+
+describe(self, percentiles=None, include=None, exclude=None) -> 'Self'
+    Generate descriptive statistics.
+
+    Descriptive statistics include those that summarize the central
+    tendency, dispersion and shape of a
+    dataset's distribution, excluding ``NaN`` values.
+
+    Analyzes both numeric and object series, as well
+&&&&&&&&&&&&&&&&&&&&&&&&&&& diff &&&&&&&&&&&&&&&&&&&&&&&&&&&
+Help on function diff in module pandas.core.frame:
+
+diff(self, periods: 'int' = 1, axis: 'Axis' = 0) -> 'DataFrame'
+    First discrete difference of element.
+
+    Calculates the difference of a DataFrame element compared with another
+    element in the DataFrame (default is element in previous row).
+
+    Parameters
+    ----------
+&&&&&&&&&&&&&&&&&&&&&&&&&&& div &&&&&&&&&&&&&&&&&&&&&&&&&&&
+Help on function truediv in module pandas.core.frame:
+
+truediv(self, other, axis: 'Axis' = 'columns', level=None, fill_value=None) -> 'DataFrame'
+    Get Floating division of dataframe and other, element-wise (binary operator `truediv`).
+
+    Equivalent to ``dataframe / other``, but with support to substitute a fill_value
+    for missing data in one of the inputs. With reverse version, `rtruediv`.
+
+    Among flexible wrappers (`add`, `sub`, `mul`, `div`, `floordiv`, `mod`, `pow`) to
+    arithmetic operators: `+`, `-`, `*`, `/`, `//`, `%`, `**`.
+&&&&&&&&&&&&&&&&&&&&&&&&&&& divide &&&&&&&&&&&&&&&&&&&&&&&&&&&
+Help on function truediv in module pandas.core.frame:
+
+truediv(self, other, axis: 'Axis' = 'columns', level=None, fill_value=None) -> 'DataFrame'
+    Get Floating division of dataframe and other, element-wise (binary operator `truediv`).
+
+    Equivalent to ``dataframe / other``, but with support to substitute a fill_value
+    for missing data in one of the inputs. With reverse version, `rtruediv`.
+
+    Among flexible wrappers (`add`, `sub`, `mul`, `div`, `floordiv`, `mod`, `pow`) to
+    arithmetic operators: `+`, `-`, `*`, `/`, `//`, `%`, `**`.
+&&&&&&&&&&&&&&&&&&&&&&&&&&& dot &&&&&&&&&&&&&&&&&&&&&&&&&&&
+Help on function dot in module pandas.core.frame:
+
+dot(self, other: 'AnyArrayLike | DataFrame') -> 'DataFrame | Series'
+    Compute the matrix multiplication between the DataFrame and other.
+
+    This method computes the matrix product between the DataFrame and the
+    values of an other Series, DataFrame or a numpy array.
+
+    It can also be called using ``self @ other``.
+
+&&&&&&&&&&&&&&&&&&&&&&&&&&& drop &&&&&&&&&&&&&&&&&&&&&&&&&&&
+Help on function drop in module pandas.core.frame:
+
+drop(self, labels: 'IndexLabel | None' = None, *, axis: 'Axis' = 0, index: 'IndexLabel | None' = None, columns: 'IndexLabel | None' = None, level: 'Level | None' = None, inplace: 'bool' = False, errors: 'IgnoreRaise' = 'raise') -> 'DataFrame | None'
+    Drop specified labels from rows or columns.
+
+    Remove rows or columns by specifying label names and corresponding
+    axis, or by directly specifying index or column names. When using a
+    multi-index, labels on different levels can be removed by specifying
+    the level. See the :ref:`user guide <advanced.shown_levels>`
+    for more information about the now unused levels.
+&&&&&&&&&&&&&&&&&&&&&&&&&&& drop_duplicates &&&&&&&&&&&&&&&&&&&&&&&&&&&
+Help on function drop_duplicates in module pandas.core.frame:
+
+drop_duplicates(self, subset: 'Hashable | Sequence[Hashable] | None' = None, *, keep: 'DropKeep' = 'first', inplace: 'bool' = False, ignore_index: 'bool' = False) -> 'DataFrame | None'
+    Return DataFrame with duplicate rows removed.
+
+    Considering certain columns is optional. Indexes, including time indexes
+    are ignored.
+
+    Parameters
+    ----------
+&&&&&&&&&&&&&&&&&&&&&&&&&&& droplevel &&&&&&&&&&&&&&&&&&&&&&&&&&&
+Help on function droplevel in module pandas.core.generic:
+
+droplevel(self, level: 'IndexLabel', axis: 'Axis' = 0) -> 'Self'
+    Return Series/DataFrame with requested index / column level(s) removed.
+
+    Parameters
+    ----------
+    level : int, str, or list-like
+        If a string is given, must be the name of a level
+        If list-like, elements must be names or positional indexes
+&&&&&&&&&&&&&&&&&&&&&&&&&&& dropna &&&&&&&&&&&&&&&&&&&&&&&&&&&
+Help on function dropna in module pandas.core.frame:
+
+dropna(self, *, axis: 'Axis' = 0, how: 'AnyAll | lib.NoDefault' = <no_default>, thresh: 'int | lib.NoDefault' = <no_default>, subset: 'IndexLabel | None' = None, inplace: 'bool' = False, ignore_index: 'bool' = False) -> 'DataFrame | None'
+    Remove missing values.
+
+    See the :ref:`User Guide <missing_data>` for more on which values are
+    considered missing, and how to work with missing data.
+
+    Parameters
+    ----------
+&&&&&&&&&&&&&&&&&&&&&&&&&&& dtypes &&&&&&&&&&&&&&&&&&&&&&&&&&&
+Help on property:
+
+    Return the dtypes in the DataFrame.
+
+    This returns a Series with the data type of each column.
+    The result's index is the original DataFrame's columns. Columns
+    with mixed types are stored with the ``object`` dtype. See
+    :ref:`the User Guide <basics.dtypes>` for more.
+
+    Returns
+&&&&&&&&&&&&&&&&&&&&&&&&&&& duplicated &&&&&&&&&&&&&&&&&&&&&&&&&&&
+Help on function duplicated in module pandas.core.frame:
+
+duplicated(self, subset: 'Hashable | Sequence[Hashable] | None' = None, keep: 'DropKeep' = 'first') -> 'Series'
+    Return boolean Series denoting duplicate rows.
+
+    Considering certain columns is optional.
+
+    Parameters
+    ----------
+    subset : column label or sequence of labels, optional
+&&&&&&&&&&&&&&&&&&&&&&&&&&& empty &&&&&&&&&&&&&&&&&&&&&&&&&&&
+Help on property:
+
+    Indicator whether Series/DataFrame is empty.
+
+    True if Series/DataFrame is entirely empty (no items), meaning any of the
+    axes are of length 0.
+
+    Returns
+    -------
+    bool
+&&&&&&&&&&&&&&&&&&&&&&&&&&& eq &&&&&&&&&&&&&&&&&&&&&&&&&&&
+Help on function eq in module pandas.core.frame:
+
+eq(self, other, axis: 'Axis' = 'columns', level=None) -> 'DataFrame'
+    Get Equal to of dataframe and other, element-wise (binary operator `eq`).
+
+    Among flexible wrappers (`eq`, `ne`, `le`, `lt`, `ge`, `gt`) to comparison
+    operators.
+
+    Equivalent to `==`, `!=`, `<=`, `<`, `>=`, `>` with support to choose axis
+    (rows or columns) and level for comparison.
+&&&&&&&&&&&&&&&&&&&&&&&&&&& equals &&&&&&&&&&&&&&&&&&&&&&&&&&&
+Help on function equals in module pandas.core.generic:
+
+equals(self, other: 'object') -> 'bool_t'
+    Test whether two objects contain the same elements.
+
+    This function allows two Series or DataFrames to be compared against
+    each other to see if they have the same shape and elements. NaNs in
+    the same location are considered equal.
+
+    The row/column index do not need to have the same type, as long
+&&&&&&&&&&&&&&&&&&&&&&&&&&& eval &&&&&&&&&&&&&&&&&&&&&&&&&&&
+Help on function eval in module pandas.core.frame:
+
+eval(self, expr: 'str', *, inplace: 'bool' = False, **kwargs) -> 'Any | None'
+    Evaluate a string describing operations on DataFrame columns.
+
+    Operates on columns only, not specific rows or elements.  This allows
+    `eval` to run arbitrary code, which can make you vulnerable to code
+    injection if you pass user input to this function.
+
+    Parameters
+&&&&&&&&&&&&&&&&&&&&&&&&&&& ewm &&&&&&&&&&&&&&&&&&&&&&&&&&&
+Help on function ewm in module pandas.core.generic:
+
+ewm(self, com: 'float | None' = None, span: 'float | None' = None, halflife: 'float | TimedeltaConvertibleTypes | None' = None, alpha: 'float | None' = None, min_periods: 'int | None' = 0, adjust: 'bool_t' = True, ignore_na: 'bool_t' = False, axis: 'Axis | lib.NoDefault' = <no_default>, times: 'np.ndarray | DataFrame | Series | None' = None, method: "Literal['single', 'table']" = 'single') -> 'ExponentialMovingWindow'
+    Provide exponentially weighted (EW) calculations.
+
+    Exactly one of ``com``, ``span``, ``halflife``, or ``alpha`` must be
+    provided if ``times`` is not provided. If ``times`` is provided,
+    ``halflife`` and one of ``com``, ``span`` or ``alpha`` may be provided.
+
+    Parameters
+&&&&&&&&&&&&&&&&&&&&&&&&&&& expanding &&&&&&&&&&&&&&&&&&&&&&&&&&&
+Help on function expanding in module pandas.core.generic:
+
+expanding(self, min_periods: 'int' = 1, axis: 'Axis | lib.NoDefault' = <no_default>, method: "Literal['single', 'table']" = 'single') -> 'Expanding'
+    Provide expanding window calculations.
+
+    Parameters
+    ----------
+    min_periods : int, default 1
+        Minimum number of observations in window required to have a value;
+        otherwise, result is ``np.nan``.
+&&&&&&&&&&&&&&&&&&&&&&&&&&& explode &&&&&&&&&&&&&&&&&&&&&&&&&&&
+Help on function explode in module pandas.core.frame:
+
+explode(self, column: 'IndexLabel', ignore_index: 'bool' = False) -> 'DataFrame'
+    Transform each element of a list-like to a row, replicating index values.
+
+    Parameters
+    ----------
+    column : IndexLabel
+        Column(s) to explode.
+        For multiple columns, specify a non-empty list with each element
+&&&&&&&&&&&&&&&&&&&&&&&&&&& ffill &&&&&&&&&&&&&&&&&&&&&&&&&&&
+Help on function ffill in module pandas.core.generic:
+
+ffill(self, *, axis: 'None | Axis' = None, inplace: 'bool_t' = False, limit: 'None | int' = None, limit_area: "Literal['inside', 'outside'] | None" = None, downcast: 'dict | None | lib.NoDefault' = <no_default>) -> 'Self | None'
+    Fill NA/NaN values by propagating the last valid observation to next valid.
+
+    Parameters
+    ----------
+    axis : {0 or 'index'} for Series, {0 or 'index', 1 or 'columns'} for DataFrame
+        Axis along which to fill missing values. For `Series`
+        this parameter is unused and defaults to 0.
+&&&&&&&&&&&&&&&&&&&&&&&&&&& fillna &&&&&&&&&&&&&&&&&&&&&&&&&&&
+Help on function fillna in module pandas.core.generic:
+
+fillna(self, value: 'Hashable | Mapping | Series | DataFrame | None' = None, *, method: 'FillnaOptions | None' = None, axis: 'Axis | None' = None, inplace: 'bool_t' = False, limit: 'int | None' = None, downcast: 'dict | None | lib.NoDefault' = <no_default>) -> 'Self | None'
+    Fill NA/NaN values using the specified method.
+
+    Parameters
+    ----------
+    value : scalar, dict, Series, or DataFrame
+        Value to use to fill holes (e.g. 0), alternately a
+        dict/Series/DataFrame of values specifying which value to use for
+&&&&&&&&&&&&&&&&&&&&&&&&&&& filter &&&&&&&&&&&&&&&&&&&&&&&&&&&
+Help on function filter in module pandas.core.generic:
+
+filter(self, items=None, like: 'str | None' = None, regex: 'str | None' = None, axis: 'Axis | None' = None) -> 'Self'
+    Subset the dataframe rows or columns according to the specified index labels.
+
+    Note that this routine does not filter a dataframe on its
+    contents. The filter is applied to the labels of the index.
+
+    Parameters
+    ----------
+&&&&&&&&&&&&&&&&&&&&&&&&&&& first &&&&&&&&&&&&&&&&&&&&&&&&&&&
+Help on function first in module pandas.core.generic:
+
+first(self, offset) -> 'Self'
+    Select initial periods of time series data based on a date offset.
+
+    .. deprecated:: 2.1
+        :meth:`.first` is deprecated and will be removed in a future version.
+        Please create a mask and filter using `.loc` instead.
+
+    For a DataFrame with a sorted DatetimeIndex, this function can
+&&&&&&&&&&&&&&&&&&&&&&&&&&& first_valid_index &&&&&&&&&&&&&&&&&&&&&&&&&&&
+Help on function first_valid_index in module pandas.core.generic:
+
+first_valid_index(self) -> 'Hashable | None'
+    Return index for first non-NA value or None, if no non-NA value is found.
+
+    Returns
+    -------
+    type of index
+
+    Examples
+&&&&&&&&&&&&&&&&&&&&&&&&&&& flags &&&&&&&&&&&&&&&&&&&&&&&&&&&
+Help on property:
+
+    Get the properties associated with this pandas object.
+
+    The available flags are
+
+    * :attr:`Flags.allows_duplicate_labels`
+
+    See Also
+    --------
+&&&&&&&&&&&&&&&&&&&&&&&&&&& floordiv &&&&&&&&&&&&&&&&&&&&&&&&&&&
+Help on function floordiv in module pandas.core.frame:
+
+floordiv(self, other, axis: 'Axis' = 'columns', level=None, fill_value=None) -> 'DataFrame'
+    Get Integer division of dataframe and other, element-wise (binary operator `floordiv`).
+
+    Equivalent to ``dataframe // other``, but with support to substitute a fill_value
+    for missing data in one of the inputs. With reverse version, `rfloordiv`.
+
+    Among flexible wrappers (`add`, `sub`, `mul`, `div`, `floordiv`, `mod`, `pow`) to
+    arithmetic operators: `+`, `-`, `*`, `/`, `//`, `%`, `**`.
+&&&&&&&&&&&&&&&&&&&&&&&&&&& from_dict &&&&&&&&&&&&&&&&&&&&&&&&&&&
+Help on method from_dict in module pandas.core.frame:
+
+from_dict(data: 'dict', orient: 'FromDictOrient' = 'columns', dtype: 'Dtype | None' = None, columns: 'Axes | None' = None) -> 'DataFrame' method of builtins.type instance
+    Construct DataFrame from dict of array-like or dicts.
+
+    Creates DataFrame object from dictionary by columns or by index
+    allowing dtype specification.
+
+    Parameters
+    ----------
+&&&&&&&&&&&&&&&&&&&&&&&&&&& from_records &&&&&&&&&&&&&&&&&&&&&&&&&&&
+Help on method from_records in module pandas.core.frame:
+
+from_records(data, index=None, exclude=None, columns=None, coerce_float: 'bool' = False, nrows: 'int | None' = None) -> 'DataFrame' method of builtins.type instance
+    Convert structured or record ndarray to DataFrame.
+
+    Creates a DataFrame object from a structured ndarray, sequence of
+    tuples or dicts, or DataFrame.
+
+    Parameters
+    ----------
+&&&&&&&&&&&&&&&&&&&&&&&&&&& ge &&&&&&&&&&&&&&&&&&&&&&&&&&&
+Help on function ge in module pandas.core.frame:
+
+ge(self, other, axis: 'Axis' = 'columns', level=None) -> 'DataFrame'
+    Get Greater than or equal to of dataframe and other, element-wise (binary operator `ge`).
+
+    Among flexible wrappers (`eq`, `ne`, `le`, `lt`, `ge`, `gt`) to comparison
+    operators.
+
+    Equivalent to `==`, `!=`, `<=`, `<`, `>=`, `>` with support to choose axis
+    (rows or columns) and level for comparison.
+&&&&&&&&&&&&&&&&&&&&&&&&&&& get &&&&&&&&&&&&&&&&&&&&&&&&&&&
+Help on function get in module pandas.core.generic:
+
+get(self, key, default=None)
+    Get item from object for given key (ex: DataFrame column).
+
+    Returns default value if not found.
+
+    Parameters
+    ----------
+    key : object
+&&&&&&&&&&&&&&&&&&&&&&&&&&& groupby &&&&&&&&&&&&&&&&&&&&&&&&&&&
+Help on function groupby in module pandas.core.frame:
+
+groupby(self, by=None, axis: 'Axis | lib.NoDefault' = <no_default>, level: 'IndexLabel | None' = None, as_index: 'bool' = True, sort: 'bool' = True, group_keys: 'bool' = True, observed: 'bool | lib.NoDefault' = <no_default>, dropna: 'bool' = True) -> 'DataFrameGroupBy'
+    Group DataFrame using a mapper or by a Series of columns.
+
+    A groupby operation involves some combination of splitting the
+    object, applying a function, and combining the results. This can be
+    used to group large amounts of data and compute operations on these
+    groups.
+
+&&&&&&&&&&&&&&&&&&&&&&&&&&& gt &&&&&&&&&&&&&&&&&&&&&&&&&&&
+Help on function gt in module pandas.core.frame:
+
+gt(self, other, axis: 'Axis' = 'columns', level=None) -> 'DataFrame'
+    Get Greater than of dataframe and other, element-wise (binary operator `gt`).
+
+    Among flexible wrappers (`eq`, `ne`, `le`, `lt`, `ge`, `gt`) to comparison
+    operators.
+
+    Equivalent to `==`, `!=`, `<=`, `<`, `>=`, `>` with support to choose axis
+    (rows or columns) and level for comparison.
+&&&&&&&&&&&&&&&&&&&&&&&&&&& head &&&&&&&&&&&&&&&&&&&&&&&&&&&
+Help on function head in module pandas.core.generic:
+
+head(self, n: 'int' = 5) -> 'Self'
+    Return the first `n` rows.
+
+    This function returns the first `n` rows for the object based
+    on position. It is useful for quickly testing if your object
+    has the right type of data in it.
+
+    For negative values of `n`, this function returns all rows except
+&&&&&&&&&&&&&&&&&&&&&&&&&&& hist &&&&&&&&&&&&&&&&&&&&&&&&&&&
+Help on function hist_frame in module pandas.plotting._core:
+
+hist_frame(data: 'DataFrame', column: 'IndexLabel | None' = None, by=None, grid: 'bool' = True, xlabelsize: 'int | None' = None, xrot: 'float | None' = None, ylabelsize: 'int | None' = None, yrot: 'float | None' = None, ax=None, sharex: 'bool' = False, sharey: 'bool' = False, figsize: 'tuple[int, int] | None' = None, layout: 'tuple[int, int] | None' = None, bins: 'int | Sequence[int]' = 10, backend: 'str | None' = None, legend: 'bool' = False, **kwargs)
+    Make a histogram of the DataFrame's columns.
+
+    A `histogram`_ is a representation of the distribution of data.
+    This function calls :meth:`matplotlib.pyplot.hist`, on each series in
+    the DataFrame, resulting in one histogram per column.
+
+    .. _histogram: https://en.wikipedia.org/wiki/Histogram
+&&&&&&&&&&&&&&&&&&&&&&&&&&& iat &&&&&&&&&&&&&&&&&&&&&&&&&&&
+Help on property:
+
+    Access a single value for a row/column pair by integer position.
+
+    Similar to ``iloc``, in that both provide integer-based lookups. Use
+    ``iat`` if you only need to get or set a single value in a DataFrame
+    or Series.
+
+    Raises
+    ------
+&&&&&&&&&&&&&&&&&&&&&&&&&&& idxmax &&&&&&&&&&&&&&&&&&&&&&&&&&&
+Help on function idxmax in module pandas.core.frame:
+
+idxmax(self, axis: 'Axis' = 0, skipna: 'bool' = True, numeric_only: 'bool' = False) -> 'Series'
+    Return index of first occurrence of maximum over requested axis.
+
+    NA/null values are excluded.
+
+    Parameters
+    ----------
+    axis : {0 or 'index', 1 or 'columns'}, default 0
+&&&&&&&&&&&&&&&&&&&&&&&&&&& idxmin &&&&&&&&&&&&&&&&&&&&&&&&&&&
+Help on function idxmin in module pandas.core.frame:
+
+idxmin(self, axis: 'Axis' = 0, skipna: 'bool' = True, numeric_only: 'bool' = False) -> 'Series'
+    Return index of first occurrence of minimum over requested axis.
+
+    NA/null values are excluded.
+
+    Parameters
+    ----------
+    axis : {0 or 'index', 1 or 'columns'}, default 0
+&&&&&&&&&&&&&&&&&&&&&&&&&&& iloc &&&&&&&&&&&&&&&&&&&&&&&&&&&
+Help on property:
+
+    Purely integer-location based indexing for selection by position.
+
+    .. deprecated:: 2.2.0
+
+       Returning a tuple from a callable is deprecated.
+
+    ``.iloc[]`` is primarily integer position based (from ``0`` to
+    ``length-1`` of the axis), but may also be used with a boolean
+&&&&&&&&&&&&&&&&&&&&&&&&&&& index &&&&&&&&&&&&&&&&&&&&&&&&&&&
+Help on AxisProperty:
+
+    The index (row labels) of the DataFrame.
+
+    The index of a DataFrame is a series of labels that identify each row.
+    The labels can be integers, strings, or any other hashable type. The index
+    is used for label-based access and alignment, and can be accessed or
+    modified using this attribute.
+
+    Returns
+&&&&&&&&&&&&&&&&&&&&&&&&&&& infer_objects &&&&&&&&&&&&&&&&&&&&&&&&&&&
+Help on function infer_objects in module pandas.core.generic:
+
+infer_objects(self, copy: 'bool_t | None' = None) -> 'Self'
+    Attempt to infer better dtypes for object columns.
+
+    Attempts soft conversion of object-dtyped
+    columns, leaving non-object and unconvertible
+    columns unchanged. The inference rules are the
+    same as during normal Series/DataFrame construction.
+
+&&&&&&&&&&&&&&&&&&&&&&&&&&& info &&&&&&&&&&&&&&&&&&&&&&&&&&&
+Help on function info in module pandas.core.frame:
+
+info(self, verbose: 'bool | None' = None, buf: 'WriteBuffer[str] | None' = None, max_cols: 'int | None' = None, memory_usage: 'bool | str | None' = None, show_counts: 'bool | None' = None) -> 'None'
+    Print a concise summary of a DataFrame.
+
+    This method prints information about a DataFrame including
+    the index dtype and columns, non-null values and memory usage.
+
+    Parameters
+    ----------
+&&&&&&&&&&&&&&&&&&&&&&&&&&& insert &&&&&&&&&&&&&&&&&&&&&&&&&&&
+Help on function insert in module pandas.core.frame:
+
+insert(self, loc: 'int', column: 'Hashable', value: 'Scalar | AnyArrayLike', allow_duplicates: 'bool | lib.NoDefault' = <no_default>) -> 'None'
+    Insert column into DataFrame at specified location.
+
+    Raises a ValueError if `column` is already contained in the DataFrame,
+    unless `allow_duplicates` is set to True.
+
+    Parameters
+    ----------
+&&&&&&&&&&&&&&&&&&&&&&&&&&& interpolate &&&&&&&&&&&&&&&&&&&&&&&&&&&
+Help on function interpolate in module pandas.core.generic:
+
+interpolate(self, method: 'InterpolateOptions' = 'linear', *, axis: 'Axis' = 0, limit: 'int | None' = None, inplace: 'bool_t' = False, limit_direction: "Literal['forward', 'backward', 'both'] | None" = None, limit_area: "Literal['inside', 'outside'] | None" = None, downcast: "Literal['infer'] | None | lib.NoDefault" = <no_default>, **kwargs) -> 'Self | None'
+    Fill NaN values using an interpolation method.
+
+    Please note that only ``method='linear'`` is supported for
+    DataFrame/Series with a MultiIndex.
+
+    Parameters
+    ----------
+&&&&&&&&&&&&&&&&&&&&&&&&&&& isetitem &&&&&&&&&&&&&&&&&&&&&&&&&&&
+Help on function isetitem in module pandas.core.frame:
+
+isetitem(self, loc, value) -> 'None'
+    Set the given value in the column with position `loc`.
+
+    This is a positional analogue to ``__setitem__``.
+
+    Parameters
+    ----------
+    loc : int or sequence of ints
+&&&&&&&&&&&&&&&&&&&&&&&&&&& isin &&&&&&&&&&&&&&&&&&&&&&&&&&&
+Help on function isin in module pandas.core.frame:
+
+isin(self, values: 'Series | DataFrame | Sequence | Mapping') -> 'DataFrame'
+    Whether each element in the DataFrame is contained in values.
+
+    Parameters
+    ----------
+    values : iterable, Series, DataFrame or dict
+        The result will only be true at a location if all the
+        labels match. If `values` is a Series, that's the index. If
+&&&&&&&&&&&&&&&&&&&&&&&&&&& isna &&&&&&&&&&&&&&&&&&&&&&&&&&&
+Help on function isna in module pandas.core.frame:
+
+isna(self) -> 'DataFrame'
+    Detect missing values.
+
+    Return a boolean same-sized object indicating if the values are NA.
+    NA values, such as None or :attr:`numpy.NaN`, gets mapped to True
+    values.
+    Everything else gets mapped to False values. Characters such as empty
+    strings ``''`` or :attr:`numpy.inf` are not considered NA values
+&&&&&&&&&&&&&&&&&&&&&&&&&&& isnull &&&&&&&&&&&&&&&&&&&&&&&&&&&
+Help on function isnull in module pandas.core.frame:
+
+isnull(self) -> 'DataFrame'
+    DataFrame.isnull is an alias for DataFrame.isna.
+
+    Detect missing values.
+
+    Return a boolean same-sized object indicating if the values are NA.
+    NA values, such as None or :attr:`numpy.NaN`, gets mapped to True
+    values.
+&&&&&&&&&&&&&&&&&&&&&&&&&&& items &&&&&&&&&&&&&&&&&&&&&&&&&&&
+Help on function items in module pandas.core.frame:
+
+items(self) -> 'Iterable[tuple[Hashable, Series]]'
+    Iterate over (column name, Series) pairs.
+
+    Iterates over the DataFrame columns, returning a tuple with
+    the column name and the content as a Series.
+
+    Yields
+    ------
+&&&&&&&&&&&&&&&&&&&&&&&&&&& iterrows &&&&&&&&&&&&&&&&&&&&&&&&&&&
+Help on function iterrows in module pandas.core.frame:
+
+iterrows(self) -> 'Iterable[tuple[Hashable, Series]]'
+    Iterate over DataFrame rows as (index, Series) pairs.
+
+    Yields
+    ------
+    index : label or tuple of label
+        The index of the row. A tuple for a `MultiIndex`.
+    data : Series
+&&&&&&&&&&&&&&&&&&&&&&&&&&& itertuples &&&&&&&&&&&&&&&&&&&&&&&&&&&
+Help on function itertuples in module pandas.core.frame:
+
+itertuples(self, index: 'bool' = True, name: 'str | None' = 'Pandas') -> 'Iterable[tuple[Any, ...]]'
+    Iterate over DataFrame rows as namedtuples.
+
+    Parameters
+    ----------
+    index : bool, default True
+        If True, return the index as the first element of the tuple.
+    name : str or None, default "Pandas"
+&&&&&&&&&&&&&&&&&&&&&&&&&&& join &&&&&&&&&&&&&&&&&&&&&&&&&&&
+Help on function join in module pandas.core.frame:
+
+join(self, other: 'DataFrame | Series | Iterable[DataFrame | Series]', on: 'IndexLabel | None' = None, how: 'MergeHow' = 'left', lsuffix: 'str' = '', rsuffix: 'str' = '', sort: 'bool' = False, validate: 'JoinValidate | None' = None) -> 'DataFrame'
+    Join columns of another DataFrame.
+
+    Join columns with `other` DataFrame either on index or on a key
+    column. Efficiently join multiple DataFrame objects by index at once by
+    passing a list.
+
+    Parameters
+&&&&&&&&&&&&&&&&&&&&&&&&&&& keys &&&&&&&&&&&&&&&&&&&&&&&&&&&
+Help on function keys in module pandas.core.generic:
+
+keys(self) -> 'Index'
+    Get the 'info axis' (see Indexing for more).
+
+    This is index for Series, columns for DataFrame.
+
+    Returns
+    -------
+    Index
+&&&&&&&&&&&&&&&&&&&&&&&&&&& kurt &&&&&&&&&&&&&&&&&&&&&&&&&&&
+Help on function kurt in module pandas.core.frame:
+
+kurt(self, axis: 'Axis | None' = 0, skipna: 'bool' = True, numeric_only: 'bool' = False, **kwargs)
+    Return unbiased kurtosis over requested axis.
+
+    Kurtosis obtained using Fisher's definition of
+    kurtosis (kurtosis of normal == 0.0). Normalized by N-1.
+
+    Parameters
+    ----------
+&&&&&&&&&&&&&&&&&&&&&&&&&&& kurtosis &&&&&&&&&&&&&&&&&&&&&&&&&&&
+Help on function kurt in module pandas.core.frame:
+
+kurt(self, axis: 'Axis | None' = 0, skipna: 'bool' = True, numeric_only: 'bool' = False, **kwargs)
+    Return unbiased kurtosis over requested axis.
+
+    Kurtosis obtained using Fisher's definition of
+    kurtosis (kurtosis of normal == 0.0). Normalized by N-1.
+
+    Parameters
+    ----------
+&&&&&&&&&&&&&&&&&&&&&&&&&&& last &&&&&&&&&&&&&&&&&&&&&&&&&&&
+Help on function last in module pandas.core.generic:
+
+last(self, offset) -> 'Self'
+    Select final periods of time series data based on a date offset.
+
+    .. deprecated:: 2.1
+        :meth:`.last` is deprecated and will be removed in a future version.
+        Please create a mask and filter using `.loc` instead.
+
+    For a DataFrame with a sorted DatetimeIndex, this function
+&&&&&&&&&&&&&&&&&&&&&&&&&&& last_valid_index &&&&&&&&&&&&&&&&&&&&&&&&&&&
+Help on function last_valid_index in module pandas.core.generic:
+
+last_valid_index(self) -> 'Hashable | None'
+    Return index for last non-NA value or None, if no non-NA value is found.
+
+    Returns
+    -------
+    type of index
+
+    Examples
+&&&&&&&&&&&&&&&&&&&&&&&&&&& le &&&&&&&&&&&&&&&&&&&&&&&&&&&
+Help on function le in module pandas.core.frame:
+
+le(self, other, axis: 'Axis' = 'columns', level=None) -> 'DataFrame'
+    Get Less than or equal to of dataframe and other, element-wise (binary operator `le`).
+
+    Among flexible wrappers (`eq`, `ne`, `le`, `lt`, `ge`, `gt`) to comparison
+    operators.
+
+    Equivalent to `==`, `!=`, `<=`, `<`, `>=`, `>` with support to choose axis
+    (rows or columns) and level for comparison.
+&&&&&&&&&&&&&&&&&&&&&&&&&&& loc &&&&&&&&&&&&&&&&&&&&&&&&&&&
+Help on property:
+
+    Access a group of rows and columns by label(s) or a boolean array.
+
+    ``.loc[]`` is primarily label based, but may also be used with a
+    boolean array.
+
+    Allowed inputs are:
+
+    - A single label, e.g. ``5`` or ``'a'``, (note that ``5`` is
+&&&&&&&&&&&&&&&&&&&&&&&&&&& lt &&&&&&&&&&&&&&&&&&&&&&&&&&&
+Help on function lt in module pandas.core.frame:
+
+lt(self, other, axis: 'Axis' = 'columns', level=None) -> 'DataFrame'
+    Get Less than of dataframe and other, element-wise (binary operator `lt`).
+
+    Among flexible wrappers (`eq`, `ne`, `le`, `lt`, `ge`, `gt`) to comparison
+    operators.
+
+    Equivalent to `==`, `!=`, `<=`, `<`, `>=`, `>` with support to choose axis
+    (rows or columns) and level for comparison.
+&&&&&&&&&&&&&&&&&&&&&&&&&&& map &&&&&&&&&&&&&&&&&&&&&&&&&&&
+Help on function map in module pandas.core.frame:
+
+map(self, func: 'PythonFuncType', na_action: 'str | None' = None, **kwargs) -> 'DataFrame'
+    Apply a function to a Dataframe elementwise.
+
+    .. versionadded:: 2.1.0
+
+       DataFrame.applymap was deprecated and renamed to DataFrame.map.
+
+    This method applies a function that accepts and returns a scalar
+&&&&&&&&&&&&&&&&&&&&&&&&&&& mask &&&&&&&&&&&&&&&&&&&&&&&&&&&
+Help on function mask in module pandas.core.generic:
+
+mask(self, cond, other=<no_default>, *, inplace: 'bool_t' = False, axis: 'Axis | None' = None, level: 'Level | None' = None) -> 'Self | None'
+    Replace values where the condition is True.
+
+    Parameters
+    ----------
+    cond : bool Series/DataFrame, array-like, or callable
+        Where `cond` is False, keep the original value. Where
+        True, replace with corresponding value from `other`.
+&&&&&&&&&&&&&&&&&&&&&&&&&&& max &&&&&&&&&&&&&&&&&&&&&&&&&&&
+Help on function max in module pandas.core.frame:
+
+max(self, axis: 'Axis | None' = 0, skipna: 'bool' = True, numeric_only: 'bool' = False, **kwargs)
+    Return the maximum of the values over the requested axis.
+
+    If you want the *index* of the maximum, use ``idxmax``. This is the equivalent of the ``numpy.ndarray`` method ``argmax``.
+
+    Parameters
+    ----------
+    axis : {index (0), columns (1)}
+&&&&&&&&&&&&&&&&&&&&&&&&&&& mean &&&&&&&&&&&&&&&&&&&&&&&&&&&
+Help on function mean in module pandas.core.frame:
+
+mean(self, axis: 'Axis | None' = 0, skipna: 'bool' = True, numeric_only: 'bool' = False, **kwargs)
+    Return the mean of the values over the requested axis.
+
+    Parameters
+    ----------
+    axis : {index (0), columns (1)}
+        Axis for the function to be applied on.
+        For `Series` this parameter is unused and defaults to 0.
+&&&&&&&&&&&&&&&&&&&&&&&&&&& median &&&&&&&&&&&&&&&&&&&&&&&&&&&
+Help on function median in module pandas.core.frame:
+
+median(self, axis: 'Axis | None' = 0, skipna: 'bool' = True, numeric_only: 'bool' = False, **kwargs)
+    Return the median of the values over the requested axis.
+
+    Parameters
+    ----------
+    axis : {index (0), columns (1)}
+        Axis for the function to be applied on.
+        For `Series` this parameter is unused and defaults to 0.
+&&&&&&&&&&&&&&&&&&&&&&&&&&& melt &&&&&&&&&&&&&&&&&&&&&&&&&&&
+Help on function melt in module pandas.core.frame:
+
+melt(self, id_vars=None, value_vars=None, var_name=None, value_name: 'Hashable' = 'value', col_level: 'Level | None' = None, ignore_index: 'bool' = True) -> 'DataFrame'
+    Unpivot a DataFrame from wide to long format, optionally leaving identifiers set.
+
+    This function is useful to massage a DataFrame into a format where one
+    or more columns are identifier variables (`id_vars`), while all other
+    columns, considered measured variables (`value_vars`), are "unpivoted" to
+    the row axis, leaving just two non-identifier columns, 'variable' and
+    'value'.
+&&&&&&&&&&&&&&&&&&&&&&&&&&& memory_usage &&&&&&&&&&&&&&&&&&&&&&&&&&&
+Help on function memory_usage in module pandas.core.frame:
+
+memory_usage(self, index: 'bool' = True, deep: 'bool' = False) -> 'Series'
+    Return the memory usage of each column in bytes.
+
+    The memory usage can optionally include the contribution of
+    the index and elements of `object` dtype.
+
+    This value is displayed in `DataFrame.info` by default. This can be
+    suppressed by setting ``pandas.options.display.memory_usage`` to False.
+&&&&&&&&&&&&&&&&&&&&&&&&&&& merge &&&&&&&&&&&&&&&&&&&&&&&&&&&
+Help on function merge in module pandas.core.frame:
+
+merge(self, right: 'DataFrame | Series', how: 'MergeHow' = 'inner', on: 'IndexLabel | AnyArrayLike | None' = None, left_on: 'IndexLabel | AnyArrayLike | None' = None, right_on: 'IndexLabel | AnyArrayLike | None' = None, left_index: 'bool' = False, right_index: 'bool' = False, sort: 'bool' = False, suffixes: 'Suffixes' = ('_x', '_y'), copy: 'bool | None' = None, indicator: 'str | bool' = False, validate: 'MergeValidate | None' = None) -> 'DataFrame'
+    Merge DataFrame or named Series objects with a database-style join.
+
+    A named Series object is treated as a DataFrame with a single named column.
+
+    The join is done on columns or indexes. If joining columns on
+    columns, the DataFrame indexes *will be ignored*. Otherwise if joining indexes
+    on indexes or indexes on a column or columns, the index will be passed on.
+&&&&&&&&&&&&&&&&&&&&&&&&&&& min &&&&&&&&&&&&&&&&&&&&&&&&&&&
+Help on function min in module pandas.core.frame:
+
+min(self, axis: 'Axis | None' = 0, skipna: 'bool' = True, numeric_only: 'bool' = False, **kwargs)
+    Return the minimum of the values over the requested axis.
+
+    If you want the *index* of the minimum, use ``idxmin``. This is the equivalent of the ``numpy.ndarray`` method ``argmin``.
+
+    Parameters
+    ----------
+    axis : {index (0), columns (1)}
+&&&&&&&&&&&&&&&&&&&&&&&&&&& mod &&&&&&&&&&&&&&&&&&&&&&&&&&&
+Help on function mod in module pandas.core.frame:
+
+mod(self, other, axis: 'Axis' = 'columns', level=None, fill_value=None) -> 'DataFrame'
+    Get Modulo of dataframe and other, element-wise (binary operator `mod`).
+
+    Equivalent to ``dataframe % other``, but with support to substitute a fill_value
+    for missing data in one of the inputs. With reverse version, `rmod`.
+
+    Among flexible wrappers (`add`, `sub`, `mul`, `div`, `floordiv`, `mod`, `pow`) to
+    arithmetic operators: `+`, `-`, `*`, `/`, `//`, `%`, `**`.
+&&&&&&&&&&&&&&&&&&&&&&&&&&& mode &&&&&&&&&&&&&&&&&&&&&&&&&&&
+Help on function mode in module pandas.core.frame:
+
+mode(self, axis: 'Axis' = 0, numeric_only: 'bool' = False, dropna: 'bool' = True) -> 'DataFrame'
+    Get the mode(s) of each element along the selected axis.
+
+    The mode of a set of values is the value that appears most often.
+    It can be multiple values.
+
+    Parameters
+    ----------
+&&&&&&&&&&&&&&&&&&&&&&&&&&& mul &&&&&&&&&&&&&&&&&&&&&&&&&&&
+Help on function mul in module pandas.core.frame:
+
+mul(self, other, axis: 'Axis' = 'columns', level=None, fill_value=None) -> 'DataFrame'
+    Get Multiplication of dataframe and other, element-wise (binary operator `mul`).
+
+    Equivalent to ``dataframe * other``, but with support to substitute a fill_value
+    for missing data in one of the inputs. With reverse version, `rmul`.
+
+    Among flexible wrappers (`add`, `sub`, `mul`, `div`, `floordiv`, `mod`, `pow`) to
+    arithmetic operators: `+`, `-`, `*`, `/`, `//`, `%`, `**`.
+&&&&&&&&&&&&&&&&&&&&&&&&&&& multiply &&&&&&&&&&&&&&&&&&&&&&&&&&&
+Help on function mul in module pandas.core.frame:
+
+mul(self, other, axis: 'Axis' = 'columns', level=None, fill_value=None) -> 'DataFrame'
+    Get Multiplication of dataframe and other, element-wise (binary operator `mul`).
+
+    Equivalent to ``dataframe * other``, but with support to substitute a fill_value
+    for missing data in one of the inputs. With reverse version, `rmul`.
+
+    Among flexible wrappers (`add`, `sub`, `mul`, `div`, `floordiv`, `mod`, `pow`) to
+    arithmetic operators: `+`, `-`, `*`, `/`, `//`, `%`, `**`.
+&&&&&&&&&&&&&&&&&&&&&&&&&&& ndim &&&&&&&&&&&&&&&&&&&&&&&&&&&
+Help on property:
+
+    Return an int representing the number of axes / array dimensions.
+
+    Return 1 if Series. Otherwise return 2 if DataFrame.
+
+    See Also
+    --------
+    ndarray.ndim : Number of array dimensions.
+
+&&&&&&&&&&&&&&&&&&&&&&&&&&& ne &&&&&&&&&&&&&&&&&&&&&&&&&&&
+Help on function ne in module pandas.core.frame:
+
+ne(self, other, axis: 'Axis' = 'columns', level=None) -> 'DataFrame'
+    Get Not equal to of dataframe and other, element-wise (binary operator `ne`).
+
+    Among flexible wrappers (`eq`, `ne`, `le`, `lt`, `ge`, `gt`) to comparison
+    operators.
+
+    Equivalent to `==`, `!=`, `<=`, `<`, `>=`, `>` with support to choose axis
+    (rows or columns) and level for comparison.
+&&&&&&&&&&&&&&&&&&&&&&&&&&& nlargest &&&&&&&&&&&&&&&&&&&&&&&&&&&
+Help on function nlargest in module pandas.core.frame:
+
+nlargest(self, n: 'int', columns: 'IndexLabel', keep: 'NsmallestNlargestKeep' = 'first') -> 'DataFrame'
+    Return the first `n` rows ordered by `columns` in descending order.
+
+    Return the first `n` rows with the largest values in `columns`, in
+    descending order. The columns that are not specified are returned as
+    well, but not used for ordering.
+
+    This method is equivalent to
+&&&&&&&&&&&&&&&&&&&&&&&&&&& notna &&&&&&&&&&&&&&&&&&&&&&&&&&&
+Help on function notna in module pandas.core.frame:
+
+notna(self) -> 'DataFrame'
+    Detect existing (non-missing) values.
+
+    Return a boolean same-sized object indicating if the values are not NA.
+    Non-missing values get mapped to True. Characters such as empty
+    strings ``''`` or :attr:`numpy.inf` are not considered NA values
+    (unless you set ``pandas.options.mode.use_inf_as_na = True``).
+    NA values, such as None or :attr:`numpy.NaN`, get mapped to False
+&&&&&&&&&&&&&&&&&&&&&&&&&&& notnull &&&&&&&&&&&&&&&&&&&&&&&&&&&
+Help on function notnull in module pandas.core.frame:
+
+notnull(self) -> 'DataFrame'
+    DataFrame.notnull is an alias for DataFrame.notna.
+
+    Detect existing (non-missing) values.
+
+    Return a boolean same-sized object indicating if the values are not NA.
+    Non-missing values get mapped to True. Characters such as empty
+    strings ``''`` or :attr:`numpy.inf` are not considered NA values
+&&&&&&&&&&&&&&&&&&&&&&&&&&& nsmallest &&&&&&&&&&&&&&&&&&&&&&&&&&&
+Help on function nsmallest in module pandas.core.frame:
+
+nsmallest(self, n: 'int', columns: 'IndexLabel', keep: 'NsmallestNlargestKeep' = 'first') -> 'DataFrame'
+    Return the first `n` rows ordered by `columns` in ascending order.
+
+    Return the first `n` rows with the smallest values in `columns`, in
+    ascending order. The columns that are not specified are returned as
+    well, but not used for ordering.
+
+    This method is equivalent to
+&&&&&&&&&&&&&&&&&&&&&&&&&&& nunique &&&&&&&&&&&&&&&&&&&&&&&&&&&
+Help on function nunique in module pandas.core.frame:
+
+nunique(self, axis: 'Axis' = 0, dropna: 'bool' = True) -> 'Series'
+    Count number of distinct elements in specified axis.
+
+    Return Series with number of distinct elements. Can ignore NaN
+    values.
+
+    Parameters
+    ----------
+&&&&&&&&&&&&&&&&&&&&&&&&&&& pad &&&&&&&&&&&&&&&&&&&&&&&&&&&
+Help on function pad in module pandas.core.generic:
+
+pad(self, *, axis: 'None | Axis' = None, inplace: 'bool_t' = False, limit: 'None | int' = None, downcast: 'dict | None | lib.NoDefault' = <no_default>) -> 'Self | None'
+    Fill NA/NaN values by propagating the last valid observation to next valid.
+
+    .. deprecated:: 2.0
+
+        Series/DataFrame.pad is deprecated. Use Series/DataFrame.ffill instead.
+
+    Returns
+&&&&&&&&&&&&&&&&&&&&&&&&&&& pct_change &&&&&&&&&&&&&&&&&&&&&&&&&&&
+Help on function pct_change in module pandas.core.generic:
+
+pct_change(self, periods: 'int' = 1, fill_method: 'FillnaOptions | None | lib.NoDefault' = <no_default>, limit: 'int | None | lib.NoDefault' = <no_default>, freq=None, **kwargs) -> 'Self'
+    Fractional change between the current and a prior element.
+
+    Computes the fractional change from the immediately previous row by
+    default. This is useful in comparing the fraction of change in a time
+    series of elements.
+
+    .. note::
+&&&&&&&&&&&&&&&&&&&&&&&&&&& pipe &&&&&&&&&&&&&&&&&&&&&&&&&&&
+Help on function pipe in module pandas.core.generic:
+
+pipe(self, func: 'Callable[..., T] | tuple[Callable[..., T], str]', *args, **kwargs) -> 'T'
+    Apply chainable functions that expect Series or DataFrames.
+
+    Parameters
+    ----------
+    func : function
+        Function to apply to the Series/DataFrame.
+        ``args``, and ``kwargs`` are passed into ``func``.
+&&&&&&&&&&&&&&&&&&&&&&&&&&& pivot &&&&&&&&&&&&&&&&&&&&&&&&&&&
+Help on function pivot in module pandas.core.frame:
+
+pivot(self, *, columns, index=<no_default>, values=<no_default>) -> 'DataFrame'
+    Return reshaped DataFrame organized by given index / column values.
+
+    Reshape data (produce a "pivot" table) based on column values. Uses
+    unique values from specified `index` / `columns` to form axes of the
+    resulting DataFrame. This function does not support data
+    aggregation, multiple values will result in a MultiIndex in the
+    columns. See the :ref:`User Guide <reshaping>` for more on reshaping.
+&&&&&&&&&&&&&&&&&&&&&&&&&&& pivot_table &&&&&&&&&&&&&&&&&&&&&&&&&&&
+Help on function pivot_table in module pandas.core.frame:
+
+pivot_table(self, values=None, index=None, columns=None, aggfunc: 'AggFuncType' = 'mean', fill_value=None, margins: 'bool' = False, dropna: 'bool' = True, margins_name: 'Level' = 'All', observed: 'bool | lib.NoDefault' = <no_default>, sort: 'bool' = True) -> 'DataFrame'
+    Create a spreadsheet-style pivot table as a DataFrame.
+
+    The levels in the pivot table will be stored in MultiIndex objects
+    (hierarchical indexes) on the index and columns of the result DataFrame.
+
+    Parameters
+    ----------
+&&&&&&&&&&&&&&&&&&&&&&&&&&& plot &&&&&&&&&&&&&&&&&&&&&&&&&&&
+Help on class PlotAccessor in module pandas.plotting._core:
+
+class PlotAccessor(pandas.core.base.PandasObject)
+ |  PlotAccessor(data: 'Series | DataFrame') -> 'None'
+ |
+ |  Make plots of Series or DataFrame.
+ |
+ |  Uses the backend specified by the
+ |  option ``plotting.backend``. By default, matplotlib is used.
+ |
+&&&&&&&&&&&&&&&&&&&&&&&&&&& pop &&&&&&&&&&&&&&&&&&&&&&&&&&&
+Help on function pop in module pandas.core.frame:
+
+pop(self, item: 'Hashable') -> 'Series'
+    Return item and drop from frame. Raise KeyError if not found.
+
+    Parameters
+    ----------
+    item : label
+        Label of column to be popped.
+
+&&&&&&&&&&&&&&&&&&&&&&&&&&& pow &&&&&&&&&&&&&&&&&&&&&&&&&&&
+Help on function pow in module pandas.core.frame:
+
+pow(self, other, axis: 'Axis' = 'columns', level=None, fill_value=None) -> 'DataFrame'
+    Get Exponential power of dataframe and other, element-wise (binary operator `pow`).
+
+    Equivalent to ``dataframe ** other``, but with support to substitute a fill_value
+    for missing data in one of the inputs. With reverse version, `rpow`.
+
+    Among flexible wrappers (`add`, `sub`, `mul`, `div`, `floordiv`, `mod`, `pow`) to
+    arithmetic operators: `+`, `-`, `*`, `/`, `//`, `%`, `**`.
+&&&&&&&&&&&&&&&&&&&&&&&&&&& prod &&&&&&&&&&&&&&&&&&&&&&&&&&&
+Help on function prod in module pandas.core.frame:
+
+prod(self, axis: 'Axis | None' = 0, skipna: 'bool' = True, numeric_only: 'bool' = False, min_count: 'int' = 0, **kwargs)
+    Return the product of the values over the requested axis.
+
+    Parameters
+    ----------
+    axis : {index (0), columns (1)}
+        Axis for the function to be applied on.
+        For `Series` this parameter is unused and defaults to 0.
+&&&&&&&&&&&&&&&&&&&&&&&&&&& product &&&&&&&&&&&&&&&&&&&&&&&&&&&
+Help on function prod in module pandas.core.frame:
+
+prod(self, axis: 'Axis | None' = 0, skipna: 'bool' = True, numeric_only: 'bool' = False, min_count: 'int' = 0, **kwargs)
+    Return the product of the values over the requested axis.
+
+    Parameters
+    ----------
+    axis : {index (0), columns (1)}
+        Axis for the function to be applied on.
+        For `Series` this parameter is unused and defaults to 0.
+&&&&&&&&&&&&&&&&&&&&&&&&&&& quantile &&&&&&&&&&&&&&&&&&&&&&&&&&&
+Help on function quantile in module pandas.core.frame:
+
+quantile(self, q: 'float | AnyArrayLike | Sequence[float]' = 0.5, axis: 'Axis' = 0, numeric_only: 'bool' = False, interpolation: 'QuantileInterpolation' = 'linear', method: "Literal['single', 'table']" = 'single') -> 'Series | DataFrame'
+    Return values at the given quantile over requested axis.
+
+    Parameters
+    ----------
+    q : float or array-like, default 0.5 (50% quantile)
+        Value between 0 <= q <= 1, the quantile(s) to compute.
+    axis : {0 or 'index', 1 or 'columns'}, default 0
+&&&&&&&&&&&&&&&&&&&&&&&&&&& query &&&&&&&&&&&&&&&&&&&&&&&&&&&
+Help on function query in module pandas.core.frame:
+
+query(self, expr: 'str', *, inplace: 'bool' = False, **kwargs) -> 'DataFrame | None'
+    Query the columns of a DataFrame with a boolean expression.
+
+    Parameters
+    ----------
+    expr : str
+        The query string to evaluate.
+
+&&&&&&&&&&&&&&&&&&&&&&&&&&& radd &&&&&&&&&&&&&&&&&&&&&&&&&&&
+Help on function radd in module pandas.core.frame:
+
+radd(self, other, axis: 'Axis' = 'columns', level=None, fill_value=None) -> 'DataFrame'
+    Get Addition of dataframe and other, element-wise (binary operator `radd`).
+
+    Equivalent to ``other + dataframe``, but with support to substitute a fill_value
+    for missing data in one of the inputs. With reverse version, `add`.
+
+    Among flexible wrappers (`add`, `sub`, `mul`, `div`, `floordiv`, `mod`, `pow`) to
+    arithmetic operators: `+`, `-`, `*`, `/`, `//`, `%`, `**`.
+&&&&&&&&&&&&&&&&&&&&&&&&&&& rank &&&&&&&&&&&&&&&&&&&&&&&&&&&
+Help on function rank in module pandas.core.generic:
+
+rank(self, axis: 'Axis' = 0, method: "Literal['average', 'min', 'max', 'first', 'dense']" = 'average', numeric_only: 'bool_t' = False, na_option: "Literal['keep', 'top', 'bottom']" = 'keep', ascending: 'bool_t' = True, pct: 'bool_t' = False) -> 'Self'
+    Compute numerical data ranks (1 through n) along axis.
+
+    By default, equal values are assigned a rank that is the average of the
+    ranks of those values.
+
+    Parameters
+    ----------
+&&&&&&&&&&&&&&&&&&&&&&&&&&& rdiv &&&&&&&&&&&&&&&&&&&&&&&&&&&
+Help on function rtruediv in module pandas.core.frame:
+
+rtruediv(self, other, axis: 'Axis' = 'columns', level=None, fill_value=None) -> 'DataFrame'
+    Get Floating division of dataframe and other, element-wise (binary operator `rtruediv`).
+
+    Equivalent to ``other / dataframe``, but with support to substitute a fill_value
+    for missing data in one of the inputs. With reverse version, `truediv`.
+
+    Among flexible wrappers (`add`, `sub`, `mul`, `div`, `floordiv`, `mod`, `pow`) to
+    arithmetic operators: `+`, `-`, `*`, `/`, `//`, `%`, `**`.
+&&&&&&&&&&&&&&&&&&&&&&&&&&& reindex &&&&&&&&&&&&&&&&&&&&&&&&&&&
+Help on function reindex in module pandas.core.frame:
+
+reindex(self, labels=None, *, index=None, columns=None, axis: 'Axis | None' = None, method: 'ReindexMethod | None' = None, copy: 'bool | None' = None, level: 'Level | None' = None, fill_value: 'Scalar | None' = nan, limit: 'int | None' = None, tolerance=None) -> 'DataFrame'
+    Conform DataFrame to new index with optional filling logic.
+
+    Places NA/NaN in locations having no value in the previous index. A new object
+    is produced unless the new index is equivalent to the current one and
+    ``copy=False``.
+
+    Parameters
+&&&&&&&&&&&&&&&&&&&&&&&&&&& reindex_like &&&&&&&&&&&&&&&&&&&&&&&&&&&
+Help on function reindex_like in module pandas.core.generic:
+
+reindex_like(self, other, method: "Literal['backfill', 'bfill', 'pad', 'ffill', 'nearest'] | None" = None, copy: 'bool_t | None' = None, limit: 'int | None' = None, tolerance=None) -> 'Self'
+    Return an object with matching indices as other object.
+
+    Conform the object to the same index on all axes. Optional
+    filling logic, placing NaN in locations having no value
+    in the previous index. A new object is produced unless the
+    new index is equivalent to the current one and copy=False.
+
+&&&&&&&&&&&&&&&&&&&&&&&&&&& rename &&&&&&&&&&&&&&&&&&&&&&&&&&&
+Help on function rename in module pandas.core.frame:
+
+rename(self, mapper: 'Renamer | None' = None, *, index: 'Renamer | None' = None, columns: 'Renamer | None' = None, axis: 'Axis | None' = None, copy: 'bool | None' = None, inplace: 'bool' = False, level: 'Level | None' = None, errors: 'IgnoreRaise' = 'ignore') -> 'DataFrame | None'
+    Rename columns or index labels.
+
+    Function / dict values must be unique (1-to-1). Labels not contained in
+    a dict / Series will be left as-is. Extra labels listed don't throw an
+    error.
+
+    See the :ref:`user guide <basics.rename>` for more.
+&&&&&&&&&&&&&&&&&&&&&&&&&&& rename_axis &&&&&&&&&&&&&&&&&&&&&&&&&&&
+Help on function rename_axis in module pandas.core.generic:
+
+rename_axis(self, mapper: 'IndexLabel | lib.NoDefault' = <no_default>, *, index=<no_default>, columns=<no_default>, axis: 'Axis' = 0, copy: 'bool_t | None' = None, inplace: 'bool_t' = False) -> 'Self | None'
+    Set the name of the axis for the index or columns.
+
+    Parameters
+    ----------
+    mapper : scalar, list-like, optional
+        Value to set the axis name attribute.
+    index, columns : scalar, list-like, dict-like or function, optional
+&&&&&&&&&&&&&&&&&&&&&&&&&&& reorder_levels &&&&&&&&&&&&&&&&&&&&&&&&&&&
+Help on function reorder_levels in module pandas.core.frame:
+
+reorder_levels(self, order: 'Sequence[int | str]', axis: 'Axis' = 0) -> 'DataFrame'
+    Rearrange index levels using input order. May not drop or duplicate levels.
+
+    Parameters
+    ----------
+    order : list of int or list of str
+        List representing new level order. Reference level by number
+        (position) or by key (label).
+&&&&&&&&&&&&&&&&&&&&&&&&&&& replace &&&&&&&&&&&&&&&&&&&&&&&&&&&
+Help on function replace in module pandas.core.generic:
+
+replace(self, to_replace=None, value=<no_default>, *, inplace: 'bool_t' = False, limit: 'int | None' = None, regex: 'bool_t' = False, method: "Literal['pad', 'ffill', 'bfill'] | lib.NoDefault" = <no_default>) -> 'Self | None'
+    Replace values given in `to_replace` with `value`.
+
+    Values of the Series/DataFrame are replaced with other values dynamically.
+    This differs from updating with ``.loc`` or ``.iloc``, which require
+    you to specify a location to update with some value.
+
+    Parameters
+&&&&&&&&&&&&&&&&&&&&&&&&&&& resample &&&&&&&&&&&&&&&&&&&&&&&&&&&
+Help on function resample in module pandas.core.generic:
+
+resample(self, rule, axis: 'Axis | lib.NoDefault' = <no_default>, closed: "Literal['right', 'left'] | None" = None, label: "Literal['right', 'left'] | None" = None, convention: "Literal['start', 'end', 's', 'e'] | lib.NoDefault" = <no_default>, kind: "Literal['timestamp', 'period'] | None | lib.NoDefault" = <no_default>, on: 'Level | None' = None, level: 'Level | None' = None, origin: 'str | TimestampConvertibleTypes' = 'start_day', offset: 'TimedeltaConvertibleTypes | None' = None, group_keys: 'bool_t' = False) -> 'Resampler'
+    Resample time-series data.
+
+    Convenience method for frequency conversion and resampling of time series.
+    The object must have a datetime-like index (`DatetimeIndex`, `PeriodIndex`,
+    or `TimedeltaIndex`), or the caller must pass the label of a datetime-like
+    series/index to the ``on``/``level`` keyword parameter.
+
+&&&&&&&&&&&&&&&&&&&&&&&&&&& reset_index &&&&&&&&&&&&&&&&&&&&&&&&&&&
+Help on function reset_index in module pandas.core.frame:
+
+reset_index(self, level: 'IndexLabel | None' = None, *, drop: 'bool' = False, inplace: 'bool' = False, col_level: 'Hashable' = 0, col_fill: 'Hashable' = '', allow_duplicates: 'bool | lib.NoDefault' = <no_default>, names: 'Hashable | Sequence[Hashable] | None' = None) -> 'DataFrame | None'
+    Reset the index, or a level of it.
+
+    Reset the index of the DataFrame, and use the default one instead.
+    If the DataFrame has a MultiIndex, this method can remove one or more
+    levels.
+
+    Parameters
+&&&&&&&&&&&&&&&&&&&&&&&&&&& rfloordiv &&&&&&&&&&&&&&&&&&&&&&&&&&&
+Help on function rfloordiv in module pandas.core.frame:
+
+rfloordiv(self, other, axis: 'Axis' = 'columns', level=None, fill_value=None) -> 'DataFrame'
+    Get Integer division of dataframe and other, element-wise (binary operator `rfloordiv`).
+
+    Equivalent to ``other // dataframe``, but with support to substitute a fill_value
+    for missing data in one of the inputs. With reverse version, `floordiv`.
+
+    Among flexible wrappers (`add`, `sub`, `mul`, `div`, `floordiv`, `mod`, `pow`) to
+    arithmetic operators: `+`, `-`, `*`, `/`, `//`, `%`, `**`.
+&&&&&&&&&&&&&&&&&&&&&&&&&&& rmod &&&&&&&&&&&&&&&&&&&&&&&&&&&
+Help on function rmod in module pandas.core.frame:
+
+rmod(self, other, axis: 'Axis' = 'columns', level=None, fill_value=None) -> 'DataFrame'
+    Get Modulo of dataframe and other, element-wise (binary operator `rmod`).
+
+    Equivalent to ``other % dataframe``, but with support to substitute a fill_value
+    for missing data in one of the inputs. With reverse version, `mod`.
+
+    Among flexible wrappers (`add`, `sub`, `mul`, `div`, `floordiv`, `mod`, `pow`) to
+    arithmetic operators: `+`, `-`, `*`, `/`, `//`, `%`, `**`.
+&&&&&&&&&&&&&&&&&&&&&&&&&&& rmul &&&&&&&&&&&&&&&&&&&&&&&&&&&
+Help on function rmul in module pandas.core.frame:
+
+rmul(self, other, axis: 'Axis' = 'columns', level=None, fill_value=None) -> 'DataFrame'
+    Get Multiplication of dataframe and other, element-wise (binary operator `rmul`).
+
+    Equivalent to ``other * dataframe``, but with support to substitute a fill_value
+    for missing data in one of the inputs. With reverse version, `mul`.
+
+    Among flexible wrappers (`add`, `sub`, `mul`, `div`, `floordiv`, `mod`, `pow`) to
+    arithmetic operators: `+`, `-`, `*`, `/`, `//`, `%`, `**`.
+&&&&&&&&&&&&&&&&&&&&&&&&&&& rolling &&&&&&&&&&&&&&&&&&&&&&&&&&&
+Help on function rolling in module pandas.core.generic:
+
+rolling(self, window: 'int | dt.timedelta | str | BaseOffset | BaseIndexer', min_periods: 'int | None' = None, center: 'bool_t' = False, win_type: 'str | None' = None, on: 'str | None' = None, axis: 'Axis | lib.NoDefault' = <no_default>, closed: 'IntervalClosedType | None' = None, step: 'int | None' = None, method: 'str' = 'single') -> 'Window | Rolling'
+    Provide rolling window calculations.
+
+    Parameters
+    ----------
+    window : int, timedelta, str, offset, or BaseIndexer subclass
+        Size of the moving window.
+
+&&&&&&&&&&&&&&&&&&&&&&&&&&& round &&&&&&&&&&&&&&&&&&&&&&&&&&&
+Help on function round in module pandas.core.frame:
+
+round(self, decimals: 'int | dict[IndexLabel, int] | Series' = 0, *args, **kwargs) -> 'DataFrame'
+    Round a DataFrame to a variable number of decimal places.
+
+    Parameters
+    ----------
+    decimals : int, dict, Series
+        Number of decimal places to round each column to. If an int is
+        given, round each column to the same number of places.
+&&&&&&&&&&&&&&&&&&&&&&&&&&& rpow &&&&&&&&&&&&&&&&&&&&&&&&&&&
+Help on function rpow in module pandas.core.frame:
+
+rpow(self, other, axis: 'Axis' = 'columns', level=None, fill_value=None) -> 'DataFrame'
+    Get Exponential power of dataframe and other, element-wise (binary operator `rpow`).
+
+    Equivalent to ``other ** dataframe``, but with support to substitute a fill_value
+    for missing data in one of the inputs. With reverse version, `pow`.
+
+    Among flexible wrappers (`add`, `sub`, `mul`, `div`, `floordiv`, `mod`, `pow`) to
+    arithmetic operators: `+`, `-`, `*`, `/`, `//`, `%`, `**`.
+&&&&&&&&&&&&&&&&&&&&&&&&&&& rsub &&&&&&&&&&&&&&&&&&&&&&&&&&&
+Help on function rsub in module pandas.core.frame:
+
+rsub(self, other, axis: 'Axis' = 'columns', level=None, fill_value=None) -> 'DataFrame'
+    Get Subtraction of dataframe and other, element-wise (binary operator `rsub`).
+
+    Equivalent to ``other - dataframe``, but with support to substitute a fill_value
+    for missing data in one of the inputs. With reverse version, `sub`.
+
+    Among flexible wrappers (`add`, `sub`, `mul`, `div`, `floordiv`, `mod`, `pow`) to
+    arithmetic operators: `+`, `-`, `*`, `/`, `//`, `%`, `**`.
+&&&&&&&&&&&&&&&&&&&&&&&&&&& rtruediv &&&&&&&&&&&&&&&&&&&&&&&&&&&
+Help on function rtruediv in module pandas.core.frame:
+
+rtruediv(self, other, axis: 'Axis' = 'columns', level=None, fill_value=None) -> 'DataFrame'
+    Get Floating division of dataframe and other, element-wise (binary operator `rtruediv`).
+
+    Equivalent to ``other / dataframe``, but with support to substitute a fill_value
+    for missing data in one of the inputs. With reverse version, `truediv`.
+
+    Among flexible wrappers (`add`, `sub`, `mul`, `div`, `floordiv`, `mod`, `pow`) to
+    arithmetic operators: `+`, `-`, `*`, `/`, `//`, `%`, `**`.
+&&&&&&&&&&&&&&&&&&&&&&&&&&& sample &&&&&&&&&&&&&&&&&&&&&&&&&&&
+Help on function sample in module pandas.core.generic:
+
+sample(self, n: 'int | None' = None, frac: 'float | None' = None, replace: 'bool_t' = False, weights=None, random_state: 'RandomState | None' = None, axis: 'Axis | None' = None, ignore_index: 'bool_t' = False) -> 'Self'
+    Return a random sample of items from an axis of object.
+
+    You can use `random_state` for reproducibility.
+
+    Parameters
+    ----------
+    n : int, optional
+&&&&&&&&&&&&&&&&&&&&&&&&&&& select_dtypes &&&&&&&&&&&&&&&&&&&&&&&&&&&
+Help on function select_dtypes in module pandas.core.frame:
+
+select_dtypes(self, include=None, exclude=None) -> 'Self'
+    Return a subset of the DataFrame's columns based on the column dtypes.
+
+    Parameters
+    ----------
+    include, exclude : scalar or list-like
+        A selection of dtypes or strings to be included/excluded. At least
+        one of these parameters must be supplied.
+&&&&&&&&&&&&&&&&&&&&&&&&&&& sem &&&&&&&&&&&&&&&&&&&&&&&&&&&
+Help on function sem in module pandas.core.frame:
+
+sem(self, axis: 'Axis | None' = 0, skipna: 'bool' = True, ddof: 'int' = 1, numeric_only: 'bool' = False, **kwargs)
+    Return unbiased standard error of the mean over requested axis.
+
+    Normalized by N-1 by default. This can be changed using the ddof argument
+
+    Parameters
+    ----------
+    axis : {index (0), columns (1)}
+&&&&&&&&&&&&&&&&&&&&&&&&&&& set_axis &&&&&&&&&&&&&&&&&&&&&&&&&&&
+Help on function set_axis in module pandas.core.frame:
+
+set_axis(self, labels, *, axis: 'Axis' = 0, copy: 'bool | None' = None) -> 'DataFrame'
+    Assign desired index to given axis.
+
+    Indexes for column or row labels can be changed by assigning
+    a list-like or Index.
+
+    Parameters
+    ----------
+&&&&&&&&&&&&&&&&&&&&&&&&&&& set_flags &&&&&&&&&&&&&&&&&&&&&&&&&&&
+Help on function set_flags in module pandas.core.generic:
+
+set_flags(self, *, copy: 'bool_t' = False, allows_duplicate_labels: 'bool_t | None' = None) -> 'Self'
+    Return a new object with updated flags.
+
+    Parameters
+    ----------
+    copy : bool, default False
+        Specify if a copy of the object should be made.
+
+&&&&&&&&&&&&&&&&&&&&&&&&&&& set_index &&&&&&&&&&&&&&&&&&&&&&&&&&&
+Help on function set_index in module pandas.core.frame:
+
+set_index(self, keys, *, drop: 'bool' = True, append: 'bool' = False, inplace: 'bool' = False, verify_integrity: 'bool' = False) -> 'DataFrame | None'
+    Set the DataFrame index using existing columns.
+
+    Set the DataFrame index (row labels) using one or more existing
+    columns or arrays (of the correct length). The index can replace the
+    existing index or expand on it.
+
+    Parameters
+&&&&&&&&&&&&&&&&&&&&&&&&&&& shape &&&&&&&&&&&&&&&&&&&&&&&&&&&
+Help on property:
+
+    Return a tuple representing the dimensionality of the DataFrame.
+
+    See Also
+    --------
+    ndarray.shape : Tuple of array dimensions.
+
+    Examples
+    --------
+&&&&&&&&&&&&&&&&&&&&&&&&&&& shift &&&&&&&&&&&&&&&&&&&&&&&&&&&
+Help on function shift in module pandas.core.frame:
+
+shift(self, periods: 'int | Sequence[int]' = 1, freq: 'Frequency | None' = None, axis: 'Axis' = 0, fill_value: 'Hashable' = <no_default>, suffix: 'str | None' = None) -> 'DataFrame'
+    Shift index by desired number of periods with an optional time `freq`.
+
+    When `freq` is not passed, shift the index without realigning the data.
+    If `freq` is passed (in this case, the index must be date or datetime,
+    or it will raise a `NotImplementedError`), the index will be
+    increased using the periods and the `freq`. `freq` can be inferred
+    when specified as "infer" as long as either freq or inferred_freq
+&&&&&&&&&&&&&&&&&&&&&&&&&&& size &&&&&&&&&&&&&&&&&&&&&&&&&&&
+Help on property:
+
+    Return an int representing the number of elements in this object.
+
+    Return the number of rows if Series. Otherwise return the number of
+    rows times number of columns if DataFrame.
+
+    See Also
+    --------
+    ndarray.size : Number of elements in the array.
+&&&&&&&&&&&&&&&&&&&&&&&&&&& skew &&&&&&&&&&&&&&&&&&&&&&&&&&&
+Help on function skew in module pandas.core.frame:
+
+skew(self, axis: 'Axis | None' = 0, skipna: 'bool' = True, numeric_only: 'bool' = False, **kwargs)
+    Return unbiased skew over requested axis.
+
+    Normalized by N-1.
+
+    Parameters
+    ----------
+    axis : {index (0), columns (1)}
+&&&&&&&&&&&&&&&&&&&&&&&&&&& sort_index &&&&&&&&&&&&&&&&&&&&&&&&&&&
+Help on function sort_index in module pandas.core.frame:
+
+sort_index(self, *, axis: 'Axis' = 0, level: 'IndexLabel | None' = None, ascending: 'bool | Sequence[bool]' = True, inplace: 'bool' = False, kind: 'SortKind' = 'quicksort', na_position: 'NaPosition' = 'last', sort_remaining: 'bool' = True, ignore_index: 'bool' = False, key: 'IndexKeyFunc | None' = None) -> 'DataFrame | None'
+    Sort object by labels (along an axis).
+
+    Returns a new DataFrame sorted by label if `inplace` argument is
+    ``False``, otherwise updates the original DataFrame and returns None.
+
+    Parameters
+    ----------
+&&&&&&&&&&&&&&&&&&&&&&&&&&& sort_values &&&&&&&&&&&&&&&&&&&&&&&&&&&
+Help on function sort_values in module pandas.core.frame:
+
+sort_values(self, by: 'IndexLabel', *, axis: 'Axis' = 0, ascending: 'bool | list[bool] | tuple[bool, ...]' = True, inplace: 'bool' = False, kind: 'SortKind' = 'quicksort', na_position: 'str' = 'last', ignore_index: 'bool' = False, key: 'ValueKeyFunc | None' = None) -> 'DataFrame | None'
+    Sort by the values along either axis.
+
+    Parameters
+    ----------
+    by : str or list of str
+        Name or list of names to sort by.
+
+&&&&&&&&&&&&&&&&&&&&&&&&&&& sparse &&&&&&&&&&&&&&&&&&&&&&&&&&&
+Help on class SparseFrameAccessor in module pandas.core.arrays.sparse.accessor:
+
+class SparseFrameAccessor(BaseAccessor, pandas.core.accessor.PandasDelegate)
+ |  SparseFrameAccessor(data=None) -> 'None'
+ |
+ |  DataFrame accessor for sparse data.
+ |
+ |  Examples
+ |  --------
+ |  >>> df = pd.DataFrame({"a": [1, 2, 0, 0],
+&&&&&&&&&&&&&&&&&&&&&&&&&&& squeeze &&&&&&&&&&&&&&&&&&&&&&&&&&&
+Help on function squeeze in module pandas.core.generic:
+
+squeeze(self, axis: 'Axis | None' = None)
+    Squeeze 1 dimensional axis objects into scalars.
+
+    Series or DataFrames with a single element are squeezed to a scalar.
+    DataFrames with a single column or a single row are squeezed to a
+    Series. Otherwise the object is unchanged.
+
+    This method is most useful when you don't know if your
+&&&&&&&&&&&&&&&&&&&&&&&&&&& stack &&&&&&&&&&&&&&&&&&&&&&&&&&&
+Help on function stack in module pandas.core.frame:
+
+stack(self, level: 'IndexLabel' = -1, dropna: 'bool | lib.NoDefault' = <no_default>, sort: 'bool | lib.NoDefault' = <no_default>, future_stack: 'bool' = False)
+    Stack the prescribed level(s) from columns to index.
+
+    Return a reshaped DataFrame or Series having a multi-level
+    index with one or more new inner-most levels compared to the current
+    DataFrame. The new inner-most levels are created by pivoting the
+    columns of the current dataframe:
+
+&&&&&&&&&&&&&&&&&&&&&&&&&&& std &&&&&&&&&&&&&&&&&&&&&&&&&&&
+Help on function std in module pandas.core.frame:
+
+std(self, axis: 'Axis | None' = 0, skipna: 'bool' = True, ddof: 'int' = 1, numeric_only: 'bool' = False, **kwargs)
+    Return sample standard deviation over requested axis.
+
+    Normalized by N-1 by default. This can be changed using the ddof argument.
+
+    Parameters
+    ----------
+    axis : {index (0), columns (1)}
+&&&&&&&&&&&&&&&&&&&&&&&&&&& style &&&&&&&&&&&&&&&&&&&&&&&&&&&
+Help on property:
+
+    Returns a Styler object.
+
+    Contains methods for building a styled HTML representation of the DataFrame.
+
+    See Also
+    --------
+    io.formats.style.Styler : Helps style a DataFrame or Series according to the
+        data with HTML and CSS.
+&&&&&&&&&&&&&&&&&&&&&&&&&&& sub &&&&&&&&&&&&&&&&&&&&&&&&&&&
+Help on function sub in module pandas.core.frame:
+
+sub(self, other, axis: 'Axis' = 'columns', level=None, fill_value=None) -> 'DataFrame'
+    Get Subtraction of dataframe and other, element-wise (binary operator `sub`).
+
+    Equivalent to ``dataframe - other``, but with support to substitute a fill_value
+    for missing data in one of the inputs. With reverse version, `rsub`.
+
+    Among flexible wrappers (`add`, `sub`, `mul`, `div`, `floordiv`, `mod`, `pow`) to
+    arithmetic operators: `+`, `-`, `*`, `/`, `//`, `%`, `**`.
+&&&&&&&&&&&&&&&&&&&&&&&&&&& subtract &&&&&&&&&&&&&&&&&&&&&&&&&&&
+Help on function sub in module pandas.core.frame:
+
+sub(self, other, axis: 'Axis' = 'columns', level=None, fill_value=None) -> 'DataFrame'
+    Get Subtraction of dataframe and other, element-wise (binary operator `sub`).
+
+    Equivalent to ``dataframe - other``, but with support to substitute a fill_value
+    for missing data in one of the inputs. With reverse version, `rsub`.
+
+    Among flexible wrappers (`add`, `sub`, `mul`, `div`, `floordiv`, `mod`, `pow`) to
+    arithmetic operators: `+`, `-`, `*`, `/`, `//`, `%`, `**`.
+&&&&&&&&&&&&&&&&&&&&&&&&&&& sum &&&&&&&&&&&&&&&&&&&&&&&&&&&
+Help on function sum in module pandas.core.frame:
+
+sum(self, axis: 'Axis | None' = 0, skipna: 'bool' = True, numeric_only: 'bool' = False, min_count: 'int' = 0, **kwargs)
+    Return the sum of the values over the requested axis.
+
+    This is equivalent to the method ``numpy.sum``.
+
+    Parameters
+    ----------
+    axis : {index (0), columns (1)}
+&&&&&&&&&&&&&&&&&&&&&&&&&&& swapaxes &&&&&&&&&&&&&&&&&&&&&&&&&&&
+Help on function swapaxes in module pandas.core.generic:
+
+swapaxes(self, axis1: 'Axis', axis2: 'Axis', copy: 'bool_t | None' = None) -> 'Self'
+    Interchange axes and swap values axes appropriately.
+
+    .. deprecated:: 2.1.0
+        ``swapaxes`` is deprecated and will be removed.
+        Please use ``transpose`` instead.
+
+    Returns
+&&&&&&&&&&&&&&&&&&&&&&&&&&& swaplevel &&&&&&&&&&&&&&&&&&&&&&&&&&&
+Help on function swaplevel in module pandas.core.frame:
+
+swaplevel(self, i: 'Axis' = -2, j: 'Axis' = -1, axis: 'Axis' = 0) -> 'DataFrame'
+    Swap levels i and j in a :class:`MultiIndex`.
+
+    Default is to swap the two innermost levels of the index.
+
+    Parameters
+    ----------
+    i, j : int or str
+&&&&&&&&&&&&&&&&&&&&&&&&&&& tail &&&&&&&&&&&&&&&&&&&&&&&&&&&
+Help on function tail in module pandas.core.generic:
+
+tail(self, n: 'int' = 5) -> 'Self'
+    Return the last `n` rows.
+
+    This function returns last `n` rows from the object based on
+    position. It is useful for quickly verifying data, for example,
+    after sorting or appending rows.
+
+    For negative values of `n`, this function returns all rows except
+&&&&&&&&&&&&&&&&&&&&&&&&&&& take &&&&&&&&&&&&&&&&&&&&&&&&&&&
+Help on function take in module pandas.core.generic:
+
+take(self, indices, axis: 'Axis' = 0, **kwargs) -> 'Self'
+    Return the elements in the given *positional* indices along an axis.
+
+    This means that we are not indexing according to actual values in
+    the index attribute of the object. We are indexing according to the
+    actual position of the element in the object.
+
+    Parameters
+&&&&&&&&&&&&&&&&&&&&&&&&&&& to_clipboard &&&&&&&&&&&&&&&&&&&&&&&&&&&
+Help on function to_clipboard in module pandas.core.generic:
+
+to_clipboard(self, *, excel: 'bool_t' = True, sep: 'str | None' = None, **kwargs) -> 'None'
+    Copy object to the system clipboard.
+
+    Write a text representation of object to the system clipboard.
+    This can be pasted into Excel, for example.
+
+    Parameters
+    ----------
+&&&&&&&&&&&&&&&&&&&&&&&&&&& to_csv &&&&&&&&&&&&&&&&&&&&&&&&&&&
+Help on function to_csv in module pandas.core.generic:
+
+to_csv(self, path_or_buf: 'FilePath | WriteBuffer[bytes] | WriteBuffer[str] | None' = None, *, sep: 'str' = ',', na_rep: 'str' = '', float_format: 'str | Callable | None' = None, columns: 'Sequence[Hashable] | None' = None, header: 'bool_t | list[str]' = True, index: 'bool_t' = True, index_label: 'IndexLabel | None' = None, mode: 'str' = 'w', encoding: 'str | None' = None, compression: 'CompressionOptions' = 'infer', quoting: 'int | None' = None, quotechar: 'str' = '"', lineterminator: 'str | None' = None, chunksize: 'int | None' = None, date_format: 'str | None' = None, doublequote: 'bool_t' = True, escapechar: 'str | None' = None, decimal: 'str' = '.', errors: 'OpenFileErrors' = 'strict', storage_options: 'StorageOptions | None' = None) -> 'str | None'
+    Write object to a comma-separated values (csv) file.
+
+    Parameters
+    ----------
+    path_or_buf : str, path object, file-like object, or None, default None
+        String, path object (implementing os.PathLike[str]), or file-like
+        object implementing a write() function. If None, the result is
+&&&&&&&&&&&&&&&&&&&&&&&&&&& to_dict &&&&&&&&&&&&&&&&&&&&&&&&&&&
+Help on function to_dict in module pandas.core.frame:
+
+to_dict(self, orient: "Literal['dict', 'list', 'series', 'split', 'tight', 'records', 'index']" = 'dict', *, into: 'type[MutableMappingT] | MutableMappingT' = <class 'dict'>, index: 'bool' = True) -> 'MutableMappingT | list[MutableMappingT]'
+    Convert the DataFrame to a dictionary.
+
+    The type of the key-value pairs can be customized with the parameters
+    (see below).
+
+    Parameters
+    ----------
+&&&&&&&&&&&&&&&&&&&&&&&&&&& to_excel &&&&&&&&&&&&&&&&&&&&&&&&&&&
+Help on function to_excel in module pandas.core.generic:
+
+to_excel(self, excel_writer: 'FilePath | WriteExcelBuffer | ExcelWriter', *, sheet_name: 'str' = 'Sheet1', na_rep: 'str' = '', float_format: 'str | None' = None, columns: 'Sequence[Hashable] | None' = None, header: 'Sequence[Hashable] | bool_t' = True, index: 'bool_t' = True, index_label: 'IndexLabel | None' = None, startrow: 'int' = 0, startcol: 'int' = 0, engine: "Literal['openpyxl', 'xlsxwriter'] | None" = None, merge_cells: 'bool_t' = True, inf_rep: 'str' = 'inf', freeze_panes: 'tuple[int, int] | None' = None, storage_options: 'StorageOptions | None' = None, engine_kwargs: 'dict[str, Any] | None' = None) -> 'None'
+    Write object to an Excel sheet.
+
+    To write a single object to an Excel .xlsx file it is only necessary to
+    specify a target file name. To write to multiple sheets it is necessary to
+    create an `ExcelWriter` object with a target file name, and specify a sheet
+    in the file to write to.
+
+&&&&&&&&&&&&&&&&&&&&&&&&&&& to_feather &&&&&&&&&&&&&&&&&&&&&&&&&&&
+Help on function to_feather in module pandas.core.frame:
+
+to_feather(self, path: 'FilePath | WriteBuffer[bytes]', **kwargs) -> 'None'
+    Write a DataFrame to the binary Feather format.
+
+    Parameters
+    ----------
+    path : str, path object, file-like object
+        String, path object (implementing ``os.PathLike[str]``), or file-like
+        object implementing a binary ``write()`` function. If a string or a path,
+&&&&&&&&&&&&&&&&&&&&&&&&&&& to_gbq &&&&&&&&&&&&&&&&&&&&&&&&&&&
+Help on function to_gbq in module pandas.core.frame:
+
+to_gbq(self, destination_table: 'str', *, project_id: 'str | None' = None, chunksize: 'int | None' = None, reauth: 'bool' = False, if_exists: 'ToGbqIfexist' = 'fail', auth_local_webserver: 'bool' = True, table_schema: 'list[dict[str, str]] | None' = None, location: 'str | None' = None, progress_bar: 'bool' = True, credentials=None) -> 'None'
+    Write a DataFrame to a Google BigQuery table.
+
+    .. deprecated:: 2.2.0
+
+       Please use ``pandas_gbq.to_gbq`` instead.
+
+    This function requires the `pandas-gbq package
+&&&&&&&&&&&&&&&&&&&&&&&&&&& to_hdf &&&&&&&&&&&&&&&&&&&&&&&&&&&
+Help on function to_hdf in module pandas.core.generic:
+
+to_hdf(self, path_or_buf: 'FilePath | HDFStore', *, key: 'str', mode: "Literal['a', 'w', 'r+']" = 'a', complevel: 'int | None' = None, complib: "Literal['zlib', 'lzo', 'bzip2', 'blosc'] | None" = None, append: 'bool_t' = False, format: "Literal['fixed', 'table'] | None" = None, index: 'bool_t' = True, min_itemsize: 'int | dict[str, int] | None' = None, nan_rep=None, dropna: 'bool_t | None' = None, data_columns: 'Literal[True] | list[str] | None' = None, errors: 'OpenFileErrors' = 'strict', encoding: 'str' = 'UTF-8') -> 'None'
+    Write the contained data to an HDF5 file using HDFStore.
+
+    Hierarchical Data Format (HDF) is self-describing, allowing an
+    application to interpret the structure and contents of a file with
+    no outside information. One HDF file can hold a mix of related objects
+    which can be accessed as a group or as individual objects.
+
+&&&&&&&&&&&&&&&&&&&&&&&&&&& to_html &&&&&&&&&&&&&&&&&&&&&&&&&&&
+Help on function to_html in module pandas.core.frame:
+
+to_html(self, buf: 'FilePath | WriteBuffer[str] | None' = None, *, columns: 'Axes | None' = None, col_space: 'ColspaceArgType | None' = None, header: 'bool' = True, index: 'bool' = True, na_rep: 'str' = 'NaN', formatters: 'FormattersType | None' = None, float_format: 'FloatFormatType | None' = None, sparsify: 'bool | None' = None, index_names: 'bool' = True, justify: 'str | None' = None, max_rows: 'int | None' = None, max_cols: 'int | None' = None, show_dimensions: 'bool | str' = False, decimal: 'str' = '.', bold_rows: 'bool' = True, classes: 'str | list | tuple | None' = None, escape: 'bool' = True, notebook: 'bool' = False, border: 'int | bool | None' = None, table_id: 'str | None' = None, render_links: 'bool' = False, encoding: 'str | None' = None) -> 'str | None'
+    Render a DataFrame as an HTML table.
+
+    Parameters
+    ----------
+    buf : str, Path or StringIO-like, optional, default None
+        Buffer to write to. If None, the output is returned as a string.
+    columns : array-like, optional, default None
+&&&&&&&&&&&&&&&&&&&&&&&&&&& to_json &&&&&&&&&&&&&&&&&&&&&&&&&&&
+Help on function to_json in module pandas.core.generic:
+
+to_json(self, path_or_buf: 'FilePath | WriteBuffer[bytes] | WriteBuffer[str] | None' = None, *, orient: "Literal['split', 'records', 'index', 'table', 'columns', 'values'] | None" = None, date_format: 'str | None' = None, double_precision: 'int' = 10, force_ascii: 'bool_t' = True, date_unit: 'TimeUnit' = 'ms', default_handler: 'Callable[[Any], JSONSerializable] | None' = None, lines: 'bool_t' = False, compression: 'CompressionOptions' = 'infer', index: 'bool_t | None' = None, indent: 'int | None' = None, storage_options: 'StorageOptions | None' = None, mode: "Literal['a', 'w']" = 'w') -> 'str | None'
+    Convert the object to a JSON string.
+
+    Note NaN's and None will be converted to null and datetime objects
+    will be converted to UNIX timestamps.
+
+    Parameters
+    ----------
+&&&&&&&&&&&&&&&&&&&&&&&&&&& to_latex &&&&&&&&&&&&&&&&&&&&&&&&&&&
+Help on function to_latex in module pandas.core.generic:
+
+to_latex(self, buf: 'FilePath | WriteBuffer[str] | None' = None, *, columns: 'Sequence[Hashable] | None' = None, header: 'bool_t | SequenceNotStr[str]' = True, index: 'bool_t' = True, na_rep: 'str' = 'NaN', formatters: 'FormattersType | None' = None, float_format: 'FloatFormatType | None' = None, sparsify: 'bool_t | None' = None, index_names: 'bool_t' = True, bold_rows: 'bool_t' = False, column_format: 'str | None' = None, longtable: 'bool_t | None' = None, escape: 'bool_t | None' = None, encoding: 'str | None' = None, decimal: 'str' = '.', multicolumn: 'bool_t | None' = None, multicolumn_format: 'str | None' = None, multirow: 'bool_t | None' = None, caption: 'str | tuple[str, str] | None' = None, label: 'str | None' = None, position: 'str | None' = None) -> 'str | None'
+    Render object to a LaTeX tabular, longtable, or nested table.
+
+    Requires ``\usepackage{{booktabs}}``.  The output can be copy/pasted
+    into a main LaTeX document or read from an external file
+    with ``\input{{table.tex}}``.
+
+    .. versionchanged:: 2.0.0
+&&&&&&&&&&&&&&&&&&&&&&&&&&& to_markdown &&&&&&&&&&&&&&&&&&&&&&&&&&&
+Help on function to_markdown in module pandas.core.frame:
+
+to_markdown(self, buf: 'FilePath | WriteBuffer[str] | None' = None, *, mode: 'str' = 'wt', index: 'bool' = True, storage_options: 'StorageOptions | None' = None, **kwargs) -> 'str | None'
+    Print DataFrame in Markdown-friendly format.
+
+    Parameters
+    ----------
+    buf : str, Path or StringIO-like, optional, default None
+        Buffer to write to. If None, the output is returned as a string.
+    mode : str, optional
+&&&&&&&&&&&&&&&&&&&&&&&&&&& to_numpy &&&&&&&&&&&&&&&&&&&&&&&&&&&
+Help on function to_numpy in module pandas.core.frame:
+
+to_numpy(self, dtype: 'npt.DTypeLike | None' = None, copy: 'bool' = False, na_value: 'object' = <no_default>) -> 'np.ndarray'
+    Convert the DataFrame to a NumPy array.
+
+    By default, the dtype of the returned array will be the common NumPy
+    dtype of all types in the DataFrame. For example, if the dtypes are
+    ``float16`` and ``float32``, the results dtype will be ``float32``.
+    This may require copying data and coercing values, which may be
+    expensive.
+&&&&&&&&&&&&&&&&&&&&&&&&&&& to_orc &&&&&&&&&&&&&&&&&&&&&&&&&&&
+Help on function to_orc in module pandas.core.frame:
+
+to_orc(self, path: 'FilePath | WriteBuffer[bytes] | None' = None, *, engine: "Literal['pyarrow']" = 'pyarrow', index: 'bool | None' = None, engine_kwargs: 'dict[str, Any] | None' = None) -> 'bytes | None'
+    Write a DataFrame to the ORC format.
+
+    .. versionadded:: 1.5.0
+
+    Parameters
+    ----------
+    path : str, file-like object or None, default None
+&&&&&&&&&&&&&&&&&&&&&&&&&&& to_parquet &&&&&&&&&&&&&&&&&&&&&&&&&&&
+Help on function to_parquet in module pandas.core.frame:
+
+to_parquet(self, path: 'FilePath | WriteBuffer[bytes] | None' = None, *, engine: "Literal['auto', 'pyarrow', 'fastparquet']" = 'auto', compression: 'str | None' = 'snappy', index: 'bool | None' = None, partition_cols: 'list[str] | None' = None, storage_options: 'StorageOptions | None' = None, **kwargs) -> 'bytes | None'
+    Write a DataFrame to the binary parquet format.
+
+    This function writes the dataframe as a `parquet file
+    <https://parquet.apache.org/>`_. You can choose different parquet
+    backends, and have the option of compression. See
+    :ref:`the user guide <io.parquet>` for more details.
+
+&&&&&&&&&&&&&&&&&&&&&&&&&&& to_period &&&&&&&&&&&&&&&&&&&&&&&&&&&
+Help on function to_period in module pandas.core.frame:
+
+to_period(self, freq: 'Frequency | None' = None, axis: 'Axis' = 0, copy: 'bool | None' = None) -> 'DataFrame'
+    Convert DataFrame from DatetimeIndex to PeriodIndex.
+
+    Convert DataFrame from DatetimeIndex to PeriodIndex with desired
+    frequency (inferred from index if not passed).
+
+    Parameters
+    ----------
+&&&&&&&&&&&&&&&&&&&&&&&&&&& to_pickle &&&&&&&&&&&&&&&&&&&&&&&&&&&
+Help on function to_pickle in module pandas.core.generic:
+
+to_pickle(self, path: 'FilePath | WriteBuffer[bytes]', *, compression: 'CompressionOptions' = 'infer', protocol: 'int' = 5, storage_options: 'StorageOptions | None' = None) -> 'None'
+    Pickle (serialize) object to file.
+
+    Parameters
+    ----------
+    path : str, path object, or file-like object
+        String, path object (implementing ``os.PathLike[str]``), or file-like
+        object implementing a binary ``write()`` function. File path where
+&&&&&&&&&&&&&&&&&&&&&&&&&&& to_records &&&&&&&&&&&&&&&&&&&&&&&&&&&
+Help on function to_records in module pandas.core.frame:
+
+to_records(self, index: 'bool' = True, column_dtypes=None, index_dtypes=None) -> 'np.rec.recarray'
+    Convert DataFrame to a NumPy record array.
+
+    Index will be included as the first field of the record array if
+    requested.
+
+    Parameters
+    ----------
+&&&&&&&&&&&&&&&&&&&&&&&&&&& to_sql &&&&&&&&&&&&&&&&&&&&&&&&&&&
+Help on function to_sql in module pandas.core.generic:
+
+to_sql(self, name: 'str', con, *, schema: 'str | None' = None, if_exists: "Literal['fail', 'replace', 'append']" = 'fail', index: 'bool_t' = True, index_label: 'IndexLabel | None' = None, chunksize: 'int | None' = None, dtype: 'DtypeArg | None' = None, method: "Literal['multi'] | Callable | None" = None) -> 'int | None'
+    Write records stored in a DataFrame to a SQL database.
+
+    Databases supported by SQLAlchemy [1]_ are supported. Tables can be
+    newly created, appended to, or overwritten.
+
+    Parameters
+    ----------
+&&&&&&&&&&&&&&&&&&&&&&&&&&& to_stata &&&&&&&&&&&&&&&&&&&&&&&&&&&
+Help on function to_stata in module pandas.core.frame:
+
+to_stata(self, path: 'FilePath | WriteBuffer[bytes]', *, convert_dates: 'dict[Hashable, str] | None' = None, write_index: 'bool' = True, byteorder: 'ToStataByteorder | None' = None, time_stamp: 'datetime.datetime | None' = None, data_label: 'str | None' = None, variable_labels: 'dict[Hashable, str] | None' = None, version: 'int | None' = 114, convert_strl: 'Sequence[Hashable] | None' = None, compression: 'CompressionOptions' = 'infer', storage_options: 'StorageOptions | None' = None, value_labels: 'dict[Hashable, dict[float, str]] | None' = None) -> 'None'
+    Export DataFrame object to Stata dta format.
+
+    Writes the DataFrame to a Stata dataset file.
+    "dta" files contain a Stata dataset.
+
+    Parameters
+    ----------
+&&&&&&&&&&&&&&&&&&&&&&&&&&& to_string &&&&&&&&&&&&&&&&&&&&&&&&&&&
+Help on function to_string in module pandas.core.frame:
+
+to_string(self, buf: 'FilePath | WriteBuffer[str] | None' = None, *, columns: 'Axes | None' = None, col_space: 'int | list[int] | dict[Hashable, int] | None' = None, header: 'bool | SequenceNotStr[str]' = True, index: 'bool' = True, na_rep: 'str' = 'NaN', formatters: 'fmt.FormattersType | None' = None, float_format: 'fmt.FloatFormatType | None' = None, sparsify: 'bool | None' = None, index_names: 'bool' = True, justify: 'str | None' = None, max_rows: 'int | None' = None, max_cols: 'int | None' = None, show_dimensions: 'bool' = False, decimal: 'str' = '.', line_width: 'int | None' = None, min_rows: 'int | None' = None, max_colwidth: 'int | None' = None, encoding: 'str | None' = None) -> 'str | None'
+    Render a DataFrame to a console-friendly tabular output.
+
+    Parameters
+    ----------
+    buf : str, Path or StringIO-like, optional, default None
+        Buffer to write to. If None, the output is returned as a string.
+    columns : array-like, optional, default None
+&&&&&&&&&&&&&&&&&&&&&&&&&&& to_timestamp &&&&&&&&&&&&&&&&&&&&&&&&&&&
+Help on function to_timestamp in module pandas.core.frame:
+
+to_timestamp(self, freq: 'Frequency | None' = None, how: 'ToTimestampHow' = 'start', axis: 'Axis' = 0, copy: 'bool | None' = None) -> 'DataFrame'
+    Cast to DatetimeIndex of timestamps, at *beginning* of period.
+
+    Parameters
+    ----------
+    freq : str, default frequency of PeriodIndex
+        Desired frequency.
+    how : {'s', 'e', 'start', 'end'}
+&&&&&&&&&&&&&&&&&&&&&&&&&&& to_xarray &&&&&&&&&&&&&&&&&&&&&&&&&&&
+Help on function to_xarray in module pandas.core.generic:
+
+to_xarray(self)
+    Return an xarray object from the pandas object.
+
+    Returns
+    -------
+    xarray.DataArray or xarray.Dataset
+        Data in the pandas structure converted to Dataset if the object is
+        a DataFrame, or a DataArray if the object is a Series.
+&&&&&&&&&&&&&&&&&&&&&&&&&&& to_xml &&&&&&&&&&&&&&&&&&&&&&&&&&&
+Help on function to_xml in module pandas.core.frame:
+
+to_xml(self, path_or_buffer: 'FilePath | WriteBuffer[bytes] | WriteBuffer[str] | None' = None, *, index: 'bool' = True, root_name: 'str | None' = 'data', row_name: 'str | None' = 'row', na_rep: 'str | None' = None, attr_cols: 'list[str] | None' = None, elem_cols: 'list[str] | None' = None, namespaces: 'dict[str | None, str] | None' = None, prefix: 'str | None' = None, encoding: 'str' = 'utf-8', xml_declaration: 'bool | None' = True, pretty_print: 'bool | None' = True, parser: 'XMLParsers | None' = 'lxml', stylesheet: 'FilePath | ReadBuffer[str] | ReadBuffer[bytes] | None' = None, compression: 'CompressionOptions' = 'infer', storage_options: 'StorageOptions | None' = None) -> 'str | None'
+    Render a DataFrame to an XML document.
+
+    .. versionadded:: 1.3.0
+
+    Parameters
+    ----------
+    path_or_buffer : str, path object, file-like object, or None, default None
+&&&&&&&&&&&&&&&&&&&&&&&&&&& transform &&&&&&&&&&&&&&&&&&&&&&&&&&&
+Help on function transform in module pandas.core.frame:
+
+transform(self, func: 'AggFuncType', axis: 'Axis' = 0, *args, **kwargs) -> 'DataFrame'
+    Call ``func`` on self producing a DataFrame with the same axis shape as self.
+
+    Parameters
+    ----------
+    func : function, str, list-like or dict-like
+        Function to use for transforming the data. If a function, must either
+        work when passed a DataFrame or when passed to DataFrame.apply. If func
+&&&&&&&&&&&&&&&&&&&&&&&&&&& transpose &&&&&&&&&&&&&&&&&&&&&&&&&&&
+Help on function transpose in module pandas.core.frame:
+
+transpose(self, *args, copy: 'bool' = False) -> 'DataFrame'
+    Transpose index and columns.
+
+    Reflect the DataFrame over its main diagonal by writing rows as columns
+    and vice-versa. The property :attr:`.T` is an accessor to the method
+    :meth:`transpose`.
+
+    Parameters
+&&&&&&&&&&&&&&&&&&&&&&&&&&& truediv &&&&&&&&&&&&&&&&&&&&&&&&&&&
+Help on function truediv in module pandas.core.frame:
+
+truediv(self, other, axis: 'Axis' = 'columns', level=None, fill_value=None) -> 'DataFrame'
+    Get Floating division of dataframe and other, element-wise (binary operator `truediv`).
+
+    Equivalent to ``dataframe / other``, but with support to substitute a fill_value
+    for missing data in one of the inputs. With reverse version, `rtruediv`.
+
+    Among flexible wrappers (`add`, `sub`, `mul`, `div`, `floordiv`, `mod`, `pow`) to
+    arithmetic operators: `+`, `-`, `*`, `/`, `//`, `%`, `**`.
+&&&&&&&&&&&&&&&&&&&&&&&&&&& truncate &&&&&&&&&&&&&&&&&&&&&&&&&&&
+Help on function truncate in module pandas.core.generic:
+
+truncate(self, before=None, after=None, axis: 'Axis | None' = None, copy: 'bool_t | None' = None) -> 'Self'
+    Truncate a Series or DataFrame before and after some index value.
+
+    This is a useful shorthand for boolean indexing based on index
+    values above or below certain thresholds.
+
+    Parameters
+    ----------
+&&&&&&&&&&&&&&&&&&&&&&&&&&& tz_convert &&&&&&&&&&&&&&&&&&&&&&&&&&&
+Help on function tz_convert in module pandas.core.generic:
+
+tz_convert(self, tz, axis: 'Axis' = 0, level=None, copy: 'bool_t | None' = None) -> 'Self'
+    Convert tz-aware axis to target time zone.
+
+    Parameters
+    ----------
+    tz : str or tzinfo object or None
+        Target time zone. Passing ``None`` will convert to
+        UTC and remove the timezone information.
+&&&&&&&&&&&&&&&&&&&&&&&&&&& tz_localize &&&&&&&&&&&&&&&&&&&&&&&&&&&
+Help on function tz_localize in module pandas.core.generic:
+
+tz_localize(self, tz, axis: 'Axis' = 0, level=None, copy: 'bool_t | None' = None, ambiguous: 'TimeAmbiguous' = 'raise', nonexistent: 'TimeNonexistent' = 'raise') -> 'Self'
+    Localize tz-naive index of a Series or DataFrame to target time zone.
+
+    This operation localizes the Index. To localize the values in a
+    timezone-naive Series, use :meth:`Series.dt.tz_localize`.
+
+    Parameters
+    ----------
+&&&&&&&&&&&&&&&&&&&&&&&&&&& unstack &&&&&&&&&&&&&&&&&&&&&&&&&&&
+Help on function unstack in module pandas.core.frame:
+
+unstack(self, level: 'IndexLabel' = -1, fill_value=None, sort: 'bool' = True)
+    Pivot a level of the (necessarily hierarchical) index labels.
+
+    Returns a DataFrame having a new level of column labels whose inner-most level
+    consists of the pivoted index labels.
+
+    If the index is not a MultiIndex, the output will be a Series
+    (the analogue of stack when the columns are not a MultiIndex).
+&&&&&&&&&&&&&&&&&&&&&&&&&&& update &&&&&&&&&&&&&&&&&&&&&&&&&&&
+Help on function update in module pandas.core.frame:
+
+update(self, other, join: 'UpdateJoin' = 'left', overwrite: 'bool' = True, filter_func=None, errors: 'IgnoreRaise' = 'ignore') -> 'None'
+    Modify in place using non-NA values from another DataFrame.
+
+    Aligns on indices. There is no return value.
+
+    Parameters
+    ----------
+    other : DataFrame, or object coercible into a DataFrame
+&&&&&&&&&&&&&&&&&&&&&&&&&&& value_counts &&&&&&&&&&&&&&&&&&&&&&&&&&&
+Help on function value_counts in module pandas.core.frame:
+
+value_counts(self, subset: 'IndexLabel | None' = None, normalize: 'bool' = False, sort: 'bool' = True, ascending: 'bool' = False, dropna: 'bool' = True) -> 'Series'
+    Return a Series containing the frequency of each distinct row in the Dataframe.
+
+    Parameters
+    ----------
+    subset : label or list of labels, optional
+        Columns to use when counting unique combinations.
+    normalize : bool, default False
+&&&&&&&&&&&&&&&&&&&&&&&&&&& values &&&&&&&&&&&&&&&&&&&&&&&&&&&
+Help on property:
+
+    Return a Numpy representation of the DataFrame.
+
+    .. warning::
+
+       We recommend using :meth:`DataFrame.to_numpy` instead.
+
+    Only the values in the DataFrame will be returned, the axes labels
+    will be removed.
+&&&&&&&&&&&&&&&&&&&&&&&&&&& var &&&&&&&&&&&&&&&&&&&&&&&&&&&
+Help on function var in module pandas.core.frame:
+
+var(self, axis: 'Axis | None' = 0, skipna: 'bool' = True, ddof: 'int' = 1, numeric_only: 'bool' = False, **kwargs)
+    Return unbiased variance over requested axis.
+
+    Normalized by N-1 by default. This can be changed using the ddof argument.
+
+    Parameters
+    ----------
+    axis : {index (0), columns (1)}
+&&&&&&&&&&&&&&&&&&&&&&&&&&& where &&&&&&&&&&&&&&&&&&&&&&&&&&&
+Help on function where in module pandas.core.generic:
+
+where(self, cond, other=nan, *, inplace: 'bool_t' = False, axis: 'Axis | None' = None, level: 'Level | None' = None) -> 'Self | None'
+    Replace values where the condition is False.
+
+    Parameters
+    ----------
+    cond : bool Series/DataFrame, array-like, or callable
+        Where `cond` is True, keep the original value. Where
+        False, replace with corresponding value from `other`.
+&&&&&&&&&&&&&&&&&&&&&&&&&&& xs &&&&&&&&&&&&&&&&&&&&&&&&&&&
+Help on function xs in module pandas.core.generic:
+
+xs(self, key: 'IndexLabel', axis: 'Axis' = 0, level: 'IndexLabel | None' = None, drop_level: 'bool_t' = True) -> 'Self'
+    Return cross-section from the Series/DataFrame.
+
+    This method takes a `key` argument to select data at a particular
+    level of a MultiIndex.
+
+    Parameters
+    ----------
