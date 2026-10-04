@@ -1,0 +1,237 @@
+9.1G	/Users/leopoldogonzalez/AFNI_Ejemplos
+6.7M	/Users/leopoldogonzalez/AFNI_Prog
+116K	/Users/leopoldogonzalez/Advanced_Calculus
+388K	/Users/leopoldogonzalez/Analisis-Imagenes
+344M	/Users/leopoldogonzalez/Apuntes
+727M	/Users/leopoldogonzalez/Apuntes57
+344M	/Users/leopoldogonzalez/Apuntes_M09D10Y26
+344M	/Users/leopoldogonzalez/Apuntes_M09D17Y26
+344M	/Users/leopoldogonzalez/Apuntes_M09D19Y26
+344M	/Users/leopoldogonzalez/Apuntes_M09D25Y26
+652K	/Users/leopoldogonzalez/BIDS
+285M	/Users/leopoldogonzalez/Beginning_WebGL_HTML5
+ 14M	/Users/leopoldogonzalez/Buscar
+265M	/Users/leopoldogonzalez/CUDA
+265M	/Users/leopoldogonzalez/CUDA_M08D25Y26
+121M	/Users/leopoldogonzalez/CUTE_Programas
+120M	/Users/leopoldogonzalez/CUTE_Programas999
+4.0K	/Users/leopoldogonzalez/Clemens
+748K	/Users/leopoldogonzalez/Cluster
+748K	/Users/leopoldogonzalez/Cluster_M08D25Y26
+142M	/Users/leopoldogonzalez/Code_JavaScript_Creativity
+ 59M	/Users/leopoldogonzalez/CreaHTMLs
+ 59M	/Users/leopoldogonzalez/CreaHTMLs_M08D25Y26
+2.4M	/Users/leopoldogonzalez/DATOS_Libros
+126G	/Users/leopoldogonzalez/Desktop
+ 28K	/Users/leopoldogonzalez/Docker_ejemplos
+ 11G	/Users/leopoldogonzalez/Downloads
+ 12M	/Users/leopoldogonzalez/IMG_M05D23A26
+8.4M	/Users/leopoldogonzalez/IMG_M07D28A26
+424K	/Users/leopoldogonzalez/Introduction_to_Biomedical_Engineering_2E
+1.4G	/Users/leopoldogonzalez/Java_Ejemplos
+ 13M	/Users/leopoldogonzalez/Latex_Apuntes
+2.5M	/Users/leopoldogonzalez/Latex_Apuntes2
+ 10M	/Users/leopoldogonzalez/Latex_Apuntes_M09D09Y26
+ 55G	/Users/leopoldogonzalez/Library
+1.2G	/Users/leopoldogonzalez/Libros57
+1.2G	/Users/leopoldogonzalez/Libros57_M09D11Y26
+1.2G	/Users/leopoldogonzalez/Libros57_M10D03Y26
+116K	/Users/leopoldogonzalez/Libros_RStudio
+ 76M	/Users/leopoldogonzalez/Libros_RStudio_M02D07Y26
+ 66M	/Users/leopoldogonzalez/Libros_RStudio_ago2923
+536K	/Users/leopoldogonzalez/MiPagina
+224K	/Users/leopoldogonzalez/Movies
+122M	/Users/leopoldogonzalez/Music
+ 20K	/Users/leopoldogonzalez/NGINX_Docker
+4.0K	/Users/leopoldogonzalez/Netbeans_docker
+433M	/Users/leopoldogonzalez/OpenGL
+2.2M	/Users/leopoldogonzalez/OpenGL_M01D24Y26
+1.3G	/Users/leopoldogonzalez/PDF_M05D23A26
+1.3G	/Users/leopoldogonzalez/PDF_M07D28A26
+ 20K	/Users/leopoldogonzalez/PHP
+ 18M	/Users/leopoldogonzalez/PPP_libros-Python_Libros
+493M	/Users/leopoldogonzalez/Peliculas
+3.6M	/Users/leopoldogonzalez/Physics-for-JavaScript-Games-Animation-Simulations
+  0B	/Users/leopoldogonzalez/Pictures
+2.4M	/Users/leopoldogonzalez/Programacion57
+264K	/Users/leopoldogonzalez/Programacion_R
+229M	/Users/leopoldogonzalez/Propaganda57
+124M	/Users/leopoldogonzalez/Propaganda5777_M01D06Y26
+116K	/Users/leopoldogonzalez/Pruebas
+  0B	/Users/leopoldogonzalez/Public
+741M	/Users/leopoldogonzalez/Python
+208K	/Users/leopoldogonzalez/Python_2024
+524K	/Users/leopoldogonzalez/Python_Buscar
+1.4M	/Users/leopoldogonzalez/Python_Imagenes
+704K	/Users/leopoldogonzalez/Python_Imagenes2
+ 30M	/Users/leopoldogonzalez/Python_Libros_HTML
+560M	/Users/leopoldogonzalez/Python_M09D15Y26
+581M	/Users/leopoldogonzalez/Python_M09D19Y26
+641M	/Users/leopoldogonzalez/Python_M09D22Y26
+644M	/Users/leopoldogonzalez/Python_M09D26Y26
+665M	/Users/leopoldogonzalez/Python_M10D04Y26
+ 13M	/Users/leopoldogonzalez/Python_OpenGL_jul0724
+812K	/Users/leopoldogonzalez/Python_Pandas
+ 30M	/Users/leopoldogonzalez/Python_Pubmed
+172K	/Users/leopoldogonzalez/Python_Scipy
+1.8M	/Users/leopoldogonzalez/Python_Tkinter
+383M	/Users/leopoldogonzalez/Python_YouTube_jul1124
+320K	/Users/leopoldogonzalez/Python_fft
+ 15M	/Users/leopoldogonzalez/Python_may0524
+3.7M	/Users/leopoldogonzalez/RR
+368K	/Users/leopoldogonzalez/RR_M02D07Y26
+ 76K	/Users/leopoldogonzalez/R_Curso_2021
+4.0K	/Users/leopoldogonzalez/R_temario_INB
+3.6M	/Users/leopoldogonzalez/Res_Apuntes
+496K	/Users/leopoldogonzalez/Res_Python_Imagenes
+2.8M	/Users/leopoldogonzalez/Res_Python_Libros_HTML
+ 24M	/Users/leopoldogonzalez/Res_Python_Pubmed
+3.6M	/Users/leopoldogonzalez/Res_Python_Tkinter
+380K	/Users/leopoldogonzalez/Res_SSH
+345M	/Users/leopoldogonzalez/Res_clusterio
+932K	/Users/leopoldogonzalez/Res_curso-r
+ 13M	/Users/leopoldogonzalez/Res_santosg57-Curso-R
+ 11M	/Users/leopoldogonzalez/Res_santosg57-Curso-R2
+ 32M	/Users/leopoldogonzalez/Res_santosg57-clasesparticulares
+ 12K	/Users/leopoldogonzalez/SH
+376K	/Users/leopoldogonzalez/SSH
+404K	/Users/leopoldogonzalez/SSH2
+ 48K	/Users/leopoldogonzalez/SemanaCerebro
+408K	/Users/leopoldogonzalez/SemanaCerebro57
+213M	/Users/leopoldogonzalez/Sphinx57
+ 96K	/Users/leopoldogonzalez/Sucesiones_Series_Take
+8.0K	/Users/leopoldogonzalez/analisis_real_gabriel
+779M	/Users/leopoldogonzalez/andy57
+4.0K	/Users/leopoldogonzalez/baja_git.sh
+4.0K	/Users/leopoldogonzalez/baja_git_mat.sh
+4.0K	/Users/leopoldogonzalez/cam.sh
+672M	/Users/leopoldogonzalez/cannabis_datos
+ 87M	/Users/leopoldogonzalez/caos57
+ 85M	/Users/leopoldogonzalez/caos57_M09D24Y26
+ 87M	/Users/leopoldogonzalez/caos57_M09D25Y26
+1.5M	/Users/leopoldogonzalez/clase_01_python_ago0926
+ 12M	/Users/leopoldogonzalez/clusterio
+193M	/Users/leopoldogonzalez/clusterio-inb
+3.4M	/Users/leopoldogonzalez/clusterio2
+3.4M	/Users/leopoldogonzalez/config_lgs
+3.2M	/Users/leopoldogonzalez/configs_lConcha
+1.8M	/Users/leopoldogonzalez/conn57
+4.0K	/Users/leopoldogonzalez/copi_del.sh
+4.0K	/Users/leopoldogonzalez/copiar.sh
+4.0K	/Users/leopoldogonzalez/coplatex.sh
+4.0K	/Users/leopoldogonzalez/creaHTML.py
+296K	/Users/leopoldogonzalez/curso-C
+376K	/Users/leopoldogonzalez/curso-python
+1.1M	/Users/leopoldogonzalez/curso-r
+ 44K	/Users/leopoldogonzalez/curso_c
+672M	/Users/leopoldogonzalez/datos_freesurfer
+ 96M	/Users/leopoldogonzalez/dcm2bid
+ 63M	/Users/leopoldogonzalez/dcm2bid_M07D03Y26
+4.0K	/Users/leopoldogonzalez/dd
+ 12K	/Users/leopoldogonzalez/dd.txt
+ 28K	/Users/leopoldogonzalez/dd.txt-e
+8.0K	/Users/leopoldogonzalez/desktop.html
+4.0K	/Users/leopoldogonzalez/desktop.txt
+ 24K	/Users/leopoldogonzalez/dir.html
+8.0K	/Users/leopoldogonzalez/dir.txt
+ 57M	/Users/leopoldogonzalez/directorios57
+992M	/Users/leopoldogonzalez/docker01
+980K	/Users/leopoldogonzalez/docker_Prog
+ 16K	/Users/leopoldogonzalez/docker_php8_2_apache
+208K	/Users/leopoldogonzalez/docker_python_dockerfile
+ 20K	/Users/leopoldogonzalez/docker_ubuntu
+8.0K	/Users/leopoldogonzalez/du_user.txt
+ 21G	/Users/leopoldogonzalez/freesurfer-data
+ 12K	/Users/leopoldogonzalez/freesurfer_docker
+4.0K	/Users/leopoldogonzalez/girasol.txt
+4.0K	/Users/leopoldogonzalez/github.txt
+4.0K	/Users/leopoldogonzalez/github_M08D25Y26.html
+4.0K	/Users/leopoldogonzalez/github_M08D25Y26.txt
+4.0K	/Users/leopoldogonzalez/github_matecom57.txt
+4.0K	/Users/leopoldogonzalez/github_santosg572.txt
+4.0K	/Users/leopoldogonzalez/guarda.sh
+ 12K	/Users/leopoldogonzalez/home.html
+4.0K	/Users/leopoldogonzalez/home.txt
+ 16K	/Users/leopoldogonzalez/home_mac_casaM06D04Y26.html
+4.0K	/Users/leopoldogonzalez/home_mac_casaM06D04Y26.txt
+  0B	/Users/leopoldogonzalez/home_remoto
+  0B	/Users/leopoldogonzalez/htdocs
+230M	/Users/leopoldogonzalez/html57
+720K	/Users/leopoldogonzalez/html57_M06D23Y26
+884K	/Users/leopoldogonzalez/html57_M07D17Y26
+233M	/Users/leopoldogonzalez/html57_M07D21Y26
+8.0K	/Users/leopoldogonzalez/html_doc
+572K	/Users/leopoldogonzalez/installer
+ 34M	/Users/leopoldogonzalez/introduction-to-biomedical-engineering-john-d-enderle-et-al.pdf
+4.0K	/Users/leopoldogonzalez/ionos.txt
+2.4M	/Users/leopoldogonzalez/jmartinez
+280K	/Users/leopoldogonzalez/jmartinez_M03D16Y26
+2.4M	/Users/leopoldogonzalez/jmartinez_M03D17Y26
+1.3M	/Users/leopoldogonzalez/jupyter_pruebas
+1.4M	/Users/leopoldogonzalez/kk
+ 86M	/Users/leopoldogonzalez/lconcha_wiki
+4.0K	/Users/leopoldogonzalez/listar.sh
+4.0K	/Users/leopoldogonzalez/man.sh
+281M	/Users/leopoldogonzalez/mi-tutorial
+ 25M	/Users/leopoldogonzalez/mi-tutorial_M06D14Y25
+5.3G	/Users/leopoldogonzalez/miniconda3
+4.0K	/Users/leopoldogonzalez/movies.txt
+659M	/Users/leopoldogonzalez/movies_hiram
+3.4G	/Users/leopoldogonzalez/movies_youTube
+4.0K	/Users/leopoldogonzalez/musica.dat
+860M	/Users/leopoldogonzalez/nlmeU
+4.0K	/Users/leopoldogonzalez/p1.R
+4.0K	/Users/leopoldogonzalez/p1.sh
+4.0K	/Users/leopoldogonzalez/pati.R
+4.0K	/Users/leopoldogonzalez/peliculas.txt
+4.0K	/Users/leopoldogonzalez/pen.sh
+4.0K	/Users/leopoldogonzalez/pp.html
+676K	/Users/leopoldogonzalez/programa_estres_java
+116K	/Users/leopoldogonzalez/propaganda
+164K	/Users/leopoldogonzalez/pruebasclus
+4.0K	/Users/leopoldogonzalez/q.log
+4.0K	/Users/leopoldogonzalez/replace.sh
+ 13M	/Users/leopoldogonzalez/rstudio
+ 24K	/Users/leopoldogonzalez/rstudio_M02D07Y26
+4.0K	/Users/leopoldogonzalez/saca_dir.sh
+168K	/Users/leopoldogonzalez/santosg57
+320K	/Users/leopoldogonzalez/santosg57-Bash
+244K	/Users/leopoldogonzalez/santosg57-Bash2
+228M	/Users/leopoldogonzalez/santosg57-Calif57
+226M	/Users/leopoldogonzalez/santosg57-Calif57_M06D03Y26
+ 17M	/Users/leopoldogonzalez/santosg57-Curso-R2
+5.3M	/Users/leopoldogonzalez/santosg57-Curso-R999
+576K	/Users/leopoldogonzalez/santosg57-afni
+228K	/Users/leopoldogonzalez/santosg57-bids
+ 23M	/Users/leopoldogonzalez/santosg57-clasesparticulares
+ 23M	/Users/leopoldogonzalez/santosg57-clasesparticulares2
+ 31M	/Users/leopoldogonzalez/santosg57-curso-r
+ 31M	/Users/leopoldogonzalez/santosg57-curso-r_M02D06Y26
+240K	/Users/leopoldogonzalez/santosg57-cursos
+2.6M	/Users/leopoldogonzalez/santosg57-docker
+2.6M	/Users/leopoldogonzalez/santosg57-docker_M08D12Y26
+5.2M	/Users/leopoldogonzalez/santosg57-estocasticas
+ 57M	/Users/leopoldogonzalez/santosg57-hiram
+1.4M	/Users/leopoldogonzalez/santosg57-joel
+464K	/Users/leopoldogonzalez/santosg57-joel_M08D30Y26
+432K	/Users/leopoldogonzalez/santosg57-libros572
+280K	/Users/leopoldogonzalez/santosg57-libros572_M08D29Y26
+145M	/Users/leopoldogonzalez/santosg57-python
+ 24M	/Users/leopoldogonzalez/santosg57-python_M08D12Y26
+234M	/Users/leopoldogonzalez/santosg57-python_M09D21Y26
+145M	/Users/leopoldogonzalez/santosg57-python_M09D24Y26
+148M	/Users/leopoldogonzalez/santosg57-python_M09D25Y26
+336M	/Users/leopoldogonzalez/santosg57-r
+9.1M	/Users/leopoldogonzalez/santosg57-soporte
+3.6M	/Users/leopoldogonzalez/santosg57-temarios
+ 76K	/Users/leopoldogonzalez/santosg572
+ 26M	/Users/leopoldogonzalez/santosg57_SSH
+ 64K	/Users/leopoldogonzalez/scl90
+  0B	/Users/leopoldogonzalez/servidor_loacl
+588M	/Users/leopoldogonzalez/three.js-master
+4.0K	/Users/leopoldogonzalez/tour.sh
+4.0K	/Users/leopoldogonzalez/uag01.txt
+ 16K	/Users/leopoldogonzalez/ubuntu24
+4.0K	/Users/leopoldogonzalez/www.txt
+4.0K	/Users/leopoldogonzalez/www.txt.save
+4.0K	/Users/leopoldogonzalez/www_rst.txt

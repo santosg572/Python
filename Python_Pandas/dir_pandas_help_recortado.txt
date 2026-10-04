@@ -1,0 +1,836 @@
+&&&&&&&&&&&&&&&&&&&&&&&&&&& annotations &&&&&&&&&&&&&&&&&&&&&&&&&&&
+Help on _Feature in module __future__ object:
+
+class _Feature(builtins.object)
+ |  _Feature(optionalRelease, mandatoryRelease, compiler_flag)
+ |
+ |  Methods defined here:
+ |
+ |  __init__(self, optionalRelease, mandatoryRelease, compiler_flag)
+ |      Initialize self.  See help(type(self)) for accurate signature.
+ |
+&&&&&&&&&&&&&&&&&&&&&&&&&&& api &&&&&&&&&&&&&&&&&&&&&&&&&&&
+Help on package pandas.api in pandas:
+
+NAME
+    pandas.api - public toolkit API
+
+PACKAGE CONTENTS
+    extensions (package)
+    indexers (package)
+    interchange (package)
+    types (package)
+&&&&&&&&&&&&&&&&&&&&&&&&&&& array &&&&&&&&&&&&&&&&&&&&&&&&&&&
+Help on function array in module pandas.core.construction:
+
+array(data: 'Sequence[object] | AnyArrayLike', dtype: 'Dtype | None' = None, copy: 'bool' = True) -> 'ExtensionArray'
+    Create an array.
+
+    Parameters
+    ----------
+    data : Sequence of objects
+        The scalars inside `data` should be instances of the
+        scalar type for `dtype`. It's expected that `data`
+&&&&&&&&&&&&&&&&&&&&&&&&&&& arrays &&&&&&&&&&&&&&&&&&&&&&&&&&&
+Help on package pandas.arrays in pandas:
+
+NAME
+    pandas.arrays - All of pandas' ExtensionArrays.
+
+DESCRIPTION
+    See :ref:`extending.extension-types` for more.
+
+PACKAGE CONTENTS
+
+&&&&&&&&&&&&&&&&&&&&&&&&&&& bdate_range &&&&&&&&&&&&&&&&&&&&&&&&&&&
+Help on function bdate_range in module pandas.core.indexes.datetimes:
+
+bdate_range(start=None, end=None, periods: 'int | None' = None, freq: 'Frequency | dt.timedelta' = 'B', tz=None, normalize: 'bool' = True, name: 'Hashable | None' = None, weekmask=None, holidays=None, inclusive: 'IntervalClosedType' = 'both', **kwargs) -> 'DatetimeIndex'
+    Return a fixed frequency DatetimeIndex with business day as the default.
+
+    Parameters
+    ----------
+    start : str or datetime-like, default None
+        Left bound for generating dates.
+    end : str or datetime-like, default None
+&&&&&&&&&&&&&&&&&&&&&&&&&&& compat &&&&&&&&&&&&&&&&&&&&&&&&&&&
+Help on package pandas.compat in pandas:
+
+NAME
+    pandas.compat
+
+DESCRIPTION
+    compat
+    ======
+
+    Cross-compatible functions for different versions of Python.
+&&&&&&&&&&&&&&&&&&&&&&&&&&& concat &&&&&&&&&&&&&&&&&&&&&&&&&&&
+Help on function concat in module pandas.core.reshape.concat:
+
+concat(objs: 'Iterable[Series | DataFrame] | Mapping[HashableT, Series | DataFrame]', *, axis: 'Axis' = 0, join: 'str' = 'outer', ignore_index: 'bool' = False, keys: 'Iterable[Hashable] | None' = None, levels=None, names: 'list[HashableT] | None' = None, verify_integrity: 'bool' = False, sort: 'bool' = False, copy: 'bool | None' = None) -> 'DataFrame | Series'
+    Concatenate pandas objects along a particular axis.
+
+    Allows optional set logic along the other axes.
+
+    Can also add a layer of hierarchical indexing on the concatenation axis,
+    which may be useful if the labels are the same (or overlapping) on
+    the passed axis number.
+&&&&&&&&&&&&&&&&&&&&&&&&&&& core &&&&&&&&&&&&&&&&&&&&&&&&&&&
+Help on package pandas.core in pandas:
+
+NAME
+    pandas.core
+
+PACKAGE CONTENTS
+    _numba (package)
+    accessor
+    algorithms
+    api
+&&&&&&&&&&&&&&&&&&&&&&&&&&& crosstab &&&&&&&&&&&&&&&&&&&&&&&&&&&
+Help on function crosstab in module pandas.core.reshape.pivot:
+
+crosstab(index, columns, values=None, rownames=None, colnames=None, aggfunc=None, margins: 'bool' = False, margins_name: 'Hashable' = 'All', dropna: 'bool' = True, normalize: "bool | Literal[0, 1, 'all', 'index', 'columns']" = False) -> 'DataFrame'
+    Compute a simple cross tabulation of two (or more) factors.
+
+    By default, computes a frequency table of the factors unless an
+    array of values and an aggregation function are passed.
+
+    Parameters
+    ----------
+&&&&&&&&&&&&&&&&&&&&&&&&&&& cut &&&&&&&&&&&&&&&&&&&&&&&&&&&
+Help on function cut in module pandas.core.reshape.tile:
+
+cut(x, bins, right: 'bool' = True, labels=None, retbins: 'bool' = False, precision: 'int' = 3, include_lowest: 'bool' = False, duplicates: 'str' = 'raise', ordered: 'bool' = True)
+    Bin values into discrete intervals.
+
+    Use `cut` when you need to segment and sort data values into bins. This
+    function is also useful for going from a continuous variable to a
+    categorical variable. For example, `cut` could convert ages to groups of
+    age ranges. Supports binning into an equal number of bins, or a
+    pre-specified array of bins.
+&&&&&&&&&&&&&&&&&&&&&&&&&&& date_range &&&&&&&&&&&&&&&&&&&&&&&&&&&
+Help on function date_range in module pandas.core.indexes.datetimes:
+
+date_range(start=None, end=None, periods=None, freq=None, tz=None, normalize: 'bool' = False, name: 'Hashable | None' = None, inclusive: 'IntervalClosedType' = 'both', *, unit: 'str | None' = None, **kwargs) -> 'DatetimeIndex'
+    Return a fixed frequency DatetimeIndex.
+
+    Returns the range of equally spaced time points (where the difference between any
+    two adjacent points is specified by the given frequency) such that they all
+    satisfy `start <[=] x <[=] end`, where the first one and the last one are, resp.,
+    the first and last time points in that range that fall on the boundary of ``freq``
+    (if given as a frequency string) or that are valid for ``freq`` (if given as a
+&&&&&&&&&&&&&&&&&&&&&&&&&&& describe_option &&&&&&&&&&&&&&&&&&&&&&&&&&&
+Help on CallableDynamicDoc in module pandas._config.config:
+
+<pandas._config.config.CallableDynamicDoc object>
+    describe_option(pat, _print_desc=False)
+
+    Prints the description for one or more registered options.
+
+    Call with no arguments to get a listing for all registered options.
+
+    Available options:
+&&&&&&&&&&&&&&&&&&&&&&&&&&& errors &&&&&&&&&&&&&&&&&&&&&&&&&&&
+Help on package pandas.errors in pandas:
+
+NAME
+    pandas.errors - Expose public exceptions & warnings
+
+PACKAGE CONTENTS
+
+
+CLASSES
+    builtins.AttributeError(builtins.Exception)
+&&&&&&&&&&&&&&&&&&&&&&&&&&& eval &&&&&&&&&&&&&&&&&&&&&&&&&&&
+Help on function eval in module pandas.core.computation.eval:
+
+eval(expr: 'str | BinOp', parser: 'str' = 'pandas', engine: 'str | None' = None, local_dict=None, global_dict=None, resolvers=(), level: 'int' = 0, target=None, inplace: 'bool' = False)
+    Evaluate a Python expression as a string using various backends.
+
+    The following arithmetic operations are supported: ``+``, ``-``, ``*``,
+    ``/``, ``**``, ``%``, ``//`` (python engine only) along with the following
+    boolean operations: ``|`` (or), ``&`` (and), and ``~`` (not).
+    Additionally, the ``'pandas'`` parser allows the use of :keyword:`and`,
+    :keyword:`or`, and :keyword:`not` with the same semantics as the
+&&&&&&&&&&&&&&&&&&&&&&&&&&& factorize &&&&&&&&&&&&&&&&&&&&&&&&&&&
+Help on function factorize in module pandas.core.algorithms:
+
+factorize(values, sort: 'bool' = False, use_na_sentinel: 'bool' = True, size_hint: 'int | None' = None) -> 'tuple[np.ndarray, np.ndarray | Index]'
+    Encode the object as an enumerated type or categorical variable.
+
+    This method is useful for obtaining a numeric representation of an
+    array when all that matters is identifying distinct values. `factorize`
+    is available as both a top-level function :func:`pandas.factorize`,
+    and as a method :meth:`Series.factorize` and :meth:`Index.factorize`.
+
+&&&&&&&&&&&&&&&&&&&&&&&&&&& from_dummies &&&&&&&&&&&&&&&&&&&&&&&&&&&
+Help on function from_dummies in module pandas.core.reshape.encoding:
+
+from_dummies(data: 'DataFrame', sep: 'None | str' = None, default_category: 'None | Hashable | dict[str, Hashable]' = None) -> 'DataFrame'
+    Create a categorical ``DataFrame`` from a ``DataFrame`` of dummy variables.
+
+    Inverts the operation performed by :func:`~pandas.get_dummies`.
+
+    .. versionadded:: 1.5.0
+
+    Parameters
+&&&&&&&&&&&&&&&&&&&&&&&&&&& get_dummies &&&&&&&&&&&&&&&&&&&&&&&&&&&
+Help on function get_dummies in module pandas.core.reshape.encoding:
+
+get_dummies(data, prefix=None, prefix_sep: 'str | Iterable[str] | dict[str, str]' = '_', dummy_na: 'bool' = False, columns=None, sparse: 'bool' = False, drop_first: 'bool' = False, dtype: 'NpDtype | None' = None) -> 'DataFrame'
+    Convert categorical variable into dummy/indicator variables.
+
+    Each variable is converted in as many 0/1 variables as there are different
+    values. Columns in the output are each named after a value; if the input is
+    a DataFrame, the name of the original variable is prepended to the value.
+
+    Parameters
+&&&&&&&&&&&&&&&&&&&&&&&&&&& get_option &&&&&&&&&&&&&&&&&&&&&&&&&&&
+Help on CallableDynamicDoc in module pandas._config.config:
+
+<pandas._config.config.CallableDynamicDoc object>
+    get_option(pat)
+
+    Retrieves the value of the specified option.
+
+    Available options:
+
+    - compute.[use_bottleneck, use_numba, use_numexpr]
+&&&&&&&&&&&&&&&&&&&&&&&&&&& infer_freq &&&&&&&&&&&&&&&&&&&&&&&&&&&
+Help on function infer_freq in module pandas.tseries.frequencies:
+
+infer_freq(index: 'DatetimeIndex | TimedeltaIndex | Series | DatetimeLikeArrayMixin') -> 'str | None'
+    Infer the most likely frequency given the input index.
+
+    Parameters
+    ----------
+    index : DatetimeIndex, TimedeltaIndex, Series or array-like
+      If passed a Series will use the values of the series (NOT THE INDEX).
+
+&&&&&&&&&&&&&&&&&&&&&&&&&&& interval_range &&&&&&&&&&&&&&&&&&&&&&&&&&&
+Help on function interval_range in module pandas.core.indexes.interval:
+
+interval_range(start=None, end=None, periods=None, freq=None, name: 'Hashable | None' = None, closed: 'IntervalClosedType' = 'right') -> 'IntervalIndex'
+    Return a fixed frequency IntervalIndex.
+
+    Parameters
+    ----------
+    start : numeric or datetime-like, default None
+        Left bound for generating intervals.
+    end : numeric or datetime-like, default None
+&&&&&&&&&&&&&&&&&&&&&&&&&&& io &&&&&&&&&&&&&&&&&&&&&&&&&&&
+Help on package pandas.io in pandas:
+
+NAME
+    pandas.io - # ruff: noqa: TCH004
+
+PACKAGE CONTENTS
+    _util
+    api
+    clipboard (package)
+    clipboards
+&&&&&&&&&&&&&&&&&&&&&&&&&&& isna &&&&&&&&&&&&&&&&&&&&&&&&&&&
+Help on function isna in module pandas.core.dtypes.missing:
+
+isna(obj: 'object') -> 'bool | npt.NDArray[np.bool_] | NDFrame'
+    Detect missing values for an array-like object.
+
+    This function takes a scalar or array-like object and indicates
+    whether values are missing (``NaN`` in numeric arrays, ``None`` or ``NaN``
+    in object arrays, ``NaT`` in datetimelike).
+
+    Parameters
+&&&&&&&&&&&&&&&&&&&&&&&&&&& isnull &&&&&&&&&&&&&&&&&&&&&&&&&&&
+Help on function isna in module pandas.core.dtypes.missing:
+
+isna(obj: 'object') -> 'bool | npt.NDArray[np.bool_] | NDFrame'
+    Detect missing values for an array-like object.
+
+    This function takes a scalar or array-like object and indicates
+    whether values are missing (``NaN`` in numeric arrays, ``None`` or ``NaN``
+    in object arrays, ``NaT`` in datetimelike).
+
+    Parameters
+&&&&&&&&&&&&&&&&&&&&&&&&&&& json_normalize &&&&&&&&&&&&&&&&&&&&&&&&&&&
+Help on function json_normalize in module pandas.io.json._normalize:
+
+json_normalize(data: 'dict | list[dict]', record_path: 'str | list | None' = None, meta: 'str | list[str | list[str]] | None' = None, meta_prefix: 'str | None' = None, record_prefix: 'str | None' = None, errors: 'IgnoreRaise' = 'raise', sep: 'str' = '.', max_level: 'int | None' = None) -> 'DataFrame'
+    Normalize semi-structured JSON data into a flat table.
+
+    Parameters
+    ----------
+    data : dict or list of dicts
+        Unserialized JSON objects.
+    record_path : str or list of str, default None
+&&&&&&&&&&&&&&&&&&&&&&&&&&& lreshape &&&&&&&&&&&&&&&&&&&&&&&&&&&
+Help on function lreshape in module pandas.core.reshape.melt:
+
+lreshape(data: 'DataFrame', groups: 'dict', dropna: 'bool' = True) -> 'DataFrame'
+    Reshape wide-format data to long. Generalized inverse of DataFrame.pivot.
+
+    Accepts a dictionary, ``groups``, in which each key is a new column name
+    and each value is a list of old column names that will be "melted" under
+    the new column name as part of the reshape.
+
+    Parameters
+&&&&&&&&&&&&&&&&&&&&&&&&&&& melt &&&&&&&&&&&&&&&&&&&&&&&&&&&
+Help on function melt in module pandas.core.reshape.melt:
+
+melt(frame: 'DataFrame', id_vars=None, value_vars=None, var_name=None, value_name: 'Hashable' = 'value', col_level=None, ignore_index: 'bool' = True) -> 'DataFrame'
+    Unpivot a DataFrame from wide to long format, optionally leaving identifiers set.
+
+    This function is useful to massage a DataFrame into a format where one
+    or more columns are identifier variables (`id_vars`), while all other
+    columns, considered measured variables (`value_vars`), are "unpivoted" to
+    the row axis, leaving just two non-identifier columns, 'variable' and
+    'value'.
+&&&&&&&&&&&&&&&&&&&&&&&&&&& merge &&&&&&&&&&&&&&&&&&&&&&&&&&&
+Help on function merge in module pandas.core.reshape.merge:
+
+merge(left: 'DataFrame | Series', right: 'DataFrame | Series', how: 'MergeHow' = 'inner', on: 'IndexLabel | AnyArrayLike | None' = None, left_on: 'IndexLabel | AnyArrayLike | None' = None, right_on: 'IndexLabel | AnyArrayLike | None' = None, left_index: 'bool' = False, right_index: 'bool' = False, sort: 'bool' = False, suffixes: 'Suffixes' = ('_x', '_y'), copy: 'bool | None' = None, indicator: 'str | bool' = False, validate: 'str | None' = None) -> 'DataFrame'
+    Merge DataFrame or named Series objects with a database-style join.
+
+    A named Series object is treated as a DataFrame with a single named column.
+
+    The join is done on columns or indexes. If joining columns on
+    columns, the DataFrame indexes *will be ignored*. Otherwise if joining indexes
+    on indexes or indexes on a column or columns, the index will be passed on.
+&&&&&&&&&&&&&&&&&&&&&&&&&&& merge_asof &&&&&&&&&&&&&&&&&&&&&&&&&&&
+Help on function merge_asof in module pandas.core.reshape.merge:
+
+merge_asof(left: 'DataFrame | Series', right: 'DataFrame | Series', on: 'IndexLabel | None' = None, left_on: 'IndexLabel | None' = None, right_on: 'IndexLabel | None' = None, left_index: 'bool' = False, right_index: 'bool' = False, by=None, left_by=None, right_by=None, suffixes: 'Suffixes' = ('_x', '_y'), tolerance: 'int | Timedelta | None' = None, allow_exact_matches: 'bool' = True, direction: 'str' = 'backward') -> 'DataFrame'
+    Perform a merge by key distance.
+
+    This is similar to a left-join except that we match on nearest
+    key rather than equal keys. Both DataFrames must be sorted by the key.
+
+    For each row in the left DataFrame:
+
+&&&&&&&&&&&&&&&&&&&&&&&&&&& merge_ordered &&&&&&&&&&&&&&&&&&&&&&&&&&&
+Help on function merge_ordered in module pandas.core.reshape.merge:
+
+merge_ordered(left: 'DataFrame | Series', right: 'DataFrame | Series', on: 'IndexLabel | None' = None, left_on: 'IndexLabel | None' = None, right_on: 'IndexLabel | None' = None, left_by=None, right_by=None, fill_method: 'str | None' = None, suffixes: 'Suffixes' = ('_x', '_y'), how: 'JoinHow' = 'outer') -> 'DataFrame'
+    Perform a merge for ordered data with optional filling/interpolation.
+
+    Designed for ordered data like time series data. Optionally
+    perform group-wise merge (see examples).
+
+    Parameters
+    ----------
+&&&&&&&&&&&&&&&&&&&&&&&&&&& notna &&&&&&&&&&&&&&&&&&&&&&&&&&&
+Help on function notna in module pandas.core.dtypes.missing:
+
+notna(obj: 'object') -> 'bool | npt.NDArray[np.bool_] | NDFrame'
+    Detect non-missing values for an array-like object.
+
+    This function takes a scalar or array-like object and indicates
+    whether values are valid (not missing, which is ``NaN`` in numeric
+    arrays, ``None`` or ``NaN`` in object arrays, ``NaT`` in datetimelike).
+
+    Parameters
+&&&&&&&&&&&&&&&&&&&&&&&&&&& notnull &&&&&&&&&&&&&&&&&&&&&&&&&&&
+Help on function notna in module pandas.core.dtypes.missing:
+
+notna(obj: 'object') -> 'bool | npt.NDArray[np.bool_] | NDFrame'
+    Detect non-missing values for an array-like object.
+
+    This function takes a scalar or array-like object and indicates
+    whether values are valid (not missing, which is ``NaN`` in numeric
+    arrays, ``None`` or ``NaN`` in object arrays, ``NaT`` in datetimelike).
+
+    Parameters
+&&&&&&&&&&&&&&&&&&&&&&&&&&& offsets &&&&&&&&&&&&&&&&&&&&&&&&&&&
+Help on module pandas.tseries.offsets in pandas.tseries:
+
+NAME
+    pandas.tseries.offsets
+
+CLASSES
+    builtins.object
+        pandas._libs.tslibs.offsets.BaseOffset
+    pandas._libs.tslibs.offsets.BusinessMixin(pandas._libs.tslibs.offsets.SingleConstructorOffset)
+        pandas._libs.tslibs.offsets.BusinessDay
+&&&&&&&&&&&&&&&&&&&&&&&&&&& option_context &&&&&&&&&&&&&&&&&&&&&&&&&&&
+Help on class option_context in module pandas._config.config:
+
+class option_context(contextlib.ContextDecorator)
+ |  option_context(*args) -> 'None'
+ |
+ |  Context manager to temporarily set options in the `with` statement context.
+ |
+ |  You need to invoke as ``option_context(pat, val, [(pat, val), ...])``.
+ |
+ |  Examples
+&&&&&&&&&&&&&&&&&&&&&&&&&&& options &&&&&&&&&&&&&&&&&&&&&&&&&&&
+Help on DictWrapper in module pandas._config.config object:
+
+class DictWrapper(builtins.object)
+ |  DictWrapper(d: 'dict[str, Any]', prefix: 'str' = '') -> 'None'
+ |
+ |  provide attribute-style access to a nested dict
+ |
+ |  Methods defined here:
+ |
+ |  __dir__(self) -> 'list[str]'
+&&&&&&&&&&&&&&&&&&&&&&&&&&& pandas &&&&&&&&&&&&&&&&&&&&&&&&&&&
+Help on package pandas:
+
+NAME
+    pandas
+
+DESCRIPTION
+    pandas - a powerful data analysis and manipulation library for Python
+    =====================================================================
+
+    **pandas** is a Python package providing fast, flexible, and expressive data
+&&&&&&&&&&&&&&&&&&&&&&&&&&& period_range &&&&&&&&&&&&&&&&&&&&&&&&&&&
+Help on function period_range in module pandas.core.indexes.period:
+
+period_range(start=None, end=None, periods: 'int | None' = None, freq=None, name: 'Hashable | None' = None) -> 'PeriodIndex'
+    Return a fixed frequency PeriodIndex.
+
+    The day (calendar) is the default frequency.
+
+    Parameters
+    ----------
+    start : str, datetime, date, pandas.Timestamp, or period-like, default None
+&&&&&&&&&&&&&&&&&&&&&&&&&&& pivot &&&&&&&&&&&&&&&&&&&&&&&&&&&
+Help on function pivot in module pandas.core.reshape.pivot:
+
+pivot(data: 'DataFrame', *, columns: 'IndexLabel', index: 'IndexLabel | lib.NoDefault' = <no_default>, values: 'IndexLabel | lib.NoDefault' = <no_default>) -> 'DataFrame'
+    Return reshaped DataFrame organized by given index / column values.
+
+    Reshape data (produce a "pivot" table) based on column values. Uses
+    unique values from specified `index` / `columns` to form axes of the
+    resulting DataFrame. This function does not support data
+    aggregation, multiple values will result in a MultiIndex in the
+    columns. See the :ref:`User Guide <reshaping>` for more on reshaping.
+&&&&&&&&&&&&&&&&&&&&&&&&&&& pivot_table &&&&&&&&&&&&&&&&&&&&&&&&&&&
+Help on function pivot_table in module pandas.core.reshape.pivot:
+
+pivot_table(data: 'DataFrame', values=None, index=None, columns=None, aggfunc: 'AggFuncType' = 'mean', fill_value=None, margins: 'bool' = False, dropna: 'bool' = True, margins_name: 'Hashable' = 'All', observed: 'bool | lib.NoDefault' = <no_default>, sort: 'bool' = True) -> 'DataFrame'
+    Create a spreadsheet-style pivot table as a DataFrame.
+
+    The levels in the pivot table will be stored in MultiIndex objects
+    (hierarchical indexes) on the index and columns of the result DataFrame.
+
+    Parameters
+    ----------
+&&&&&&&&&&&&&&&&&&&&&&&&&&& plotting &&&&&&&&&&&&&&&&&&&&&&&&&&&
+Help on package pandas.plotting in pandas:
+
+NAME
+    pandas.plotting - Plotting public API.
+
+DESCRIPTION
+    Authors of third-party plotting backends should implement a module with a
+    public ``plot(data, kind, **kwargs)``. The parameter `data` will contain
+    the data structure and can be a `Series` or a `DataFrame`. For example,
+    for ``df.plot()`` the parameter `data` will contain the DataFrame `df`.
+&&&&&&&&&&&&&&&&&&&&&&&&&&& qcut &&&&&&&&&&&&&&&&&&&&&&&&&&&
+Help on function qcut in module pandas.core.reshape.tile:
+
+qcut(x, q, labels=None, retbins: 'bool' = False, precision: 'int' = 3, duplicates: 'str' = 'raise')
+    Quantile-based discretization function.
+
+    Discretize variable into equal-sized buckets based on rank or based
+    on sample quantiles. For example 1000 values for 10 quantiles would
+    produce a Categorical object indicating quantile membership for each data point.
+
+    Parameters
+&&&&&&&&&&&&&&&&&&&&&&&&&&& read_clipboard &&&&&&&&&&&&&&&&&&&&&&&&&&&
+Help on function read_clipboard in module pandas.io.clipboards:
+
+read_clipboard(sep: 'str' = '\\s+', dtype_backend: 'DtypeBackend | lib.NoDefault' = <no_default>, **kwargs)
+    Read text from clipboard and pass to :func:`~pandas.read_csv`.
+
+    Parses clipboard contents similar to how CSV files are parsed
+    using :func:`~pandas.read_csv`.
+
+    Parameters
+    ----------
+&&&&&&&&&&&&&&&&&&&&&&&&&&& read_csv &&&&&&&&&&&&&&&&&&&&&&&&&&&
+Help on function read_csv in module pandas.io.parsers.readers:
+
+read_csv(filepath_or_buffer: 'FilePath | ReadCsvBuffer[bytes] | ReadCsvBuffer[str]', *, sep: 'str | None | lib.NoDefault' = <no_default>, delimiter: 'str | None | lib.NoDefault' = None, header: "int | Sequence[int] | None | Literal['infer']" = 'infer', names: 'Sequence[Hashable] | None | lib.NoDefault' = <no_default>, index_col: 'IndexLabel | Literal[False] | None' = None, usecols: 'UsecolsArgType' = None, dtype: 'DtypeArg | None' = None, engine: 'CSVEngine | None' = None, converters: 'Mapping[Hashable, Callable] | None' = None, true_values: 'list | None' = None, false_values: 'list | None' = None, skipinitialspace: 'bool' = False, skiprows: 'list[int] | int | Callable[[Hashable], bool] | None' = None, skipfooter: 'int' = 0, nrows: 'int | None' = None, na_values: 'Hashable | Iterable[Hashable] | Mapping[Hashable, Iterable[Hashable]] | None' = None, keep_default_na: 'bool' = True, na_filter: 'bool' = True, verbose: 'bool | lib.NoDefault' = <no_default>, skip_blank_lines: 'bool' = True, parse_dates: 'bool | Sequence[Hashable] | None' = None, infer_datetime_format: 'bool | lib.NoDefault' = <no_default>, keep_date_col: 'bool | lib.NoDefault' = <no_default>, date_parser: 'Callable | lib.NoDefault' = <no_default>, date_format: 'str | dict[Hashable, str] | None' = None, dayfirst: 'bool' = False, cache_dates: 'bool' = True, iterator: 'bool' = False, chunksize: 'int | None' = None, compression: 'CompressionOptions' = 'infer', thousands: 'str | None' = None, decimal: 'str' = '.', lineterminator: 'str | None' = None, quotechar: 'str' = '"', quoting: 'int' = 0, doublequote: 'bool' = True, escapechar: 'str | None' = None, comment: 'str | None' = None, encoding: 'str | None' = None, encoding_errors: 'str | None' = 'strict', dialect: 'str | csv.Dialect | None' = None, on_bad_lines: 'str' = 'error', delim_whitespace: 'bool | lib.NoDefault' = <no_default>, low_memory: 'bool' = True, memory_map: 'bool' = False, float_precision: "Literal['high', 'legacy'] | None" = None, storage_options: 'StorageOptions | None' = None, dtype_backend: 'DtypeBackend | lib.NoDefault' = <no_default>) -> 'DataFrame | TextFileReader'
+    Read a comma-separated values (csv) file into DataFrame.
+
+    Also supports optionally iterating or breaking of the file
+    into chunks.
+
+    Additional help can be found in the online docs for
+    `IO Tools <https://pandas.pydata.org/pandas-docs/stable/user_guide/io.html>`_.
+&&&&&&&&&&&&&&&&&&&&&&&&&&& read_excel &&&&&&&&&&&&&&&&&&&&&&&&&&&
+Help on function read_excel in module pandas.io.excel._base:
+
+read_excel(io, sheet_name: 'str | int | list[IntStrT] | None' = 0, *, header: 'int | Sequence[int] | None' = 0, names: 'SequenceNotStr[Hashable] | range | None' = None, index_col: 'int | str | Sequence[int] | None' = None, usecols: 'int | str | Sequence[int] | Sequence[str] | Callable[[str], bool] | None' = None, dtype: 'DtypeArg | None' = None, engine: "Literal['xlrd', 'openpyxl', 'odf', 'pyxlsb', 'calamine'] | None" = None, converters: 'dict[str, Callable] | dict[int, Callable] | None' = None, true_values: 'Iterable[Hashable] | None' = None, false_values: 'Iterable[Hashable] | None' = None, skiprows: 'Sequence[int] | int | Callable[[int], object] | None' = None, nrows: 'int | None' = None, na_values=None, keep_default_na: 'bool' = True, na_filter: 'bool' = True, verbose: 'bool' = False, parse_dates: 'list | dict | bool' = False, date_parser: 'Callable | lib.NoDefault' = <no_default>, date_format: 'dict[Hashable, str] | str | None' = None, thousands: 'str | None' = None, decimal: 'str' = '.', comment: 'str | None' = None, skipfooter: 'int' = 0, storage_options: 'StorageOptions | None' = None, dtype_backend: 'DtypeBackend | lib.NoDefault' = <no_default>, engine_kwargs: 'dict | None' = None) -> 'DataFrame | dict[IntStrT, DataFrame]'
+    Read an Excel file into a ``pandas`` ``DataFrame``.
+
+    Supports `xls`, `xlsx`, `xlsm`, `xlsb`, `odf`, `ods` and `odt` file extensions
+    read from a local filesystem or URL. Supports an option to read
+    a single sheet or a list of sheets.
+
+    Parameters
+&&&&&&&&&&&&&&&&&&&&&&&&&&& read_feather &&&&&&&&&&&&&&&&&&&&&&&&&&&
+Help on function read_feather in module pandas.io.feather_format:
+
+read_feather(path: 'FilePath | ReadBuffer[bytes]', columns: 'Sequence[Hashable] | None' = None, use_threads: 'bool' = True, storage_options: 'StorageOptions | None' = None, dtype_backend: 'DtypeBackend | lib.NoDefault' = <no_default>) -> 'DataFrame'
+    Load a feather-format object from the file path.
+
+    Parameters
+    ----------
+    path : str, path object, or file-like object
+        String, path object (implementing ``os.PathLike[str]``), or file-like
+        object implementing a binary ``read()`` function. The string could be a URL.
+&&&&&&&&&&&&&&&&&&&&&&&&&&& read_fwf &&&&&&&&&&&&&&&&&&&&&&&&&&&
+Help on function read_fwf in module pandas.io.parsers.readers:
+
+read_fwf(filepath_or_buffer: 'FilePath | ReadCsvBuffer[bytes] | ReadCsvBuffer[str]', *, colspecs: 'Sequence[tuple[int, int]] | str | None' = 'infer', widths: 'Sequence[int] | None' = None, infer_nrows: 'int' = 100, dtype_backend: 'DtypeBackend | lib.NoDefault' = <no_default>, iterator: 'bool' = False, chunksize: 'int | None' = None, **kwds) -> 'DataFrame | TextFileReader'
+    Read a table of fixed-width formatted lines into DataFrame.
+
+    Also supports optionally iterating or breaking of the file
+    into chunks.
+
+    Additional help can be found in the `online docs for IO Tools
+    <https://pandas.pydata.org/pandas-docs/stable/user_guide/io.html>`_.
+&&&&&&&&&&&&&&&&&&&&&&&&&&& read_gbq &&&&&&&&&&&&&&&&&&&&&&&&&&&
+Help on function read_gbq in module pandas.io.gbq:
+
+read_gbq(query: 'str', project_id: 'str | None' = None, index_col: 'str | None' = None, col_order: 'list[str] | None' = None, reauth: 'bool' = False, auth_local_webserver: 'bool' = True, dialect: 'str | None' = None, location: 'str | None' = None, configuration: 'dict[str, Any] | None' = None, credentials: 'google.auth.credentials.Credentials | None' = None, use_bqstorage_api: 'bool | None' = None, max_results: 'int | None' = None, progress_bar_type: 'str | None' = None) -> 'DataFrame'
+    Load data from Google BigQuery.
+
+    .. deprecated:: 2.2.0
+
+       Please use ``pandas_gbq.read_gbq`` instead.
+
+    This function requires the `pandas-gbq package
+&&&&&&&&&&&&&&&&&&&&&&&&&&& read_hdf &&&&&&&&&&&&&&&&&&&&&&&&&&&
+Help on function read_hdf in module pandas.io.pytables:
+
+read_hdf(path_or_buf: 'FilePath | HDFStore', key=None, mode: 'str' = 'r', errors: 'str' = 'strict', where: 'str | list | None' = None, start: 'int | None' = None, stop: 'int | None' = None, columns: 'list[str] | None' = None, iterator: 'bool' = False, chunksize: 'int | None' = None, **kwargs)
+    Read from the store, close it if we opened it.
+
+    Retrieve pandas object stored in file, optionally based on where
+    criteria.
+
+    .. warning::
+
+&&&&&&&&&&&&&&&&&&&&&&&&&&& read_html &&&&&&&&&&&&&&&&&&&&&&&&&&&
+Help on function read_html in module pandas.io.html:
+
+read_html(io: 'FilePath | ReadBuffer[str]', *, match: 'str | Pattern' = '.+', flavor: 'HTMLFlavors | Sequence[HTMLFlavors] | None' = None, header: 'int | Sequence[int] | None' = None, index_col: 'int | Sequence[int] | None' = None, skiprows: 'int | Sequence[int] | slice | None' = None, attrs: 'dict[str, str] | None' = None, parse_dates: 'bool' = False, thousands: 'str | None' = ',', encoding: 'str | None' = None, decimal: 'str' = '.', converters: 'dict | None' = None, na_values: 'Iterable[object] | None' = None, keep_default_na: 'bool' = True, displayed_only: 'bool' = True, extract_links: "Literal[None, 'header', 'footer', 'body', 'all']" = None, dtype_backend: 'DtypeBackend | lib.NoDefault' = <no_default>, storage_options: 'StorageOptions' = None) -> 'list[DataFrame]'
+    Read HTML tables into a ``list`` of ``DataFrame`` objects.
+
+    Parameters
+    ----------
+    io : str, path object, or file-like object
+        String, path object (implementing ``os.PathLike[str]``), or file-like
+        object implementing a string ``read()`` function.
+&&&&&&&&&&&&&&&&&&&&&&&&&&& read_json &&&&&&&&&&&&&&&&&&&&&&&&&&&
+Help on function read_json in module pandas.io.json._json:
+
+read_json(path_or_buf: 'FilePath | ReadBuffer[str] | ReadBuffer[bytes]', *, orient: 'str | None' = None, typ: "Literal['frame', 'series']" = 'frame', dtype: 'DtypeArg | None' = None, convert_axes: 'bool | None' = None, convert_dates: 'bool | list[str]' = True, keep_default_dates: 'bool' = True, precise_float: 'bool' = False, date_unit: 'str | None' = None, encoding: 'str | None' = None, encoding_errors: 'str | None' = 'strict', lines: 'bool' = False, chunksize: 'int | None' = None, compression: 'CompressionOptions' = 'infer', nrows: 'int | None' = None, storage_options: 'StorageOptions | None' = None, dtype_backend: 'DtypeBackend | lib.NoDefault' = <no_default>, engine: 'JSONEngine' = 'ujson') -> 'DataFrame | Series | JsonReader'
+    Convert a JSON string to pandas object.
+
+    Parameters
+    ----------
+    path_or_buf : a valid JSON str, path object or file-like object
+        Any valid string path is acceptable. The string could be a URL. Valid
+        URL schemes include http, ftp, s3, and file. For file URLs, a host is
+&&&&&&&&&&&&&&&&&&&&&&&&&&& read_orc &&&&&&&&&&&&&&&&&&&&&&&&&&&
+Help on function read_orc in module pandas.io.orc:
+
+read_orc(path: 'FilePath | ReadBuffer[bytes]', columns: 'list[str] | None' = None, dtype_backend: 'DtypeBackend | lib.NoDefault' = <no_default>, filesystem: 'pyarrow.fs.FileSystem | fsspec.spec.AbstractFileSystem | None' = None, **kwargs: 'Any') -> 'DataFrame'
+    Load an ORC object from the file path, returning a DataFrame.
+
+    Parameters
+    ----------
+    path : str, path object, or file-like object
+        String, path object (implementing ``os.PathLike[str]``), or file-like
+        object implementing a binary ``read()`` function. The string could be a URL.
+&&&&&&&&&&&&&&&&&&&&&&&&&&& read_parquet &&&&&&&&&&&&&&&&&&&&&&&&&&&
+Help on function read_parquet in module pandas.io.parquet:
+
+read_parquet(path: 'FilePath | ReadBuffer[bytes]', engine: 'str' = 'auto', columns: 'list[str] | None' = None, storage_options: 'StorageOptions | None' = None, use_nullable_dtypes: 'bool | lib.NoDefault' = <no_default>, dtype_backend: 'DtypeBackend | lib.NoDefault' = <no_default>, filesystem: 'Any' = None, filters: 'list[tuple] | list[list[tuple]] | None' = None, **kwargs) -> 'DataFrame'
+    Load a parquet object from the file path, returning a DataFrame.
+
+    Parameters
+    ----------
+    path : str, path object or file-like object
+        String, path object (implementing ``os.PathLike[str]``), or file-like
+        object implementing a binary ``read()`` function.
+&&&&&&&&&&&&&&&&&&&&&&&&&&& read_pickle &&&&&&&&&&&&&&&&&&&&&&&&&&&
+Help on function read_pickle in module pandas.io.pickle:
+
+read_pickle(filepath_or_buffer: 'FilePath | ReadPickleBuffer', compression: 'CompressionOptions' = 'infer', storage_options: 'StorageOptions | None' = None) -> 'DataFrame | Series'
+    Load pickled pandas object (or any object) from file.
+
+    .. warning::
+
+       Loading pickled data received from untrusted sources can be
+       unsafe. See `here <https://docs.python.org/3/library/pickle.html>`__.
+
+&&&&&&&&&&&&&&&&&&&&&&&&&&& read_sas &&&&&&&&&&&&&&&&&&&&&&&&&&&
+Help on function read_sas in module pandas.io.sas.sasreader:
+
+read_sas(filepath_or_buffer: 'FilePath | ReadBuffer[bytes]', *, format: 'str | None' = None, index: 'Hashable | None' = None, encoding: 'str | None' = None, chunksize: 'int | None' = None, iterator: 'bool' = False, compression: 'CompressionOptions' = 'infer') -> 'DataFrame | ReaderBase'
+    Read SAS files stored as either XPORT or SAS7BDAT format files.
+
+    Parameters
+    ----------
+    filepath_or_buffer : str, path object, or file-like object
+        String, path object (implementing ``os.PathLike[str]``), or file-like
+        object implementing a binary ``read()`` function. The string could be a URL.
+&&&&&&&&&&&&&&&&&&&&&&&&&&& read_spss &&&&&&&&&&&&&&&&&&&&&&&&&&&
+Help on function read_spss in module pandas.io.spss:
+
+read_spss(path: 'str | Path', usecols: 'Sequence[str] | None' = None, convert_categoricals: 'bool' = True, dtype_backend: 'DtypeBackend | lib.NoDefault' = <no_default>) -> 'DataFrame'
+    Load an SPSS file from the file path, returning a DataFrame.
+
+    Parameters
+    ----------
+    path : str or Path
+        File path.
+    usecols : list-like, optional
+&&&&&&&&&&&&&&&&&&&&&&&&&&& read_sql &&&&&&&&&&&&&&&&&&&&&&&&&&&
+Help on function read_sql in module pandas.io.sql:
+
+read_sql(sql, con, index_col: 'str | list[str] | None' = None, coerce_float: 'bool' = True, params=None, parse_dates=None, columns: 'list[str] | None' = None, chunksize: 'int | None' = None, dtype_backend: 'DtypeBackend | lib.NoDefault' = <no_default>, dtype: 'DtypeArg | None' = None) -> 'DataFrame | Iterator[DataFrame]'
+    Read SQL query or database table into a DataFrame.
+
+    This function is a convenience wrapper around ``read_sql_table`` and
+    ``read_sql_query`` (for backward compatibility). It will delegate
+    to the specific function depending on the provided input. A SQL query
+    will be routed to ``read_sql_query``, while a database table name will
+    be routed to ``read_sql_table``. Note that the delegated function might
+&&&&&&&&&&&&&&&&&&&&&&&&&&& read_sql_query &&&&&&&&&&&&&&&&&&&&&&&&&&&
+Help on function read_sql_query in module pandas.io.sql:
+
+read_sql_query(sql, con, index_col: 'str | list[str] | None' = None, coerce_float: 'bool' = True, params: 'list[Any] | Mapping[str, Any] | None' = None, parse_dates: 'list[str] | dict[str, str] | None' = None, chunksize: 'int | None' = None, dtype: 'DtypeArg | None' = None, dtype_backend: 'DtypeBackend | lib.NoDefault' = <no_default>) -> 'DataFrame | Iterator[DataFrame]'
+    Read SQL query into a DataFrame.
+
+    Returns a DataFrame corresponding to the result set of the query
+    string. Optionally provide an `index_col` parameter to use one of the
+    columns as the index, otherwise default integer index will be used.
+
+    Parameters
+&&&&&&&&&&&&&&&&&&&&&&&&&&& read_sql_table &&&&&&&&&&&&&&&&&&&&&&&&&&&
+Help on function read_sql_table in module pandas.io.sql:
+
+read_sql_table(table_name: 'str', con, schema: 'str | None' = None, index_col: 'str | list[str] | None' = None, coerce_float: 'bool' = True, parse_dates: 'list[str] | dict[str, str] | None' = None, columns: 'list[str] | None' = None, chunksize: 'int | None' = None, dtype_backend: 'DtypeBackend | lib.NoDefault' = <no_default>) -> 'DataFrame | Iterator[DataFrame]'
+    Read SQL database table into a DataFrame.
+
+    Given a table name and a SQLAlchemy connectable, returns a DataFrame.
+    This function does not support DBAPI connections.
+
+    Parameters
+    ----------
+&&&&&&&&&&&&&&&&&&&&&&&&&&& read_stata &&&&&&&&&&&&&&&&&&&&&&&&&&&
+Help on function read_stata in module pandas.io.stata:
+
+read_stata(filepath_or_buffer: 'FilePath | ReadBuffer[bytes]', *, convert_dates: 'bool' = True, convert_categoricals: 'bool' = True, index_col: 'str | None' = None, convert_missing: 'bool' = False, preserve_dtypes: 'bool' = True, columns: 'Sequence[str] | None' = None, order_categoricals: 'bool' = True, chunksize: 'int | None' = None, iterator: 'bool' = False, compression: 'CompressionOptions' = 'infer', storage_options: 'StorageOptions | None' = None) -> 'DataFrame | StataReader'
+    Read Stata file into DataFrame.
+
+    Parameters
+    ----------
+    filepath_or_buffer : str, path object or file-like object
+        Any valid string path is acceptable. The string could be a URL. Valid
+        URL schemes include http, ftp, s3, and file. For file URLs, a host is
+&&&&&&&&&&&&&&&&&&&&&&&&&&& read_table &&&&&&&&&&&&&&&&&&&&&&&&&&&
+Help on function read_table in module pandas.io.parsers.readers:
+
+read_table(filepath_or_buffer: 'FilePath | ReadCsvBuffer[bytes] | ReadCsvBuffer[str]', *, sep: 'str | None | lib.NoDefault' = <no_default>, delimiter: 'str | None | lib.NoDefault' = None, header: "int | Sequence[int] | None | Literal['infer']" = 'infer', names: 'Sequence[Hashable] | None | lib.NoDefault' = <no_default>, index_col: 'IndexLabel | Literal[False] | None' = None, usecols: 'UsecolsArgType' = None, dtype: 'DtypeArg | None' = None, engine: 'CSVEngine | None' = None, converters: 'Mapping[Hashable, Callable] | None' = None, true_values: 'list | None' = None, false_values: 'list | None' = None, skipinitialspace: 'bool' = False, skiprows: 'list[int] | int | Callable[[Hashable], bool] | None' = None, skipfooter: 'int' = 0, nrows: 'int | None' = None, na_values: 'Sequence[str] | Mapping[str, Sequence[str]] | None' = None, keep_default_na: 'bool' = True, na_filter: 'bool' = True, verbose: 'bool | lib.NoDefault' = <no_default>, skip_blank_lines: 'bool' = True, parse_dates: 'bool | Sequence[Hashable]' = False, infer_datetime_format: 'bool | lib.NoDefault' = <no_default>, keep_date_col: 'bool | lib.NoDefault' = <no_default>, date_parser: 'Callable | lib.NoDefault' = <no_default>, date_format: 'str | dict[Hashable, str] | None' = None, dayfirst: 'bool' = False, cache_dates: 'bool' = True, iterator: 'bool' = False, chunksize: 'int | None' = None, compression: 'CompressionOptions' = 'infer', thousands: 'str | None' = None, decimal: 'str' = '.', lineterminator: 'str | None' = None, quotechar: 'str' = '"', quoting: 'int' = 0, doublequote: 'bool' = True, escapechar: 'str | None' = None, comment: 'str | None' = None, encoding: 'str | None' = None, encoding_errors: 'str | None' = 'strict', dialect: 'str | csv.Dialect | None' = None, on_bad_lines: 'str' = 'error', delim_whitespace: 'bool | lib.NoDefault' = <no_default>, low_memory: 'bool' = True, memory_map: 'bool' = False, float_precision: 'str | None' = None, storage_options: 'StorageOptions | None' = None, dtype_backend: 'DtypeBackend | lib.NoDefault' = <no_default>) -> 'DataFrame | TextFileReader'
+    Read general delimited file into DataFrame.
+
+    Also supports optionally iterating or breaking of the file
+    into chunks.
+
+    Additional help can be found in the online docs for
+    `IO Tools <https://pandas.pydata.org/pandas-docs/stable/user_guide/io.html>`_.
+&&&&&&&&&&&&&&&&&&&&&&&&&&& read_xml &&&&&&&&&&&&&&&&&&&&&&&&&&&
+Help on function read_xml in module pandas.io.xml:
+
+read_xml(path_or_buffer: 'FilePath | ReadBuffer[bytes] | ReadBuffer[str]', *, xpath: 'str' = './*', namespaces: 'dict[str, str] | None' = None, elems_only: 'bool' = False, attrs_only: 'bool' = False, names: 'Sequence[str] | None' = None, dtype: 'DtypeArg | None' = None, converters: 'ConvertersArg | None' = None, parse_dates: 'ParseDatesArg | None' = None, encoding: 'str | None' = 'utf-8', parser: 'XMLParsers' = 'lxml', stylesheet: 'FilePath | ReadBuffer[bytes] | ReadBuffer[str] | None' = None, iterparse: 'dict[str, list[str]] | None' = None, compression: 'CompressionOptions' = 'infer', storage_options: 'StorageOptions | None' = None, dtype_backend: 'DtypeBackend | lib.NoDefault' = <no_default>) -> 'DataFrame'
+    Read XML document into a :class:`~pandas.DataFrame` object.
+
+    .. versionadded:: 1.3.0
+
+    Parameters
+    ----------
+    path_or_buffer : str, path object, or file-like object
+&&&&&&&&&&&&&&&&&&&&&&&&&&& reset_option &&&&&&&&&&&&&&&&&&&&&&&&&&&
+Help on CallableDynamicDoc in module pandas._config.config:
+
+<pandas._config.config.CallableDynamicDoc object>
+    reset_option(pat)
+
+    Reset one or more options to their default value.
+
+    Pass "all" as argument to reset all options.
+
+    Available options:
+&&&&&&&&&&&&&&&&&&&&&&&&&&& set_eng_float_format &&&&&&&&&&&&&&&&&&&&&&&&&&&
+Help on function set_eng_float_format in module pandas.io.formats.format:
+
+set_eng_float_format(accuracy: 'int' = 3, use_eng_prefix: 'bool' = False) -> 'None'
+    Format float representation in DataFrame with SI notation.
+
+    Parameters
+    ----------
+    accuracy : int, default 3
+        Number of decimal digits after the floating point.
+    use_eng_prefix : bool, default False
+&&&&&&&&&&&&&&&&&&&&&&&&&&& set_option &&&&&&&&&&&&&&&&&&&&&&&&&&&
+Help on CallableDynamicDoc in module pandas._config.config:
+
+<pandas._config.config.CallableDynamicDoc object>
+    set_option(pat, value)
+
+    Sets the value of the specified option.
+
+    Available options:
+
+    - compute.[use_bottleneck, use_numba, use_numexpr]
+&&&&&&&&&&&&&&&&&&&&&&&&&&& show_versions &&&&&&&&&&&&&&&&&&&&&&&&&&&
+Help on function show_versions in module pandas.util._print_versions:
+
+show_versions(as_json: 'str | bool' = False) -> 'None'
+    Provide useful information, important for bug reports.
+
+    It comprises info about hosting operation system, pandas version,
+    and versions of other installed relative packages.
+
+    Parameters
+    ----------
+&&&&&&&&&&&&&&&&&&&&&&&&&&& test &&&&&&&&&&&&&&&&&&&&&&&&&&&
+Help on function test in module pandas.util._tester:
+
+test(extra_args: 'list[str] | None' = None, run_doctests: 'bool' = False) -> 'None'
+    Run the pandas test suite using pytest.
+
+    By default, runs with the marks -m "not slow and not network and not db"
+
+    Parameters
+    ----------
+    extra_args : list[str], default None
+&&&&&&&&&&&&&&&&&&&&&&&&&&& testing &&&&&&&&&&&&&&&&&&&&&&&&&&&
+Help on module pandas.testing in pandas:
+
+NAME
+    pandas.testing - Public testing utility functions.
+
+FUNCTIONS
+    assert_extension_array_equal(left, right, check_dtype: "bool | Literal['equiv']" = True, index_values=None, check_exact: 'bool | lib.NoDefault' = <no_default>, rtol: 'float | lib.NoDefault' = <no_default>, atol: 'float | lib.NoDefault' = <no_default>, obj: 'str' = 'ExtensionArray') -> 'None'
+        Check that left and right ExtensionArrays are equal.
+
+        Parameters
+&&&&&&&&&&&&&&&&&&&&&&&&&&& timedelta_range &&&&&&&&&&&&&&&&&&&&&&&&&&&
+Help on function timedelta_range in module pandas.core.indexes.timedeltas:
+
+timedelta_range(start=None, end=None, periods: 'int | None' = None, freq=None, name=None, closed=None, *, unit: 'str | None' = None) -> 'TimedeltaIndex'
+    Return a fixed frequency TimedeltaIndex with day as the default.
+
+    Parameters
+    ----------
+    start : str or timedelta-like, default None
+        Left bound for generating timedeltas.
+    end : str or timedelta-like, default None
+&&&&&&&&&&&&&&&&&&&&&&&&&&& to_datetime &&&&&&&&&&&&&&&&&&&&&&&&&&&
+Help on function to_datetime in module pandas.core.tools.datetimes:
+
+to_datetime(arg: 'DatetimeScalarOrArrayConvertible | DictConvertible', errors: 'DateTimeErrorChoices' = 'raise', dayfirst: 'bool' = False, yearfirst: 'bool' = False, utc: 'bool' = False, format: 'str | None' = None, exact: 'bool | lib.NoDefault' = <no_default>, unit: 'str | None' = None, infer_datetime_format: 'lib.NoDefault | bool' = <no_default>, origin: 'str' = 'unix', cache: 'bool' = True) -> 'DatetimeIndex | Series | DatetimeScalar | NaTType | None'
+    Convert argument to datetime.
+
+    This function converts a scalar, array-like, :class:`Series` or
+    :class:`DataFrame`/dict-like to a pandas datetime object.
+
+    Parameters
+    ----------
+&&&&&&&&&&&&&&&&&&&&&&&&&&& to_numeric &&&&&&&&&&&&&&&&&&&&&&&&&&&
+Help on function to_numeric in module pandas.core.tools.numeric:
+
+to_numeric(arg, errors: 'DateTimeErrorChoices' = 'raise', downcast: "Literal['integer', 'signed', 'unsigned', 'float'] | None" = None, dtype_backend: 'DtypeBackend | lib.NoDefault' = <no_default>)
+    Convert argument to a numeric type.
+
+    The default return dtype is `float64` or `int64`
+    depending on the data supplied. Use the `downcast` parameter
+    to obtain other dtypes.
+
+    Please note that precision loss may occur if really large numbers
+&&&&&&&&&&&&&&&&&&&&&&&&&&& to_pickle &&&&&&&&&&&&&&&&&&&&&&&&&&&
+Help on function to_pickle in module pandas.io.pickle:
+
+to_pickle(obj: 'Any', filepath_or_buffer: 'FilePath | WriteBuffer[bytes]', compression: 'CompressionOptions' = 'infer', protocol: 'int' = 5, storage_options: 'StorageOptions | None' = None) -> 'None'
+    Pickle (serialize) object to file.
+
+    Parameters
+    ----------
+    obj : any object
+        Any python object.
+    filepath_or_buffer : str, path object, or file-like object
+&&&&&&&&&&&&&&&&&&&&&&&&&&& to_timedelta &&&&&&&&&&&&&&&&&&&&&&&&&&&
+Help on function to_timedelta in module pandas.core.tools.timedeltas:
+
+to_timedelta(arg: 'str | int | float | timedelta | list | tuple | range | ArrayLike | Index | Series', unit: 'UnitChoices | None' = None, errors: 'DateTimeErrorChoices' = 'raise') -> 'Timedelta | TimedeltaIndex | Series'
+    Convert argument to timedelta.
+
+    Timedeltas are absolute differences in times, expressed in difference
+    units (e.g. days, hours, minutes, seconds). This method converts
+    an argument from a recognized timedelta format / value into
+    a Timedelta type.
+
+&&&&&&&&&&&&&&&&&&&&&&&&&&& tseries &&&&&&&&&&&&&&&&&&&&&&&&&&&
+Help on package pandas.tseries in pandas:
+
+NAME
+    pandas.tseries - # ruff: noqa: TCH004
+
+PACKAGE CONTENTS
+    api
+    frequencies
+    holiday
+    offsets
+&&&&&&&&&&&&&&&&&&&&&&&&&&& unique &&&&&&&&&&&&&&&&&&&&&&&&&&&
+Help on function unique in module pandas.core.algorithms:
+
+unique(values)
+    Return unique values based on a hash table.
+
+    Uniques are returned in order of appearance. This does NOT sort.
+
+    Significantly faster than numpy.unique for long enough sequences.
+    Includes NA values.
+
+&&&&&&&&&&&&&&&&&&&&&&&&&&& util &&&&&&&&&&&&&&&&&&&&&&&&&&&
+Help on package pandas.util in pandas:
+
+NAME
+    pandas.util
+
+PACKAGE CONTENTS
+    _decorators
+    _doctools
+    _exceptions
+    _print_versions
+&&&&&&&&&&&&&&&&&&&&&&&&&&& value_counts &&&&&&&&&&&&&&&&&&&&&&&&&&&
+Help on function value_counts in module pandas.core.algorithms:
+
+value_counts(values, sort: 'bool' = True, ascending: 'bool' = False, normalize: 'bool' = False, bins=None, dropna: 'bool' = True) -> 'Series'
+    Compute a histogram of the counts of non-null values.
+
+    Parameters
+    ----------
+    values : ndarray (1-d)
+    sort : bool, default True
+        Sort by values
+&&&&&&&&&&&&&&&&&&&&&&&&&&& wide_to_long &&&&&&&&&&&&&&&&&&&&&&&&&&&
+Help on function wide_to_long in module pandas.core.reshape.melt:
+
+wide_to_long(df: 'DataFrame', stubnames, i, j, sep: 'str' = '', suffix: 'str' = '\\d+') -> 'DataFrame'
+    Unpivot a DataFrame from wide to long format.
+
+    Less flexible but more user-friendly than melt.
+
+    With stubnames ['A', 'B'], this function expects to find one or more
+    group of columns with format
+    A-suffix1, A-suffix2,..., B-suffix1, B-suffix2,...

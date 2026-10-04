@@ -1,0 +1,16 @@
+ 15G	/Applications
+8.1G	/Library
+346G	/System
+257G	/Users
+  0B	/Volumes
+4.1M	/bin
+  0B	/cores
+5.5K	/dev
+  0B	/etc
+  0B	/home
+1.9G	/opt
+6.6G	/private
+2.0M	/sbin
+  0B	/tmp
+9.1G	/usr
+  0B	/var
