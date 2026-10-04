@@ -1,0 +1,575 @@
+<!DOCTYPE html>
+
+<html lang="sp" data-content_root="./">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Help on _LocIndexer in module pandas.core.indexing object: &#8212; документација pandas 01</title>
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=d1102ebc" />
+    <link rel="stylesheet" type="text/css" href="_static/basic.css?v=b08954a9" />
+    <link rel="stylesheet" type="text/css" href="_static/alabaster.css?v=27fed22d" />
+    <link rel="stylesheet" type="text/css" href="_static/custom.css?v=40f341a1" />
+    <script src="_static/documentation_options.js?v=cb95fe6c"></script>
+    <script src="_static/doctools.js?v=9bcbadda"></script>
+    <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+    <link rel="index" title="Индекс" href="genindex.html" />
+    <link rel="search" title="Претрага" href="search.html" />
+    <link rel="next" title="loc - Ejemplos" href="loc_ejemplos.html" />
+    <link rel="prev" title="Ejemplos" href="ejemplos.html" />
+   
+  <link rel="stylesheet" href="_static/custom.css" type="text/css" />
+  
+
+  
+  
+
+  </head><body>
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          
+
+          <div class="body" role="main">
+            
+  <section id="help-on-locindexer-in-module-pandas-core-indexing-object">
+<h1>Help on _LocIndexer in module pandas.core.indexing object:<a class="headerlink" href="#help-on-locindexer-in-module-pandas-core-indexing-object" title="Link to this heading">¶</a></h1>
+<dl>
+<dt>class _LocIndexer(_LocationIndexer)</dt><dd><div class="line-block">
+<div class="line">Access a group of rows and columns by label(s) or a boolean array.</div>
+<div class="line"><br /></div>
+<div class="line"><code class="docutils literal notranslate"><span class="pre">.loc[]</span></code> is primarily label based, but may also be used with a</div>
+<div class="line">boolean array.</div>
+<div class="line"><br /></div>
+<div class="line">Allowed inputs are:</div>
+<div class="line"><br /></div>
+<div class="line">- A single label, e.g. <code class="docutils literal notranslate"><span class="pre">5</span></code> or <code class="docutils literal notranslate"><span class="pre">'a'</span></code>, (note that <code class="docutils literal notranslate"><span class="pre">5</span></code> is</div>
+<div class="line-block">
+<div class="line">interpreted as a <em>label</em> of the index, and <strong>never</strong> as an</div>
+<div class="line">integer position along the index).</div>
+</div>
+<div class="line">- A list or array of labels, e.g. <code class="docutils literal notranslate"><span class="pre">['a',</span> <span class="pre">'b',</span> <span class="pre">'c']</span></code>.</div>
+<div class="line">- A slice object with labels, e.g. <code class="docutils literal notranslate"><span class="pre">'a':'f'</span></code>.</div>
+<div class="line"><br /></div>
+<div class="line-block">
+<div class="line">.. warning:: Note that contrary to usual python slices, <strong>both</strong> the</div>
+<div class="line-block">
+<div class="line">start and the stop are included</div>
+<div class="line"><br /></div>
+</div>
+</div>
+<div class="line">- A boolean array of the same length as the axis being sliced,</div>
+<div class="line-block">
+<div class="line">e.g. <code class="docutils literal notranslate"><span class="pre">[True,</span> <span class="pre">False,</span> <span class="pre">True]</span></code>.</div>
+</div>
+<div class="line">- An alignable boolean Series. The index of the key will be aligned before</div>
+<div class="line-block">
+<div class="line">masking.</div>
+</div>
+<div class="line">- An alignable Index. The Index of the returned selection will be the input.</div>
+<div class="line">- A <code class="docutils literal notranslate"><span class="pre">callable</span></code> function with one argument (the calling Series or</div>
+<div class="line-block">
+<div class="line">DataFrame) and that returns valid output for indexing (one of the above)</div>
+<div class="line"><br /></div>
+</div>
+<div class="line">See more at <span class="xref std std-ref">Selection by Label</span>.</div>
+<div class="line"><br /></div>
+<div class="line">Raises</div>
+<div class="line">------</div>
+<div class="line">KeyError</div>
+<div class="line-block">
+<div class="line">If any items are not found.</div>
+</div>
+<div class="line">IndexingError</div>
+<div class="line-block">
+<div class="line">If an indexed key is passed and its index is unalignable to the frame index.</div>
+<div class="line"><br /></div>
+</div>
+<div class="line">See Also</div>
+<div class="line">--------</div>
+<div class="line">DataFrame.at : Access a single value for a row/column label pair.</div>
+<div class="line">DataFrame.iloc : Access group of rows and columns by integer position(s).</div>
+<div class="line">DataFrame.xs : Returns a cross-section (row(s) or column(s)) from the</div>
+<div class="line-block">
+<div class="line">Series/DataFrame.</div>
+</div>
+<div class="line">Series.loc : Access group of values using labels.</div>
+<div class="line"><br /></div>
+<div class="line">Examples</div>
+<div class="line">--------</div>
+<div class="line"><strong>Getting values</strong></div>
+<div class="line"><br /></div>
+<div class="line">&gt;&gt;&gt; df = pd.DataFrame([[1, 2], [4, 5], [7, 8]],</div>
+<div class="line">...                   index=['cobra', 'viper', 'sidewinder'],</div>
+<div class="line">...                   columns=['max_speed', 'shield'])</div>
+<div class="line">&gt;&gt;&gt; df</div>
+<div class="line-block">
+<div class="line">max_speed  shield</div>
+</div>
+<div class="line">cobra               1       2</div>
+<div class="line">viper               4       5</div>
+<div class="line">sidewinder          7       8</div>
+<div class="line"><br /></div>
+<div class="line">Single label. Note this returns the row as a Series.</div>
+<div class="line"><br /></div>
+<div class="line">&gt;&gt;&gt; df.loc['viper']</div>
+<div class="line">max_speed    4</div>
+<div class="line">shield       5</div>
+<div class="line">Name: viper, dtype: int64</div>
+<div class="line"><br /></div>
+<div class="line">List of labels. Note using <code class="docutils literal notranslate"><span class="pre">[[]]</span></code> returns a DataFrame.</div>
+<div class="line"><br /></div>
+<div class="line">&gt;&gt;&gt; df.loc[['viper', 'sidewinder']]</div>
+<div class="line-block">
+<div class="line">max_speed  shield</div>
+</div>
+<div class="line">viper               4       5</div>
+<div class="line">sidewinder          7       8</div>
+<div class="line"><br /></div>
+<div class="line">Single label for row and column</div>
+<div class="line"><br /></div>
+<div class="line">&gt;&gt;&gt; df.loc['cobra', 'shield']</div>
+<div class="line">2</div>
+<div class="line"><br /></div>
+<div class="line">Slice with labels for row and single label for column. As mentioned</div>
+<div class="line">above, note that both the start and stop of the slice are included.</div>
+<div class="line"><br /></div>
+<div class="line">&gt;&gt;&gt; df.loc['cobra':'viper', 'max_speed']</div>
+<div class="line">cobra    1</div>
+<div class="line">viper    4</div>
+<div class="line">Name: max_speed, dtype: int64</div>
+<div class="line"><br /></div>
+<div class="line">Boolean list with the same length as the row axis</div>
+<div class="line"><br /></div>
+<div class="line">&gt;&gt;&gt; df.loc[[False, False, True]]</div>
+<div class="line-block">
+<div class="line">max_speed  shield</div>
+</div>
+<div class="line">sidewinder          7       8</div>
+<div class="line"><br /></div>
+<div class="line">Alignable boolean Series:</div>
+<div class="line"><br /></div>
+<div class="line">&gt;&gt;&gt; df.loc[pd.Series([False, True, False],</div>
+<div class="line">...                  index=['viper', 'sidewinder', 'cobra'])]</div>
+<div class="line-block">
+<div class="line">max_speed  shield</div>
+</div>
+<div class="line">sidewinder          7       8</div>
+<div class="line"><br /></div>
+<div class="line">Index (same behavior as <code class="docutils literal notranslate"><span class="pre">df.reindex</span></code>)</div>
+<div class="line"><br /></div>
+<div class="line">&gt;&gt;&gt; df.loc[pd.Index([&quot;cobra&quot;, &quot;viper&quot;], name=&quot;foo&quot;)]</div>
+<div class="line-block">
+<div class="line">max_speed  shield</div>
+</div>
+<div class="line">foo</div>
+<div class="line">cobra          1       2</div>
+<div class="line">viper          4       5</div>
+<div class="line"><br /></div>
+<div class="line">Conditional that returns a boolean Series</div>
+<div class="line"><br /></div>
+<div class="line">&gt;&gt;&gt; df.loc[df['shield'] &gt; 6]</div>
+<div class="line-block">
+<div class="line">max_speed  shield</div>
+</div>
+<div class="line">sidewinder          7       8</div>
+<div class="line"><br /></div>
+<div class="line">Conditional that returns a boolean Series with column labels specified</div>
+<div class="line"><br /></div>
+<div class="line">&gt;&gt;&gt; df.loc[df['shield'] &gt; 6, ['max_speed']]</div>
+<div class="line-block">
+<div class="line">max_speed</div>
+</div>
+<div class="line">sidewinder          7</div>
+<div class="line"><br /></div>
+<div class="line">Multiple conditional using <code class="docutils literal notranslate"><span class="pre">&amp;</span></code> that returns a boolean Series</div>
+<div class="line"><br /></div>
+<div class="line">&gt;&gt;&gt; df.loc[(df['max_speed'] &gt; 1) &amp; (df['shield'] &lt; 8)]</div>
+<div class="line-block">
+<div class="line">max_speed  shield</div>
+</div>
+<div class="line">viper          4       5</div>
+<div class="line"><br /></div>
+<div class="line">Multiple conditional using <code class="docutils literal notranslate"><span class="pre">|</span></code> that returns a boolean Series</div>
+<div class="line"><br /></div>
+<div class="line">&gt;&gt;&gt; df.loc[(df['max_speed'] &gt; 4) | (df['shield'] &lt; 5)]</div>
+<div class="line-block">
+<div class="line">max_speed  shield</div>
+</div>
+<div class="line">cobra               1       2</div>
+<div class="line">sidewinder          7       8</div>
+<div class="line"><br /></div>
+<div class="line">Please ensure that each condition is wrapped in parentheses <code class="docutils literal notranslate"><span class="pre">()</span></code>.</div>
+<div class="line">See the <span class="xref std std-ref">user guide</span></div>
+<div class="line">for more details and explanations of Boolean indexing.</div>
+<div class="line"><br /></div>
+<div class="line">.. note::</div>
+<div class="line-block">
+<div class="line">If you find yourself using 3 or more conditionals in <code class="docutils literal notranslate"><span class="pre">.loc[]</span></code>,</div>
+<div class="line">consider using <span class="xref std std-ref">advanced indexing</span>.</div>
+<div class="line"><br /></div>
+<div class="line">See below for using <code class="docutils literal notranslate"><span class="pre">.loc[]</span></code> on MultiIndex DataFrames.</div>
+<div class="line"><br /></div>
+</div>
+<div class="line">Callable that returns a boolean Series</div>
+<div class="line"><br /></div>
+<div class="line">&gt;&gt;&gt; df.loc[lambda df: df['shield'] == 8]</div>
+<div class="line-block">
+<div class="line">max_speed  shield</div>
+</div>
+<div class="line">sidewinder          7       8</div>
+<div class="line"><br /></div>
+<div class="line"><strong>Setting values</strong></div>
+<div class="line"><br /></div>
+<div class="line">Set value for all items matching the list of labels</div>
+<div class="line"><br /></div>
+<div class="line">&gt;&gt;&gt; df.loc[['viper', 'sidewinder'], ['shield']] = 50</div>
+<div class="line">&gt;&gt;&gt; df</div>
+<div class="line-block">
+<div class="line">max_speed  shield</div>
+</div>
+<div class="line">cobra               1       2</div>
+<div class="line">viper               4      50</div>
+<div class="line">sidewinder          7      50</div>
+<div class="line"><br /></div>
+<div class="line">Set value for an entire row</div>
+<div class="line"><br /></div>
+<div class="line">&gt;&gt;&gt; df.loc['cobra'] = 10</div>
+<div class="line">&gt;&gt;&gt; df</div>
+<div class="line-block">
+<div class="line">max_speed  shield</div>
+</div>
+<div class="line">cobra              10      10</div>
+<div class="line">viper               4      50</div>
+<div class="line">sidewinder          7      50</div>
+<div class="line"><br /></div>
+<div class="line">Set value for an entire column</div>
+<div class="line"><br /></div>
+<div class="line">&gt;&gt;&gt; df.loc[:, 'max_speed'] = 30</div>
+<div class="line">&gt;&gt;&gt; df</div>
+<div class="line-block">
+<div class="line">max_speed  shield</div>
+</div>
+<div class="line">cobra              30      10</div>
+<div class="line">viper              30      50</div>
+<div class="line">sidewinder         30      50</div>
+<div class="line"><br /></div>
+<div class="line">Set value for rows matching callable condition</div>
+<div class="line"><br /></div>
+<div class="line">&gt;&gt;&gt; df.loc[df['shield'] &gt; 35] = 0</div>
+<div class="line">&gt;&gt;&gt; df</div>
+<div class="line-block">
+<div class="line">max_speed  shield</div>
+</div>
+<div class="line">cobra              30      10</div>
+<div class="line">viper               0       0</div>
+<div class="line">sidewinder          0       0</div>
+<div class="line"><br /></div>
+<div class="line">Add value matching location</div>
+<div class="line"><br /></div>
+<div class="line">&gt;&gt;&gt; df.loc[&quot;viper&quot;, &quot;shield&quot;] += 5</div>
+<div class="line">&gt;&gt;&gt; df</div>
+<div class="line-block">
+<div class="line">max_speed  shield</div>
+</div>
+<div class="line">cobra              30      10</div>
+<div class="line">viper               0       5</div>
+<div class="line">sidewinder          0       0</div>
+<div class="line"><br /></div>
+<div class="line">Setting using a <code class="docutils literal notranslate"><span class="pre">Series</span></code> or a <code class="docutils literal notranslate"><span class="pre">DataFrame</span></code> sets the values matching the</div>
+<div class="line">index labels, not the index positions.</div>
+<div class="line"><br /></div>
+<div class="line">&gt;&gt;&gt; shuffled_df = df.loc[[&quot;viper&quot;, &quot;cobra&quot;, &quot;sidewinder&quot;]]</div>
+<div class="line">&gt;&gt;&gt; df.loc[:] += shuffled_df</div>
+<div class="line">&gt;&gt;&gt; df</div>
+<div class="line-block">
+<div class="line">max_speed  shield</div>
+</div>
+<div class="line">cobra              60      20</div>
+<div class="line">viper               0      10</div>
+<div class="line">sidewinder          0       0</div>
+<div class="line"><br /></div>
+<div class="line"><strong>Getting values on a DataFrame with an index that has integer labels</strong></div>
+<div class="line"><br /></div>
+<div class="line">Another example using integers for the index</div>
+<div class="line"><br /></div>
+<div class="line">&gt;&gt;&gt; df = pd.DataFrame([[1, 2], [4, 5], [7, 8]],</div>
+<div class="line">...                   index=[7, 8, 9], columns=['max_speed', 'shield'])</div>
+<div class="line">&gt;&gt;&gt; df</div>
+<div class="line-block">
+<div class="line">max_speed  shield</div>
+</div>
+<div class="line">7          1       2</div>
+<div class="line">8          4       5</div>
+<div class="line">9          7       8</div>
+<div class="line"><br /></div>
+<div class="line">Slice with integer labels for rows. As mentioned above, note that both</div>
+<div class="line">the start and stop of the slice are included.</div>
+<div class="line"><br /></div>
+<div class="line">&gt;&gt;&gt; df.loc[7:9]</div>
+<div class="line-block">
+<div class="line">max_speed  shield</div>
+</div>
+<div class="line">7          1       2</div>
+<div class="line">8          4       5</div>
+<div class="line">9          7       8</div>
+<div class="line"><br /></div>
+<div class="line"><strong>Getting values with a MultiIndex</strong></div>
+<div class="line"><br /></div>
+<div class="line">A number of examples using a DataFrame with a MultiIndex</div>
+<div class="line"><br /></div>
+<div class="line">&gt;&gt;&gt; tuples = [</div>
+<div class="line">...     ('cobra', 'mark i'), ('cobra', 'mark ii'),</div>
+<div class="line">...     ('sidewinder', 'mark i'), ('sidewinder', 'mark ii'),</div>
+<div class="line">...     ('viper', 'mark ii'), ('viper', 'mark iii')</div>
+<div class="line">... ]</div>
+<div class="line">&gt;&gt;&gt; index = pd.MultiIndex.from_tuples(tuples)</div>
+<div class="line">&gt;&gt;&gt; values = [[12, 2], [0, 4], [10, 20],</div>
+<div class="line">...           [1, 4], [7, 1], [16, 36]]</div>
+<div class="line">&gt;&gt;&gt; df = pd.DataFrame(values, columns=['max_speed', 'shield'], index=index)</div>
+<div class="line">&gt;&gt;&gt; df</div>
+<div class="line-block">
+<div class="line">max_speed  shield</div>
+</div>
+<div class="line">cobra      mark i           12       2</div>
+<div class="line-block">
+<div class="line">mark ii           0       4</div>
+</div>
+<div class="line">sidewinder mark i           10      20</div>
+<div class="line-block">
+<div class="line">mark ii           1       4</div>
+</div>
+<div class="line">viper      mark ii           7       1</div>
+<div class="line-block">
+<div class="line">mark iii         16      36</div>
+<div class="line"><br /></div>
+</div>
+<div class="line">Single label. Note this returns a DataFrame with a single index.</div>
+<div class="line"><br /></div>
+<div class="line">&gt;&gt;&gt; df.loc['cobra']</div>
+<div class="line-block">
+<div class="line">max_speed  shield</div>
+</div>
+<div class="line">mark i          12       2</div>
+<div class="line">mark ii          0       4</div>
+<div class="line"><br /></div>
+<div class="line">Single index tuple. Note this returns a Series.</div>
+<div class="line"><br /></div>
+<div class="line">&gt;&gt;&gt; df.loc[('cobra', 'mark ii')]</div>
+<div class="line">max_speed    0</div>
+<div class="line">shield       4</div>
+<div class="line">Name: (cobra, mark ii), dtype: int64</div>
+<div class="line"><br /></div>
+<div class="line">Single label for row and column. Similar to passing in a tuple, this</div>
+<div class="line">returns a Series.</div>
+<div class="line"><br /></div>
+<div class="line">&gt;&gt;&gt; df.loc['cobra', 'mark i']</div>
+<div class="line">max_speed    12</div>
+<div class="line">shield        2</div>
+<div class="line">Name: (cobra, mark i), dtype: int64</div>
+<div class="line"><br /></div>
+<div class="line">Single tuple. Note using <code class="docutils literal notranslate"><span class="pre">[[]]</span></code> returns a DataFrame.</div>
+<div class="line"><br /></div>
+<div class="line">&gt;&gt;&gt; df.loc[[('cobra', 'mark ii')]]</div>
+<div class="line-block">
+<div class="line">max_speed  shield</div>
+</div>
+<div class="line">cobra mark ii          0       4</div>
+<div class="line"><br /></div>
+<div class="line">Single tuple for the index with a single label for the column</div>
+<div class="line"><br /></div>
+<div class="line">&gt;&gt;&gt; df.loc[('cobra', 'mark i'), 'shield']</div>
+<div class="line">2</div>
+<div class="line"><br /></div>
+<div class="line">Slice from index tuple to single label</div>
+<div class="line"><br /></div>
+<div class="line">&gt;&gt;&gt; df.loc[('cobra', 'mark i'):'viper']</div>
+<div class="line-block">
+<div class="line">max_speed  shield</div>
+</div>
+<div class="line">cobra      mark i           12       2</div>
+<div class="line-block">
+<div class="line">mark ii           0       4</div>
+</div>
+<div class="line">sidewinder mark i           10      20</div>
+<div class="line-block">
+<div class="line">mark ii           1       4</div>
+</div>
+<div class="line">viper      mark ii           7       1</div>
+<div class="line-block">
+<div class="line">mark iii         16      36</div>
+<div class="line"><br /></div>
+</div>
+<div class="line">Slice from index tuple to index tuple</div>
+<div class="line"><br /></div>
+<div class="line">&gt;&gt;&gt; df.loc[('cobra', 'mark i'):('viper', 'mark ii')]</div>
+<div class="line-block">
+<div class="line">max_speed  shield</div>
+</div>
+<div class="line">cobra      mark i          12       2</div>
+<div class="line-block">
+<div class="line">mark ii          0       4</div>
+</div>
+<div class="line">sidewinder mark i          10      20</div>
+<div class="line-block">
+<div class="line">mark ii          1       4</div>
+</div>
+<div class="line">viper      mark ii          7       1</div>
+<div class="line"><br /></div>
+<div class="line">Please see the <span class="xref std std-ref">user guide</span></div>
+<div class="line">for more details and explanations of advanced indexing.</div>
+<div class="line"><br /></div>
+<div class="line">Method resolution order:</div>
+<div class="line-block">
+<div class="line">_LocIndexer</div>
+<div class="line">_LocationIndexer</div>
+<div class="line">pandas._libs.indexing.NDFrameIndexerBase</div>
+<div class="line">builtins.object</div>
+<div class="line"><br /></div>
+</div>
+<div class="line">Data and other attributes defined here:</div>
+<div class="line"><br /></div>
+<div class="line">__annotations__ = {'_takeable': 'bool'}</div>
+<div class="line"><br /></div>
+<div class="line">----------------------------------------------------------------------</div>
+<div class="line">Methods inherited from _LocationIndexer:</div>
+<div class="line"><br /></div>
+<div class="line">__call__(self, axis: 'Axis | None' = None) -&gt; 'Self'</div>
+<div class="line-block">
+<div class="line">Call self as a function.</div>
+<div class="line"><br /></div>
+</div>
+<div class="line">__getitem__(self, key)</div>
+<div class="line"><br /></div>
+<div class="line">__setitem__(self, key, value) -&gt; 'None'</div>
+<div class="line"><br /></div>
+<div class="line">----------------------------------------------------------------------</div>
+<div class="line">Data descriptors inherited from _LocationIndexer:</div>
+<div class="line"><br /></div>
+<div class="line">__dict__</div>
+<div class="line-block">
+<div class="line">dictionary for instance variables</div>
+<div class="line"><br /></div>
+</div>
+<div class="line">__weakref__</div>
+<div class="line-block">
+<div class="line">list of weak references to the object</div>
+<div class="line"><br /></div>
+</div>
+<div class="line">----------------------------------------------------------------------</div>
+<div class="line">Data and other attributes inherited from _LocationIndexer:</div>
+<div class="line"><br /></div>
+<div class="line">axis = None</div>
+<div class="line"><br /></div>
+<div class="line">----------------------------------------------------------------------</div>
+<div class="line">Methods inherited from pandas._libs.indexing.NDFrameIndexerBase:</div>
+<div class="line"><br /></div>
+<div class="line">__init__(self, /, <a href="#id1"><span class="problematic" id="id2">*</span></a>args, <a href="#id3"><span class="problematic" id="id4">**</span></a>kwargs)</div>
+<div class="line-block">
+<div class="line">Initialize self.  See help(type(self)) for accurate signature.</div>
+<div class="line"><br /></div>
+</div>
+<div class="line">__reduce__ = __reduce_cython__(...)</div>
+<div class="line"><br /></div>
+<div class="line">__reduce_cython__(self)</div>
+<div class="line"><br /></div>
+<div class="line">__setstate__ = __setstate_cython__(...)</div>
+<div class="line"><br /></div>
+<div class="line">__setstate_cython__(self, __pyx_state)</div>
+<div class="line"><br /></div>
+<div class="line">----------------------------------------------------------------------</div>
+<div class="line">Static methods inherited from pandas._libs.indexing.NDFrameIndexerBase:</div>
+<div class="line"><br /></div>
+<div class="line">__new__(<a href="#id5"><span class="problematic" id="id6">*</span></a>args, <a href="#id7"><span class="problematic" id="id8">**</span></a>kwargs) from builtins.type</div>
+<div class="line-block">
+<div class="line">Create and return a new object.  See help(type) for accurate signature.</div>
+<div class="line"><br /></div>
+</div>
+<div class="line">----------------------------------------------------------------------</div>
+<div class="line">Data descriptors inherited from pandas._libs.indexing.NDFrameIndexerBase:</div>
+<div class="line"><br /></div>
+<div class="line">name</div>
+<div class="line"><br /></div>
+<div class="line">ndim</div>
+<div class="line"><br /></div>
+<div class="line">obj</div>
+</div>
+</dd>
+</dl>
+<p>None</p>
+</section>
+
+
+          </div>
+          
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="Main">
+        <div class="sphinxsidebarwrapper">
+<h1 class="logo"><a href="index.html">pandas</a></h1>
+
+
+
+
+
+
+
+
+
+<search id="searchbox" style="display: none" role="search">
+    <div class="searchformwrapper">
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" placeholder="Search"/>
+      <input type="submit" value="Тражи" />
+    </form>
+    </div>
+</search>
+<script>document.getElementById('searchbox').style.display = "block"</script><h3>Навигација</h3>
+<p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="help_DataFrame.html">Help on class DataFrame in module pandas.core.frame:</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ejemplos.html">Ejemplos</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Help on _LocIndexer in module pandas.core.indexing object:</a></li>
+<li class="toctree-l1"><a class="reference internal" href="loc_ejemplos.html">loc - Ejemplos</a></li>
+</ul>
+
+<div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="index.html">Documentation overview</a><ul>
+      <li>Previous: <a href="ejemplos.html" title="претходна глава">Ejemplos</a></li>
+      <li>Next: <a href="loc_ejemplos.html" title="наредна глава">loc - Ejemplos</a></li>
+  </ul></li>
+</ul>
+</div>
+
+
+
+
+
+
+
+
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &#169;2026, Leopoldo.
+      
+      |
+      Powered by <a href="https://www.sphinx-doc.org/">Sphinx 8.2.3</a>
+      &amp; <a href="https://alabaster.readthedocs.io">Alabaster 1.0.0</a>
+      
+      |
+      <a href="_sources/loc.rst.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+  </body>
+</html>

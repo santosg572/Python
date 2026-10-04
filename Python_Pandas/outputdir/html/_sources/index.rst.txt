@@ -17,4 +17,6 @@ documentation for details.
 
    help_DataFrame
    ejemplos
+   loc
+   loc_ejemplos
 
