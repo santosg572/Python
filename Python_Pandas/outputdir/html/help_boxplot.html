@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+
+<html lang="sp" data-content_root="./">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>help_boxplot &#8212; документација pandas 01</title>
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=d1102ebc" />
+    <link rel="stylesheet" type="text/css" href="_static/basic.css?v=b08954a9" />
+    <link rel="stylesheet" type="text/css" href="_static/alabaster.css?v=27fed22d" />
+    <link rel="stylesheet" type="text/css" href="_static/custom.css?v=40f341a1" />
+    <script src="_static/documentation_options.js?v=cb95fe6c"></script>
+    <script src="_static/doctools.js?v=9bcbadda"></script>
+    <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+    <link rel="index" title="Индекс" href="genindex.html" />
+    <link rel="search" title="Претрага" href="search.html" />
+    <link rel="prev" title="help_iloc" href="help_iloc.html" />
+   
+  <link rel="stylesheet" href="_static/custom.css" type="text/css" />
+  
+
+  
+  
+
+  </head><body>
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          
+
+          <div class="body" role="main">
+            
+  <section id="help-boxplot">
+<h1>help_boxplot<a class="headerlink" href="#help-boxplot" title="Link to this heading">¶</a></h1>
+<p>Help on function boxplot_frame in module pandas.plotting._core:</p>
+<dl>
+<dt>boxplot_frame(self: 'DataFrame', column=None, by=None, ax=None, fontsize: 'int | None' = None, rot: 'int' = 0, grid: 'bool' = True, figsize: 'tuple[float, float] | None' = None, layout=None, return_type=None, backend=None, <a href="#id1"><span class="problematic" id="id2">**</span></a>kwargs)</dt><dd><p>Make a box plot from DataFrame columns.</p>
+<p>Make a box-and-whisker plot from DataFrame columns, optionally grouped
+by some other columns. A box plot is a method for graphically depicting
+groups of numerical data through their quartiles.
+The box extends from the Q1 to Q3 quartile values of the data,
+with a line at the median (Q2). The whiskers extend from the edges
+of box to show the range of the data. By default, they extend no more than
+<cite>1.5 * IQR (IQR = Q3 - Q1)</cite> from the edges of the box, ending at the farthest
+data point within that interval. Outliers are plotted as separate dots.</p>
+<p>For further details see
+Wikipedia's entry for <a class="reference external" href="https://en.wikipedia.org/wiki/Box_plot">boxplot</a>.</p>
+<dl>
+<dt>column<span class="classifier">str or list of str, optional</span></dt><dd><p>Column name or list of names, or vector.
+Can be any valid input to <code class="xref py py-meth docutils literal notranslate"><span class="pre">pandas.DataFrame.groupby()</span></code>.</p>
+</dd>
+<dt>by<span class="classifier">str or array-like, optional</span></dt><dd><p>Column in the DataFrame to <code class="xref py py-meth docutils literal notranslate"><span class="pre">pandas.DataFrame.groupby()</span></code>.
+One box-plot will be done per value of columns in <cite>by</cite>.</p>
+</dd>
+<dt>ax<span class="classifier">object of class matplotlib.axes.Axes, optional</span></dt><dd><p>The matplotlib axes to be used by boxplot.</p>
+</dd>
+<dt>fontsize<span class="classifier">float or str</span></dt><dd><p>Tick label font size in points or as a string (e.g., <cite>large</cite>).</p>
+</dd>
+<dt>rot<span class="classifier">float, default 0</span></dt><dd><p>The rotation angle of labels (in degrees)
+with respect to the screen coordinate system.</p>
+</dd>
+<dt>grid<span class="classifier">bool, default True</span></dt><dd><p>Setting this to True will show the grid.</p>
+</dd>
+<dt>figsize<span class="classifier">A tuple (width, height) in inches</span></dt><dd><p>The size of the figure to create in matplotlib.</p>
+</dd>
+<dt>layout<span class="classifier">tuple (rows, columns), optional</span></dt><dd><p>For example, (3, 5) will display the subplots
+using 3 rows and 5 columns, starting from the top-left.</p>
+</dd>
+<dt>return_type<span class="classifier">{'axes', 'dict', 'both'} or None, default 'axes'</span></dt><dd><p>The kind of object to return. The default is <code class="docutils literal notranslate"><span class="pre">axes</span></code>.</p>
+<ul>
+<li><p>'axes' returns the matplotlib axes the boxplot is drawn on.</p></li>
+<li><p>'dict' returns a dictionary whose values are the matplotlib
+Lines of the boxplot.</p></li>
+<li><p>'both' returns a namedtuple with the axes and dict.</p></li>
+<li><p>when grouping with <code class="docutils literal notranslate"><span class="pre">by</span></code>, a Series mapping columns to
+<code class="docutils literal notranslate"><span class="pre">return_type</span></code> is returned.</p>
+<p>If <code class="docutils literal notranslate"><span class="pre">return_type</span></code> is <cite>None</cite>, a NumPy array
+of axes with the same shape as <code class="docutils literal notranslate"><span class="pre">layout</span></code> is returned.</p>
+</li>
+</ul>
+</dd>
+<dt>backend<span class="classifier">str, default None</span></dt><dd><p>Backend to use instead of the backend specified in the option
+<code class="docutils literal notranslate"><span class="pre">plotting.backend</span></code>. For instance, 'matplotlib'. Alternatively, to
+specify the <code class="docutils literal notranslate"><span class="pre">plotting.backend</span></code> for the whole session, set
+<code class="docutils literal notranslate"><span class="pre">pd.options.plotting.backend</span></code>.</p>
+</dd>
+<dt><a href="#id3"><span class="problematic" id="id4">**</span></a>kwargs</dt><dd><p>All other plotting keyword arguments to be passed to
+<code class="xref py py-func docutils literal notranslate"><span class="pre">matplotlib.pyplot.boxplot()</span></code>.</p>
+</dd>
+</dl>
+<dl class="simple">
+<dt>result</dt><dd><p>See Notes.</p>
+</dd>
+</dl>
+<p>pandas.Series.plot.hist: Make a histogram.
+matplotlib.pyplot.boxplot : Matplotlib equivalent plot.</p>
+<p>The return type depends on the <cite>return_type</cite> parameter:</p>
+<ul class="simple">
+<li><p>'axes' : object of class matplotlib.axes.Axes</p></li>
+<li><p>'dict' : dict of matplotlib.lines.Line2D objects</p></li>
+<li><p>'both' : a namedtuple with structure (ax, lines)</p></li>
+</ul>
+<p>For data grouped with <code class="docutils literal notranslate"><span class="pre">by</span></code>, return a Series of the above or a numpy
+array:</p>
+<ul class="simple">
+<li><p><code class="xref py py-class docutils literal notranslate"><span class="pre">Series</span></code></p></li>
+<li><p><code class="xref py py-class docutils literal notranslate"><span class="pre">array</span></code> (for <code class="docutils literal notranslate"><span class="pre">return_type</span> <span class="pre">=</span> <span class="pre">None</span></code>)</p></li>
+</ul>
+<p>Use <code class="docutils literal notranslate"><span class="pre">return_type='dict'</span></code> when you want to tweak the appearance
+of the lines after plotting. In this case a dict containing the Lines
+making up the boxes, caps, fliers, medians, and whiskers is returned.</p>
+<p>Boxplots can be created for every column in the dataframe
+by <code class="docutils literal notranslate"><span class="pre">df.boxplot()</span></code> or indicating the columns to be used:</p>
+<p>Boxplots of variables distributions grouped by the values of a third
+variable can be created using the option <code class="docutils literal notranslate"><span class="pre">by</span></code>. For instance:</p>
+<p>A list of strings (i.e. <code class="docutils literal notranslate"><span class="pre">['X',</span> <span class="pre">'Y']</span></code>) can be passed to boxplot
+in order to group the data by combination of the variables in the x-axis:</p>
+<p>The layout of boxplot can be adjusted giving a tuple to <code class="docutils literal notranslate"><span class="pre">layout</span></code>:</p>
+<p>Additional formatting can be done to the boxplot, like suppressing the grid
+(<code class="docutils literal notranslate"><span class="pre">grid=False</span></code>), rotating the labels in the x-axis (i.e. <code class="docutils literal notranslate"><span class="pre">rot=45</span></code>)
+or changing the fontsize (i.e. <code class="docutils literal notranslate"><span class="pre">fontsize=15</span></code>):</p>
+<p>The parameter <code class="docutils literal notranslate"><span class="pre">return_type</span></code> can be used to select the type of element
+returned by <cite>boxplot</cite>.  When <code class="docutils literal notranslate"><span class="pre">return_type='axes'</span></code> is selected,
+the matplotlib axes on which the boxplot is drawn are returned:</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">boxplot</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">boxplot</span><span class="p">(</span><span class="n">column</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;Col1&#39;</span><span class="p">,</span> <span class="s1">&#39;Col2&#39;</span><span class="p">],</span> <span class="n">return_type</span><span class="o">=</span><span class="s1">&#39;axes&#39;</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="nb">type</span><span class="p">(</span><span class="n">boxplot</span><span class="p">)</span>
+<span class="go">&lt;class &#39;matplotlib.axes._axes.Axes&#39;&gt;</span>
+</pre></div>
+</div>
+<p>When grouping with <code class="docutils literal notranslate"><span class="pre">by</span></code>, a Series mapping columns to <code class="docutils literal notranslate"><span class="pre">return_type</span></code>
+is returned:</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">boxplot</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">boxplot</span><span class="p">(</span><span class="n">column</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;Col1&#39;</span><span class="p">,</span> <span class="s1">&#39;Col2&#39;</span><span class="p">],</span> <span class="n">by</span><span class="o">=</span><span class="s1">&#39;X&#39;</span><span class="p">,</span>
+<span class="gp">... </span>                     <span class="n">return_type</span><span class="o">=</span><span class="s1">&#39;axes&#39;</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="nb">type</span><span class="p">(</span><span class="n">boxplot</span><span class="p">)</span>
+<span class="go">&lt;class &#39;pandas.core.series.Series&#39;&gt;</span>
+</pre></div>
+</div>
+<p>If <code class="docutils literal notranslate"><span class="pre">return_type</span></code> is <cite>None</cite>, a NumPy array of axes with the same shape
+as <code class="docutils literal notranslate"><span class="pre">layout</span></code> is returned:</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">boxplot</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">boxplot</span><span class="p">(</span><span class="n">column</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;Col1&#39;</span><span class="p">,</span> <span class="s1">&#39;Col2&#39;</span><span class="p">],</span> <span class="n">by</span><span class="o">=</span><span class="s1">&#39;X&#39;</span><span class="p">,</span>
+<span class="gp">... </span>                     <span class="n">return_type</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="nb">type</span><span class="p">(</span><span class="n">boxplot</span><span class="p">)</span>
+<span class="go">&lt;class &#39;numpy.ndarray&#39;&gt;</span>
+</pre></div>
+</div>
+</dd>
+</dl>
+<p>None</p>
+</section>
+
+
+          </div>
+          
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="Main">
+        <div class="sphinxsidebarwrapper">
+<h1 class="logo"><a href="index.html">pandas</a></h1>
+
+
+
+
+
+
+
+
+
+<search id="searchbox" style="display: none" role="search">
+    <div class="searchformwrapper">
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" placeholder="Search"/>
+      <input type="submit" value="Тражи" />
+    </form>
+    </div>
+</search>
+<script>document.getElementById('searchbox').style.display = "block"</script><h3>Навигација</h3>
+<p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="dir_pd.html">dir-pd</a></li>
+<li class="toctree-l1"><a class="reference internal" href="dir_DataFrame.html">dir-DataFrame</a></li>
+<li class="toctree-l1"><a class="reference internal" href="help_DataFrame.html">Help on class DataFrame in module pandas.core.frame:</a></li>
+<li class="toctree-l1"><a class="reference internal" href="help_loc.html">help-loc</a></li>
+<li class="toctree-l1"><a class="reference internal" href="help_iloc.html">help_iloc</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">help_boxplot</a></li>
+</ul>
+
+<div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="index.html">Documentation overview</a><ul>
+      <li>Previous: <a href="help_iloc.html" title="претходна глава">help_iloc</a></li>
+  </ul></li>
+</ul>
+</div>
+
+
+
+
+
+
+
+
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &#169;2026, Leopoldo.
+      
+      |
+      Powered by <a href="https://www.sphinx-doc.org/">Sphinx 8.2.3</a>
+      &amp; <a href="https://alabaster.readthedocs.io">Alabaster 1.0.0</a>
+      
+      |
+      <a href="_sources/help_boxplot.rst.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+  </body>
+</html>

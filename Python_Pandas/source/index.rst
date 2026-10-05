@@ -14,9 +14,12 @@ documentation for details.
 .. toctree::
    :maxdepth: 2
    :caption: Contents:
-
+ 
+   dir_pd
+   dir_DataFrame
    help_DataFrame
-   ejemplos
-   loc
-   loc_ejemplos
+   help_loc
+   help_iloc
+   help_boxplot
+   help_mean
 
