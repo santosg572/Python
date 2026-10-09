@@ -22,4 +22,5 @@ documentation for details.
    help_iloc
    help_boxplot
    help_mean
+   pandas_pydata/API_reference
 
