@@ -1,0 +1,507 @@
+matplotlib
+==========
+
+https://matplotlib.org/stable/api/matplotlib_configuration_api.html
+
+
+An object-oriented plotting library.
+
+A procedural interface is provided by the companion pyplot module, which may be imported directly, 
+e.g.:
+
+.. code:: Python
+
+   import matplotlib.pyplot as plt
+
+or using ipython:
+
+.. code:: Python
+ 
+   ipython
+
+at your terminal, followed by:
+
+.. code:: Python
+
+   In [1]: %matplotlib
+   In [2]: import matplotlib.pyplot as plt
+
+at the ipython shell prompt.
+
+For the most part, direct use of the explicit object-oriented library is encouraged when 
+programming; the implicit pyplot interface is primarily for working interactively. The exceptions to 
+this suggestion are the pyplot functions pyplot.figure, pyplot.subplot, pyplot.subplots, and 
+pyplot.savefig, which can greatly simplify scripting. See Matplotlib Application Interfaces (APIs) 
+for an explanation of the tradeoffs between the implicit and explicit interfaces.
+
+Modules include:
+
+* **matplotlib.axes**
+
+The Axes class. Most pyplot functions are wrappers for Axes methods. The axes module is the highest 
+level of OO access to the library.
+
+* **matplotlib.figure**
+
+The Figure class.
+
+* **matplotlib.artist**
+
+The Artist base class for all classes that draw things.
+
+* **matplotlib.lines**
+
+The Line2D class for drawing lines and markers.
+
+* **matplotlib.patches**
+
+Classes for drawing polygons.
+
+* **matplotlib.text**
+
+The Text and Annotation classes.
+
+* **matplotlib.image**
+
+The AxesImage and FigureImage classes.
+
+* **matplotlib.collections**
+
+Classes for efficient drawing of groups of lines or polygons.
+
+* **matplotlib.colors**
+
+Color specifications and making colormaps.
+
+* **matplotlib.cm**
+
+Colormaps, and the ScalarMappable mixin class for providing color mapping functionality to other 
+classes.
+
+* **matplotlib.ticker**
+
+Calculation of tick mark locations and formatting of tick labels.
+
+* **matplotlib.backends**
+
+A subpackage with modules for various GUI libraries and output formats.
+
+The base matplotlib namespace includes:
+
+**rcParams**
+
+Default configuration settings; their defaults may be overridden using a matplotlibrc file.
+
+**use**
+
+Setting the Matplotlib backend. This should be called before any figure is created, because it is 
+not possible to switch between different GUI backends after that.
+
+The following environment variables can be used to customize the behavior:
+
+**MPLBACKEND**
+
+This optional variable can be set to choose the Matplotlib backend. See What is a backend?.
+
+**MPLCONFIGDIR**
+
+This is the directory used to store user customizations to Matplotlib, as well as some caches to 
+improve performance. If MPLCONFIGDIR is not defined, HOME/.config/matplotlib and 
+HOME/.cache/matplotlib are used on Linux, and HOME/.matplotlib on other platforms, if they are 
+writable. Otherwise, the Python standard library's tempfile.gettempdir is used to find a base 
+directory in which the matplotlib subdirectory is created.
+
+Matplotlib was initially written by John D. Hunter (1968-2012) and is now developed and maintained 
+by a host of others.
+
+Occasionally the internal documentation (python docstrings) will refer to MATLAB®, a registered 
+trademark of The MathWorks, Inc.
+
+**Backend management**
+
+**matplotlib.use(backend, *, force=True)[source]**
+
+Select the backend used for rendering and GUI integration.
+
+If pyplot is already imported, switch_backend is used to switch the backend.
+
+Parameters:
+
+**backendstr**
+
+The backend to switch to. This can either be one of the standard backend names, which are 
+case-insensitive:
+
+* interactive backends: GTK3Agg, GTK3Cairo, GTK4Agg, GTK4Cairo, MacOSX, nbAgg, notebook, QtAgg, 
+QtCairo, TkAgg, TkCairo, WebAgg, WX, WXAgg, WXCairo, Qt5Agg, Qt5Cairo
+
+* non-interactive backends: agg, cairo, pdf, pgf, ps, svg, template
+
+or a string of the form: module://my.module.name.
+
+notebook is a synonym for nbAgg.
+
+Switching to an interactive backend is not possible if an unrelated event loop has already been 
+started (e.g., switching to GTK3Agg if a TkAgg window has already been opened). Switching to a 
+non-interactive backend is always possible.
+
+**forcebool, default: True**
+
+If True (the default), raise an ImportError if the backend cannot be set up (either because it fails 
+to import, or because an incompatible GUI interactive framework is already running); if False, 
+silently ignore the failure.
+
+See also
+
+Backends
+
+matplotlib.get_backend
+
+matplotlib.pyplot.switch_backend
+
+matplotlib.get_backend(*, auto_select=True)[source]
+
+Return the name of the current backend.
+
+Parameters:
+auto_selectbool, default: True
+Whether to trigger backend resolution if no backend has been selected so far. If True, this ensures 
+that a valid backend is returned. If False, this returns None if no backend has been selected so 
+far.
+
+Added in version 3.10.
+
+Provisional
+
+The auto_select flag is provisional. It may be changed or removed without prior warning.
+
+See also
+
+matplotlib.use
+matplotlib.interactive(b)[source]
+Set whether to redraw after every plotting command (e.g. pyplot.xlabel).
+
+matplotlib.is_interactive()[source]
+Return whether to redraw after every plotting command.
+
+Note
+
+This function is only intended for use in backends. End users should use pyplot.isinteractive 
+instead.
+
+Default values and styling
+matplotlib.rcParams: RcParams[source]
+The global configuration settings for Matplotlib.
+
+This is a dictionary-like variable that stores the current configuration settings. Many of the 
+values control styling, but others control various aspects of Matplotlib's behavior.
+
+See Matplotlib configuration - rcParams for a full list of config parameters.
+
+See Customizing Matplotlib with style sheets and rcParams for usage information.
+
+Notes
+This object is also available as plt.rcParams via the matplotlib.pyplot module (which by convention 
+is imported as plt).
+
+class matplotlib.RcParams(*args, **kwargs)[source]
+A dict-like key-value store for config parameters, including validation.
+
+This is the data structure behind matplotlib.rcParams.
+
+The complete list of rcParams can be found in Matplotlib configuration - rcParams.
+
+find_all(pattern)[source]
+Return the subset of this RcParams dictionary whose keys match, using re.search(), the given 
+pattern.
+
+Note
+
+Changes to the returned dictionary are not propagated to the parent RcParams dictionary.
+
+copy()[source]
+Copy this RcParams instance.
+
+matplotlib.rc_context(rc=None, fname=None)[source]
+Return a context manager for temporarily changing rcParams.
+
+The rcParams["backend"] will not be reset by the context manager.
+
+rcParams changed both through the context manager invocation and in the body of the context will be 
+reset on context exit.
+
+Parameters
+:
+rc
+dict
+The rcParams to temporarily set.
+
+fname
+str or path-like
+A file with Matplotlib rc settings. If both fname and rc are given, settings from rc take 
+precedence.
+
+See also
+
+The matplotlibrc file
+Examples
+
+Passing explicit values via a dict:
+
+with mpl.rc_context({'interactive': False}):
+    fig, ax = plt.subplots()
+    ax.plot(range(3), range(3))
+    fig.savefig('example.png')
+    plt.close(fig)
+Loading settings from a file:
+
+with mpl.rc_context(fname='print.rc'):
+    plt.plot(x, y)  # uses 'print.rc'
+Setting in the context body:
+
+with mpl.rc_context():
+    # will be reset
+    mpl.rcParams['lines.linewidth'] = 5
+    plt.plot(x, y)
+matplotlib.rc(group, **kwargs)[source]
+Set the current rcParams. group is the grouping for the rc, e.g., for lines.linewidth the group is 
+lines, for axes.facecolor, the group is axes, and so on. Group may also be a list or tuple of group 
+names, e.g., (xtick, ytick). kwargs is a dictionary attribute name/value pairs, e.g.,:
+
+rc('lines', linewidth=2, color='r')
+sets the current rcParams and is equivalent to:
+
+rcParams['lines.linewidth'] = 2
+rcParams['lines.color'] = 'r'
+The following aliases are available to save typing for interactive users:
+
+Alias
+
+Property
+
+'lw'
+
+'linewidth'
+
+'ls'
+
+'linestyle'
+
+'c'
+
+'color'
+
+'fc'
+
+'facecolor'
+
+'ec'
+
+'edgecolor'
+
+'mew'
+
+'markeredgewidth'
+
+'aa'
+
+'antialiased'
+
+'sans'
+
+'sans-serif'
+
+Thus you could abbreviate the above call as:
+
+rc('lines', lw=2, c='r')
+Note you can use python's kwargs dictionary facility to store dictionaries of default parameters. 
+e.g., you can customize the font rc as follows:
+
+font = {'family' : 'monospace',
+        'weight' : 'bold',
+        'size'   : 'large'}
+rc('font', **font)  # pass in the font dict as kwargs
+This enables you to easily switch between several configurations. Use 
+matplotlib.style.use('default') or rcdefaults() to restore the default rcParams after changes.
+
+Notes
+
+Similar functionality is available by using the normal dict interface, i.e. 
+rcParams.update({"lines.linewidth": 2, ...}) (but rcParams.update does not support abbreviations or 
+grouping).
+
+matplotlib.rcdefaults()[source]
+Restore the rcParams from Matplotlib's internal default style.
+
+Style-blacklisted rcParams (defined in matplotlib.style.core.STYLE_BLACKLIST) are not updated.
+
+See also
+
+matplotlib.rc_file_defaults
+Restore the rcParams from the rc file originally loaded by Matplotlib.
+
+matplotlib.style.use
+Use a specific style file. Call style.use('default') to restore the default style.
+
+matplotlib.rc_file_defaults()[source]
+Restore the rcParams from the original rc file loaded by Matplotlib.
+
+Style-blacklisted rcParams (defined in matplotlib.style.core.STYLE_BLACKLIST) are not updated.
+
+matplotlib.rc_file(fname, *, use_default_template=True)[source]
+Update rcParams from file.
+
+Style-blacklisted rcParams (defined in matplotlib.style.core.STYLE_BLACKLIST) are not updated.
+
+Parameters
+:
+fname
+str or path-like
+A file with Matplotlib rc settings.
+
+use_default_template
+bool
+If True, initialize with default parameters before updating with those in the given file. If False, 
+the current configuration persists and only the parameters specified in the file are updated.
+
+matplotlib.rc_params(fail_on_error=False)[source]
+Construct a RcParams instance from the default Matplotlib rc file.
+
+matplotlib.rc_params_from_file(fname, fail_on_error=False, use_default_template=True)[source]
+Construct a RcParams from file fname.
+
+Parameters
+:
+fname
+str or path-like
+A file with Matplotlib rc settings.
+
+fail_on_error
+bool
+If True, raise an error when the parser fails to convert a parameter.
+
+use_default_template
+bool
+If True, initialize with default parameters before updating with those in the given file. If False, 
+the configuration class only contains the parameters specified in the file. (Useful for updating 
+dicts.)
+
+matplotlib.get_configdir()[source]
+Return the string path of the configuration directory.
+
+The directory is chosen as follows:
+
+If the MPLCONFIGDIR environment variable is supplied, choose that.
+
+On Linux, follow the XDG specification and look first in $XDG_CONFIG_HOME, if defined, or 
+$HOME/.config. On Windows, use %LOCALAPPDATA%\matplotlib. On other platforms, choose 
+$HOME/.matplotlib.
+
+If the chosen directory exists and is writable, use that as the configuration directory.
+
+Else, create a temporary directory, and use it as the configuration directory.
+
+matplotlib.matplotlib_fname()[source]
+Get the location of the config file.
+
+The file location is determined in the following order
+
+$PWD/matplotlibrc
+
+$MATPLOTLIBRC if it is not a directory
+
+$MATPLOTLIBRC/matplotlibrc
+
+$MPLCONFIGDIR/matplotlibrc
+
+On Linux,
+$XDG_CONFIG_HOME/matplotlib/matplotlibrc (if $XDG_CONFIG_HOME is defined)
+
+or $HOME/.config/matplotlib/matplotlibrc (if $XDG_CONFIG_HOME is not defined)
+
+On other platforms, - $HOME/.matplotlib/matplotlibrc if $HOME is defined
+
+Lastly, it looks in $MATPLOTLIBDATA/matplotlibrc, which should always exist.
+
+matplotlib.get_data_path()[source]
+Return the path to Matplotlib data.
+
+Logging
+matplotlib.set_loglevel(level)[source]
+Configure Matplotlib's logging levels.
+
+Matplotlib uses the standard library logging framework under the root logger 'matplotlib'. This is a 
+helper function to:
+
+set Matplotlib's root logger level
+
+set the root logger handler's level, creating the handler if it does not exist yet
+
+Typically, one should call set_loglevel("INFO") or set_loglevel("DEBUG") to get additional debugging 
+information.
+
+Users or applications that are installing their own logging handlers may want to directly manipulate 
+logging.getLogger('matplotlib') rather than use this function.
+
+Parameters:
+level{"NOTSET", "DEBUG", "INFO", "WARNING", "ERROR", "CRITICAL"}
+The log level as defined in Python logging levels.
+
+For backwards compatibility, the levels are case-insensitive, but the capitalized version is 
+preferred in analogy to logging.Logger.setLevel.
+
+Notes
+
+The first time this function is called, an additional handler is attached to Matplotlib's root 
+handler; this handler is reused every time and this function simply manipulates the logger and 
+handler's level.
+
+Colormaps and color sequences
+matplotlib.colormaps[source]
+Container for colormaps that are known to Matplotlib by name.
+
+The universal registry instance is matplotlib.colormaps. There should be no need for users to 
+instantiate ColormapRegistry themselves.
+
+Read access uses a dict-like interface mapping names to Colormaps:
+
+import matplotlib as mpl
+cmap = mpl.colormaps['viridis']
+Returned Colormaps are copies, so that their modification does not change the global definition of 
+the colormap.
+
+Additional colormaps can be added via ColormapRegistry.register:
+
+mpl.colormaps.register(my_colormap)
+To get a list of all registered colormaps, you can do:
+
+from matplotlib import colormaps
+list(colormaps)
+matplotlib.color_sequences[source]
+Container for sequences of colors that are known to Matplotlib by name.
+
+The universal registry instance is matplotlib.color_sequences. There should be no need for users to 
+instantiate ColorSequenceRegistry themselves.
+
+Read access uses a dict-like interface mapping names to lists of colors:
+
+import matplotlib as mpl
+colors = mpl.color_sequences['tab10']
+For a list of built in color sequences, see Named color sequences. The returned lists are copies, so 
+that their modification does not change the global definition of the color sequence.
+
+Additional color sequences can be added via ColorSequenceRegistry.register:
+
+mpl.color_sequences.register('rgb', ['r', 'g', 'b'])
+Miscellaneous
+class matplotlib.MatplotlibDeprecationWarning[source]
+A class for issuing deprecation warnings for Matplotlib users.
+
+matplotlib.get_cachedir()[source]
+Return the string path of the cache directory.
+
+The procedure used to find the directory is the same as for get_configdir, except using 
+$XDG_CACHE_HOME/$HOME/.cache instead on Linux. On Windows, uses %LOCALAPPDATA%\matplotlib (same as 
+config).
+
+

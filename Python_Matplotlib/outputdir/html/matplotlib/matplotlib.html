@@ -1,0 +1,429 @@
+<!DOCTYPE html>
+
+<html lang="sp" data-content_root="../">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>matplotlib &#8212; документација matplotlib 01</title>
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=5ecbeea2" />
+    <link rel="stylesheet" type="text/css" href="../_static/alabaster.css?v=12dfc556" />
+    <script src="../_static/documentation_options.js?v=cb95fe6c"></script>
+    <script src="../_static/doctools.js?v=9a2dae69"></script>
+    <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <link rel="index" title="Индекс" href="../genindex.html" />
+    <link rel="search" title="Претрага" href="../search.html" />
+    <link rel="prev" title="matplotlib documentation" href="../index.html" />
+   
+  <link rel="stylesheet" href="../_static/custom.css" type="text/css" />
+  
+
+  
+  
+
+  </head><body>
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          
+
+          <div class="body" role="main">
+            
+  <section id="matplotlib">
+<h1>matplotlib<a class="headerlink" href="#matplotlib" title="Link to this heading">¶</a></h1>
+<p>matplotlib
+An object-oriented plotting library.</p>
+<p>A procedural interface is provided by the companion pyplot module, which may be imported directly,
+e.g.:</p>
+<p>import matplotlib.pyplot as plt
+or using ipython:</p>
+<p>ipython
+at your terminal, followed by:</p>
+<p>In [1]: %matplotlib
+In [2]: import matplotlib.pyplot as plt
+at the ipython shell prompt.</p>
+<p>For the most part, direct use of the explicit object-oriented library is encouraged when
+programming; the implicit pyplot interface is primarily for working interactively. The exceptions to
+this suggestion are the pyplot functions pyplot.figure, pyplot.subplot, pyplot.subplots, and
+pyplot.savefig, which can greatly simplify scripting. See Matplotlib Application Interfaces (APIs)
+for an explanation of the tradeoffs between the implicit and explicit interfaces.</p>
+<p>Modules include:</p>
+<p>matplotlib.axes
+The Axes class. Most pyplot functions are wrappers for Axes methods. The axes module is the highest
+level of OO access to the library.</p>
+<p>matplotlib.figure
+The Figure class.</p>
+<p>matplotlib.artist
+The Artist base class for all classes that draw things.</p>
+<p>matplotlib.lines
+The Line2D class for drawing lines and markers.</p>
+<p>matplotlib.patches
+Classes for drawing polygons.</p>
+<p>matplotlib.text
+The Text and Annotation classes.</p>
+<p>matplotlib.image
+The AxesImage and FigureImage classes.</p>
+<p>matplotlib.collections
+Classes for efficient drawing of groups of lines or polygons.</p>
+<p>matplotlib.colors
+Color specifications and making colormaps.</p>
+<p>matplotlib.cm
+Colormaps, and the ScalarMappable mixin class for providing color mapping functionality to other
+classes.</p>
+<p>matplotlib.ticker
+Calculation of tick mark locations and formatting of tick labels.</p>
+<p>matplotlib.backends
+A subpackage with modules for various GUI libraries and output formats.</p>
+<p>The base matplotlib namespace includes:</p>
+<p>rcParams
+Default configuration settings; their defaults may be overridden using a matplotlibrc file.</p>
+<p>use
+Setting the Matplotlib backend. This should be called before any figure is created, because it is
+not possible to switch between different GUI backends after that.</p>
+<p>The following environment variables can be used to customize the behavior:</p>
+<p>MPLBACKEND
+This optional variable can be set to choose the Matplotlib backend. See What is a backend?.</p>
+<p>MPLCONFIGDIR
+This is the directory used to store user customizations to Matplotlib, as well as some caches to
+improve performance. If MPLCONFIGDIR is not defined, HOME/.config/matplotlib and
+HOME/.cache/matplotlib are used on Linux, and HOME/.matplotlib on other platforms, if they are
+writable. Otherwise, the Python standard library's tempfile.gettempdir is used to find a base
+directory in which the matplotlib subdirectory is created.</p>
+<p>Matplotlib was initially written by John D. Hunter (1968-2012) and is now developed and maintained
+by a host of others.</p>
+<p>Occasionally the internal documentation (python docstrings) will refer to MATLAB®, a registered
+trademark of The MathWorks, Inc.</p>
+<p>Backend management
+matplotlib.use(backend, <a href="#id1"><span class="problematic" id="id2">*</span></a>, force=True)[source]
+Select the backend used for rendering and GUI integration.</p>
+<p>If pyplot is already imported, switch_backend is used to switch the backend.</p>
+<p>Parameters:
+backendstr
+The backend to switch to. This can either be one of the standard backend names, which are
+case-insensitive:</p>
+<p>interactive backends: GTK3Agg, GTK3Cairo, GTK4Agg, GTK4Cairo, MacOSX, nbAgg, notebook, QtAgg,
+QtCairo, TkAgg, TkCairo, WebAgg, WX, WXAgg, WXCairo, Qt5Agg, Qt5Cairo</p>
+<p>non-interactive backends: agg, cairo, pdf, pgf, ps, svg, template</p>
+<p>or a string of the form: module://my.module.name.</p>
+<p>notebook is a synonym for nbAgg.</p>
+<p>Switching to an interactive backend is not possible if an unrelated event loop has already been
+started (e.g., switching to GTK3Agg if a TkAgg window has already been opened). Switching to a
+non-interactive backend is always possible.</p>
+<p>forcebool, default: True
+If True (the default), raise an ImportError if the backend cannot be set up (either because it fails
+to import, or because an incompatible GUI interactive framework is already running); if False,
+silently ignore the failure.</p>
+<p>See also</p>
+<p>Backends
+matplotlib.get_backend
+matplotlib.pyplot.switch_backend
+matplotlib.get_backend(<a href="#id3"><span class="problematic" id="id4">*</span></a>, auto_select=True)[source]
+Return the name of the current backend.</p>
+<p>Parameters:
+auto_selectbool, default: True
+Whether to trigger backend resolution if no backend has been selected so far. If True, this ensures
+that a valid backend is returned. If False, this returns None if no backend has been selected so
+far.</p>
+<p>Added in version 3.10.</p>
+<p>Provisional</p>
+<p>The auto_select flag is provisional. It may be changed or removed without prior warning.</p>
+<p>See also</p>
+<p>matplotlib.use
+matplotlib.interactive(b)[source]
+Set whether to redraw after every plotting command (e.g. pyplot.xlabel).</p>
+<p>matplotlib.is_interactive()[source]
+Return whether to redraw after every plotting command.</p>
+<p>Note</p>
+<p>This function is only intended for use in backends. End users should use pyplot.isinteractive
+instead.</p>
+<p>Default values and styling
+matplotlib.rcParams: RcParams[source]
+The global configuration settings for Matplotlib.</p>
+<p>This is a dictionary-like variable that stores the current configuration settings. Many of the
+values control styling, but others control various aspects of Matplotlib's behavior.</p>
+<p>See Matplotlib configuration - rcParams for a full list of config parameters.</p>
+<p>See Customizing Matplotlib with style sheets and rcParams for usage information.</p>
+<p>Notes
+This object is also available as plt.rcParams via the matplotlib.pyplot module (which by convention
+is imported as plt).</p>
+<p>class matplotlib.RcParams(<a href="#id5"><span class="problematic" id="id6">*</span></a>args, <a href="#id7"><span class="problematic" id="id8">**</span></a>kwargs)[source]
+A dict-like key-value store for config parameters, including validation.</p>
+<p>This is the data structure behind matplotlib.rcParams.</p>
+<p>The complete list of rcParams can be found in Matplotlib configuration - rcParams.</p>
+<p>find_all(pattern)[source]
+Return the subset of this RcParams dictionary whose keys match, using re.search(), the given
+pattern.</p>
+<p>Note</p>
+<p>Changes to the returned dictionary are not propagated to the parent RcParams dictionary.</p>
+<p>copy()[source]
+Copy this RcParams instance.</p>
+<p>matplotlib.rc_context(rc=None, fname=None)[source]
+Return a context manager for temporarily changing rcParams.</p>
+<p>The rcParams[&quot;backend&quot;] will not be reset by the context manager.</p>
+<p>rcParams changed both through the context manager invocation and in the body of the context will be
+reset on context exit.</p>
+<p>Parameters
+:
+rc
+dict
+The rcParams to temporarily set.</p>
+<p>fname
+str or path-like
+A file with Matplotlib rc settings. If both fname and rc are given, settings from rc take
+precedence.</p>
+<p>See also</p>
+<p>The matplotlibrc file
+Examples</p>
+<p>Passing explicit values via a dict:</p>
+<dl class="simple">
+<dt>with mpl.rc_context({'interactive': False}):</dt><dd><p>fig, ax = plt.subplots()
+ax.plot(range(3), range(3))
+fig.savefig('example.png')
+plt.close(fig)</p>
+</dd>
+</dl>
+<p>Loading settings from a file:</p>
+<dl class="simple">
+<dt>with mpl.rc_context(fname='print.rc'):</dt><dd><p>plt.plot(x, y)  # uses 'print.rc'</p>
+</dd>
+</dl>
+<p>Setting in the context body:</p>
+<dl class="simple">
+<dt>with mpl.rc_context():</dt><dd><p># will be reset
+mpl.rcParams['lines.linewidth'] = 5
+plt.plot(x, y)</p>
+</dd>
+</dl>
+<p>matplotlib.rc(group, <a href="#id9"><span class="problematic" id="id10">**</span></a>kwargs)[source]
+Set the current rcParams. group is the grouping for the rc, e.g., for lines.linewidth the group is
+lines, for axes.facecolor, the group is axes, and so on. Group may also be a list or tuple of group
+names, e.g., (xtick, ytick). kwargs is a dictionary attribute name/value pairs, e.g.,:</p>
+<p>rc('lines', linewidth=2, color='r')
+sets the current rcParams and is equivalent to:</p>
+<p>rcParams['lines.linewidth'] = 2
+rcParams['lines.color'] = 'r'
+The following aliases are available to save typing for interactive users:</p>
+<p>Alias</p>
+<p>Property</p>
+<p>'lw'</p>
+<p>'linewidth'</p>
+<p>'ls'</p>
+<p>'linestyle'</p>
+<p>'c'</p>
+<p>'color'</p>
+<p>'fc'</p>
+<p>'facecolor'</p>
+<p>'ec'</p>
+<p>'edgecolor'</p>
+<p>'mew'</p>
+<p>'markeredgewidth'</p>
+<p>'aa'</p>
+<p>'antialiased'</p>
+<p>'sans'</p>
+<p>'sans-serif'</p>
+<p>Thus you could abbreviate the above call as:</p>
+<p>rc('lines', lw=2, c='r')
+Note you can use python's kwargs dictionary facility to store dictionaries of default parameters.
+e.g., you can customize the font rc as follows:</p>
+<dl class="simple">
+<dt>font = {'family'<span class="classifier">'monospace',</span></dt><dd><p>'weight' : 'bold',
+'size'   : 'large'}</p>
+</dd>
+</dl>
+<p>rc('font', <a href="#id11"><span class="problematic" id="id12">**</span></a>font)  # pass in the font dict as kwargs
+This enables you to easily switch between several configurations. Use
+matplotlib.style.use('default') or rcdefaults() to restore the default rcParams after changes.</p>
+<p>Notes</p>
+<p>Similar functionality is available by using the normal dict interface, i.e.
+rcParams.update({&quot;lines.linewidth&quot;: 2, ...}) (but rcParams.update does not support abbreviations or
+grouping).</p>
+<p>matplotlib.rcdefaults()[source]
+Restore the rcParams from Matplotlib's internal default style.</p>
+<p>Style-blacklisted rcParams (defined in matplotlib.style.core.STYLE_BLACKLIST) are not updated.</p>
+<p>See also</p>
+<p>matplotlib.rc_file_defaults
+Restore the rcParams from the rc file originally loaded by Matplotlib.</p>
+<p>matplotlib.style.use
+Use a specific style file. Call style.use('default') to restore the default style.</p>
+<p>matplotlib.rc_file_defaults()[source]
+Restore the rcParams from the original rc file loaded by Matplotlib.</p>
+<p>Style-blacklisted rcParams (defined in matplotlib.style.core.STYLE_BLACKLIST) are not updated.</p>
+<p>matplotlib.rc_file(fname, <a href="#id13"><span class="problematic" id="id14">*</span></a>, use_default_template=True)[source]
+Update rcParams from file.</p>
+<p>Style-blacklisted rcParams (defined in matplotlib.style.core.STYLE_BLACKLIST) are not updated.</p>
+<p>Parameters
+:
+fname
+str or path-like
+A file with Matplotlib rc settings.</p>
+<p>use_default_template
+bool
+If True, initialize with default parameters before updating with those in the given file. If False,
+the current configuration persists and only the parameters specified in the file are updated.</p>
+<p>matplotlib.rc_params(fail_on_error=False)[source]
+Construct a RcParams instance from the default Matplotlib rc file.</p>
+<p>matplotlib.rc_params_from_file(fname, fail_on_error=False, use_default_template=True)[source]
+Construct a RcParams from file fname.</p>
+<p>Parameters
+:
+fname
+str or path-like
+A file with Matplotlib rc settings.</p>
+<p>fail_on_error
+bool
+If True, raise an error when the parser fails to convert a parameter.</p>
+<p>use_default_template
+bool
+If True, initialize with default parameters before updating with those in the given file. If False,
+the configuration class only contains the parameters specified in the file. (Useful for updating
+dicts.)</p>
+<p>matplotlib.get_configdir()[source]
+Return the string path of the configuration directory.</p>
+<p>The directory is chosen as follows:</p>
+<p>If the MPLCONFIGDIR environment variable is supplied, choose that.</p>
+<p>On Linux, follow the XDG specification and look first in $XDG_CONFIG_HOME, if defined, or
+$HOME/.config. On Windows, use %LOCALAPPDATA%matplotlib. On other platforms, choose
+$HOME/.matplotlib.</p>
+<p>If the chosen directory exists and is writable, use that as the configuration directory.</p>
+<p>Else, create a temporary directory, and use it as the configuration directory.</p>
+<p>matplotlib.matplotlib_fname()[source]
+Get the location of the config file.</p>
+<p>The file location is determined in the following order</p>
+<p>$PWD/matplotlibrc</p>
+<p>$MATPLOTLIBRC if it is not a directory</p>
+<p>$MATPLOTLIBRC/matplotlibrc</p>
+<p>$MPLCONFIGDIR/matplotlibrc</p>
+<p>On Linux,
+$XDG_CONFIG_HOME/matplotlib/matplotlibrc (if $XDG_CONFIG_HOME is defined)</p>
+<p>or $HOME/.config/matplotlib/matplotlibrc (if $XDG_CONFIG_HOME is not defined)</p>
+<p>On other platforms, - $HOME/.matplotlib/matplotlibrc if $HOME is defined</p>
+<p>Lastly, it looks in $MATPLOTLIBDATA/matplotlibrc, which should always exist.</p>
+<p>matplotlib.get_data_path()[source]
+Return the path to Matplotlib data.</p>
+<p>Logging
+matplotlib.set_loglevel(level)[source]
+Configure Matplotlib's logging levels.</p>
+<p>Matplotlib uses the standard library logging framework under the root logger 'matplotlib'. This is a
+helper function to:</p>
+<p>set Matplotlib's root logger level</p>
+<p>set the root logger handler's level, creating the handler if it does not exist yet</p>
+<p>Typically, one should call set_loglevel(&quot;INFO&quot;) or set_loglevel(&quot;DEBUG&quot;) to get additional debugging
+information.</p>
+<p>Users or applications that are installing their own logging handlers may want to directly manipulate
+logging.getLogger('matplotlib') rather than use this function.</p>
+<p>Parameters:
+level{&quot;NOTSET&quot;, &quot;DEBUG&quot;, &quot;INFO&quot;, &quot;WARNING&quot;, &quot;ERROR&quot;, &quot;CRITICAL&quot;}
+The log level as defined in Python logging levels.</p>
+<p>For backwards compatibility, the levels are case-insensitive, but the capitalized version is
+preferred in analogy to logging.Logger.setLevel.</p>
+<p>Notes</p>
+<p>The first time this function is called, an additional handler is attached to Matplotlib's root
+handler; this handler is reused every time and this function simply manipulates the logger and
+handler's level.</p>
+<p>Colormaps and color sequences
+matplotlib.colormaps[source]
+Container for colormaps that are known to Matplotlib by name.</p>
+<p>The universal registry instance is matplotlib.colormaps. There should be no need for users to
+instantiate ColormapRegistry themselves.</p>
+<p>Read access uses a dict-like interface mapping names to Colormaps:</p>
+<p>import matplotlib as mpl
+cmap = mpl.colormaps['viridis']
+Returned Colormaps are copies, so that their modification does not change the global definition of
+the colormap.</p>
+<p>Additional colormaps can be added via ColormapRegistry.register:</p>
+<p>mpl.colormaps.register(my_colormap)
+To get a list of all registered colormaps, you can do:</p>
+<p>from matplotlib import colormaps
+list(colormaps)
+matplotlib.color_sequences[source]
+Container for sequences of colors that are known to Matplotlib by name.</p>
+<p>The universal registry instance is matplotlib.color_sequences. There should be no need for users to
+instantiate ColorSequenceRegistry themselves.</p>
+<p>Read access uses a dict-like interface mapping names to lists of colors:</p>
+<p>import matplotlib as mpl
+colors = mpl.color_sequences['tab10']
+For a list of built in color sequences, see Named color sequences. The returned lists are copies, so
+that their modification does not change the global definition of the color sequence.</p>
+<p>Additional color sequences can be added via ColorSequenceRegistry.register:</p>
+<p>mpl.color_sequences.register('rgb', ['r', 'g', 'b'])
+Miscellaneous
+class matplotlib.MatplotlibDeprecationWarning[source]
+A class for issuing deprecation warnings for Matplotlib users.</p>
+<p>matplotlib.get_cachedir()[source]
+Return the string path of the cache directory.</p>
+<p>The procedure used to find the directory is the same as for get_configdir, except using
+$XDG_CACHE_HOME/$HOME/.cache instead on Linux. On Windows, uses %LOCALAPPDATA%matplotlib (same as
+config).</p>
+</section>
+
+
+          </div>
+          
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="Main">
+        <div class="sphinxsidebarwrapper">
+<h1 class="logo"><a href="../index.html">matplotlib</a></h1>
+
+
+
+
+
+
+
+
+<h3>Навигација</h3>
+<p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="current reference internal" href="#">matplotlib</a></li>
+</ul>
+
+<div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="../index.html">Documentation overview</a><ul>
+      <li>Previous: <a href="../index.html" title="претходна глава">matplotlib documentation</a></li>
+  </ul></li>
+</ul>
+</div>
+<search id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Брза претрага</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
+      <input type="submit" value="Тражи" />
+    </form>
+    </div>
+</search>
+<script>document.getElementById('searchbox').style.display = "block"</script>
+
+
+
+
+
+
+
+
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &#169;2026, Leopoldo.
+      
+      |
+      Powered by <a href="https://www.sphinx-doc.org/">Sphinx 7.4.7</a>
+      &amp; <a href="https://alabaster.readthedocs.io">Alabaster 0.7.16</a>
+      
+      |
+      <a href="../_sources/matplotlib/matplotlib.rst.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+  </body>
+</html>
