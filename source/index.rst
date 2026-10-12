@@ -24,4 +24,5 @@ Contenido
    Python_Analisis_Imagenes/creando_imagenes/creando_imagenes
    Python_Analisis_Imagenes/Despliega_movie
    daniel/index_estadistica
+   Imagenes/imagenes
 
