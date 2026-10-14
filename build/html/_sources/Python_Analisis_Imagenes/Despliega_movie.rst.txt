@@ -5,7 +5,6 @@ Análisis de un movie
    :width: 600
    :height: 400
    :controls:
-   :options: autoplay, loop
 
 
 

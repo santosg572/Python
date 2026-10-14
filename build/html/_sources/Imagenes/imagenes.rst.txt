@@ -1,25 +1,18 @@
-Estructuras de datos en el módulo numpy
-=======================================
+Imágenes
+========
 
-En el módulo ``numpy`` se tienen estructuras de datos de la siguiente forma:
+**Imagen Sagital**
 
-**Vector fila**
- 
-.. image:: vector_fila.png
+.. image:: corte_sagital.png
 
-**Vector columna**
+Medida para evaluar que tan parecido es la distribución de los datos con la distribución normal.
 
-.. image:: vector_columna.png
+.. image:: kurtosis.png
 
-**Matriz**
+Medida para evaluar que tan simetrica es la distribución de los datos.
 
-.. image:: matriz.png
+.. image:: simetria.png
 
-**Volumen** Un volumen es representado por un prisma rectangular compuesto de tres dimensiones: largo, ancho y alto.
-Esta representado por matrices apiladas del mismo tamaño.
+Formulas para carcular algunos cuartiles.
 
-.. image:: vol1.png
-
-.. image:: vol2.png
-
-.. image:: vol3.png
+.. image:: cuartiles.png

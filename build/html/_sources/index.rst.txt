@@ -20,8 +20,7 @@ Contenido
    numpy_help
    matplotlyb
    ejercicio_01
-   Python_Analisis_Imagenes/cell_ejemplo/cell
-   Python_Analisis_Imagenes/creando_imagenes/creando_imagenes
-   Python_Analisis_Imagenes/Despliega_movie
-   daniel/index_estadistica
+   ubuntu_windows
+   funciones_curso
+   ejercicio_calculo_de_probabilidades
 

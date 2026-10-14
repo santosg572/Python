@@ -4,6 +4,7 @@ import numpy as np
 import turtle
 import matplotlib.pyplot as plt
 import matplotlib.image as mpimg
+import pandas as pd
 
 def Histograma_Imagen():
   file = 'corte_sagital.png'
@@ -18,6 +19,10 @@ def Histograma_Imagen():
   print(vec.shape)
   ii = np.arange(0,100,1)
   plt.hist(vec, ii)
+  plt.show()
+
+def Histograma_Vector(vec=0):
+  plt.hist(vec)
   plt.show()
 
 def Despliega_Imagen():
@@ -101,8 +106,6 @@ def regresion_lineal(x=0, y=0):
 def Grafica_XY(x=0, y=0):
   plt.plot(x, y, 'o')
   plt.show()
-
-
 
 
 
