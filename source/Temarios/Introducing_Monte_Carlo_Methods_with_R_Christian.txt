@@ -1,0 +1,106 @@
+1 Basic R Programming . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 1
+1.1 Introduction . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 2
+1.2 Getting started . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 3
+1.3 R objects . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 5
+1.3.1 The vector class . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 6
+1.3.2 The matrix, array, and factor classes . . . . . . . . . . . . . . . . . . 9
+1.3.3 The list and data.frame classes . . . . . . . . . . . . . . . . . . . . . . 12
+1.4 Probability distributions in R . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 14
+1.5 Basic and not-so-basic statistics . . . . . . . . . . . . . . . . . . . . . . . . . . . 14
+1.6 Graphical facilities . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 26
+1.7 Writing new R functions . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 31
+1.8 Input and output in R . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 35
+1.9 Administration of R objects . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 36
+1.10 The mcsm package . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 36
+1.11 Additional exercises . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 37
+2 Random Variable Generation . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 41
+2.1 Introduction . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 42
+2.1.1 Uniform simulation . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 42
+2.1.2 The inverse transform . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 44
+2.2 General transformation methods . . . . . . . . . . . . . . . . . . . . . . . . . . . 46
+2.2.1 A normal generator . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 47
+2.2.2 Discrete distributions . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 48
+2.2.3 Mixture representations . . . . . . . . . . . . . . . . . . . . . . . . . . . . 50
+2.3 Accept–reject methods . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 51
+
+2.4 Additional exercises . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 57
+3 Monte Carlo Integration . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 61
+3.1 Introduction . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 62
+3.2 Classical Monte Carlo integration . . . . . . . . . . . . . . . . . . . . . . . . . . 65
+3.3 Importance sampling . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 69
+3.3.1 An arbitrary change of reference measure . . . . . . . . . . . . . 69
+3.3.2 Sampling importance resampling . . . . . . . . . . . . . . . . . . . . 75
+3.3.3 Selection of the importance function . . . . . . . . . . . . . . . . . 78
+3.4 Additional exercises . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 86
+4 Controlling and Accelerating Convergence . . . . . . . . . . . . . . . . . 89
+4.1 Introduction . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 90
+4.2 Monitoring variation . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 91
+4.3 Asymptotic variance of importance sampling estimators . . . . . . 92
+4.4 Effective sample size and perplexity . . . . . . . . . . . . . . . . . . . . . . . . 98
+4.5 Simultaneous monitoring . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 100
+4.6 Rao–Blackwellization and deconditioning . . . . . . . . . . . . . . . . . . . 107
+4.7 Acceleration methods . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 111
+4.7.1 Correlated simulations . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 111
+4.7.2 Antithetic variables . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 113
+4.7.3 Control variates . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 116
+4.8 Additional exercises . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 122
+5 Monte Carlo Optimization . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 125
+5.1 Introduction . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 126
+5.2 Numerical optimization methods . . . . . . . . . . . . . . . . . . . . . . . . . . 127
+5.3 Stochastic search . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 130
+5.3.1 A basic solution . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 130
+5.3.2 Stochastic gradient methods . . . . . . . . . . . . . . . . . . . . . . . . 136
+5.3.3 Simulated annealing . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 140
+5.4 Stochastic approximation . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 146
+5.4.1 Optimizing Monte Carlo approximations . . . . . . . . . . . . . 146
+5.4.2 Missing-data models and demarginalization . . . . . . . . . . . 150
+5.4.3 The EM algorithm . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 152
+5.4.4 Monte Carlo EM . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 157
+5.5 Additional exercises . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 163
+6 Metropolis–Hastings Algorithms . . . . . . . . . . . . . . . . . . . . . . . . . . . 167
+6.1 Introduction . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 168
+6.2 A peek at Markov chain theory . . . . . . . . . . . . . . . . . . . . . . . . . . . . 168
+6.3 Basic Metropolis–Hastings algorithms . . . . . . . . . . . . . . . . . . . . . . 170
+6.3.1 A generic Markov chain Monte Carlo algorithm . . . . . . . 171
+6.3.2 The independent Metropolis–Hastings algorithm . . . . . . 175
+6.4 A selection of candidates . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 182
+
+6.4.1 Random walks . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 182
+6.4.2 Alternative candidates . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 185
+6.5 Acceptance rates . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 192
+6.6 Additional exercises . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 195
+7 Gibbs Samplers . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 199
+7.1 Introduction . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 200
+7.2 The two-stage Gibbs sampler . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 200
+7.3 The multistage Gibbs sampler . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 206
+7.4 Missing data and latent variables . . . . . . . . . . . . . . . . . . . . . . . . . . 209
+7.5 Hierarchical structures . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 221
+7.6 Other considerations . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 224
+7.6.1 Reparameterization . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 224
+7.6.2 Rao–Blackwellization . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 227
+7.6.3 Metropolis within Gibbs and hybrid strategies . . . . . . . . 230
+7.6.4 Improper priors . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 232
+7.7 Additional exercises . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 234
+8 Monitoring and Adaptation for MCMC Algorithms . . . . . . . . 237
+8.1 Introduction . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 238
+8.2 Monitoring what and why . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 238
+8.2.1 Convergence to the stationary distribution . . . . . . . . . . . . 238
+8.2.2 Convergence of averages . . . . . . . . . . . . . . . . . . . . . . . . . . . . 240
+8.2.3 Approximating iid sampling . . . . . . . . . . . . . . . . . . . . . . . . 240
+8.2.4 The coda package . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 241
+8.3 Monitoring convergence to stationarity . . . . . . . . . . . . . . . . . . . . . 242
+8.3.1 Graphical diagnoses . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 242
+8.3.2 Nonparametric tests of stationarity . . . . . . . . . . . . . . . . . . 243
+8.3.3 Spectral analysis . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 247
+8.4 Monitoring convergence of averages . . . . . . . . . . . . . . . . . . . . . . . . 250
+8.4.1 Graphical diagnoses . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 250
+8.4.2 Within and between variances . . . . . . . . . . . . . . . . . . . . . . 253
+8.4.3 Effective sample size . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 255
+8.4.4 Fixed-width batch means . . . . . . . . . . . . . . . . . . . . . . . . . . . 257
+8.5 Adaptive MCMC . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 258
+8.5.1 Cautions about adaptation . . . . . . . . . . . . . . . . . . . . . . . . . 258
+8.5.2 The amcmc package . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 264
+8.6 Additional exercises . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 267
+References . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 269
+Index of R Terms . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 275
+Index of Subjects . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 279

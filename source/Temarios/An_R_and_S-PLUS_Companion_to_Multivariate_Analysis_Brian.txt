@@ -1,0 +1,108 @@
+1 Multivariate Data and Multivariate Analysis 1
+1.1 Introduction.. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 1
+1.2 Types of Data. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 1
+1.3 Summary Statistics for Multivariate Data. . . . . . . . . . . . . . . . . . . . . . . 4
+1.3.1 Means.............................................. 4
+1.3.2 Variances............................................ 5
+1.3.3 Covariances 5
+1.3.4 Correlations . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 6
+1.3.5 Distances 7
+1.4 The Multivariate Normal Distribution. . . . . . . . . . . . . . . . . . . . . . . . . . 9
+1.5 The Aims of Multivariate Analysis . . . . . . . . . . . . . . . . 13
+1.6 Summary................................................. 15
+2 Looking at Multivariate Data. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 16
+2.1 Introduction.. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 16
+2.2 Scatterplots and Beyond. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 17
+2.2.1 The Convex Hull of Bivariate Data . . . . . . . . . . . . . . . . . . . . . . 22
+2.2.2 The Chiplot. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 23
+2.2.3 The Bivariate Boxplot . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 25
+2.3 Estimating Bivariate Densities. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 29
+2.4 Representing Other Variables on a Scatterplot . . . . . . . . . . . . . . . . . . . 32
+2.5 The Scatterplot Matrix . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 33
+2.6 Three-Dimensional Plots 35
+2.7 Conditioning Plots and Trellis Graphics. . . . . . . . . . . . . . . . . . . . . . . . 37
+2.8 Summary................................................. 40
+Exercises 40
+3 Principal Components Analysis . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 41
+3.1 Introduction.. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 41
+3.2 Algebraic Basics of Principal Components 42
+
+3.2.1 Rescaling Principal Components. . . . . . . . . . . . . . . . . . . . . . . . 45
+3.2.2 Choosing the Number of Components 46
+3.2.3 Calculating Principal Component Scores . . . . . . . . . . . . . . . . . 47
+3.2.4 Principal Components of Bivariate Data with Correlation
+Coefficient r . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 48
+3.3 An Example of Principal Components Analysis: Air Pollution in
+U.S. Cities . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 49
+3.4 Summary................................................. 61
+Exercises 62
+4 Exploratory Factor Analysis. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 65
+4.1 Introduction. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 65
+4.2 The Factor Analysis Model 65
+4.2.1 Principal Factor Analysis 68
+4.2.2 Maximum Likelihood Factor Analysis 69
+4.3 Estimating the Numbers of Factors. . . . . . . . . . . . . . . . . . . . . . . . . . . . 69
+4.4 A Simple Example of Factor Analysis 70
+4.5 Factor Rotation. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 71
+4.6 Estimating Factor Scores .. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 76
+4.7 Two Examples of Exploratory Factor Analysis 77
+4.7.1 Expectations of Life 77
+4.7.2 Drug Usage by American College Students. . . . . .. . . . . . . .. 82
+4.8 Comparison of Factor Analysis and Principal
+Components Analysis. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 85
+4.9 Confirmatory Factor Analysis 88
+4.10 Summary 88
+Exercises 89
+5 Multidimensional Scaling and Correspondence Analysis. . . . . . . . . . . . 91
+5.1 Introduction............................................... 91
+5.2 Multidimensional Scaling (MDS) . . . . . . . . . . ... . . . . .. . . . . . . . . . . 93
+5.2.1 Examples of Classical Multidimensional Scaling 96
+5.3 Correspondence Analysis. .. . . . . . . . . . . . . . . . . . .. . . . . . . .. . . . . .. 104
+5.3.1 Smoking and Motherhood 109
+5.3.2 Hodgkin's Disease. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .. 111
+5.4 Summary................................................. 112
+Exercises 112
+6 Cluster Analysis. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .. 115
+6.1 Introduction. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .. 115
+6.2 Agglomerative Hierarchical Clustering. . . . . . . . . . . . . . . . . . . . . . . .. 115
+6.2.1 Measuring Intercluster Dissimilarity. . . . . . . . . . . . . . . . . . . .. 118
+6.3 K-Means Clustering. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .. 122
+6.4 Model-Based Clustering. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .. 128
+6.5 Summary...... . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .. 134
+Exercises 135
+
+7 Grouped Multivariate Data: Multivariate Analysis of Variance and
+Discriminant Function Analysis. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .. 137
+7.1 Introduction. . .. . .. . . . . .. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .. 137
+7.2 Two Groups: Hotellings T 2 Test and Fisher's Linear Discriminant
+Function Analysis . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .. 137
+7.2.1 Hotellings T2 Test. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .. 137
+7.2.2 Fisher's Linear Discriminant Function 142
+7.2.3 Assessing the Performance of a Discriminant Function 146
+7.3 More Than Two Groups: Multivariate Analysis of Variance
+(MANOVA) and Classification Functions 147
+7.3.1 Multivariate Analysis of Variance 147
+7.3.2 Classification Functions and Canonical Variates 149
+7.4 Summary................................................. 155
+Exercises 156
+8 Multiple Regression and Canonical Correlation. . . . . . . . . . . . . . . . . . .. 157
+8.1 Introduction............................................... 157
+8.2 Multiple Regression 157
+8.3 Canonical Correlations. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .. 160
+8.4 Summary................................................. 167
+Exercises 167
+9 Analysis of Repeated Measures Data. . . . . . . . . . . . . . . . . . . . . . . . . . . . .. 171
+9.1 Introduction 171
+9.2 Linear Mixed Effects Models for Repeated Measures Data. . . . . . .. 174
+9.3 Dropouts in Longitudinal Data 190
+9.4 Summary................................................. 198
+Exercises 198
+Appendix: An Aide Memoir for Rand S·PLUS® 200
+1. Elementary commands . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .. 200
+2. Vectors. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .. 201
+3. Matrices. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .. 204
+4. Logical Expressions 205
+5. List Objects . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .. 207
+6. Data Frames. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .. 209
+
+

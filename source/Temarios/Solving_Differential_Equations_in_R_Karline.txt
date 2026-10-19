@@ -1,0 +1,276 @@
+ Differential Equations .. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .. . . . . . . . . . . . . . . . . . . . 1
+1.1 Basic Theory of Ordinary Differential Equations . . . . . . . . . . . . . . . . . 1
+1.1.1 First Order Differential Equations . .. . . . . . . . . . . . . . . . . . . . 1
+1.1.2 Analytic and Numerical Solutions . .. . . . . . . . . . . . . . . . . . . . 2
+1.1.3 Higher Order Ordinary Differential Equations . . . . . . . . . 3
+1.1.4 Initial and Boundary Values .. . . . . . . .. . . . . . . . . . . . . . . . . . . . 4
+1.1.5 Existence and Uniqueness of Analytic Solutions . . . . . . 5
+1.2 Numerical Methods .. . . . . . . . . . . . . . . . . . . . . . . . . . . .. . . . . . . . . . . . . . . . . . . . 6
+1.2.1 The Euler Method.. . . . . . . . . . . . . . . . . . .. . . . . . . . . . . . . . . . . . . . 6
+1.2.2 Implicit Methods .. . . . . . . . . . . . . . . . . . . .. . . . . . . . . . . . . . . . . . . . 7
+1.2.3 Accuracy and Convergence of Numerical Methods .. . . 8
+1.2.4 Stability and Conditioning . . . . . . . . . .. . . . . . . . . . . . . . . . . . . . 9
+1.3 Other Types of Differential Equations . . . . . . . . .. . . . . . . . . . . . . . . . . . . . 11
+1.3.1 Partial Differential Equations . . . . . . .. . . . . . . . . . . . . . . . . . . . 11
+1.3.2 Differential Algebraic Equations .. . .. . . . . . . . . . . . . . . . . . . . 12
+1.3.3 Delay Differential Equations .. . . . . . .. . . . . . . . . . . . . . . . . . . . 13
+References .. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .. . . . . . . . . . . . . . . . . . . . 13
+2 Initial Value Problems . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .. . . . . . . . . . . . . . . . . . . . 15
+2.1 Runge-Kutta Methods . . . . . . . . . . . . . . . . . . . . . . . . . .. . . . . . . . . . . . . . . . . . . . 15
+2.1.1 Explicit Runge-Kutta Formulae .. . . .. . . . . . . . . . . . . . . . . . . . 15
+2.1.2 Deriving a Runge-Kutta Formula . . .. . . . . . . . . . . . . . . . . . . . 17
+2.1.3 Implicit Runge-Kutta Formulae .. . . .. . . . . . . . . . . . . . . . . . . . 22
+2.2 Linear Multistep methods . . . . . . . . . . . . . . . . . . . . . .. . . . . . . . . . . . . . . . . . . . 22
+2.2.1 Convergence, Stability and Consistency .. . . . . . . . . . . . . . . 23
+2.2.2 Adams Methods .. . . . . . . . . . . . . . . . . . . . .. . . . . . . . . . . . . . . . . . . . 25
+2.2.3 Backward Differentiation Formulae . . . . . . . . . . . . . . . . . . . . 27
+2.2.4 Variable Order – Variable Coefficient
+Formulae for Linear Multistep Methods .. . . . . . . . . . . . . . . 29
+2.3 Boundary Value Methods .. . . . . . . . . . . . . . . . . . . . . .. . . . . . . . . . . . . . . . . . . . 30
+2.4 Modified Extended Backward Differentiation Formulae . . . . . . . . . 3
+
+Stiff Problems .. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .. . . . . . . . . . . . . . . . . . . . 32
+2.5.1 Stiffness Detection .. . . . . . . . . . . . . . . . . .. . . . . . . . . . . . . . . . . . . . 33
+2.5.2 Non-stiffness Test . . . . . . . . . . . . . . . . . . . .. . . . . . . . . . . . . . . . . . . . 34
+2.6 Implementing Implicit Methods.. . . . . . . . . . . . . . .. . . . . . . . . . . . . . . . . . . . 34
+2.6.1 Fixed-Point Iteration to Convergence .. . . . . . . . . . . . . . . . . . 34
+2.6.2 Chord Iteration .. . . . . . . . . . . . . . . . . . . . . .. . . . . . . . . . . . . . . . . . . . 35
+2.6.3 Predictor-Corrector Methods .. . . . . . .. . . . . . . . . . . . . . . . . . . . 36
+2.6.4 Newton Iteration for Implicit Runge-Kutta
+Methods . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .. . . . . . . . . . . . . . . . . . . . 36
+2.7 Codes to Solve Initial Value Problems .. . . . . . . .. . . . . . . . . . . . . . . . . . . . 37
+2.7.1 Codes to Solve Non-stiff Problems .. . . . . . . . . . . . . . . . . . . . 38
+2.7.2 Codes to Solve Stiff Problems . . . . . .. . . . . . . . . . . . . . . . . . . . 38
+2.7.3 Codes that Switch Between Stiff and
+Non-stiff Solvers .. . . . . . . . . . . . . . . . . . . .. . . . . . . . . . . . . . . . . . . . 38
+References .. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .. . . . . . . . . . . . . . . . . . . . 39
+3 Solving Ordinary Differential Equations in R. . . . . . .. . . . . . . . . . . . . . . . . . . . 41
+3.1 Implementing Initial Value Problems in R. . . . .. . . . . . . . . . . . . . . . . . . . 41
+3.1.1 A Differential Equation Comprising One Variable .. . . . 42
+3.1.2 Multiple Variables: The Lorenz Model . . . . . . . . . . . . . . . . . 44
+3.2 Runge-Kutta Methods . . . . . . . . . . . . . . . . . . . . . . . . . .. . . . . . . . . . . . . . . . . . . . 45
+3.2.1 Rigid Body Equations . . . . . . . . . . . . . . .. . . . . . . . . . . . . . . . . . . . 47
+3.2.2 Arenstorf Orbits .. . . . . . . . . . . . . . . . . . . . .. . . . . . . . . . . . . . . . . . . . 49
+3.3 Linear Multistep Methods . . . . . . . . . . . . . . . . . . . . . .. . . . . . . . . . . . . . . . . . . . 51
+3.3.1 Seven Moving Stars. . . . . . . . . . . . . . . . . .. . . . . . . . . . . . . . . . . . . . 52
+3.3.2 A Stiff Chemical Example . . . . . . . . . .. . . . . . . . . . . . . . . . . . . . 56
+3.4 Discontinuous Equations, Events . . . . . . . . . . . . . .. . . . . . . . . . . . . . . . . . . . 59
+3.4.1 Pharmacokinetic Models . . . . . . . . . . . .. . . . . . . . . . . . . . . . . . . . 60
+3.4.2 A Bouncing Ball . . . . . . . . . . . . . . . . . . . . .. . . . . . . . . . . . . . . . . . . . 64
+3.4.3 Temperature in a Climate-Controlled Room . . . . . . . . . . . 66
+3.5 Method Selection . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .. . . . . . . . . . . . . . . . . . . . 68
+3.5.1 The van der Pol Equation .. . . . . . . . . . .. . . . . . . . . . . . . . . . . . . . 70
+3.6 Exercises . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .. . . . . . . . . . . . . . . . . . . . 75
+3.6.1 Getting Started with IVP . . . . . . . . . . . .. . . . . . . . . . . . . . . . . . . . 75
+3.6.2 The Robertson Problem . . . . . . . . . . . . .. . . . . . . . . . . . . . . . . . . . 76
+3.6.3 Displaying Results in a Phase-Plane Graph . . . . . . . . . . . . 76
+3.6.4 Events and Roots. . . . . . . . . . . . . . . . . . . . .. . . . . . . . . . . . . . . . . . . . 78
+3.6.5 Stiff Problems .. . . . . . . . . . . . . . . . . . . . . . .. . . . . . . . . . . . . . . . . . . . 79
+References .. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .. . . . . . . . . . . . . . . . . . . . 79
+4 Differential Algebraic Equations . . . . . . . . . . . . . . . . . . . . .. . . . . . . . . . . . . . . . . . . . 81
+4.1 Introduction . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .. . . . . . . . . . . . . . . . . . . . 81
+4.1.1 The Index of a DAE . . . . . . . . . . . . . . . . .. . . . . . . . . . . . . . . . . . . . 82
+4.1.2 A Simple Example .. . . . . . . . . . . . . . . . . .. . . . . . . . . . . . . . . . . . . . 83
+4.1.3 DAEs in Hessenberg Form . . . . . . . . . .. . . . . . . . . . . . . . . . . . . . 84
+4.1.4 Hidden Constraints and the Initial Conditions . . . . . . . . . 85
+4.1.5 The Pendulum Problem.. . . . . . . . . . . . .. . . . . . . . . . . . . . . . . . . . 86
+
+Contents xiii
+4.2 Solving DAEs . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .. . . . . . . . . . . . . . . . . . . . 87
+4.2.1 Semi-implicit DAEs of Index 1 . . . . .. . . . . . . . . . . . . . . . . . . . 87
+4.2.2 General Implicit DAEs of Index 1 . .. . . . . . . . . . . . . . . . . . . . 88
+4.2.3 Discretization Algorithms . . . . . . . . . . .. . . . . . . . . . . . . . . . . . . . 89
+4.2.4 DAEs of Higher Index .. . . . . . . . . . . . . .. . . . . . . . . . . . . . . . . . . . 90
+4.2.5 Index of a DAE Variable.. . . . . . . . . . . .. . . . . . . . . . . . . . . . . . . . 93
+References .. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .. . . . . . . . . . . . . . . . . . . . 94
+5 Solving Differential Algebraic Equations in R . . . . . .. . . . . . . . . . . . . . . . . . . . 95
+5.1 Differential Algebraic Equation Solvers in R .. . . . . . . . . . . . . . . . . . . . 95
+5.2 A Simple DAE of Index 2 . . . . . . . . . . . . . . . . . . . . . .. . . . . . . . . . . . . . . . . . . . 96
+5.2.1 Solving the DAEs in General Implicit Form . . . . . . . . . . . 97
+5.2.2 Solving the DAEs in Linearly Implicit Form .. . . . . . . . . . 98
+5.3 A Nonlinear Implicit ODE . . . . . . . . . . . . . . . . . . . . .. . . . . . . . . . . . . . . . . . . . 98
+5.4 A DAE of Index 3: The Pendulum Problem .. .. . . . . . . . . . . . . . . . . . . . 100
+5.5 Multibody Systems . . . . . . . . . . . . . . . . . . . . . . . . . . . . .. . . . . . . . . . . . . . . . . . . . 101
+5.5.1 The Car Axis Problem .. . . . . . . . . . . . . .. . . . . . . . . . . . . . . . . . . . 102
+5.6 Electrical Circuit Models . . . . . . . . . . . . . . . . . . . . . . .. . . . . . . . . . . . . . . . . . . . 106
+5.6.1 The Transistor Amplifier . . . . . . . . . . . .. . . . . . . . . . . . . . . . . . . . 107
+5.7 Exercises . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .. . . . . . . . . . . . . . . . . . . . 111
+5.7.1 A Simple DAE . . . . . . . . . . . . . . . . . . . . . . .. . . . . . . . . . . . . . . . . . . . 111
+5.7.2 The Robertson Problem . . . . . . . . . . . . .. . . . . . . . . . . . . . . . . . . . 111
+5.7.3 The Pendulum Problem Revisited . .. . . . . . . . . . . . . . . . . . . . 111
+5.7.4 The Akzo Nobel Problem . . . . . . . . . . .. . . . . . . . . . . . . . . . . . . . 112
+References .. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .. . . . . . . . . . . . . . . . . . . . 115
+6 Delay Differential Equations . . . . . . . . . . . . . . . . . . . . . . . . . .. . . . . . . . . . . . . . . . . . . . 117
+6.1 Delay Differential Equations . . . . . . . . . . . . . . . . . . .. . . . . . . . . . . . . . . . . . . . 117
+6.1.1 DDEs with Delays of the Dependent Variables . . . . . . . . 118
+6.1.2 DDEs with Delays of the Derivatives .. . . . . . . . . . . . . . . . . . 118
+6.2 Difficulties when Solving DDEs . . . . . . . . . . . . . . .. . . . . . . . . . . . . . . . . . . . 119
+6.2.1 Discontinuities in DDEs . . . . . . . . . . . . .. . . . . . . . . . . . . . . . . . . . 119
+6.2.2 Small and Vanishing Delays. . . . . . . . .. . . . . . . . . . . . . . . . . . . . 120
+6.3 Numerical Methods for Solving DDEs . . . . . . . .. . . . . . . . . . . . . . . . . . . . 121
+References .. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .. . . . . . . . . . . . . . . . . . . . 121
+7 Solving Delay Differential Equations in R . . . . . . . . . . .. . . . . . . . . . . . . . . . . . . . 123
+7.1 Delay Differential Equation Solvers in R . . . . . .. . . . . . . . . . . . . . . . . . . . 123
+7.2 Two Simple Examples . . . . . . . . . . . . . . . . . . . . . . . . . .. . . . . . . . . . . . . . . . . . . . 124
+7.2.1 DDEs Involving Solution Delay Terms .. . . . . . . . . . . . . . . . 124
+7.2.2 DDEs Involving Derivative Delay Terms .. . . . . . . . . . . . . . 124
+7.3 Chaotic Production of White Blood Cells . . . . .. . . . . . . . . . . . . . . . . . . . 125
+7.4 A DDE Involving a Root Function .. . . . . . . . . . . .. . . . . . . . . . . . . . . . . . . . 127
+7.5 Vanishing Time Delays . . . . . . . . . . . . . . . . . . . . . . . . .. . . . . . . . . . . . . . . . . . . . 128
+7.6 Predator-Prey Dynamics with Harvesting . . . . .. . . . . . . . . . . . . . . . . . . . 13
+
+ Contents
+7.7 Exercises . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .. . . . . . . . . . . . . . . . . . . . 132
+7.7.1 The Lemming Model . . . . . . . . . . . . . . . .. . . . . . . . . . . . . . . . . . . . 132
+7.7.2 Oberle and Pesch. . . . . . . . . . . . . . . . . . . . .. . . . . . . . . . . . . . . . . . . . 132
+7.7.3 An Epidemiological Model.. . . . . . . . .. . . . . . . . . . . . . . . . . . . . 133
+7.7.4 A Neutral DDE. . . . . . . . . . . . . . . . . . . . . . .. . . . . . . . . . . . . . . . . . . . 134
+7.7.5 Delayed Cellular Neural Networks With Impulses.. . . . 134
+References .. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .. . . . . . . . . . . . . . . . . . . . 135
+8 Partial Differential Equations . . . . . . . . . . . . . . . . . . . . . . . . .. . . . . . . . . . . . . . . . . . . . 137
+8.1 Partial Differential Equations . . . . . . . . . . . . . . . . . .. . . . . . . . . . . . . . . . . . . . 137
+8.1.1 Alternative Formulations . . . . . . . . . . . .. . . . . . . . . . . . . . . . . . . . 138
+8.1.2 Polar, Cylindrical and Spherical Coordinates . . . . . . . . . . 140
+8.1.3 Boundary Conditions . . . . . . . . . . . . . . . .. . . . . . . . . . . . . . . . . . . . 141
+8.2 Solving PDEs . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .. . . . . . . . . . . . . . . . . . . . 142
+8.3 Discretising Derivatives . . . . . . . . . . . . . . . . . . . . . . . .. . . . . . . . . . . . . . . . . . . . 143
+8.3.1 Basic Diffusion Schemes .. . . . . . . . . . .. . . . . . . . . . . . . . . . . . . . 144
+8.3.2 Basic Advection Schemes . . . . . . . . . . .. . . . . . . . . . . . . . . . . . . . 145
+8.3.3 Flux-Conservative Discretisations . .. . . . . . . . . . . . . . . . . . . . 147
+8.3.4 More Complex Advection Schemes . . . . . . . . . . . . . . . . . . . . 148
+8.4 The Method Of Lines .. . . . . . . . . . . . . . . . . . . . . . . . . .. . . . . . . . . . . . . . . . . . . . 152
+8.5 The Finite Difference Method .. . . . . . . . . . . . . . . . .. . . . . . . . . . . . . . . . . . . . 153
+References .. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .. . . . . . . . . . . . . . . . . . . . 153
+9 Solving Partial Differential Equations in R . . . . . . . . . .. . . . . . . . . . . . . . . . . . . . 157
+9.1 Methods for Solving PDEs in R . . . . . . . . . . . . . . . .. . . . . . . . . . . . . . . . . . . . 157
+9.1.1 Numerical Approximations.. . . . . . . . .. . . . . . . . . . . . . . . . . . . . 157
+9.1.2 Solution Methods . . . . . . . . . . . . . . . . . . . .. . . . . . . . . . . . . . . . . . . . 159
+9.2 Solving Parabolic, Elliptic and Hyperbolic PDEs in R . . . . . . . . . . . 160
+9.2.1 The Heat Equation . . . . . . . . . . . . . . . . . . .. . . . . . . . . . . . . . . . . . . . 160
+9.2.2 The Wave Equation . . . . . . . . . . . . . . . . . .. . . . . . . . . . . . . . . . . . . . 163
+9.2.3 Poisson and Laplace’s Equation.. . . .. . . . . . . . . . . . . . . . . . . . 166
+9.2.4 The Advection Equation .. . . . . . . . . . . .. . . . . . . . . . . . . . . . . . . . 168
+9.3 More Complex Examples.. . . . . . . . . . . . . . . . . . . . . .. . . . . . . . . . . . . . . . . . . . 170
+9.3.1 The Brusselator in One Dimension .. . . . . . . . . . . . . . . . . . . . 170
+9.3.2 The Brusselator in Two Dimensions . . . . . . . . . . . . . . . . . . . . 173
+9.3.3 Laplace Equation in Polar Coordinates . . . . . . . . . . . . . . . . . 174
+9.3.4 The Time-Dependent 2-D Sine-Gordon Equation.. . . . . 176
+9.3.5 The Nonlinear Schr¨odinger Equation .. . . . . . . . . . . . . . . . . . 179
+9.4 Exercises . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .. . . . . . . . . . . . . . . . . . . . 181
+9.4.1 The Gray-Scott Equation . . . . . . . . . . . .. . . . . . . . . . . . . . . . . . . . 181
+9.4.2 A Macroscopic Model of Traffic . . . .. . . . . . . . . . . . . . . . . . . . 182
+9.4.3 A Vibrating String . . . . . . . . . . . . . . . . . . .. . . . . . . . . . . . . . . . . . . . 183
+9.4.4 A Pebble in a Bucket of Water . . . . . .. . . . . . . . . . . . . . . . . . . . 184
+9.4.5 Combustion in 2-D.. . . . . . . . . . . . . . . . . .. . . . . . . . . . . . . . . . . . . . 184
+References .. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .. . . . . . . . . . . . . . . . . . . . 18
+
+xiv Contents
+7.7 Exercises . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .. . . . . . . . . . . . . . . . . . . . 132
+7.7.1 The Lemming Model . . . . . . . . . . . . . . . .. . . . . . . . . . . . . . . . . . . . 132
+7.7.2 Oberle and Pesch. . . . . . . . . . . . . . . . . . . . .. . . . . . . . . . . . . . . . . . . . 132
+7.7.3 An Epidemiological Model.. . . . . . . . .. . . . . . . . . . . . . . . . . . . . 133
+7.7.4 A Neutral DDE. . . . . . . . . . . . . . . . . . . . . . .. . . . . . . . . . . . . . . . . . . . 134
+7.7.5 Delayed Cellular Neural Networks With Impulses.. . . . 134
+References .. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .. . . . . . . . . . . . . . . . . . . . 135
+8 Partial Differential Equations . . . . . . . . . . . . . . . . . . . . . . . . .. . . . . . . . . . . . . . . . . . . . 137
+8.1 Partial Differential Equations . . . . . . . . . . . . . . . . . .. . . . . . . . . . . . . . . . . . . . 137
+8.1.1 Alternative Formulations . . . . . . . . . . . .. . . . . . . . . . . . . . . . . . . . 138
+8.1.2 Polar, Cylindrical and Spherical Coordinates . . . . . . . . . . 140
+8.1.3 Boundary Conditions . . . . . . . . . . . . . . . .. . . . . . . . . . . . . . . . . . . . 141
+8.2 Solving PDEs . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .. . . . . . . . . . . . . . . . . . . . 142
+8.3 Discretising Derivatives . . . . . . . . . . . . . . . . . . . . . . . .. . . . . . . . . . . . . . . . . . . . 143
+8.3.1 Basic Diffusion Schemes .. . . . . . . . . . .. . . . . . . . . . . . . . . . . . . . 144
+8.3.2 Basic Advection Schemes . . . . . . . . . . .. . . . . . . . . . . . . . . . . . . . 145
+8.3.3 Flux-Conservative Discretisations . .. . . . . . . . . . . . . . . . . . . . 147
+8.3.4 More Complex Advection Schemes . . . . . . . . . . . . . . . . . . . . 148
+8.4 The Method Of Lines .. . . . . . . . . . . . . . . . . . . . . . . . . .. . . . . . . . . . . . . . . . . . . . 152
+8.5 The Finite Difference Method .. . . . . . . . . . . . . . . . .. . . . . . . . . . . . . . . . . . . . 153
+References .. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .. . . . . . . . . . . . . . . . . . . . 153
+9 Solving Partial Differential Equations in R . . . . . . . . . .. . . . . . . . . . . . . . . . . . . . 157
+9.1 Methods for Solving PDEs in R . . . . . . . . . . . . . . . .. . . . . . . . . . . . . . . . . . . . 157
+9.1.1 Numerical Approximations.. . . . . . . . .. . . . . . . . . . . . . . . . . . . . 157
+9.1.2 Solution Methods . . . . . . . . . . . . . . . . . . . .. . . . . . . . . . . . . . . . . . . . 159
+9.2 Solving Parabolic, Elliptic and Hyperbolic PDEs in R . . . . . . . . . . . 160
+9.2.1 The Heat Equation . . . . . . . . . . . . . . . . . . .. . . . . . . . . . . . . . . . . . . . 160
+9.2.2 The Wave Equation . . . . . . . . . . . . . . . . . .. . . . . . . . . . . . . . . . . . . . 163
+9.2.3 Poisson and Laplace’s Equation.. . . .. . . . . . . . . . . . . . . . . . . . 166
+9.2.4 The Advection Equation .. . . . . . . . . . . .. . . . . . . . . . . . . . . . . . . . 168
+9.3 More Complex Examples.. . . . . . . . . . . . . . . . . . . . . .. . . . . . . . . . . . . . . . . . . . 170
+9.3.1 The Brusselator in One Dimension .. . . . . . . . . . . . . . . . . . . . 170
+9.3.2 The Brusselator in Two Dimensions . . . . . . . . . . . . . . . . . . . . 173
+9.3.3 Laplace Equation in Polar Coordinates . . . . . . . . . . . . . . . . . 174
+9.3.4 The Time-Dependent 2-D Sine-Gordon Equation.. . . . . 176
+9.3.5 The Nonlinear Schr¨odinger Equation .. . . . . . . . . . . . . . . . . . 179
+9.4 Exercises . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .. . . . . . . . . . . . . . . . . . . . 181
+9.4.1 The Gray-Scott Equation . . . . . . . . . . . .. . . . . . . . . . . . . . . . . . . . 181
+9.4.2 A Macroscopic Model of Trafﬁc . . . .. . . . . . . . . . . . . . . . . . . . 182
+9.4.3 A Vibrating String . . . . . . . . . . . . . . . . . . .. . . . . . . . . . . . . . . . . . . . 183
+9.4.4 A Pebble in a Bucket of Water . . . . . .. . . . . . . . . . . . . . . . . . . . 184
+9.4.5 Combustion in 2-D.. . . . . . . . . . . . . . . . . .. . . . . . . . . . . . . . . . . . . . 184
+References .. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .. . . . . . . . . . . . . . . . . . . . 185
+Contents xv
+10 Boundary Value Problems .. . . . . . . . . . . . . . . . . . . . . . . . . . . .. . . . . . . . . . . . . . . . . . . . 187
+10.1 Two-Point Boundary Value Problems.. . . . . . . . .. . . . . . . . . . . . . . . . . . . . 187
+10.2 Characteristics of Boundary Value Problems ... . . . . . . . . . . . . . . . . . . . 188
+10.2.1 Uniqueness of Solutions .. . . . . . . . . . . .. . . . . . . . . . . . . . . . . . . . 188
+10.2.2 Isolation of Solutions . . . . . . . . . . . . . . . .. . . . . . . . . . . . . . . . . . . . 189
+10.2.3 Stiffness of Boundary Value Problems
+and Dichotomy .. . . . . . . . . . . . . . . . . . . . . .. . . . . . . . . . . . . . . . . . . . 189
+10.2.4 Conditioning of Boundary Value Problems . . . . . . . . . . . . 190
+10.2.5 Singular Problems . . . . . . . . . . . . . . . . . . .. . . . . . . . . . . . . . . . . . . . 191
+10.3 Boundary Conditions . . . . . . . . . . . . . . . . . . . . . . . . . . .. . . . . . . . . . . . . . . . . . . . 192
+10.3.1 Separated Boundary Conditions.. . . .. . . . . . . . . . . . . . . . . . . . 192
+10.3.2 Deﬁning Good Boundary Conditions .. . . . . . . . . . . . . . . . . . 193
+10.3.3 Problems Deﬁned on an Inﬁnite Interval . . . . . . . . . . . . . . . 193
+10.4 Methods of Solution . . . . . . . . . . . . . . . . . . . . . . . . . . . .. . . . . . . . . . . . . . . . . . . . 194
+10.5 Shooting Methods for Two-Point BVPs . . . . . . .. . . . . . . . . . . . . . . . . . . . 194
+10.5.1 The Linear Case. . . . . . . . . . . . . . . . . . . . . .. . . . . . . . . . . . . . . . . . . . 194
+10.5.2 The Nonlinear Case . . . . . . . . . . . . . . . . . .. . . . . . . . . . . . . . . . . . . . 195
+10.5.3 Multiple Shooting .. . . . . . . . . . . . . . . . . . .. . . . . . . . . . . . . . . . . . . . 196
+10.6 Finite Difference Methods .. . . . . . . . . . . . . . . . . . . . .. . . . . . . . . . . . . . . . . . . . 197
+10.6.1 A Low Order Method for Second Order Equations . . . . 197
+10.6.2 Other Low Order Methods . . . . . . . . . .. . . . . . . . . . . . . . . . . . . . 198
+10.6.3 Higher Order Methods Based on
+Collocation Runge-Kutta Schemes .. . . . . . . . . . . . . . . . . . . . 199
+10.6.4 Higher Order Methods Based on Mono
+Implicit Runge-Kutta Formulae .. . . .. . . . . . . . . . . . . . . . . . . . 200
+10.6.5 Higher Order Methods Based on Linear
+Multistep Formulae . . . . . . . . . . . . . . . . . .. . . . . . . . . . . . . . . . . . . . 201
+10.6.6 Deferred Correction.. . . . . . . . . . . . . . . . .. . . . . . . . . . . . . . . . . . . . 202
+10.7 Codes for the Numerical Solution of Boundary
+Value Problems.. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .. . . . . . . . . . . . . . . . . . . . 203
+References .. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .. . . . . . . . . . . . . . . . . . . . 203
+11 Solving Boundary Value Problems in R . . . . . . . . . . . . . .. . . . . . . . . . . . . . . . . . . . 207
+11.1 Boundary Value Problem Solvers in R . . . . . . . . .. . . . . . . . . . . . . . . . . . . . 207
+11.2 A Simple BVP Example .. . . . . . . . . . . . . . . . . . . . . . .. . . . . . . . . . . . . . . . . . . . 208
+11.2.1 Implementing the BVP in First Order Form .. . . . . . . . . . . 208
+11.2.2 Implementing the BVP in Second Order Form .. . . . . . . . 209
+11.3 A More Complex BVP Example .. . . . . . . . . . . . . .. . . . . . . . . . . . . . . . . . . . 210
+11.4 More Complex Initial or End Conditions .. . . . .. . . . . . . . . . . . . . . . . . . . 214
+11.5 Solving a Boundary Value Problem Using Continuation . . . . . . . . . 216
+11.5.1 Manual Continuation . . . . . . . . . . . . . . . .. . . . . . . . . . . . . . . . . . . . 216
+11.5.2 Automatic Continuation . . . . . . . . . . . . .. . . . . . . . . . . . . . . . . . . . 219
+11.6 BVPs with Unknown Constants .. . . . . . . . . . . . . . .. . . . . . . . . . . . . . . . . . . . 220
+11.6.1 The Elastica Problem . . . . . . . . . . . . . . . .. . . . . . . . . . . . . . . . . . . . 221
+11.6.2 Non-separated Boundary Conditions . . . . . . . . . . . . . . . . . . . 222
+11.6.3 An Unknown Integration Interval .. .. . . . . . . . . . . . . . . . . . . . 22
+
+1.7 Integral Constraints . . . . . . . . . . . . . . . . . . . . . . . . . . . . .. . . . . . . . . . . . . . . . . . . . 228
+11.8 Sturm-Liouville Problems .. . . . . . . . . . . . . . . . . . . . .. . . . . . . . . . . . . . . . . . . . 229
+11.9 A Reaction Transport Problem . . . . . . . . . . . . . . . . .. . . . . . . . . . . . . . . . . . . . 230
+11.10 Exercises . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .. . . . . . . . . . . . . . . . . . . . 233
+11.10.1 A Stiff Boundary Value Problem .. . .. . . . . . . . . . . . . . . . . . . . 233
+11.10.2 The Mathieu Equation . . . . . . . . . . . . . . .. . . . . . . . . . . . . . . . . . . . 234
+11.10.3 Another Swirling Flow Problem . . . .. . . . . . . . . . . . . . . . . . . . 234
+11.10.4 Another Reaction Transport Problem .. . . . . . . . . . . . . . . . . . 236
+References .. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .. . . . . . . . . . . . . . . . . . . . 237
+A Appendix . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .. . . . . . . . . . . . . . . . . . . . 239
+A.1 Butcher Tableaux for Some Runge-Kutta Methods . . . . . . . . . . . . . . . 239
+A.2 Coefficients for Some Linear Multistep Formulae . . . . . . . . . . . . . . . . 239
+A.3 Implemented Integration Methods for Solving Initial
+Value Problems in R . . . . . . . . . . . . . . . . . . . . . . . . . . . .. . . . . . . . . . . . . . . . . . . . 241
+A.4 Other Integration Methods in R . . . . . . . . . . . . . . . .. . . . . . . . . . . . . . . . . . . . 242
+References .. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .. . . . . . . . . . . . . . . . . . . . 242
+Index . . . . . . . . .. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .. . . . . . . . . . . . . . . . . . . . 24
+
+

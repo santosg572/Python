@@ -15,6 +15,7 @@ Contenido
 
 .. toctree::
 
+   Temarios/index2
    funciones
    numpy/Imagenes/imagenes
    numpy_help
