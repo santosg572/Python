@@ -89,40 +89,46 @@
              
   <section id="help-on-package-statsmodels">
 <h1>Help on package statsmodels:<a class="headerlink" href="#help-on-package-statsmodels" title="Link to this heading"></a></h1>
-<dl>
+<dl class="simple">
 <dt>NAME</dt><dd><p>statsmodels</p>
 </dd>
-<dt>PACKAGE CONTENTS</dt><dd><p>_version
-api
-base (package)
-compat (package)
-conftest
-datasets (package)
-discrete (package)
-distributions (package)
-duration (package)
-emplike (package)
-formula (package)
-gam (package)
-genmod (package)
-graphics (package)
-imputation (package)
-interface (package)
-iolib (package)
-miscmodels (package)
-multivariate (package)
-nonparametric (package)
-othermod (package)
-regression (package)
-robust (package)
-sandbox (package)
-src (package)
-stats (package)
-tests (package)
-tools (package)
-treatment (package)
-tsa (package)</p>
-</dd>
+</dl>
+<p>PACKAGE CONTENTS</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>_version</p></li>
+<li><p>api</p></li>
+<li><p>base (package)</p></li>
+<li><p>compat (package)</p></li>
+<li><p>conftest</p></li>
+<li><p>datasets (package)</p></li>
+<li><p>discrete (package)</p></li>
+<li><p>distributions (package)</p></li>
+<li><p>duration (package)</p></li>
+<li><p>emplike (package)</p></li>
+<li><p>formula (package)</p></li>
+<li><p>gam (package)</p></li>
+<li><p>genmod (package)</p></li>
+<li><p>graphics (package)</p></li>
+<li><p>imputation (package)</p></li>
+<li><p>interface (package)</p></li>
+<li><p>iolib (package)</p></li>
+<li><p>miscmodels (package)</p></li>
+<li><p>multivariate (package)</p></li>
+<li><p>nonparametric (package)</p></li>
+<li><p>othermod (package)</p></li>
+<li><p>regression (package)</p></li>
+<li><p>robust (package)</p></li>
+<li><p>sandbox (package)</p></li>
+<li><p>src (package)</p></li>
+<li><p>stats (package)</p></li>
+<li><p>tests (package)</p></li>
+<li><p>tools (package)</p></li>
+<li><p>treatment (package)</p></li>
+<li><p>tsa (package)</p></li>
+</ul>
+</div></blockquote>
+<dl>
 <dt>FUNCTIONS</dt><dd><dl>
 <dt>test(extra_args=None, exit=False)</dt><dd><p>Run the test suite</p>
 <dl class="simple">
@@ -148,6 +154,337 @@ __version_tuple__ = (0, 14, 5)</p>
 <dt>FILE</dt><dd><p>/Users/santosg/miniconda3/lib/python3.9/site-packages/statsmodels/__init__.py</p>
 </dd>
 </dl>
+<p><strong>Help on package statsmodels.stats in statsmodels:</strong></p>
+<dl class="simple">
+<dt>NAME</dt><dd><p>statsmodels.stats</p>
+</dd>
+</dl>
+<p>PACKAGE CONTENTS</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>_adnorm</p></li>
+<li><p>_delta_method</p></li>
+<li><p>_diagnostic_other</p></li>
+<li><p>_inference_tools</p></li>
+<li><p>_knockoff</p></li>
+<li><p>_lilliefors</p></li>
+<li><p>_lilliefors_critical_values</p></li>
+<li><p>anova</p></li>
+<li><p>api</p></li>
+<li><p>base</p></li>
+<li><p>contingency_tables</p></li>
+<li><p>contrast</p></li>
+<li><p>correlation_tools</p></li>
+<li><p>descriptivestats</p></li>
+<li><p>diagnostic</p></li>
+<li><p>diagnostic_gen</p></li>
+<li><p>dist_dependence_measures</p></li>
+<li><p>effect_size</p></li>
+<li><p>gof</p></li>
+<li><p>inter_rater</p></li>
+<li><p>knockoff_regeffects</p></li>
+<li><p>libqsturng (package)</p></li>
+<li><p>mediation</p></li>
+<li><p>meta_analysis</p></li>
+<li><p>moment_helpers</p></li>
+<li><p>multicomp</p></li>
+<li><p>multitest</p></li>
+<li><p>multivariate</p></li>
+<li><p>multivariate_tools</p></li>
+<li><p>nonparametric</p></li>
+<li><p>oaxaca</p></li>
+<li><p>oneway</p></li>
+<li><p>outliers_influence</p></li>
+<li><p>power</p></li>
+<li><p>proportion</p></li>
+<li><p>rates</p></li>
+<li><p>regularized_covariance</p></li>
+<li><p>robust_compare</p></li>
+<li><p>sandwich_covariance</p></li>
+<li><p>stattools</p></li>
+<li><p>tabledist</p></li>
+<li><p>tests (package)</p></li>
+<li><p>weightstats</p></li>
+</ul>
+</div></blockquote>
+<dl class="simple">
+<dt>DATA</dt><dd><p>test = &lt;statsmodels.tools._test_runner.PytestTester object&gt;</p>
+</dd>
+<dt>FILE</dt><dd><p>/Users/santosg/miniconda3/lib/python3.9/site-packages/statsmodels/stats/__init__.py</p>
+</dd>
+</dl>
+<p><strong>Help on module statsmodels.stats.anova in statsmodels.stats:</strong></p>
+<dl>
+<dt>NAME</dt><dd><p>statsmodels.stats.anova</p>
+</dd>
+<dt>CLASSES</dt><dd><dl>
+<dt>builtins.object</dt><dd><p>AnovaRM
+AnovaResults</p>
+</dd>
+<dt>class AnovaRM(builtins.object)</dt><dd><div class="line-block">
+<div class="line">AnovaRM(data, depvar, subject, within=None, between=None, aggregate_func=None)</div>
+<div class="line"><br /></div>
+<div class="line">Repeated measures Anova using least squares regression</div>
+<div class="line"><br /></div>
+<div class="line">The full model regression residual sum of squares is</div>
+<div class="line">used to compare with the reduced model for calculating the</div>
+<div class="line">within-subject effect sum of squares [1].</div>
+<div class="line"><br /></div>
+<div class="line">Currently, only fully balanced within-subject designs are supported.</div>
+<div class="line">Calculation of between-subject effects and corrections for violation of</div>
+<div class="line">sphericity are not yet implemented.</div>
+<div class="line"><br /></div>
+<div class="line">Parameters</div>
+<div class="line">———-</div>
+<div class="line">data : DataFrame</div>
+<div class="line">depvar : str</div>
+<div class="line-block">
+<div class="line">The dependent variable in <cite>data</cite></div>
+</div>
+<div class="line">subject : str</div>
+<div class="line-block">
+<div class="line">Specify the subject id</div>
+</div>
+<div class="line">within : list[str]</div>
+<div class="line-block">
+<div class="line">The within-subject factors</div>
+</div>
+<div class="line">between : list[str]</div>
+<div class="line-block">
+<div class="line">The between-subject factors, this is not yet implemented</div>
+</div>
+<div class="line">aggregate_func : {None, ‘mean’, callable}</div>
+<div class="line-block">
+<div class="line">If the data set contains more than a single observation per subject</div>
+<div class="line">and cell of the specified model, this function will be used to</div>
+<div class="line">aggregate the data before running the Anova. <cite>None</cite> (the default) will</div>
+<div class="line">not perform any aggregation; ‘mean’ is s shortcut to <cite>numpy.mean</cite>.</div>
+<div class="line">An exception will be raised if aggregation is required, but no</div>
+<div class="line">aggregation function was specified.</div>
+<div class="line"><br /></div>
+</div>
+<div class="line">Returns</div>
+<div class="line">——-</div>
+<div class="line">results : AnovaResults instance</div>
+<div class="line"><br /></div>
+<div class="line">Raises</div>
+<div class="line">——</div>
+<div class="line">ValueError</div>
+<div class="line-block">
+<div class="line">If the data need to be aggregated, but <cite>aggregate_func</cite> was not</div>
+<div class="line">specified.</div>
+<div class="line"><br /></div>
+</div>
+<div class="line">Notes</div>
+<div class="line">—–</div>
+<div class="line">This implementation currently only supports fully balanced designs. If the</div>
+<div class="line">data contain more than one observation per subject and cell of the design,</div>
+<div class="line">these observations need to be aggregated into a single observation</div>
+<div class="line">before the Anova is calculated, either manually or by passing an aggregation</div>
+<div class="line">function via the <cite>aggregate_func</cite> keyword argument.</div>
+<div class="line">Note that if the input data set was not balanced before performing the</div>
+<div class="line">aggregation, the implied heteroscedasticity of the data is ignored.</div>
+<div class="line"><br /></div>
+<div class="line">References</div>
+<div class="line">———-</div>
+<div class="line">.. [*] Rutherford, Andrew. Anova and ANCOVA: a GLM approach. John Wiley &amp; Sons, 2011.</div>
+<div class="line"><br /></div>
+<div class="line">Methods defined here:</div>
+<div class="line"><br /></div>
+<div class="line">__init__(self, data, depvar, subject, within=None, between=None, aggregate_func=None)</div>
+<div class="line-block">
+<div class="line">Initialize self.  See help(type(self)) for accurate signature.</div>
+<div class="line"><br /></div>
+</div>
+<div class="line">fit(self)</div>
+<div class="line-block">
+<div class="line">estimate the model and compute the Anova table</div>
+<div class="line"><br /></div>
+<div class="line">Returns</div>
+<div class="line">——-</div>
+<div class="line">AnovaResults instance</div>
+<div class="line"><br /></div>
+</div>
+<div class="line">———————————————————————-</div>
+<div class="line">Data descriptors defined here:</div>
+<div class="line"><br /></div>
+<div class="line">__dict__</div>
+<div class="line-block">
+<div class="line">dictionary for instance variables (if defined)</div>
+<div class="line"><br /></div>
+</div>
+<div class="line">__weakref__</div>
+<div class="line-block">
+<div class="line">list of weak references to the object (if defined)</div>
+</div>
+</div>
+</dd>
+<dt>class AnovaResults(builtins.object)</dt><dd><div class="line-block">
+<div class="line">AnovaResults(anova_table)</div>
+<div class="line"><br /></div>
+<div class="line">Anova results class</div>
+<div class="line"><br /></div>
+<div class="line">Attributes</div>
+<div class="line">———-</div>
+<div class="line">anova_table : DataFrame</div>
+<div class="line"><br /></div>
+<div class="line">Methods defined here:</div>
+<div class="line"><br /></div>
+<div class="line">__init__(self, anova_table)</div>
+<div class="line-block">
+<div class="line">Initialize self.  See help(type(self)) for accurate signature.</div>
+<div class="line"><br /></div>
+</div>
+<div class="line">__str__(self)</div>
+<div class="line-block">
+<div class="line">Return str(self).</div>
+<div class="line"><br /></div>
+</div>
+<div class="line">summary(self)</div>
+<div class="line-block">
+<div class="line">create summary results</div>
+<div class="line"><br /></div>
+<div class="line">Returns</div>
+<div class="line">——-</div>
+<div class="line">summary : summary2.Summary instance</div>
+<div class="line"><br /></div>
+</div>
+<div class="line">———————————————————————-</div>
+<div class="line">Data descriptors defined here:</div>
+<div class="line"><br /></div>
+<div class="line">__dict__</div>
+<div class="line-block">
+<div class="line">dictionary for instance variables (if defined)</div>
+<div class="line"><br /></div>
+</div>
+<div class="line">__weakref__</div>
+<div class="line-block">
+<div class="line">list of weak references to the object (if defined)</div>
+</div>
+</div>
+</dd>
+</dl>
+</dd>
+<dt>FUNCTIONS</dt><dd><dl>
+<dt>anova1_lm_single(model, endog, exog, nobs, design_info, table, n_rows, test, pr_test, robust)</dt><dd><p>Anova table for one fitted linear model.</p>
+<dl class="simple">
+<dt>model<span class="classifier">fitted linear model results instance</span></dt><dd><p>A fitted linear model</p>
+</dd>
+</dl>
+<p><strong>kwargs</strong></p>
+<dl class="simple">
+<dt>scale<span class="classifier">float</span></dt><dd><p>Estimate of variance, If None, will be estimated from the largest</p>
+</dd>
+<dt>model. Default is None.</dt><dd><p>test : str {“F”, “Chisq”, “Cp”} or None
+Test statistics to provide. Default is “F”.</p>
+</dd>
+</dl>
+<p>Use of this function is discouraged. Use anova_lm instead.</p>
+</dd>
+<dt>anova2_lm_single(model, design_info, n_rows, test, pr_test, robust)</dt><dd><p>Anova type II table for one fitted linear model.</p>
+<dl class="simple">
+<dt>model<span class="classifier">fitted linear model results instance</span></dt><dd><p>A fitted linear model</p>
+</dd>
+</dl>
+<p><strong>kwargs</strong></p>
+<dl class="simple">
+<dt>scale<span class="classifier">float</span></dt><dd><p>Estimate of variance, If None, will be estimated from the largest</p>
+</dd>
+<dt>model. Default is None.</dt><dd><p>test : str {“F”, “Chisq”, “Cp”} or None
+Test statistics to provide. Default is “F”.</p>
+</dd>
+</dl>
+<p>Use of this function is discouraged. Use anova_lm instead.</p>
+<p>Type II
+Sum of Squares compares marginal contribution of terms. Thus, it is
+not particularly useful for models with significant interaction terms.</p>
+</dd>
+</dl>
+<p>anova3_lm_single(model, design_info, n_rows, test, pr_test, robust)</p>
+<dl>
+<dt>anova_lm(<a href="#id1"><span class="problematic" id="id2">*</span></a>args, <a href="#id3"><span class="problematic" id="id4">**</span></a>kwargs)</dt><dd><p>Anova table for one or more fitted linear models.</p>
+<dl class="simple">
+<dt>args<span class="classifier">fitted linear model results instance</span></dt><dd><p>One or more fitted linear models</p>
+</dd>
+<dt>scale<span class="classifier">float</span></dt><dd><p>Estimate of variance, If None, will be estimated from the largest
+model. Default is None.</p>
+</dd>
+<dt>test<span class="classifier">str {“F”, “Chisq”, “Cp”} or None</span></dt><dd><p>Test statistics to provide. Default is “F”.</p>
+</dd>
+<dt>typ<span class="classifier">str or int {“I”,”II”,”III”} or {1,2,3}</span></dt><dd><p>The type of Anova test to perform. See notes.</p>
+</dd>
+<dt>robust<span class="classifier">{None, “hc0”, “hc1”, “hc2”, “hc3”}</span></dt><dd><p>Use heteroscedasticity-corrected coefficient covariance matrix.
+If robust covariance is desired, it is recommended to use <cite>hc3</cite>.</p>
+</dd>
+</dl>
+<dl>
+<dt>anova<span class="classifier">DataFrame</span></dt><dd><p>When args is a single model, return is DataFrame with columns:</p>
+<dl class="simple">
+<dt>sum_sq<span class="classifier">float64</span></dt><dd><p>Sum of squares for model terms.</p>
+</dd>
+<dt>df<span class="classifier">float64</span></dt><dd><p>Degrees of freedom for model terms.</p>
+</dd>
+<dt>F<span class="classifier">float64</span></dt><dd><p>F statistic value for significance of adding model terms.</p>
+</dd>
+<dt>PR(&gt;F)<span class="classifier">float64</span></dt><dd><p>P-value for significance of adding model terms.</p>
+</dd>
+</dl>
+<p>When args is multiple models, return is DataFrame with columns:</p>
+<dl class="simple">
+<dt>df_resid<span class="classifier">float64</span></dt><dd><p>Degrees of freedom of residuals in models.</p>
+</dd>
+<dt>ssr<span class="classifier">float64</span></dt><dd><p>Sum of squares of residuals in models.</p>
+</dd>
+<dt>df_diff<span class="classifier">float64</span></dt><dd><p>Degrees of freedom difference from previous model in args</p>
+</dd>
+<dt>ss_dff<span class="classifier">float64</span></dt><dd><p>Difference in ssr from previous model in args</p>
+</dd>
+<dt>F<span class="classifier">float64</span></dt><dd><p>F statistic comparing to previous model in args</p>
+</dd>
+<dt>PR(&gt;F): float64</dt><dd><p>P-value for significance comparing to previous model in args</p>
+</dd>
+</dl>
+</dd>
+</dl>
+<p>Model statistics are given in the order of args. Models must have been fit
+using the formula api.</p>
+<p>model_results.compare_f_test, model_results.compare_lm_test</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span><span class="w"> </span><span class="nn">statsmodels.api</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">sm</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span><span class="w"> </span><span class="nn">statsmodels.formula.api</span><span class="w"> </span><span class="kn">import</span> <span class="n">ols</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">moore</span> <span class="o">=</span> <span class="n">sm</span><span class="o">.</span><span class="n">datasets</span><span class="o">.</span><span class="n">get_rdataset</span><span class="p">(</span><span class="s2">&quot;Moore&quot;</span><span class="p">,</span> <span class="s2">&quot;carData&quot;</span><span class="p">,</span> <span class="n">cache</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span> <span class="c1"># load</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">data</span> <span class="o">=</span> <span class="n">moore</span><span class="o">.</span><span class="n">data</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">data</span> <span class="o">=</span> <span class="n">data</span><span class="o">.</span><span class="n">rename</span><span class="p">(</span><span class="n">columns</span><span class="o">=</span><span class="p">{</span><span class="s2">&quot;partner.status&quot;</span> <span class="p">:</span>
+<span class="gp">... </span>                            <span class="s2">&quot;partner_status&quot;</span><span class="p">})</span> <span class="c1"># make name pythonic</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">moore_lm</span> <span class="o">=</span> <span class="n">ols</span><span class="p">(</span><span class="s1">&#39;conformity ~ C(fcategory, Sum)*C(partner_status, Sum)&#39;</span><span class="p">,</span>
+<span class="gp">... </span>                <span class="n">data</span><span class="o">=</span><span class="n">data</span><span class="p">)</span><span class="o">.</span><span class="n">fit</span><span class="p">()</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">table</span> <span class="o">=</span> <span class="n">sm</span><span class="o">.</span><span class="n">stats</span><span class="o">.</span><span class="n">anova_lm</span><span class="p">(</span><span class="n">moore_lm</span><span class="p">,</span> <span class="n">typ</span><span class="o">=</span><span class="mi">2</span><span class="p">)</span> <span class="c1"># Type 2 Anova DataFrame</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="n">table</span><span class="p">)</span>
+</pre></div>
+</div>
+</dd>
+<dt>anova_single(model, <a href="#id5"><span class="problematic" id="id6">**</span></a>kwargs)</dt><dd><p>Anova table for one fitted linear model.</p>
+<dl class="simple">
+<dt>model<span class="classifier">fitted linear model results instance</span></dt><dd><p>A fitted linear model</p>
+</dd>
+<dt>typ<span class="classifier">int or str {1,2,3} or {“I”,”II”,”III”}</span></dt><dd><p>Type of sum of squares to use.</p>
+</dd>
+</dl>
+<p><strong>kwargs</strong></p>
+<dl class="simple">
+<dt>scale<span class="classifier">float</span></dt><dd><p>Estimate of variance, If None, will be estimated from the largest</p>
+</dd>
+<dt>model. Default is None.</dt><dd><p>test : str {“F”, “Chisq”, “Cp”} or None
+Test statistics to provide. Default is “F”.</p>
+</dd>
+</dl>
+<p>Use of this function is discouraged. Use anova_lm instead.</p>
+</dd>
+</dl>
+</dd>
+<dt>FILE</dt><dd><p>/Users/santosg/miniconda3/lib/python3.9/site-packages/statsmodels/stats/anova.py</p>
+</dd>
+</dl>
+<p>None</p>
 </section>
 
 
