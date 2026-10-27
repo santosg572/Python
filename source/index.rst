@@ -25,4 +25,5 @@ Contenido
    funciones_curso
    ejercicio_calculo_de_probabilidades
    estadistica/clase_pruebas_estadisticas
+   estadistica/random_sample
 

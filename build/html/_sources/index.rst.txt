@@ -24,4 +24,5 @@ Contenido
    ubuntu_windows
    funciones_curso
    ejercicio_calculo_de_probabilidades
+   estadistica/clase_pruebas_estadisticas
 
