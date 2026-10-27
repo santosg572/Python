@@ -1,6 +1,10 @@
 tkinter
 =======
 
+Lo que puede hacer tkinter
+
+.. image:: tkinter.png
+
 Módulo para crear Interfaces de Usuario Grafica.
 
 **Ejemplo-01.**
