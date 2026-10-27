@@ -1,8 +1,9 @@
 import random
 import numpy as np
+import scipy as sp
 
-#print(dir(np.random))
+#print(dir(sp.stats))
 
-print(help(random.sample))
+print(help(sp.stats.sampling))
 
 

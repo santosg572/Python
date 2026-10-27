@@ -39,4 +39,34 @@ Utilizando la "Prueba de Shapiro-Wilk"
        print("Los datos NO siguen una distribución normal (se rechaza H0)")
 
 
+**Toma una muestra**
+
+.. code:: Python
+
+   import numpy as np
+
+   poblacion = np.array([10, 20, 30, 40, 50, 60, 70, 80, 90, 100])
+
+   # Muestra de 4 elementos sin reemplazo
+   muestra_sin_reemplazo = np.random.choice(poblacion, size=4, replace=False)
+
+   # Muestra con reemplazo (un elemento puede repetirse)
+   muestra_con_reemplazo = np.random.choice(poblacion, size=4, replace=True)
+
+   print("Sin reemplazo:", muestra_sin_reemplazo)
+   print("Con reemplazo:", muestra_con_reemplazo)
+
+**Datos 2**
+
+.. code:: Python
+
+   [96, 93, 77, 71, 80, 96, 94, 76, 85, 91, 80
+    81, 72, 94, 97, 73, 95, 87, 100, 74, 89, 80
+    94, 99, 73, 83, 71, 90, 99, 81, 77, 91, 80
+    90, 80, 71, 94, 80, 83, 76, 77, 97, 83, 90
+    94, 90, 84, 74, 80, 70, 82, 92, 84, 99, 71
+    72, 85, 84, 93, 99, 78, 71, 94, 71, 91, 79
+    75, 72, 94, 93, 85, 99, 84, 89, 75, 76, 95
+    85, 78, 97, 71, 87, 92, 82, 88, 91, 85, 86
+    85, 75, 83, 81, 70, 87, 92, 90, 96, 94, 71,  86]
 

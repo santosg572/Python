@@ -22,3 +22,23 @@ if p_valor > alfa:
     print("Los datos parecen seguir una distribución normal (no se rechaza H0)")
 else:
     print("Los datos NO siguen una distribución normal (se rechaza H0)")
+
+
+# tomar una muestra
+
+muestra = np.random.choice(datos, size=12, replace=True)
+
+print(muestra)
+
+# Aplicar la prueba de Shapiro-Wilk
+estadistico, p_valor = stats.shapiro(muestra)
+
+print(f"Estadístico W: {estadistico:.4f}")
+print(f"Valor p: {p_valor:.4f}")
+
+# Evaluar la hipótesis nula (alfa = 0.05)
+alfa = 0.05
+if p_valor > alfa:
+    print("Los datos parecen seguir una distribución normal (no se rechaza H0)")
+else:
+    print("Los datos NO siguen una distribución normal (se rechaza H0)")
