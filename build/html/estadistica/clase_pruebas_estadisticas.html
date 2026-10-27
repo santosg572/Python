@@ -20,7 +20,8 @@
     <script src="../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="prev" title="Cálculo de Probabilidades" href="../ejercicio_calculo_de_probabilidades.html" /> 
+    <link rel="next" title="HELP" href="../help/index2.html" />
+    <link rel="prev" title="Distribución normal" href="distribucion_normal.html" /> 
 </head>
 
 <body class="wy-body-for-nav"> 
@@ -52,7 +53,12 @@
 <li class="toctree-l1"><a class="reference internal" href="../ubuntu_windows.html">Pasos para instalar Ubuntu con WSL</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../funciones_curso.html">Algunas funciones desarrolladas durante el curso</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../ejercicio_calculo_de_probabilidades.html">Cálculo de Probabilidades</a></li>
-<li class="toctree-l1 current"><a class="current reference internal" href="#">Algunas pruebas estadísticas</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="index2.html">Estadística</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="distribucion_normal.html">Distribución normal</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Algunas pruebas estadísticas</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../help/index2.html">HELP</a></li>
 </ul>
 
         </div>
@@ -69,6 +75,7 @@
           <div role="navigation" aria-label="Page navigation">
   <ul class="wy-breadcrumbs">
       <li><a href="../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="index2.html">Estadística</a></li>
       <li class="breadcrumb-item active">Algunas pruebas estadísticas</li>
       <li class="wy-breadcrumbs-aside">
             <a href="../_sources/estadistica/clase_pruebas_estadisticas.rst.txt" rel="nofollow"> View page source</a>
@@ -113,13 +120,41 @@
     <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Los datos NO siguen una distribución normal (se rechaza H0)&quot;</span><span class="p">)</span>
 </pre></div>
 </div>
+<p><strong>Toma una muestra</strong></p>
+<div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span>
+
+<span class="n">poblacion</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mi">10</span><span class="p">,</span> <span class="mi">20</span><span class="p">,</span> <span class="mi">30</span><span class="p">,</span> <span class="mi">40</span><span class="p">,</span> <span class="mi">50</span><span class="p">,</span> <span class="mi">60</span><span class="p">,</span> <span class="mi">70</span><span class="p">,</span> <span class="mi">80</span><span class="p">,</span> <span class="mi">90</span><span class="p">,</span> <span class="mi">100</span><span class="p">])</span>
+
+<span class="c1"># Muestra de 4 elementos sin reemplazo</span>
+<span class="n">muestra_sin_reemplazo</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">choice</span><span class="p">(</span><span class="n">poblacion</span><span class="p">,</span> <span class="n">size</span><span class="o">=</span><span class="mi">4</span><span class="p">,</span> <span class="n">replace</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+
+<span class="c1"># Muestra con reemplazo (un elemento puede repetirse)</span>
+<span class="n">muestra_con_reemplazo</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">choice</span><span class="p">(</span><span class="n">poblacion</span><span class="p">,</span> <span class="n">size</span><span class="o">=</span><span class="mi">4</span><span class="p">,</span> <span class="n">replace</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Sin reemplazo:&quot;</span><span class="p">,</span> <span class="n">muestra_sin_reemplazo</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Con reemplazo:&quot;</span><span class="p">,</span> <span class="n">muestra_con_reemplazo</span><span class="p">)</span>
+</pre></div>
+</div>
+<p><strong>Datos 2</strong></p>
+<div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="p">[</span><span class="mi">96</span><span class="p">,</span> <span class="mi">93</span><span class="p">,</span> <span class="mi">77</span><span class="p">,</span> <span class="mi">71</span><span class="p">,</span> <span class="mi">80</span><span class="p">,</span> <span class="mi">96</span><span class="p">,</span> <span class="mi">94</span><span class="p">,</span> <span class="mi">76</span><span class="p">,</span> <span class="mi">85</span><span class="p">,</span> <span class="mi">91</span><span class="p">,</span> <span class="mi">80</span>
+ <span class="mi">81</span><span class="p">,</span> <span class="mi">72</span><span class="p">,</span> <span class="mi">94</span><span class="p">,</span> <span class="mi">97</span><span class="p">,</span> <span class="mi">73</span><span class="p">,</span> <span class="mi">95</span><span class="p">,</span> <span class="mi">87</span><span class="p">,</span> <span class="mi">100</span><span class="p">,</span> <span class="mi">74</span><span class="p">,</span> <span class="mi">89</span><span class="p">,</span> <span class="mi">80</span>
+ <span class="mi">94</span><span class="p">,</span> <span class="mi">99</span><span class="p">,</span> <span class="mi">73</span><span class="p">,</span> <span class="mi">83</span><span class="p">,</span> <span class="mi">71</span><span class="p">,</span> <span class="mi">90</span><span class="p">,</span> <span class="mi">99</span><span class="p">,</span> <span class="mi">81</span><span class="p">,</span> <span class="mi">77</span><span class="p">,</span> <span class="mi">91</span><span class="p">,</span> <span class="mi">80</span>
+ <span class="mi">90</span><span class="p">,</span> <span class="mi">80</span><span class="p">,</span> <span class="mi">71</span><span class="p">,</span> <span class="mi">94</span><span class="p">,</span> <span class="mi">80</span><span class="p">,</span> <span class="mi">83</span><span class="p">,</span> <span class="mi">76</span><span class="p">,</span> <span class="mi">77</span><span class="p">,</span> <span class="mi">97</span><span class="p">,</span> <span class="mi">83</span><span class="p">,</span> <span class="mi">90</span>
+ <span class="mi">94</span><span class="p">,</span> <span class="mi">90</span><span class="p">,</span> <span class="mi">84</span><span class="p">,</span> <span class="mi">74</span><span class="p">,</span> <span class="mi">80</span><span class="p">,</span> <span class="mi">70</span><span class="p">,</span> <span class="mi">82</span><span class="p">,</span> <span class="mi">92</span><span class="p">,</span> <span class="mi">84</span><span class="p">,</span> <span class="mi">99</span><span class="p">,</span> <span class="mi">71</span>
+ <span class="mi">72</span><span class="p">,</span> <span class="mi">85</span><span class="p">,</span> <span class="mi">84</span><span class="p">,</span> <span class="mi">93</span><span class="p">,</span> <span class="mi">99</span><span class="p">,</span> <span class="mi">78</span><span class="p">,</span> <span class="mi">71</span><span class="p">,</span> <span class="mi">94</span><span class="p">,</span> <span class="mi">71</span><span class="p">,</span> <span class="mi">91</span><span class="p">,</span> <span class="mi">79</span>
+ <span class="mi">75</span><span class="p">,</span> <span class="mi">72</span><span class="p">,</span> <span class="mi">94</span><span class="p">,</span> <span class="mi">93</span><span class="p">,</span> <span class="mi">85</span><span class="p">,</span> <span class="mi">99</span><span class="p">,</span> <span class="mi">84</span><span class="p">,</span> <span class="mi">89</span><span class="p">,</span> <span class="mi">75</span><span class="p">,</span> <span class="mi">76</span><span class="p">,</span> <span class="mi">95</span>
+ <span class="mi">85</span><span class="p">,</span> <span class="mi">78</span><span class="p">,</span> <span class="mi">97</span><span class="p">,</span> <span class="mi">71</span><span class="p">,</span> <span class="mi">87</span><span class="p">,</span> <span class="mi">92</span><span class="p">,</span> <span class="mi">82</span><span class="p">,</span> <span class="mi">88</span><span class="p">,</span> <span class="mi">91</span><span class="p">,</span> <span class="mi">85</span><span class="p">,</span> <span class="mi">86</span>
+ <span class="mi">85</span><span class="p">,</span> <span class="mi">75</span><span class="p">,</span> <span class="mi">83</span><span class="p">,</span> <span class="mi">81</span><span class="p">,</span> <span class="mi">70</span><span class="p">,</span> <span class="mi">87</span><span class="p">,</span> <span class="mi">92</span><span class="p">,</span> <span class="mi">90</span><span class="p">,</span> <span class="mi">96</span><span class="p">,</span> <span class="mi">94</span><span class="p">,</span> <span class="mi">71</span><span class="p">,</span>  <span class="mi">86</span><span class="p">]</span>
+</pre></div>
+</div>
 </section>
 
 
            </div>
           </div>
           <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
-        <a href="../ejercicio_calculo_de_probabilidades.html" class="btn btn-neutral float-left" title="Cálculo de Probabilidades" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="distribucion_normal.html" class="btn btn-neutral float-left" title="Distribución normal" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="../help/index2.html" class="btn btn-neutral float-right" title="HELP" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
     </div>
 
   <hr/>
