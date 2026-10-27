@@ -1,0 +1,2523 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="../">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>tkinter &mdash; santosg57-python 0.1 documentation</title>
+      <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=b86133f3" />
+      <link rel="stylesheet" type="text/css" href="../_static/css/theme.css?v=9edc463e" />
+      <link rel="stylesheet" type="text/css" href="../_static/custom.css?v=836bb062" />
+
+  
+      <script src="../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="../_static/documentation_options.js?v=2709fde1"></script>
+      <script src="../_static/doctools.js?v=9a2dae69"></script>
+      <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="prev" title="Help on package statsmodels:" href="statsmodels.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../index.html" class="icon icon-home">
+            santosg57-python
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../Temarios/index2.html">sss</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../funciones.html">Funciones o Métodos creados por el Usuario</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../numpy/Imagenes/imagenes.html">Estructuras de datos en el módulo numpy</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../numpy_help.html">Help numpy</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlyb.html">Matplotlib.pyplot</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../ejercicio_01.html">Ejercicio01</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../ubuntu_windows.html">Pasos para instalar Ubuntu con WSL</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../funciones_curso.html">Algunas funciones desarrolladas durante el curso</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../ejercicio_calculo_de_probabilidades.html">Cálculo de Probabilidades</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../estadistica/index2.html">Estadística</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="index2.html">HELP</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="help_njumpy.html">numpy</a></li>
+<li class="toctree-l2"><a class="reference internal" href="help_random.html">modulo random</a></li>
+<li class="toctree-l2"><a class="reference internal" href="random_sample.html">Help on method sample in module random:</a></li>
+<li class="toctree-l2"><a class="reference internal" href="statsmodels.html">Help on package statsmodels:</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">tkinter</a></li>
+</ul>
+</li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">santosg57-python</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="index2.html">HELP</a></li>
+      <li class="breadcrumb-item active">tkinter</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../_sources/help/help_tkinter.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="tkinter">
+<h1>tkinter<a class="headerlink" href="#tkinter" title="Link to this heading"></a></h1>
+<p>[‘ACTIVE’, ‘ALL’, ‘ANCHOR’, ‘ARC’, ‘BASELINE’, ‘BEVEL’, ‘BOTH’, ‘BOTTOM’, ‘BROWSE’, ‘BUTT’, ‘BaseWidget’, ‘BitmapImage’,
+‘BooleanVar’, ‘Button’, ‘CASCADE’, ‘CENTER’, ‘CHAR’, ‘CHECKBUTTON’, ‘CHORD’, ‘COMMAND’, ‘CURRENT’, ‘CallWrapper’,
+‘Canvas’, ‘Checkbutton’, ‘DISABLED’, ‘DOTBOX’, ‘DoubleVar’, ‘E’, ‘END’, ‘EW’, ‘EXCEPTION’, ‘EXTENDED’, ‘Entry’, ‘Event’,
+‘EventType’, ‘FALSE’, ‘FIRST’, ‘FLAT’, ‘Frame’, ‘GROOVE’, ‘Grid’, ‘HIDDEN’, ‘HORIZONTAL’, ‘INSERT’, ‘INSIDE’, ‘Image’,
+‘IntVar’, ‘LAST’, ‘LEFT’, ‘Label’, ‘LabelFrame’, ‘Listbox’, ‘MITER’, ‘MOVETO’, ‘MULTIPLE’, ‘Menu’, ‘Menubutton’,
+‘Message’, ‘Misc’, ‘N’, ‘NE’, ‘NO’, ‘NONE’, ‘NORMAL’, ‘NS’, ‘NSEW’, ‘NUMERIC’, ‘NW’, ‘NoDefaultRoot’, ‘OFF’, ‘ON’,
+‘OUTSIDE’, ‘OptionMenu’, ‘PAGES’, ‘PIESLICE’, ‘PROJECTING’, ‘Pack’, ‘PanedWindow’, ‘PhotoImage’, ‘Place’, ‘RADIOBUTTON’,
+‘RAISED’, ‘READABLE’, ‘RIDGE’, ‘RIGHT’, ‘ROUND’, ‘Radiobutton’, ‘S’, ‘SCROLL’, ‘SE’, ‘SEL’, ‘SEL_FIRST’, ‘SEL_LAST’,
+‘SEPARATOR’, ‘SINGLE’, ‘SOLID’, ‘SUNKEN’, ‘SW’, ‘Scale’, ‘Scrollbar’, ‘Spinbox’, ‘StringVar’, ‘TOP’, ‘TRUE’, ‘Tcl’,
+‘TclError’, ‘TclVersion’, ‘Text’, ‘Tk’, ‘TkVersion’, ‘Toplevel’, ‘UNDERLINE’, ‘UNITS’, ‘VERTICAL’, ‘Variable’, ‘W’,
+‘WORD’, ‘WRITABLE’, ‘Widget’, ‘Wm’, ‘X’, ‘XView’, ‘Y’, ‘YES’, ‘YView’, ‘__all__’, ‘__builtins__’, ‘__cached__’, ‘__doc__’,
+‘__file__’, ‘__loader__’, ‘__name__’, ‘__package__’, ‘__path__’, ‘__spec__’, ‘_cnfmerge’, ‘_default_root’, ‘_exit’,
+‘_flatten’, ‘_get_default_root’, ‘_join’, ‘_magic_re’, ‘_setit’, ‘_space_re’, ‘_splitdict’, ‘_stringify’,
+‘_support_default_root’, ‘_test’, ‘_tkerror’, ‘_tkinter’, ‘_varnum’, ‘constants’, ‘enum’, ‘getboolean’, ‘getdouble’,
+‘getint’, ‘image_names’, ‘image_types’, ‘mainloop’, ‘re’, ‘sys’, ‘types’, ‘wantobjects’]</p>
+<p><strong>Help on class Tk in module tkinter:</strong></p>
+<dl>
+<dt>class Tk(Misc, Wm)</dt><dd><div class="line-block">
+<div class="line">Tk(screenName=None, baseName=None, className=’Tk’, useTk=True, sync=False, use=None)</div>
+<div class="line"><br /></div>
+<div class="line">Toplevel widget of Tk which represents mostly the main window</div>
+<div class="line">of an application. It has an associated Tcl interpreter.</div>
+<div class="line"><br /></div>
+<div class="line">Method resolution order:</div>
+<div class="line-block">
+<div class="line">Tk</div>
+<div class="line">Misc</div>
+<div class="line">Wm</div>
+<div class="line">builtins.object</div>
+<div class="line"><br /></div>
+</div>
+<div class="line">Methods defined here:</div>
+<div class="line"><br /></div>
+<div class="line">__getattr__(self, attr)</div>
+<div class="line-block">
+<div class="line">Delegate attribute access to the interpreter object</div>
+<div class="line"><br /></div>
+</div>
+<div class="line">__init__(self, screenName=None, baseName=None, className=’Tk’, useTk=True, sync=False, use=None)</div>
+<div class="line-block">
+<div class="line">Return a new Toplevel widget on screen SCREENNAME. A new Tcl interpreter will</div>
+<div class="line">be created. BASENAME will be used for the identification of the profile file (see</div>
+<div class="line">readprofile).</div>
+<div class="line">It is constructed from sys.argv[0] without extensions if None is given. CLASSNAME</div>
+<div class="line">is the name of the widget class.</div>
+<div class="line"><br /></div>
+</div>
+<div class="line">destroy(self)</div>
+<div class="line-block">
+<div class="line">Destroy this and all descendants widgets. This will</div>
+<div class="line">end the application of this Tcl interpreter.</div>
+<div class="line"><br /></div>
+</div>
+<div class="line">loadtk(self)</div>
+<div class="line"><br /></div>
+<div class="line">readprofile(self, baseName, className)</div>
+<div class="line-block">
+<div class="line">Internal function. It reads .BASENAME.tcl and .CLASSNAME.tcl into</div>
+<div class="line">the Tcl Interpreter and calls exec on the contents of .BASENAME.py and</div>
+<div class="line">.CLASSNAME.py if such a file exists in the home directory.</div>
+<div class="line"><br /></div>
+</div>
+<div class="line">report_callback_exception(self, exc, val, tb)</div>
+<div class="line-block">
+<div class="line">Report callback exception on sys.stderr.</div>
+<div class="line"><br /></div>
+<div class="line">Applications may want to override this internal function, and</div>
+<div class="line">should when sys.stderr is None.</div>
+<div class="line"><br /></div>
+</div>
+<div class="line">———————————————————————-</div>
+<div class="line">Methods inherited from Misc:</div>
+<div class="line"><br /></div>
+<div class="line">__getitem__ = cget(self, key)</div>
+<div class="line"><br /></div>
+<div class="line">__repr__(self)</div>
+<div class="line-block">
+<div class="line">Return repr(self).</div>
+<div class="line"><br /></div>
+</div>
+<div class="line">__setitem__(self, key, value)</div>
+<div class="line"><br /></div>
+<div class="line">__str__(self)</div>
+<div class="line-block">
+<div class="line">Return the window path name of this widget.</div>
+<div class="line"><br /></div>
+</div>
+<div class="line">after(self, ms, func=None, <a href="#id1"><span class="problematic" id="id2">*</span></a>args)</div>
+<div class="line-block">
+<div class="line">Call function once after given time.</div>
+<div class="line"><br /></div>
+<div class="line">MS specifies the time in milliseconds. FUNC gives the</div>
+<div class="line">function which shall be called. Additional parameters</div>
+<div class="line">are given as parameters to the function call.  Return</div>
+<div class="line">identifier to cancel scheduling with after_cancel.</div>
+<div class="line"><br /></div>
+</div>
+<div class="line">after_cancel(self, id)</div>
+<div class="line-block">
+<div class="line">Cancel scheduling of function identified with ID.</div>
+<div class="line"><br /></div>
+<div class="line">Identifier returned by after or after_idle must be</div>
+<div class="line">given as first parameter.</div>
+<div class="line"><br /></div>
+</div>
+<div class="line">after_idle(self, func, <a href="#id3"><span class="problematic" id="id4">*</span></a>args)</div>
+<div class="line-block">
+<div class="line">Call FUNC once if the Tcl main loop has no event to</div>
+<div class="line">process.</div>
+<div class="line"><br /></div>
+<div class="line">Return an identifier to cancel the scheduling with</div>
+<div class="line">after_cancel.</div>
+<div class="line"><br /></div>
+</div>
+<div class="line">anchor = grid_anchor(self, anchor=None)</div>
+<div class="line"><br /></div>
+<div class="line">bbox = grid_bbox(self, column=None, row=None, col2=None, row2=None)</div>
+<div class="line"><br /></div>
+<div class="line">bell(self, displayof=0)</div>
+<div class="line-block">
+<div class="line">Ring a display’s bell.</div>
+<div class="line"><br /></div>
+</div>
+<div class="line">bind(self, sequence=None, func=None, add=None)</div>
+<div class="line-block">
+<div class="line">Bind to this widget at event SEQUENCE a call to function FUNC.</div>
+<div class="line"><br /></div>
+<div class="line">SEQUENCE is a string of concatenated event</div>
+<div class="line">patterns. An event pattern is of the form</div>
+<div class="line">&lt;MODIFIER-MODIFIER-TYPE-DETAIL&gt; where MODIFIER is one</div>
+<div class="line">of Control, Mod2, M2, Shift, Mod3, M3, Lock, Mod4, M4,</div>
+<div class="line">Button1, B1, Mod5, M5 Button2, B2, Meta, M, Button3,</div>
+<div class="line">B3, Alt, Button4, B4, Double, Button5, B5 Triple,</div>
+<div class="line">Mod1, M1. TYPE is one of Activate, Enter, Map,</div>
+<div class="line">ButtonPress, Button, Expose, Motion, ButtonRelease</div>
+<div class="line">FocusIn, MouseWheel, Circulate, FocusOut, Property,</div>
+<div class="line">Colormap, Gravity Reparent, Configure, KeyPress, Key,</div>
+<div class="line">Unmap, Deactivate, KeyRelease Visibility, Destroy,</div>
+<div class="line">Leave and DETAIL is the button number for ButtonPress,</div>
+<div class="line">ButtonRelease and DETAIL is the Keysym for KeyPress and</div>
+<div class="line">KeyRelease. Examples are</div>
+<div class="line">&lt;Control-Button-1&gt; for pressing Control and mouse button 1 or</div>
+<div class="line">&lt;Alt-A&gt; for pressing A and the Alt key (KeyPress can be omitted).</div>
+<div class="line">An event pattern can also be a virtual event of the form</div>
+<div class="line">&lt;&lt;AString&gt;&gt; where AString can be arbitrary. This</div>
+<div class="line">event can be generated by event_generate.</div>
+<div class="line">If events are concatenated they must appear shortly</div>
+<div class="line">after each other.</div>
+<div class="line"><br /></div>
+<div class="line">FUNC will be called if the event sequence occurs with an</div>
+<div class="line">instance of Event as argument. If the return value of FUNC is</div>
+<div class="line">“break” no further bound function is invoked.</div>
+<div class="line"><br /></div>
+<div class="line">An additional boolean parameter ADD specifies whether FUNC will</div>
+<div class="line">be called additionally to the other bound function or whether</div>
+<div class="line">it will replace the previous function.</div>
+<div class="line"><br /></div>
+<div class="line">Bind will return an identifier to allow deletion of the bound function with</div>
+<div class="line">unbind without memory leak.</div>
+<div class="line"><br /></div>
+<div class="line">If FUNC or SEQUENCE is omitted the bound function or list</div>
+<div class="line">of bound events are returned.</div>
+<div class="line"><br /></div>
+</div>
+<div class="line">bind_all(self, sequence=None, func=None, add=None)</div>
+<div class="line-block">
+<div class="line">Bind to all widgets at an event SEQUENCE a call to function FUNC.</div>
+<div class="line">An additional boolean parameter ADD specifies whether FUNC will</div>
+<div class="line">be called additionally to the other bound function or whether</div>
+<div class="line">it will replace the previous function. See bind for the return value.</div>
+<div class="line"><br /></div>
+</div>
+<div class="line">bind_class(self, className, sequence=None, func=None, add=None)</div>
+<div class="line-block">
+<div class="line">Bind to widgets with bindtag CLASSNAME at event</div>
+<div class="line">SEQUENCE a call of function FUNC. An additional</div>
+<div class="line">boolean parameter ADD specifies whether FUNC will be</div>
+<div class="line">called additionally to the other bound function or</div>
+<div class="line">whether it will replace the previous function. See bind for</div>
+<div class="line">the return value.</div>
+<div class="line"><br /></div>
+</div>
+<div class="line">bindtags(self, tagList=None)</div>
+<div class="line-block">
+<div class="line">Set or get the list of bindtags for this widget.</div>
+<div class="line"><br /></div>
+<div class="line">With no argument return the list of all bindtags associated with</div>
+<div class="line">this widget. With a list of strings as argument the bindtags are</div>
+<div class="line">set to this list. The bindtags determine in which order events are</div>
+<div class="line">processed (see bind).</div>
+<div class="line"><br /></div>
+</div>
+<div class="line">cget(self, key)</div>
+<div class="line-block">
+<div class="line">Return the resource value for a KEY given as string.</div>
+<div class="line"><br /></div>
+</div>
+<div class="line">clipboard_append(self, string, <a href="#id5"><span class="problematic" id="id6">**</span></a>kw)</div>
+<div class="line-block">
+<div class="line">Append STRING to the Tk clipboard.</div>
+<div class="line"><br /></div>
+<div class="line">A widget specified at the optional displayof keyword</div>
+<div class="line">argument specifies the target display. The clipboard</div>
+<div class="line">can be retrieved with selection_get.</div>
+<div class="line"><br /></div>
+</div>
+<div class="line">clipboard_clear(self, <a href="#id7"><span class="problematic" id="id8">**</span></a>kw)</div>
+<div class="line-block">
+<div class="line">Clear the data in the Tk clipboard.</div>
+<div class="line"><br /></div>
+<div class="line">A widget specified for the optional displayof keyword</div>
+<div class="line">argument specifies the target display.</div>
+<div class="line"><br /></div>
+</div>
+<div class="line">clipboard_get(self, <a href="#id9"><span class="problematic" id="id10">**</span></a>kw)</div>
+<div class="line-block">
+<div class="line">Retrieve data from the clipboard on window’s display.</div>
+<div class="line"><br /></div>
+<div class="line">The window keyword defaults to the root window of the Tkinter</div>
+<div class="line">application.</div>
+<div class="line"><br /></div>
+<div class="line">The type keyword specifies the form in which the data is</div>
+<div class="line">to be returned and should be an atom name such as STRING</div>
+<div class="line">or FILE_NAME.  Type defaults to STRING, except on X11, where the default</div>
+<div class="line">is to try UTF8_STRING and fall back to STRING.</div>
+<div class="line"><br /></div>
+<div class="line">This command is equivalent to:</div>
+<div class="line"><br /></div>
+<div class="line">selection_get(CLIPBOARD)</div>
+<div class="line"><br /></div>
+</div>
+<div class="line">columnconfigure = grid_columnconfigure(self, index, cnf={}, <a href="#id11"><span class="problematic" id="id12">**</span></a>kw)</div>
+<div class="line"><br /></div>
+<div class="line">config = configure(self, cnf=None, <a href="#id13"><span class="problematic" id="id14">**</span></a>kw)</div>
+<div class="line"><br /></div>
+<div class="line">configure(self, cnf=None, <a href="#id15"><span class="problematic" id="id16">**</span></a>kw)</div>
+<div class="line-block">
+<div class="line">Configure resources of a widget.</div>
+<div class="line"><br /></div>
+<div class="line">The values for resources are specified as keyword</div>
+<div class="line">arguments. To get an overview about</div>
+<div class="line">the allowed keyword arguments call the method keys.</div>
+<div class="line"><br /></div>
+</div>
+<div class="line">deletecommand(self, name)</div>
+<div class="line-block">
+<div class="line">Internal function.</div>
+<div class="line"><br /></div>
+<div class="line">Delete the Tcl command provided in NAME.</div>
+<div class="line"><br /></div>
+</div>
+<div class="line">event_add(self, virtual, <a href="#id17"><span class="problematic" id="id18">*</span></a>sequences)</div>
+<div class="line-block">
+<div class="line">Bind a virtual event VIRTUAL (of the form &lt;&lt;Name&gt;&gt;)</div>
+<div class="line">to an event SEQUENCE such that the virtual event is triggered</div>
+<div class="line">whenever SEQUENCE occurs.</div>
+<div class="line"><br /></div>
+</div>
+<div class="line">event_delete(self, virtual, <a href="#id19"><span class="problematic" id="id20">*</span></a>sequences)</div>
+<div class="line-block">
+<div class="line">Unbind a virtual event VIRTUAL from SEQUENCE.</div>
+<div class="line"><br /></div>
+</div>
+<div class="line">event_generate(self, sequence, <a href="#id21"><span class="problematic" id="id22">**</span></a>kw)</div>
+<div class="line-block">
+<div class="line">Generate an event SEQUENCE. Additional</div>
+<div class="line">keyword arguments specify parameter of the event</div>
+<div class="line">(e.g. x, y, rootx, rooty).</div>
+<div class="line"><br /></div>
+</div>
+<div class="line">event_info(self, virtual=None)</div>
+<div class="line-block">
+<div class="line">Return a list of all virtual events or the information</div>
+<div class="line">about the SEQUENCE bound to the virtual event VIRTUAL.</div>
+<div class="line"><br /></div>
+</div>
+<div class="line">focus = focus_set(self)</div>
+<div class="line"><br /></div>
+<div class="line">focus_displayof(self)</div>
+<div class="line-block">
+<div class="line">Return the widget which has currently the focus on the</div>
+<div class="line">display where this widget is located.</div>
+<div class="line"><br /></div>
+<div class="line">Return None if the application does not have the focus.</div>
+<div class="line"><br /></div>
+</div>
+<div class="line">focus_force(self)</div>
+<div class="line-block">
+<div class="line">Direct input focus to this widget even if the</div>
+<div class="line">application does not have the focus. Use with</div>
+<div class="line">caution!</div>
+<div class="line"><br /></div>
+</div>
+<div class="line">focus_get(self)</div>
+<div class="line-block">
+<div class="line">Return the widget which has currently the focus in the</div>
+<div class="line">application.</div>
+<div class="line"><br /></div>
+<div class="line">Use focus_displayof to allow working with several</div>
+<div class="line">displays. Return None if application does not have</div>
+<div class="line">the focus.</div>
+<div class="line"><br /></div>
+</div>
+<div class="line">focus_lastfor(self)</div>
+<div class="line-block">
+<div class="line">Return the widget which would have the focus if top level</div>
+<div class="line">for this widget gets the focus from the window manager.</div>
+<div class="line"><br /></div>
+</div>
+<div class="line">focus_set(self)</div>
+<div class="line-block">
+<div class="line">Direct input focus to this widget.</div>
+<div class="line"><br /></div>
+<div class="line">If the application currently does not have the focus</div>
+<div class="line">this widget will get the focus if the application gets</div>
+<div class="line">the focus through the window manager.</div>
+<div class="line"><br /></div>
+</div>
+<div class="line">getboolean(self, s)</div>
+<div class="line-block">
+<div class="line">Return a boolean value for Tcl boolean values true and false given as parameter.</div>
+<div class="line"><br /></div>
+</div>
+<div class="line">getdouble(self, s)</div>
+<div class="line"><br /></div>
+<div class="line">getint(self, s)</div>
+<div class="line"><br /></div>
+<div class="line">getvar(self, name=’PY_VAR’)</div>
+<div class="line-block">
+<div class="line">Return value of Tcl variable NAME.</div>
+<div class="line"><br /></div>
+</div>
+<div class="line">grab_current(self)</div>
+<div class="line-block">
+<div class="line">Return widget which has currently the grab in this application</div>
+<div class="line">or None.</div>
+<div class="line"><br /></div>
+</div>
+<div class="line">grab_release(self)</div>
+<div class="line-block">
+<div class="line">Release grab for this widget if currently set.</div>
+<div class="line"><br /></div>
+</div>
+<div class="line">grab_set(self)</div>
+<div class="line-block">
+<div class="line">Set grab for this widget.</div>
+<div class="line"><br /></div>
+<div class="line">A grab directs all events to this and descendant</div>
+<div class="line">widgets in the application.</div>
+<div class="line"><br /></div>
+</div>
+<div class="line">grab_set_global(self)</div>
+<div class="line-block">
+<div class="line">Set global grab for this widget.</div>
+<div class="line"><br /></div>
+<div class="line">A global grab directs all events to this and</div>
+<div class="line">descendant widgets on the display. Use with caution -</div>
+<div class="line">other applications do not get events anymore.</div>
+<div class="line"><br /></div>
+</div>
+<div class="line">grab_status(self)</div>
+<div class="line-block">
+<div class="line">Return None, “local” or “global” if this widget has</div>
+<div class="line">no, a local or a global grab.</div>
+<div class="line"><br /></div>
+</div>
+<div class="line">grid_anchor(self, anchor=None)</div>
+<div class="line-block">
+<div class="line">The anchor value controls how to place the grid within the</div>
+<div class="line">master when no row/column has any weight.</div>
+<div class="line"><br /></div>
+<div class="line">The default anchor is nw.</div>
+<div class="line"><br /></div>
+</div>
+<div class="line">grid_bbox(self, column=None, row=None, col2=None, row2=None)</div>
+<div class="line-block">
+<div class="line">Return a tuple of integer coordinates for the bounding</div>
+<div class="line">box of this widget controlled by the geometry manager grid.</div>
+<div class="line"><br /></div>
+<div class="line">If COLUMN, ROW is given the bounding box applies from</div>
+<div class="line">the cell with row and column 0 to the specified</div>
+<div class="line">cell. If COL2 and ROW2 are given the bounding box</div>
+<div class="line">starts at that cell.</div>
+<div class="line"><br /></div>
+<div class="line">The returned integers specify the offset of the upper left</div>
+<div class="line">corner in the master widget and the width and height.</div>
+<div class="line"><br /></div>
+</div>
+<div class="line">grid_columnconfigure(self, index, cnf={}, <a href="#id23"><span class="problematic" id="id24">**</span></a>kw)</div>
+<div class="line-block">
+<div class="line">Configure column INDEX of a grid.</div>
+<div class="line"><br /></div>
+<div class="line">Valid resources are minsize (minimum size of the column),</div>
+<div class="line">weight (how much does additional space propagate to this column)</div>
+<div class="line">and pad (how much space to let additionally).</div>
+<div class="line"><br /></div>
+</div>
+<div class="line">grid_location(self, x, y)</div>
+<div class="line-block">
+<div class="line">Return a tuple of column and row which identify the cell</div>
+<div class="line">at which the pixel at position X and Y inside the master</div>
+<div class="line">widget is located.</div>
+<div class="line"><br /></div>
+</div>
+<div class="line">grid_propagate(self, flag=[‘_noarg_’])</div>
+<div class="line-block">
+<div class="line">Set or get the status for propagation of geometry information.</div>
+<div class="line"><br /></div>
+<div class="line">A boolean argument specifies whether the geometry information</div>
+<div class="line">of the slaves will determine the size of this widget. If no argument</div>
+<div class="line">is given, the current setting will be returned.</div>
+<div class="line"><br /></div>
+</div>
+<div class="line">grid_rowconfigure(self, index, cnf={}, <a href="#id25"><span class="problematic" id="id26">**</span></a>kw)</div>
+<div class="line-block">
+<div class="line">Configure row INDEX of a grid.</div>
+<div class="line"><br /></div>
+<div class="line">Valid resources are minsize (minimum size of the row),</div>
+<div class="line">weight (how much does additional space propagate to this row)</div>
+<div class="line">and pad (how much space to let additionally).</div>
+<div class="line"><br /></div>
+</div>
+<div class="line">grid_size(self)</div>
+<div class="line-block">
+<div class="line">Return a tuple of the number of column and rows in the grid.</div>
+<div class="line"><br /></div>
+</div>
+<div class="line">grid_slaves(self, row=None, column=None)</div>
+<div class="line-block">
+<div class="line">Return a list of all slaves of this widget</div>
+<div class="line">in its packing order.</div>
+<div class="line"><br /></div>
+</div>
+<div class="line">image_names(self)</div>
+<div class="line-block">
+<div class="line">Return a list of all existing image names.</div>
+<div class="line"><br /></div>
+</div>
+<div class="line">image_types(self)</div>
+<div class="line-block">
+<div class="line">Return a list of all available image types (e.g. photo bitmap).</div>
+<div class="line"><br /></div>
+</div>
+<div class="line">keys(self)</div>
+<div class="line-block">
+<div class="line">Return a list of all resource names of this widget.</div>
+<div class="line"><br /></div>
+</div>
+<div class="line">lift = tkraise(self, aboveThis=None)</div>
+<div class="line"><br /></div>
+<div class="line">lower(self, belowThis=None)</div>
+<div class="line-block">
+<div class="line">Lower this widget in the stacking order.</div>
+<div class="line"><br /></div>
+</div>
+<div class="line">mainloop(self, n=0)</div>
+<div class="line-block">
+<div class="line">Call the mainloop of Tk.</div>
+<div class="line"><br /></div>
+</div>
+<div class="line">nametowidget(self, name)</div>
+<div class="line-block">
+<div class="line">Return the Tkinter instance of a widget identified by</div>
+<div class="line">its Tcl name NAME.</div>
+<div class="line"><br /></div>
+</div>
+<div class="line">option_add(self, pattern, value, priority=None)</div>
+<div class="line-block">
+<div class="line">Set a VALUE (second parameter) for an option</div>
+<div class="line">PATTERN (first parameter).</div>
+<div class="line"><br /></div>
+<div class="line">An optional third parameter gives the numeric priority</div>
+<div class="line">(defaults to 80).</div>
+<div class="line"><br /></div>
+</div>
+<div class="line">option_clear(self)</div>
+<div class="line-block">
+<div class="line">Clear the option database.</div>
+<div class="line"><br /></div>
+<div class="line">It will be reloaded if option_add is called.</div>
+<div class="line"><br /></div>
+</div>
+<div class="line">option_get(self, name, className)</div>
+<div class="line-block">
+<div class="line">Return the value for an option NAME for this widget</div>
+<div class="line">with CLASSNAME.</div>
+<div class="line"><br /></div>
+<div class="line">Values with higher priority override lower values.</div>
+<div class="line"><br /></div>
+</div>
+<div class="line">option_readfile(self, fileName, priority=None)</div>
+<div class="line-block">
+<div class="line">Read file FILENAME into the option database.</div>
+<div class="line"><br /></div>
+<div class="line">An optional second parameter gives the numeric</div>
+<div class="line">priority.</div>
+<div class="line"><br /></div>
+</div>
+<div class="line">pack_propagate(self, flag=[‘_noarg_’])</div>
+<div class="line-block">
+<div class="line">Set or get the status for propagation of geometry information.</div>
+<div class="line"><br /></div>
+<div class="line">A boolean argument specifies whether the geometry information</div>
+<div class="line">of the slaves will determine the size of this widget. If no argument</div>
+<div class="line">is given the current setting will be returned.</div>
+<div class="line"><br /></div>
+</div>
+<div class="line">pack_slaves(self)</div>
+<div class="line-block">
+<div class="line">Return a list of all slaves of this widget</div>
+<div class="line">in its packing order.</div>
+<div class="line"><br /></div>
+</div>
+<div class="line">place_slaves(self)</div>
+<div class="line-block">
+<div class="line">Return a list of all slaves of this widget</div>
+<div class="line">in its packing order.</div>
+<div class="line"><br /></div>
+</div>
+<div class="line">propagate = pack_propagate(self, flag=[‘_noarg_’])</div>
+<div class="line"><br /></div>
+<div class="line">quit(self)</div>
+<div class="line-block">
+<div class="line">Quit the Tcl interpreter. All widgets will be destroyed.</div>
+<div class="line"><br /></div>
+</div>
+<div class="line">register = _register(self, func, subst=None, needcleanup=1)</div>
+<div class="line"><br /></div>
+<div class="line">rowconfigure = grid_rowconfigure(self, index, cnf={}, <a href="#id27"><span class="problematic" id="id28">**</span></a>kw)</div>
+<div class="line"><br /></div>
+<div class="line">selection_clear(self, <a href="#id29"><span class="problematic" id="id30">**</span></a>kw)</div>
+<div class="line-block">
+<div class="line">Clear the current X selection.</div>
+<div class="line"><br /></div>
+</div>
+<div class="line">selection_get(self, <a href="#id31"><span class="problematic" id="id32">**</span></a>kw)</div>
+<div class="line-block">
+<div class="line">Return the contents of the current X selection.</div>
+<div class="line"><br /></div>
+<div class="line">A keyword parameter selection specifies the name of</div>
+<div class="line">the selection and defaults to PRIMARY.  A keyword</div>
+<div class="line">parameter displayof specifies a widget on the display</div>
+<div class="line">to use. A keyword parameter type specifies the form of data to be</div>
+<div class="line">fetched, defaulting to STRING except on X11, where UTF8_STRING is tried</div>
+<div class="line">before STRING.</div>
+<div class="line"><br /></div>
+</div>
+<div class="line">selection_handle(self, command, <a href="#id33"><span class="problematic" id="id34">**</span></a>kw)</div>
+<div class="line-block">
+<div class="line">Specify a function COMMAND to call if the X</div>
+<div class="line">selection owned by this widget is queried by another</div>
+<div class="line">application.</div>
+<div class="line"><br /></div>
+<div class="line">This function must return the contents of the</div>
+<div class="line">selection. The function will be called with the</div>
+<div class="line">arguments OFFSET and LENGTH which allows the chunking</div>
+<div class="line">of very long selections. The following keyword</div>
+<div class="line">parameters can be provided:</div>
+<div class="line">selection - name of the selection (default PRIMARY),</div>
+<div class="line">type - type of the selection (e.g. STRING, FILE_NAME).</div>
+<div class="line"><br /></div>
+</div>
+<div class="line">selection_own(self, <a href="#id35"><span class="problematic" id="id36">**</span></a>kw)</div>
+<div class="line-block">
+<div class="line">Become owner of X selection.</div>
+<div class="line"><br /></div>
+<div class="line">A keyword parameter selection specifies the name of</div>
+<div class="line">the selection (default PRIMARY).</div>
+<div class="line"><br /></div>
+</div>
+<div class="line">selection_own_get(self, <a href="#id37"><span class="problematic" id="id38">**</span></a>kw)</div>
+<div class="line-block">
+<div class="line">Return owner of X selection.</div>
+<div class="line"><br /></div>
+<div class="line">The following keyword parameter can</div>
+<div class="line">be provided:</div>
+<div class="line">selection - name of the selection (default PRIMARY),</div>
+<div class="line">type - type of the selection (e.g. STRING, FILE_NAME).</div>
+<div class="line"><br /></div>
+</div>
+<div class="line">send(self, interp, cmd, <a href="#id39"><span class="problematic" id="id40">*</span></a>args)</div>
+<div class="line-block">
+<div class="line">Send Tcl command CMD to different interpreter INTERP to be executed.</div>
+<div class="line"><br /></div>
+</div>
+<div class="line">setvar(self, name=’PY_VAR’, value=’1’)</div>
+<div class="line-block">
+<div class="line">Set Tcl variable NAME to VALUE.</div>
+<div class="line"><br /></div>
+</div>
+<div class="line">size = grid_size(self)</div>
+<div class="line"><br /></div>
+<div class="line">slaves = pack_slaves(self)</div>
+<div class="line"><br /></div>
+<div class="line">tk_bisque(self)</div>
+<div class="line-block">
+<div class="line">Change the color scheme to light brown as used in Tk 3.6 and before.</div>
+<div class="line"><br /></div>
+</div>
+<div class="line">tk_focusFollowsMouse(self)</div>
+<div class="line-block">
+<div class="line">The widget under mouse will get automatically focus. Can not</div>
+<div class="line">be disabled easily.</div>
+<div class="line"><br /></div>
+</div>
+<div class="line">tk_focusNext(self)</div>
+<div class="line-block">
+<div class="line">Return the next widget in the focus order which follows</div>
+<div class="line">widget which has currently the focus.</div>
+<div class="line"><br /></div>
+<div class="line">The focus order first goes to the next child, then to</div>
+<div class="line">the children of the child recursively and then to the</div>
+<div class="line">next sibling which is higher in the stacking order.  A</div>
+<div class="line">widget is omitted if it has the takefocus resource set</div>
+<div class="line">to 0.</div>
+<div class="line"><br /></div>
+</div>
+<div class="line">tk_focusPrev(self)</div>
+<div class="line-block">
+<div class="line">Return previous widget in the focus order. See tk_focusNext for details.</div>
+<div class="line"><br /></div>
+</div>
+<div class="line">tk_setPalette(self, <a href="#id41"><span class="problematic" id="id42">*</span></a>args, <a href="#id43"><span class="problematic" id="id44">**</span></a>kw)</div>
+<div class="line-block">
+<div class="line">Set a new color scheme for all widget elements.</div>
+<div class="line"><br /></div>
+<div class="line">A single color as argument will cause that all colors of Tk</div>
+<div class="line">widget elements are derived from this.</div>
+<div class="line">Alternatively several keyword parameters and its associated</div>
+<div class="line">colors can be given. The following keywords are valid:</div>
+<div class="line">activeBackground, foreground, selectColor,</div>
+<div class="line">activeForeground, highlightBackground, selectBackground,</div>
+<div class="line">background, highlightColor, selectForeground,</div>
+<div class="line">disabledForeground, insertBackground, troughColor.</div>
+<div class="line"><br /></div>
+</div>
+<div class="line">tk_strictMotif(self, boolean=None)</div>
+<div class="line-block">
+<div class="line">Set Tcl internal variable, whether the look and feel</div>
+<div class="line">should adhere to Motif.</div>
+<div class="line"><br /></div>
+<div class="line">A parameter of 1 means adhere to Motif (e.g. no color</div>
+<div class="line">change if mouse passes over slider).</div>
+<div class="line">Returns the set value.</div>
+<div class="line"><br /></div>
+</div>
+<div class="line">tkraise(self, aboveThis=None)</div>
+<div class="line-block">
+<div class="line">Raise this widget in the stacking order.</div>
+<div class="line"><br /></div>
+</div>
+<div class="line">unbind(self, sequence, funcid=None)</div>
+<div class="line-block">
+<div class="line">Unbind for this widget for event SEQUENCE  the</div>
+<div class="line">function identified with FUNCID.</div>
+<div class="line"><br /></div>
+</div>
+<div class="line">unbind_all(self, sequence)</div>
+<div class="line-block">
+<div class="line">Unbind for all widgets for event SEQUENCE all functions.</div>
+<div class="line"><br /></div>
+</div>
+<div class="line">unbind_class(self, className, sequence)</div>
+<div class="line-block">
+<div class="line">Unbind for all widgets with bindtag CLASSNAME for event SEQUENCE</div>
+<div class="line">all functions.</div>
+<div class="line"><br /></div>
+</div>
+<div class="line">update(self)</div>
+<div class="line-block">
+<div class="line">Enter event loop until all pending events have been processed by Tcl.</div>
+<div class="line"><br /></div>
+</div>
+<div class="line">update_idletasks(self)</div>
+<div class="line-block">
+<div class="line">Enter event loop until all idle callbacks have been called. This</div>
+<div class="line">will update the display of windows but not process events caused by</div>
+<div class="line">the user.</div>
+<div class="line"><br /></div>
+</div>
+<div class="line">wait_variable(self, name=’PY_VAR’)</div>
+<div class="line-block">
+<div class="line">Wait until the variable is modified.</div>
+<div class="line"><br /></div>
+<div class="line">A parameter of type IntVar, StringVar, DoubleVar or</div>
+<div class="line">BooleanVar must be given.</div>
+<div class="line"><br /></div>
+</div>
+<div class="line">wait_visibility(self, window=None)</div>
+<div class="line-block">
+<div class="line">Wait until the visibility of a WIDGET changes</div>
+<div class="line">(e.g. it appears).</div>
+<div class="line"><br /></div>
+<div class="line">If no parameter is given self is used.</div>
+<div class="line"><br /></div>
+</div>
+<div class="line">wait_window(self, window=None)</div>
+<div class="line-block">
+<div class="line">Wait until a WIDGET is destroyed.</div>
+<div class="line"><br /></div>
+<div class="line">If no parameter is given self is used.</div>
+<div class="line"><br /></div>
+</div>
+<div class="line">waitvar = wait_variable(self, name=’PY_VAR’)</div>
+<div class="line"><br /></div>
+<div class="line">winfo_atom(self, name, displayof=0)</div>
+<div class="line-block">
+<div class="line">Return integer which represents atom NAME.</div>
+<div class="line"><br /></div>
+</div>
+<div class="line">winfo_atomname(self, id, displayof=0)</div>
+<div class="line-block">
+<div class="line">Return name of atom with identifier ID.</div>
+<div class="line"><br /></div>
+</div>
+<div class="line">winfo_cells(self)</div>
+<div class="line-block">
+<div class="line">Return number of cells in the colormap for this widget.</div>
+<div class="line"><br /></div>
+</div>
+<div class="line">winfo_children(self)</div>
+<div class="line-block">
+<div class="line">Return a list of all widgets which are children of this widget.</div>
+<div class="line"><br /></div>
+</div>
+<div class="line">winfo_class(self)</div>
+<div class="line-block">
+<div class="line">Return window class name of this widget.</div>
+<div class="line"><br /></div>
+</div>
+<div class="line">winfo_colormapfull(self)</div>
+<div class="line-block">
+<div class="line">Return True if at the last color request the colormap was full.</div>
+<div class="line"><br /></div>
+</div>
+<div class="line">winfo_containing(self, rootX, rootY, displayof=0)</div>
+<div class="line-block">
+<div class="line">Return the widget which is at the root coordinates ROOTX, ROOTY.</div>
+<div class="line"><br /></div>
+</div>
+<div class="line">winfo_depth(self)</div>
+<div class="line-block">
+<div class="line">Return the number of bits per pixel.</div>
+<div class="line"><br /></div>
+</div>
+<div class="line">winfo_exists(self)</div>
+<div class="line-block">
+<div class="line">Return true if this widget exists.</div>
+<div class="line"><br /></div>
+</div>
+<div class="line">winfo_fpixels(self, number)</div>
+<div class="line-block">
+<div class="line">Return the number of pixels for the given distance NUMBER</div>
+<div class="line">(e.g. “3c”) as float.</div>
+<div class="line"><br /></div>
+</div>
+<div class="line">winfo_geometry(self)</div>
+<div class="line-block">
+<div class="line">Return geometry string for this widget in the form “widthxheight+X+Y”.</div>
+<div class="line"><br /></div>
+</div>
+<div class="line">winfo_height(self)</div>
+<div class="line-block">
+<div class="line">Return height of this widget.</div>
+<div class="line"><br /></div>
+</div>
+<div class="line">winfo_id(self)</div>
+<div class="line-block">
+<div class="line">Return identifier ID for this widget.</div>
+<div class="line"><br /></div>
+</div>
+<div class="line">winfo_interps(self, displayof=0)</div>
+<div class="line-block">
+<div class="line">Return the name of all Tcl interpreters for this display.</div>
+<div class="line"><br /></div>
+</div>
+<div class="line">winfo_ismapped(self)</div>
+<div class="line-block">
+<div class="line">Return true if this widget is mapped.</div>
+<div class="line"><br /></div>
+</div>
+<div class="line">winfo_manager(self)</div>
+<div class="line-block">
+<div class="line">Return the window manager name for this widget.</div>
+<div class="line"><br /></div>
+</div>
+<div class="line">winfo_name(self)</div>
+<div class="line-block">
+<div class="line">Return the name of this widget.</div>
+<div class="line"><br /></div>
+</div>
+<div class="line">winfo_parent(self)</div>
+<div class="line-block">
+<div class="line">Return the name of the parent of this widget.</div>
+<div class="line"><br /></div>
+</div>
+<div class="line">winfo_pathname(self, id, displayof=0)</div>
+<div class="line-block">
+<div class="line">Return the pathname of the widget given by ID.</div>
+<div class="line"><br /></div>
+</div>
+<div class="line">winfo_pixels(self, number)</div>
+<div class="line-block">
+<div class="line">Rounded integer value of winfo_fpixels.</div>
+<div class="line"><br /></div>
+</div>
+<div class="line">winfo_pointerx(self)</div>
+<div class="line-block">
+<div class="line">Return the x coordinate of the pointer on the root window.</div>
+<div class="line"><br /></div>
+</div>
+<div class="line">winfo_pointerxy(self)</div>
+<div class="line-block">
+<div class="line">Return a tuple of x and y coordinates of the pointer on the root window.</div>
+<div class="line"><br /></div>
+</div>
+<div class="line">winfo_pointery(self)</div>
+<div class="line-block">
+<div class="line">Return the y coordinate of the pointer on the root window.</div>
+<div class="line"><br /></div>
+</div>
+<div class="line">winfo_reqheight(self)</div>
+<div class="line-block">
+<div class="line">Return requested height of this widget.</div>
+<div class="line"><br /></div>
+</div>
+<div class="line">winfo_reqwidth(self)</div>
+<div class="line-block">
+<div class="line">Return requested width of this widget.</div>
+<div class="line"><br /></div>
+</div>
+<div class="line">winfo_rgb(self, color)</div>
+<div class="line-block">
+<div class="line">Return a tuple of integer RGB values in range(65536) for color in this widget.</div>
+<div class="line"><br /></div>
+</div>
+<div class="line">winfo_rootx(self)</div>
+<div class="line-block">
+<div class="line">Return x coordinate of upper left corner of this widget on the</div>
+<div class="line">root window.</div>
+<div class="line"><br /></div>
+</div>
+<div class="line">winfo_rooty(self)</div>
+<div class="line-block">
+<div class="line">Return y coordinate of upper left corner of this widget on the</div>
+<div class="line">root window.</div>
+<div class="line"><br /></div>
+</div>
+<div class="line">winfo_screen(self)</div>
+<div class="line-block">
+<div class="line">Return the screen name of this widget.</div>
+<div class="line"><br /></div>
+</div>
+<div class="line">winfo_screencells(self)</div>
+<div class="line-block">
+<div class="line">Return the number of the cells in the colormap of the screen</div>
+<div class="line">of this widget.</div>
+<div class="line"><br /></div>
+</div>
+<div class="line">winfo_screendepth(self)</div>
+<div class="line-block">
+<div class="line">Return the number of bits per pixel of the root window of the</div>
+<div class="line">screen of this widget.</div>
+<div class="line"><br /></div>
+</div>
+<div class="line">winfo_screenheight(self)</div>
+<div class="line-block">
+<div class="line">Return the number of pixels of the height of the screen of this widget</div>
+<div class="line">in pixel.</div>
+<div class="line"><br /></div>
+</div>
+<div class="line">winfo_screenmmheight(self)</div>
+<div class="line-block">
+<div class="line">Return the number of pixels of the height of the screen of</div>
+<div class="line">this widget in mm.</div>
+<div class="line"><br /></div>
+</div>
+<div class="line">winfo_screenmmwidth(self)</div>
+<div class="line-block">
+<div class="line">Return the number of pixels of the width of the screen of</div>
+<div class="line">this widget in mm.</div>
+<div class="line"><br /></div>
+</div>
+<div class="line">winfo_screenvisual(self)</div>
+<div class="line-block">
+<div class="line">Return one of the strings directcolor, grayscale, pseudocolor,</div>
+<div class="line">staticcolor, staticgray, or truecolor for the default</div>
+<div class="line">colormodel of this screen.</div>
+<div class="line"><br /></div>
+</div>
+<div class="line">winfo_screenwidth(self)</div>
+<div class="line-block">
+<div class="line">Return the number of pixels of the width of the screen of</div>
+<div class="line">this widget in pixel.</div>
+<div class="line"><br /></div>
+</div>
+<div class="line">winfo_server(self)</div>
+<div class="line-block">
+<div class="line">Return information of the X-Server of the screen of this widget in</div>
+<div class="line">the form “XmajorRminor vendor vendorVersion”.</div>
+<div class="line"><br /></div>
+</div>
+<div class="line">winfo_toplevel(self)</div>
+<div class="line-block">
+<div class="line">Return the toplevel widget of this widget.</div>
+<div class="line"><br /></div>
+</div>
+<div class="line">winfo_viewable(self)</div>
+<div class="line-block">
+<div class="line">Return true if the widget and all its higher ancestors are mapped.</div>
+<div class="line"><br /></div>
+</div>
+<div class="line">winfo_visual(self)</div>
+<div class="line-block">
+<div class="line">Return one of the strings directcolor, grayscale, pseudocolor,</div>
+<div class="line">staticcolor, staticgray, or truecolor for the</div>
+<div class="line">colormodel of this widget.</div>
+<div class="line"><br /></div>
+</div>
+<div class="line">winfo_visualid(self)</div>
+<div class="line-block">
+<div class="line">Return the X identifier for the visual for this widget.</div>
+<div class="line"><br /></div>
+</div>
+<div class="line">winfo_visualsavailable(self, includeids=False)</div>
+<div class="line-block">
+<div class="line">Return a list of all visuals available for the screen</div>
+<div class="line">of this widget.</div>
+<div class="line"><br /></div>
+<div class="line">Each item in the list consists of a visual name (see winfo_visual), a</div>
+<div class="line">depth and if includeids is true is given also the X identifier.</div>
+<div class="line"><br /></div>
+</div>
+<div class="line">winfo_vrootheight(self)</div>
+<div class="line-block">
+<div class="line">Return the height of the virtual root window associated with this</div>
+<div class="line">widget in pixels. If there is no virtual root window return the</div>
+<div class="line">height of the screen.</div>
+<div class="line"><br /></div>
+</div>
+<div class="line">winfo_vrootwidth(self)</div>
+<div class="line-block">
+<div class="line">Return the width of the virtual root window associated with this</div>
+<div class="line">widget in pixel. If there is no virtual root window return the</div>
+<div class="line">width of the screen.</div>
+<div class="line"><br /></div>
+</div>
+<div class="line">winfo_vrootx(self)</div>
+<div class="line-block">
+<div class="line">Return the x offset of the virtual root relative to the root</div>
+<div class="line">window of the screen of this widget.</div>
+<div class="line"><br /></div>
+</div>
+<div class="line">winfo_vrooty(self)</div>
+<div class="line-block">
+<div class="line">Return the y offset of the virtual root relative to the root</div>
+<div class="line">window of the screen of this widget.</div>
+<div class="line"><br /></div>
+</div>
+<div class="line">winfo_width(self)</div>
+<div class="line-block">
+<div class="line">Return the width of this widget.</div>
+<div class="line"><br /></div>
+</div>
+<div class="line">winfo_x(self)</div>
+<div class="line-block">
+<div class="line">Return the x coordinate of the upper left corner of this widget</div>
+<div class="line">in the parent.</div>
+<div class="line"><br /></div>
+</div>
+<div class="line">winfo_y(self)</div>
+<div class="line-block">
+<div class="line">Return the y coordinate of the upper left corner of this widget</div>
+<div class="line">in the parent.</div>
+<div class="line"><br /></div>
+</div>
+<div class="line">———————————————————————-</div>
+<div class="line">Data descriptors inherited from Misc:</div>
+<div class="line"><br /></div>
+<div class="line">__dict__</div>
+<div class="line-block">
+<div class="line">dictionary for instance variables (if defined)</div>
+<div class="line"><br /></div>
+</div>
+<div class="line">__weakref__</div>
+<div class="line-block">
+<div class="line">list of weak references to the object (if defined)</div>
+<div class="line"><br /></div>
+</div>
+<div class="line">———————————————————————-</div>
+<div class="line">Methods inherited from Wm:</div>
+<div class="line"><br /></div>
+<div class="line">aspect = wm_aspect(self, minNumer=None, minDenom=None, maxNumer=None, maxDenom=None)</div>
+<div class="line"><br /></div>
+<div class="line">attributes = wm_attributes(self, <a href="#id45"><span class="problematic" id="id46">*</span></a>args)</div>
+<div class="line"><br /></div>
+<div class="line">client = wm_client(self, name=None)</div>
+<div class="line"><br /></div>
+<div class="line">colormapwindows = wm_colormapwindows(self, <a href="#id47"><span class="problematic" id="id48">*</span></a>wlist)</div>
+<div class="line"><br /></div>
+<div class="line">command = wm_command(self, value=None)</div>
+<div class="line"><br /></div>
+<div class="line">deiconify = wm_deiconify(self)</div>
+<div class="line"><br /></div>
+<div class="line">focusmodel = wm_focusmodel(self, model=None)</div>
+<div class="line"><br /></div>
+<div class="line">forget = wm_forget(self, window)</div>
+<div class="line"><br /></div>
+<div class="line">frame = wm_frame(self)</div>
+<div class="line"><br /></div>
+<div class="line">geometry = wm_geometry(self, newGeometry=None)</div>
+<div class="line"><br /></div>
+<div class="line">grid = wm_grid(self, baseWidth=None, baseHeight=None, widthInc=None, heightInc=None)</div>
+<div class="line"><br /></div>
+<div class="line">group = wm_group(self, pathName=None)</div>
+<div class="line"><br /></div>
+<div class="line">iconbitmap = wm_iconbitmap(self, bitmap=None, default=None)</div>
+<div class="line"><br /></div>
+<div class="line">iconify = wm_iconify(self)</div>
+<div class="line"><br /></div>
+<div class="line">iconmask = wm_iconmask(self, bitmap=None)</div>
+<div class="line"><br /></div>
+<div class="line">iconname = wm_iconname(self, newName=None)</div>
+<div class="line"><br /></div>
+<div class="line">iconphoto = wm_iconphoto(self, default=False, <a href="#id49"><span class="problematic" id="id50">*</span></a>args)</div>
+<div class="line"><br /></div>
+<div class="line">iconposition = wm_iconposition(self, x=None, y=None)</div>
+<div class="line"><br /></div>
+<div class="line">iconwindow = wm_iconwindow(self, pathName=None)</div>
+<div class="line"><br /></div>
+<div class="line">manage = wm_manage(self, widget)</div>
+<div class="line"><br /></div>
+<div class="line">maxsize = wm_maxsize(self, width=None, height=None)</div>
+<div class="line"><br /></div>
+<div class="line">minsize = wm_minsize(self, width=None, height=None)</div>
+<div class="line"><br /></div>
+<div class="line">overrideredirect = wm_overrideredirect(self, boolean=None)</div>
+<div class="line"><br /></div>
+<div class="line">positionfrom = wm_positionfrom(self, who=None)</div>
+<div class="line"><br /></div>
+<div class="line">protocol = wm_protocol(self, name=None, func=None)</div>
+<div class="line"><br /></div>
+<div class="line">resizable = wm_resizable(self, width=None, height=None)</div>
+<div class="line"><br /></div>
+<div class="line">sizefrom = wm_sizefrom(self, who=None)</div>
+<div class="line"><br /></div>
+<div class="line">state = wm_state(self, newstate=None)</div>
+<div class="line"><br /></div>
+<div class="line">title = wm_title(self, string=None)</div>
+<div class="line"><br /></div>
+<div class="line">transient = wm_transient(self, master=None)</div>
+<div class="line"><br /></div>
+<div class="line">withdraw = wm_withdraw(self)</div>
+<div class="line"><br /></div>
+<div class="line">wm_aspect(self, minNumer=None, minDenom=None, maxNumer=None, maxDenom=None)</div>
+<div class="line-block">
+<div class="line">Instruct the window manager to set the aspect ratio (width/height)</div>
+<div class="line">of this widget to be between MINNUMER/MINDENOM and MAXNUMER/MAXDENOM. Return a tuple</div>
+<div class="line">of the actual values if no argument is given.</div>
+<div class="line"><br /></div>
+</div>
+<div class="line">wm_attributes(self, <a href="#id51"><span class="problematic" id="id52">*</span></a>args)</div>
+<div class="line-block">
+<div class="line">This subcommand returns or sets platform specific attributes</div>
+<div class="line"><br /></div>
+<div class="line">The first form returns a list of the platform specific flags and</div>
+<div class="line">their values. The second form returns the value for the specific</div>
+<div class="line">option. The third form sets one or more of the values. The values</div>
+<div class="line">are as follows:</div>
+<div class="line"><br /></div>
+<div class="line">On Windows, -disabled gets or sets whether the window is in a</div>
+<div class="line">disabled state. -toolwindow gets or sets the style of the window</div>
+<div class="line">to toolwindow (as defined in the MSDN). -topmost gets or sets</div>
+<div class="line">whether this is a topmost window (displays above all other</div>
+<div class="line">windows).</div>
+<div class="line"><br /></div>
+<div class="line">On Macintosh, XXXXX</div>
+<div class="line"><br /></div>
+<div class="line">On Unix, there are currently no special attribute values.</div>
+<div class="line"><br /></div>
+</div>
+<div class="line">wm_client(self, name=None)</div>
+<div class="line-block">
+<div class="line">Store NAME in WM_CLIENT_MACHINE property of this widget. Return</div>
+<div class="line">current value.</div>
+<div class="line"><br /></div>
+</div>
+<div class="line">wm_colormapwindows(self, <a href="#id53"><span class="problematic" id="id54">*</span></a>wlist)</div>
+<div class="line-block">
+<div class="line">Store list of window names (WLIST) into WM_COLORMAPWINDOWS property</div>
+<div class="line">of this widget. This list contains windows whose colormaps differ from their</div>
+<div class="line">parents. Return current list of widgets if WLIST is empty.</div>
+<div class="line"><br /></div>
+</div>
+<div class="line">wm_command(self, value=None)</div>
+<div class="line-block">
+<div class="line">Store VALUE in WM_COMMAND property. It is the command</div>
+<div class="line">which shall be used to invoke the application. Return current</div>
+<div class="line">command if VALUE is None.</div>
+<div class="line"><br /></div>
+</div>
+<div class="line">wm_deiconify(self)</div>
+<div class="line-block">
+<div class="line">Deiconify this widget. If it was never mapped it will not be mapped.</div>
+<div class="line">On Windows it will raise this widget and give it the focus.</div>
+<div class="line"><br /></div>
+</div>
+<div class="line">wm_focusmodel(self, model=None)</div>
+<div class="line-block">
+<div class="line">Set focus model to MODEL. “active” means that this widget will claim</div>
+<div class="line">the focus itself, “passive” means that the window manager shall give</div>
+<div class="line">the focus. Return current focus model if MODEL is None.</div>
+<div class="line"><br /></div>
+</div>
+<div class="line">wm_forget(self, window)</div>
+<div class="line-block">
+<div class="line">The window will be unmapped from the screen and will no longer</div>
+<div class="line">be managed by wm. toplevel windows will be treated like frame</div>
+<div class="line">windows once they are no longer managed by wm, however, the menu</div>
+<div class="line">option configuration will be remembered and the menus will return</div>
+<div class="line">once the widget is managed again.</div>
+<div class="line"><br /></div>
+</div>
+<div class="line">wm_frame(self)</div>
+<div class="line-block">
+<div class="line">Return identifier for decorative frame of this widget if present.</div>
+<div class="line"><br /></div>
+</div>
+<div class="line">wm_geometry(self, newGeometry=None)</div>
+<div class="line-block">
+<div class="line">Set geometry to NEWGEOMETRY of the form =widthxheight+x+y. Return</div>
+<div class="line">current value if None is given.</div>
+<div class="line"><br /></div>
+</div>
+<div class="line">wm_grid(self, baseWidth=None, baseHeight=None, widthInc=None, heightInc=None)</div>
+<div class="line-block">
+<div class="line">Instruct the window manager that this widget shall only be</div>
+<div class="line">resized on grid boundaries. WIDTHINC and HEIGHTINC are the width and</div>
+<div class="line">height of a grid unit in pixels. BASEWIDTH and BASEHEIGHT are the</div>
+<div class="line">number of grid units requested in Tk_GeometryRequest.</div>
+<div class="line"><br /></div>
+</div>
+<div class="line">wm_group(self, pathName=None)</div>
+<div class="line-block">
+<div class="line">Set the group leader widgets for related widgets to PATHNAME. Return</div>
+<div class="line">the group leader of this widget if None is given.</div>
+<div class="line"><br /></div>
+</div>
+<div class="line">wm_iconbitmap(self, bitmap=None, default=None)</div>
+<div class="line-block">
+<div class="line">Set bitmap for the iconified widget to BITMAP. Return</div>
+<div class="line">the bitmap if None is given.</div>
+<div class="line"><br /></div>
+<div class="line">Under Windows, the DEFAULT parameter can be used to set the icon</div>
+<div class="line">for the widget and any descendants that don’t have an icon set</div>
+<div class="line">explicitly.  DEFAULT can be the relative path to a .ico file</div>
+<div class="line">(example: root.iconbitmap(default=’myicon.ico’) ).  See Tk</div>
+<div class="line">documentation for more information.</div>
+<div class="line"><br /></div>
+</div>
+<div class="line">wm_iconify(self)</div>
+<div class="line-block">
+<div class="line">Display widget as icon.</div>
+<div class="line"><br /></div>
+</div>
+<div class="line">wm_iconmask(self, bitmap=None)</div>
+<div class="line-block">
+<div class="line">Set mask for the icon bitmap of this widget. Return the</div>
+<div class="line">mask if None is given.</div>
+<div class="line"><br /></div>
+</div>
+<div class="line">wm_iconname(self, newName=None)</div>
+<div class="line-block">
+<div class="line">Set the name of the icon for this widget. Return the name if</div>
+<div class="line">None is given.</div>
+<div class="line"><br /></div>
+</div>
+<div class="line">wm_iconphoto(self, default=False, <a href="#id55"><span class="problematic" id="id56">*</span></a>args)</div>
+<div class="line-block">
+<div class="line">Sets the titlebar icon for this window based on the named photo</div>
+<div class="line">images passed through args. If default is True, this is applied to</div>
+<div class="line">all future created toplevels as well.</div>
+<div class="line"><br /></div>
+<div class="line">The data in the images is taken as a snapshot at the time of</div>
+<div class="line">invocation. If the images are later changed, this is not reflected</div>
+<div class="line">to the titlebar icons. Multiple images are accepted to allow</div>
+<div class="line">different images sizes to be provided. The window manager may scale</div>
+<div class="line">provided icons to an appropriate size.</div>
+<div class="line"><br /></div>
+<div class="line">On Windows, the images are packed into a Windows icon structure.</div>
+<div class="line">This will override an icon specified to wm_iconbitmap, and vice</div>
+<div class="line">versa.</div>
+<div class="line"><br /></div>
+<div class="line">On X, the images are arranged into the _NET_WM_ICON X property,</div>
+<div class="line">which most modern window managers support. An icon specified by</div>
+<div class="line">wm_iconbitmap may exist simultaneously.</div>
+<div class="line"><br /></div>
+<div class="line">On Macintosh, this currently does nothing.</div>
+<div class="line"><br /></div>
+</div>
+<div class="line">wm_iconposition(self, x=None, y=None)</div>
+<div class="line-block">
+<div class="line">Set the position of the icon of this widget to X and Y. Return</div>
+<div class="line">a tuple of the current values of X and X if None is given.</div>
+<div class="line"><br /></div>
+</div>
+<div class="line">wm_iconwindow(self, pathName=None)</div>
+<div class="line-block">
+<div class="line">Set widget PATHNAME to be displayed instead of icon. Return the current</div>
+<div class="line">value if None is given.</div>
+<div class="line"><br /></div>
+</div>
+<div class="line">wm_manage(self, widget)</div>
+<div class="line-block">
+<div class="line">The widget specified will become a stand alone top-level window.</div>
+<div class="line">The window will be decorated with the window managers title bar,</div>
+<div class="line">etc.</div>
+<div class="line"><br /></div>
+</div>
+<div class="line">wm_maxsize(self, width=None, height=None)</div>
+<div class="line-block">
+<div class="line">Set max WIDTH and HEIGHT for this widget. If the window is gridded</div>
+<div class="line">the values are given in grid units. Return the current values if None</div>
+<div class="line">is given.</div>
+<div class="line"><br /></div>
+</div>
+<div class="line">wm_minsize(self, width=None, height=None)</div>
+<div class="line-block">
+<div class="line">Set min WIDTH and HEIGHT for this widget. If the window is gridded</div>
+<div class="line">the values are given in grid units. Return the current values if None</div>
+<div class="line">is given.</div>
+<div class="line"><br /></div>
+</div>
+<div class="line">wm_overrideredirect(self, boolean=None)</div>
+<div class="line-block">
+<div class="line">Instruct the window manager to ignore this widget</div>
+<div class="line">if BOOLEAN is given with 1. Return the current value if None</div>
+<div class="line">is given.</div>
+<div class="line"><br /></div>
+</div>
+<div class="line">wm_positionfrom(self, who=None)</div>
+<div class="line-block">
+<div class="line">Instruct the window manager that the position of this widget shall</div>
+<div class="line">be defined by the user if WHO is “user”, and by its own policy if WHO is</div>
+<div class="line">“program”.</div>
+<div class="line"><br /></div>
+</div>
+<div class="line">wm_protocol(self, name=None, func=None)</div>
+<div class="line-block">
+<div class="line">Bind function FUNC to command NAME for this widget.</div>
+<div class="line">Return the function bound to NAME if None is given. NAME could be</div>
+<div class="line">e.g. “WM_SAVE_YOURSELF” or “WM_DELETE_WINDOW”.</div>
+<div class="line"><br /></div>
+</div>
+<div class="line">wm_resizable(self, width=None, height=None)</div>
+<div class="line-block">
+<div class="line">Instruct the window manager whether this width can be resized</div>
+<div class="line">in WIDTH or HEIGHT. Both values are boolean values.</div>
+<div class="line"><br /></div>
+</div>
+<div class="line">wm_sizefrom(self, who=None)</div>
+<div class="line-block">
+<div class="line">Instruct the window manager that the size of this widget shall</div>
+<div class="line">be defined by the user if WHO is “user”, and by its own policy if WHO is</div>
+<div class="line">“program”.</div>
+<div class="line"><br /></div>
+</div>
+<div class="line">wm_state(self, newstate=None)</div>
+<div class="line-block">
+<div class="line">Query or set the state of this widget as one of normal, icon,</div>
+<div class="line">iconic (see wm_iconwindow), withdrawn, or zoomed (Windows only).</div>
+<div class="line"><br /></div>
+</div>
+<div class="line">wm_title(self, string=None)</div>
+<div class="line-block">
+<div class="line">Set the title of this widget.</div>
+<div class="line"><br /></div>
+</div>
+<div class="line">wm_transient(self, master=None)</div>
+<div class="line-block">
+<div class="line">Instruct the window manager that this widget is transient</div>
+<div class="line">with regard to widget MASTER.</div>
+<div class="line"><br /></div>
+</div>
+<div class="line">wm_withdraw(self)</div>
+<div class="line-block">
+<div class="line">Withdraw this widget from the screen such that it is unmapped</div>
+<div class="line">and forgotten by the window manager. Re-draw it with wm_deiconify.</div>
+</div>
+</div>
+</dd>
+</dl>
+<p><strong>Help on class Label in module tkinter:</strong></p>
+<dl>
+<dt>class Label(Widget)</dt><dd><div class="line-block">
+<div class="line">Label(master=None, cnf={}, <a href="#id57"><span class="problematic" id="id58">**</span></a>kw)</div>
+<div class="line"><br /></div>
+<div class="line">Label widget which can display text and bitmaps.</div>
+<div class="line"><br /></div>
+<div class="line">Method resolution order:</div>
+<div class="line-block">
+<div class="line">Label</div>
+<div class="line">Widget</div>
+<div class="line">BaseWidget</div>
+<div class="line">Misc</div>
+<div class="line">Pack</div>
+<div class="line">Place</div>
+<div class="line">Grid</div>
+<div class="line">builtins.object</div>
+<div class="line"><br /></div>
+</div>
+<div class="line">Methods defined here:</div>
+<div class="line"><br /></div>
+<div class="line">__init__(self, master=None, cnf={}, <a href="#id59"><span class="problematic" id="id60">**</span></a>kw)</div>
+<div class="line-block">
+<div class="line">Construct a label widget with the parent MASTER.</div>
+<div class="line"><br /></div>
+<div class="line">STANDARD OPTIONS</div>
+<div class="line"><br /></div>
+<div class="line-block">
+<div class="line">activebackground, activeforeground, anchor,</div>
+<div class="line">background, bitmap, borderwidth, cursor,</div>
+<div class="line">disabledforeground, font, foreground,</div>
+<div class="line">highlightbackground, highlightcolor,</div>
+<div class="line">highlightthickness, image, justify,</div>
+<div class="line">padx, pady, relief, takefocus, text,</div>
+<div class="line">textvariable, underline, wraplength</div>
+<div class="line"><br /></div>
+</div>
+<div class="line">WIDGET-SPECIFIC OPTIONS</div>
+<div class="line"><br /></div>
+<div class="line-block">
+<div class="line">height, state, width</div>
+<div class="line"><br /></div>
+</div>
+</div>
+<div class="line">———————————————————————-</div>
+<div class="line">Methods inherited from BaseWidget:</div>
+<div class="line"><br /></div>
+<div class="line">destroy(self)</div>
+<div class="line-block">
+<div class="line">Destroy this and all descendants widgets.</div>
+<div class="line"><br /></div>
+</div>
+<div class="line">———————————————————————-</div>
+<div class="line">Methods inherited from Misc:</div>
+<div class="line"><br /></div>
+<div class="line">__getitem__ = cget(self, key)</div>
+<div class="line"><br /></div>
+<div class="line">__repr__(self)</div>
+<div class="line-block">
+<div class="line">Return repr(self).</div>
+<div class="line"><br /></div>
+</div>
+<div class="line">__setitem__(self, key, value)</div>
+<div class="line"><br /></div>
+<div class="line">__str__(self)</div>
+<div class="line-block">
+<div class="line">Return the window path name of this widget.</div>
+<div class="line"><br /></div>
+</div>
+<div class="line">after(self, ms, func=None, <a href="#id61"><span class="problematic" id="id62">*</span></a>args)</div>
+<div class="line-block">
+<div class="line">Call function once after given time.</div>
+<div class="line"><br /></div>
+<div class="line">MS specifies the time in milliseconds. FUNC gives the</div>
+<div class="line">function which shall be called. Additional parameters</div>
+<div class="line">are given as parameters to the function call.  Return</div>
+<div class="line">identifier to cancel scheduling with after_cancel.</div>
+<div class="line"><br /></div>
+</div>
+<div class="line">after_cancel(self, id)</div>
+<div class="line-block">
+<div class="line">Cancel scheduling of function identified with ID.</div>
+<div class="line"><br /></div>
+<div class="line">Identifier returned by after or after_idle must be</div>
+<div class="line">given as first parameter.</div>
+<div class="line"><br /></div>
+</div>
+<div class="line">after_idle(self, func, <a href="#id63"><span class="problematic" id="id64">*</span></a>args)</div>
+<div class="line-block">
+<div class="line">Call FUNC once if the Tcl main loop has no event to</div>
+<div class="line">process.</div>
+<div class="line"><br /></div>
+<div class="line">Return an identifier to cancel the scheduling with</div>
+<div class="line">after_cancel.</div>
+<div class="line"><br /></div>
+</div>
+<div class="line">anchor = grid_anchor(self, anchor=None)</div>
+<div class="line"><br /></div>
+<div class="line">bbox = grid_bbox(self, column=None, row=None, col2=None, row2=None)</div>
+<div class="line"><br /></div>
+<div class="line">bell(self, displayof=0)</div>
+<div class="line-block">
+<div class="line">Ring a display’s bell.</div>
+<div class="line"><br /></div>
+</div>
+<div class="line">bind(self, sequence=None, func=None, add=None)</div>
+<div class="line-block">
+<div class="line">Bind to this widget at event SEQUENCE a call to function FUNC.</div>
+<div class="line"><br /></div>
+<div class="line">SEQUENCE is a string of concatenated event</div>
+<div class="line">patterns. An event pattern is of the form</div>
+<div class="line">&lt;MODIFIER-MODIFIER-TYPE-DETAIL&gt; where MODIFIER is one</div>
+<div class="line">of Control, Mod2, M2, Shift, Mod3, M3, Lock, Mod4, M4,</div>
+<div class="line">Button1, B1, Mod5, M5 Button2, B2, Meta, M, Button3,</div>
+<div class="line">B3, Alt, Button4, B4, Double, Button5, B5 Triple,</div>
+<div class="line">Mod1, M1. TYPE is one of Activate, Enter, Map,</div>
+<div class="line">ButtonPress, Button, Expose, Motion, ButtonRelease</div>
+<div class="line">FocusIn, MouseWheel, Circulate, FocusOut, Property,</div>
+<div class="line">Colormap, Gravity Reparent, Configure, KeyPress, Key,</div>
+<div class="line">Unmap, Deactivate, KeyRelease Visibility, Destroy,</div>
+<div class="line">Leave and DETAIL is the button number for ButtonPress,</div>
+<div class="line">ButtonRelease and DETAIL is the Keysym for KeyPress and</div>
+<div class="line">KeyRelease. Examples are</div>
+<div class="line">&lt;Control-Button-1&gt; for pressing Control and mouse button 1 or</div>
+<div class="line">&lt;Alt-A&gt; for pressing A and the Alt key (KeyPress can be omitted).</div>
+<div class="line">An event pattern can also be a virtual event of the form</div>
+<div class="line">&lt;&lt;AString&gt;&gt; where AString can be arbitrary. This</div>
+<div class="line">event can be generated by event_generate.</div>
+<div class="line">If events are concatenated they must appear shortly</div>
+<div class="line">after each other.</div>
+<div class="line"><br /></div>
+<div class="line">FUNC will be called if the event sequence occurs with an</div>
+<div class="line">instance of Event as argument. If the return value of FUNC is</div>
+<div class="line">“break” no further bound function is invoked.</div>
+<div class="line"><br /></div>
+<div class="line">An additional boolean parameter ADD specifies whether FUNC will</div>
+<div class="line">be called additionally to the other bound function or whether</div>
+<div class="line">it will replace the previous function.</div>
+<div class="line"><br /></div>
+<div class="line">Bind will return an identifier to allow deletion of the bound function with</div>
+<div class="line">unbind without memory leak.</div>
+<div class="line"><br /></div>
+<div class="line">If FUNC or SEQUENCE is omitted the bound function or list</div>
+<div class="line">of bound events are returned.</div>
+<div class="line"><br /></div>
+</div>
+<div class="line">bind_all(self, sequence=None, func=None, add=None)</div>
+<div class="line-block">
+<div class="line">Bind to all widgets at an event SEQUENCE a call to function FUNC.</div>
+<div class="line">An additional boolean parameter ADD specifies whether FUNC will</div>
+<div class="line">be called additionally to the other bound function or whether</div>
+<div class="line">it will replace the previous function. See bind for the return value.</div>
+<div class="line"><br /></div>
+</div>
+<div class="line">bind_class(self, className, sequence=None, func=None, add=None)</div>
+<div class="line-block">
+<div class="line">Bind to widgets with bindtag CLASSNAME at event</div>
+<div class="line">SEQUENCE a call of function FUNC. An additional</div>
+<div class="line">boolean parameter ADD specifies whether FUNC will be</div>
+<div class="line">called additionally to the other bound function or</div>
+<div class="line">whether it will replace the previous function. See bind for</div>
+<div class="line">the return value.</div>
+<div class="line"><br /></div>
+</div>
+<div class="line">bindtags(self, tagList=None)</div>
+<div class="line-block">
+<div class="line">Set or get the list of bindtags for this widget.</div>
+<div class="line"><br /></div>
+<div class="line">With no argument return the list of all bindtags associated with</div>
+<div class="line">this widget. With a list of strings as argument the bindtags are</div>
+<div class="line">set to this list. The bindtags determine in which order events are</div>
+<div class="line">processed (see bind).</div>
+<div class="line"><br /></div>
+</div>
+<div class="line">cget(self, key)</div>
+<div class="line-block">
+<div class="line">Return the resource value for a KEY given as string.</div>
+<div class="line"><br /></div>
+</div>
+<div class="line">clipboard_append(self, string, <a href="#id65"><span class="problematic" id="id66">**</span></a>kw)</div>
+<div class="line-block">
+<div class="line">Append STRING to the Tk clipboard.</div>
+<div class="line"><br /></div>
+<div class="line">A widget specified at the optional displayof keyword</div>
+<div class="line">argument specifies the target display. The clipboard</div>
+<div class="line">can be retrieved with selection_get.</div>
+<div class="line"><br /></div>
+</div>
+<div class="line">clipboard_clear(self, <a href="#id67"><span class="problematic" id="id68">**</span></a>kw)</div>
+<div class="line-block">
+<div class="line">Clear the data in the Tk clipboard.</div>
+<div class="line"><br /></div>
+<div class="line">A widget specified for the optional displayof keyword</div>
+<div class="line">argument specifies the target display.</div>
+<div class="line"><br /></div>
+</div>
+<div class="line">clipboard_get(self, <a href="#id69"><span class="problematic" id="id70">**</span></a>kw)</div>
+<div class="line-block">
+<div class="line">Retrieve data from the clipboard on window’s display.</div>
+<div class="line"><br /></div>
+<div class="line">The window keyword defaults to the root window of the Tkinter</div>
+<div class="line">application.</div>
+<div class="line"><br /></div>
+<div class="line">The type keyword specifies the form in which the data is</div>
+<div class="line">to be returned and should be an atom name such as STRING</div>
+<div class="line">or FILE_NAME.  Type defaults to STRING, except on X11, where the default</div>
+<div class="line">is to try UTF8_STRING and fall back to STRING.</div>
+<div class="line"><br /></div>
+<div class="line">This command is equivalent to:</div>
+<div class="line"><br /></div>
+<div class="line">selection_get(CLIPBOARD)</div>
+<div class="line"><br /></div>
+</div>
+<div class="line">columnconfigure = grid_columnconfigure(self, index, cnf={}, <a href="#id71"><span class="problematic" id="id72">**</span></a>kw)</div>
+<div class="line"><br /></div>
+<div class="line">config = configure(self, cnf=None, <a href="#id73"><span class="problematic" id="id74">**</span></a>kw)</div>
+<div class="line"><br /></div>
+<div class="line">configure(self, cnf=None, <a href="#id75"><span class="problematic" id="id76">**</span></a>kw)</div>
+<div class="line-block">
+<div class="line">Configure resources of a widget.</div>
+<div class="line"><br /></div>
+<div class="line">The values for resources are specified as keyword</div>
+<div class="line">arguments. To get an overview about</div>
+<div class="line">the allowed keyword arguments call the method keys.</div>
+<div class="line"><br /></div>
+</div>
+<div class="line">deletecommand(self, name)</div>
+<div class="line-block">
+<div class="line">Internal function.</div>
+<div class="line"><br /></div>
+<div class="line">Delete the Tcl command provided in NAME.</div>
+<div class="line"><br /></div>
+</div>
+<div class="line">event_add(self, virtual, <a href="#id77"><span class="problematic" id="id78">*</span></a>sequences)</div>
+<div class="line-block">
+<div class="line">Bind a virtual event VIRTUAL (of the form &lt;&lt;Name&gt;&gt;)</div>
+<div class="line">to an event SEQUENCE such that the virtual event is triggered</div>
+<div class="line">whenever SEQUENCE occurs.</div>
+<div class="line"><br /></div>
+</div>
+<div class="line">event_delete(self, virtual, <a href="#id79"><span class="problematic" id="id80">*</span></a>sequences)</div>
+<div class="line-block">
+<div class="line">Unbind a virtual event VIRTUAL from SEQUENCE.</div>
+<div class="line"><br /></div>
+</div>
+<div class="line">event_generate(self, sequence, <a href="#id81"><span class="problematic" id="id82">**</span></a>kw)</div>
+<div class="line-block">
+<div class="line">Generate an event SEQUENCE. Additional</div>
+<div class="line">keyword arguments specify parameter of the event</div>
+<div class="line">(e.g. x, y, rootx, rooty).</div>
+<div class="line"><br /></div>
+</div>
+<div class="line">event_info(self, virtual=None)</div>
+<div class="line-block">
+<div class="line">Return a list of all virtual events or the information</div>
+<div class="line">about the SEQUENCE bound to the virtual event VIRTUAL.</div>
+<div class="line"><br /></div>
+</div>
+<div class="line">focus = focus_set(self)</div>
+<div class="line"><br /></div>
+<div class="line">focus_displayof(self)</div>
+<div class="line-block">
+<div class="line">Return the widget which has currently the focus on the</div>
+<div class="line">display where this widget is located.</div>
+<div class="line"><br /></div>
+<div class="line">Return None if the application does not have the focus.</div>
+<div class="line"><br /></div>
+</div>
+<div class="line">focus_force(self)</div>
+<div class="line-block">
+<div class="line">Direct input focus to this widget even if the</div>
+<div class="line">application does not have the focus. Use with</div>
+<div class="line">caution!</div>
+<div class="line"><br /></div>
+</div>
+<div class="line">focus_get(self)</div>
+<div class="line-block">
+<div class="line">Return the widget which has currently the focus in the</div>
+<div class="line">application.</div>
+<div class="line"><br /></div>
+<div class="line">Use focus_displayof to allow working with several</div>
+<div class="line">displays. Return None if application does not have</div>
+<div class="line">the focus.</div>
+<div class="line"><br /></div>
+</div>
+<div class="line">focus_lastfor(self)</div>
+<div class="line-block">
+<div class="line">Return the widget which would have the focus if top level</div>
+<div class="line">for this widget gets the focus from the window manager.</div>
+<div class="line"><br /></div>
+</div>
+<div class="line">focus_set(self)</div>
+<div class="line-block">
+<div class="line">Direct input focus to this widget.</div>
+<div class="line"><br /></div>
+<div class="line">If the application currently does not have the focus</div>
+<div class="line">this widget will get the focus if the application gets</div>
+<div class="line">the focus through the window manager.</div>
+<div class="line"><br /></div>
+</div>
+<div class="line">getboolean(self, s)</div>
+<div class="line-block">
+<div class="line">Return a boolean value for Tcl boolean values true and false given as parameter.</div>
+<div class="line"><br /></div>
+</div>
+<div class="line">getdouble(self, s)</div>
+<div class="line"><br /></div>
+<div class="line">getint(self, s)</div>
+<div class="line"><br /></div>
+<div class="line">getvar(self, name=’PY_VAR’)</div>
+<div class="line-block">
+<div class="line">Return value of Tcl variable NAME.</div>
+<div class="line"><br /></div>
+</div>
+<div class="line">grab_current(self)</div>
+<div class="line-block">
+<div class="line">Return widget which has currently the grab in this application</div>
+<div class="line">or None.</div>
+<div class="line"><br /></div>
+</div>
+<div class="line">grab_release(self)</div>
+<div class="line-block">
+<div class="line">Release grab for this widget if currently set.</div>
+<div class="line"><br /></div>
+</div>
+<div class="line">grab_set(self)</div>
+<div class="line-block">
+<div class="line">Set grab for this widget.</div>
+<div class="line"><br /></div>
+<div class="line">A grab directs all events to this and descendant</div>
+<div class="line">widgets in the application.</div>
+<div class="line"><br /></div>
+</div>
+<div class="line">grab_set_global(self)</div>
+<div class="line-block">
+<div class="line">Set global grab for this widget.</div>
+<div class="line"><br /></div>
+<div class="line">A global grab directs all events to this and</div>
+<div class="line">descendant widgets on the display. Use with caution -</div>
+<div class="line">other applications do not get events anymore.</div>
+<div class="line"><br /></div>
+</div>
+<div class="line">grab_status(self)</div>
+<div class="line-block">
+<div class="line">Return None, “local” or “global” if this widget has</div>
+<div class="line">no, a local or a global grab.</div>
+<div class="line"><br /></div>
+</div>
+<div class="line">grid_anchor(self, anchor=None)</div>
+<div class="line-block">
+<div class="line">The anchor value controls how to place the grid within the</div>
+<div class="line">master when no row/column has any weight.</div>
+<div class="line"><br /></div>
+<div class="line">The default anchor is nw.</div>
+<div class="line"><br /></div>
+</div>
+<div class="line">grid_bbox(self, column=None, row=None, col2=None, row2=None)</div>
+<div class="line-block">
+<div class="line">Return a tuple of integer coordinates for the bounding</div>
+<div class="line">box of this widget controlled by the geometry manager grid.</div>
+<div class="line"><br /></div>
+<div class="line">If COLUMN, ROW is given the bounding box applies from</div>
+<div class="line">the cell with row and column 0 to the specified</div>
+<div class="line">cell. If COL2 and ROW2 are given the bounding box</div>
+<div class="line">starts at that cell.</div>
+<div class="line"><br /></div>
+<div class="line">The returned integers specify the offset of the upper left</div>
+<div class="line">corner in the master widget and the width and height.</div>
+<div class="line"><br /></div>
+</div>
+<div class="line">grid_columnconfigure(self, index, cnf={}, <a href="#id83"><span class="problematic" id="id84">**</span></a>kw)</div>
+<div class="line-block">
+<div class="line">Configure column INDEX of a grid.</div>
+<div class="line"><br /></div>
+<div class="line">Valid resources are minsize (minimum size of the column),</div>
+<div class="line">weight (how much does additional space propagate to this column)</div>
+<div class="line">and pad (how much space to let additionally).</div>
+<div class="line"><br /></div>
+</div>
+<div class="line">grid_location(self, x, y)</div>
+<div class="line-block">
+<div class="line">Return a tuple of column and row which identify the cell</div>
+<div class="line">at which the pixel at position X and Y inside the master</div>
+<div class="line">widget is located.</div>
+<div class="line"><br /></div>
+</div>
+<div class="line">grid_propagate(self, flag=[‘_noarg_’])</div>
+<div class="line-block">
+<div class="line">Set or get the status for propagation of geometry information.</div>
+<div class="line"><br /></div>
+<div class="line">A boolean argument specifies whether the geometry information</div>
+<div class="line">of the slaves will determine the size of this widget. If no argument</div>
+<div class="line">is given, the current setting will be returned.</div>
+<div class="line"><br /></div>
+</div>
+<div class="line">grid_rowconfigure(self, index, cnf={}, <a href="#id85"><span class="problematic" id="id86">**</span></a>kw)</div>
+<div class="line-block">
+<div class="line">Configure row INDEX of a grid.</div>
+<div class="line"><br /></div>
+<div class="line">Valid resources are minsize (minimum size of the row),</div>
+<div class="line">weight (how much does additional space propagate to this row)</div>
+<div class="line">and pad (how much space to let additionally).</div>
+<div class="line"><br /></div>
+</div>
+<div class="line">grid_size(self)</div>
+<div class="line-block">
+<div class="line">Return a tuple of the number of column and rows in the grid.</div>
+<div class="line"><br /></div>
+</div>
+<div class="line">grid_slaves(self, row=None, column=None)</div>
+<div class="line-block">
+<div class="line">Return a list of all slaves of this widget</div>
+<div class="line">in its packing order.</div>
+<div class="line"><br /></div>
+</div>
+<div class="line">image_names(self)</div>
+<div class="line-block">
+<div class="line">Return a list of all existing image names.</div>
+<div class="line"><br /></div>
+</div>
+<div class="line">image_types(self)</div>
+<div class="line-block">
+<div class="line">Return a list of all available image types (e.g. photo bitmap).</div>
+<div class="line"><br /></div>
+</div>
+<div class="line">keys(self)</div>
+<div class="line-block">
+<div class="line">Return a list of all resource names of this widget.</div>
+<div class="line"><br /></div>
+</div>
+<div class="line">lift = tkraise(self, aboveThis=None)</div>
+<div class="line"><br /></div>
+<div class="line">lower(self, belowThis=None)</div>
+<div class="line-block">
+<div class="line">Lower this widget in the stacking order.</div>
+<div class="line"><br /></div>
+</div>
+<div class="line">mainloop(self, n=0)</div>
+<div class="line-block">
+<div class="line">Call the mainloop of Tk.</div>
+<div class="line"><br /></div>
+</div>
+<div class="line">nametowidget(self, name)</div>
+<div class="line-block">
+<div class="line">Return the Tkinter instance of a widget identified by</div>
+<div class="line">its Tcl name NAME.</div>
+<div class="line"><br /></div>
+</div>
+<div class="line">option_add(self, pattern, value, priority=None)</div>
+<div class="line-block">
+<div class="line">Set a VALUE (second parameter) for an option</div>
+<div class="line">PATTERN (first parameter).</div>
+<div class="line"><br /></div>
+<div class="line">An optional third parameter gives the numeric priority</div>
+<div class="line">(defaults to 80).</div>
+<div class="line"><br /></div>
+</div>
+<div class="line">option_clear(self)</div>
+<div class="line-block">
+<div class="line">Clear the option database.</div>
+<div class="line"><br /></div>
+<div class="line">It will be reloaded if option_add is called.</div>
+<div class="line"><br /></div>
+</div>
+<div class="line">option_get(self, name, className)</div>
+<div class="line-block">
+<div class="line">Return the value for an option NAME for this widget</div>
+<div class="line">with CLASSNAME.</div>
+<div class="line"><br /></div>
+<div class="line">Values with higher priority override lower values.</div>
+<div class="line"><br /></div>
+</div>
+<div class="line">option_readfile(self, fileName, priority=None)</div>
+<div class="line-block">
+<div class="line">Read file FILENAME into the option database.</div>
+<div class="line"><br /></div>
+<div class="line">An optional second parameter gives the numeric</div>
+<div class="line">priority.</div>
+<div class="line"><br /></div>
+</div>
+<div class="line">pack_propagate(self, flag=[‘_noarg_’])</div>
+<div class="line-block">
+<div class="line">Set or get the status for propagation of geometry information.</div>
+<div class="line"><br /></div>
+<div class="line">A boolean argument specifies whether the geometry information</div>
+<div class="line">of the slaves will determine the size of this widget. If no argument</div>
+<div class="line">is given the current setting will be returned.</div>
+<div class="line"><br /></div>
+</div>
+<div class="line">pack_slaves(self)</div>
+<div class="line-block">
+<div class="line">Return a list of all slaves of this widget</div>
+<div class="line">in its packing order.</div>
+<div class="line"><br /></div>
+</div>
+<div class="line">place_slaves(self)</div>
+<div class="line-block">
+<div class="line">Return a list of all slaves of this widget</div>
+<div class="line">in its packing order.</div>
+<div class="line"><br /></div>
+</div>
+<div class="line">propagate = pack_propagate(self, flag=[‘_noarg_’])</div>
+<div class="line"><br /></div>
+<div class="line">quit(self)</div>
+<div class="line-block">
+<div class="line">Quit the Tcl interpreter. All widgets will be destroyed.</div>
+<div class="line"><br /></div>
+</div>
+<div class="line">register = _register(self, func, subst=None, needcleanup=1)</div>
+<div class="line"><br /></div>
+<div class="line">rowconfigure = grid_rowconfigure(self, index, cnf={}, <a href="#id87"><span class="problematic" id="id88">**</span></a>kw)</div>
+<div class="line"><br /></div>
+<div class="line">selection_clear(self, <a href="#id89"><span class="problematic" id="id90">**</span></a>kw)</div>
+<div class="line-block">
+<div class="line">Clear the current X selection.</div>
+<div class="line"><br /></div>
+</div>
+<div class="line">selection_get(self, <a href="#id91"><span class="problematic" id="id92">**</span></a>kw)</div>
+<div class="line-block">
+<div class="line">Return the contents of the current X selection.</div>
+<div class="line"><br /></div>
+<div class="line">A keyword parameter selection specifies the name of</div>
+<div class="line">the selection and defaults to PRIMARY.  A keyword</div>
+<div class="line">parameter displayof specifies a widget on the display</div>
+<div class="line">to use. A keyword parameter type specifies the form of data to be</div>
+<div class="line">fetched, defaulting to STRING except on X11, where UTF8_STRING is tried</div>
+<div class="line">before STRING.</div>
+<div class="line"><br /></div>
+</div>
+<div class="line">selection_handle(self, command, <a href="#id93"><span class="problematic" id="id94">**</span></a>kw)</div>
+<div class="line-block">
+<div class="line">Specify a function COMMAND to call if the X</div>
+<div class="line">selection owned by this widget is queried by another</div>
+<div class="line">application.</div>
+<div class="line"><br /></div>
+<div class="line">This function must return the contents of the</div>
+<div class="line">selection. The function will be called with the</div>
+<div class="line">arguments OFFSET and LENGTH which allows the chunking</div>
+<div class="line">of very long selections. The following keyword</div>
+<div class="line">parameters can be provided:</div>
+<div class="line">selection - name of the selection (default PRIMARY),</div>
+<div class="line">type - type of the selection (e.g. STRING, FILE_NAME).</div>
+<div class="line"><br /></div>
+</div>
+<div class="line">selection_own(self, <a href="#id95"><span class="problematic" id="id96">**</span></a>kw)</div>
+<div class="line-block">
+<div class="line">Become owner of X selection.</div>
+<div class="line"><br /></div>
+<div class="line">A keyword parameter selection specifies the name of</div>
+<div class="line">the selection (default PRIMARY).</div>
+<div class="line"><br /></div>
+</div>
+<div class="line">selection_own_get(self, <a href="#id97"><span class="problematic" id="id98">**</span></a>kw)</div>
+<div class="line-block">
+<div class="line">Return owner of X selection.</div>
+<div class="line"><br /></div>
+<div class="line">The following keyword parameter can</div>
+<div class="line">be provided:</div>
+<div class="line">selection - name of the selection (default PRIMARY),</div>
+<div class="line">type - type of the selection (e.g. STRING, FILE_NAME).</div>
+<div class="line"><br /></div>
+</div>
+<div class="line">send(self, interp, cmd, <a href="#id99"><span class="problematic" id="id100">*</span></a>args)</div>
+<div class="line-block">
+<div class="line">Send Tcl command CMD to different interpreter INTERP to be executed.</div>
+<div class="line"><br /></div>
+</div>
+<div class="line">setvar(self, name=’PY_VAR’, value=’1’)</div>
+<div class="line-block">
+<div class="line">Set Tcl variable NAME to VALUE.</div>
+<div class="line"><br /></div>
+</div>
+<div class="line">size = grid_size(self)</div>
+<div class="line"><br /></div>
+<div class="line">slaves = pack_slaves(self)</div>
+<div class="line"><br /></div>
+<div class="line">tk_bisque(self)</div>
+<div class="line-block">
+<div class="line">Change the color scheme to light brown as used in Tk 3.6 and before.</div>
+<div class="line"><br /></div>
+</div>
+<div class="line">tk_focusFollowsMouse(self)</div>
+<div class="line-block">
+<div class="line">The widget under mouse will get automatically focus. Can not</div>
+<div class="line">be disabled easily.</div>
+<div class="line"><br /></div>
+</div>
+<div class="line">tk_focusNext(self)</div>
+<div class="line-block">
+<div class="line">Return the next widget in the focus order which follows</div>
+<div class="line">widget which has currently the focus.</div>
+<div class="line"><br /></div>
+<div class="line">The focus order first goes to the next child, then to</div>
+<div class="line">the children of the child recursively and then to the</div>
+<div class="line">next sibling which is higher in the stacking order.  A</div>
+<div class="line">widget is omitted if it has the takefocus resource set</div>
+<div class="line">to 0.</div>
+<div class="line"><br /></div>
+</div>
+<div class="line">tk_focusPrev(self)</div>
+<div class="line-block">
+<div class="line">Return previous widget in the focus order. See tk_focusNext for details.</div>
+<div class="line"><br /></div>
+</div>
+<div class="line">tk_setPalette(self, <a href="#id101"><span class="problematic" id="id102">*</span></a>args, <a href="#id103"><span class="problematic" id="id104">**</span></a>kw)</div>
+<div class="line-block">
+<div class="line">Set a new color scheme for all widget elements.</div>
+<div class="line"><br /></div>
+<div class="line">A single color as argument will cause that all colors of Tk</div>
+<div class="line">widget elements are derived from this.</div>
+<div class="line">Alternatively several keyword parameters and its associated</div>
+<div class="line">colors can be given. The following keywords are valid:</div>
+<div class="line">activeBackground, foreground, selectColor,</div>
+<div class="line">activeForeground, highlightBackground, selectBackground,</div>
+<div class="line">background, highlightColor, selectForeground,</div>
+<div class="line">disabledForeground, insertBackground, troughColor.</div>
+<div class="line"><br /></div>
+</div>
+<div class="line">tk_strictMotif(self, boolean=None)</div>
+<div class="line-block">
+<div class="line">Set Tcl internal variable, whether the look and feel</div>
+<div class="line">should adhere to Motif.</div>
+<div class="line"><br /></div>
+<div class="line">A parameter of 1 means adhere to Motif (e.g. no color</div>
+<div class="line">change if mouse passes over slider).</div>
+<div class="line">Returns the set value.</div>
+<div class="line"><br /></div>
+</div>
+<div class="line">tkraise(self, aboveThis=None)</div>
+<div class="line-block">
+<div class="line">Raise this widget in the stacking order.</div>
+<div class="line"><br /></div>
+</div>
+<div class="line">unbind(self, sequence, funcid=None)</div>
+<div class="line-block">
+<div class="line">Unbind for this widget for event SEQUENCE  the</div>
+<div class="line">function identified with FUNCID.</div>
+<div class="line"><br /></div>
+</div>
+<div class="line">unbind_all(self, sequence)</div>
+<div class="line-block">
+<div class="line">Unbind for all widgets for event SEQUENCE all functions.</div>
+<div class="line"><br /></div>
+</div>
+<div class="line">unbind_class(self, className, sequence)</div>
+<div class="line-block">
+<div class="line">Unbind for all widgets with bindtag CLASSNAME for event SEQUENCE</div>
+<div class="line">all functions.</div>
+<div class="line"><br /></div>
+</div>
+<div class="line">update(self)</div>
+<div class="line-block">
+<div class="line">Enter event loop until all pending events have been processed by Tcl.</div>
+<div class="line"><br /></div>
+</div>
+<div class="line">update_idletasks(self)</div>
+<div class="line-block">
+<div class="line">Enter event loop until all idle callbacks have been called. This</div>
+<div class="line">will update the display of windows but not process events caused by</div>
+<div class="line">the user.</div>
+<div class="line"><br /></div>
+</div>
+<div class="line">wait_variable(self, name=’PY_VAR’)</div>
+<div class="line-block">
+<div class="line">Wait until the variable is modified.</div>
+<div class="line"><br /></div>
+<div class="line">A parameter of type IntVar, StringVar, DoubleVar or</div>
+<div class="line">BooleanVar must be given.</div>
+<div class="line"><br /></div>
+</div>
+<div class="line">wait_visibility(self, window=None)</div>
+<div class="line-block">
+<div class="line">Wait until the visibility of a WIDGET changes</div>
+<div class="line">(e.g. it appears).</div>
+<div class="line"><br /></div>
+<div class="line">If no parameter is given self is used.</div>
+<div class="line"><br /></div>
+</div>
+<div class="line">wait_window(self, window=None)</div>
+<div class="line-block">
+<div class="line">Wait until a WIDGET is destroyed.</div>
+<div class="line"><br /></div>
+<div class="line">If no parameter is given self is used.</div>
+<div class="line"><br /></div>
+</div>
+<div class="line">waitvar = wait_variable(self, name=’PY_VAR’)</div>
+<div class="line"><br /></div>
+<div class="line">winfo_atom(self, name, displayof=0)</div>
+<div class="line-block">
+<div class="line">Return integer which represents atom NAME.</div>
+<div class="line"><br /></div>
+</div>
+<div class="line">winfo_atomname(self, id, displayof=0)</div>
+<div class="line-block">
+<div class="line">Return name of atom with identifier ID.</div>
+<div class="line"><br /></div>
+</div>
+<div class="line">winfo_cells(self)</div>
+<div class="line-block">
+<div class="line">Return number of cells in the colormap for this widget.</div>
+<div class="line"><br /></div>
+</div>
+<div class="line">winfo_children(self)</div>
+<div class="line-block">
+<div class="line">Return a list of all widgets which are children of this widget.</div>
+<div class="line"><br /></div>
+</div>
+<div class="line">winfo_class(self)</div>
+<div class="line-block">
+<div class="line">Return window class name of this widget.</div>
+<div class="line"><br /></div>
+</div>
+<div class="line">winfo_colormapfull(self)</div>
+<div class="line-block">
+<div class="line">Return True if at the last color request the colormap was full.</div>
+<div class="line"><br /></div>
+</div>
+<div class="line">winfo_containing(self, rootX, rootY, displayof=0)</div>
+<div class="line-block">
+<div class="line">Return the widget which is at the root coordinates ROOTX, ROOTY.</div>
+<div class="line"><br /></div>
+</div>
+<div class="line">winfo_depth(self)</div>
+<div class="line-block">
+<div class="line">Return the number of bits per pixel.</div>
+<div class="line"><br /></div>
+</div>
+<div class="line">winfo_exists(self)</div>
+<div class="line-block">
+<div class="line">Return true if this widget exists.</div>
+<div class="line"><br /></div>
+</div>
+<div class="line">winfo_fpixels(self, number)</div>
+<div class="line-block">
+<div class="line">Return the number of pixels for the given distance NUMBER</div>
+<div class="line">(e.g. “3c”) as float.</div>
+<div class="line"><br /></div>
+</div>
+<div class="line">winfo_geometry(self)</div>
+<div class="line-block">
+<div class="line">Return geometry string for this widget in the form “widthxheight+X+Y”.</div>
+<div class="line"><br /></div>
+</div>
+<div class="line">winfo_height(self)</div>
+<div class="line-block">
+<div class="line">Return height of this widget.</div>
+<div class="line"><br /></div>
+</div>
+<div class="line">winfo_id(self)</div>
+<div class="line-block">
+<div class="line">Return identifier ID for this widget.</div>
+<div class="line"><br /></div>
+</div>
+<div class="line">winfo_interps(self, displayof=0)</div>
+<div class="line-block">
+<div class="line">Return the name of all Tcl interpreters for this display.</div>
+<div class="line"><br /></div>
+</div>
+<div class="line">winfo_ismapped(self)</div>
+<div class="line-block">
+<div class="line">Return true if this widget is mapped.</div>
+<div class="line"><br /></div>
+</div>
+<div class="line">winfo_manager(self)</div>
+<div class="line-block">
+<div class="line">Return the window manager name for this widget.</div>
+<div class="line"><br /></div>
+</div>
+<div class="line">winfo_name(self)</div>
+<div class="line-block">
+<div class="line">Return the name of this widget.</div>
+<div class="line"><br /></div>
+</div>
+<div class="line">winfo_parent(self)</div>
+<div class="line-block">
+<div class="line">Return the name of the parent of this widget.</div>
+<div class="line"><br /></div>
+</div>
+<div class="line">winfo_pathname(self, id, displayof=0)</div>
+<div class="line-block">
+<div class="line">Return the pathname of the widget given by ID.</div>
+<div class="line"><br /></div>
+</div>
+<div class="line">winfo_pixels(self, number)</div>
+<div class="line-block">
+<div class="line">Rounded integer value of winfo_fpixels.</div>
+<div class="line"><br /></div>
+</div>
+<div class="line">winfo_pointerx(self)</div>
+<div class="line-block">
+<div class="line">Return the x coordinate of the pointer on the root window.</div>
+<div class="line"><br /></div>
+</div>
+<div class="line">winfo_pointerxy(self)</div>
+<div class="line-block">
+<div class="line">Return a tuple of x and y coordinates of the pointer on the root window.</div>
+<div class="line"><br /></div>
+</div>
+<div class="line">winfo_pointery(self)</div>
+<div class="line-block">
+<div class="line">Return the y coordinate of the pointer on the root window.</div>
+<div class="line"><br /></div>
+</div>
+<div class="line">winfo_reqheight(self)</div>
+<div class="line-block">
+<div class="line">Return requested height of this widget.</div>
+<div class="line"><br /></div>
+</div>
+<div class="line">winfo_reqwidth(self)</div>
+<div class="line-block">
+<div class="line">Return requested width of this widget.</div>
+<div class="line"><br /></div>
+</div>
+<div class="line">winfo_rgb(self, color)</div>
+<div class="line-block">
+<div class="line">Return a tuple of integer RGB values in range(65536) for color in this widget.</div>
+<div class="line"><br /></div>
+</div>
+<div class="line">winfo_rootx(self)</div>
+<div class="line-block">
+<div class="line">Return x coordinate of upper left corner of this widget on the</div>
+<div class="line">root window.</div>
+<div class="line"><br /></div>
+</div>
+<div class="line">winfo_rooty(self)</div>
+<div class="line-block">
+<div class="line">Return y coordinate of upper left corner of this widget on the</div>
+<div class="line">root window.</div>
+<div class="line"><br /></div>
+</div>
+<div class="line">winfo_screen(self)</div>
+<div class="line-block">
+<div class="line">Return the screen name of this widget.</div>
+<div class="line"><br /></div>
+</div>
+<div class="line">winfo_screencells(self)</div>
+<div class="line-block">
+<div class="line">Return the number of the cells in the colormap of the screen</div>
+<div class="line">of this widget.</div>
+<div class="line"><br /></div>
+</div>
+<div class="line">winfo_screendepth(self)</div>
+<div class="line-block">
+<div class="line">Return the number of bits per pixel of the root window of the</div>
+<div class="line">screen of this widget.</div>
+<div class="line"><br /></div>
+</div>
+<div class="line">winfo_screenheight(self)</div>
+<div class="line-block">
+<div class="line">Return the number of pixels of the height of the screen of this widget</div>
+<div class="line">in pixel.</div>
+<div class="line"><br /></div>
+</div>
+<div class="line">winfo_screenmmheight(self)</div>
+<div class="line-block">
+<div class="line">Return the number of pixels of the height of the screen of</div>
+<div class="line">this widget in mm.</div>
+<div class="line"><br /></div>
+</div>
+<div class="line">winfo_screenmmwidth(self)</div>
+<div class="line-block">
+<div class="line">Return the number of pixels of the width of the screen of</div>
+<div class="line">this widget in mm.</div>
+<div class="line"><br /></div>
+</div>
+<div class="line">winfo_screenvisual(self)</div>
+<div class="line-block">
+<div class="line">Return one of the strings directcolor, grayscale, pseudocolor,</div>
+<div class="line">staticcolor, staticgray, or truecolor for the default</div>
+<div class="line">colormodel of this screen.</div>
+<div class="line"><br /></div>
+</div>
+<div class="line">winfo_screenwidth(self)</div>
+<div class="line-block">
+<div class="line">Return the number of pixels of the width of the screen of</div>
+<div class="line">this widget in pixel.</div>
+<div class="line"><br /></div>
+</div>
+<div class="line">winfo_server(self)</div>
+<div class="line-block">
+<div class="line">Return information of the X-Server of the screen of this widget in</div>
+<div class="line">the form “XmajorRminor vendor vendorVersion”.</div>
+<div class="line"><br /></div>
+</div>
+<div class="line">winfo_toplevel(self)</div>
+<div class="line-block">
+<div class="line">Return the toplevel widget of this widget.</div>
+<div class="line"><br /></div>
+</div>
+<div class="line">winfo_viewable(self)</div>
+<div class="line-block">
+<div class="line">Return true if the widget and all its higher ancestors are mapped.</div>
+<div class="line"><br /></div>
+</div>
+<div class="line">winfo_visual(self)</div>
+<div class="line-block">
+<div class="line">Return one of the strings directcolor, grayscale, pseudocolor,</div>
+<div class="line">staticcolor, staticgray, or truecolor for the</div>
+<div class="line">colormodel of this widget.</div>
+<div class="line"><br /></div>
+</div>
+<div class="line">winfo_visualid(self)</div>
+<div class="line-block">
+<div class="line">Return the X identifier for the visual for this widget.</div>
+<div class="line"><br /></div>
+</div>
+<div class="line">winfo_visualsavailable(self, includeids=False)</div>
+<div class="line-block">
+<div class="line">Return a list of all visuals available for the screen</div>
+<div class="line">of this widget.</div>
+<div class="line"><br /></div>
+<div class="line">Each item in the list consists of a visual name (see winfo_visual), a</div>
+<div class="line">depth and if includeids is true is given also the X identifier.</div>
+<div class="line"><br /></div>
+</div>
+<div class="line">winfo_vrootheight(self)</div>
+<div class="line-block">
+<div class="line">Return the height of the virtual root window associated with this</div>
+<div class="line">widget in pixels. If there is no virtual root window return the</div>
+<div class="line">height of the screen.</div>
+<div class="line"><br /></div>
+</div>
+<div class="line">winfo_vrootwidth(self)</div>
+<div class="line-block">
+<div class="line">Return the width of the virtual root window associated with this</div>
+<div class="line">widget in pixel. If there is no virtual root window return the</div>
+<div class="line">width of the screen.</div>
+<div class="line"><br /></div>
+</div>
+<div class="line">winfo_vrootx(self)</div>
+<div class="line-block">
+<div class="line">Return the x offset of the virtual root relative to the root</div>
+<div class="line">window of the screen of this widget.</div>
+<div class="line"><br /></div>
+</div>
+<div class="line">winfo_vrooty(self)</div>
+<div class="line-block">
+<div class="line">Return the y offset of the virtual root relative to the root</div>
+<div class="line">window of the screen of this widget.</div>
+<div class="line"><br /></div>
+</div>
+<div class="line">winfo_width(self)</div>
+<div class="line-block">
+<div class="line">Return the width of this widget.</div>
+<div class="line"><br /></div>
+</div>
+<div class="line">winfo_x(self)</div>
+<div class="line-block">
+<div class="line">Return the x coordinate of the upper left corner of this widget</div>
+<div class="line">in the parent.</div>
+<div class="line"><br /></div>
+</div>
+<div class="line">winfo_y(self)</div>
+<div class="line-block">
+<div class="line">Return the y coordinate of the upper left corner of this widget</div>
+<div class="line">in the parent.</div>
+<div class="line"><br /></div>
+</div>
+<div class="line">———————————————————————-</div>
+<div class="line">Data descriptors inherited from Misc:</div>
+<div class="line"><br /></div>
+<div class="line">__dict__</div>
+<div class="line-block">
+<div class="line">dictionary for instance variables (if defined)</div>
+<div class="line"><br /></div>
+</div>
+<div class="line">__weakref__</div>
+<div class="line-block">
+<div class="line">list of weak references to the object (if defined)</div>
+<div class="line"><br /></div>
+</div>
+<div class="line">———————————————————————-</div>
+<div class="line">Methods inherited from Pack:</div>
+<div class="line"><br /></div>
+<div class="line">forget = pack_forget(self)</div>
+<div class="line"><br /></div>
+<div class="line">info = pack_info(self)</div>
+<div class="line"><br /></div>
+<div class="line">pack = pack_configure(self, cnf={}, <a href="#id105"><span class="problematic" id="id106">**</span></a>kw)</div>
+<div class="line"><br /></div>
+<div class="line">pack_configure(self, cnf={}, <a href="#id107"><span class="problematic" id="id108">**</span></a>kw)</div>
+<div class="line-block">
+<div class="line">Pack a widget in the parent widget. Use as options:</div>
+<div class="line">after=widget - pack it after you have packed widget</div>
+<div class="line">anchor=NSEW (or subset) - position widget according to</div>
+<div class="line-block">
+<div class="line">given direction</div>
+</div>
+<div class="line">before=widget - pack it before you will pack widget</div>
+<div class="line">expand=bool - expand widget if parent size grows</div>
+<div class="line">fill=NONE or X or Y or BOTH - fill widget if widget grows</div>
+<div class="line">in=master - use master to contain this widget</div>
+<div class="line">in_=master - see ‘in’ option description</div>
+<div class="line">ipadx=amount - add internal padding in x direction</div>
+<div class="line">ipady=amount - add internal padding in y direction</div>
+<div class="line">padx=amount - add padding in x direction</div>
+<div class="line">pady=amount - add padding in y direction</div>
+<div class="line">side=TOP or BOTTOM or LEFT or RIGHT -  where to add this widget.</div>
+<div class="line"><br /></div>
+</div>
+<div class="line">pack_forget(self)</div>
+<div class="line-block">
+<div class="line">Unmap this widget and do not use it for the packing order.</div>
+<div class="line"><br /></div>
+</div>
+<div class="line">pack_info(self)</div>
+<div class="line-block">
+<div class="line">Return information about the packing options</div>
+<div class="line">for this widget.</div>
+<div class="line"><br /></div>
+</div>
+<div class="line">———————————————————————-</div>
+<div class="line">Methods inherited from Place:</div>
+<div class="line"><br /></div>
+<div class="line">place = place_configure(self, cnf={}, <a href="#id109"><span class="problematic" id="id110">**</span></a>kw)</div>
+<div class="line"><br /></div>
+<div class="line">place_configure(self, cnf={}, <a href="#id111"><span class="problematic" id="id112">**</span></a>kw)</div>
+<div class="line-block">
+<div class="line">Place a widget in the parent widget. Use as options:</div>
+<div class="line">in=master - master relative to which the widget is placed</div>
+<div class="line">in_=master - see ‘in’ option description</div>
+<div class="line">x=amount - locate anchor of this widget at position x of master</div>
+<div class="line">y=amount - locate anchor of this widget at position y of master</div>
+<div class="line">relx=amount - locate anchor of this widget between 0.0 and 1.0</div>
+<div class="line-block">
+<div class="line">relative to width of master (1.0 is right edge)</div>
+</div>
+<div class="line">rely=amount - locate anchor of this widget between 0.0 and 1.0</div>
+<div class="line-block">
+<div class="line">relative to height of master (1.0 is bottom edge)</div>
+</div>
+<div class="line">anchor=NSEW (or subset) - position anchor according to given direction</div>
+<div class="line">width=amount - width of this widget in pixel</div>
+<div class="line">height=amount - height of this widget in pixel</div>
+<div class="line">relwidth=amount - width of this widget between 0.0 and 1.0</div>
+<div class="line-block">
+<div class="line">relative to width of master (1.0 is the same width</div>
+<div class="line">as the master)</div>
+</div>
+<div class="line">relheight=amount - height of this widget between 0.0 and 1.0</div>
+<div class="line-block">
+<div class="line">relative to height of master (1.0 is the same</div>
+<div class="line">height as the master)</div>
+</div>
+<div class="line">bordermode=”inside” or “outside” - whether to take border width of</div>
+<div class="line-block">
+<div class="line">master widget into account</div>
+<div class="line"><br /></div>
+</div>
+</div>
+<div class="line">place_forget(self)</div>
+<div class="line-block">
+<div class="line">Unmap this widget.</div>
+<div class="line"><br /></div>
+</div>
+<div class="line">place_info(self)</div>
+<div class="line-block">
+<div class="line">Return information about the placing options</div>
+<div class="line">for this widget.</div>
+<div class="line"><br /></div>
+</div>
+<div class="line">———————————————————————-</div>
+<div class="line">Methods inherited from Grid:</div>
+<div class="line"><br /></div>
+<div class="line">grid = grid_configure(self, cnf={}, <a href="#id113"><span class="problematic" id="id114">**</span></a>kw)</div>
+<div class="line"><br /></div>
+<div class="line">grid_configure(self, cnf={}, <a href="#id115"><span class="problematic" id="id116">**</span></a>kw)</div>
+<div class="line-block">
+<div class="line">Position a widget in the parent widget in a grid. Use as options:</div>
+<div class="line">column=number - use cell identified with given column (starting with 0)</div>
+<div class="line">columnspan=number - this widget will span several columns</div>
+<div class="line">in=master - use master to contain this widget</div>
+<div class="line">in_=master - see ‘in’ option description</div>
+<div class="line">ipadx=amount - add internal padding in x direction</div>
+<div class="line">ipady=amount - add internal padding in y direction</div>
+<div class="line">padx=amount - add padding in x direction</div>
+<div class="line">pady=amount - add padding in y direction</div>
+<div class="line">row=number - use cell identified with given row (starting with 0)</div>
+<div class="line">rowspan=number - this widget will span several rows</div>
+<div class="line">sticky=NSEW - if cell is larger on which sides will this</div>
+<div class="line-block">
+<div class="line">widget stick to the cell boundary</div>
+<div class="line"><br /></div>
+</div>
+</div>
+<div class="line">grid_forget(self)</div>
+<div class="line-block">
+<div class="line">Unmap this widget.</div>
+<div class="line"><br /></div>
+</div>
+<div class="line">grid_info(self)</div>
+<div class="line-block">
+<div class="line">Return information about the options</div>
+<div class="line">for positioning this widget in a grid.</div>
+<div class="line"><br /></div>
+</div>
+<div class="line">grid_remove(self)</div>
+<div class="line-block">
+<div class="line">Unmap this widget but remember the grid options.</div>
+<div class="line"><br /></div>
+</div>
+<div class="line">location = grid_location(self, x, y)</div>
+</div>
+</dd>
+</dl>
+<p>None</p>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="statsmodels.html" class="btn btn-neutral float-left" title="Help on package statsmodels:" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2025, santosg57, santosg572@gmail.com.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

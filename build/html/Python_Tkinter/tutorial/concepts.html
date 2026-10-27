@@ -1,0 +1,824 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="../../">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Tk Concepts &mdash; santosg57-python 0.1 documentation</title>
+      <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=b86133f3" />
+      <link rel="stylesheet" type="text/css" href="../../_static/css/theme.css?v=9edc463e" />
+      <link rel="stylesheet" type="text/css" href="../../_static/custom.css?v=836bb062" />
+
+  
+      <script src="../../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="../../_static/documentation_options.js?v=2709fde1"></script>
+      <script src="../../_static/doctools.js?v=9a2dae69"></script>
+      <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../../index.html" class="icon icon-home">
+            santosg57-python
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+<li class="toctree-l1"><a class="reference internal" href="../../Temarios/index2.html">sss</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../funciones.html">Funciones o Métodos creados por el Usuario</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../numpy/Imagenes/imagenes.html">Estructuras de datos en el módulo numpy</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../numpy_help.html">Help numpy</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../matplotlyb.html">Matplotlib.pyplot</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../ejercicio_01.html">Ejercicio01</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../ubuntu_windows.html">Pasos para instalar Ubuntu con WSL</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../funciones_curso.html">Algunas funciones desarrolladas durante el curso</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../ejercicio_calculo_de_probabilidades.html">Cálculo de Probabilidades</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../estadistica/index2.html">Estadística</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../help/index2.html">HELP</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">santosg57-python</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">Tk Concepts</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../../_sources/Python_Tkinter/tutorial/concepts.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="tk-concepts">
+<h1>Tk Concepts<a class="headerlink" href="#tk-concepts" title="Link to this heading"></a></h1>
+<p>With your first example behind you, you now have a basic idea of what a Tk program looks like and the type of code you need
+to write to make it work. This chapter will step back and look at three broad concepts required to understand Tk: widgets,
+geometry management, and event handling.</p>
+<p>Widgets
+Widgets are all the things that you see onscreen. Our example had a button, an entry, a few labels, and a frame.
+Checkboxes, tree views, scrollbars, and text areas are examples of other widgets. Widgets are often referred to as
+“controls.” You’ll also sometimes see them referred to as “windows,” particularly in Tk’s documentation. This is a holdover
+from its X11 roots (under that terminology, both your toplevel application window and a button would be called windows).</p>
+<p>Here are just a few of Tk’s widgets, which we’ll cover individually shortly.</p>
+<p>screen shot
+Several Tk Widgets.</p>
+<p>Widget classes
+In Tk, individual widgets are objects, instances of classes that represent buttons, frames, and so on. To create a widget,
+you first need to identify the specific class of the widget you’d like to instantiate. We’ll explore these in the coming
+chapters.</p>
+<p>Widget hierarchy
+Besides the widget class, you need one other piece of information before you can create a widget: its parent. Widgets don’t
+float off in space. Instead, they’re contained within something else, like a window. In Tk, all widgets are part of a
+widget (or window) hierarchy, with a single root at the top of the hierarchy.</p>
+<p>In our metric conversion example, we created a single frame as a child of the root window, and that frame contained all the
+other widgets as children. The root window was a container for the frame and was, therefore, the frame’s parent. The
+complete hierarchy for the example looked like this:</p>
+<p>screen shot
+The widget hierarchy of the metric conversion example.</p>
+<p>Widget hierarchies can be arbitrarily deep. For example, you might have a button in a frame in another frame within the
+root window. Even a new window in your application (a special widget called a toplevel) is part of that same hierarchy.
+That window and all its contents form a subtree of the overall widget hierarchy.</p>
+<p>screen shot
+Hierarchy of a more substantial application. Leaf nodes (buttons, labels, etc.) omitted.</p>
+<p>Creating widgets
+Each separate widget is a Python object. When instantiating a widget, you pass its parent as the first parameter to the
+widget class. The only exception is the “root” window. That toplevel window is automatically created when you instantiate
+Tk. It does not have a parent. For example:</p>
+<p>root = Tk()
+content = ttk.Frame(root)
+button = ttk.Button(content)
+Whether or not you save the widget object in a variable is entirely up to you, depending on whether you’ll need to refer to
+it later. Because the widget object is inserted into the widget hierarchy, it won’t be garbage collected even if you don’t
+keep your own reference to it.</p>
+<p>Tkinter is a wrapper around the Tcl language interface to Tk. When you create a widget object in Tkinter, you’re running a
+small bit of Tcl code. Sometimes when you’re trying to figure out exactly how to make Tkinter do what you want, you may
+need to look at Tk’s reference documentation, which is Tcl-based.</p>
+<p>In Tcl, rather than widget objects, every widget is uniquely identified with a hierarchical path name. For example, ‘.’ (a
+single dot) is the path name of the root window, ‘.content’ is a widget that is a child of the root window, ‘.content.feet’
+might be an entry widget within that, and so on. You’ll see this pathname referred to in Tk reference documentation.
+Tkinter chooses and manages all these pathnames for you behind the scenes, so you should never have to worry about them. If
+you do, you can get the pathname from a widget by calling str(widget).</p>
+<p>In Tcl, each widget is given an explicit pathname, which both differentiates it from other widgets, and also indicates its
+place in the window hierarchy. The root of the hierarchy, the toplevel widget that Tk automatically creates, is named
+simply . (dot).</p>
+<p>The frame, which was a child of the root, was named .c. We could have put pretty much anything in place of the “c”, naming
+it for example .content. This name is purely for use by your program, so it’s best to choose something meaningful. The
+controls that were children of the frame were given names like .c.feet, .c.meters, .c.flbl, and so on. If there were any
+widgets at a deeper level of the hierarchy, we’d add another . and then a unique identifier.</p>
+<p>So to create a widget, we need to provide the widget class, and the pathname. The pathname is used to indicate the widget’s
+parent (which must of course exist also), and hence its position in the window hierarchy. For example:</p>
+<p>ttk::button .b
+ttk::frame .f
+ttk::entry .f.entry
+This also creates a new object command with the same name as the widget’s pathname, which will let us communicate with the
+widget. So the above code would produce new Tcl commands named .b, .f, .f.entry, and so on. You can then use that object
+command to communicate further with the widget, calling e.g. .b invoke, or .f.entry state disabled. Because of the obvious
+parallels with many object-oriented systems, we’ll often refer to the object commands as objects, and calls on those
+objects (like the invoke) as method calls. For example, we’ll see below the use of the configure and cget methods.</p>
+<p>Speaking of which, Tcl uses a more shell-like syntax than the other languages covered in this tutorial, with spaces
+separating parameters rather than commas or other delimeters. Some procedure or method names that are written as multiple
+words in Tcl (e.g., selection clear) are implemented as a single identifier in most other Tk language bindings (e.g.
+selection_clear). We’ll generally use the latter notation when referring to these methods in the text, while
+language-specific notation is used in accompanying code snippets.</p>
+<p>Each separate widget is a Ruby object. When creating a widget, you must pass its parent as a parameter to the widget class’
+new method. The only exception is the “root” window, which is the toplevel window that will contain everything else. That
+is instantiated from the TkRoot class, and it does not have a parent. For example:</p>
+<p>root = TkRoot.new
+content = Tk::Tile::Frame.new(root)
+Tk::Tile::Button.new(content)
+Whether or not you save the widget object in a variable is entirely up to you, and depends of course whether you’ll need to
+refer to it later. Because the object is inserted into the widget hierarchy, it won’t be garbage collected even if you
+don’t keep your own reference to it.</p>
+<p>If you sneak a peek at how Tcl manages widgets, you’ll see each widget has a specific pathname; you’ll also see this
+pathname referred to in Tk reference documentation. Ruby/Tk chooses and manages all these pathnames for you behind the
+scenes, so you should never have to worry about them. If you do though, you can get the pathname from a widget with its
+path method.</p>
+<p>In Perl, each widget is given an explicit pathname, which both differentiates it from other widgets, and also indicates its
+place in the window hierarchy. The root of the hierarchy, the toplevel widget that Tk automatically creates, is named
+simply . (dot).</p>
+<p>The frame, which was a child of the root, was named .c. We could have put pretty much anything in place of the “c”, naming
+it for example .content. This name is purely for use by your program, so it’s best to choose something meaningful. The
+controls that were children of the frame were given names like .c.feet, .c.meters, .c.flbl, and so on. If there were any
+widgets at a deeper level of the hierarchy, we’d add another . and then a unique identifier.</p>
+<p>So to create a widget, we need to provide the widget class, and the pathname. The pathname is used to indicate the widget’s
+parent (which must of course exist also), and hence its position in the window hierarchy. For example:</p>
+<p>Tkx::ttk__button(“.b”, -text =&gt; “hello”);
+Tkx::ttk__frame(“.f”);
+Tkx::ttk__entry(“.f.entry”);
+Widget Objects
+Many widgets have operations that you can call on them, such as to disable a widget, invoke a button’s command, and so on.
+If we were doing this in Tcl, we’d write something like .b invoke or .f.entry state disabled. Essentially you’d think of
+“.b” or “.f.entry” as objects, and “invoke” and “state” as methods, the latter having a single parameter “disabled”. In
+Perl, you can call the exact Tcl command like this:</p>
+<p>Tkx::i::call(“.b”, “invoke”);
+Tkx::i::call(“.f.entry”, “state”, “disabled”);
+Admittedly, that’s pretty lame. Ideally, we’d want to have these widgets behave just like Perl objects. Luckily, Tkx lets
+us do exactly that.</p>
+<p>The first thing we need to do is get a reference to an object for these widgets. We can do that like this, passing the
+widget pathname to Tkx::widget-&gt;new:</p>
+<p>my $b = Tkx::widget-&gt;new(“.b”);
+my $e = Tkx::widget-&gt;new(“.f.entry”);
+Then we can invoke methods on these objects just how you’d expect:</p>
+<p>$b-&gt;invoke;
+$e-&gt;state(“disabled”);
+Creating each widget and then getting a reference to it as a separate step is a bit much. So there’s another way to create
+widgets. If you have an object reference to the parent widget in the widget hierarchy, you can ask it to create a child.</p>
+<p>my $mw = Tkx::widget-&gt;new(“.”);
+my $b = $mw-&gt;new_ttk__button(-text =&gt; “hello”);
+my $f = $mw-&gt;new_ttk__frame;
+my $e = $f-&gt;new_ttk__entry;
+In this case, Tkx will choose the widget pathname for you (it’ll look something like “.b”, “.f.e”, “.f.e2”, etc.).</p>
+<p>You can get this path by calling the object’s “_mpath” method (e.g. $b-&gt;_mpath). If you stringify the object itself (e.g.
+trying to print it out), it will also be the widget pathname.</p>
+<p>You also saw in our earlier example that some Tkx commands (like “grid”) take the widget pathname as their first argument.
+There’s a way to do that using the widget object instead. We invoke a method which is the name of the command, prefixed by
+“<a href="#id11"><span class="problematic" id="id12">g_</span></a>”, e.g. “g_grid”. So this:</p>
+<p>Tkx::ttk__entry(“.c.feet”, -width =&gt; 7, -textvariable =&gt; $feet);
+Tkx::grid(“.c.feet”, -column =&gt; 2, -row =&gt; 1, -sticky =&gt; “we”);
+becomes this:</p>
+<p>my $mw = Tkx::widget-&gt;new(“.”);
+my $ft = $mw-&gt;new_ttk__entry(-width =&gt; 7, -textvariable =&gt; $feet);
+$ft-&gt;g_grid(-column =&gt; 2, -row =&gt; 1, -sticky =&gt; “we”);
+Translation Rules
+What’s somewhat scary about the Tkx module is that it implements all of this on a purely syntactic level. That is, it has
+no clue about buttons and entries and grid. It just knows that if it sees a method “new_something” it’s creating a widget
+using the Tcl command “something”, or if you call a method “g_otherthing”, that it’s going to invoke a Tcl command
+“otherthing”, and pass the widget pathname associated with the object as a first parameter (followed by any other
+parameters passed to the method).</p>
+<p>It’s this pure syntactic mapping which gives Tkx its power and amazing brevity (check out the code in Tkx.pm!). It also
+explains why it can automatically track any changes in Tk. Any new commands and options don’t need to be explicitly
+implemented in Tkx code; they are automatically available just by using the right syntax.</p>
+<p>Now let’s talk about those underscores in the Tkx commands and method names. If you’ve glanced at the Tcl version of the
+code in this tutorial, you know that they can take several forms, i.e.</p>
+<p>a single toplevel command, like grid
+a multi-word command (called an ensemble in Tcl), e.g. wm title
+a command in a namespace, e.g. ttk::button
+a single toplevel command with underscores, e.g. tk_messageBox
+No translations are needed for simple commands like “grid”, but the others need to be tweaked. To translate these into
+Perl, Tkx uses underscores in the following way:</p>
+<p>a single underscore is replaced with a space, e.g. wm_title in Perl becomes wm title in Tcl
+two underscores is replaced with the namespace qualifier “::”, e.g. ttk__button becomes ttk::button
+three underscores is replaced with a single underscore, e.g. tk___messageBox becomes tk_messageBox
+Given that this purely syntactic translation is all that Tkx does, let’s state the obvious: whether or not you use the pure
+command form, which we used in the “feet to meters” example, or the object oriented form, they both do exactly the same
+thing (i.e. invoke the same underlying Tcl command).</p>
+<p>Because you can get an object’s widget pathname, or get an object reference from a widget pathname, you can also freely
+intermix them. Most programs of any length will probably be a bit simpler if they predominately use the object oriented
+form, but this is almost entirely a stylistic issue.</p>
+<p>Feet to Meters, Object Style
+Here’s the earlier “feet to meters” example, this time rewritten in the object oriented style. The programs do exactly the
+same thing.</p>
+<p>use Tkx;</p>
+<p>my $mw = Tkx::widget-&gt;new(“.”);
+$mw-&gt;g_wm_title(“Feet to Meters”);
+my $frm = $mw-&gt;new_ttk__frame(-padding =&gt; “3 3 12 12”);
+$frm-&gt;g_grid(-column =&gt; 0, -row =&gt; 0, -sticky =&gt; “nwes”);
+$mw-&gt;g_grid_columnconfigure(0, -weight =&gt; 1);
+$mw-&gt;g_grid_rowconfigure(0, -weight =&gt; 1);</p>
+<p>my $ef = $frm-&gt;new_ttk__entry(-width =&gt; 7, -textvariable =&gt; $feet);
+$ef-&gt;g_grid(-column =&gt; 2, -row =&gt; 1, -sticky =&gt; “we”);
+my $em = $frm-&gt;new_ttk__label(-textvariable =&gt; $meters);
+$em-&gt;g_grid(-column =&gt; 2, -row =&gt; 2, -sticky =&gt; “we”);
+my $cb = $frm-&gt;new_ttk__button(-text =&gt; “Calculate”, -command =&gt; sub {calculate();});
+$cb-&gt;g_grid(-column =&gt; 3, -row =&gt; 3, -sticky =&gt; “w”);</p>
+<p>$frm-&gt;new_ttk__label(-text =&gt; “feet”)-&gt;g_grid(-column =&gt; 3, -row =&gt; 1, -sticky =&gt; “w”);
+$frm-&gt;new_ttk__label(-text =&gt; “is equivalent to”)-&gt;g_grid(-column =&gt; 1, -row =&gt; 2, -sticky =&gt; “e”);
+$frm-&gt;new_ttk__label(-text =&gt; “meters”)-&gt;g_grid(-column =&gt; 3, -row =&gt; 2, -sticky =&gt; “w”);</p>
+<dl class="simple">
+<dt>foreach (Tkx::SplitList($frm-&gt;g_winfo_children)) {</dt><dd><p>Tkx::grid_configure($_, -padx =&gt; 5, -pady =&gt; 5);</p>
+</dd>
+</dl>
+<p>}
+$ef-&gt;g_focus;
+$mw-&gt;g_bind(“&lt;Return&gt;”, sub {calculate();});</p>
+<dl class="simple">
+<dt>sub calculate {</dt><dd><p>$meters = int(0.3048*$feet*10000.0+.5)/10000.0 || ‘’;</p>
+</dd>
+</dl>
+<p>}</p>
+<p>Tkx::MainLoop();
+Configuration options
+All widgets have multiple configuration options that control how the widget is displayed or how it behaves.</p>
+<p>The available options for a widget depend upon the widget class, of course. There is a lot of consistency between different
+widget classes, so options that do similar things tend to be named the same. For example, both a button and a label have a
+text option to adjust the text displayed by the widget, while a scrollbar would not have a text option since it’s not
+needed. A button has a command option telling it what to do when pushed, while a label, which holds just static text, does
+not.</p>
+<p>While widgets may have many configuration options, they have sensible defaults. In practice, each widget has only a few
+configuration options that are commonly used. As we describe different widgets, we’ll focus on those. While reference
+documentation will describe all the options, it can be difficult to find the few you actually need.</p>
+<p>Configuration options can be set when the widget is first created by specifying their names and values as optional
+parameters. Later, you can retrieve the current values of those options, and with a tiny number of exceptions, change them
+at any time.</p>
+<p>If you’re unsure what configuration options a widget supports, you can ask the widget to describe them. This gives you a
+long list of all its options.</p>
+<p>This is all best illustrated with the following interactive dialog with the interpreter.</p>
+<p>% python
+&gt;&gt;&gt; from tkinter import *
+&gt;&gt;&gt; from tkinter import ttk
+&gt;&gt;&gt; root = Tk()</p>
+<p># create a button, passing two options:
+&gt;&gt;&gt; button = ttk.Button(root, text=”Hello”, command=”buttonpressed”)
+&gt;&gt;&gt; button.grid()</p>
+<p>#check the current value of the text option:
+&gt;&gt;&gt; button[‘text’]
+‘Hello’</p>
+<p># change the value of the text option:
+&gt;&gt;&gt; button[‘text’] = ‘goodbye’</p>
+<p># another way to do the same thing:
+&gt;&gt;&gt; button.configure(text=’goodbye’)</p>
+<p># check the current value of the text option:
+&gt;&gt;&gt; button[‘text’]
+‘goodbye’</p>
+<p># get all information about the text option:
+&gt;&gt;&gt; button.configure(‘text’)
+(‘text’, ‘text’, ‘Text’, ‘’, ‘goodbye’)</p>
+<p># get information on all options for this widget:
+&gt;&gt;&gt; button.configure()
+{‘cursor’: (‘cursor’, ‘cursor’, ‘Cursor’, ‘’, ‘’), ‘style’: (‘style’, ‘style’, ‘Style’, ‘’, ‘’),
+‘default’: (‘default’, ‘default’, ‘Default’, &lt;index object at 0x00DFFD10&gt;, &lt;index object at 0x00DFFD10&gt;),
+‘text’: (‘text’, ‘text’, ‘Text’, ‘’, ‘goodbye’), ‘image’: (‘image’, ‘image’, ‘Image’, ‘’, ‘’),
+‘class’: (‘class’, ‘’, ‘’, ‘’, ‘’), ‘padding’: (‘padding’, ‘padding’, ‘Pad’, ‘’, ‘’),
+‘width’: (‘width’, ‘width’, ‘Width’, ‘’, ‘’),
+‘state’: (‘state’, ‘state’, ‘State’, &lt;index object at 0x0167FA20&gt;, &lt;index object at 0x0167FA20&gt;),
+‘command’: (‘command’, ‘command’ , ‘Command’, ‘’, ‘buttonpressed’),
+‘textvariable’: (‘textvariable’, ‘textVariable’, ‘Variable’, ‘’, ‘’),
+‘compound’: (‘compound’, ‘compound’, ‘Compound’, &lt;index object at 0x0167FA08&gt;, &lt;index object at 0x0167FA08&gt;),
+‘underline’: (‘underline’, ‘underline’, ‘Underline’, -1, -1),
+‘takefocus’: (‘takefocus’, ‘takeFocus’, ‘TakeFocus’, ‘’, ‘ttk::takefocus’)}
+% wish8.5
+create a button, passing two options:
+% grid [ttk::button .b -text “Hello” -command {button_pressed}]
+check the current value of the text option:
+% .b cget -text
+Hello
+check the current value of the command option:
+% .b cget -command
+button_pressed
+change the value of the text option:
+% .b configure -text Goodbye
+check the current value of the text option:
+% .b cget -text
+Goodbye
+get all information about the text option:
+% .b configure -text
+-text text Text {} Goodbye
+get information on all options for this widget:
+% .b configure
+{-takefocus takeFocus TakeFocus ttk::takefocus ttk::takefocus}
+{-command command Command {} button_pressed} {-default default Default normal normal}
+{-text text Text {} Goodbye} {-textvariable textVariable Variable {} {}}
+{-underline underline Underline -1 -1} {-width width Width {} {}} {-image image Image {} {}}
+{-compound compound Compound none none} {-padding padding Pad {} {}}
+{-state state State normal normal} {-takefocus takeFocus TakeFocus {} ttk::takefocus}
+{-cursor cursor Cursor {} {}} {-style style Style {} {}} {-class {} {} {} {}}
+% irb
+irb(main):001:0&gt; require ‘tk’
+=&gt; true
+irb(main):002:0&gt; require ‘tkextlib/tile’
+=&gt; true
+create a button, passing two options:
+irb(main):003:0&gt; root = TkRoot.new
+=&gt; #&lt;TkRoot:0xb7c8c9d8 &#64;path=”.”&gt;
+irb(main):004:0&gt; button = Tk::Tile::Button.new(root) {text “Hello”; command “button_pressed”}.grid
+=&gt; #&lt;Tk::Tile::TButton:0xb7c86ab0 &#64;cmdtbl=[“c00001”], &#64;path=”.w00000”&gt;
+check the current value of the text option:
+irb(main):005:0&gt; button[‘text’]
+=&gt; “Hello”
+check the current value of the command option:
+irb(main):006:0&gt; button[‘command’]
+=&gt; #&lt;cb_entry:fdbe42342&gt;
+change the value of the text option:
+irb(main):007:0&gt; button[‘text’] = ‘goodbye’
+=&gt; “goodbye”
+check the current value of the text option:
+irb(main):008:0&gt; button[‘text’]
+=&gt; “goodbye”
+get all information about the text option:
+irb(main):009:0&gt; button.configinfo ‘text’
+=&gt; [“text”, “text”, “Text”, “”, “goodbye”]
+get information on all options for this widget:
+irb(main):010:0&gt; button.configinfo
+=&gt; [[“takefocus”, “takeFocus”, “TakeFocus”, true, true], [“command”, “command”, “Command”, “”, #&lt;cb_entry:fdbe42342&gt;],
+[“default”, “default”, “Default”, “normal”, “normal”], [“text”, “text”, “Text”, “”, “goodbye”],</p>
+<blockquote>
+<div><p>[“textvariable”, “textVariable”, “Variable”, nil, nil],</p>
+</div></blockquote>
+<p>[“underline”, “underline”, “Underline”, -1, -1], [“width”, “width”, “Width”, “”, “”],
+[“image”, “image”, “Image”, “”, “”], [“compound”, “compound”, “Compound”, “none”, “none”],
+[“padding”, “padding”, “Pad”, “”, “”], [“state”, “state”, “State”, “normal”, “normal”],
+[“takefocus”, “takeFocus”, “TakeFocus”, nil, true], [“cursor”, “cursor”, “Cursor”, “”, “”],
+[“style”, “style”, “Style”, [], []], [“class”, “”, “”, “”, “”]]
+run Perl interactively using the program “psh”:
+% psh
+Perl&gt; use Tkx
+Perl&gt; $mw = Tkx::widget-&gt;new(“.”)
+.
+create a button, passing two options:
+Perl&gt; ($b = $mw-&gt;new_ttk__button(-text =&gt; “Hello”, -command =&gt; sub {button_pressed();}))-&gt;g_grid
+.b
+check the current value of the text option:</p>
+<blockquote>
+<div><dl class="simple">
+<dt>(note that “m_&lt;foo&gt;” is another one of those magic Tkx translations</dt><dd><p>like “g_&lt;foo&gt;”; in this case it means call the &lt;foo&gt; method on the object)</p>
+</dd>
+</dl>
+</div></blockquote>
+<p>Perl&gt; $b-&gt;m_cget(-text)
+Hello
+conveniently, the “<a href="#id13"><span class="problematic" id="id14">m_</span></a>” part is almost always optional:
+Perl&gt; $b-&gt;cget(-text)
+Hello
+check the current value of the command option:
+Perl&gt; $b-&gt;cget(-command)
+::perl::CODE(0x839020)
+change the value of the text option:
+Perl&gt; $b-&gt;configure(-text =&gt; “Goodbye”)</p>
+<p>check the current value of the text option:
+Perl&gt; $b-&gt;cget(-text)
+Goodbye
+get all information about the text option:
+Perl&gt; $b-&gt;configure(-text)
+-text text Text {} Goodbye
+convert the Tcl list this returns into a Perl list:
+Perl&gt; Tkx::SplitList($b-&gt;configure(-text))
+-text, text, Text, , Goodbye
+get information on all options for this widget:
+Perl&gt; $b-&gt;configure
+{-takefocus takeFocus TakeFocus ttk::takefocus ttk::takefocus}
+{-command command Command {} ::perl::CODE(0x839020)} {-default default Default normal normal}
+{-text text Text {} Goodbye} {-textvariable textVariable Variable {} {}}
+{-underline underline Underline -1 -1} {-width width Width {} {}} {-image image Image {} {}}
+{-compound compound Compound none none} {-padding padding Pad {} {}}
+{-state state State normal normal} {-takefocus takeFocus TakeFocus {} ttk::takefocus}
+{-cursor cursor Cursor {} {}} {-style style Style {} {}} {-class {} {} {} {}}
+As you can see, for each option, Tk will show you the name of the option and its current value (along with three other
+attributes which you can usually ignore).</p>
+<p>Ok, if you really want to know, here are the details on the five pieces of data provided for each configuration option. The
+most useful are the first, the option’s name, and the fifth, which is the option’s current value. The fourth is the default
+value of the option, or in other words, the value it would have if you didn’t change it. The other two relate to something
+called the option database. We’ll briefly touch on it when we discuss menus, but it’s not used in modern applications. The
+second item is the option’s name in the database, and the third is its class.</p>
+<p>Styles and themes
+Tk’s “classic” widgets each have a very large number of configuration options, providing for very precise control over
+numerous details of each individual widget’s appearance. The need to customize each individual widget often resulted in a
+great deal of repetitive code and inconsistencies.</p>
+<p>Tk’s “themed” widgets move most of these details into theme and style objects, separate from the widget itself. This makes
+it far easier to create consistent user interfaces while using much less code to do it.</p>
+<p>Styles and themes are covered in detail towards the end of the book. It explains the benefits.</p>
+<p>So why use styles and themes in Tk? They take the fine-grained details of appearance decisions away from individual
+instances of widgets.</p>
+<p>That makes for cleaner code and less repetition. If you have 20 entry widgets in your application, you don’t need to repeat
+the exact appearance details every time you create one (or write a wrapper function). Instead, you assign them a style.</p>
+<p>Themes collect a series of styles, putting all appearance decisions in one place. And because styles for a button and
+styles for other widgets can share common elements, collecting them in themes promotes consistency and improves reuse.</p>
+<p>Changing themes allows for radical customization of your application’s appearance. For most mainstream desktop
+applications, it’s unlikely you will need to do so. However, you’ll see in the next chapter how individual styles can be
+applied to widgets in lieu of making fine-grained changes to individual widgets.</p>
+<p>These very different approaches to customization between classic and themed widgets are the main reason both sets of
+widgets exist today. It would not have been feasible to add support for themes while still maintaining backward
+compatibility.</p>
+<p>Widget introspection
+Tk exposes a treasure trove of information about each and every widget that your application can take advantage of. Much of
+it is available via the winfo facility; see the winfo command reference for full details.</p>
+<p>This short example traverses the widget hierarchy, using each widget’s winfo_children method to identify child widgets that
+need to be examined. For each widget, we print some basic information, including its class (button, frame, etc.), width,
+height, and position relative to its parent.</p>
+<dl class="simple">
+<dt>def print_hierarchy(w, depth=0):</dt><dd><p>print(’  ‘<a href="#id1"><span class="problematic" id="id2">*</span></a>depth + w.winfo_class() + ‘ w=’ + str(w.winfo_width()) + ‘ h=’ + str(w.winfo_height()) + ‘ x=’ +</p>
+</dd>
+<dt>str(w.winfo_x()) + ‘ y=’ + str(w.winfo_y()))</dt><dd><dl class="simple">
+<dt>for i in w.winfo_children():</dt><dd><p>print_hierarchy(i, depth+1)</p>
+</dd>
+</dl>
+</dd>
+</dl>
+<p>print_hierarchy(root)
+proc print_hierarchy {w {depth 0}} {</p>
+<blockquote>
+<div><p>puts “[string repeat “  “ $depth][winfo class $w] w=[winfo width $w] h=[winfo height $w] x=[winfo x $w] y=[winfo y $w]”
+foreach i [winfo children $w] {</p>
+<blockquote>
+<div><p>print_hierarchy $i [expr {$depth+1}]</p>
+</div></blockquote>
+<p>}</p>
+</div></blockquote>
+<p>}
+print_hierarchy .
+def print_hierarchy(w, depth=0)</p>
+<blockquote>
+<div><p>print(”  “<a href="#id3"><span class="problematic" id="id4">*</span></a>depth + w.winfo_class() + ‘ w=’ + w.winfo_width().to_s + ‘ h=’ + w.winfo_height().to_s + ‘ x=’ +</p>
+</div></blockquote>
+<dl>
+<dt>w.winfo_x().to_s + ‘ y=’ + w.winfo_y().to_s + “n”)</dt><dd><dl class="simple">
+<dt>w.winfo_children().each do <a href="#id7"><span class="problematic" id="id8">|i|</span></a></dt><dd><p>print_hierarchy(i, depth+1)</p>
+</dd>
+</dl>
+<p>end</p>
+</dd>
+</dl>
+<p>end
+print_hierarchy root
+sub print_hierarchy {</p>
+<blockquote>
+<div><p>my ($w, $depth) = &#64;_;
+$depth //= 0;
+print(”  “x$depth, $w-&gt;g_winfo_class(), “ w=”, $w-&gt;g_winfo_width(), “ h=”, $w-&gt;g_winfo_height(), “ x=”,</p>
+</div></blockquote>
+<dl>
+<dt>$w-&gt;g_winfo_x(), “ y=”, $w-&gt;g_winfo_y(), “n”);</dt><dd><dl class="simple">
+<dt>foreach (Tkx::SplitList($w-&gt;g_winfo_children())) {</dt><dd><p>print_hierarchy(Tkx::widget-&gt;new($_), $depth+1);</p>
+</dd>
+</dl>
+<p>}</p>
+</dd>
+</dl>
+<p>}
+print_hierarchy($mw);
+The following are some of the most useful methods:</p>
+<p>winfo_class:
+a class identifying the type of widget, e.g., TButton for a themed button
+winfo_children:
+a list of widgets that are the direct children of a widget in the hierarchy
+winfo_parent:
+parent of the widget in the hierarchy
+winfo_toplevel:
+the toplevel window containing this widget
+winfo_width, winfo_height:
+current width and height of the widget; not accurate until it appears onscreen
+winfo_reqwidth, winfo_reqheight:
+the width and height that the widget requests of the geometry manager (more on this shortly)
+winfo_x, winfo_y:
+the position of the top-left corner of the widget relative to its parent
+winfo_rootx, winfo_rooty:
+the position of the top-left corner of the widget relative to the entire screen
+winfo_vieweable:
+whether the widget is displayed or hidden (all its ancestors in the hierarchy must be viewable for it to be viewable)
+Geometry management
+As you’ve seen, widgets don’t appear on the screen just by creating them. Placing widgets on the screen (and precisely
+where they are placed) is a separate step called geometry management.</p>
+<p>In our feet to meters example, positioning each widget was accomplished by the grid command. We specified the column and
+row where we wanted each widget placed], how things were aligned within the grid, etc. Grid is an example of a geometry
+manager (of which there are several in Tk, grid being the most useful). For now, we’ll look at geometry management in
+general; we’ll talk about grid in a later chapter.</p>
+<p>A geometry manager’s job is to figure out exactly where those widgets are going to be put. This turns out to be a complex
+optimization problem, and a good geometry manager relies on quite sophisticated algorithms. A good geometry manager
+provides the flexibility, power, and ease of use that makes programmers happy. It also makes it easy to create appealing
+user interface layouts without needing to jump through hoops. Tk’s grid is, without a doubt, one of the absolute best.</p>
+<p>We’ll go into more detail in a later chapter, but grid was introduced several years after Tk became popular. Before that,
+an older geometry manager named pack was most commonly used. It’s equally powerful but much harder to use, making it
+onerous to create layouts that look appealing today. Unfortunately, much of the example Tk code and documentation out there
+uses pack instead of grid (a good clue to how current it is). The widespread use of pack is a leading reason that so many
+Tk user interfaces look terrible. Start new code with grid, and upgrade old code when you can.</p>
+<p>The problem
+The problem for a geometry manager is to take all the different widgets the program creates, plus the program’s
+instructions for where in the window each should go (explicitly, or more often, relative to other widgets), and then
+actually position them in the window.</p>
+<p>In doing so, the geometry manager has to balance multiple constraints. Consider these situations:</p>
+<p>The widgets may have a natural size, e.g., the natural width of a label would depend on the text it displays and the font
+used to display it. What if the application window containing all these different widgets isn’t big enough to accommodate
+them? The geometry manager must decide which widgets to shrink to fit, by how much, etc.
+If the application window is bigger than the natural size of all the widgets, how is the extra space used? Is extra space
+placed between each widget, and if so, how is that space distributed? Is it used to make certain widgets larger than they
+usually are, such as a text entry growing to fill a wider window? Which widgets should grow?
+If the application window is resized, how does the size and position of each widget inside it change? Will certain areas
+(e.g., a text entry area) expand or shrink while other parts stay the same size, or is the area distributed differently? Do
+certain widgets have a minimum size that you want to avoid going below? A maximum size? Does the window itself have a
+minimum or maximum size?
+How can widgets in different parts of the user interface be aligned with each other? How much space should be left between
+them? This is needed to present a clean layout and comply with platform-specific user interface guidelines.
+For a complex user interface, which may have many frames nested in other frames nested in the window (etc.), how can all
+the above be accomplished, trading off the conflicting demands of different parts of the entire user interface?
+How it works
+Geometry management in Tk relies on the concept of master and slave widgets. A master is a widget, typically a toplevel
+application window or a frame. It contains other widgets, called slaves. You can think of a geometry manager taking control
+of the master widget and deciding how all the slave widgets will be displayed within.</p>
+<p>The computing community has embraced the more general societal trend towards more diversity, sensitivity, and awareness
+about the impacts of language. As a result, the Tk core will slowly adopt a more inclusive set of terminology. For example,
+where it makes sense, “parent” and “child” will be preferred over “master” and “slave.” The current terminology will not
+disappear to preserve backward compatibility. This is something to be aware of for the future. For more details, see TIP
+#581.</p>
+<p>Your program tells the geometry manager what slaves to manage within the master, i.e., via calling grid. Your program also
+provides hints as to how it would like each slave to be displayed, e.g., via the column and row options. You can also
+provide other information to the geometry manager. For example, we used columnconfigure and rowconfigure to indicate the
+columns and rows we’d like to expand if extra space is available in the window. Note that all these parameters and hints
+are specific to grid; other geometry managers would use different ones.</p>
+<p>The geometry manager collects information about the slaves in the master and the total size of the master. It asks each
+slave widget for its natural size, i.e., how large it would ideally be displayed. The geometry manager’s internal algorithm
+calculates the rectangular area each slave will be allocated (if any!). The slave is then responsible for rendering itself
+within that particular rectangle. And of course, we repeat the whole process whenever the size of the master changes (e.g.,
+because the toplevel window was resized), the natural size of a slave changes (e.g., because we’ve changed the text in a
+label), or any geometry manager parameters change (e.g., like row, column, or sticky).</p>
+<p>This all works recursively as well. In our example, we had a content frame inside the toplevel application window and then
+several other widgets inside the content frame. We, therefore, had to manage the geometry for two different masters. At the
+outer level, the toplevel window was the master, and the content frame was its slave. At the inner level, the content frame
+was the master, with each of the other widgets being slaves. Notice that the same widget, e.g., the content frame, can be
+both a master and a slave! As we saw previously, this widget hierarchy can be nested much more deeply.</p>
+<p>While each master can be managed by only one geometry manager (e.g., grid), different masters can have different geometry
+managers. While grid is the right choice most of the time, others may make sense for a particular layout used in one part
+of your user interface. Other Tk geometry managers include pack, which we’ve mentioned, and place, which leaves all layout
+decisions entirely up to you. Some complex widgets like canvas and text let you embed other widgets, making them de facto
+geometry managers.</p>
+<p>Finally, we’ve been assuming that slave widgets are the immediate children of their master in the widget hierarchy. While
+this is usually the case, and mostly there’s no good reason to do it any other way, it’s also possible (with some
+restrictions) to get around this.</p>
+<p>Event handling
+As with most user interface toolkits, Tk runs an event loop that receives events from the operating system. These are
+things like button presses, keystrokes, mouse movement, window resizing, and so on.</p>
+<p>Generally, Tk takes care of managing this event loop for you. It will figure out what widget the event applies to (did a
+user click on this button? if a key was pressed, which textbox had the focus?), and dispatch the event accordingly.
+Individual widgets know how to respond to events; for example, a button might change color when the mouse moves over it and
+revert back when the mouse leaves.</p>
+<p>It’s critical in event-driven applications that the event loop not be blocked. The event loop runs continuously, normally
+executing dozens of steps per second. At every step, it processes an event. If your program is performing a long operation,
+it can potentially block the event loop. In that case, no events would be processed, no drawing would be done, and it would
+appear as if your application is frozen. There are many ways to prevent this from happening. We’ll discuss this in more
+detail in a later chapter.</p>
+<p>Command callbacks
+You often want your program to handle some event in a particular way, e.g., do something when a button is pushed. For those
+events that are most frequently customized (what good is a button without something happening when you press it?), the
+widget lets you specify a callback via a widget configuration option. We saw this in the example with the command option of
+the button.</p>
+<dl class="simple">
+<dt>def calculate(<a href="#id5"><span class="problematic" id="id6">*</span></a>args):</dt><dd><p>…</p>
+</dd>
+</dl>
+<p>ttk.Button(mainframe, text=”Calculate”, command=calculate)
+proc calculate {} {…}</p>
+<p>ttk::button .c.calc -text “Calculate” -command calculate
+def calculate</p>
+<blockquote>
+<div><p>…</p>
+</div></blockquote>
+<p>Tk::Tile::Button.new(content) {text ‘Calculate’; command {calculate}}
+sub calculate {…}</p>
+<p>Tkx::ttk__button(“.c.calc”, -text =&gt; “Calculate”, -command =&gt; sub {calculate();});
+Callbacks in Tk tend to be simpler than in user interface toolkits used with compiled languages (where a callback must be a
+procedure with a certain set of parameters or an object method with a certain signature). Instead, the callback is just an
+ordinary bit of code that the interpreter evaluates. While it can be as complicated as you want to make it, most of the
+time, you’ll just want your callback to call some other function or method.</p>
+<p>Binding to events
+For events that don’t have a widget-specific callback configuration option associated with them, you can use Tk’s bind to
+capture any event and then (like with callbacks) execute an arbitrary piece of code.</p>
+<p>Here’s a (silly) example showing a label responding to different events. When an event occurs, a description of the event
+is displayed in the label.</p>
+<p>from tkinter import *
+from tkinter import ttk
+root = Tk()
+l =ttk.Label(root, text=”Starting…”)
+l.grid()
+l.bind(‘&lt;Enter&gt;’, lambda e: l.configure(text=’Moved mouse inside’))
+l.bind(‘&lt;Leave&gt;’, lambda e: l.configure(text=’Moved mouse outside’))
+l.bind(‘&lt;ButtonPress-1&gt;’, lambda e: l.configure(text=’Clicked left mouse button’))
+l.bind(‘&lt;3&gt;’, lambda e: l.configure(text=’Clicked third mouse button’))
+l.bind(‘&lt;Double-1&gt;’, lambda e: l.configure(text=’Double clicked’))
+l.bind(‘&lt;B3-Motion&gt;’, lambda e: l.configure(text=f’third button drag to {e.x},{e.y}’))
+root.mainloop()
+package require Tk
+grid [ttk::label .l -text “Starting…”]
+bind .l &lt;Enter&gt; {.l configure -text “Moved mouse inside”}
+bind .l &lt;Leave&gt; {.l configure -text “Moved mouse outside”}
+bind .l &lt;ButtonPress-1&gt; {.l configure -text “Clicked left mouse button”}
+bind .l &lt;3&gt; {.l configure -text “Clicked third mouse button”}
+bind .l &lt;Double-1&gt; {.l configure -text “Double clicked”}
+bind .l &lt;B3-Motion&gt; {.l configure -text “third button drag to %x %y”}
+Note that the bind command lives in the global namespace; there is not a ttk::bind command.</p>
+<p>require ‘tk’
+require ‘tkextlib/tile’
+root = TkRoot.new
+l = Tk::Tile::Label.new(root) {text “Starting…”}.grid
+l.bind(“Enter”) {l[‘text’] = “Moved mouse inside”}
+l.bind(“Leave”) {l[‘text’] = “Moved mouse outside”}
+l.bind(“ButtonPress-1”) {l[‘text’] = “Clicked left mouse button”}
+l.bind(“3”) {l[‘text’] = “Clicked third mouse button”}
+l.bind(“Double-1”) {l[‘text’] = “Double clicked”}
+l.bind(“B3-Motion”, proc{<a href="#id9"><span class="problematic" id="id10">|x,y|</span></a> l[‘text’] = “third button drag to #{x} #{y}”}, “%x %y”)
+Tk.mainloop
+use Tkx;
+my $mw = Tkx::widget-&gt;new(“.”);
+(my $l = $mw-&gt;new_ttk__label(-text =&gt; “Starting…”))-&gt;g_grid;
+$l-&gt;g_bind(“&lt;Enter&gt;”,     sub {$l-&gt;configure(-text =&gt; “Moved mouse inside”)});
+$l-&gt;g_bind(“&lt;Leave&gt;”,     sub {$l-&gt;configure(-text =&gt; “Moved mouse outside”)});
+$l-&gt;g_bind(“&lt;ButtonPress-1&gt;”,         sub {$l-&gt;configure(-text =&gt; “Clicked left mouse button”)});
+$l-&gt;g_bind(“&lt;3&gt;”,         sub {$l-&gt;configure(-text =&gt; “Clicked third mouse button”)});
+$l-&gt;g_bind(“&lt;Double-1&gt;”,  sub {$l-&gt;configure(-text =&gt; “Double clicked”)});
+$l-&gt;g_bind(“&lt;B3-Motion&gt;”, [sub { my($x,$y) = &#64;_;</p>
+<blockquote>
+<div><blockquote>
+<div><p>$l-&gt;configure(-text =&gt; “third button drag to $x $y”)</p>
+</div></blockquote>
+<p>}, Tkx::Ev(“%x”, “%y”)]);</p>
+</div></blockquote>
+<p>Tkx::MainLoop();
+The first two bindings are pretty straightforward, just watching for simple events. An &lt;Enter&gt; event means the mouse has
+moved over top the widget, while the &lt;Leave&gt; event is generated when the mouse moves outside the widget to a different one.</p>
+<p>The next binding looks for a mouse click, specifically a &lt;ButtonPress-1&gt; event. Here, the &lt;ButtonPress&gt; is the actual
+event, but the -1 is an event detail specifying the left (main) mouse button on the mouse. The binding will only trigger
+when a &lt;ButtonPress&gt; event is generated involving the main mouse button. If another mouse button was clicked, this binding
+would ignore it.</p>
+<p>This next binding looks for a &lt;3&gt; event. This is actually a shorthand for &lt;ButtonPress-3&gt;. It will respond to events
+generated when the third mouse button is clicked. The next binding, &lt;Double-1&gt; (shorthand for &lt;Double-ButtonPress-1&gt;) adds
+another modifier, Double, and so will respond to the left mouse button being double-clicked.</p>
+<p>The last binding (&lt;B3-Motion&gt;) also uses a modifier: capture mouse movement (Motion), but only when the third mouse button
+(B3) is held down.</p>
+<p>You may have noticed we’re being a bit cagey, referring to the “left” mouse button and the “third” mouse button… not the
+“right” mouse button. On Windows and Linux/X11, which have three button mouses, button #1 is the left button and button #3
+is the right button. On macOS, things are different. Sometimes, only a single button mouse is available, in which case
+we’ll never get an event for button #3. When a three button mouse is available on macOS, however, the right button is
+actually button #2, not button #3. On macOS, button #3 is the middle button (or scroll wheel button), which is button #2 on
+Windows and Linux/X11. We’ll return to this in the chapter on menus.</p>
+<p>This last binding also shows an example of how to use event parameters. Many events carry additional information, e.g., the
+position of the mouse when it’s clicked. Tk provides access to these parameters in Tcl callback scripts through the use of
+percent substitutions. These percent substitutions let you capture them so they can be used in your script. We’ll see
+percent substitutions used later in another context, entry widget validation.</p>
+<p>Tkinter abstracts away these percent substitutions and instead encapsulates all the event parameters in an event object.
+Above, we used the x and y fields to retrieve the mouse position.</p>
+<p>What’s with the lambda expressions? Tkinter expects you to provide a function as the event callback, which is passed an
+event object representing the event that triggered the callback. It’s sometimes not worth the bother of defining regular
+named functions for one-off trivial callbacks, such as in this example. But we still need to accept that event object as a
+parameter. Here, we’ve used Python’s anonymous functions via lambda to do just that, ignoring it in all but the last
+binding. In real applications, you’ll almost always use a regular function, such as the calculate function in our feet to
+meters example, or a method of an object.</p>
+<p>As we’ve described here, and throughout Tk’s documentation, events in Tk are surrounded by angle brackets, e.g. &lt;Enter&gt;.
+The Ruby/Tk authors decided to strip the angle brackets from events in its API, e.g., Enter.</p>
+<p>Tkx lets us provide command callbacks as just a Perl function (the first five), or as a two element array (the last case).
+The first element is the Perl code to be called, while the second array element specifies parameters to pass to that code.
+The function Tkx::Ev() will expand its parameter (%x %y in this case) when the callback is invoked, which will perform the
+percent substitutions. These then are passed as parameters to our function.</p>
+<p>Multiple bindings for an event
+We’ve just seen how event bindings can be assigned to an individual widget. When a matching event is received by that
+widget, the binding is triggered. But that’s not all you can do.</p>
+<p>Your binding can capture not only a single event but a short sequence of events. The &lt;Double-1&gt; binding triggers when two
+mouse clicks occur in a short time. You can do the same thing to capture two keys pressed in a row, e.g.,
+&lt;KeyPress-a&gt;&lt;KeyPress-b&gt; or simply &lt;a&gt;&lt;b&gt;.</p>
+<p>For keyboard events, case matters. If you want to bind to a capital A, use &lt;KeyPress-A&gt; or &lt;A&gt;.</p>
+<p>You can also assign an event binding to a toplevel window. When a matching event occurs anywhere in that window, the
+binding is triggered. In our feet to meters example, we set up a binding for the “Return” key on the main application
+toplevel window. If the “Return” key is pressed when any widget contained in the toplevel window had the focus, that
+binding will fire.</p>
+<p>Less commonly, you can create event bindings triggered when a matching event occurs anywhere in the application or even for
+events received by any widget of a given class, e.g., all buttons.</p>
+<p>More than one binding can fire for an event. This keeps event handlers concise and limited in scope, making for more
+modular code. For example, the behavior of each widget class in Tk is itself defined with script-level event bindings.
+These stay separate from event bindings in your application. Event bindings assigned to a widget can also be changed (or
+deleted) at any time. They can be modified to alter event handling for widgets of a certain class or parts of your
+application. You can reorder, extend, or change the sequence of event bindings that are triggered for each widget; see the
+bindtags command reference if you’re curious.</p>
+<p>Available events
+The most common events are described below, along with the circumstances when they are generated. Some are generated on
+some platforms and not others. For a complete description of all the different event names, modifiers, and the different
+event parameters that are available with each, the best place to look is the bind command reference.</p>
+<p>&lt;Activate&gt;:
+Window has become active.
+&lt;Deactivate&gt;:
+Window has been deactivated.
+&lt;MouseWheel&gt;:
+Scroll wheel on mouse has been moved.
+&lt;KeyPress&gt;:
+Key on keyboard has been pressed down.
+&lt;KeyRelease&gt;:
+Key has been released.
+&lt;ButtonPress&gt;:
+A mouse button has been pressed.
+&lt;ButtonRelease&gt;:
+A mouse button has been released.
+&lt;Motion&gt;:
+Mouse has been moved.
+&lt;Configure&gt;:
+Widget has changed size or position.
+&lt;Destroy&gt;:
+Widget is being destroyed.
+&lt;FocusIn&gt;:
+Widget has been given keyboard focus.
+&lt;FocusOut&gt;:
+Widget has lost keyboard focus.
+&lt;Enter&gt;:
+Mouse pointer enters widget.
+&lt;Leave&gt;:
+Mouse pointer leaves widget.
+Event detail for mouse events is the button that was pressed, e.g., 1, 2, or 3. For keyboard events, it’s the specific key,
+e.g., A, 9, space, plus, comma, equal. A complete list can be found in the keysyms command reference.</p>
+<p>Event modifiers can include, e.g., B1 or Button1 to signify the main mouse button being held down, Double or Triple for
+sequences of the same event. Key modifiers for when keys on the keyboard are held down inline Control, Shift, Alt, Option,
+and Command.</p>
+<p>Virtual events
+The events we’ve seen so far are low-level operating system events like mouse clicks and window resizes. Many widgets also
+generate higher-level, semantic events called virtual events. These are indicated by double angle brackets around the event
+name, e.g., &lt;&lt;foo&gt;&gt;.</p>
+<p>As we’ve mentioned, Ruby/Tk strips away the (single) angle brackets from regular event names. Virtual events use a single
+set of angle brackets, e.g., &lt;foo&gt;.
+For example, a listbox widget generates a &lt;&lt;ListboxSelect&gt;&gt; virtual event whenever its selection changes. The same virtual
+event is generated whether a user clicked on an item, selected using the arrow keys, or another way. Virtual events avoid
+the problem of setting up multiple, possibly platform-specific event bindings to capture common changes. The available
+virtual events for a widget will be listed in the documentation for the widget class.</p>
+<p>Tk also defines virtual events for common operations that are triggered in different ways for different platforms. These
+include &lt;&lt;Cut&gt;&gt;, &lt;&lt;Copy&gt;&gt; and &lt;&lt;Paste&gt;&gt;. A &lt;&lt;ContextMenu&gt;&gt; virtual event is generated when the right mouse button is
+clicked, taking care of that discrepancy between button #2 and button #3 on macOS we noted previously.</p>
+<p>You can define your own virtual events, which can be specific to your application. This can be a useful way to keep
+platform-specific details isolated in a single module while using the virtual event throughout your application. Your own
+code can generate virtual events that work in exactly the same way that virtual events generated by Tk do.</p>
+<p>root.event_generate(“&lt;&lt;MyOwnEvent&gt;&gt;”)
+event generate . “&lt;&lt;MyOwnEvent&gt;&gt;”
+Tk.event_generate(root, “&lt;MyOwnEvent&gt;”)
+Tkx::event_generate($mw, “&lt;&lt;MyOwnEvent&gt;&gt;”);</p>
+</section>
+
+
+           </div>
+          </div>
+          <footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2025, santosg57, santosg572@gmail.com.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

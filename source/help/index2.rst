@@ -7,6 +7,7 @@ HELP
    help_random
    random_sample
    statsmodels
+   help_tkinter
 
 
 

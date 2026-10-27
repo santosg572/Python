@@ -17,6 +17,7 @@
       <script src="../_static/documentation_options.js?v=2709fde1"></script>
       <script src="../_static/doctools.js?v=9a2dae69"></script>
       <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+      <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <script src="../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
@@ -94,9 +95,67 @@
   <section id="distribucion-normal">
 <h1>Distribución normal<a class="headerlink" href="#distribucion-normal" title="Link to this heading"></a></h1>
 <p><strong>Función de densidad de probabilidad</strong></p>
-<img alt="../_images/funcion_distribucion_probabilidad.png" src="../_images/funcion_distribucion_probabilidad.png" />
-<p><strong>Función de distribución de probabilidad</strong></p>
 <img alt="../_images/funcion_densidad_normal.png" src="../_images/funcion_densidad_normal.png" />
+<p><strong>Función de distribución de probabilidad</strong></p>
+<img alt="../_images/funcion_distribucion_probabilidad.png" src="../_images/funcion_distribucion_probabilidad.png" />
+<p>Para calcular la probabilidad de una distribución normal en Python, se utiliza principalmente la librería <strong>SciPy</strong> (a
+través
+de <code class="docutils literal notranslate"><span class="pre">scipy.stats.norm</span></code>), la cual permite trabajar con la función de distribución acumulada (<code class="docutils literal notranslate"><span class="pre">cdf</span></code>), la función de
+densidad de
+probabilidad (<code class="docutils literal notranslate"><span class="pre">pdf</span></code>) y la función cuantil (<code class="docutils literal notranslate"><span class="pre">ppf</span></code>)</p>
+<p><strong>Métodos principales en scipy.stats.norm</strong></p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">norm.cdf(x,</span> <span class="pre">loc=mu,</span> <span class="pre">scale=sigma)</span></code> (Función de distribución acumulada): Calcula <span class="math notranslate nohighlight">\(P(X \le x)\)</span>, es decir, la</p></li>
+</ul>
+<p>probabilidad
+acumulada desde menos infinito hasta el valor <span class="math notranslate nohighlight">\(x\)</span>.</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">norm.pdf(x,</span> <span class="pre">loc=mu,</span> <span class="pre">scale=sigma)</span></code> (Función de densidad de probabilidad): Calcula el valor de la función de densidad</p></li>
+</ul>
+<p>en el
+punto <span class="math notranslate nohighlight">\(x\)</span>.</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">norm.ppf(q,</span> <span class="pre">loc=mu,</span> <span class="pre">scale=sigma)</span></code> (Función cuantil o inversa): Dado un nivel de probabilidad <span class="math notranslate nohighlight">\(q\)</span> (por</p></li>
+</ul>
+<p>ejemplo,
+(0.95)), devuelve el valor <span class="math notranslate nohighlight">\(x\)</span> tal que <span class="math notranslate nohighlight">\(P(X \le x) = q\)</span></p>
+<p><strong>Ejemplos prácticos en Python</strong></p>
+<ol class="arabic simple">
+<li><p>Calcular <span class="math notranslate nohighlight">\(P(X \le x)\)</span> (Probabilidad acumulada inferior)</p></li>
+</ol>
+<p>Si tienes una variable con media <span class="math notranslate nohighlight">\(\mu = 100\)</span> y desviación estándar <span class="math notranslate nohighlight">\(\sigma = 15\)</span>, y quieres saber cuál es
+la
+probabilidad de obtener un valor menor o igual a <span class="math notranslate nohighlight">\(115\)</span>:</p>
+<div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span><span class="w"> </span><span class="nn">scipy.stats</span><span class="w"> </span><span class="kn">import</span> <span class="n">norm</span>
+
+<span class="n">mu</span> <span class="o">=</span> <span class="mi">100</span>
+<span class="n">sigma</span> <span class="o">=</span> <span class="mi">15</span>
+<span class="n">x</span> <span class="o">=</span> <span class="mi">115</span>
+
+<span class="n">probabilidad</span> <span class="o">=</span> <span class="n">norm</span><span class="o">.</span><span class="n">cdf</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">loc</span><span class="o">=</span><span class="n">mu</span><span class="p">,</span> <span class="n">scale</span><span class="o">=</span><span class="n">sigma</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;P(X &lt;= </span><span class="si">{</span><span class="n">x</span><span class="si">}</span><span class="s2">) = </span><span class="si">{</span><span class="n">probabilidad</span><span class="si">:</span><span class="s2">.4f</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+<span class="c1"># Salida aproximada: P(X &lt;= 115) = 0.8413 (84.13%)</span>
+</pre></div>
+</div>
+<ol class="arabic simple" start="2">
+<li><p>Calcular <span class="math notranslate nohighlight">\(P(X &gt; x)\)</span> (Probabilidad superior)</p></li>
+</ol>
+<p>Para calcular la probabilidad de obtener un valor mayor a <span class="math notranslate nohighlight">\(x\)</span>, se resta la función acumulada de <span class="math notranslate nohighlight">\(1\)</span>:</p>
+<div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="n">probabilidad_mayor</span> <span class="o">=</span> <span class="mi">1</span> <span class="o">-</span> <span class="n">norm</span><span class="o">.</span><span class="n">cdf</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">loc</span><span class="o">=</span><span class="n">mu</span><span class="p">,</span> <span class="n">scale</span><span class="o">=</span><span class="n">sigma</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;P(X &gt; </span><span class="si">{</span><span class="n">x</span><span class="si">}</span><span class="s2">) = </span><span class="si">{</span><span class="n">probabilidad_mayor</span><span class="si">:</span><span class="s2">.4f</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+<ol class="arabic simple" start="3">
+<li><p>Calcular <span class="math notranslate nohighlight">\(P(a \le X \le b)\)</span> (Probabilidad en un intervalo)</p></li>
+</ol>
+<p>Para calcular la probabilidad entre dos valores <span class="math notranslate nohighlight">\(a\)</span> y <span class="math notranslate nohighlight">\(b\)</span>, restas la acumulada del valor mayor menos la del
+valor
+menor:</p>
+<div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="n">a</span><span class="p">,</span> <span class="n">b</span> <span class="o">=</span> <span class="mi">90</span><span class="p">,</span> <span class="mi">110</span>
+<span class="n">prob_intervalo</span> <span class="o">=</span> <span class="n">norm</span><span class="o">.</span><span class="n">cdf</span><span class="p">(</span><span class="n">b</span><span class="p">,</span> <span class="n">loc</span><span class="o">=</span><span class="n">mu</span><span class="p">,</span> <span class="n">scale</span><span class="o">=</span><span class="n">sigma</span><span class="p">)</span> <span class="o">-</span> <span class="n">norm</span><span class="o">.</span><span class="n">cdf</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">loc</span><span class="o">=</span><span class="n">mu</span><span class="p">,</span> <span class="n">scale</span><span class="o">=</span><span class="n">sigma</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;P(</span><span class="si">{</span><span class="n">a</span><span class="si">}</span><span class="s2"> &lt;= X &lt;= </span><span class="si">{</span><span class="n">b</span><span class="si">}</span><span class="s2">) = </span><span class="si">{</span><span class="n">prob_intervalo</span><span class="si">:</span><span class="s2">.4f</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
 </section>
 
 

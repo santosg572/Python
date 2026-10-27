@@ -1,0 +1,221 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="../../">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Entry &mdash; santosg57-python 0.1 documentation</title>
+      <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=b86133f3" />
+      <link rel="stylesheet" type="text/css" href="../../_static/css/theme.css?v=9edc463e" />
+      <link rel="stylesheet" type="text/css" href="../../_static/custom.css?v=836bb062" />
+
+  
+      <script src="../../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="../../_static/documentation_options.js?v=2709fde1"></script>
+      <script src="../../_static/doctools.js?v=9a2dae69"></script>
+      <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../../index.html" class="icon icon-home">
+            santosg57-python
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+<li class="toctree-l1"><a class="reference internal" href="../../Temarios/index2.html">sss</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../funciones.html">Funciones o Métodos creados por el Usuario</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../numpy/Imagenes/imagenes.html">Estructuras de datos en el módulo numpy</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../numpy_help.html">Help numpy</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../matplotlyb.html">Matplotlib.pyplot</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../ejercicio_01.html">Ejercicio01</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../ubuntu_windows.html">Pasos para instalar Ubuntu con WSL</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../funciones_curso.html">Algunas funciones desarrolladas durante el curso</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../ejercicio_calculo_de_probabilidades.html">Cálculo de Probabilidades</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../estadistica/index2.html">Estadística</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../help/index2.html">HELP</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">santosg57-python</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">Entry</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../../_sources/Python_Tkinter/source/entry.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="entry">
+<h1>Entry<a class="headerlink" href="#entry" title="Link to this heading"></a></h1>
+<p>Python ofrece múltiples opciones para desarrollar una interfaz gráfica de usuario (GUI). De entre todos los métodos, Tkinter es el más utilizado. Python con Tkinter es la
+forma más rápida y sencilla de crear aplicaciones GUI. Crear una GUI con Tkinter es una tarea fácil.</p>
+<p>En Python 3, Tkinter viene preinstalado, pero también se puede instalar mediante el siguiente comando:</p>
+<div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="n">pip</span> <span class="n">install</span> <span class="n">tkinter</span>
+</pre></div>
+</div>
+<p>Ejemplo: Ahora vamos a crear una ventana sencilla usando Tkinter.</p>
+<div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="c1"># creating a simple tkinter window</span>
+<span class="c1"># if you are using python2</span>
+<span class="c1"># use import Tkinter as tk</span>
+
+<span class="kn">import</span><span class="w"> </span><span class="nn">tkinter</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">tk</span>
+
+
+<span class="n">root</span> <span class="o">=</span> <span class="n">tk</span><span class="o">.</span><span class="n">Tk</span><span class="p">()</span>
+<span class="n">root</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s2">&quot;First Tkinter Window&quot;</span><span class="p">)</span>
+<span class="n">root</span><span class="o">.</span><span class="n">mainloop</span><span class="p">()</span>
+</pre></div>
+</div>
+<p><strong>El widget de entrada</strong></p>
+<p>El widget de entrada es un widget de Tkinter que se utiliza para introducir o mostrar una sola línea de texto.</p>
+<p>Sintaxis:</p>
+<p><strong>entrada = tk.Entrada(padre, opciones)</strong></p>
+<p><a href="#id1"><span class="problematic" id="id2">**</span></a>Parámetros: **</p>
+<ol class="arabic simple">
+<li><p>Ventana principal: La ventana o marco principal en el que se mostrará el widget.</p></li>
+<li><p>Opciones: Las distintas opciones que ofrece el widget de entrada son:</p></li>
+</ol>
+<ul class="simple">
+<li><p>bg: El color de fondo normal que se muestra detrás de la etiqueta y el indicador.</p></li>
+<li><p>bd: El tamaño del borde alrededor del indicador. El valor predeterminado es de 2 píxeles.</p></li>
+<li><p>Fuente: La fuente utilizada para el texto.</p></li>
+<li><p>fg: El color utilizado para renderizar el texto.</p></li>
+<li><p>justificar: Si el texto contiene varias líneas, esta opción controla cómo se justifica el texto: CENTRO, IZQUIERDA o DERECHA.</p></li>
+<li><p>Relieve: Con el valor predeterminado, relieve=PLANO. Puede configurar esta opción con cualquiera de los otros estilos, como: HUNDIDO, RÍGIDO, ELEVADO, RANURA.</p></li>
+<li><p>mostrar: Normalmente, los caracteres que escribe el usuario aparecen en la entrada. Para crear una entrada .password. que muestre cada carácter como un asterisco,</p></li>
+</ul>
+<p>configure mostrar=”*”.
+* textvariable: Para poder recuperar el texto actual de su widget de entrada, debe establecer esta opción en una instancia de la clase StringVar.</p>
+<p><a href="#id3"><span class="problematic" id="id4">**</span></a>Métodos: Los distintos métodos que proporciona el widget de entrada son: **</p>
+<ul class="simple">
+<li><p>get() : Devuelve el texto actual de la entrada como una cadena.</p></li>
+<li><p>eliminar(): Elimina caracteres del widget</p></li>
+<li><p>insertar ( índice, ‘nombre’) : Inserta la cadena ‘nombre’ antes del carácter en el índice dado.</p></li>
+</ul>
+<p><strong>Ejemplo:</strong></p>
+<div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Program to make a simple</span>
+<span class="c1"># login screen</span>
+
+<span class="kn">import</span><span class="w"> </span><span class="nn">tkinter</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">tk</span>
+
+<span class="n">root</span><span class="o">=</span><span class="n">tk</span><span class="o">.</span><span class="n">Tk</span><span class="p">()</span>
+
+<span class="c1"># setting the windows size</span>
+<span class="n">root</span><span class="o">.</span><span class="n">geometry</span><span class="p">(</span><span class="s2">&quot;600x400&quot;</span><span class="p">)</span>
+
+<span class="c1"># declaring string variable</span>
+<span class="c1"># for storing name and password</span>
+<span class="n">name_var</span><span class="o">=</span><span class="n">tk</span><span class="o">.</span><span class="n">StringVar</span><span class="p">()</span>
+<span class="n">passw_var</span><span class="o">=</span><span class="n">tk</span><span class="o">.</span><span class="n">StringVar</span><span class="p">()</span>
+
+
+<span class="c1"># defining a function that will</span>
+<span class="c1"># get the name and password and</span>
+<span class="c1"># print them on the screen</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">submit</span><span class="p">():</span>
+   <span class="n">name</span><span class="o">=</span><span class="n">name_var</span><span class="o">.</span><span class="n">get</span><span class="p">()</span>
+   <span class="n">password</span><span class="o">=</span><span class="n">passw_var</span><span class="o">.</span><span class="n">get</span><span class="p">()</span>
+
+   <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;The name is : &quot;</span> <span class="o">+</span> <span class="n">name</span><span class="p">)</span>
+   <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;The password is : &quot;</span> <span class="o">+</span> <span class="n">password</span><span class="p">)</span>
+
+   <span class="n">name_var</span><span class="o">.</span><span class="n">set</span><span class="p">(</span><span class="s2">&quot;&quot;</span><span class="p">)</span>
+   <span class="n">passw_var</span><span class="o">.</span><span class="n">set</span><span class="p">(</span><span class="s2">&quot;&quot;</span><span class="p">)</span>
+
+<span class="c1"># creating a label for</span>
+<span class="c1"># name using widget Label</span>
+<span class="n">name_label</span> <span class="o">=</span> <span class="n">tk</span><span class="o">.</span><span class="n">Label</span><span class="p">(</span><span class="n">root</span><span class="p">,</span> <span class="n">text</span> <span class="o">=</span> <span class="s1">&#39;Username&#39;</span><span class="p">,</span> <span class="n">font</span><span class="o">=</span><span class="p">(</span><span class="s1">&#39;calibre&#39;</span><span class="p">,</span><span class="mi">10</span><span class="p">,</span> <span class="s1">&#39;bold&#39;</span><span class="p">))</span>
+
+<span class="c1"># creating a entry for input</span>
+<span class="c1"># name using widget Entry</span>
+<span class="n">name_entry</span> <span class="o">=</span> <span class="n">tk</span><span class="o">.</span><span class="n">Entry</span><span class="p">(</span><span class="n">root</span><span class="p">,</span><span class="n">textvariable</span> <span class="o">=</span> <span class="n">name_var</span><span class="p">,</span> <span class="n">font</span><span class="o">=</span><span class="p">(</span><span class="s1">&#39;calibre&#39;</span><span class="p">,</span><span class="mi">10</span><span class="p">,</span><span class="s1">&#39;normal&#39;</span><span class="p">))</span>
+
+<span class="c1"># creating a label for password</span>
+<span class="n">passw_label</span> <span class="o">=</span> <span class="n">tk</span><span class="o">.</span><span class="n">Label</span><span class="p">(</span><span class="n">root</span><span class="p">,</span> <span class="n">text</span> <span class="o">=</span> <span class="s1">&#39;Password&#39;</span><span class="p">,</span> <span class="n">font</span> <span class="o">=</span> <span class="p">(</span><span class="s1">&#39;calibre&#39;</span><span class="p">,</span><span class="mi">10</span><span class="p">,</span><span class="s1">&#39;bold&#39;</span><span class="p">))</span>
+
+<span class="c1"># creating a entry for password</span>
+<span class="n">passw_entry</span><span class="o">=</span><span class="n">tk</span><span class="o">.</span><span class="n">Entry</span><span class="p">(</span><span class="n">root</span><span class="p">,</span> <span class="n">textvariable</span> <span class="o">=</span> <span class="n">passw_var</span><span class="p">,</span> <span class="n">font</span> <span class="o">=</span> <span class="p">(</span><span class="s1">&#39;calibre&#39;</span><span class="p">,</span><span class="mi">10</span><span class="p">,</span><span class="s1">&#39;normal&#39;</span><span class="p">),</span> <span class="n">show</span> <span class="o">=</span> <span class="s1">&#39;*&#39;</span><span class="p">)</span>
+
+<span class="c1"># creating a button using the widget</span>
+<span class="c1"># Button that will call the submit function</span>
+<span class="n">sub_btn</span><span class="o">=</span><span class="n">tk</span><span class="o">.</span><span class="n">Button</span><span class="p">(</span><span class="n">root</span><span class="p">,</span><span class="n">text</span> <span class="o">=</span> <span class="s1">&#39;Submit&#39;</span><span class="p">,</span> <span class="n">command</span> <span class="o">=</span> <span class="n">submit</span><span class="p">)</span>
+
+<span class="c1"># placing the label and entry in</span>
+<span class="c1"># the required position using grid</span>
+<span class="c1"># method</span>
+<span class="n">name_label</span><span class="o">.</span><span class="n">grid</span><span class="p">(</span><span class="n">row</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span><span class="n">column</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
+<span class="n">name_entry</span><span class="o">.</span><span class="n">grid</span><span class="p">(</span><span class="n">row</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span><span class="n">column</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+<span class="n">passw_label</span><span class="o">.</span><span class="n">grid</span><span class="p">(</span><span class="n">row</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span><span class="n">column</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
+<span class="n">passw_entry</span><span class="o">.</span><span class="n">grid</span><span class="p">(</span><span class="n">row</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span><span class="n">column</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+<span class="n">sub_btn</span><span class="o">.</span><span class="n">grid</span><span class="p">(</span><span class="n">row</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span><span class="n">column</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+
+<span class="c1"># performing an infinite loop</span>
+<span class="c1"># for the window to display</span>
+<span class="n">root</span><span class="o">.</span><span class="n">mainloop</span><span class="p">()</span>
+</pre></div>
+</div>
+</section>
+
+
+           </div>
+          </div>
+          <footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2025, santosg57, santosg572@gmail.com.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

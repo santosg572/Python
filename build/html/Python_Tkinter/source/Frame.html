@@ -1,0 +1,226 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="../../">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Frame &mdash; santosg57-python 0.1 documentation</title>
+      <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=b86133f3" />
+      <link rel="stylesheet" type="text/css" href="../../_static/css/theme.css?v=9edc463e" />
+      <link rel="stylesheet" type="text/css" href="../../_static/custom.css?v=836bb062" />
+
+  
+      <script src="../../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="../../_static/documentation_options.js?v=2709fde1"></script>
+      <script src="../../_static/doctools.js?v=9a2dae69"></script>
+      <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../../index.html" class="icon icon-home">
+            santosg57-python
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+<li class="toctree-l1"><a class="reference internal" href="../../Temarios/index2.html">sss</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../funciones.html">Funciones o Métodos creados por el Usuario</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../numpy/Imagenes/imagenes.html">Estructuras de datos en el módulo numpy</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../numpy_help.html">Help numpy</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../matplotlyb.html">Matplotlib.pyplot</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../ejercicio_01.html">Ejercicio01</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../ubuntu_windows.html">Pasos para instalar Ubuntu con WSL</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../funciones_curso.html">Algunas funciones desarrolladas durante el curso</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../ejercicio_calculo_de_probabilidades.html">Cálculo de Probabilidades</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../estadistica/index2.html">Estadística</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../help/index2.html">HELP</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">santosg57-python</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">Frame</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../../_sources/Python_Tkinter/source/Frame.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="frame">
+<h1>Frame<a class="headerlink" href="#frame" title="Link to this heading"></a></h1>
+<p>Un Frame en Tkinter es un widget de tipo contenedor que se utiliza para agrupar y organizar otros widgets dentro de una ventana. Funciona como una “caja” rectangular que
+ayuda a dividir una interfaz gráfica en secciones, facilitando la gestión del diseño y la disposición de los elementos de la aplicación.
+This video demonstrates how to create a Frame in Tkinter with a red background and other properties:</p>
+<p><strong>Características principales</strong></p>
+<ul class="simple">
+<li><p>Contenedor de widgets: Su función principal es agrupar otros widgets (como botones, etiquetas, campos de texto) y colocarlos dentro de él.</p></li>
+<li><p>Organización de la interfaz: Permite estructurar una interfaz compleja en secciones más pequeñas y manejables, lo que mejora la organización visual y la gestión del</p></li>
+</ul>
+<p>código.
+* Apariencia personalizable: Puedes configurar su ancho, alto, color de fondo, borde y estilo de relieve para que se adapte a tus necesidades de diseño.
+* Jerarquía de widgets: Los widgets dentro de un Frame pueden ser gestionados por gestores de geometría como pack, que a su vez pueden anidar otros Frames, creando una
+jerarquía de elementos en la aplicación.</p>
+<p>This video explains the hierarchical structure of Tkinter Frames with a simple analogy:</p>
+<p><strong>Ejemplo de uso</strong></p>
+<ol class="arabic simple">
+<li><p>Importar la biblioteca Tkinter.</p></li>
+<li><p>Crear una ventana principal.</p></li>
+<li><p>Instanciar un Frame especificando la ventana como su “padre” (master).</p></li>
+<li><p>Añadir otros widgets al Frame, en lugar de directamente a la ventana, indicando el Frame como su master al crearlos.</p></li>
+<li><p>Usar un gestor de geometría como pack() para mostrar el Frame en la ventana.</p></li>
+</ol>
+<p>This video shows how to create a Frame and place buttons inside it, demonstrating the concept of placing widgets within a Frame:</p>
+<hr class="docutils" />
+<p>Python ofrece múltiples opciones para desarrollar interfaces gráficas de usuario (GUI). De entre todos los métodos, Tkinter es el más utilizado. Se trata de una interfaz
+estándar de Python para el kit de herramientas Tk, incluido con Python . Crear una GUI con Python y Tkinter es la forma más rápida y sencilla de desarrollar aplicaciones
+GUI.</p>
+<p><strong>Nota:</strong>  Para más información, puede leer nuestro artículo.</p>
+<ol class="arabic simple">
+<li><p>¿Qué son los widgets?</p></li>
+<li><p>Descripción general de Python Tkinter</p></li>
+<li><p>Tutorial de Python Tkinter</p></li>
+</ol>
+<p><strong>¿Qué es un Frame en Tkinter?</strong></p>
+<p>Un marco es una región rectangular en la pantalla. También puede usarse como clase base para implementar widgets complejos. Se utiliza para organizar un grupo de widgets.</p>
+<p><strong>Sintaxis del widget Frame de Tkinter</strong></p>
+<p>A continuación se muestra la sintaxis para usar el widget de marco.</p>
+<p><strong>Sintaxis:   w = frame( maestro, opciones)</strong></p>
+<p><strong>Parámetros:</strong></p>
+<ul class="simple">
+<li><p>maestro : Este parámetro se utiliza para representar la ventana principal.</p></li>
+<li><p>Opciones : Hay muchas opciones disponibles que pueden utilizarse como pares clave-valor separados por comas.</p></li>
+</ul>
+<p><strong>Opciones de marcos Tkinter</strong></p>
+<p>Las siguientes son opciones de uso común que se pueden utilizar con este widget:</p>
+<ul class="simple">
+<li><p>bg: Esta opción se utilizaba para representar el color de fondo normal que se mostraba detrás de la etiqueta y el indicador.</p></li>
+<li><p>bd: Esta opción se utiliza para representar el tamaño del borde alrededor del indicador y el valor predeterminado es de 2 píxeles.</p></li>
+<li><p>cursor: Al usar esta opción, el cursor del ratón cambiará a ese patrón cuando esté sobre el marco.</p></li>
+<li><p>altura: La dimensión vertical del nuevo marco.</p></li>
+<li><p>highlightcolor: Esta opción se utilizaba para representar el color del resaltado de enfoque cuando el marco tenía el enfoque.</p></li>
+<li><p>highlightthickness: Esta opción se utilizaba para representar el color del resaltado de enfoque cuando el fotograma no estaba enfocado.</p></li>
+<li><p>highlightbackground: Esta opción se utilizaba para representar el grosor del resaltado de enfoque.</p></li>
+<li><p>relieve: El tipo de borde del marco. Su valor predeterminado es plano.</p></li>
+<li><p>Ancho: Esta opción solía representar el ancho del marco.</p></li>
+</ul>
+<p><strong>Ejemplo de widget de marco en Tkinter</strong></p>
+<p>En este ejemplo, el código que se muestra a continuación define funciones para crear widgets de Tkinter con opciones personalizadas, lo que facilita su creación con menos
+líneas de código. Genera una interfaz gráfica de usuario (GUI) con una ventana principal que contiene un marco, etiquetas y botones, todos con opciones específicas como el
+color de fondo, el tamaño del borde, el estilo del cursor y más, lo que mejora la coherencia visual y la usabilidad.</p>
+<div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w">  </span><span class="nn">tkinter</span><span class="w">  </span><span class="k">as</span><span class="w">  </span><span class="nn">tk</span>
+</pre></div>
+</div>
+<dl>
+<dt>​   # Función para crear widgets con todas las opciones</dt><dd><dl class="simple">
+<dt>def  crear_widget ( padre , tipo_widget , ** opciones ):</dt><dd><p>Devuelve  widget_type ( padre , ** opciones )</p>
+</dd>
+</dl>
+</dd>
+<dt>​   # Crea la ventana principal</dt><dd><p>ventana  =  crear_widget ( Ninguno , tk . Tk )
+ventana.título ( “Ejemplo de interfaz gráfica de usuario “ )</p>
+</dd>
+<dt>​   # Crea un widget de marco con todas las opciones</dt><dd><dl class="simple">
+<dt>marco  =  crear_widget ( ventana , tk . Marco , bg = ‘azul claro’ , bd = 3 , cursor = ‘mano2’ , altura = 100 ,</dt><dd><p>color de resaltado = ‘rojo’ , grosor de resaltado = 2 , fondo de resaltado = ‘negro’ ,
+relieve = tk . ELEVADO , ancho = 200 )</p>
+</dd>
+</dl>
+<p>marco.pack ( padx = 20 , pady = 20 )​​</p>
+</dd>
+<dt>​   # Crear widget de etiqueta con todas las opciones</dt><dd><dl class="simple">
+<dt>etiqueta  =  crear_widget ( marco , tk . Etiqueta , texto = ‘GeeksForGeeks’ , fuente = ‘50’ , fondo = ‘azul claro’ , ancho = 3 , cursor = ‘mano2’ ,</dt><dd><p>color de resaltado = ‘rojo’ , grosor de resaltado = 2 , fondo de resaltado = ‘negro’ ,
+alivio = tk . ELEVADO )</p>
+</dd>
+</dl>
+<p>etiqueta . paquete ()</p>
+</dd>
+<dt>​   # Crea un marco para los botones</dt><dd><dl class="simple">
+<dt>button_frame  =  create_widget ( window , tk . Frame , bg = ‘lightblue’ , bd = 3 , cursor = ‘hand2’ , height = 50 ,</dt><dd><p>color de resaltado = ‘rojo’ , grosor de resaltado = 2 , fondo de resaltado = ‘negro’ ,
+relieve = tk . ELEVADO , ancho = 200 )</p>
+</dd>
+</dl>
+<p>button_frame.pack ( pady = 10 )​​</p>
+</dd>
+<dt>​   # Función para crear botones con todas las opciones</dt><dd><dl class="simple">
+<dt>def  crear_botón ( padre , texto , fg ):</dt><dd><dl class="simple">
+<dt>return  create_widget ( parent , tk.Button , text = text , fg = fg , bg = ‘ lightblue’ , bd = 3 , cursor = ‘ hand2’ ,</dt><dd><p>color de resaltado = ‘rojo’ , grosor de resaltado = 2 , fondo de resaltado = ‘negro’ ,
+alivio = tk . ELEVADO )</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</dd>
+<dt>​   # Crear botones</dt><dd><dl class="simple">
+<dt>botones_info  = [( “Geeks1” , “rojo” ), ( “Geeks2” , “marrón” ), ( “Geeks3” , “azul” ),</dt><dd><p>( “Geeks4” , “verde” ), ( “Geeks5” , “verde” ), ( “Geeks6” , “verde” )]</p>
+</dd>
+</dl>
+</dd>
+<dt>​   para  texto , fg  en  buttons_info :</dt><dd><p>botón  =  crear_botón ( marco_botón , texto = texto , fg = fg )
+botón . pack ( lado = tk . LEFT )</p>
+</dd>
+<dt>​   # Ejecutar el bucle de eventos de Tkinter</dt><dd><p>ventana.bucle principal ( )</p>
+</dd>
+</dl>
+</section>
+
+
+           </div>
+          </div>
+          <footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2025, santosg57, santosg572@gmail.com.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>
