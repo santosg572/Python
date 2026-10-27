@@ -1,4 +1,4 @@
-# Prueba t de una muestra (ttest_1samp)
+Prueba t de una muestra (ttest_1samp)
 =======================================
 
 .. code:: Python

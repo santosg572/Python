@@ -6,6 +6,7 @@ HELP
    help_njumpy
    help_random
    random_sample
+   statsmodels
 
 
 

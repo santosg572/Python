@@ -1,0 +1,160 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="../">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Anova de medidas repetidas &mdash; santosg57-python 0.1 documentation</title>
+      <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=b86133f3" />
+      <link rel="stylesheet" type="text/css" href="../_static/css/theme.css?v=9edc463e" />
+      <link rel="stylesheet" type="text/css" href="../_static/custom.css?v=836bb062" />
+
+  
+      <script src="../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="../_static/documentation_options.js?v=2709fde1"></script>
+      <script src="../_static/doctools.js?v=9a2dae69"></script>
+      <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="HELP" href="../help/index2.html" />
+    <link rel="prev" title="Prueba anova de tres muestras o mas independientes" href="test_varianza_01.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../index.html" class="icon icon-home">
+            santosg57-python
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../Temarios/index2.html">sss</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../funciones.html">Funciones o Métodos creados por el Usuario</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../numpy/Imagenes/imagenes.html">Estructuras de datos en el módulo numpy</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../numpy_help.html">Help numpy</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlyb.html">Matplotlib.pyplot</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../ejercicio_01.html">Ejercicio01</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../ubuntu_windows.html">Pasos para instalar Ubuntu con WSL</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../funciones_curso.html">Algunas funciones desarrolladas durante el curso</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../ejercicio_calculo_de_probabilidades.html">Cálculo de Probabilidades</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="index2.html">Estadística</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="distribucion_normal.html">Distribución normal</a></li>
+<li class="toctree-l2"><a class="reference internal" href="clase_pruebas_estadisticas.html">Algunas pruebas estadísticas</a></li>
+<li class="toctree-l2"><a class="reference internal" href="t_test_01.html">Prueba t de una muestra (ttest_1samp)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="t_test_02.html">Prueba t para dos muestras independientes (ttest_ind)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="t_test_03.html">Prueba t para muestras pareadas / dependientes (ttest_rel)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="test_varianza_01.html">Prueba anova de tres muestras o mas independientes</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Anova de medidas repetidas</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../help/index2.html">HELP</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">santosg57-python</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="index2.html">Estadística</a></li>
+      <li class="breadcrumb-item active">Anova de medidas repetidas</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../_sources/estadistica/anova_medidas_repetidas.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="anova-de-medidas-repetidas">
+<h1>Anova de medidas repetidas<a class="headerlink" href="#anova-de-medidas-repetidas" title="Link to this heading"></a></h1>
+<div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">pandas</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">pd</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">statsmodels.api</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">sm</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">statsmodels.stats.anova</span><span class="w"> </span><span class="kn">import</span> <span class="n">AnovaRM</span>
+
+<span class="c1"># 1. Crear un DataFrame de ejemplo</span>
+<span class="c1"># Sujetos (10 personas), medidos en 3 condiciones/tiempos (Antes, Durante, Después)</span>
+<span class="n">data</span> <span class="o">=</span> <span class="p">{</span>
+ <span class="s1">&#39;sujeto&#39;</span><span class="p">:</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">9</span><span class="p">,</span> <span class="mi">10</span><span class="p">]</span> <span class="o">*</span> <span class="mi">3</span><span class="p">,</span>
+ <span class="s1">&#39;condicion&#39;</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;antes&#39;</span><span class="p">]</span><span class="o">*</span><span class="mi">10</span> <span class="o">+</span> <span class="p">[</span><span class="s1">&#39;durante&#39;</span><span class="p">]</span><span class="o">*</span><span class="mi">10</span> <span class="o">+</span> <span class="p">[</span><span class="s1">&#39;despues&#39;</span><span class="p">]</span><span class="o">*</span><span class="mi">10</span><span class="p">,</span>
+ <span class="s1">&#39;valor&#39;</span><span class="p">:</span> <span class="p">[</span>
+     <span class="mi">12</span><span class="p">,</span> <span class="mi">14</span><span class="p">,</span> <span class="mi">15</span><span class="p">,</span> <span class="mi">11</span><span class="p">,</span> <span class="mi">13</span><span class="p">,</span> <span class="mi">12</span><span class="p">,</span> <span class="mi">14</span><span class="p">,</span> <span class="mi">16</span><span class="p">,</span> <span class="mi">12</span><span class="p">,</span> <span class="mi">13</span><span class="p">,</span>  <span class="c1"># antes</span>
+     <span class="mi">15</span><span class="p">,</span> <span class="mi">18</span><span class="p">,</span> <span class="mi">17</span><span class="p">,</span> <span class="mi">14</span><span class="p">,</span> <span class="mi">16</span><span class="p">,</span> <span class="mi">15</span><span class="p">,</span> <span class="mi">17</span><span class="p">,</span> <span class="mi">19</span><span class="p">,</span> <span class="mi">14</span><span class="p">,</span> <span class="mi">15</span><span class="p">,</span>  <span class="c1"># durante</span>
+     <span class="mi">10</span><span class="p">,</span> <span class="mi">12</span><span class="p">,</span> <span class="mi">11</span><span class="p">,</span> <span class="mi">9</span><span class="p">,</span>  <span class="mi">11</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">11</span><span class="p">,</span> <span class="mi">13</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">11</span>   <span class="c1"># después</span>
+ <span class="p">]</span>
+<span class="p">}</span>
+
+<span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">data</span><span class="p">)</span>
+
+<span class="c1"># 2. Ejecutar el ANOVA de medidas repetidas</span>
+<span class="c1"># dv = variable dependiente, within = factor(es) de medidas repetidas, subject = identificador del sujeto</span>
+<span class="n">anova_model</span> <span class="o">=</span> <span class="n">AnovaRM</span><span class="p">(</span>
+ <span class="n">data</span><span class="o">=</span><span class="n">df</span><span class="p">,</span>
+ <span class="n">depvar</span><span class="o">=</span><span class="s1">&#39;valor&#39;</span><span class="p">,</span>
+ <span class="n">subject</span><span class="o">=</span><span class="s1">&#39;sujeto&#39;</span><span class="p">,</span>
+ <span class="n">within</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;condicion&#39;</span><span class="p">]</span>
+<span class="p">)</span>
+
+<span class="n">res</span> <span class="o">=</span> <span class="n">anova_model</span><span class="o">.</span><span class="n">fit</span><span class="p">()</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">res</span><span class="o">.</span><span class="n">summary</span><span class="p">())</span>
+</pre></div>
+</div>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="test_varianza_01.html" class="btn btn-neutral float-left" title="Prueba anova de tres muestras o mas independientes" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="../help/index2.html" class="btn btn-neutral float-right" title="HELP" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2025, santosg57, santosg572@gmail.com.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

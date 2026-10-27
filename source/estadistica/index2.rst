@@ -9,4 +9,6 @@ Estadística
    t_test_01
    t_test_02
    t_test_03
+   test_varianza_01
+   anova_medidas_repetidas
 

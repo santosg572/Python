@@ -1,0 +1,67 @@
+Help on package statsmodels:
+============================
+
+NAME
+    statsmodels
+
+PACKAGE CONTENTS
+    _version
+    api
+    base (package)
+    compat (package)
+    conftest
+    datasets (package)
+    discrete (package)
+    distributions (package)
+    duration (package)
+    emplike (package)
+    formula (package)
+    gam (package)
+    genmod (package)
+    graphics (package)
+    imputation (package)
+    interface (package)
+    iolib (package)
+    miscmodels (package)
+    multivariate (package)
+    nonparametric (package)
+    othermod (package)
+    regression (package)
+    robust (package)
+    sandbox (package)
+    src (package)
+    stats (package)
+    tests (package)
+    tools (package)
+    treatment (package)
+    tsa (package)
+
+FUNCTIONS
+    test(extra_args=None, exit=False)
+        Run the test suite
+        
+        Parameters
+        ----------
+        extra_args : list[str]
+            List of argument to pass to pytest when running the test suite. The
+            default is ['--tb=short', '--disable-pytest-warnings'].
+        exit : bool
+            Flag indicating whether the test runner should exit when finished.
+        
+        Returns
+        -------
+        int
+            The status code from the test run if exit is False.
+
+DATA
+    __all__ = ['__version__', '__version_info__', '__version_tuple__', 'te...
+    __version_info__ = (0, 14, 5)
+    __version_tuple__ = (0, 14, 5)
+
+VERSION
+    0.14.5
+
+FILE
+    /Users/santosg/miniconda3/lib/python3.9/site-packages/statsmodels/__init__.py
+
+

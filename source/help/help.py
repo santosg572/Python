@@ -2,8 +2,10 @@ import random
 import numpy as np
 import scipy as sp
 
-#print(dir(sp.stats))
+import statsmodels.stats.anova
 
-print(help(sp.stats.sampling))
+print(help(statsmodels.stats.anova))
+
+#print(help(sp.stats.sampling))
 
 
