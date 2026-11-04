@@ -157,6 +157,23 @@ BIOSTATISTICS-DANIEL
 
 * Normal
 
+.. code:: Python
+
+   from scipy.stats import norm
+
+   # Definir una distribución normal con media (loc) = 10 y desviación estándar (scale) = 2
+   mu, sigma = 10, 2
+   distribucion = norm(loc=mu, scale=sigma)
+   
+   # 1. Función de densidad de probabilidad (PDF) en x = 11
+   print("PDF:", distribucion.pdf(11))
+
+   # 2. Función de distribución acumulada (CDF) hasta x = 12
+   print("CDF:", distribucion.cdf(12))
+
+   # 3. Generar 5 números aleatorios con esta distribución
+   print("Aleatorios:", distribucion.rvs(size=5))
+
 
 
 

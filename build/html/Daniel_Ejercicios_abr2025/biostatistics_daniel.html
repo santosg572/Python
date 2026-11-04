@@ -152,7 +152,75 @@
 <p><strong>tabla de frecuencias, frecuencias acumulativa, frecuencia relativa y frecuencia relativa acumulatica</strong></p>
 <p><strong>Poligono de frecuencias</strong></p>
 <p><strong>Simetría de una Distribución de Frecuencias</strong></p>
-<p><strong>C03 Algunos Conceptos de Probabilidad</strong></p>
+<p><strong>C03. Algunos Conceptos de Probabilidad</strong></p>
+<p><strong>C04. Distribuciones de Probabilidad</strong></p>
+<ul class="simple">
+<li><p>Binomial</p></li>
+</ul>
+<p><strong>Ejemplo 1</strong></p>
+<div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span><span class="w"> </span><span class="nn">scipy.stats</span><span class="w"> </span><span class="kn">import</span> <span class="n">binom</span>
+
+<span class="c1"># Parámetros: n = 10 ensayos, p = 0.5 (ej. lanzar una moneda 10 veces)</span>
+<span class="n">n</span> <span class="o">=</span> <span class="mi">10</span>
+<span class="n">p</span> <span class="o">=</span> <span class="mf">0.5</span>
+
+<span class="c1"># 1. Probabilidad de obtener exactamente k = 6 éxitos (PMF)</span>
+<span class="n">prob_exacta</span> <span class="o">=</span> <span class="n">binom</span><span class="o">.</span><span class="n">pmf</span><span class="p">(</span><span class="n">k</span><span class="o">=</span><span class="mi">6</span><span class="p">,</span> <span class="n">n</span><span class="o">=</span><span class="n">n</span><span class="p">,</span> <span class="n">p</span><span class="o">=</span><span class="n">p</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Probabilidad de exactamente 6 éxitos: </span><span class="si">{</span><span class="n">prob_exacta</span><span class="si">:</span><span class="s2">.4f</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+
+<span class="c1"># 2. Probabilidad de obtener 6 o menos éxitos (CDF)</span>
+<span class="n">prob_acumulada</span> <span class="o">=</span> <span class="n">binom</span><span class="o">.</span><span class="n">cdf</span><span class="p">(</span><span class="n">k</span><span class="o">=</span><span class="mi">6</span><span class="p">,</span> <span class="n">n</span><span class="o">=</span><span class="n">n</span><span class="p">,</span> <span class="n">p</span><span class="o">=</span><span class="n">p</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Probabilidad de 6 o menos éxitos: </span><span class="si">{</span><span class="n">prob_acumulada</span><span class="si">:</span><span class="s2">.4f</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p><strong>Ejemplo 2</strong></p>
+<div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span>
+
+<span class="c1"># Simular 1000 experimentos donde se lanza una moneda 10 veces (n=10, p=0.5)</span>
+<span class="n">muestras</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">binomial</span><span class="p">(</span><span class="n">n</span><span class="o">=</span><span class="mi">10</span><span class="p">,</span> <span class="n">p</span><span class="o">=</span><span class="mf">0.5</span><span class="p">,</span> <span class="n">size</span><span class="o">=</span><span class="mi">1000</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Primeras 10 muestras:&quot;</span><span class="p">,</span> <span class="n">muestras</span><span class="p">[:</span><span class="mi">10</span><span class="p">])</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Media de las muestras:&quot;</span><span class="p">,</span> <span class="n">np</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="n">muestras</span><span class="p">))</span>
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>Poisson</p></li>
+</ul>
+<p><strong>Ejemplo 1</strong></p>
+<div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span><span class="w"> </span><span class="nn">scipy.stats</span><span class="w"> </span><span class="kn">import</span> <span class="n">poisson</span>
+
+<span class="c1"># Parámetro λ (tasa promedio de eventos, por ejemplo, 3 llamadas por hora)</span>
+<span class="n">lam</span> <span class="o">=</span> <span class="mi">3</span>
+
+<span class="c1"># 1. Probabilidad de que ocurran exactamente k = 5 eventos: P(X = 5)</span>
+<span class="n">k</span> <span class="o">=</span> <span class="mi">5</span>
+<span class="n">prob_exacta</span> <span class="o">=</span> <span class="n">poisson</span><span class="o">.</span><span class="n">pmf</span><span class="p">(</span><span class="n">k</span><span class="p">,</span> <span class="n">mu</span><span class="o">=</span><span class="n">lam</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;Probabilidad exacta de </span><span class="si">{</span><span class="n">k</span><span class="si">}</span><span class="s1"> eventos: </span><span class="si">{</span><span class="n">prob_exacta</span><span class="si">:</span><span class="s1">.4f</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
+
+<span class="c1"># 2. Probabilidad de que ocurran 5 o menos eventos: P(X &lt;= 5)</span>
+<span class="n">prob_acumulada</span> <span class="o">=</span> <span class="n">poisson</span><span class="o">.</span><span class="n">cdf</span><span class="p">(</span><span class="n">k</span><span class="p">,</span> <span class="n">mu</span><span class="o">=</span><span class="n">lam</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;Probabilidad acumulada (&lt;= </span><span class="si">{</span><span class="n">k</span><span class="si">}</span><span class="s1"> eventos): </span><span class="si">{</span><span class="n">prob_acumulada</span><span class="si">:</span><span class="s1">.4f</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
+
+<span class="c1"># 3. Probabilidad de que ocurran más de 5 eventos: P(X &gt; 5)</span>
+<span class="n">prob_mayor</span> <span class="o">=</span> <span class="mi">1</span> <span class="o">-</span> <span class="n">poisson</span><span class="o">.</span><span class="n">cdf</span><span class="p">(</span><span class="n">k</span><span class="p">,</span> <span class="n">mu</span><span class="o">=</span><span class="n">lam</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;Probabilidad mayor a </span><span class="si">{</span><span class="n">k</span><span class="si">}</span><span class="s1"> eventos: </span><span class="si">{</span><span class="n">prob_mayor</span><span class="si">:</span><span class="s1">.4f</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p><strong>Ejemplo 2</strong></p>
+<div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span>
+
+<span class="c1"># Generar 10 números aleatorios con una media λ = 3</span>
+<span class="n">muestras</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">poisson</span><span class="p">(</span><span class="n">lam</span><span class="o">=</span><span class="mi">3</span><span class="p">,</span> <span class="n">size</span><span class="o">=</span><span class="mi">10</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Muestras generadas:&#39;</span><span class="p">,</span> <span class="n">muestras</span><span class="p">)</span>
+
+<span class="c1"># Generar una matriz de 2x3 con λ = 5</span>
+<span class="n">matriz</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">poisson</span><span class="p">(</span><span class="n">lam</span><span class="o">=</span><span class="mi">5</span><span class="p">,</span> <span class="n">size</span><span class="o">=</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Matriz generada:</span><span class="se">\n</span><span class="s1">&#39;</span><span class="p">,</span> <span class="n">matriz</span><span class="p">)</span>
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>Normal</p></li>
+</ul>
 </section>
 
 
