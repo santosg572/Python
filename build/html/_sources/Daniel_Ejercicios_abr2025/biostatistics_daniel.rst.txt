@@ -55,4 +55,33 @@ BIOSTATISTICS-DANIEL
 
 **Ejemplo**
 
+.. code: Python
+
+   import numpy as np
+
+   x =
+   print(x)
+
+   bin = np.linspace(30,90,7)
+
+   print(bin)
+
+   h = np.digitize(x, bin)
+
+   print(h)
+
+   his = np.bincount(h)
+
+   print(his)
+
+**tabla de frecuencias, frecuencias acumulativa, frecuencia relativa y frecuencia relativa acumulatica**
+
+**Poligono de frecuencias**
+
+**Simetría de una Distribución de Frecuencias**
+
+**C03 Algunos Conceptos de Probabilidad**
+
+
+
 
