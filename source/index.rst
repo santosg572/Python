@@ -15,6 +15,7 @@ Contenido
 
 .. toctree::
 
+   Daniel_Ejercicios_abr2025/biostatistics_daniel
    Temarios/index2
    funciones
    numpy/Imagenes/imagenes
