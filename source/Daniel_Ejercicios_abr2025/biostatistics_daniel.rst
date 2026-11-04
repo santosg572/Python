@@ -80,7 +80,82 @@ BIOSTATISTICS-DANIEL
 
 **Simetría de una Distribución de Frecuencias**
 
-**C03 Algunos Conceptos de Probabilidad**
+**C03. Algunos Conceptos de Probabilidad**
+
+**C04. Distribuciones de Probabilidad**
+
+* Binomial
+
+**Ejemplo 1**
+
+.. code:: Python
+
+   from scipy.stats import binom
+
+   # Parámetros: n = 10 ensayos, p = 0.5 (ej. lanzar una moneda 10 veces)
+   n = 10
+   p = 0.5
+
+   # 1. Probabilidad de obtener exactamente k = 6 éxitos (PMF)
+   prob_exacta = binom.pmf(k=6, n=n, p=p)
+   print(f"Probabilidad de exactamente 6 éxitos: {prob_exacta:.4f}")
+
+   # 2. Probabilidad de obtener 6 o menos éxitos (CDF)
+   prob_acumulada = binom.cdf(k=6, n=n, p=p)
+   print(f"Probabilidad de 6 o menos éxitos: {prob_acumulada:.4f}")
+         
+**Ejemplo 2**
+
+.. code:: Python
+
+   import numpy as np
+
+   # Simular 1000 experimentos donde se lanza una moneda 10 veces (n=10, p=0.5)
+   muestras = np.random.binomial(n=10, p=0.5, size=1000)
+
+   print("Primeras 10 muestras:", muestras[:10])
+   print("Media de las muestras:", np.mean(muestras))
+
+* Poisson
+
+**Ejemplo 1**
+
+.. code:: Python
+
+   from scipy.stats import poisson
+
+   # Parámetro λ (tasa promedio de eventos, por ejemplo, 3 llamadas por hora)
+   lam = 3
+
+   # 1. Probabilidad de que ocurran exactamente k = 5 eventos: P(X = 5)
+   k = 5
+   prob_exacta = poisson.pmf(k, mu=lam)
+   print(f'Probabilidad exacta de {k} eventos: {prob_exacta:.4f}')
+
+   # 2. Probabilidad de que ocurran 5 o menos eventos: P(X <= 5)
+   prob_acumulada = poisson.cdf(k, mu=lam)
+   print(f'Probabilidad acumulada (<= {k} eventos): {prob_acumulada:.4f}')
+
+   # 3. Probabilidad de que ocurran más de 5 eventos: P(X > 5)
+   prob_mayor = 1 - poisson.cdf(k, mu=lam)
+   print(f'Probabilidad mayor a {k} eventos: {prob_mayor:.4f}')
+
+**Ejemplo 2**
+
+.. code:: Python
+
+   import numpy as np
+
+   # Generar 10 números aleatorios con una media λ = 3
+   muestras = np.random.poisson(lam=3, size=10)
+   print('Muestras generadas:', muestras)
+
+   # Generar una matriz de 2x3 con λ = 5
+   matriz = np.random.poisson(lam=5, size=(2, 3))
+   print('Matriz generada:\n', matriz)
+
+
+* Normal
 
 
 
