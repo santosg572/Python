@@ -221,6 +221,22 @@
 <ul class="simple">
 <li><p>Normal</p></li>
 </ul>
+<div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span><span class="w"> </span><span class="nn">scipy.stats</span><span class="w"> </span><span class="kn">import</span> <span class="n">norm</span>
+
+<span class="c1"># Definir una distribución normal con media (loc) = 10 y desviación estándar (scale) = 2</span>
+<span class="n">mu</span><span class="p">,</span> <span class="n">sigma</span> <span class="o">=</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">2</span>
+<span class="n">distribucion</span> <span class="o">=</span> <span class="n">norm</span><span class="p">(</span><span class="n">loc</span><span class="o">=</span><span class="n">mu</span><span class="p">,</span> <span class="n">scale</span><span class="o">=</span><span class="n">sigma</span><span class="p">)</span>
+
+<span class="c1"># 1. Función de densidad de probabilidad (PDF) en x = 11</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;PDF:&quot;</span><span class="p">,</span> <span class="n">distribucion</span><span class="o">.</span><span class="n">pdf</span><span class="p">(</span><span class="mi">11</span><span class="p">))</span>
+
+<span class="c1"># 2. Función de distribución acumulada (CDF) hasta x = 12</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;CDF:&quot;</span><span class="p">,</span> <span class="n">distribucion</span><span class="o">.</span><span class="n">cdf</span><span class="p">(</span><span class="mi">12</span><span class="p">))</span>
+
+<span class="c1"># 3. Generar 5 números aleatorios con esta distribución</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Aleatorios:&quot;</span><span class="p">,</span> <span class="n">distribucion</span><span class="o">.</span><span class="n">rvs</span><span class="p">(</span><span class="n">size</span><span class="o">=</span><span class="mi">5</span><span class="p">))</span>
+</pre></div>
+</div>
 </section>
 
 
