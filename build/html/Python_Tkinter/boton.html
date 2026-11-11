@@ -156,9 +156,9 @@
 </div>
 <p><strong>Puntos clave:</strong></p>
 <ul class="simple">
-<li><p>tk.Toplevel(): Crea una ventana independiente con su propia barra de título, botones de minimizar/maximizar y ciclo de vida.</p></li>
-<li><p>command=…: Se pasa el nombre de la función sin paréntesis (abrir_ventana_secundaria) para que se ejecute únicamente al hacer clic en el botón.</p></li>
-<li><p>.destroy(): Método utilizado para cerrar y liberar la ventana secundaria.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">tk.Toplevel()</span></code>: Crea una ventana independiente con su propia barra de título, botones de minimizar/maximizar y ciclo de vida.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">command=...</span></code>: Se pasa el nombre de la función sin paréntesis (abrir_ventana_secundaria) para que se ejecute únicamente al hacer clic en el botón.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">.destroy()</span></code>: Método utilizado para cerrar y liberar la ventana secundaria.</p></li>
 </ul>
 <div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">tkinter</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">tk</span>
 
@@ -184,50 +184,35 @@
 </div>
 <p>Tkinter incluye una amplia variedad de widgets estándar y temáticos (ttk) que permiten construir interfaces gráficas de usuario (GUI) completas en
 Python.</p>
-<p><a href="#id1"><span class="problematic" id="id2">**</span></a>Widgets Estándar de Tkinter</p>
+<p><strong>Widgets Estándar de Tkinter`</strong></p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">Button</span></code>: Un botón interactivo que ejecuta una función o comando al hacer clic en él.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">Canvas</span></code>: Un lienzo gráfico para dibujar</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">Canvas</span></code>: Un lienzo gráfico para dibujar formas geométricas, líneas, gráficos o mostrar imágenes.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">Checkbutton</span></code>: Una casilla de verificación que permite activar o desactivar opciones independientes.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">Entry</span></code>: Un campo de texto de una sola línea, ideal para que el usuario introduzca datos cortos como nombres o contraseñas.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">Frame</span></code>: Un contenedor rectangular que sirve para agrupar, estructurar y organizar otros widgets en la interfaz.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">Label</span></code>: Un widget de solo lectura para mostrar texto estático o imágenes.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">LabelFrame</span></code>: Un contenedor tipo Frame que incluye un borde visible y una etiqueta de título integrada.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">Listbox</span></code>: Una lista vertical con elementos de la cual el usuario puede seleccionar uno o varios.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">Menu</span></code>: Permite crear menús desplegables, barras de menú superiores y menús contextuales.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">Message</span></code>: Similar a Label, pero diseñado específicamente para mostrar texto multilínea con ajuste automático de línea.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">Radiobutton</span></code>: Un grupo de botones de opción donde solo se puede seleccionar una alternativa dentro de un conjunto mutuamente excluyente.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">Scale</span></code>: Un control deslizante (slider) para seleccionar un valor numérico dentro de un rango específico.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">Scrollbar</span></code>: Una barra de desplazamiento vertical u horizontal vinculada a widgets extensos (como Listbox, Canvas o Text).</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">Spinbox</span></code>: Un campo de entrada numérico con flechas de incremento y decremento.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">Text</span></code>: Un área de texto multilínea avanzada que soporta edición, inserción de imágenes y formato enriquecido.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">Toplevel</span></code>: Una ventana secundaria o independiente separada de la ventana raíz principal.</p></li>
 </ul>
-<p>formas geométricas, líneas, gráficos o mostrar imágenes.
-* <code class="docutils literal notranslate"><span class="pre">Checkbutton</span></code>: Una casilla de verificación que permite activar o desactivar opciones
-independientes.
-* <code class="docutils literal notranslate"><span class="pre">Entry</span></code>: Un campo de texto de una sola línea, ideal para que el usuario introduzca datos cortos como nombres o contraseñas.
-* <code class="docutils literal notranslate"><span class="pre">Frame</span></code>: Un
-contenedor rectangular que sirve para agrupar, estructurar y organizar otros widgets en la interfaz.
-* <code class="docutils literal notranslate"><span class="pre">Label</span></code>: Un widget de solo lectura para mostrar texto
-estático o imágenes.
-* <code class="docutils literal notranslate"><span class="pre">LabelFrame</span></code>: Un contenedor tipo Frame que incluye un borde visible y una etiqueta de título integrada.
-* <code class="docutils literal notranslate"><span class="pre">Listbox</span></code>: Una lista vertical con
-elementos de la cual el usuario puede seleccionar uno o varios.
-* <code class="docutils literal notranslate"><span class="pre">Menu</span></code>: Permite crear menús desplegables, barras de menú superiores y menús
-contextuales.
-* <code class="docutils literal notranslate"><span class="pre">Message</span></code>: Similar a Label, pero diseñado específicamente para mostrar texto multilínea con ajuste automático de línea.
-* <code class="docutils literal notranslate"><span class="pre">Radiobutton</span></code>: Un grupo de
-botones de opción donde solo se puede seleccionar una alternativa dentro de un conjunto mutuamente excluyente.
-* <code class="docutils literal notranslate"><span class="pre">Scale</span></code>: Un control deslizante (slider) para
-seleccionar un valor numérico dentro de un rango específico.
-* <code class="docutils literal notranslate"><span class="pre">Scrollbar</span></code>: Una barra de desplazamiento vertical u horizontal vinculada a widgets extensos (como
-Listbox, Canvas o Text).
-* <code class="docutils literal notranslate"><span class="pre">Spinbox</span></code>: Un campo de entrada numérico con flechas de incremento y decremento.
-* <code class="docutils literal notranslate"><span class="pre">Text</span></code>: Un área de texto multilínea avanzada que
-soporta
-edición, inserción de imágenes y formato enriquecido.
-* <code class="docutils literal notranslate"><span class="pre">Toplevel</span></code>: Una ventana secundaria o independiente separada de la ventana raíz principal.</p>
 <p><strong>Módulo tkinter.ttk (Widgets Temáticos)</strong></p>
-<p>El módulo tkinter.ttk (Themed Tkinter) ofrece versiones modernizadas que adoptan la apariencia nativa del sistema
-operativo,
-además de incorporar widgets adicionales muy útiles:</p>
+<p>El módulo <code class="docutils literal notranslate"><span class="pre">tkinter.ttk</span></code> (Themed Tkinter) ofrece versiones modernizadas que adoptan la apariencia nativa del sistema
+operativo, además de incorporar widgets adicionales muy útiles:</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">Combobox</span></code>: Una combinación de campo de entrada y menú desplegable.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">Notebook</span></code>: Un contenedor con pestañas</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">Notebook</span></code>: Un contenedor con pestañas (tabs) para organizar distintas secciones o vistas en un espacio reducido.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">Progressbar</span></code>: Una barra de progreso gráfica para indicar tareas en proceso o de carga.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">Separator</span></code>: Una línea divisoria horizontal o vertical para separar visualmente el contenido.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">Treeview</span></code>: Un widget avanzado para mostrar tablas con múltiples columnas, datos jerárquicos o estructuras en árbol.</p></li>
 </ul>
-<p>(tabs) para organizar distintas secciones o vistas en un espacio reducido.
-* <code class="docutils literal notranslate"><span class="pre">Progressbar</span></code>: Una barra de progreso gráfica para indicar tareas en proceso o de
-carga.
-* <code class="docutils literal notranslate"><span class="pre">Separator</span></code>: Una línea divisoria horizontal o vertical para separar visualmente el contenido.
-* <code class="docutils literal notranslate"><span class="pre">Treeview</span></code>: Un widget avanzado para mostrar tablas con
-múltiples columnas, datos jerárquicos o estructuras en árbol.</p>
 </section>
 
 

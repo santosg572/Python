@@ -76,9 +76,9 @@ Boton
 
 **Puntos clave:**
 
-• tk.Toplevel(): Crea una ventana independiente con su propia barra de título, botones de minimizar/maximizar y ciclo de vida.
-• command=...: Se pasa el nombre de la función sin paréntesis (abrir_ventana_secundaria) para que se ejecute únicamente al hacer clic en el botón.
-• .destroy(): Método utilizado para cerrar y liberar la ventana secundaria.
+• ``tk.Toplevel()``: Crea una ventana independiente con su propia barra de título, botones de minimizar/maximizar y ciclo de vida.
+• ``command=...``: Se pasa el nombre de la función sin paréntesis (abrir_ventana_secundaria) para que se ejecute únicamente al hacer clic en el botón.
+• ``.destroy()``: Método utilizado para cerrar y liberar la ventana secundaria.
 
 .. code:: Python
 
@@ -106,49 +106,34 @@ Boton
 Tkinter incluye una amplia variedad de widgets estándar y temáticos (ttk) que permiten construir interfaces gráficas de usuario (GUI) completas en 
 Python.
 
-**Widgets Estándar de Tkinter
+**Widgets Estándar de Tkinter`**
 
 * ``Button``: Un botón interactivo que ejecuta una función o comando al hacer clic en él.
-* ``Canvas``: Un lienzo gráfico para dibujar 
-formas geométricas, líneas, gráficos o mostrar imágenes.
-* ``Checkbutton``: Una casilla de verificación que permite activar o desactivar opciones 
-independientes.
+* ``Canvas``: Un lienzo gráfico para dibujar formas geométricas, líneas, gráficos o mostrar imágenes.
+* ``Checkbutton``: Una casilla de verificación que permite activar o desactivar opciones independientes.
 * ``Entry``: Un campo de texto de una sola línea, ideal para que el usuario introduzca datos cortos como nombres o contraseñas.
-* ``Frame``: Un 
-contenedor rectangular que sirve para agrupar, estructurar y organizar otros widgets en la interfaz.
-* ``Label``: Un widget de solo lectura para mostrar texto 
-estático o imágenes.
+* ``Frame``: Un contenedor rectangular que sirve para agrupar, estructurar y organizar otros widgets en la interfaz.
+* ``Label``: Un widget de solo lectura para mostrar texto estático o imágenes.
 * ``LabelFrame``: Un contenedor tipo Frame que incluye un borde visible y una etiqueta de título integrada.
-* ``Listbox``: Una lista vertical con 
-elementos de la cual el usuario puede seleccionar uno o varios.
-* ``Menu``: Permite crear menús desplegables, barras de menú superiores y menús 
-contextuales.
+* ``Listbox``: Una lista vertical con elementos de la cual el usuario puede seleccionar uno o varios.
+* ``Menu``: Permite crear menús desplegables, barras de menú superiores y menús contextuales.
 * ``Message``: Similar a Label, pero diseñado específicamente para mostrar texto multilínea con ajuste automático de línea.
-* ``Radiobutton``: Un grupo de 
-botones de opción donde solo se puede seleccionar una alternativa dentro de un conjunto mutuamente excluyente.
-* ``Scale``: Un control deslizante (slider) para 
-seleccionar un valor numérico dentro de un rango específico.
-* ``Scrollbar``: Una barra de desplazamiento vertical u horizontal vinculada a widgets extensos (como 
-Listbox, Canvas o Text).
+* ``Radiobutton``: Un grupo de botones de opción donde solo se puede seleccionar una alternativa dentro de un conjunto mutuamente excluyente.
+* ``Scale``: Un control deslizante (slider) para seleccionar un valor numérico dentro de un rango específico.
+* ``Scrollbar``: Una barra de desplazamiento vertical u horizontal vinculada a widgets extensos (como Listbox, Canvas o Text).
 * ``Spinbox``: Un campo de entrada numérico con flechas de incremento y decremento.
-* ``Text``: Un área de texto multilínea avanzada que 
-soporta 
-edición, inserción de imágenes y formato enriquecido.
+* ``Text``: Un área de texto multilínea avanzada que soporta edición, inserción de imágenes y formato enriquecido.
 * ``Toplevel``: Una ventana secundaria o independiente separada de la ventana raíz principal.
 
 **Módulo tkinter.ttk (Widgets Temáticos)**
 
-El módulo tkinter.ttk (Themed Tkinter) ofrece versiones modernizadas que adoptan la apariencia nativa del sistema 
-operativo, 
-además de incorporar widgets adicionales muy útiles:
+El módulo ``tkinter.ttk`` (Themed Tkinter) ofrece versiones modernizadas que adoptan la apariencia nativa del sistema 
+operativo, además de incorporar widgets adicionales muy útiles:
 
 * ``Combobox``: Una combinación de campo de entrada y menú desplegable.
-* ``Notebook``: Un contenedor con pestañas 
-(tabs) para organizar distintas secciones o vistas en un espacio reducido.
-* ``Progressbar``: Una barra de progreso gráfica para indicar tareas en proceso o de 
-carga.
+* ``Notebook``: Un contenedor con pestañas (tabs) para organizar distintas secciones o vistas en un espacio reducido.
+* ``Progressbar``: Una barra de progreso gráfica para indicar tareas en proceso o de carga.
 * ``Separator``: Una línea divisoria horizontal o vertical para separar visualmente el contenido.
-* ``Treeview``: Un widget avanzado para mostrar tablas con 
-múltiples columnas, datos jerárquicos o estructuras en árbol.
+* ``Treeview``: Un widget avanzado para mostrar tablas con múltiples columnas, datos jerárquicos o estructuras en árbol.
 
 
