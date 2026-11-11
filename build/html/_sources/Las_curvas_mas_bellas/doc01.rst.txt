@@ -26,12 +26,13 @@ Spirograph).
 
    x(t) = (R - r)\cos(t) + d\cos\left(\frac{R - r}{r} t\right)
 
-   y(t) = (R - r)\sin(t) - d\sin\left(\frac{R - r}{r} t\right)$$
+   y(t) = (R - r)\sin(t) - d\sin\left(\frac{R - r}{r} t\right)
 
 * Ejemplos notables:
 
   - La Astroide (:math:`R=4, r=1, d=1`): Una estrella de 4 puntas cóncavas perfecta.
-  - Rosetas de N pétalos: Dependiendo de la proporción racional entre los radios $R$ y $r$, produce mandalas e intrincados encajes simétricos.
+  - Rosetas de N pétalos: Dependiendo de la proporción racional entre los radios :math:`R` y :math:`r`, produce mandalas e intrincados 
+encajes simétricos.
 
 **3. Las Figuras de Lissajous**
 
@@ -44,7 +45,7 @@ utilizadas en física y osciloscopios.
 
    x(t) = A \sin(a t + \delta)
 
-   y(t) = B \sin(b t)$$
+   y(t) = B \sin(b t)
 
 **4. La Espiral Parmétrica Cónica y de Fermat (3D / 2D)**
 
@@ -58,5 +59,6 @@ Las espirales paramétricas trascienden el plano :math:`2\D` cuando se añade un
  
    y(t) = t \cdot \sin(t), 
 
-    z(t) = t$$
+   z(t) = t
+
 
