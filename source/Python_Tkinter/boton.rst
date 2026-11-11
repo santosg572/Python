@@ -1,0 +1,139 @@
+Boton
+=====
+
+.. code:: Python
+
+   python
+   import tkinter as tk
+
+   def accion_boton():
+     print("¡Botón presionado!")
+
+   root = tk.Tk()
+   root.title("Ejemplo de Botón")
+   root.geometry("300x200")
+
+   boton = tk.Button(
+      root, 
+      text="Haz clic aquí", 
+      command=accion_boton,
+      bg="lightblue", 
+      fg="black",
+      font=("Arial", 12)
+   )
+
+   boton.pack(pady=50)
+
+   root.mainloop()
+
+
+**Propiedades principales del botón**
+
+• ``text``: El texto que se muestra en el botón.
+• ``command``: La función o método que se ejecuta al pulsar el botón (sin paréntesis al nombrarla).
+• ``bg`` (o background): Color de fondo del botón.
+• ``fg`` (o foreground): Color del texto.
+• ``font``: Tipo de letra y tamaño (ejemplo: ("Helvetica", 10)).
+• ``state``: Controla si está activo (tk.NORMAL) o deshabilitado (tk.DISABLED).
+
+.. code:: Python
+
+   import tkinter as tk
+   from tkinter import ttk
+
+
+   def abrir_ventana_secundaria():
+     # Crear una ventana secundaria independiente
+     ventana_secundaria = tk.Toplevel(ventana_principal)
+     ventana_secundaria.title("Ventana secundaria")
+     ventana_secundaria.geometry("300x200")
+
+     # Etiqueta de ejemplo en la nueva ventana
+     etiqueta = ttk.Label(
+         ventana_secundaria, text="¡Hola! Esta es una nueva ventana."
+     )
+     etiqueta.pack(pady=20)
+
+     # Botón para cerrar esta ventana secundaria
+     boton_cerrar = ttk.Button(
+         ventana_secundaria, text="Cerrar", command=ventana_secundaria.destroy
+     )
+     boton_cerrar.pack(pady=10)
+
+   # Ventana principal
+   ventana_principal = tk.Tk()
+   ventana_principal.title("Ventana principal")
+   ventana_principal.geometry("400x300")
+
+   # Botón en la ventana principal para abrir la otra ventana
+   boton_abrir = ttk.Button(
+    ventana_principal, text="Abrir nueva ventana", command=abrir_ventana_secundaria
+   )
+   boton_abrir.pack(expand=True)
+
+   ventana_principal.mainloop()
+
+
+**Puntos clave:**
+
+• ``tk.Toplevel()``: Crea una ventana independiente con su propia barra de título, botones de minimizar/maximizar y ciclo de vida.
+• ``command=...``: Se pasa el nombre de la función sin paréntesis (abrir_ventana_secundaria) para que se ejecute únicamente al hacer clic en el botón.
+• ``.destroy()``: Método utilizado para cerrar y liberar la ventana secundaria.
+
+.. code:: Python
+
+   import tkinter as tk
+
+   def accion_boton(texto):
+       print(f"Has presionado: {texto}")
+
+   # Ventana principal
+   root = tk.Tk()
+   root.title("Varios botones con bucle")
+   root.geometry("300x200")
+
+   # Lista de textos para los botones
+   nombres = ["Botón 1", "Botón 2", "Botón 3", "Botón 4"]
+
+   # Crear y colocar los botones con un bucle
+   for i, nombre in enumerate(nombres):
+    # Usamos lambda con x=nombre para capturar el valor actual en cada iteración
+    btn = tk.Button(root, text=nombre, command=lambda x=nombre: accion_boton(x))
+    btn.pack(pady=5) # .pack() o .grid() para posicionar
+
+   root.mainloop()
+
+Tkinter incluye una amplia variedad de widgets estándar y temáticos (ttk) que permiten construir interfaces gráficas de usuario (GUI) completas en 
+Python.
+
+**Widgets Estándar de Tkinter`**
+
+* ``Button``: Un botón interactivo que ejecuta una función o comando al hacer clic en él.
+* ``Canvas``: Un lienzo gráfico para dibujar formas geométricas, líneas, gráficos o mostrar imágenes.
+* ``Checkbutton``: Una casilla de verificación que permite activar o desactivar opciones independientes.
+* ``Entry``: Un campo de texto de una sola línea, ideal para que el usuario introduzca datos cortos como nombres o contraseñas.
+* ``Frame``: Un contenedor rectangular que sirve para agrupar, estructurar y organizar otros widgets en la interfaz.
+* ``Label``: Un widget de solo lectura para mostrar texto estático o imágenes.
+* ``LabelFrame``: Un contenedor tipo Frame que incluye un borde visible y una etiqueta de título integrada.
+* ``Listbox``: Una lista vertical con elementos de la cual el usuario puede seleccionar uno o varios.
+* ``Menu``: Permite crear menús desplegables, barras de menú superiores y menús contextuales.
+* ``Message``: Similar a Label, pero diseñado específicamente para mostrar texto multilínea con ajuste automático de línea.
+* ``Radiobutton``: Un grupo de botones de opción donde solo se puede seleccionar una alternativa dentro de un conjunto mutuamente excluyente.
+* ``Scale``: Un control deslizante (slider) para seleccionar un valor numérico dentro de un rango específico.
+* ``Scrollbar``: Una barra de desplazamiento vertical u horizontal vinculada a widgets extensos (como Listbox, Canvas o Text).
+* ``Spinbox``: Un campo de entrada numérico con flechas de incremento y decremento.
+* ``Text``: Un área de texto multilínea avanzada que soporta edición, inserción de imágenes y formato enriquecido.
+* ``Toplevel``: Una ventana secundaria o independiente separada de la ventana raíz principal.
+
+**Módulo tkinter.ttk (Widgets Temáticos)**
+
+El módulo ``tkinter.ttk`` (Themed Tkinter) ofrece versiones modernizadas que adoptan la apariencia nativa del sistema 
+operativo, además de incorporar widgets adicionales muy útiles:
+
+* ``Combobox``: Una combinación de campo de entrada y menú desplegable.
+* ``Notebook``: Un contenedor con pestañas (tabs) para organizar distintas secciones o vistas en un espacio reducido.
+* ``Progressbar``: Una barra de progreso gráfica para indicar tareas en proceso o de carga.
+* ``Separator``: Una línea divisoria horizontal o vertical para separar visualmente el contenido.
+* ``Treeview``: Un widget avanzado para mostrar tablas con múltiples columnas, datos jerárquicos o estructuras en árbol.
+
+

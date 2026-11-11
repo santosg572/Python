@@ -1,0 +1,263 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="../">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Boton &mdash; santosg57-python 0.1 documentation</title>
+      <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=b86133f3" />
+      <link rel="stylesheet" type="text/css" href="../_static/css/theme.css?v=9edc463e" />
+      <link rel="stylesheet" type="text/css" href="../_static/custom.css?v=836bb062" />
+
+  
+      <script src="../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="../_static/documentation_options.js?v=2709fde1"></script>
+      <script src="../_static/doctools.js?v=9a2dae69"></script>
+      <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="prev" title="tkinter" href="tkinter.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../index.html" class="icon icon-home">
+            santosg57-python
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../Daniel_Ejercicios_abr2025/biostatistics_daniel.html">BIOSTATISTICS-DANIEL</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Temarios/index2.html">sss</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../funciones.html">Funciones o Métodos creados por el Usuario</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../numpy/Imagenes/imagenes.html">Estructuras de datos en el módulo numpy</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../numpy_help.html">Help numpy</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlyb.html">Matplotlib.pyplot</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../ejercicio_01.html">Ejercicio01</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../ubuntu_windows.html">Pasos para instalar Ubuntu con WSL</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../funciones_curso.html">Algunas funciones desarrolladas durante el curso</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../ejercicio_calculo_de_probabilidades.html">Cálculo de Probabilidades</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../estadistica/index2.html">Estadística</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../help/index2.html">HELP</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tkinter.html">tkinter</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Boton</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">santosg57-python</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">Boton</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../_sources/Python_Tkinter/boton.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="boton">
+<h1>Boton<a class="headerlink" href="#boton" title="Link to this heading"></a></h1>
+<div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="n">python</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">tkinter</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">tk</span>
+
+<span class="k">def</span><span class="w"> </span><span class="nf">accion_boton</span><span class="p">():</span>
+  <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;¡Botón presionado!&quot;</span><span class="p">)</span>
+
+<span class="n">root</span> <span class="o">=</span> <span class="n">tk</span><span class="o">.</span><span class="n">Tk</span><span class="p">()</span>
+<span class="n">root</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s2">&quot;Ejemplo de Botón&quot;</span><span class="p">)</span>
+<span class="n">root</span><span class="o">.</span><span class="n">geometry</span><span class="p">(</span><span class="s2">&quot;300x200&quot;</span><span class="p">)</span>
+
+<span class="n">boton</span> <span class="o">=</span> <span class="n">tk</span><span class="o">.</span><span class="n">Button</span><span class="p">(</span>
+   <span class="n">root</span><span class="p">,</span>
+   <span class="n">text</span><span class="o">=</span><span class="s2">&quot;Haz clic aquí&quot;</span><span class="p">,</span>
+   <span class="n">command</span><span class="o">=</span><span class="n">accion_boton</span><span class="p">,</span>
+   <span class="n">bg</span><span class="o">=</span><span class="s2">&quot;lightblue&quot;</span><span class="p">,</span>
+   <span class="n">fg</span><span class="o">=</span><span class="s2">&quot;black&quot;</span><span class="p">,</span>
+   <span class="n">font</span><span class="o">=</span><span class="p">(</span><span class="s2">&quot;Arial&quot;</span><span class="p">,</span> <span class="mi">12</span><span class="p">)</span>
+<span class="p">)</span>
+
+<span class="n">boton</span><span class="o">.</span><span class="n">pack</span><span class="p">(</span><span class="n">pady</span><span class="o">=</span><span class="mi">50</span><span class="p">)</span>
+
+<span class="n">root</span><span class="o">.</span><span class="n">mainloop</span><span class="p">()</span>
+</pre></div>
+</div>
+<p><strong>Propiedades principales del botón</strong></p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">text</span></code>: El texto que se muestra en el botón.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">command</span></code>: La función o método que se ejecuta al pulsar el botón (sin paréntesis al nombrarla).</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">bg</span></code> (o background): Color de fondo del botón.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">fg</span></code> (o foreground): Color del texto.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">font</span></code>: Tipo de letra y tamaño (ejemplo: (“Helvetica”, 10)).</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">state</span></code>: Controla si está activo (tk.NORMAL) o deshabilitado (tk.DISABLED).</p></li>
+</ul>
+<div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">tkinter</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">tk</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">tkinter</span><span class="w"> </span><span class="kn">import</span> <span class="n">ttk</span>
+
+
+<span class="k">def</span><span class="w"> </span><span class="nf">abrir_ventana_secundaria</span><span class="p">():</span>
+  <span class="c1"># Crear una ventana secundaria independiente</span>
+  <span class="n">ventana_secundaria</span> <span class="o">=</span> <span class="n">tk</span><span class="o">.</span><span class="n">Toplevel</span><span class="p">(</span><span class="n">ventana_principal</span><span class="p">)</span>
+  <span class="n">ventana_secundaria</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s2">&quot;Ventana secundaria&quot;</span><span class="p">)</span>
+  <span class="n">ventana_secundaria</span><span class="o">.</span><span class="n">geometry</span><span class="p">(</span><span class="s2">&quot;300x200&quot;</span><span class="p">)</span>
+
+  <span class="c1"># Etiqueta de ejemplo en la nueva ventana</span>
+  <span class="n">etiqueta</span> <span class="o">=</span> <span class="n">ttk</span><span class="o">.</span><span class="n">Label</span><span class="p">(</span>
+      <span class="n">ventana_secundaria</span><span class="p">,</span> <span class="n">text</span><span class="o">=</span><span class="s2">&quot;¡Hola! Esta es una nueva ventana.&quot;</span>
+  <span class="p">)</span>
+  <span class="n">etiqueta</span><span class="o">.</span><span class="n">pack</span><span class="p">(</span><span class="n">pady</span><span class="o">=</span><span class="mi">20</span><span class="p">)</span>
+
+  <span class="c1"># Botón para cerrar esta ventana secundaria</span>
+  <span class="n">boton_cerrar</span> <span class="o">=</span> <span class="n">ttk</span><span class="o">.</span><span class="n">Button</span><span class="p">(</span>
+      <span class="n">ventana_secundaria</span><span class="p">,</span> <span class="n">text</span><span class="o">=</span><span class="s2">&quot;Cerrar&quot;</span><span class="p">,</span> <span class="n">command</span><span class="o">=</span><span class="n">ventana_secundaria</span><span class="o">.</span><span class="n">destroy</span>
+  <span class="p">)</span>
+  <span class="n">boton_cerrar</span><span class="o">.</span><span class="n">pack</span><span class="p">(</span><span class="n">pady</span><span class="o">=</span><span class="mi">10</span><span class="p">)</span>
+
+<span class="c1"># Ventana principal</span>
+<span class="n">ventana_principal</span> <span class="o">=</span> <span class="n">tk</span><span class="o">.</span><span class="n">Tk</span><span class="p">()</span>
+<span class="n">ventana_principal</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s2">&quot;Ventana principal&quot;</span><span class="p">)</span>
+<span class="n">ventana_principal</span><span class="o">.</span><span class="n">geometry</span><span class="p">(</span><span class="s2">&quot;400x300&quot;</span><span class="p">)</span>
+
+<span class="c1"># Botón en la ventana principal para abrir la otra ventana</span>
+<span class="n">boton_abrir</span> <span class="o">=</span> <span class="n">ttk</span><span class="o">.</span><span class="n">Button</span><span class="p">(</span>
+ <span class="n">ventana_principal</span><span class="p">,</span> <span class="n">text</span><span class="o">=</span><span class="s2">&quot;Abrir nueva ventana&quot;</span><span class="p">,</span> <span class="n">command</span><span class="o">=</span><span class="n">abrir_ventana_secundaria</span>
+<span class="p">)</span>
+<span class="n">boton_abrir</span><span class="o">.</span><span class="n">pack</span><span class="p">(</span><span class="n">expand</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+
+<span class="n">ventana_principal</span><span class="o">.</span><span class="n">mainloop</span><span class="p">()</span>
+</pre></div>
+</div>
+<p><strong>Puntos clave:</strong></p>
+<ul class="simple">
+<li><p>tk.Toplevel(): Crea una ventana independiente con su propia barra de título, botones de minimizar/maximizar y ciclo de vida.</p></li>
+<li><p>command=…: Se pasa el nombre de la función sin paréntesis (abrir_ventana_secundaria) para que se ejecute únicamente al hacer clic en el botón.</p></li>
+<li><p>.destroy(): Método utilizado para cerrar y liberar la ventana secundaria.</p></li>
+</ul>
+<div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">tkinter</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">tk</span>
+
+<span class="k">def</span><span class="w"> </span><span class="nf">accion_boton</span><span class="p">(</span><span class="n">texto</span><span class="p">):</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Has presionado: </span><span class="si">{</span><span class="n">texto</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+
+<span class="c1"># Ventana principal</span>
+<span class="n">root</span> <span class="o">=</span> <span class="n">tk</span><span class="o">.</span><span class="n">Tk</span><span class="p">()</span>
+<span class="n">root</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s2">&quot;Varios botones con bucle&quot;</span><span class="p">)</span>
+<span class="n">root</span><span class="o">.</span><span class="n">geometry</span><span class="p">(</span><span class="s2">&quot;300x200&quot;</span><span class="p">)</span>
+
+<span class="c1"># Lista de textos para los botones</span>
+<span class="n">nombres</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;Botón 1&quot;</span><span class="p">,</span> <span class="s2">&quot;Botón 2&quot;</span><span class="p">,</span> <span class="s2">&quot;Botón 3&quot;</span><span class="p">,</span> <span class="s2">&quot;Botón 4&quot;</span><span class="p">]</span>
+
+<span class="c1"># Crear y colocar los botones con un bucle</span>
+<span class="k">for</span> <span class="n">i</span><span class="p">,</span> <span class="n">nombre</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">nombres</span><span class="p">):</span>
+ <span class="c1"># Usamos lambda con x=nombre para capturar el valor actual en cada iteración</span>
+ <span class="n">btn</span> <span class="o">=</span> <span class="n">tk</span><span class="o">.</span><span class="n">Button</span><span class="p">(</span><span class="n">root</span><span class="p">,</span> <span class="n">text</span><span class="o">=</span><span class="n">nombre</span><span class="p">,</span> <span class="n">command</span><span class="o">=</span><span class="k">lambda</span> <span class="n">x</span><span class="o">=</span><span class="n">nombre</span><span class="p">:</span> <span class="n">accion_boton</span><span class="p">(</span><span class="n">x</span><span class="p">))</span>
+ <span class="n">btn</span><span class="o">.</span><span class="n">pack</span><span class="p">(</span><span class="n">pady</span><span class="o">=</span><span class="mi">5</span><span class="p">)</span> <span class="c1"># .pack() o .grid() para posicionar</span>
+
+<span class="n">root</span><span class="o">.</span><span class="n">mainloop</span><span class="p">()</span>
+</pre></div>
+</div>
+<p>Tkinter incluye una amplia variedad de widgets estándar y temáticos (ttk) que permiten construir interfaces gráficas de usuario (GUI) completas en
+Python.</p>
+<p><a href="#id1"><span class="problematic" id="id2">**</span></a>Widgets Estándar de Tkinter</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">Button</span></code>: Un botón interactivo que ejecuta una función o comando al hacer clic en él.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">Canvas</span></code>: Un lienzo gráfico para dibujar</p></li>
+</ul>
+<p>formas geométricas, líneas, gráficos o mostrar imágenes.
+* <code class="docutils literal notranslate"><span class="pre">Checkbutton</span></code>: Una casilla de verificación que permite activar o desactivar opciones
+independientes.
+* <code class="docutils literal notranslate"><span class="pre">Entry</span></code>: Un campo de texto de una sola línea, ideal para que el usuario introduzca datos cortos como nombres o contraseñas.
+* <code class="docutils literal notranslate"><span class="pre">Frame</span></code>: Un
+contenedor rectangular que sirve para agrupar, estructurar y organizar otros widgets en la interfaz.
+* <code class="docutils literal notranslate"><span class="pre">Label</span></code>: Un widget de solo lectura para mostrar texto
+estático o imágenes.
+* <code class="docutils literal notranslate"><span class="pre">LabelFrame</span></code>: Un contenedor tipo Frame que incluye un borde visible y una etiqueta de título integrada.
+* <code class="docutils literal notranslate"><span class="pre">Listbox</span></code>: Una lista vertical con
+elementos de la cual el usuario puede seleccionar uno o varios.
+* <code class="docutils literal notranslate"><span class="pre">Menu</span></code>: Permite crear menús desplegables, barras de menú superiores y menús
+contextuales.
+* <code class="docutils literal notranslate"><span class="pre">Message</span></code>: Similar a Label, pero diseñado específicamente para mostrar texto multilínea con ajuste automático de línea.
+* <code class="docutils literal notranslate"><span class="pre">Radiobutton</span></code>: Un grupo de
+botones de opción donde solo se puede seleccionar una alternativa dentro de un conjunto mutuamente excluyente.
+* <code class="docutils literal notranslate"><span class="pre">Scale</span></code>: Un control deslizante (slider) para
+seleccionar un valor numérico dentro de un rango específico.
+* <code class="docutils literal notranslate"><span class="pre">Scrollbar</span></code>: Una barra de desplazamiento vertical u horizontal vinculada a widgets extensos (como
+Listbox, Canvas o Text).
+* <code class="docutils literal notranslate"><span class="pre">Spinbox</span></code>: Un campo de entrada numérico con flechas de incremento y decremento.
+* <code class="docutils literal notranslate"><span class="pre">Text</span></code>: Un área de texto multilínea avanzada que
+soporta
+edición, inserción de imágenes y formato enriquecido.
+* <code class="docutils literal notranslate"><span class="pre">Toplevel</span></code>: Una ventana secundaria o independiente separada de la ventana raíz principal.</p>
+<p><strong>Módulo tkinter.ttk (Widgets Temáticos)</strong></p>
+<p>El módulo tkinter.ttk (Themed Tkinter) ofrece versiones modernizadas que adoptan la apariencia nativa del sistema
+operativo,
+además de incorporar widgets adicionales muy útiles:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">Combobox</span></code>: Una combinación de campo de entrada y menú desplegable.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">Notebook</span></code>: Un contenedor con pestañas</p></li>
+</ul>
+<p>(tabs) para organizar distintas secciones o vistas en un espacio reducido.
+* <code class="docutils literal notranslate"><span class="pre">Progressbar</span></code>: Una barra de progreso gráfica para indicar tareas en proceso o de
+carga.
+* <code class="docutils literal notranslate"><span class="pre">Separator</span></code>: Una línea divisoria horizontal o vertical para separar visualmente el contenido.
+* <code class="docutils literal notranslate"><span class="pre">Treeview</span></code>: Un widget avanzado para mostrar tablas con
+múltiples columnas, datos jerárquicos o estructuras en árbol.</p>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="tkinter.html" class="btn btn-neutral float-left" title="tkinter" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2025, santosg57, santosg572@gmail.com.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>
