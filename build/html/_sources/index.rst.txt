@@ -28,4 +28,5 @@ Contenido
    estadistica/index2
    help/index2.rst
    Python_Tkinter/index2
+   Las_curvas_mas_bellas/doc01
 
