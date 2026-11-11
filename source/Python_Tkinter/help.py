@@ -1,8 +1,8 @@
 import tkinter
 
-window = tkinter.Tk()
+#window = tkinter.Tk()
 
-print(help(tkinter.Label))
+print(dir(tkinter.Button))
 
 
 
