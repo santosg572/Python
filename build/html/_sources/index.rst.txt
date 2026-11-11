@@ -27,6 +27,5 @@ Contenido
    ejercicio_calculo_de_probabilidades
    estadistica/index2
    help/index2.rst
-   Python_Tkinter/tkinter
-   Python_Tkinter/boton
+   Python_Tkinter/index2
 
