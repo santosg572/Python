@@ -20,9 +20,8 @@ Prueba t de una muestra (ttest_1samp)
 
    print(f"Valor p (p-value): {resultado.pvalue:.4f}")
 
-   fig, ax = plt.subplots(1, 1)
-   ax.boxplot([datos])
-   ax.set_xticklabels(["datos"]) 
-   ax.set_ylabel("mean") 
+   plt.figure(figsize=(8, 4))
+   plt.subplot(1, 1, 1)
+   plt.boxplot(datos)
    plt.show()
 

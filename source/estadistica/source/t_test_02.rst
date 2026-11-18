@@ -17,10 +17,7 @@ Prueba t para dos muestras independientes (ttest_ind)
    print(f"Estadístico t: {resultado.statistic:.4f}")
    print(f"Valor p (p-value): {resultado.pvalue:.4f}")
 
-   import matplotlib.pyplot as plt
-   fig, ax = plt.subplots(1, 1)
-   ax.boxplot([group0, group1, group2])
-   ax.set_xticklabels(["group0", "group1", "group2"]) 
-   ax.set_ylabel("mean") 
+   plt.subplot(1, 1, 1)
+   plt.boxplot([grupo1, grupo2])
    plt.show()
 
