@@ -1,0 +1,40 @@
+Seaborn
+========
+
+Seaborn is a Python library for creating statistical visualizations. It provides clean default styles and color palettes, making plots more attractive and easier to read. Built 
+on top of Matplotlib and integrated with pandas data structures, Seaborn makes data visualization easier and more consistent.
+
+* Seaborn emphasizes visualization as an essential part of data analysis.
+* Its dataset-oriented APIs allow switching between different plot types for the same variables.
+* Helps in understanding patterns, trends and relationships within the data.
+
+
+**Categories of Plots in Seaborn**
+
+Plots are basically used for visualizing the relationship between variables. Those variables can be either completely numerical or a category like a group, class, or division. 
+Seaborn divides the plot into the below categories:
+
+* Relational plots: used to understand the relation between two variables (e.g., lineplot, scatterplot)
+* Categorical plots: deals with categorical variables and how they can be visualized (e.g., boxplot, violinplot, barplot)
+* Distribution plots: show data distribution (e.g., histplot, kdeplot)
+* Regression plots: show relationships with regression line (e.g., lmplot, regplot)
+* Matrix plots: visualize matrices (e.g., heatmap)
+* Multi-plot grids: plot multiple graphs together (e.g., FacetGrid)
+
+**Ejemplos**
+
+**1. Lineplot**
+
+Lineplot is used to show the relationship between two continuous variables. It is commonly used for time-series or ordered data.
+
+.. code:: Python
+
+   import seaborn as sns
+   import matplotlib.pyplot as plt
+
+   fmri = sns.load_dataset("fmri")
+   sns.lineplot(x="timepoint", y="signal", hue="region", data=fmri)
+   plt.show()
+
+
+

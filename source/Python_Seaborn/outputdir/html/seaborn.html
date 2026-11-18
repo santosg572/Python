@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+
+<html lang="sp" data-content_root="./">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Seaborn &#8212; документација Seanborns 01</title>
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=5ecbeea2" />
+    <link rel="stylesheet" type="text/css" href="_static/alabaster.css?v=12dfc556" />
+    <script src="_static/documentation_options.js?v=cb95fe6c"></script>
+    <script src="_static/doctools.js?v=9a2dae69"></script>
+    <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+    <link rel="index" title="Индекс" href="genindex.html" />
+    <link rel="search" title="Претрага" href="search.html" />
+    <link rel="prev" title="Seanborns documentation" href="index.html" />
+   
+  <link rel="stylesheet" href="_static/custom.css" type="text/css" />
+  
+
+  
+  
+
+  </head><body>
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          
+
+          <div class="body" role="main">
+            
+  <section id="seaborn">
+<h1>Seaborn<a class="headerlink" href="#seaborn" title="Link to this heading">¶</a></h1>
+<p>Seaborn is a Python library for creating statistical visualizations. It provides clean default styles and color palettes, making plots more attractive and easier to read. Built
+on top of Matplotlib and integrated with pandas data structures, Seaborn makes data visualization easier and more consistent.</p>
+<ul class="simple">
+<li><p>Seaborn emphasizes visualization as an essential part of data analysis.</p></li>
+<li><p>Its dataset-oriented APIs allow switching between different plot types for the same variables.</p></li>
+<li><p>Helps in understanding patterns, trends and relationships within the data.</p></li>
+</ul>
+<p><strong>Categories of Plots in Seaborn</strong></p>
+<p>Plots are basically used for visualizing the relationship between variables. Those variables can be either completely numerical or a category like a group, class, or division.
+Seaborn divides the plot into the below categories:</p>
+<ul class="simple">
+<li><p>Relational plots: used to understand the relation between two variables (e.g., lineplot, scatterplot)</p></li>
+<li><p>Categorical plots: deals with categorical variables and how they can be visualized (e.g., boxplot, violinplot, barplot)</p></li>
+<li><p>Distribution plots: show data distribution (e.g., histplot, kdeplot)</p></li>
+<li><p>Regression plots: show relationships with regression line (e.g., lmplot, regplot)</p></li>
+<li><p>Matrix plots: visualize matrices (e.g., heatmap)</p></li>
+<li><p>Multi-plot grids: plot multiple graphs together (e.g., FacetGrid)</p></li>
+</ul>
+<p><strong>Ejemplos</strong></p>
+<p><strong>1. Lineplot</strong></p>
+<p>Lineplot is used to show the relationship between two continuous variables. It is commonly used for time-series or ordered data.</p>
+<div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">seaborn</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">sns</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">matplotlib.pyplot</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">plt</span>
+
+<span class="n">fmri</span> <span class="o">=</span> <span class="n">sns</span><span class="o">.</span><span class="n">load_dataset</span><span class="p">(</span><span class="s2">&quot;fmri&quot;</span><span class="p">)</span>
+<span class="n">sns</span><span class="o">.</span><span class="n">lineplot</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="s2">&quot;timepoint&quot;</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="s2">&quot;signal&quot;</span><span class="p">,</span> <span class="n">hue</span><span class="o">=</span><span class="s2">&quot;region&quot;</span><span class="p">,</span> <span class="n">data</span><span class="o">=</span><span class="n">fmri</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</section>
+
+
+          </div>
+          
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="Main">
+        <div class="sphinxsidebarwrapper">
+<h1 class="logo"><a href="index.html">Seanborns</a></h1>
+
+
+
+
+
+
+
+
+<h3>Навигација</h3>
+<p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Seaborn</a></li>
+</ul>
+
+<div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="index.html">Documentation overview</a><ul>
+      <li>Previous: <a href="index.html" title="претходна глава">Seanborns documentation</a></li>
+  </ul></li>
+</ul>
+</div>
+<search id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Брза претрага</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
+      <input type="submit" value="Тражи" />
+    </form>
+    </div>
+</search>
+<script>document.getElementById('searchbox').style.display = "block"</script>
+
+
+
+
+
+
+
+
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &#169;2026, Leopoldo.
+      
+      |
+      Powered by <a href="https://www.sphinx-doc.org/">Sphinx 7.4.7</a>
+      &amp; <a href="https://alabaster.readthedocs.io">Alabaster 0.7.16</a>
+      
+      |
+      <a href="_sources/seaborn.rst.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+  </body>
+</html>
