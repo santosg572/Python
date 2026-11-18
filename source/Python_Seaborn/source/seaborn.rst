@@ -1,31 +1,25 @@
 Seaborn
 ========
 
-Seaborn is a Python library for creating statistical visualizations. It provides clean default styles and color palettes, making plots more attractive and easier to read. Built 
-on top of Matplotlib and integrated with pandas data structures, Seaborn makes data visualization easier and more consistent.
-
-* Seaborn emphasizes visualization as an essential part of data analysis.
-* Its dataset-oriented APIs allow switching between different plot types for the same variables.
-* Helps in understanding patterns, trends and relationships within the data.
+Seaborn es una biblioteca de Python para crear visualizaciones estadísticas. Ofrece estilos predeterminados depurados y 
+paletas de colores, lo que hace que los gráficos resulten más atractivos y fáciles de leer. Al estar construida sobre 
+Matplotlib e integrada con las estructuras de datos de pandas, Seaborn hace que la visualización de datos sea más sencilla 
+y coherente.
 
 
-**Categories of Plots in Seaborn**
+* Seaborn destaca la visualización como una parte esencial del análisis de datos.
 
-Plots are basically used for visualizing the relationship between variables. Those variables can be either completely numerical or a category like a group, class, or division. 
-Seaborn divides the plot into the below categories:
+* Sus API orientadas a conjuntos de datos permiten alternar entre distintos tipos de gráficos para las mismas variables.
 
-* Relational plots: used to understand the relation between two variables (e.g., lineplot, scatterplot)
-* Categorical plots: deals with categorical variables and how they can be visualized (e.g., boxplot, violinplot, barplot)
-* Distribution plots: show data distribution (e.g., histplot, kdeplot)
-* Regression plots: show relationships with regression line (e.g., lmplot, regplot)
-* Matrix plots: visualize matrices (e.g., heatmap)
-* Multi-plot grids: plot multiple graphs together (e.g., FacetGrid)
+* Ayuda a comprender patrones, tendencias y relaciones dentro de los datos.
+
 
 **Ejemplos**
 
 **1. Lineplot**
 
-Lineplot is used to show the relationship between two continuous variables. It is commonly used for time-series or ordered data.
+El gráfico de líneas se utiliza para mostrar la relación entre dos variables continuas. Se emplea habitualmente para series 
+temporales o datos ordenados.
 
 .. code:: Python
 
@@ -38,9 +32,10 @@ Lineplot is used to show the relationship between two continuous variables. It i
 
 **2. Scatterplot**
 
-Scatterplot is used to show the relationship between two numerical variables. It helps in identifying patterns or correlations.
+El diagrama de dispersión se utiliza para mostrar la relación entre dos variables numéricas. Ayuda a identificar patrones o 
+correlaciones.
 
-**Example:** Relationship between total bill and tip
+**Ejemplo:** Relación entre el importe total de la cuenta y la propina
 
 .. code:: Python
 
@@ -54,9 +49,10 @@ Scatterplot is used to show the relationship between two numerical variables. It
 
 **3. Barplot**
 
-Barplot is used to compare numerical values across categories. It shows the average value with confidence intervals.
+El gráfico de barras se utiliza para comparar valores numéricos entre categorías. Muestra el valor promedio junto con 
+intervalos de confianza.
 
-Example: Average total bill per day
+**Ejemplo**: Factura total promedio por día
 
 .. code:: Python
 
@@ -70,9 +66,11 @@ Example: Average total bill per day
 
 **4. Boxplot**
 
-Boxplot is used to show the distribution of data based on quartiles. It helps identify spread and outliers.
+El diagrama de caja se utiliza para mostrar la distribución de los datos a partir de los cuartiles. Ayuda a identificar la 
+dispersión y los valores atípicos.
 
-Example: Distribution of total bill by day
+
+**Ejemplo**: Distribución del importe total por día
 
 .. code:: Python
 
@@ -85,10 +83,11 @@ Example: Distribution of total bill by day
    plt.show()
 
 
-5. Histplot
-Histplot is used to visualize the distribution of a single numerical variable.
+**5. Histplot**
 
-Example: Distribution of total bill
+Histplot se utiliza para visualizar la distribución de una única variable numérica.
+
+**Ejemplo**: Distribución del importe total de la factura
 
 
 .. code:: Python
@@ -101,36 +100,40 @@ Example: Distribution of total bill
    sns.histplot(tips["total_bill"], kde=True)
    plt.show()
 
-6. Heatmap
+**6. Heatmap**
 
-Heatmap is used to visualize matrix-like data using colors. It is commonly used for correlation matrices.
+Un mapa de calor se utiliza para visualizar datos con estructura matricial mediante el uso de colores. Se emplea 
+habitualmente para matrices de correlación.
 
-Example: Correlation heatmap
+
+**Ejemplo**: Mapa de calor de correlación
 
 .. code:: Python
 
    import seaborn as sns
    import matplotlib.pyplot as plt
 
-tips = sns.load_dataset("tips")
-corr = tips.corr(numeric_only=True)
+   tips = sns.load_dataset("tips")
+   corr = tips.corr(numeric_only=True)
 
-sns.heatmap(corr, annot=True, cmap="coolwarm")
-plt.show()
+   sns.heatmap(corr, annot=True, cmap="coolwarm")
+   plt.show()
 
 
 **7. Pairplot**
 
-Pairplot is used to plot pairwise relationships between multiple numerical variables.
+Pairplot se utiliza para representar las relaciones por pares entre múltiples variables numéricas.
 
-Example: Pairwise relationships in dataset
+**Ejemplo**: Relaciones por pares en el conjunto de datos
 
-import seaborn as sns
-import matplotlib.pyplot as plt
+.. code:: Python
 
-iris = sns.load_dataset("iris")
-sns.pairplot(iris, hue="species")
-plt.show()
+   import seaborn as sns
+   import matplotlib.pyplot as plt
+
+   iris = sns.load_dataset("iris")
+   sns.pairplot(iris, hue="species")
+   plt.show()
 
 
 

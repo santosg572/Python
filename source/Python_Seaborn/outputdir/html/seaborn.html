@@ -33,32 +33,100 @@
             
   <section id="seaborn">
 <h1>Seaborn<a class="headerlink" href="#seaborn" title="Link to this heading">¶</a></h1>
-<p>Seaborn is a Python library for creating statistical visualizations. It provides clean default styles and color palettes, making plots more attractive and easier to read. Built
-on top of Matplotlib and integrated with pandas data structures, Seaborn makes data visualization easier and more consistent.</p>
+<p>Seaborn es una biblioteca de Python para crear visualizaciones estadísticas. Ofrece estilos predeterminados depurados y
+paletas de colores, lo que hace que los gráficos resulten más atractivos y fáciles de leer. Al estar construida sobre
+Matplotlib e integrada con las estructuras de datos de pandas, Seaborn hace que la visualización de datos sea más sencilla
+y coherente.</p>
 <ul class="simple">
-<li><p>Seaborn emphasizes visualization as an essential part of data analysis.</p></li>
-<li><p>Its dataset-oriented APIs allow switching between different plot types for the same variables.</p></li>
-<li><p>Helps in understanding patterns, trends and relationships within the data.</p></li>
-</ul>
-<p><strong>Categories of Plots in Seaborn</strong></p>
-<p>Plots are basically used for visualizing the relationship between variables. Those variables can be either completely numerical or a category like a group, class, or division.
-Seaborn divides the plot into the below categories:</p>
-<ul class="simple">
-<li><p>Relational plots: used to understand the relation between two variables (e.g., lineplot, scatterplot)</p></li>
-<li><p>Categorical plots: deals with categorical variables and how they can be visualized (e.g., boxplot, violinplot, barplot)</p></li>
-<li><p>Distribution plots: show data distribution (e.g., histplot, kdeplot)</p></li>
-<li><p>Regression plots: show relationships with regression line (e.g., lmplot, regplot)</p></li>
-<li><p>Matrix plots: visualize matrices (e.g., heatmap)</p></li>
-<li><p>Multi-plot grids: plot multiple graphs together (e.g., FacetGrid)</p></li>
+<li><p>Seaborn destaca la visualización como una parte esencial del análisis de datos.</p></li>
+<li><p>Sus API orientadas a conjuntos de datos permiten alternar entre distintos tipos de gráficos para las mismas variables.</p></li>
+<li><p>Ayuda a comprender patrones, tendencias y relaciones dentro de los datos.</p></li>
 </ul>
 <p><strong>Ejemplos</strong></p>
 <p><strong>1. Lineplot</strong></p>
-<p>Lineplot is used to show the relationship between two continuous variables. It is commonly used for time-series or ordered data.</p>
+<p>El gráfico de líneas se utiliza para mostrar la relación entre dos variables continuas. Se emplea habitualmente para series
+temporales o datos ordenados.</p>
 <div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">seaborn</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">sns</span>
 <span class="kn">import</span><span class="w"> </span><span class="nn">matplotlib.pyplot</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">plt</span>
 
 <span class="n">fmri</span> <span class="o">=</span> <span class="n">sns</span><span class="o">.</span><span class="n">load_dataset</span><span class="p">(</span><span class="s2">&quot;fmri&quot;</span><span class="p">)</span>
 <span class="n">sns</span><span class="o">.</span><span class="n">lineplot</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="s2">&quot;timepoint&quot;</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="s2">&quot;signal&quot;</span><span class="p">,</span> <span class="n">hue</span><span class="o">=</span><span class="s2">&quot;region&quot;</span><span class="p">,</span> <span class="n">data</span><span class="o">=</span><span class="n">fmri</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+<p><strong>2. Scatterplot</strong></p>
+<p>El diagrama de dispersión se utiliza para mostrar la relación entre dos variables numéricas. Ayuda a identificar patrones o
+correlaciones.</p>
+<p><strong>Ejemplo:</strong> Relación entre el importe total de la cuenta y la propina</p>
+<div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">seaborn</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">sns</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">matplotlib.pyplot</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">plt</span>
+
+<span class="n">tips</span> <span class="o">=</span> <span class="n">sns</span><span class="o">.</span><span class="n">load_dataset</span><span class="p">(</span><span class="s2">&quot;tips&quot;</span><span class="p">)</span>
+
+<span class="n">sns</span><span class="o">.</span><span class="n">scatterplot</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="s2">&quot;total_bill&quot;</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="s2">&quot;tip&quot;</span><span class="p">,</span> <span class="n">hue</span><span class="o">=</span><span class="s2">&quot;day&quot;</span><span class="p">,</span> <span class="n">data</span><span class="o">=</span><span class="n">tips</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+<p><strong>3. Barplot</strong></p>
+<p>El gráfico de barras se utiliza para comparar valores numéricos entre categorías. Muestra el valor promedio junto con
+intervalos de confianza.</p>
+<p><strong>Ejemplo</strong>: Factura total promedio por día</p>
+<div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">seaborn</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">sns</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">matplotlib.pyplot</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">plt</span>
+
+<span class="n">tips</span> <span class="o">=</span> <span class="n">sns</span><span class="o">.</span><span class="n">load_dataset</span><span class="p">(</span><span class="s2">&quot;tips&quot;</span><span class="p">)</span>
+
+<span class="n">sns</span><span class="o">.</span><span class="n">barplot</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="s2">&quot;day&quot;</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="s2">&quot;total_bill&quot;</span><span class="p">,</span> <span class="n">data</span><span class="o">=</span><span class="n">tips</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+<p><strong>4. Boxplot</strong></p>
+<p>El diagrama de caja se utiliza para mostrar la distribución de los datos a partir de los cuartiles. Ayuda a identificar la
+dispersión y los valores atípicos.</p>
+<p><strong>Ejemplo</strong>: Distribución del importe total por día</p>
+<div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">seaborn</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">sns</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">matplotlib.pyplot</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">plt</span>
+
+<span class="n">tips</span> <span class="o">=</span> <span class="n">sns</span><span class="o">.</span><span class="n">load_dataset</span><span class="p">(</span><span class="s2">&quot;tips&quot;</span><span class="p">)</span>
+
+<span class="n">sns</span><span class="o">.</span><span class="n">boxplot</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="s2">&quot;day&quot;</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="s2">&quot;total_bill&quot;</span><span class="p">,</span> <span class="n">data</span><span class="o">=</span><span class="n">tips</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+<p><strong>5. Histplot</strong></p>
+<p>Histplot se utiliza para visualizar la distribución de una única variable numérica.</p>
+<p><strong>Ejemplo</strong>: Distribución del importe total de la factura</p>
+<div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">seaborn</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">sns</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">matplotlib.pyplot</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">plt</span>
+
+<span class="n">tips</span> <span class="o">=</span> <span class="n">sns</span><span class="o">.</span><span class="n">load_dataset</span><span class="p">(</span><span class="s2">&quot;tips&quot;</span><span class="p">)</span>
+
+<span class="n">sns</span><span class="o">.</span><span class="n">histplot</span><span class="p">(</span><span class="n">tips</span><span class="p">[</span><span class="s2">&quot;total_bill&quot;</span><span class="p">],</span> <span class="n">kde</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+<p><strong>6. Heatmap</strong></p>
+<p>Un mapa de calor se utiliza para visualizar datos con estructura matricial mediante el uso de colores. Se emplea
+habitualmente para matrices de correlación.</p>
+<p><strong>Ejemplo</strong>: Mapa de calor de correlación</p>
+<div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">seaborn</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">sns</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">matplotlib.pyplot</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">plt</span>
+
+<span class="n">tips</span> <span class="o">=</span> <span class="n">sns</span><span class="o">.</span><span class="n">load_dataset</span><span class="p">(</span><span class="s2">&quot;tips&quot;</span><span class="p">)</span>
+<span class="n">corr</span> <span class="o">=</span> <span class="n">tips</span><span class="o">.</span><span class="n">corr</span><span class="p">(</span><span class="n">numeric_only</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+
+<span class="n">sns</span><span class="o">.</span><span class="n">heatmap</span><span class="p">(</span><span class="n">corr</span><span class="p">,</span> <span class="n">annot</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">cmap</span><span class="o">=</span><span class="s2">&quot;coolwarm&quot;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+<p><strong>7. Pairplot</strong></p>
+<p>Pairplot se utiliza para representar las relaciones por pares entre múltiples variables numéricas.</p>
+<p><strong>Ejemplo</strong>: Relaciones por pares en el conjunto de datos</p>
+<div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">seaborn</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">sns</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">matplotlib.pyplot</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">plt</span>
+
+<span class="n">iris</span> <span class="o">=</span> <span class="n">sns</span><span class="o">.</span><span class="n">load_dataset</span><span class="p">(</span><span class="s2">&quot;iris&quot;</span><span class="p">)</span>
+<span class="n">sns</span><span class="o">.</span><span class="n">pairplot</span><span class="p">(</span><span class="n">iris</span><span class="p">,</span> <span class="n">hue</span><span class="o">=</span><span class="s2">&quot;species&quot;</span><span class="p">)</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
 </pre></div>
 </div>
