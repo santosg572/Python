@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+
+<html lang="sp" data-content_root="./">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>jointplot &#8212; документација Seanborns 01</title>
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=5ecbeea2" />
+    <link rel="stylesheet" type="text/css" href="_static/alabaster.css?v=12dfc556" />
+    <script src="_static/documentation_options.js?v=cb95fe6c"></script>
+    <script src="_static/doctools.js?v=9a2dae69"></script>
+    <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+    <link rel="index" title="Индекс" href="genindex.html" />
+    <link rel="search" title="Претрага" href="search.html" />
+   
+  <link rel="stylesheet" href="_static/custom.css" type="text/css" />
+  
+
+  
+  
+
+  </head><body>
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          
+
+          <div class="body" role="main">
+            
+  <section id="jointplot">
+<h1>jointplot<a class="headerlink" href="#jointplot" title="Link to this heading">¶</a></h1>
+<p>Help on function jointplot in module seaborn.axisgrid:</p>
+<dl>
+<dt>jointplot(data=None, <a href="#id1"><span class="problematic" id="id2">*</span></a>, x=None, y=None, hue=None, kind='scatter', height=6, ratio=5, space=0.2, dropna=False, xlim=None, ylim=None, color=None, palette=None, hue_order=None, hue_norm=None, marginal_ticks=False, joint_kws=None, marginal_kws=None, <a href="#id3"><span class="problematic" id="id4">**</span></a>kwargs)</dt><dd><p>Draw a plot of two variables with bivariate and univariate graphs.</p>
+<p>This function provides a convenient interface to the <code class="xref py py-class docutils literal notranslate"><span class="pre">JointGrid</span></code>
+class, with several canned plot kinds. This is intended to be a fairly
+lightweight wrapper; if you need more flexibility, you should use
+<code class="xref py py-class docutils literal notranslate"><span class="pre">JointGrid</span></code> directly.</p>
+<dl>
+<dt>data<span class="classifier"><code class="xref py py-class docutils literal notranslate"><span class="pre">pandas.DataFrame</span></code>, <code class="xref py py-class docutils literal notranslate"><span class="pre">numpy.ndarray</span></code>, mapping, or sequence</span></dt><dd><p>Input data structure. Either a long-form collection of vectors that can be
+assigned to named variables or a wide-form dataset that will be internally
+reshaped.</p>
+</dd>
+<dt>x, y<span class="classifier">vectors or keys in <code class="docutils literal notranslate"><span class="pre">data</span></code></span></dt><dd><p>Variables that specify positions on the x and y axes.</p>
+</dd>
+<dt>hue<span class="classifier">vector or key in <code class="docutils literal notranslate"><span class="pre">data</span></code></span></dt><dd><p>Semantic variable that is mapped to determine the color of plot elements.</p>
+</dd>
+<dt>kind<span class="classifier">{ &quot;scatter&quot; | &quot;kde&quot; | &quot;hist&quot; | &quot;hex&quot; | &quot;reg&quot; | &quot;resid&quot; }</span></dt><dd><p>Kind of plot to draw. See the examples for references to the underlying functions.</p>
+</dd>
+<dt>height<span class="classifier">numeric</span></dt><dd><p>Size of the figure (it will be square).</p>
+</dd>
+<dt>ratio<span class="classifier">numeric</span></dt><dd><p>Ratio of joint axes height to marginal axes height.</p>
+</dd>
+<dt>space<span class="classifier">numeric</span></dt><dd><p>Space between the joint and marginal axes</p>
+</dd>
+<dt>dropna<span class="classifier">bool</span></dt><dd><p>If True, remove observations that are missing from <code class="docutils literal notranslate"><span class="pre">x</span></code> and <code class="docutils literal notranslate"><span class="pre">y</span></code>.</p>
+</dd>
+<dt>{x, y}lim<span class="classifier">pairs of numbers</span></dt><dd><p>Axis limits to set before plotting.</p>
+</dd>
+<dt>color<span class="classifier"><code class="xref py py-mod docutils literal notranslate"><span class="pre">matplotlib</span> <span class="pre">color</span></code></span></dt><dd><p>Single color specification for when hue mapping is not used. Otherwise, the
+plot will try to hook into the matplotlib property cycle.</p>
+</dd>
+<dt>palette<span class="classifier">string, list, dict, or <code class="xref py py-class docutils literal notranslate"><span class="pre">matplotlib.colors.Colormap</span></code></span></dt><dd><p>Method for choosing the colors to use when mapping the <code class="docutils literal notranslate"><span class="pre">hue</span></code> semantic.
+String values are passed to <code class="xref py py-func docutils literal notranslate"><span class="pre">color_palette()</span></code>. List or dict values
+imply categorical mapping, while a colormap object implies numeric mapping.</p>
+</dd>
+<dt>hue_order<span class="classifier">vector of strings</span></dt><dd><p>Specify the order of processing and plotting for categorical levels of the
+<code class="docutils literal notranslate"><span class="pre">hue</span></code> semantic.</p>
+</dd>
+<dt>hue_norm<span class="classifier">tuple or <code class="xref py py-class docutils literal notranslate"><span class="pre">matplotlib.colors.Normalize</span></code></span></dt><dd><p>Either a pair of values that set the normalization range in data units
+or an object that will map from data units into a [0, 1] interval. Usage
+implies numeric mapping.</p>
+</dd>
+<dt>marginal_ticks<span class="classifier">bool</span></dt><dd><p>If False, suppress ticks on the count/density axis of the marginal plots.</p>
+</dd>
+<dt>{joint, marginal}_kws<span class="classifier">dicts</span></dt><dd><p>Additional keyword arguments for the plot components.</p>
+</dd>
+<dt>kwargs</dt><dd><p>Additional keyword arguments are passed to the function used to
+draw the plot on the joint Axes, superseding items in the
+<code class="docutils literal notranslate"><span class="pre">joint_kws</span></code> dictionary.</p>
+</dd>
+</dl>
+<dl class="simple">
+<dt><code class="xref py py-class docutils literal notranslate"><span class="pre">JointGrid</span></code></dt><dd><p>An object managing multiple subplots that correspond to joint and marginal axes
+for plotting a bivariate relationship or distribution.</p>
+</dd>
+</dl>
+<p>JointGrid : Set up a figure with joint and marginal views on bivariate data.
+PairGrid : Set up a figure with joint and marginal views on multiple variables.
+jointplot : Draw multiple bivariate plots with univariate marginal distributions.</p>
+</dd>
+</dl>
+</section>
+
+
+          </div>
+          
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="Main">
+        <div class="sphinxsidebarwrapper">
+<h1 class="logo"><a href="index.html">Seanborns</a></h1>
+
+
+
+
+
+
+
+
+<h3>Навигација</h3>
+
+<div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="index.html">Documentation overview</a><ul>
+  </ul></li>
+</ul>
+</div>
+<search id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Брза претрага</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
+      <input type="submit" value="Тражи" />
+    </form>
+    </div>
+</search>
+<script>document.getElementById('searchbox').style.display = "block"</script>
+
+
+
+
+
+
+
+
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &#169;2026, Leopoldo.
+      
+      |
+      Powered by <a href="https://www.sphinx-doc.org/">Sphinx 7.4.7</a>
+      &amp; <a href="https://alabaster.readthedocs.io">Alabaster 0.7.16</a>
+      
+      |
+      <a href="_sources/jointplot.rst.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+  </body>
+</html>

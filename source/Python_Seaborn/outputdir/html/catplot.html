@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+
+<html lang="sp" data-content_root="./">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>catplot &#8212; документација Seanborns 01</title>
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=5ecbeea2" />
+    <link rel="stylesheet" type="text/css" href="_static/alabaster.css?v=12dfc556" />
+    <script src="_static/documentation_options.js?v=cb95fe6c"></script>
+    <script src="_static/doctools.js?v=9a2dae69"></script>
+    <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+    <link rel="index" title="Индекс" href="genindex.html" />
+    <link rel="search" title="Претрага" href="search.html" />
+   
+  <link rel="stylesheet" href="_static/custom.css" type="text/css" />
+  
+
+  
+  
+
+  </head><body>
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          
+
+          <div class="body" role="main">
+            
+  <section id="catplot">
+<h1>catplot<a class="headerlink" href="#catplot" title="Link to this heading">¶</a></h1>
+<p>Help on function catplot in module seaborn.categorical:</p>
+<dl>
+<dt>catplot(data=None, <a href="#id1"><span class="problematic" id="id2">*</span></a>, x=None, y=None, hue=None, row=None, col=None, kind='strip', estimator='mean', errorbar=('ci', 95), n_boot=1000, seed=None, units=None, weights=None, order=None, hue_order=None, row_order=None, col_order=None, col_wrap=None, height=5, aspect=1, log_scale=None, native_scale=False, formatter=None, orient=None, color=None, palette=None, hue_norm=None, legend='auto', legend_out=True, sharex=True, sharey=True, margin_titles=False, facet_kws=None, ci=&lt;deprecated&gt;, <a href="#id3"><span class="problematic" id="id4">**</span></a>kwargs)</dt><dd><p>Figure-level interface for drawing categorical plots onto a FacetGrid.</p>
+<p>This function provides access to several axes-level functions that
+show the relationship between a numerical and one or more categorical
+variables using one of several visual representations. The <cite>kind</cite>
+parameter selects the underlying axes-level function to use.</p>
+<p>Categorical scatterplots:</p>
+<ul class="simple">
+<li><p><code class="xref py py-func docutils literal notranslate"><span class="pre">stripplot()</span></code> (with <cite>kind=&quot;strip&quot;</cite>; the default)</p></li>
+<li><p><code class="xref py py-func docutils literal notranslate"><span class="pre">swarmplot()</span></code> (with <cite>kind=&quot;swarm&quot;</cite>)</p></li>
+</ul>
+<p>Categorical distribution plots:</p>
+<ul class="simple">
+<li><p><code class="xref py py-func docutils literal notranslate"><span class="pre">boxplot()</span></code> (with <cite>kind=&quot;box&quot;</cite>)</p></li>
+<li><p><code class="xref py py-func docutils literal notranslate"><span class="pre">violinplot()</span></code> (with <cite>kind=&quot;violin&quot;</cite>)</p></li>
+<li><p><code class="xref py py-func docutils literal notranslate"><span class="pre">boxenplot()</span></code> (with <cite>kind=&quot;boxen&quot;</cite>)</p></li>
+</ul>
+<p>Categorical estimate plots:</p>
+<ul class="simple">
+<li><p><code class="xref py py-func docutils literal notranslate"><span class="pre">pointplot()</span></code> (with <cite>kind=&quot;point&quot;</cite>)</p></li>
+<li><p><code class="xref py py-func docutils literal notranslate"><span class="pre">barplot()</span></code> (with <cite>kind=&quot;bar&quot;</cite>)</p></li>
+<li><p><code class="xref py py-func docutils literal notranslate"><span class="pre">countplot()</span></code> (with <cite>kind=&quot;count&quot;</cite>)</p></li>
+</ul>
+<p>Extra keyword arguments are passed to the underlying function, so you
+should refer to the documentation for each to see kind-specific options.</p>
+<p>See the <span class="xref std std-ref">tutorial</span> for more information.</p>
+<div class="admonition note">
+<p class="admonition-title">Белешка</p>
+<p>By default, this function treats one of the variables as categorical
+and draws data at ordinal positions (0, 1, ... n) on the relevant axis.
+As of version 0.13.0, this can be disabled by setting <cite>native_scale=True</cite>.</p>
+</div>
+<p>After plotting, the <code class="xref py py-class docutils literal notranslate"><span class="pre">FacetGrid</span></code> with the plot is returned and can
+be used directly to tweak supporting plot details or add other layers.</p>
+<dl>
+<dt>data<span class="classifier">DataFrame, Series, dict, array, or list of arrays</span></dt><dd><p>Dataset for plotting. If <cite>x</cite> and <cite>y</cite> are absent, this is
+interpreted as wide-form. Otherwise it is expected to be long-form.</p>
+</dd>
+<dt>x, y, hue<span class="classifier">names of variables in <cite>data</cite> or vector data</span></dt><dd><p>Inputs for plotting long-form data. See examples for interpretation.</p>
+</dd>
+<dt>row, col<span class="classifier">names of variables in <cite>data</cite> or vector data</span></dt><dd><p>Categorical variables that will determine the faceting of the grid.</p>
+</dd>
+<dt>kind<span class="classifier">str</span></dt><dd><p>The kind of plot to draw, corresponds to the name of a categorical
+axes-level plotting function. Options are: &quot;strip&quot;, &quot;swarm&quot;, &quot;box&quot;, &quot;violin&quot;,
+&quot;boxen&quot;, &quot;point&quot;, &quot;bar&quot;, or &quot;count&quot;.</p>
+</dd>
+<dt>estimator<span class="classifier">string or callable that maps vector -&gt; scalar</span></dt><dd><p>Statistical function to estimate within each categorical bin.</p>
+</dd>
+<dt>errorbar<span class="classifier">string, (string, number) tuple, callable or None</span></dt><dd><p>Name of errorbar method (either &quot;ci&quot;, &quot;pi&quot;, &quot;se&quot;, or &quot;sd&quot;), or a tuple
+with a method name and a level parameter, or a function that maps from a
+vector to a (min, max) interval, or None to hide errorbar. See the
+<span class="xref std std-doc">errorbar tutorial</span> for more information.</p>
+<div class="versionadded">
+<p><span class="versionmodified added">Added in version v0.12.0.</span></p>
+</div>
+</dd>
+<dt>n_boot<span class="classifier">int</span></dt><dd><p>Number of bootstrap samples used to compute confidence intervals.</p>
+</dd>
+<dt>seed<span class="classifier">int, <cite>numpy.random.Generator</cite>, or <cite>numpy.random.RandomState</cite></span></dt><dd><p>Seed or random number generator for reproducible bootstrapping.</p>
+</dd>
+<dt>units<span class="classifier">name of variable in <cite>data</cite> or vector data</span></dt><dd><p>Identifier of sampling units; used by the errorbar function to
+perform a multilevel bootstrap and account for repeated measures</p>
+</dd>
+<dt>weights<span class="classifier">name of variable in <cite>data</cite> or vector data</span></dt><dd><p>Data values or column used to compute weighted statistics.
+Note that the use of weights may limit other statistical options.</p>
+<div class="versionadded">
+<p><span class="versionmodified added">Added in version v0.13.1.</span></p>
+</div>
+</dd>
+<dt>order, hue_order<span class="classifier">lists of strings</span></dt><dd><p>Order to plot the categorical levels in; otherwise the levels are
+inferred from the data objects.</p>
+</dd>
+<dt>row_order, col_order<span class="classifier">lists of strings</span></dt><dd><p>Order to organize the rows and/or columns of the grid in; otherwise the
+orders are inferred from the data objects.</p>
+</dd>
+<dt>col_wrap<span class="classifier">int</span></dt><dd><p>&quot;Wrap&quot; the column variable at this width, so that the column facets
+span multiple rows. Incompatible with a <code class="docutils literal notranslate"><span class="pre">row</span></code> facet.</p>
+</dd>
+<dt>height<span class="classifier">scalar</span></dt><dd><p>Height (in inches) of each facet. See also: <code class="docutils literal notranslate"><span class="pre">aspect</span></code>.</p>
+</dd>
+<dt>aspect<span class="classifier">scalar</span></dt><dd><p>Aspect ratio of each facet, so that <code class="docutils literal notranslate"><span class="pre">aspect</span> <span class="pre">*</span> <span class="pre">height</span></code> gives the width
+of each facet in inches.</p>
+</dd>
+<dt>native_scale<span class="classifier">bool</span></dt><dd><p>When True, numeric or datetime values on the categorical axis will maintain
+their original scaling rather than being converted to fixed indices.</p>
+<div class="versionadded">
+<p><span class="versionmodified added">Added in version v0.13.0.</span></p>
+</div>
+</dd>
+<dt>formatter<span class="classifier">callable</span></dt><dd><p>Function for converting categorical data into strings. Affects both grouping
+and tick labels.</p>
+<div class="versionadded">
+<p><span class="versionmodified added">Added in version v0.13.0.</span></p>
+</div>
+</dd>
+<dt>orient<span class="classifier">&quot;v&quot; | &quot;h&quot; | &quot;x&quot; | &quot;y&quot;</span></dt><dd><p>Orientation of the plot (vertical or horizontal). This is usually
+inferred based on the type of the input variables, but it can be used
+to resolve ambiguity when both <cite>x</cite> and <cite>y</cite> are numeric or when
+plotting wide-form data.</p>
+<div class="versionchanged">
+<p><span class="versionmodified changed">Измењено у верзији v0.13.0: </span>Added 'x'/'y' as options, equivalent to 'v'/'h'.</p>
+</div>
+</dd>
+<dt>color<span class="classifier">matplotlib color</span></dt><dd><p>Single color for the elements in the plot.</p>
+</dd>
+<dt>palette<span class="classifier">palette name, list, or dict</span></dt><dd><p>Colors to use for the different levels of the <code class="docutils literal notranslate"><span class="pre">hue</span></code> variable. Should
+be something that can be interpreted by <code class="xref py py-func docutils literal notranslate"><span class="pre">color_palette()</span></code>, or a
+dictionary mapping hue levels to matplotlib colors.</p>
+</dd>
+<dt>hue_norm<span class="classifier">tuple or <code class="xref py py-class docutils literal notranslate"><span class="pre">matplotlib.colors.Normalize</span></code> object</span></dt><dd><p>Normalization in data units for colormap applied to the <cite>hue</cite>
+variable when it is numeric. Not relevant if <cite>hue</cite> is categorical.</p>
+<div class="versionadded">
+<p><span class="versionmodified added">Added in version v0.12.0.</span></p>
+</div>
+</dd>
+<dt>legend<span class="classifier">&quot;auto&quot;, &quot;brief&quot;, &quot;full&quot;, or False</span></dt><dd><p>How to draw the legend. If &quot;brief&quot;, numeric <cite>hue</cite> and <cite>size</cite>
+variables will be represented with a sample of evenly spaced values.
+If &quot;full&quot;, every group will get an entry in the legend. If &quot;auto&quot;,
+choose between brief or full representation based on number of levels.
+If <cite>False</cite>, no legend data is added and no legend is drawn.</p>
+<div class="versionadded">
+<p><span class="versionmodified added">Added in version v0.13.0.</span></p>
+</div>
+</dd>
+<dt>legend_out<span class="classifier">bool</span></dt><dd><p>If <code class="docutils literal notranslate"><span class="pre">True</span></code>, the figure size will be extended, and the legend will be
+drawn outside the plot on the center right.</p>
+</dd>
+<dt>share{x,y}<span class="classifier">bool, 'col', or 'row' optional</span></dt><dd><p>If true, the facets will share y axes across columns and/or x axes
+across rows.</p>
+</dd>
+<dt>margin_titles<span class="classifier">bool</span></dt><dd><p>If <code class="docutils literal notranslate"><span class="pre">True</span></code>, the titles for the row variable are drawn to the right of
+the last column. This option is experimental and may not work in all
+cases.</p>
+</dd>
+<dt>facet_kws<span class="classifier">dict</span></dt><dd><p>Dictionary of other keyword arguments to pass to <code class="xref py py-class docutils literal notranslate"><span class="pre">FacetGrid</span></code>.</p>
+</dd>
+<dt>kwargs<span class="classifier">key, value pairings</span></dt><dd><p>Other keyword arguments are passed through to the underlying plotting
+function.</p>
+</dd>
+</dl>
+<dl class="simple">
+<dt><code class="xref py py-class docutils literal notranslate"><span class="pre">FacetGrid</span></code></dt><dd><p>Returns the <code class="xref py py-class docutils literal notranslate"><span class="pre">FacetGrid</span></code> object with the plot on it for further
+tweaking.</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</section>
+
+
+          </div>
+          
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="Main">
+        <div class="sphinxsidebarwrapper">
+<h1 class="logo"><a href="index.html">Seanborns</a></h1>
+
+
+
+
+
+
+
+
+<h3>Навигација</h3>
+
+<div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="index.html">Documentation overview</a><ul>
+  </ul></li>
+</ul>
+</div>
+<search id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Брза претрага</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
+      <input type="submit" value="Тражи" />
+    </form>
+    </div>
+</search>
+<script>document.getElementById('searchbox').style.display = "block"</script>
+
+
+
+
+
+
+
+
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &#169;2026, Leopoldo.
+      
+      |
+      Powered by <a href="https://www.sphinx-doc.org/">Sphinx 7.4.7</a>
+      &amp; <a href="https://alabaster.readthedocs.io">Alabaster 0.7.16</a>
+      
+      |
+      <a href="_sources/catplot.rst.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+  </body>
+</html>

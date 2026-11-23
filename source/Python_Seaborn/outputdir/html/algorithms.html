@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+
+<html lang="sp" data-content_root="./">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>algorithms &#8212; документација Seanborns 01</title>
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=5ecbeea2" />
+    <link rel="stylesheet" type="text/css" href="_static/alabaster.css?v=12dfc556" />
+    <script src="_static/documentation_options.js?v=cb95fe6c"></script>
+    <script src="_static/doctools.js?v=9a2dae69"></script>
+    <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+    <link rel="index" title="Индекс" href="genindex.html" />
+    <link rel="search" title="Претрага" href="search.html" />
+   
+  <link rel="stylesheet" href="_static/custom.css" type="text/css" />
+  
+
+  
+  
+
+  </head><body>
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          
+
+          <div class="body" role="main">
+            
+  <section id="algorithms">
+<h1>algorithms<a class="headerlink" href="#algorithms" title="Link to this heading">¶</a></h1>
+<p>Help on module seaborn.algorithms in seaborn:</p>
+<dl>
+<dt>NAME</dt><dd><p>seaborn.algorithms - Algorithms to support fitting routines in seaborn plotting functions.</p>
+</dd>
+<dt>FUNCTIONS</dt><dd><dl>
+<dt>bootstrap(<a href="#id1"><span class="problematic" id="id2">*</span></a>args, <a href="#id3"><span class="problematic" id="id4">**</span></a>kwargs)</dt><dd><p>Resample one or more arrays with replacement and store aggregate values.</p>
+<p>Positional arguments are a sequence of arrays to bootstrap along the first
+axis and pass to a summary function.</p>
+<dl class="simple">
+<dt>Keyword arguments:</dt><dd><dl class="simple">
+<dt>n_boot<span class="classifier">int, default=10000</span></dt><dd><p>Number of iterations</p>
+</dd>
+<dt>axis<span class="classifier">int, default=None</span></dt><dd><p>Will pass axis to <code class="docutils literal notranslate"><span class="pre">func</span></code> as a keyword argument.</p>
+</dd>
+<dt>units<span class="classifier">array, default=None</span></dt><dd><p>Array of sampling unit IDs. When used the bootstrap resamples units
+and then observations within units instead of individual
+datapoints.</p>
+</dd>
+<dt>func<span class="classifier">string or callable, default=&quot;mean&quot;</span></dt><dd><p>Function to call on the args that are passed in. If string, uses as
+name of function in the numpy namespace. If nans are present in the
+data, will try to use nan-aware version of named function.</p>
+</dd>
+<dt>seed<span class="classifier">Generator | SeedSequence | RandomState | int | None</span></dt><dd><p>Seed for the random number generator; useful if you want
+reproducible resamples.</p>
+</dd>
+</dl>
+</dd>
+</dl>
+<dl class="simple">
+<dt>boot_dist: array</dt><dd><p>array of bootstrapped statistic values</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</dd>
+<dt>FILE</dt><dd><p>/Users/leopoldogonzalez/miniconda3/lib/python3.12/site-packages/seaborn/algorithms.py</p>
+</dd>
+</dl>
+</section>
+
+
+          </div>
+          
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="Main">
+        <div class="sphinxsidebarwrapper">
+<h1 class="logo"><a href="index.html">Seanborns</a></h1>
+
+
+
+
+
+
+
+
+<h3>Навигација</h3>
+
+<div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="index.html">Documentation overview</a><ul>
+  </ul></li>
+</ul>
+</div>
+<search id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Брза претрага</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
+      <input type="submit" value="Тражи" />
+    </form>
+    </div>
+</search>
+<script>document.getElementById('searchbox').style.display = "block"</script>
+
+
+
+
+
+
+
+
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &#169;2026, Leopoldo.
+      
+      |
+      Powered by <a href="https://www.sphinx-doc.org/">Sphinx 7.4.7</a>
+      &amp; <a href="https://alabaster.readthedocs.io">Alabaster 0.7.16</a>
+      
+      |
+      <a href="_sources/algorithms.rst.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+  </body>
+</html>

@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+
+<html lang="sp" data-content_root="./">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>widgets &#8212; документација Seanborns 01</title>
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=5ecbeea2" />
+    <link rel="stylesheet" type="text/css" href="_static/alabaster.css?v=12dfc556" />
+    <script src="_static/documentation_options.js?v=cb95fe6c"></script>
+    <script src="_static/doctools.js?v=9a2dae69"></script>
+    <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+    <link rel="index" title="Индекс" href="genindex.html" />
+    <link rel="search" title="Претрага" href="search.html" />
+   
+  <link rel="stylesheet" href="_static/custom.css" type="text/css" />
+  
+
+  
+  
+
+  </head><body>
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          
+
+          <div class="body" role="main">
+            
+  <section id="widgets">
+<h1>widgets<a class="headerlink" href="#widgets" title="Link to this heading">¶</a></h1>
+<p>Help on module seaborn.widgets in seaborn:</p>
+<dl>
+<dt>NAME</dt><dd><p>seaborn.widgets</p>
+</dd>
+<dt>FUNCTIONS</dt><dd><dl>
+<dt>choose_colorbrewer_palette(data_type, as_cmap=False)</dt><dd><p>Select a palette from the ColorBrewer set.</p>
+<p>These palettes are built into matplotlib and can be used by name in
+many seaborn functions, or by passing the object returned by this function.</p>
+<dl class="simple">
+<dt>data_type<span class="classifier">{'sequential', 'diverging', 'qualitative'}</span></dt><dd><p>This describes the kind of data you want to visualize. See the seaborn
+color palette docs for more information about how to choose this value.
+Note that you can pass substrings (e.g. 'q' for 'qualitative.</p>
+</dd>
+<dt>as_cmap<span class="classifier">bool</span></dt><dd><p>If True, the return value is a matplotlib colormap rather than a
+list of discrete colors.</p>
+</dd>
+</dl>
+<dl class="simple">
+<dt>pal or cmap<span class="classifier">list of colors or matplotlib colormap</span></dt><dd><p>Object that can be passed to plotting functions.</p>
+</dd>
+</dl>
+<p>dark_palette : Create a sequential palette with dark low values.
+light_palette : Create a sequential palette with bright low values.
+diverging_palette : Create a diverging palette from selected colors.
+cubehelix_palette : Create a sequential palette or colormap using the</p>
+<blockquote>
+<div><p>cubehelix system.</p>
+</div></blockquote>
+</dd>
+<dt>choose_cubehelix_palette(as_cmap=False)</dt><dd><p>Launch an interactive widget to create a sequential cubehelix palette.</p>
+<p>This corresponds with the <code class="xref py py-func docutils literal notranslate"><span class="pre">cubehelix_palette()</span></code> function. This kind
+of palette is good for data that range between relatively uninteresting
+low values and interesting high values. The cubehelix system allows the
+palette to have more hue variance across the range, which can be helpful
+for distinguishing a wider range of values.</p>
+<p>Requires IPython 2+ and must be used in the notebook.</p>
+<dl class="simple">
+<dt>as_cmap<span class="classifier">bool</span></dt><dd><p>If True, the return value is a matplotlib colormap rather than a
+list of discrete colors.</p>
+</dd>
+</dl>
+<dl class="simple">
+<dt>pal or cmap<span class="classifier">list of colors or matplotlib colormap</span></dt><dd><p>Object that can be passed to plotting functions.</p>
+</dd>
+</dl>
+<dl class="simple">
+<dt>cubehelix_palette<span class="classifier">Create a sequential palette or colormap using the</span></dt><dd><p>cubehelix system.</p>
+</dd>
+</dl>
+</dd>
+<dt>choose_dark_palette(input='husl', as_cmap=False)</dt><dd><p>Launch an interactive widget to create a dark sequential palette.</p>
+<p>This corresponds with the <code class="xref py py-func docutils literal notranslate"><span class="pre">dark_palette()</span></code> function. This kind
+of palette is good for data that range between relatively uninteresting
+low values and interesting high values.</p>
+<p>Requires IPython 2+ and must be used in the notebook.</p>
+<dl class="simple">
+<dt>input<span class="classifier">{'husl', 'hls', 'rgb'}</span></dt><dd><p>Color space for defining the seed value. Note that the default is
+different than the default input for <code class="xref py py-func docutils literal notranslate"><span class="pre">dark_palette()</span></code>.</p>
+</dd>
+<dt>as_cmap<span class="classifier">bool</span></dt><dd><p>If True, the return value is a matplotlib colormap rather than a
+list of discrete colors.</p>
+</dd>
+</dl>
+<dl class="simple">
+<dt>pal or cmap<span class="classifier">list of colors or matplotlib colormap</span></dt><dd><p>Object that can be passed to plotting functions.</p>
+</dd>
+</dl>
+<p>dark_palette : Create a sequential palette with dark low values.
+light_palette : Create a sequential palette with bright low values.
+cubehelix_palette : Create a sequential palette or colormap using the</p>
+<blockquote>
+<div><p>cubehelix system.</p>
+</div></blockquote>
+</dd>
+<dt>choose_diverging_palette(as_cmap=False)</dt><dd><p>Launch an interactive widget to choose a diverging color palette.</p>
+<p>This corresponds with the <code class="xref py py-func docutils literal notranslate"><span class="pre">diverging_palette()</span></code> function. This kind
+of palette is good for data that range between interesting low values
+and interesting high values with a meaningful midpoint. (For example,
+change scores relative to some baseline value).</p>
+<p>Requires IPython 2+ and must be used in the notebook.</p>
+<dl class="simple">
+<dt>as_cmap<span class="classifier">bool</span></dt><dd><p>If True, the return value is a matplotlib colormap rather than a
+list of discrete colors.</p>
+</dd>
+</dl>
+<dl class="simple">
+<dt>pal or cmap<span class="classifier">list of colors or matplotlib colormap</span></dt><dd><p>Object that can be passed to plotting functions.</p>
+</dd>
+</dl>
+<p>diverging_palette : Create a diverging color palette or colormap.
+choose_colorbrewer_palette : Interactively choose palettes from the</p>
+<blockquote>
+<div><p>colorbrewer set, including diverging palettes.</p>
+</div></blockquote>
+</dd>
+<dt>choose_light_palette(input='husl', as_cmap=False)</dt><dd><p>Launch an interactive widget to create a light sequential palette.</p>
+<p>This corresponds with the <code class="xref py py-func docutils literal notranslate"><span class="pre">light_palette()</span></code> function. This kind
+of palette is good for data that range between relatively uninteresting
+low values and interesting high values.</p>
+<p>Requires IPython 2+ and must be used in the notebook.</p>
+<dl class="simple">
+<dt>input<span class="classifier">{'husl', 'hls', 'rgb'}</span></dt><dd><p>Color space for defining the seed value. Note that the default is
+different than the default input for <code class="xref py py-func docutils literal notranslate"><span class="pre">light_palette()</span></code>.</p>
+</dd>
+<dt>as_cmap<span class="classifier">bool</span></dt><dd><p>If True, the return value is a matplotlib colormap rather than a
+list of discrete colors.</p>
+</dd>
+</dl>
+<dl class="simple">
+<dt>pal or cmap<span class="classifier">list of colors or matplotlib colormap</span></dt><dd><p>Object that can be passed to plotting functions.</p>
+</dd>
+</dl>
+<p>light_palette : Create a sequential palette with bright low values.
+dark_palette : Create a sequential palette with dark low values.
+cubehelix_palette : Create a sequential palette or colormap using the</p>
+<blockquote>
+<div><p>cubehelix system.</p>
+</div></blockquote>
+</dd>
+</dl>
+</dd>
+<dt>DATA</dt><dd><p>__all__ = ['choose_colorbrewer_palette', 'choose_cubehelix_palette', '...</p>
+</dd>
+<dt>FILE</dt><dd><p>/Users/leopoldogonzalez/miniconda3/lib/python3.12/site-packages/seaborn/widgets.py</p>
+</dd>
+</dl>
+</section>
+
+
+          </div>
+          
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="Main">
+        <div class="sphinxsidebarwrapper">
+<h1 class="logo"><a href="index.html">Seanborns</a></h1>
+
+
+
+
+
+
+
+
+<h3>Навигација</h3>
+
+<div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="index.html">Documentation overview</a><ul>
+  </ul></li>
+</ul>
+</div>
+<search id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Брза претрага</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
+      <input type="submit" value="Тражи" />
+    </form>
+    </div>
+</search>
+<script>document.getElementById('searchbox').style.display = "block"</script>
+
+
+
+
+
+
+
+
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &#169;2026, Leopoldo.
+      
+      |
+      Powered by <a href="https://www.sphinx-doc.org/">Sphinx 7.4.7</a>
+      &amp; <a href="https://alabaster.readthedocs.io">Alabaster 0.7.16</a>
+      
+      |
+      <a href="_sources/widgets.rst.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+  </body>
+</html>

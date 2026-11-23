@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+
+<html lang="sp" data-content_root="./">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>heatmap &#8212; документација Seanborns 01</title>
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=5ecbeea2" />
+    <link rel="stylesheet" type="text/css" href="_static/alabaster.css?v=12dfc556" />
+    <script src="_static/documentation_options.js?v=cb95fe6c"></script>
+    <script src="_static/doctools.js?v=9a2dae69"></script>
+    <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+    <link rel="index" title="Индекс" href="genindex.html" />
+    <link rel="search" title="Претрага" href="search.html" />
+   
+  <link rel="stylesheet" href="_static/custom.css" type="text/css" />
+  
+
+  
+  
+
+  </head><body>
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          
+
+          <div class="body" role="main">
+            
+  <section id="heatmap">
+<h1>heatmap<a class="headerlink" href="#heatmap" title="Link to this heading">¶</a></h1>
+<p>Help on function heatmap in module seaborn.matrix:</p>
+<dl>
+<dt>heatmap(data, <a href="#id1"><span class="problematic" id="id2">*</span></a>, vmin=None, vmax=None, cmap=None, center=None, robust=False, annot=None, fmt='.2g', annot_kws=None, linewidths=0, linecolor='white', cbar=True, cbar_kws=None, cbar_ax=None, square=False, xticklabels='auto', yticklabels='auto', mask=None, ax=None, <a href="#id3"><span class="problematic" id="id4">**</span></a>kwargs)</dt><dd><p>Plot rectangular data as a color-encoded matrix.</p>
+<p>This is an Axes-level function and will draw the heatmap into the
+currently-active Axes if none is provided to the <code class="docutils literal notranslate"><span class="pre">ax</span></code> argument.  Part of
+this Axes space will be taken and used to plot a colormap, unless <code class="docutils literal notranslate"><span class="pre">cbar</span></code>
+is False or a separate Axes is provided to <code class="docutils literal notranslate"><span class="pre">cbar_ax</span></code>.</p>
+<dl class="simple">
+<dt>data<span class="classifier">rectangular dataset</span></dt><dd><p>2D dataset that can be coerced into an ndarray. If a Pandas DataFrame
+is provided, the index/column information will be used to label the
+columns and rows.</p>
+</dd>
+<dt>vmin, vmax<span class="classifier">floats, optional</span></dt><dd><p>Values to anchor the colormap, otherwise they are inferred from the
+data and other keyword arguments.</p>
+</dd>
+<dt>cmap<span class="classifier">matplotlib colormap name or object, or list of colors, optional</span></dt><dd><p>The mapping from data values to color space. If not provided, the
+default will depend on whether <code class="docutils literal notranslate"><span class="pre">center</span></code> is set.</p>
+</dd>
+<dt>center<span class="classifier">float, optional</span></dt><dd><p>The value at which to center the colormap when plotting divergent data.
+Using this parameter will change the default <code class="docutils literal notranslate"><span class="pre">cmap</span></code> if none is
+specified.</p>
+</dd>
+<dt>robust<span class="classifier">bool, optional</span></dt><dd><p>If True and <code class="docutils literal notranslate"><span class="pre">vmin</span></code> or <code class="docutils literal notranslate"><span class="pre">vmax</span></code> are absent, the colormap range is
+computed with robust quantiles instead of the extreme values.</p>
+</dd>
+<dt>annot<span class="classifier">bool or rectangular dataset, optional</span></dt><dd><p>If True, write the data value in each cell. If an array-like with the
+same shape as <code class="docutils literal notranslate"><span class="pre">data</span></code>, then use this to annotate the heatmap instead
+of the data. Note that DataFrames will match on position, not index.</p>
+</dd>
+<dt>fmt<span class="classifier">str, optional</span></dt><dd><p>String formatting code to use when adding annotations.</p>
+</dd>
+<dt>annot_kws<span class="classifier">dict of key, value mappings, optional</span></dt><dd><p>Keyword arguments for <code class="xref py py-meth docutils literal notranslate"><span class="pre">matplotlib.axes.Axes.text()</span></code> when <code class="docutils literal notranslate"><span class="pre">annot</span></code>
+is True.</p>
+</dd>
+<dt>linewidths<span class="classifier">float, optional</span></dt><dd><p>Width of the lines that will divide each cell.</p>
+</dd>
+<dt>linecolor<span class="classifier">color, optional</span></dt><dd><p>Color of the lines that will divide each cell.</p>
+</dd>
+<dt>cbar<span class="classifier">bool, optional</span></dt><dd><p>Whether to draw a colorbar.</p>
+</dd>
+<dt>cbar_kws<span class="classifier">dict of key, value mappings, optional</span></dt><dd><p>Keyword arguments for <code class="xref py py-meth docutils literal notranslate"><span class="pre">matplotlib.figure.Figure.colorbar()</span></code>.</p>
+</dd>
+<dt>cbar_ax<span class="classifier">matplotlib Axes, optional</span></dt><dd><p>Axes in which to draw the colorbar, otherwise take space from the
+main Axes.</p>
+</dd>
+<dt>square<span class="classifier">bool, optional</span></dt><dd><p>If True, set the Axes aspect to &quot;equal&quot; so each cell will be
+square-shaped.</p>
+</dd>
+<dt>xticklabels, yticklabels<span class="classifier">&quot;auto&quot;, bool, list-like, or int, optional</span></dt><dd><p>If True, plot the column names of the dataframe. If False, don't plot
+the column names. If list-like, plot these alternate labels as the
+xticklabels. If an integer, use the column names but plot only every
+n label. If &quot;auto&quot;, try to densely plot non-overlapping labels.</p>
+</dd>
+<dt>mask<span class="classifier">bool array or DataFrame, optional</span></dt><dd><p>If passed, data will not be shown in cells where <code class="docutils literal notranslate"><span class="pre">mask</span></code> is True.
+Cells with missing values are automatically masked.</p>
+</dd>
+<dt>ax<span class="classifier">matplotlib Axes, optional</span></dt><dd><p>Axes in which to draw the plot, otherwise use the currently-active
+Axes.</p>
+</dd>
+<dt>kwargs<span class="classifier">other keyword arguments</span></dt><dd><p>All other keyword arguments are passed to
+<code class="xref py py-meth docutils literal notranslate"><span class="pre">matplotlib.axes.Axes.pcolormesh()</span></code>.</p>
+</dd>
+</dl>
+<dl class="simple">
+<dt>ax<span class="classifier">matplotlib Axes</span></dt><dd><p>Axes object with the heatmap.</p>
+</dd>
+</dl>
+<dl class="simple">
+<dt>clustermap<span class="classifier">Plot a matrix using hierarchical clustering to arrange the</span></dt><dd><p>rows and columns.</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</section>
+
+
+          </div>
+          
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="Main">
+        <div class="sphinxsidebarwrapper">
+<h1 class="logo"><a href="index.html">Seanborns</a></h1>
+
+
+
+
+
+
+
+
+<h3>Навигација</h3>
+
+<div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="index.html">Documentation overview</a><ul>
+  </ul></li>
+</ul>
+</div>
+<search id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Брза претрага</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
+      <input type="submit" value="Тражи" />
+    </form>
+    </div>
+</search>
+<script>document.getElementById('searchbox').style.display = "block"</script>
+
+
+
+
+
+
+
+
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &#169;2026, Leopoldo.
+      
+      |
+      Powered by <a href="https://www.sphinx-doc.org/">Sphinx 7.4.7</a>
+      &amp; <a href="https://alabaster.readthedocs.io">Alabaster 0.7.16</a>
+      
+      |
+      <a href="_sources/heatmap.rst.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+  </body>
+</html>

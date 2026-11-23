@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+
+<html lang="sp" data-content_root="./">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>rcmod &#8212; документација Seanborns 01</title>
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=5ecbeea2" />
+    <link rel="stylesheet" type="text/css" href="_static/alabaster.css?v=12dfc556" />
+    <script src="_static/documentation_options.js?v=cb95fe6c"></script>
+    <script src="_static/doctools.js?v=9a2dae69"></script>
+    <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+    <link rel="index" title="Индекс" href="genindex.html" />
+    <link rel="search" title="Претрага" href="search.html" />
+   
+  <link rel="stylesheet" href="_static/custom.css" type="text/css" />
+  
+
+  
+  
+
+  </head><body>
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          
+
+          <div class="body" role="main">
+            
+  <section id="rcmod">
+<h1>rcmod<a class="headerlink" href="#rcmod" title="Link to this heading">¶</a></h1>
+<p>Help on module seaborn.rcmod in seaborn:</p>
+<dl>
+<dt>NAME</dt><dd><p>seaborn.rcmod - Control plot style and scaling using the matplotlib rcParams interface.</p>
+</dd>
+<dt>FUNCTIONS</dt><dd><dl>
+<dt>axes_style(style=None, rc=None)</dt><dd><p>Get the parameters that control the general style of the plots.</p>
+<p>The style parameters control properties like the color of the background and
+whether a grid is enabled by default. This is accomplished using the
+matplotlib rcParams system.</p>
+<p>The options are illustrated in the
+<span class="xref std std-doc">aesthetics tutorial</span>.</p>
+<p>This function can also be used as a context manager to temporarily
+alter the global defaults. See <code class="xref py py-func docutils literal notranslate"><span class="pre">set_theme()</span></code> or <code class="xref py py-func docutils literal notranslate"><span class="pre">set_style()</span></code>
+to modify the global defaults for all plots.</p>
+<dl class="simple">
+<dt>style<span class="classifier">None, dict, or one of {darkgrid, whitegrid, dark, white, ticks}</span></dt><dd><p>A dictionary of parameters or the name of a preconfigured style.</p>
+</dd>
+<dt>rc<span class="classifier">dict, optional</span></dt><dd><p>Parameter mappings to override the values in the preset seaborn
+style dictionaries. This only updates parameters that are
+considered part of the style definition.</p>
+</dd>
+</dl>
+</dd>
+<dt>plotting_context(context=None, font_scale=1, rc=None)</dt><dd><p>Get the parameters that control the scaling of plot elements.</p>
+<p>These parameters correspond to label size, line thickness, etc. For more
+information, see the <span class="xref std std-doc">aesthetics tutorial</span>.</p>
+<p>The base context is &quot;notebook&quot;, and the other contexts are &quot;paper&quot;, &quot;talk&quot;,
+and &quot;poster&quot;, which are version of the notebook parameters scaled by different
+values. Font elements can also be scaled independently of (but relative to)
+the other values.</p>
+<p>This function can also be used as a context manager to temporarily
+alter the global defaults. See <code class="xref py py-func docutils literal notranslate"><span class="pre">set_theme()</span></code> or <code class="xref py py-func docutils literal notranslate"><span class="pre">set_context()</span></code>
+to modify the global defaults for all plots.</p>
+<dl class="simple">
+<dt>context<span class="classifier">None, dict, or one of {paper, notebook, talk, poster}</span></dt><dd><p>A dictionary of parameters or the name of a preconfigured set.</p>
+</dd>
+<dt>font_scale<span class="classifier">float, optional</span></dt><dd><p>Separate scaling factor to independently scale the size of the
+font elements.</p>
+</dd>
+<dt>rc<span class="classifier">dict, optional</span></dt><dd><p>Parameter mappings to override the values in the preset seaborn
+context dictionaries. This only updates parameters that are
+considered part of the context definition.</p>
+</dd>
+</dl>
+</dd>
+<dt>reset_defaults()</dt><dd><p>Restore all RC params to default settings.</p>
+</dd>
+<dt>reset_orig()</dt><dd><p>Restore all RC params to original settings (respects custom rc).</p>
+</dd>
+<dt>set(<a href="#id1"><span class="problematic" id="id2">*</span></a>args, <a href="#id3"><span class="problematic" id="id4">**</span></a>kwargs)</dt><dd><p>Alias for <code class="xref py py-func docutils literal notranslate"><span class="pre">set_theme()</span></code>, which is the preferred interface.</p>
+<p>This function may be removed in the future.</p>
+</dd>
+<dt>set_context(context=None, font_scale=1, rc=None)</dt><dd><p>Set the parameters that control the scaling of plot elements.</p>
+<p>These parameters correspond to label size, line thickness, etc.
+Calling this function modifies the global matplotlib <cite>rcParams</cite>. For more
+information, see the <span class="xref std std-doc">aesthetics tutorial</span>.</p>
+<p>The base context is &quot;notebook&quot;, and the other contexts are &quot;paper&quot;, &quot;talk&quot;,
+and &quot;poster&quot;, which are version of the notebook parameters scaled by different
+values. Font elements can also be scaled independently of (but relative to)
+the other values.</p>
+<p>See <code class="xref py py-func docutils literal notranslate"><span class="pre">plotting_context()</span></code> to get the parameter values.</p>
+<dl class="simple">
+<dt>context<span class="classifier">dict, or one of {paper, notebook, talk, poster}</span></dt><dd><p>A dictionary of parameters or the name of a preconfigured set.</p>
+</dd>
+<dt>font_scale<span class="classifier">float, optional</span></dt><dd><p>Separate scaling factor to independently scale the size of the
+font elements.</p>
+</dd>
+<dt>rc<span class="classifier">dict, optional</span></dt><dd><p>Parameter mappings to override the values in the preset seaborn
+context dictionaries. This only updates parameters that are
+considered part of the context definition.</p>
+</dd>
+</dl>
+</dd>
+<dt>set_palette(palette, n_colors=None, desat=None, color_codes=False)</dt><dd><p>Set the matplotlib color cycle using a seaborn palette.</p>
+<dl class="simple">
+<dt>palette<span class="classifier">seaborn color palette | matplotlib colormap | hls | husl</span></dt><dd><p>Palette definition. Should be something <code class="xref py py-func docutils literal notranslate"><span class="pre">color_palette()</span></code> can process.</p>
+</dd>
+<dt>n_colors<span class="classifier">int</span></dt><dd><p>Number of colors in the cycle. The default number of colors will depend
+on the format of <code class="docutils literal notranslate"><span class="pre">palette</span></code>, see the <code class="xref py py-func docutils literal notranslate"><span class="pre">color_palette()</span></code>
+documentation for more information.</p>
+</dd>
+<dt>desat<span class="classifier">float</span></dt><dd><p>Proportion to desaturate each color by.</p>
+</dd>
+<dt>color_codes<span class="classifier">bool</span></dt><dd><p>If <code class="docutils literal notranslate"><span class="pre">True</span></code> and <code class="docutils literal notranslate"><span class="pre">palette</span></code> is a seaborn palette, remap the shorthand
+color codes (e.g. &quot;b&quot;, &quot;g&quot;, &quot;r&quot;, etc.) to the colors from this palette.</p>
+</dd>
+</dl>
+<dl class="simple">
+<dt>color_palette<span class="classifier">build a color palette or set the color cycle temporarily</span></dt><dd><p>in a <code class="docutils literal notranslate"><span class="pre">with</span></code> statement.</p>
+</dd>
+</dl>
+<p>set_context : set parameters to scale plot elements
+set_style : set the default parameters for figure style</p>
+</dd>
+<dt>set_style(style=None, rc=None)</dt><dd><p>Set the parameters that control the general style of the plots.</p>
+<p>The style parameters control properties like the color of the background and
+whether a grid is enabled by default. This is accomplished using the
+matplotlib rcParams system.</p>
+<p>The options are illustrated in the
+<span class="xref std std-doc">aesthetics tutorial</span>.</p>
+<p>See <code class="xref py py-func docutils literal notranslate"><span class="pre">axes_style()</span></code> to get the parameter values.</p>
+<dl class="simple">
+<dt>style<span class="classifier">dict, or one of {darkgrid, whitegrid, dark, white, ticks}</span></dt><dd><p>A dictionary of parameters or the name of a preconfigured style.</p>
+</dd>
+<dt>rc<span class="classifier">dict, optional</span></dt><dd><p>Parameter mappings to override the values in the preset seaborn
+style dictionaries. This only updates parameters that are
+considered part of the style definition.</p>
+</dd>
+</dl>
+</dd>
+<dt>set_theme(context='notebook', style='darkgrid', palette='deep', font='sans-serif', font_scale=1, color_codes=True, rc=None)</dt><dd><p>Set aspects of the visual theme for all matplotlib and seaborn plots.</p>
+<p>This function changes the global defaults for all plots using the
+matplotlib rcParams system. The themeing is decomposed into several distinct
+sets of parameter values.</p>
+<p>The options are illustrated in the <span class="xref std std-doc">aesthetics</span>
+and <span class="xref std std-doc">color palette</span> tutorials.</p>
+<dl class="simple">
+<dt>context<span class="classifier">string or dict</span></dt><dd><p>Scaling parameters, see <code class="xref py py-func docutils literal notranslate"><span class="pre">plotting_context()</span></code>.</p>
+</dd>
+<dt>style<span class="classifier">string or dict</span></dt><dd><p>Axes style parameters, see <code class="xref py py-func docutils literal notranslate"><span class="pre">axes_style()</span></code>.</p>
+</dd>
+<dt>palette<span class="classifier">string or sequence</span></dt><dd><p>Color palette, see <code class="xref py py-func docutils literal notranslate"><span class="pre">color_palette()</span></code>.</p>
+</dd>
+<dt>font<span class="classifier">string</span></dt><dd><p>Font family, see matplotlib font manager.</p>
+</dd>
+<dt>font_scale<span class="classifier">float, optional</span></dt><dd><p>Separate scaling factor to independently scale the size of the
+font elements.</p>
+</dd>
+<dt>color_codes<span class="classifier">bool</span></dt><dd><p>If <code class="docutils literal notranslate"><span class="pre">True</span></code> and <code class="docutils literal notranslate"><span class="pre">palette</span></code> is a seaborn palette, remap the shorthand
+color codes (e.g. &quot;b&quot;, &quot;g&quot;, &quot;r&quot;, etc.) to the colors from this palette.</p>
+</dd>
+<dt>rc<span class="classifier">dict or None</span></dt><dd><p>Dictionary of rc parameter mappings to override the above.</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</dd>
+<dt>DATA</dt><dd><p>__all__ = ['set_theme', 'set', 'reset_defaults', 'reset_orig', 'axes_s...</p>
+</dd>
+<dt>FILE</dt><dd><p>/Users/leopoldogonzalez/miniconda3/lib/python3.12/site-packages/seaborn/rcmod.py</p>
+</dd>
+</dl>
+</section>
+
+
+          </div>
+          
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="Main">
+        <div class="sphinxsidebarwrapper">
+<h1 class="logo"><a href="index.html">Seanborns</a></h1>
+
+
+
+
+
+
+
+
+<h3>Навигација</h3>
+
+<div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="index.html">Documentation overview</a><ul>
+  </ul></li>
+</ul>
+</div>
+<search id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Брза претрага</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
+      <input type="submit" value="Тражи" />
+    </form>
+    </div>
+</search>
+<script>document.getElementById('searchbox').style.display = "block"</script>
+
+
+
+
+
+
+
+
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &#169;2026, Leopoldo.
+      
+      |
+      Powered by <a href="https://www.sphinx-doc.org/">Sphinx 7.4.7</a>
+      &amp; <a href="https://alabaster.readthedocs.io">Alabaster 0.7.16</a>
+      
+      |
+      <a href="_sources/rcmod.rst.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+  </body>
+</html>

@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+
+<html lang="sp" data-content_root="./">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>scatterplot &#8212; документација Seanborns 01</title>
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=5ecbeea2" />
+    <link rel="stylesheet" type="text/css" href="_static/alabaster.css?v=12dfc556" />
+    <script src="_static/documentation_options.js?v=cb95fe6c"></script>
+    <script src="_static/doctools.js?v=9a2dae69"></script>
+    <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+    <link rel="index" title="Индекс" href="genindex.html" />
+    <link rel="search" title="Претрага" href="search.html" />
+   
+  <link rel="stylesheet" href="_static/custom.css" type="text/css" />
+  
+
+  
+  
+
+  </head><body>
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          
+
+          <div class="body" role="main">
+            
+  <section id="scatterplot">
+<h1>scatterplot<a class="headerlink" href="#scatterplot" title="Link to this heading">¶</a></h1>
+<p>Help on function scatterplot in module seaborn.relational:</p>
+<dl>
+<dt>scatterplot(data=None, <a href="#id1"><span class="problematic" id="id2">*</span></a>, x=None, y=None, hue=None, size=None, style=None, palette=None, hue_order=None, hue_norm=None, sizes=None, size_order=None, size_norm=None, markers=True, style_order=None, legend='auto', ax=None, <a href="#id3"><span class="problematic" id="id4">**</span></a>kwargs)</dt><dd><p>Draw a scatter plot with possibility of several semantic groupings.</p>
+<p>The relationship between <cite>x</cite> and <cite>y</cite> can be shown for different subsets
+of the data using the <cite>hue</cite>, <cite>size</cite>, and <cite>style</cite> parameters. These
+parameters control what visual semantics are used to identify the different
+subsets. It is possible to show up to three dimensions independently by
+using all three semantic types, but this style of plot can be hard to
+interpret and is often ineffective. Using redundant semantics (i.e. both
+<cite>hue</cite> and <cite>style</cite> for the same variable) can be helpful for making
+graphics more accessible.</p>
+<p>See the <span class="xref std std-ref">tutorial</span> for more information.</p>
+<p>The default treatment of the <cite>hue</cite> (and to a lesser extent, <cite>size</cite>)
+semantic, if present, depends on whether the variable is inferred to
+represent &quot;numeric&quot; or &quot;categorical&quot; data. In particular, numeric variables
+are represented with a sequential colormap by default, and the legend
+entries show regular &quot;ticks&quot; with values that may or may not exist in the
+data. This behavior can be controlled through various parameters, as
+described and illustrated below.</p>
+<dl>
+<dt>data<span class="classifier"><code class="xref py py-class docutils literal notranslate"><span class="pre">pandas.DataFrame</span></code>, <code class="xref py py-class docutils literal notranslate"><span class="pre">numpy.ndarray</span></code>, mapping, or sequence</span></dt><dd><p>Input data structure. Either a long-form collection of vectors that can be
+assigned to named variables or a wide-form dataset that will be internally
+reshaped.</p>
+</dd>
+<dt>x, y<span class="classifier">vectors or keys in <code class="docutils literal notranslate"><span class="pre">data</span></code></span></dt><dd><p>Variables that specify positions on the x and y axes.</p>
+</dd>
+<dt>hue<span class="classifier">vector or key in <cite>data</cite></span></dt><dd><p>Grouping variable that will produce points with different colors.
+Can be either categorical or numeric, although color mapping will
+behave differently in latter case.</p>
+</dd>
+<dt>size<span class="classifier">vector or key in <cite>data</cite></span></dt><dd><p>Grouping variable that will produce points with different sizes.
+Can be either categorical or numeric, although size mapping will
+behave differently in latter case.</p>
+</dd>
+<dt>style<span class="classifier">vector or key in <cite>data</cite></span></dt><dd><p>Grouping variable that will produce points with different markers.
+Can have a numeric dtype but will always be treated as categorical.</p>
+</dd>
+<dt>palette<span class="classifier">string, list, dict, or <code class="xref py py-class docutils literal notranslate"><span class="pre">matplotlib.colors.Colormap</span></code></span></dt><dd><p>Method for choosing the colors to use when mapping the <code class="docutils literal notranslate"><span class="pre">hue</span></code> semantic.
+String values are passed to <code class="xref py py-func docutils literal notranslate"><span class="pre">color_palette()</span></code>. List or dict values
+imply categorical mapping, while a colormap object implies numeric mapping.</p>
+</dd>
+<dt>hue_order<span class="classifier">vector of strings</span></dt><dd><p>Specify the order of processing and plotting for categorical levels of the
+<code class="docutils literal notranslate"><span class="pre">hue</span></code> semantic.</p>
+</dd>
+<dt>hue_norm<span class="classifier">tuple or <code class="xref py py-class docutils literal notranslate"><span class="pre">matplotlib.colors.Normalize</span></code></span></dt><dd><p>Either a pair of values that set the normalization range in data units
+or an object that will map from data units into a [0, 1] interval. Usage
+implies numeric mapping.</p>
+</dd>
+<dt>sizes<span class="classifier">list, dict, or tuple</span></dt><dd><p>An object that determines how sizes are chosen when <cite>size</cite> is used.
+List or dict arguments should provide a size for each unique data value,
+which forces a categorical interpretation. The argument may also be a
+min, max tuple.</p>
+</dd>
+<dt>size_order<span class="classifier">list</span></dt><dd><p>Specified order for appearance of the <cite>size</cite> variable levels,
+otherwise they are determined from the data. Not relevant when the
+<cite>size</cite> variable is numeric.</p>
+</dd>
+<dt>size_norm<span class="classifier">tuple or Normalize object</span></dt><dd><p>Normalization in data units for scaling plot objects when the
+<cite>size</cite> variable is numeric.</p>
+</dd>
+<dt>markers<span class="classifier">boolean, list, or dictionary</span></dt><dd><p>Object determining how to draw the markers for different levels of the
+<cite>style</cite> variable. Setting to <cite>True</cite> will use default markers, or
+you can pass a list of markers or a dictionary mapping levels of the
+<cite>style</cite> variable to markers. Setting to <cite>False</cite> will draw
+marker-less lines.  Markers are specified as in matplotlib.</p>
+</dd>
+<dt>style_order<span class="classifier">list</span></dt><dd><p>Specified order for appearance of the <cite>style</cite> variable levels
+otherwise they are determined from the data. Not relevant when the
+<cite>style</cite> variable is numeric.</p>
+</dd>
+<dt>legend<span class="classifier">&quot;auto&quot;, &quot;brief&quot;, &quot;full&quot;, or False</span></dt><dd><p>How to draw the legend. If &quot;brief&quot;, numeric <cite>hue</cite> and <cite>size</cite>
+variables will be represented with a sample of evenly spaced values.
+If &quot;full&quot;, every group will get an entry in the legend. If &quot;auto&quot;,
+choose between brief or full representation based on number of levels.
+If <cite>False</cite>, no legend data is added and no legend is drawn.</p>
+</dd>
+<dt>ax<span class="classifier"><code class="xref py py-class docutils literal notranslate"><span class="pre">matplotlib.axes.Axes</span></code></span></dt><dd><p>Pre-existing axes for the plot. Otherwise, call <code class="xref py py-func docutils literal notranslate"><span class="pre">matplotlib.pyplot.gca()</span></code>
+internally.</p>
+</dd>
+<dt>kwargs<span class="classifier">key, value mappings</span></dt><dd><p>Other keyword arguments are passed down to
+<code class="xref py py-meth docutils literal notranslate"><span class="pre">matplotlib.axes.Axes.scatter()</span></code>.</p>
+</dd>
+</dl>
+<dl class="simple">
+<dt><code class="xref py py-class docutils literal notranslate"><span class="pre">matplotlib.axes.Axes</span></code></dt><dd><p>The matplotlib axes containing the plot.</p>
+</dd>
+</dl>
+<p>lineplot : Plot data using lines.
+stripplot : Plot a categorical scatter with jitter.
+swarmplot : Plot a categorical scatter with non-overlapping points.</p>
+</dd>
+</dl>
+</section>
+
+
+          </div>
+          
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="Main">
+        <div class="sphinxsidebarwrapper">
+<h1 class="logo"><a href="index.html">Seanborns</a></h1>
+
+
+
+
+
+
+
+
+<h3>Навигација</h3>
+
+<div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="index.html">Documentation overview</a><ul>
+  </ul></li>
+</ul>
+</div>
+<search id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Брза претрага</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
+      <input type="submit" value="Тражи" />
+    </form>
+    </div>
+</search>
+<script>document.getElementById('searchbox').style.display = "block"</script>
+
+
+
+
+
+
+
+
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &#169;2026, Leopoldo.
+      
+      |
+      Powered by <a href="https://www.sphinx-doc.org/">Sphinx 7.4.7</a>
+      &amp; <a href="https://alabaster.readthedocs.io">Alabaster 0.7.16</a>
+      
+      |
+      <a href="_sources/scatterplot.rst.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+  </body>
+</html>
