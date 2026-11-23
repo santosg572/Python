@@ -1,0 +1,332 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="../../">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>xkcd_rgb &mdash; santosg57-python 0.1 documentation</title>
+      <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=b86133f3" />
+      <link rel="stylesheet" type="text/css" href="../../_static/css/theme.css?v=9edc463e" />
+      <link rel="stylesheet" type="text/css" href="../../_static/custom.css?v=836bb062" />
+
+  
+      <script src="../../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="../../_static/documentation_options.js?v=2709fde1"></script>
+      <script src="../../_static/doctools.js?v=9a2dae69"></script>
+      <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../../index.html" class="icon icon-home">
+            santosg57-python
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+<li class="toctree-l1"><a class="reference internal" href="../../Daniel_Ejercicios_abr2025/biostatistics_daniel.html">BIOSTATISTICS-DANIEL</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../Temarios/index2.html">sss</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../funciones.html">Funciones o Métodos creados por el Usuario</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../numpy/Imagenes/imagenes.html">Estructuras de datos en el módulo numpy</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../numpy_help.html">Help numpy</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../matplotlyb.html">Matplotlib.pyplot</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../ejercicio_01.html">Ejercicio01</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../ubuntu_windows.html">Pasos para instalar Ubuntu con WSL</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../funciones_curso.html">Algunas funciones desarrolladas durante el curso</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../ejercicio_calculo_de_probabilidades.html">Cálculo de Probabilidades</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../help/index2.html">HELP</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../Python_Tkinter/index2.html">Tkinter</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">santosg57-python</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">xkcd_rgb</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../../_sources/Python_Seaborn/source/xkcd_rgb.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="xkcd-rgb">
+<h1>xkcd_rgb<a class="headerlink" href="#xkcd-rgb" title="Link to this heading"></a></h1>
+<p>Help on dict object:</p>
+<dl>
+<dt>class dict(object)</dt><dd><div class="line-block">
+<div class="line">dict() -&gt; new empty dictionary</div>
+<div class="line">dict(mapping) -&gt; new dictionary initialized from a mapping object’s</div>
+<div class="line-block">
+<div class="line">(key, value) pairs</div>
+</div>
+<div class="line">dict(iterable) -&gt; new dictionary initialized as if via:</div>
+<div class="line-block">
+<div class="line">d = {}</div>
+<div class="line">for k, v in iterable:</div>
+<div class="line-block">
+<div class="line">d[k] = v</div>
+</div>
+</div>
+<div class="line">dict(<a href="#id1"><span class="problematic" id="id2">**</span></a>kwargs) -&gt; new dictionary initialized with the name=value pairs</div>
+<div class="line-block">
+<div class="line">in the keyword argument list.  For example:  dict(one=1, two=2)</div>
+<div class="line"><br /></div>
+</div>
+<div class="line">Built-in subclasses:</div>
+<div class="line-block">
+<div class="line">StgDict</div>
+<div class="line"><br /></div>
+</div>
+<div class="line">Methods defined here:</div>
+<div class="line"><br /></div>
+<div class="line">__contains__(self, key, /)</div>
+<div class="line-block">
+<div class="line">True if the dictionary has the specified key, else False.</div>
+<div class="line"><br /></div>
+</div>
+<div class="line">__delitem__(self, key, /)</div>
+<div class="line-block">
+<div class="line">Delete self[key].</div>
+<div class="line"><br /></div>
+</div>
+<div class="line">__eq__(self, value, /)</div>
+<div class="line-block">
+<div class="line">Return self==value.</div>
+<div class="line"><br /></div>
+</div>
+<div class="line">__ge__(self, value, /)</div>
+<div class="line-block">
+<div class="line">Return self&gt;=value.</div>
+<div class="line"><br /></div>
+</div>
+<div class="line">__getattribute__(self, name, /)</div>
+<div class="line-block">
+<div class="line">Return getattr(self, name).</div>
+<div class="line"><br /></div>
+</div>
+<div class="line">__getitem__(self, key, /)</div>
+<div class="line-block">
+<div class="line">Return self[key].</div>
+<div class="line"><br /></div>
+</div>
+<div class="line">__gt__(self, value, /)</div>
+<div class="line-block">
+<div class="line">Return self&gt;value.</div>
+<div class="line"><br /></div>
+</div>
+<div class="line">__init__(self, /, <a href="#id3"><span class="problematic" id="id4">*</span></a>args, <a href="#id5"><span class="problematic" id="id6">**</span></a>kwargs)</div>
+<div class="line-block">
+<div class="line">Initialize self.  See help(type(self)) for accurate signature.</div>
+<div class="line"><br /></div>
+</div>
+<div class="line">__ior__(self, value, /)</div>
+<div class="line-block">
+<div class="line">Return self|=value.</div>
+<div class="line"><br /></div>
+</div>
+<div class="line">__iter__(self, /)</div>
+<div class="line-block">
+<div class="line">Implement iter(self).</div>
+<div class="line"><br /></div>
+</div>
+<div class="line">__le__(self, value, /)</div>
+<div class="line-block">
+<div class="line">Return self&lt;=value.</div>
+<div class="line"><br /></div>
+</div>
+<div class="line">__len__(self, /)</div>
+<div class="line-block">
+<div class="line">Return len(self).</div>
+<div class="line"><br /></div>
+</div>
+<div class="line">__lt__(self, value, /)</div>
+<div class="line-block">
+<div class="line">Return self&lt;value.</div>
+<div class="line"><br /></div>
+</div>
+<div class="line">__ne__(self, value, /)</div>
+<div class="line-block">
+<div class="line">Return self!=value.</div>
+<div class="line"><br /></div>
+</div>
+<div class="line">__or__(self, value, /)</div>
+<div class="line-block">
+<div class="line">Return self|value.</div>
+<div class="line"><br /></div>
+</div>
+<div class="line">__repr__(self, /)</div>
+<div class="line-block">
+<div class="line">Return repr(self).</div>
+<div class="line"><br /></div>
+</div>
+<div class="line">__reversed__(self, /)</div>
+<div class="line-block">
+<div class="line">Return a reverse iterator over the dict keys.</div>
+<div class="line"><br /></div>
+</div>
+<div class="line">__ror__(self, value, /)</div>
+<div class="line-block">
+<div class="line">Return value|self.</div>
+<div class="line"><br /></div>
+</div>
+<div class="line">__setitem__(self, key, value, /)</div>
+<div class="line-block">
+<div class="line">Set self[key] to value.</div>
+<div class="line"><br /></div>
+</div>
+<div class="line">__sizeof__(…)</div>
+<div class="line-block">
+<div class="line">D.__sizeof__() -&gt; size of D in memory, in bytes</div>
+<div class="line"><br /></div>
+</div>
+<div class="line">clear(…)</div>
+<div class="line-block">
+<div class="line">D.clear() -&gt; None.  Remove all items from D.</div>
+<div class="line"><br /></div>
+</div>
+<div class="line">copy(…)</div>
+<div class="line-block">
+<div class="line">D.copy() -&gt; a shallow copy of D</div>
+<div class="line"><br /></div>
+</div>
+<div class="line">get(self, key, default=None, /)</div>
+<div class="line-block">
+<div class="line">Return the value for key if key is in the dictionary, else default.</div>
+<div class="line"><br /></div>
+</div>
+<div class="line">items(…)</div>
+<div class="line-block">
+<div class="line">D.items() -&gt; a set-like object providing a view on D’s items</div>
+<div class="line"><br /></div>
+</div>
+<div class="line">keys(…)</div>
+<div class="line-block">
+<div class="line">D.keys() -&gt; a set-like object providing a view on D’s keys</div>
+<div class="line"><br /></div>
+</div>
+<div class="line">pop(…)</div>
+<div class="line-block">
+<div class="line">D.pop(k[,d]) -&gt; v, remove specified key and return the corresponding value.</div>
+<div class="line"><br /></div>
+<div class="line">If the key is not found, return the default if given; otherwise,</div>
+<div class="line">raise a KeyError.</div>
+<div class="line"><br /></div>
+</div>
+<div class="line">popitem(self, /)</div>
+<div class="line-block">
+<div class="line">Remove and return a (key, value) pair as a 2-tuple.</div>
+<div class="line"><br /></div>
+<div class="line">Pairs are returned in LIFO (last-in, first-out) order.</div>
+<div class="line">Raises KeyError if the dict is empty.</div>
+<div class="line"><br /></div>
+</div>
+<div class="line">setdefault(self, key, default=None, /)</div>
+<div class="line-block">
+<div class="line">Insert key with a value of default if key is not in the dictionary.</div>
+<div class="line"><br /></div>
+<div class="line">Return the value for key if key is in the dictionary, else default.</div>
+<div class="line"><br /></div>
+</div>
+<div class="line">update(…)</div>
+<div class="line-block">
+<div class="line">D.update([E, ]**F) -&gt; None.  Update D from dict/iterable E and F.</div>
+<div class="line">If E is present and has a .keys() method, then does:  for k in E: D[k] = E[k]</div>
+<div class="line">If E is present and lacks a .keys() method, then does:  for k, v in E: D[k] = v</div>
+<div class="line">In either case, this is followed by: for k in F:  D[k] = F[k]</div>
+<div class="line"><br /></div>
+</div>
+<div class="line">values(…)</div>
+<div class="line-block">
+<div class="line">D.values() -&gt; an object providing a view on D’s values</div>
+<div class="line"><br /></div>
+</div>
+<div class="line">———————————————————————-</div>
+<div class="line">Class methods defined here:</div>
+<div class="line"><br /></div>
+<div class="line">__class_getitem__(…) from builtins.type</div>
+<div class="line-block">
+<div class="line">See PEP 585</div>
+<div class="line"><br /></div>
+</div>
+<div class="line">fromkeys(iterable, value=None, /) from builtins.type</div>
+<div class="line-block">
+<div class="line">Create a new dictionary with keys from iterable and values set to value.</div>
+<div class="line"><br /></div>
+</div>
+<div class="line">———————————————————————-</div>
+<div class="line">Static methods defined here:</div>
+<div class="line"><br /></div>
+<div class="line">__new__(<a href="#id7"><span class="problematic" id="id8">*</span></a>args, <a href="#id9"><span class="problematic" id="id10">**</span></a>kwargs) from builtins.type</div>
+<div class="line-block">
+<div class="line">Create and return a new object.  See help(type) for accurate signature.</div>
+<div class="line"><br /></div>
+</div>
+<div class="line">———————————————————————-</div>
+<div class="line">Data and other attributes defined here:</div>
+<div class="line"><br /></div>
+<div class="line">__hash__ = None</div>
+</div>
+</dd>
+</dl>
+</section>
+
+
+           </div>
+          </div>
+          <footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2025, santosg57, santosg572@gmail.com.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

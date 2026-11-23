@@ -1,0 +1,27 @@
+.. pandas documentation master file, created by
+   sphinx-quickstart on Sun Oct  4 05:06:36 2026.
+   You can adapt this file completely to your liking, but it should at least
+   contain the root `toctree` directive.
+
+pandas documentation
+====================
+
+Add your content using ``reStructuredText`` syntax. See the
+`reStructuredText <https://www.sphinx-doc.org/en/master/usage/restructuredtext/index.html>`_
+documentation for details.
+
+
+.. toctree::
+   :maxdepth: 2
+   :caption: Contents:
+ 
+   dir_pd
+   dir_DataFrame
+   help_DataFrame
+   help_loc
+   help_iloc
+   help_boxplot
+   help_mean
+   pandas_pydata/API_reference
+   clase_nov1826/clase_nov1826
+

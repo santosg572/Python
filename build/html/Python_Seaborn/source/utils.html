@@ -1,0 +1,231 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="../../">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>utils &mdash; santosg57-python 0.1 documentation</title>
+      <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=b86133f3" />
+      <link rel="stylesheet" type="text/css" href="../../_static/css/theme.css?v=9edc463e" />
+      <link rel="stylesheet" type="text/css" href="../../_static/custom.css?v=836bb062" />
+
+  
+      <script src="../../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="../../_static/documentation_options.js?v=2709fde1"></script>
+      <script src="../../_static/doctools.js?v=9a2dae69"></script>
+      <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../../index.html" class="icon icon-home">
+            santosg57-python
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+<li class="toctree-l1"><a class="reference internal" href="../../Daniel_Ejercicios_abr2025/biostatistics_daniel.html">BIOSTATISTICS-DANIEL</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../Temarios/index2.html">sss</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../funciones.html">Funciones o Métodos creados por el Usuario</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../numpy/Imagenes/imagenes.html">Estructuras de datos en el módulo numpy</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../numpy_help.html">Help numpy</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../matplotlyb.html">Matplotlib.pyplot</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../ejercicio_01.html">Ejercicio01</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../ubuntu_windows.html">Pasos para instalar Ubuntu con WSL</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../funciones_curso.html">Algunas funciones desarrolladas durante el curso</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../ejercicio_calculo_de_probabilidades.html">Cálculo de Probabilidades</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../help/index2.html">HELP</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../Python_Tkinter/index2.html">Tkinter</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">santosg57-python</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">utils</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../../_sources/Python_Seaborn/source/utils.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="utils">
+<h1>utils<a class="headerlink" href="#utils" title="Link to this heading"></a></h1>
+<p>Help on module seaborn.utils in seaborn:</p>
+<dl>
+<dt>NAME</dt><dd><p>seaborn.utils - Utility functions, mostly for internal use.</p>
+</dd>
+<dt>FUNCTIONS</dt><dd><dl>
+<dt>desaturate(color, prop)</dt><dd><p>Decrease the saturation channel of a color by some percent.</p>
+<dl class="simple">
+<dt>color<span class="classifier">matplotlib color</span></dt><dd><p>hex, rgb-tuple, or html color name</p>
+</dd>
+<dt>prop<span class="classifier">float</span></dt><dd><p>saturation channel of color will be multiplied by this value</p>
+</dd>
+</dl>
+<dl class="simple">
+<dt>new_color<span class="classifier">rgb tuple</span></dt><dd><p>desaturated color code in RGB tuple representation</p>
+</dd>
+</dl>
+</dd>
+<dt>despine(fig=None, ax=None, top=True, right=True, left=False, bottom=False, offset=None, trim=False)</dt><dd><p>Remove the top and right spines from plot(s).</p>
+<dl class="simple">
+<dt>fig<span class="classifier">matplotlib figure, optional</span></dt><dd><p>Figure to despine all axes of, defaults to the current figure.</p>
+</dd>
+<dt>ax<span class="classifier">matplotlib axes, optional</span></dt><dd><p>Specific axes object to despine. Ignored if fig is provided.</p>
+</dd>
+<dt>top, right, left, bottom<span class="classifier">boolean, optional</span></dt><dd><p>If True, remove that spine.</p>
+</dd>
+<dt>offset<span class="classifier">int or dict, optional</span></dt><dd><p>Absolute distance, in points, spines should be moved away
+from the axes (negative values move spines inward). A single value
+applies to all spines; a dict can be used to set offset values per
+side.</p>
+</dd>
+<dt>trim<span class="classifier">bool, optional</span></dt><dd><p>If True, limit spines to the smallest and largest major tick
+on each non-despined axis.</p>
+</dd>
+</dl>
+<p>None</p>
+</dd>
+<dt>get_data_home(data_home=None)</dt><dd><p>Return a path to the cache directory for example datasets.</p>
+<p>This directory is used by <code class="xref py py-func docutils literal notranslate"><span class="pre">load_dataset()</span></code>.</p>
+<p>If the <code class="docutils literal notranslate"><span class="pre">data_home</span></code> argument is not provided, it will use a directory
+specified by the <cite>SEABORN_DATA</cite> environment variable (if it exists)
+or otherwise default to an OS-appropriate user cache location.</p>
+</dd>
+<dt>get_dataset_names()</dt><dd><p>Report available example datasets, useful for reporting issues.</p>
+<p>Requires an internet connection.</p>
+</dd>
+<dt>load_dataset(name, cache=True, data_home=None, <a href="#id1"><span class="problematic" id="id2">**</span></a>kws)</dt><dd><p>Load an example dataset from the online repository (requires internet).</p>
+<p>This function provides quick access to a small number of example datasets
+that are useful for documenting seaborn or generating reproducible examples
+for bug reports. It is not necessary for normal usage.</p>
+<p>Note that some of the datasets have a small amount of preprocessing applied
+to define a proper ordering for categorical variables.</p>
+<p>Use <code class="xref py py-func docutils literal notranslate"><span class="pre">get_dataset_names()</span></code> to see a list of available datasets.</p>
+<dl class="simple">
+<dt>name<span class="classifier">str</span></dt><dd><p>Name of the dataset (<code class="docutils literal notranslate"><span class="pre">{name}.csv</span></code> on
+<a class="reference external" href="https://github.com/mwaskom/seaborn-data">https://github.com/mwaskom/seaborn-data</a>).</p>
+</dd>
+<dt>cache<span class="classifier">boolean, optional</span></dt><dd><p>If True, try to load from the local cache first, and save to the cache
+if a download is required.</p>
+</dd>
+<dt>data_home<span class="classifier">string, optional</span></dt><dd><p>The directory in which to cache data; see <code class="xref py py-func docutils literal notranslate"><span class="pre">get_data_home()</span></code>.</p>
+</dd>
+<dt>kws<span class="classifier">keys and values, optional</span></dt><dd><p>Additional keyword arguments are passed to passed through to
+<code class="xref py py-func docutils literal notranslate"><span class="pre">pandas.read_csv()</span></code>.</p>
+</dd>
+</dl>
+<dl>
+<dt>df<span class="classifier"><code class="xref py py-class docutils literal notranslate"><span class="pre">pandas.DataFrame</span></code></span></dt><dd><p>Tabular data, possibly with some preprocessing applied.</p>
+</dd>
+</dl>
+</dd>
+<dt>move_legend(obj, loc, <a href="#id3"><span class="problematic" id="id4">**</span></a>kwargs)</dt><dd><p>Recreate a plot’s legend at a new location.</p>
+<p>The name is a slight misnomer. Matplotlib legends do not expose public
+control over their position parameters. So this function creates a new legend,
+copying over the data from the original object, which is then removed.</p>
+<dl class="simple">
+<dt>obj<span class="classifier">the object with the plot</span></dt><dd><p>This argument can be either a seaborn or matplotlib object:</p>
+<ul class="simple">
+<li><p><code class="xref py py-class docutils literal notranslate"><span class="pre">seaborn.FacetGrid</span></code> or <code class="xref py py-class docutils literal notranslate"><span class="pre">seaborn.PairGrid</span></code></p></li>
+<li><p><code class="xref py py-class docutils literal notranslate"><span class="pre">matplotlib.axes.Axes</span></code> or <code class="xref py py-class docutils literal notranslate"><span class="pre">matplotlib.figure.Figure</span></code></p></li>
+</ul>
+</dd>
+<dt>loc<span class="classifier">str or int</span></dt><dd><p>Location argument, as in <code class="xref py py-meth docutils literal notranslate"><span class="pre">matplotlib.axes.Axes.legend()</span></code>.</p>
+</dd>
+<dt>kwargs</dt><dd><p>Other keyword arguments are passed to <code class="xref py py-meth docutils literal notranslate"><span class="pre">matplotlib.axes.Axes.legend()</span></code>.</p>
+</dd>
+</dl>
+</dd>
+<dt>saturate(color)</dt><dd><p>Return a fully saturated color with the same hue.</p>
+<dl class="simple">
+<dt>color<span class="classifier">matplotlib color</span></dt><dd><p>hex, rgb-tuple, or html color name</p>
+</dd>
+</dl>
+<dl class="simple">
+<dt>new_color<span class="classifier">rgb tuple</span></dt><dd><p>saturated color code in RGB tuple representation</p>
+</dd>
+</dl>
+</dd>
+<dt>set_hls_values(color, h=None, l=None, s=None)</dt><dd><p>Independently manipulate the h, l, or s channels of a color.</p>
+<dl class="simple">
+<dt>color<span class="classifier">matplotlib color</span></dt><dd><p>hex, rgb-tuple, or html color name</p>
+</dd>
+<dt>h, l, s<span class="classifier">floats between 0 and 1, or None</span></dt><dd><p>new values for each channel in hls space</p>
+</dd>
+</dl>
+<dl class="simple">
+<dt>new_color<span class="classifier">rgb tuple</span></dt><dd><p>new color code in RGB tuple representation</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</dd>
+<dt>DATA</dt><dd><p>__all__ = [‘desaturate’, ‘saturate’, ‘set_hls_values’, ‘move_legend’, …</p>
+</dd>
+<dt>FILE</dt><dd><p>/Users/leopoldogonzalez/miniconda3/lib/python3.12/site-packages/seaborn/utils.py</p>
+</dd>
+</dl>
+</section>
+
+
+           </div>
+          </div>
+          <footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2025, santosg57, santosg572@gmail.com.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

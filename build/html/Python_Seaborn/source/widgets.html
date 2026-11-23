@@ -1,0 +1,241 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="../../">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>widgets &mdash; santosg57-python 0.1 documentation</title>
+      <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=b86133f3" />
+      <link rel="stylesheet" type="text/css" href="../../_static/css/theme.css?v=9edc463e" />
+      <link rel="stylesheet" type="text/css" href="../../_static/custom.css?v=836bb062" />
+
+  
+      <script src="../../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="../../_static/documentation_options.js?v=2709fde1"></script>
+      <script src="../../_static/doctools.js?v=9a2dae69"></script>
+      <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../../index.html" class="icon icon-home">
+            santosg57-python
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+<li class="toctree-l1"><a class="reference internal" href="../../Daniel_Ejercicios_abr2025/biostatistics_daniel.html">BIOSTATISTICS-DANIEL</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../Temarios/index2.html">sss</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../funciones.html">Funciones o Métodos creados por el Usuario</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../numpy/Imagenes/imagenes.html">Estructuras de datos en el módulo numpy</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../numpy_help.html">Help numpy</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../matplotlyb.html">Matplotlib.pyplot</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../ejercicio_01.html">Ejercicio01</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../ubuntu_windows.html">Pasos para instalar Ubuntu con WSL</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../funciones_curso.html">Algunas funciones desarrolladas durante el curso</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../ejercicio_calculo_de_probabilidades.html">Cálculo de Probabilidades</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../help/index2.html">HELP</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../Python_Tkinter/index2.html">Tkinter</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">santosg57-python</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">widgets</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../../_sources/Python_Seaborn/source/widgets.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="widgets">
+<h1>widgets<a class="headerlink" href="#widgets" title="Link to this heading"></a></h1>
+<p>Help on module seaborn.widgets in seaborn:</p>
+<dl>
+<dt>NAME</dt><dd><p>seaborn.widgets</p>
+</dd>
+<dt>FUNCTIONS</dt><dd><dl>
+<dt>choose_colorbrewer_palette(data_type, as_cmap=False)</dt><dd><p>Select a palette from the ColorBrewer set.</p>
+<p>These palettes are built into matplotlib and can be used by name in
+many seaborn functions, or by passing the object returned by this function.</p>
+<dl class="simple">
+<dt>data_type<span class="classifier">{‘sequential’, ‘diverging’, ‘qualitative’}</span></dt><dd><p>This describes the kind of data you want to visualize. See the seaborn
+color palette docs for more information about how to choose this value.
+Note that you can pass substrings (e.g. ‘q’ for ‘qualitative.</p>
+</dd>
+<dt>as_cmap<span class="classifier">bool</span></dt><dd><p>If True, the return value is a matplotlib colormap rather than a
+list of discrete colors.</p>
+</dd>
+</dl>
+<dl class="simple">
+<dt>pal or cmap<span class="classifier">list of colors or matplotlib colormap</span></dt><dd><p>Object that can be passed to plotting functions.</p>
+</dd>
+</dl>
+<p>dark_palette : Create a sequential palette with dark low values.
+light_palette : Create a sequential palette with bright low values.
+diverging_palette : Create a diverging palette from selected colors.
+cubehelix_palette : Create a sequential palette or colormap using the</p>
+<blockquote>
+<div><p>cubehelix system.</p>
+</div></blockquote>
+</dd>
+<dt>choose_cubehelix_palette(as_cmap=False)</dt><dd><p>Launch an interactive widget to create a sequential cubehelix palette.</p>
+<p>This corresponds with the <code class="xref py py-func docutils literal notranslate"><span class="pre">cubehelix_palette()</span></code> function. This kind
+of palette is good for data that range between relatively uninteresting
+low values and interesting high values. The cubehelix system allows the
+palette to have more hue variance across the range, which can be helpful
+for distinguishing a wider range of values.</p>
+<p>Requires IPython 2+ and must be used in the notebook.</p>
+<dl class="simple">
+<dt>as_cmap<span class="classifier">bool</span></dt><dd><p>If True, the return value is a matplotlib colormap rather than a
+list of discrete colors.</p>
+</dd>
+</dl>
+<dl class="simple">
+<dt>pal or cmap<span class="classifier">list of colors or matplotlib colormap</span></dt><dd><p>Object that can be passed to plotting functions.</p>
+</dd>
+</dl>
+<dl class="simple">
+<dt>cubehelix_palette<span class="classifier">Create a sequential palette or colormap using the</span></dt><dd><p>cubehelix system.</p>
+</dd>
+</dl>
+</dd>
+<dt>choose_dark_palette(input=’husl’, as_cmap=False)</dt><dd><p>Launch an interactive widget to create a dark sequential palette.</p>
+<p>This corresponds with the <code class="xref py py-func docutils literal notranslate"><span class="pre">dark_palette()</span></code> function. This kind
+of palette is good for data that range between relatively uninteresting
+low values and interesting high values.</p>
+<p>Requires IPython 2+ and must be used in the notebook.</p>
+<dl class="simple">
+<dt>input<span class="classifier">{‘husl’, ‘hls’, ‘rgb’}</span></dt><dd><p>Color space for defining the seed value. Note that the default is
+different than the default input for <code class="xref py py-func docutils literal notranslate"><span class="pre">dark_palette()</span></code>.</p>
+</dd>
+<dt>as_cmap<span class="classifier">bool</span></dt><dd><p>If True, the return value is a matplotlib colormap rather than a
+list of discrete colors.</p>
+</dd>
+</dl>
+<dl class="simple">
+<dt>pal or cmap<span class="classifier">list of colors or matplotlib colormap</span></dt><dd><p>Object that can be passed to plotting functions.</p>
+</dd>
+</dl>
+<p>dark_palette : Create a sequential palette with dark low values.
+light_palette : Create a sequential palette with bright low values.
+cubehelix_palette : Create a sequential palette or colormap using the</p>
+<blockquote>
+<div><p>cubehelix system.</p>
+</div></blockquote>
+</dd>
+<dt>choose_diverging_palette(as_cmap=False)</dt><dd><p>Launch an interactive widget to choose a diverging color palette.</p>
+<p>This corresponds with the <code class="xref py py-func docutils literal notranslate"><span class="pre">diverging_palette()</span></code> function. This kind
+of palette is good for data that range between interesting low values
+and interesting high values with a meaningful midpoint. (For example,
+change scores relative to some baseline value).</p>
+<p>Requires IPython 2+ and must be used in the notebook.</p>
+<dl class="simple">
+<dt>as_cmap<span class="classifier">bool</span></dt><dd><p>If True, the return value is a matplotlib colormap rather than a
+list of discrete colors.</p>
+</dd>
+</dl>
+<dl class="simple">
+<dt>pal or cmap<span class="classifier">list of colors or matplotlib colormap</span></dt><dd><p>Object that can be passed to plotting functions.</p>
+</dd>
+</dl>
+<p>diverging_palette : Create a diverging color palette or colormap.
+choose_colorbrewer_palette : Interactively choose palettes from the</p>
+<blockquote>
+<div><p>colorbrewer set, including diverging palettes.</p>
+</div></blockquote>
+</dd>
+<dt>choose_light_palette(input=’husl’, as_cmap=False)</dt><dd><p>Launch an interactive widget to create a light sequential palette.</p>
+<p>This corresponds with the <code class="xref py py-func docutils literal notranslate"><span class="pre">light_palette()</span></code> function. This kind
+of palette is good for data that range between relatively uninteresting
+low values and interesting high values.</p>
+<p>Requires IPython 2+ and must be used in the notebook.</p>
+<dl class="simple">
+<dt>input<span class="classifier">{‘husl’, ‘hls’, ‘rgb’}</span></dt><dd><p>Color space for defining the seed value. Note that the default is
+different than the default input for <code class="xref py py-func docutils literal notranslate"><span class="pre">light_palette()</span></code>.</p>
+</dd>
+<dt>as_cmap<span class="classifier">bool</span></dt><dd><p>If True, the return value is a matplotlib colormap rather than a
+list of discrete colors.</p>
+</dd>
+</dl>
+<dl class="simple">
+<dt>pal or cmap<span class="classifier">list of colors or matplotlib colormap</span></dt><dd><p>Object that can be passed to plotting functions.</p>
+</dd>
+</dl>
+<p>light_palette : Create a sequential palette with bright low values.
+dark_palette : Create a sequential palette with dark low values.
+cubehelix_palette : Create a sequential palette or colormap using the</p>
+<blockquote>
+<div><p>cubehelix system.</p>
+</div></blockquote>
+</dd>
+</dl>
+</dd>
+<dt>DATA</dt><dd><p>__all__ = [‘choose_colorbrewer_palette’, ‘choose_cubehelix_palette’, ‘…</p>
+</dd>
+<dt>FILE</dt><dd><p>/Users/leopoldogonzalez/miniconda3/lib/python3.12/site-packages/seaborn/widgets.py</p>
+</dd>
+</dl>
+</section>
+
+
+           </div>
+          </div>
+          <footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2025, santosg57, santosg572@gmail.com.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

@@ -1,0 +1,192 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="../../">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>clustermap &mdash; santosg57-python 0.1 documentation</title>
+      <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=b86133f3" />
+      <link rel="stylesheet" type="text/css" href="../../_static/css/theme.css?v=9edc463e" />
+      <link rel="stylesheet" type="text/css" href="../../_static/custom.css?v=836bb062" />
+
+  
+      <script src="../../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="../../_static/documentation_options.js?v=2709fde1"></script>
+      <script src="../../_static/doctools.js?v=9a2dae69"></script>
+      <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../../index.html" class="icon icon-home">
+            santosg57-python
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+<li class="toctree-l1"><a class="reference internal" href="../../Daniel_Ejercicios_abr2025/biostatistics_daniel.html">BIOSTATISTICS-DANIEL</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../Temarios/index2.html">sss</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../funciones.html">Funciones o Métodos creados por el Usuario</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../numpy/Imagenes/imagenes.html">Estructuras de datos en el módulo numpy</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../numpy_help.html">Help numpy</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../matplotlyb.html">Matplotlib.pyplot</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../ejercicio_01.html">Ejercicio01</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../ubuntu_windows.html">Pasos para instalar Ubuntu con WSL</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../funciones_curso.html">Algunas funciones desarrolladas durante el curso</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../ejercicio_calculo_de_probabilidades.html">Cálculo de Probabilidades</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../help/index2.html">HELP</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../Python_Tkinter/index2.html">Tkinter</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">santosg57-python</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">clustermap</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../../_sources/Python_Seaborn/source/clustermap.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="clustermap">
+<h1>clustermap<a class="headerlink" href="#clustermap" title="Link to this heading"></a></h1>
+<p>Help on function clustermap in module seaborn.matrix:</p>
+<dl>
+<dt>clustermap(data, <a href="#id1"><span class="problematic" id="id2">*</span></a>, pivot_kws=None, method=’average’, metric=’euclidean’, z_score=None, standard_scale=None, figsize=(10, 10), cbar_kws=None, row_cluster=True, col_cluster=True, row_linkage=None, col_linkage=None, row_colors=None, col_colors=None, mask=None, dendrogram_ratio=0.2, colors_ratio=0.03, cbar_pos=(0.02, 0.8, 0.05, 0.18), tree_kws=None, <a href="#id3"><span class="problematic" id="id4">**</span></a>kwargs)</dt><dd><p>Plot a matrix dataset as a hierarchically-clustered heatmap.</p>
+<p>This function requires scipy to be available.</p>
+<dl>
+<dt>data<span class="classifier">2D array-like</span></dt><dd><p>Rectangular data for clustering. Cannot contain NAs.</p>
+</dd>
+<dt>pivot_kws<span class="classifier">dict, optional</span></dt><dd><p>If <cite>data</cite> is a tidy dataframe, can provide keyword arguments for
+pivot to create a rectangular dataframe.</p>
+</dd>
+<dt>method<span class="classifier">str, optional</span></dt><dd><p>Linkage method to use for calculating clusters. See
+<code class="xref py py-func docutils literal notranslate"><span class="pre">scipy.cluster.hierarchy.linkage()</span></code> documentation for more
+information.</p>
+</dd>
+<dt>metric<span class="classifier">str, optional</span></dt><dd><p>Distance metric to use for the data. See
+<code class="xref py py-func docutils literal notranslate"><span class="pre">scipy.spatial.distance.pdist()</span></code> documentation for more options.
+To use different metrics (or methods) for rows and columns, you may
+construct each linkage matrix yourself and provide them as
+<cite>{row,col}_linkage</cite>.</p>
+</dd>
+<dt>z_score<span class="classifier">int or None, optional</span></dt><dd><p>Either 0 (rows) or 1 (columns). Whether or not to calculate z-scores
+for the rows or the columns. Z scores are: z = (x - mean)/std, so
+values in each row (column) will get the mean of the row (column)
+subtracted, then divided by the standard deviation of the row (column).
+This ensures that each row (column) has mean of 0 and variance of 1.</p>
+</dd>
+<dt>standard_scale<span class="classifier">int or None, optional</span></dt><dd><p>Either 0 (rows) or 1 (columns). Whether or not to standardize that
+dimension, meaning for each row or column, subtract the minimum and
+divide each by its maximum.</p>
+</dd>
+<dt>figsize<span class="classifier">tuple of (width, height), optional</span></dt><dd><p>Overall size of the figure.</p>
+</dd>
+<dt>cbar_kws<span class="classifier">dict, optional</span></dt><dd><p>Keyword arguments to pass to <cite>cbar_kws</cite> in <code class="xref py py-func docutils literal notranslate"><span class="pre">heatmap()</span></code>, e.g. to
+add a label to the colorbar.</p>
+</dd>
+<dt>{row,col}_cluster<span class="classifier">bool, optional</span></dt><dd><p>If <code class="docutils literal notranslate"><span class="pre">True</span></code>, cluster the {rows, columns}.</p>
+</dd>
+<dt>{row,col}_linkage<span class="classifier"><code class="xref py py-class docutils literal notranslate"><span class="pre">numpy.ndarray</span></code>, optional</span></dt><dd><p>Precomputed linkage matrix for the rows or columns. See
+<code class="xref py py-func docutils literal notranslate"><span class="pre">scipy.cluster.hierarchy.linkage()</span></code> for specific formats.</p>
+</dd>
+<dt>{row,col}_colors<span class="classifier">list-like or pandas DataFrame/Series, optional</span></dt><dd><p>List of colors to label for either the rows or columns. Useful to evaluate
+whether samples within a group are clustered together. Can use nested lists or
+DataFrame for multiple color levels of labeling. If given as a
+<code class="xref py py-class docutils literal notranslate"><span class="pre">pandas.DataFrame</span></code> or <code class="xref py py-class docutils literal notranslate"><span class="pre">pandas.Series</span></code>, labels for the colors are
+extracted from the DataFrames column names or from the name of the Series.
+DataFrame/Series colors are also matched to the data by their index, ensuring
+colors are drawn in the correct order.</p>
+</dd>
+<dt>mask<span class="classifier">bool array or DataFrame, optional</span></dt><dd><p>If passed, data will not be shown in cells where <cite>mask</cite> is True.
+Cells with missing values are automatically masked. Only used for
+visualizing, not for calculating.</p>
+</dd>
+<dt>{dendrogram,colors}_ratio<span class="classifier">float, or pair of floats, optional</span></dt><dd><p>Proportion of the figure size devoted to the two marginal elements. If
+a pair is given, they correspond to (row, col) ratios.</p>
+</dd>
+<dt>cbar_pos<span class="classifier">tuple of (left, bottom, width, height), optional</span></dt><dd><p>Position of the colorbar axes in the figure. Setting to <code class="docutils literal notranslate"><span class="pre">None</span></code> will
+disable the colorbar.</p>
+</dd>
+<dt>tree_kws<span class="classifier">dict, optional</span></dt><dd><p>Parameters for the <code class="xref py py-class docutils literal notranslate"><span class="pre">matplotlib.collections.LineCollection</span></code>
+that is used to plot the lines of the dendrogram tree.</p>
+</dd>
+<dt>kwargs<span class="classifier">other keyword arguments</span></dt><dd><p>All other keyword arguments are passed to <code class="xref py py-func docutils literal notranslate"><span class="pre">heatmap()</span></code>.</p>
+</dd>
+</dl>
+<dl class="simple">
+<dt><code class="xref py py-class docutils literal notranslate"><span class="pre">ClusterGrid</span></code></dt><dd><p>A <code class="xref py py-class docutils literal notranslate"><span class="pre">ClusterGrid</span></code> instance.</p>
+</dd>
+</dl>
+<p>heatmap : Plot rectangular data as a color-encoded matrix.</p>
+<p>The returned object has a <code class="docutils literal notranslate"><span class="pre">savefig</span></code> method that should be used if you
+want to save the figure object without clipping the dendrograms.</p>
+<p>To access the reordered row indices, use:
+<code class="docutils literal notranslate"><span class="pre">clustergrid.dendrogram_row.reordered_ind</span></code></p>
+<p>Column indices, use:
+<code class="docutils literal notranslate"><span class="pre">clustergrid.dendrogram_col.reordered_ind</span></code></p>
+</dd>
+</dl>
+</section>
+
+
+           </div>
+          </div>
+          <footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2025, santosg57, santosg572@gmail.com.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

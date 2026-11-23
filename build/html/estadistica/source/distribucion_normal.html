@@ -1,0 +1,178 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="../../">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Distribución normal &mdash; santosg57-python 0.1 documentation</title>
+      <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=b86133f3" />
+      <link rel="stylesheet" type="text/css" href="../../_static/css/theme.css?v=9edc463e" />
+      <link rel="stylesheet" type="text/css" href="../../_static/custom.css?v=836bb062" />
+
+  
+      <script src="../../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="../../_static/documentation_options.js?v=2709fde1"></script>
+      <script src="../../_static/doctools.js?v=9a2dae69"></script>
+      <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
+      <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script src="../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../../index.html" class="icon icon-home">
+            santosg57-python
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+<li class="toctree-l1"><a class="reference internal" href="../../Daniel_Ejercicios_abr2025/biostatistics_daniel.html">BIOSTATISTICS-DANIEL</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../Temarios/index2.html">sss</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../funciones.html">Funciones o Métodos creados por el Usuario</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../numpy/Imagenes/imagenes.html">Estructuras de datos en el módulo numpy</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../numpy_help.html">Help numpy</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../matplotlyb.html">Matplotlib.pyplot</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../ejercicio_01.html">Ejercicio01</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../ubuntu_windows.html">Pasos para instalar Ubuntu con WSL</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../funciones_curso.html">Algunas funciones desarrolladas durante el curso</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../ejercicio_calculo_de_probabilidades.html">Cálculo de Probabilidades</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../help/index2.html">HELP</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../Python_Tkinter/index2.html">Tkinter</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">santosg57-python</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">Distribución normal</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../../_sources/estadistica/source/distribucion_normal.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="distribucion-normal">
+<h1>Distribución normal<a class="headerlink" href="#distribucion-normal" title="Link to this heading"></a></h1>
+<p><strong>Función de densidad de probabilidad</strong></p>
+<img alt="estadistica/source/funcion_densidad_normal.png" src="estadistica/source/funcion_densidad_normal.png" />
+<p><strong>Función de distribución de probabilidad</strong></p>
+<img alt="estadistica/source/funcion_distribucion_probabilidad.png" src="estadistica/source/funcion_distribucion_probabilidad.png" />
+<p>Para calcular la probabilidad de una distribución normal en Python, se utiliza principalmente la librería <strong>SciPy</strong> (a
+través
+de <code class="docutils literal notranslate"><span class="pre">scipy.stats.norm</span></code>), la cual permite trabajar con la función de distribución acumulada (<code class="docutils literal notranslate"><span class="pre">cdf</span></code>), la función de
+densidad de
+probabilidad (<code class="docutils literal notranslate"><span class="pre">pdf</span></code>) y la función cuantil (<code class="docutils literal notranslate"><span class="pre">ppf</span></code>)</p>
+<p><strong>Métodos principales en scipy.stats.norm</strong></p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">norm.cdf(x,</span> <span class="pre">loc=mu,</span> <span class="pre">scale=sigma)</span></code> (Función de distribución acumulada): Calcula <span class="math notranslate nohighlight">\(P(X \le x)\)</span>, es decir, la</p></li>
+</ul>
+<p>probabilidad
+acumulada desde menos infinito hasta el valor <span class="math notranslate nohighlight">\(x\)</span>.</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">norm.pdf(x,</span> <span class="pre">loc=mu,</span> <span class="pre">scale=sigma)</span></code> (Función de densidad de probabilidad): Calcula el valor de la función de densidad</p></li>
+</ul>
+<p>en el
+punto <span class="math notranslate nohighlight">\(x\)</span>.</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">norm.ppf(q,</span> <span class="pre">loc=mu,</span> <span class="pre">scale=sigma)</span></code> (Función cuantil o inversa): Dado un nivel de probabilidad <span class="math notranslate nohighlight">\(q\)</span> (por</p></li>
+</ul>
+<p>ejemplo,
+(0.95)), devuelve el valor <span class="math notranslate nohighlight">\(x\)</span> tal que <span class="math notranslate nohighlight">\(P(X \le x) = q\)</span></p>
+<p><strong>Ejemplos prácticos en Python</strong></p>
+<ol class="arabic simple">
+<li><p>Calcular <span class="math notranslate nohighlight">\(P(X \le x)\)</span> (Probabilidad acumulada inferior)</p></li>
+</ol>
+<p>Si tienes una variable con media <span class="math notranslate nohighlight">\(\mu = 100\)</span> y desviación estándar <span class="math notranslate nohighlight">\(\sigma = 15\)</span>, y quieres saber cuál es
+la
+probabilidad de obtener un valor menor o igual a <span class="math notranslate nohighlight">\(115\)</span>:</p>
+<div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span><span class="w"> </span><span class="nn">scipy.stats</span><span class="w"> </span><span class="kn">import</span> <span class="n">norm</span>
+
+<span class="n">mu</span> <span class="o">=</span> <span class="mi">100</span>
+<span class="n">sigma</span> <span class="o">=</span> <span class="mi">15</span>
+<span class="n">x</span> <span class="o">=</span> <span class="mi">115</span>
+
+<span class="n">probabilidad</span> <span class="o">=</span> <span class="n">norm</span><span class="o">.</span><span class="n">cdf</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">loc</span><span class="o">=</span><span class="n">mu</span><span class="p">,</span> <span class="n">scale</span><span class="o">=</span><span class="n">sigma</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;P(X &lt;= </span><span class="si">{</span><span class="n">x</span><span class="si">}</span><span class="s2">) = </span><span class="si">{</span><span class="n">probabilidad</span><span class="si">:</span><span class="s2">.4f</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+<span class="c1"># Salida aproximada: P(X &lt;= 115) = 0.8413 (84.13%)</span>
+</pre></div>
+</div>
+<ol class="arabic simple" start="2">
+<li><p>Calcular <span class="math notranslate nohighlight">\(P(X &gt; x)\)</span> (Probabilidad superior)</p></li>
+</ol>
+<p>Para calcular la probabilidad de obtener un valor mayor a <span class="math notranslate nohighlight">\(x\)</span>, se resta la función acumulada de <span class="math notranslate nohighlight">\(1\)</span>:</p>
+<div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="n">probabilidad_mayor</span> <span class="o">=</span> <span class="mi">1</span> <span class="o">-</span> <span class="n">norm</span><span class="o">.</span><span class="n">cdf</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">loc</span><span class="o">=</span><span class="n">mu</span><span class="p">,</span> <span class="n">scale</span><span class="o">=</span><span class="n">sigma</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;P(X &gt; </span><span class="si">{</span><span class="n">x</span><span class="si">}</span><span class="s2">) = </span><span class="si">{</span><span class="n">probabilidad_mayor</span><span class="si">:</span><span class="s2">.4f</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+<ol class="arabic simple" start="3">
+<li><p>Calcular <span class="math notranslate nohighlight">\(P(a \le X \le b)\)</span> (Probabilidad en un intervalo)</p></li>
+</ol>
+<p>Para calcular la probabilidad entre dos valores <span class="math notranslate nohighlight">\(a\)</span> y <span class="math notranslate nohighlight">\(b\)</span>, restas la acumulada del valor mayor menos la del
+valor
+menor:</p>
+<div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="n">a</span><span class="p">,</span> <span class="n">b</span> <span class="o">=</span> <span class="mi">90</span><span class="p">,</span> <span class="mi">110</span>
+<span class="n">prob_intervalo</span> <span class="o">=</span> <span class="n">norm</span><span class="o">.</span><span class="n">cdf</span><span class="p">(</span><span class="n">b</span><span class="p">,</span> <span class="n">loc</span><span class="o">=</span><span class="n">mu</span><span class="p">,</span> <span class="n">scale</span><span class="o">=</span><span class="n">sigma</span><span class="p">)</span> <span class="o">-</span> <span class="n">norm</span><span class="o">.</span><span class="n">cdf</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">loc</span><span class="o">=</span><span class="n">mu</span><span class="p">,</span> <span class="n">scale</span><span class="o">=</span><span class="n">sigma</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;P(</span><span class="si">{</span><span class="n">a</span><span class="si">}</span><span class="s2"> &lt;= X &lt;= </span><span class="si">{</span><span class="n">b</span><span class="si">}</span><span class="s2">) = </span><span class="si">{</span><span class="n">prob_intervalo</span><span class="si">:</span><span class="s2">.4f</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</section>
+
+
+           </div>
+          </div>
+          <footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2025, santosg57, santosg572@gmail.com.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

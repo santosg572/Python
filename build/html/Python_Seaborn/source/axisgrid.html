@@ -1,0 +1,1392 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="../../">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>axisgrid &mdash; santosg57-python 0.1 documentation</title>
+      <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=b86133f3" />
+      <link rel="stylesheet" type="text/css" href="../../_static/css/theme.css?v=9edc463e" />
+      <link rel="stylesheet" type="text/css" href="../../_static/custom.css?v=836bb062" />
+
+  
+      <script src="../../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="../../_static/documentation_options.js?v=2709fde1"></script>
+      <script src="../../_static/doctools.js?v=9a2dae69"></script>
+      <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../../index.html" class="icon icon-home">
+            santosg57-python
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+<li class="toctree-l1"><a class="reference internal" href="../../Daniel_Ejercicios_abr2025/biostatistics_daniel.html">BIOSTATISTICS-DANIEL</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../Temarios/index2.html">sss</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../funciones.html">Funciones o Métodos creados por el Usuario</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../numpy/Imagenes/imagenes.html">Estructuras de datos en el módulo numpy</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../numpy_help.html">Help numpy</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../matplotlyb.html">Matplotlib.pyplot</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../ejercicio_01.html">Ejercicio01</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../ubuntu_windows.html">Pasos para instalar Ubuntu con WSL</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../funciones_curso.html">Algunas funciones desarrolladas durante el curso</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../ejercicio_calculo_de_probabilidades.html">Cálculo de Probabilidades</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../help/index2.html">HELP</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../Python_Tkinter/index2.html">Tkinter</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">santosg57-python</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">axisgrid</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../../_sources/Python_Seaborn/source/axisgrid.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="axisgrid">
+<h1>axisgrid<a class="headerlink" href="#axisgrid" title="Link to this heading"></a></h1>
+<p>Help on module seaborn.axisgrid in seaborn:</p>
+<dl>
+<dt>NAME</dt><dd><p>seaborn.axisgrid</p>
+</dd>
+<dt>CLASSES</dt><dd><dl>
+<dt>Grid(_BaseGrid)</dt><dd><p>FacetGrid
+PairGrid</p>
+</dd>
+<dt>_BaseGrid(builtins.object)</dt><dd><p>JointGrid</p>
+</dd>
+<dt>class FacetGrid(Grid)</dt><dd><div class="line-block">
+<div class="line">FacetGrid(data, <a href="#id1"><span class="problematic" id="id2">*</span></a>, row=None, col=None, hue=None, col_wrap=None, sharex=True, sharey=True, height=3, aspect=1, palette=None, row_order=None, col_order=None, hue_order=None, hue_kws=None, dropna=False, legend_out=True, despine=True, margin_titles=False, xlim=None, ylim=None, subplot_kws=None, gridspec_kws=None)</div>
+<div class="line"><br /></div>
+<div class="line">Multi-plot grid for plotting conditional relationships.</div>
+<div class="line"><br /></div>
+<div class="line">Method resolution order:</div>
+<div class="line-block">
+<div class="line">FacetGrid</div>
+<div class="line">Grid</div>
+<div class="line">_BaseGrid</div>
+<div class="line">builtins.object</div>
+<div class="line"><br /></div>
+</div>
+<div class="line">Methods defined here:</div>
+<div class="line"><br /></div>
+<div class="line">__init__(self, data, <a href="#id3"><span class="problematic" id="id4">*</span></a>, row=None, col=None, hue=None, col_wrap=None, sharex=True, sharey=True, height=3, aspect=1, palette=None, row_order=None, col_order=None, hue_order=None, hue_kws=None, dropna=False, legend_out=True, despine=True, margin_titles=False, xlim=None, ylim=None, subplot_kws=None, gridspec_kws=None)</div>
+<div class="line-block">
+<div class="line">Initialize the matplotlib figure and FacetGrid object.</div>
+<div class="line"><br /></div>
+<div class="line">This class maps a dataset onto multiple axes arrayed in a grid of rows</div>
+<div class="line">and columns that correspond to <em>levels</em> of variables in the dataset.</div>
+<div class="line">The plots it produces are often called “lattice”, “trellis”, or</div>
+<div class="line">“small-multiple” graphics.</div>
+<div class="line"><br /></div>
+<div class="line">It can also represent levels of a third variable with the <code class="docutils literal notranslate"><span class="pre">hue</span></code></div>
+<div class="line">parameter, which plots different subsets of data in different colors.</div>
+<div class="line">This uses color to resolve elements on a third dimension, but only</div>
+<div class="line">draws subsets on top of each other and will not tailor the <code class="docutils literal notranslate"><span class="pre">hue</span></code></div>
+<div class="line">parameter for the specific visualization the way that axes-level</div>
+<div class="line">functions that accept <code class="docutils literal notranslate"><span class="pre">hue</span></code> will.</div>
+<div class="line"><br /></div>
+<div class="line">The basic workflow is to initialize the <code class="xref py py-class docutils literal notranslate"><span class="pre">FacetGrid</span></code> object with</div>
+<div class="line">the dataset and the variables that are used to structure the grid. Then</div>
+<div class="line">one or more plotting functions can be applied to each subset by calling</div>
+<div class="line"><code class="xref py py-meth docutils literal notranslate"><span class="pre">FacetGrid.map()</span></code> or <code class="xref py py-meth docutils literal notranslate"><span class="pre">FacetGrid.map_dataframe()</span></code>. Finally, the</div>
+<div class="line">plot can be tweaked with other methods to do things like change the</div>
+<div class="line">axis labels, use different ticks, or add a legend. See the detailed</div>
+<div class="line">code examples below for more information.</div>
+<div class="line"><br /></div>
+<div class="line">.. warning::</div>
+<div class="line"><br /></div>
+<div class="line-block">
+<div class="line">When using seaborn functions that infer semantic mappings from a</div>
+<div class="line">dataset, care must be taken to synchronize those mappings across</div>
+<div class="line">facets (e.g., by defining the <code class="docutils literal notranslate"><span class="pre">hue</span></code> mapping with a palette dict or</div>
+<div class="line">setting the data type of the variables to <code class="docutils literal notranslate"><span class="pre">category</span></code>). In most cases,</div>
+<div class="line">it will be better to use a figure-level function (e.g. <code class="xref py py-func docutils literal notranslate"><span class="pre">relplot()</span></code></div>
+<div class="line">or <code class="xref py py-func docutils literal notranslate"><span class="pre">catplot()</span></code>) than to use <code class="xref py py-class docutils literal notranslate"><span class="pre">FacetGrid</span></code> directly.</div>
+<div class="line"><br /></div>
+</div>
+<div class="line">See the <span class="xref std std-ref">tutorial</span> for more information.</div>
+<div class="line"><br /></div>
+<div class="line">Parameters</div>
+<div class="line">———-</div>
+<div class="line">data : DataFrame</div>
+<div class="line-block">
+<div class="line">Tidy (“long-form”) dataframe where each column is a variable and each</div>
+<div class="line">row is an observation.</div>
+</div>
+<div class="line">row, col, hue : strings</div>
+<div class="line-block">
+<div class="line">Variables that define subsets of the data, which will be drawn on</div>
+<div class="line">separate facets in the grid. See the <code class="docutils literal notranslate"><span class="pre">{var}_order</span></code> parameters to</div>
+<div class="line">control the order of levels of this variable.</div>
+</div>
+<div class="line">col_wrap : int</div>
+<div class="line-block">
+<div class="line">“Wrap” the column variable at this width, so that the column facets</div>
+<div class="line">span multiple rows. Incompatible with a <code class="docutils literal notranslate"><span class="pre">row</span></code> facet.</div>
+</div>
+<div class="line">share{x,y} : bool, ‘col’, or ‘row’ optional</div>
+<div class="line-block">
+<div class="line">If true, the facets will share y axes across columns and/or x axes</div>
+<div class="line">across rows.</div>
+</div>
+<div class="line">height : scalar</div>
+<div class="line-block">
+<div class="line">Height (in inches) of each facet. See also: <code class="docutils literal notranslate"><span class="pre">aspect</span></code>.</div>
+</div>
+<div class="line">aspect : scalar</div>
+<div class="line-block">
+<div class="line">Aspect ratio of each facet, so that <code class="docutils literal notranslate"><span class="pre">aspect</span> <span class="pre">*</span> <span class="pre">height</span></code> gives the width</div>
+<div class="line">of each facet in inches.</div>
+</div>
+<div class="line">palette : palette name, list, or dict</div>
+<div class="line-block">
+<div class="line">Colors to use for the different levels of the <code class="docutils literal notranslate"><span class="pre">hue</span></code> variable. Should</div>
+<div class="line">be something that can be interpreted by <code class="xref py py-func docutils literal notranslate"><span class="pre">color_palette()</span></code>, or a</div>
+<div class="line">dictionary mapping hue levels to matplotlib colors.</div>
+</div>
+<div class="line">{row,col,hue}_order : lists</div>
+<div class="line-block">
+<div class="line">Order for the levels of the faceting variables. By default, this</div>
+<div class="line">will be the order that the levels appear in <code class="docutils literal notranslate"><span class="pre">data</span></code> or, if the</div>
+<div class="line">variables are pandas categoricals, the category order.</div>
+</div>
+<div class="line">hue_kws : dictionary of param -&gt; list of values mapping</div>
+<div class="line-block">
+<div class="line">Other keyword arguments to insert into the plotting call to let</div>
+<div class="line">other plot attributes vary across levels of the hue variable (e.g.</div>
+<div class="line">the markers in a scatterplot).</div>
+</div>
+<div class="line">legend_out : bool</div>
+<div class="line-block">
+<div class="line">If <code class="docutils literal notranslate"><span class="pre">True</span></code>, the figure size will be extended, and the legend will be</div>
+<div class="line">drawn outside the plot on the center right.</div>
+</div>
+<div class="line">despine : boolean</div>
+<div class="line-block">
+<div class="line">Remove the top and right spines from the plots.</div>
+</div>
+<div class="line">margin_titles : bool</div>
+<div class="line-block">
+<div class="line">If <code class="docutils literal notranslate"><span class="pre">True</span></code>, the titles for the row variable are drawn to the right of</div>
+<div class="line">the last column. This option is experimental and may not work in all</div>
+<div class="line">cases.</div>
+</div>
+<div class="line">{x, y}lim: tuples</div>
+<div class="line-block">
+<div class="line">Limits for each of the axes on each facet (only relevant when</div>
+<div class="line">share{x, y} is True).</div>
+</div>
+<div class="line">subplot_kws : dict</div>
+<div class="line-block">
+<div class="line">Dictionary of keyword arguments passed to matplotlib subplot(s)</div>
+<div class="line">methods.</div>
+</div>
+<div class="line">gridspec_kws : dict</div>
+<div class="line-block">
+<div class="line">Dictionary of keyword arguments passed to</div>
+<div class="line"><code class="xref py py-class docutils literal notranslate"><span class="pre">matplotlib.gridspec.GridSpec</span></code></div>
+<div class="line">(via <code class="xref py py-meth docutils literal notranslate"><span class="pre">matplotlib.figure.Figure.subplots()</span></code>).</div>
+<div class="line">Ignored if <code class="docutils literal notranslate"><span class="pre">col_wrap</span></code> is not <code class="docutils literal notranslate"><span class="pre">None</span></code>.</div>
+<div class="line"><br /></div>
+</div>
+<div class="line">See Also</div>
+<div class="line">——–</div>
+<div class="line">PairGrid : Subplot grid for plotting pairwise relationships</div>
+<div class="line">relplot : Combine a relational plot and a <code class="xref py py-class docutils literal notranslate"><span class="pre">FacetGrid</span></code></div>
+<div class="line">displot : Combine a distribution plot and a <code class="xref py py-class docutils literal notranslate"><span class="pre">FacetGrid</span></code></div>
+<div class="line">catplot : Combine a categorical plot and a <code class="xref py py-class docutils literal notranslate"><span class="pre">FacetGrid</span></code></div>
+<div class="line">lmplot : Combine a regression plot and a <code class="xref py py-class docutils literal notranslate"><span class="pre">FacetGrid</span></code></div>
+<div class="line"><br /></div>
+<div class="line">Examples</div>
+<div class="line">——–</div>
+<div class="line"><br /></div>
+<div class="line">.. note::</div>
+<div class="line"><br /></div>
+<div class="line-block">
+<div class="line">These examples use seaborn functions to demonstrate some of the</div>
+<div class="line">advanced features of the class, but in most cases you will want</div>
+<div class="line">to use figue-level functions (e.g. <code class="xref py py-func docutils literal notranslate"><span class="pre">displot()</span></code>, <code class="xref py py-func docutils literal notranslate"><span class="pre">relplot()</span></code>)</div>
+<div class="line">to make the plots shown here.</div>
+<div class="line"><br /></div>
+</div>
+<div class="line">.. include:: ../docstrings/FacetGrid.rst</div>
+<div class="line"><br /></div>
+</div>
+<div class="line">despine(self, <a href="#id5"><span class="problematic" id="id6">**</span></a>kwargs)</div>
+<div class="line-block">
+<div class="line">Remove axis spines from the facets.</div>
+<div class="line"><br /></div>
+</div>
+<div class="line">facet_axis(self, row_i, col_j, modify_state=True)</div>
+<div class="line-block">
+<div class="line">Make the axis identified by these indices active and return it.</div>
+<div class="line"><br /></div>
+</div>
+<div class="line">facet_data(self)</div>
+<div class="line-block">
+<div class="line">Generator for name indices and data subsets for each facet.</div>
+<div class="line"><br /></div>
+<div class="line">Yields</div>
+<div class="line">——</div>
+<div class="line">(i, j, k), data_ijk : tuple of ints, DataFrame</div>
+<div class="line-block">
+<div class="line">The ints provide an index into the {row, col, hue}_names attribute,</div>
+<div class="line">and the dataframe contains a subset of the full data corresponding</div>
+<div class="line">to each facet. The generator yields subsets that correspond with</div>
+<div class="line">the self.axes.flat iterator, or self.axes[i, j] when <cite>col_wrap</cite></div>
+<div class="line">is None.</div>
+<div class="line"><br /></div>
+</div>
+</div>
+<div class="line">map(self, func, <a href="#id7"><span class="problematic" id="id8">*</span></a>args, <a href="#id9"><span class="problematic" id="id10">**</span></a>kwargs)</div>
+<div class="line-block">
+<div class="line">Apply a plotting function to each facet’s subset of the data.</div>
+<div class="line"><br /></div>
+<div class="line">Parameters</div>
+<div class="line">———-</div>
+<div class="line">func : callable</div>
+<div class="line-block">
+<div class="line">A plotting function that takes data and keyword arguments. It</div>
+<div class="line">must plot to the currently active matplotlib Axes and take a</div>
+<div class="line"><cite>color</cite> keyword argument. If faceting on the <cite>hue</cite> dimension,</div>
+<div class="line">it must also take a <cite>label</cite> keyword argument.</div>
+</div>
+<div class="line">args : strings</div>
+<div class="line-block">
+<div class="line">Column names in self.data that identify variables with data to</div>
+<div class="line">plot. The data for each variable is passed to <cite>func</cite> in the</div>
+<div class="line">order the variables are specified in the call.</div>
+</div>
+<div class="line">kwargs : keyword arguments</div>
+<div class="line-block">
+<div class="line">All keyword arguments are passed to the plotting function.</div>
+<div class="line"><br /></div>
+</div>
+<div class="line">Returns</div>
+<div class="line">——-</div>
+<div class="line">self : object</div>
+<div class="line-block">
+<div class="line">Returns self.</div>
+<div class="line"><br /></div>
+</div>
+</div>
+<div class="line">map_dataframe(self, func, <a href="#id11"><span class="problematic" id="id12">*</span></a>args, <a href="#id13"><span class="problematic" id="id14">**</span></a>kwargs)</div>
+<div class="line-block">
+<div class="line">Like <code class="docutils literal notranslate"><span class="pre">.map</span></code> but passes args as strings and inserts data in kwargs.</div>
+<div class="line"><br /></div>
+<div class="line">This method is suitable for plotting with functions that accept a</div>
+<div class="line">long-form DataFrame as a <cite>data</cite> keyword argument and access the</div>
+<div class="line">data in that DataFrame using string variable names.</div>
+<div class="line"><br /></div>
+<div class="line">Parameters</div>
+<div class="line">———-</div>
+<div class="line">func : callable</div>
+<div class="line-block">
+<div class="line">A plotting function that takes data and keyword arguments. Unlike</div>
+<div class="line">the <cite>map</cite> method, a function used here must “understand” Pandas</div>
+<div class="line">objects. It also must plot to the currently active matplotlib Axes</div>
+<div class="line">and take a <cite>color</cite> keyword argument. If faceting on the <cite>hue</cite></div>
+<div class="line">dimension, it must also take a <cite>label</cite> keyword argument.</div>
+</div>
+<div class="line">args : strings</div>
+<div class="line-block">
+<div class="line">Column names in self.data that identify variables with data to</div>
+<div class="line">plot. The data for each variable is passed to <cite>func</cite> in the</div>
+<div class="line">order the variables are specified in the call.</div>
+</div>
+<div class="line">kwargs : keyword arguments</div>
+<div class="line-block">
+<div class="line">All keyword arguments are passed to the plotting function.</div>
+<div class="line"><br /></div>
+</div>
+<div class="line">Returns</div>
+<div class="line">——-</div>
+<div class="line">self : object</div>
+<div class="line-block">
+<div class="line">Returns self.</div>
+<div class="line"><br /></div>
+</div>
+</div>
+<div class="line">refline(self, <a href="#id15"><span class="problematic" id="id16">*</span></a>, x=None, y=None, color=’.5’, linestyle=’–’, <a href="#id17"><span class="problematic" id="id18">**</span></a>line_kws)</div>
+<div class="line-block">
+<div class="line">Add a reference line(s) to each facet.</div>
+<div class="line"><br /></div>
+<div class="line">Parameters</div>
+<div class="line">———-</div>
+<div class="line">x, y : numeric</div>
+<div class="line-block">
+<div class="line">Value(s) to draw the line(s) at.</div>
+</div>
+<div class="line">color : <code class="xref py py-mod docutils literal notranslate"><span class="pre">matplotlib</span> <span class="pre">color</span></code></div>
+<div class="line-block">
+<div class="line">Specifies the color of the reference line(s). Pass <code class="docutils literal notranslate"><span class="pre">color=None</span></code> to</div>
+<div class="line">use <code class="docutils literal notranslate"><span class="pre">hue</span></code> mapping.</div>
+</div>
+<div class="line">linestyle : str</div>
+<div class="line-block">
+<div class="line">Specifies the style of the reference line(s).</div>
+</div>
+<div class="line">line_kws : key, value mappings</div>
+<div class="line-block">
+<div class="line">Other keyword arguments are passed to <code class="xref py py-meth docutils literal notranslate"><span class="pre">matplotlib.axes.Axes.axvline()</span></code></div>
+<div class="line">when <code class="docutils literal notranslate"><span class="pre">x</span></code> is not None and <code class="xref py py-meth docutils literal notranslate"><span class="pre">matplotlib.axes.Axes.axhline()</span></code> when <code class="docutils literal notranslate"><span class="pre">y</span></code></div>
+<div class="line">is not None.</div>
+<div class="line"><br /></div>
+</div>
+<div class="line">Returns</div>
+<div class="line">——-</div>
+<div class="line"><code class="xref py py-class docutils literal notranslate"><span class="pre">FacetGrid</span></code> instance</div>
+<div class="line-block">
+<div class="line">Returns <code class="docutils literal notranslate"><span class="pre">self</span></code> for easy method chaining.</div>
+<div class="line"><br /></div>
+</div>
+</div>
+<div class="line">set_axis_labels(self, x_var=None, y_var=None, clear_inner=True, <a href="#id19"><span class="problematic" id="id20">**</span></a>kwargs)</div>
+<div class="line-block">
+<div class="line">Set axis labels on the left column and bottom row of the grid.</div>
+<div class="line"><br /></div>
+</div>
+<div class="line">set_titles(self, template=None, row_template=None, col_template=None, <a href="#id21"><span class="problematic" id="id22">**</span></a>kwargs)</div>
+<div class="line-block">
+<div class="line">Draw titles either above each facet or on the grid margins.</div>
+<div class="line"><br /></div>
+<div class="line">Parameters</div>
+<div class="line">———-</div>
+<div class="line">template : string</div>
+<div class="line-block">
+<div class="line">Template for all titles with the formatting keys {col_var} and</div>
+<div class="line">{col_name} (if using a <cite>col</cite> faceting variable) and/or {row_var}</div>
+<div class="line">and {row_name} (if using a <cite>row</cite> faceting variable).</div>
+</div>
+<div class="line">row_template:</div>
+<div class="line-block">
+<div class="line">Template for the row variable when titles are drawn on the grid</div>
+<div class="line">margins. Must have {row_var} and {row_name} formatting keys.</div>
+</div>
+<div class="line">col_template:</div>
+<div class="line-block">
+<div class="line">Template for the column variable when titles are drawn on the grid</div>
+<div class="line">margins. Must have {col_var} and {col_name} formatting keys.</div>
+<div class="line"><br /></div>
+</div>
+<div class="line">Returns</div>
+<div class="line">——-</div>
+<div class="line">self: object</div>
+<div class="line-block">
+<div class="line">Returns self.</div>
+<div class="line"><br /></div>
+</div>
+</div>
+<div class="line">set_xlabels(self, label=None, clear_inner=True, <a href="#id23"><span class="problematic" id="id24">**</span></a>kwargs)</div>
+<div class="line-block">
+<div class="line">Label the x axis on the bottom row of the grid.</div>
+<div class="line"><br /></div>
+</div>
+<div class="line">set_xticklabels(self, labels=None, step=None, <a href="#id25"><span class="problematic" id="id26">**</span></a>kwargs)</div>
+<div class="line-block">
+<div class="line">Set x axis tick labels of the grid.</div>
+<div class="line"><br /></div>
+</div>
+<div class="line">set_ylabels(self, label=None, clear_inner=True, <a href="#id27"><span class="problematic" id="id28">**</span></a>kwargs)</div>
+<div class="line-block">
+<div class="line">Label the y axis on the left column of the grid.</div>
+<div class="line"><br /></div>
+</div>
+<div class="line">set_yticklabels(self, labels=None, <a href="#id29"><span class="problematic" id="id30">**</span></a>kwargs)</div>
+<div class="line-block">
+<div class="line">Set y axis tick labels on the left column of the grid.</div>
+<div class="line"><br /></div>
+</div>
+<div class="line">———————————————————————-</div>
+<div class="line">Readonly properties defined here:</div>
+<div class="line"><br /></div>
+<div class="line">ax</div>
+<div class="line-block">
+<div class="line">The <code class="xref py py-class docutils literal notranslate"><span class="pre">matplotlib.axes.Axes</span></code> when no faceting variables are assigned.</div>
+<div class="line"><br /></div>
+</div>
+<div class="line">axes</div>
+<div class="line-block">
+<div class="line">An array of the <code class="xref py py-class docutils literal notranslate"><span class="pre">matplotlib.axes.Axes</span></code> objects in the grid.</div>
+<div class="line"><br /></div>
+</div>
+<div class="line">axes_dict</div>
+<div class="line-block">
+<div class="line">A mapping of facet names to corresponding <code class="xref py py-class docutils literal notranslate"><span class="pre">matplotlib.axes.Axes</span></code>.</div>
+<div class="line"><br /></div>
+<div class="line">If only one of <code class="docutils literal notranslate"><span class="pre">row</span></code> or <code class="docutils literal notranslate"><span class="pre">col</span></code> is assigned, each key is a string</div>
+<div class="line">representing a level of that variable. If both facet dimensions are</div>
+<div class="line">assigned, each key is a <code class="docutils literal notranslate"><span class="pre">({row_level},</span> <span class="pre">{col_level})</span></code> tuple.</div>
+<div class="line"><br /></div>
+</div>
+<div class="line">———————————————————————-</div>
+<div class="line">Methods inherited from Grid:</div>
+<div class="line"><br /></div>
+<div class="line">add_legend(self, legend_data=None, title=None, label_order=None, adjust_subtitles=False, <a href="#id31"><span class="problematic" id="id32">**</span></a>kwargs)</div>
+<div class="line-block">
+<div class="line">Draw a legend, maybe placing it outside axes and resizing the figure.</div>
+<div class="line"><br /></div>
+<div class="line">Parameters</div>
+<div class="line">———-</div>
+<div class="line">legend_data : dict</div>
+<div class="line-block">
+<div class="line">Dictionary mapping label names (or two-element tuples where the</div>
+<div class="line">second element is a label name) to matplotlib artist handles. The</div>
+<div class="line">default reads from <code class="docutils literal notranslate"><span class="pre">self._legend_data</span></code>.</div>
+</div>
+<div class="line">title : string</div>
+<div class="line-block">
+<div class="line">Title for the legend. The default reads from <code class="docutils literal notranslate"><span class="pre">self._hue_var</span></code>.</div>
+</div>
+<div class="line">label_order : list of labels</div>
+<div class="line-block">
+<div class="line">The order that the legend entries should appear in. The default</div>
+<div class="line">reads from <code class="docutils literal notranslate"><span class="pre">self.hue_names</span></code>.</div>
+</div>
+<div class="line">adjust_subtitles : bool</div>
+<div class="line-block">
+<div class="line">If True, modify entries with invisible artists to left-align</div>
+<div class="line">the labels and set the font size to that of a title.</div>
+</div>
+<div class="line">kwargs : key, value pairings</div>
+<div class="line-block">
+<div class="line">Other keyword arguments are passed to the underlying legend methods</div>
+<div class="line">on the Figure or Axes object.</div>
+<div class="line"><br /></div>
+</div>
+<div class="line">Returns</div>
+<div class="line">——-</div>
+<div class="line">self : Grid instance</div>
+<div class="line-block">
+<div class="line">Returns self for easy chaining.</div>
+<div class="line"><br /></div>
+</div>
+</div>
+<div class="line">tick_params(self, axis=’both’, <a href="#id33"><span class="problematic" id="id34">**</span></a>kwargs)</div>
+<div class="line-block">
+<div class="line">Modify the ticks, tick labels, and gridlines.</div>
+<div class="line"><br /></div>
+<div class="line">Parameters</div>
+<div class="line">———-</div>
+<div class="line">axis : {‘x’, ‘y’, ‘both’}</div>
+<div class="line-block">
+<div class="line">The axis on which to apply the formatting.</div>
+</div>
+<div class="line">kwargs : keyword arguments</div>
+<div class="line-block">
+<div class="line">Additional keyword arguments to pass to</div>
+<div class="line"><code class="xref py py-meth docutils literal notranslate"><span class="pre">matplotlib.axes.Axes.tick_params()</span></code>.</div>
+<div class="line"><br /></div>
+</div>
+<div class="line">Returns</div>
+<div class="line">——-</div>
+<div class="line">self : Grid instance</div>
+<div class="line-block">
+<div class="line">Returns self for easy chaining.</div>
+<div class="line"><br /></div>
+</div>
+</div>
+<div class="line">tight_layout(self, <a href="#id35"><span class="problematic" id="id36">*</span></a>args, <a href="#id37"><span class="problematic" id="id38">**</span></a>kwargs)</div>
+<div class="line-block">
+<div class="line">Call fig.tight_layout within rect that exclude the legend.</div>
+<div class="line"><br /></div>
+</div>
+<div class="line">———————————————————————-</div>
+<div class="line">Readonly properties inherited from Grid:</div>
+<div class="line"><br /></div>
+<div class="line">legend</div>
+<div class="line-block">
+<div class="line">The <code class="xref py py-class docutils literal notranslate"><span class="pre">matplotlib.legend.Legend</span></code> object, if present.</div>
+<div class="line"><br /></div>
+</div>
+<div class="line">———————————————————————-</div>
+<div class="line">Methods inherited from _BaseGrid:</div>
+<div class="line"><br /></div>
+<div class="line">apply(self, func, <a href="#id39"><span class="problematic" id="id40">*</span></a>args, <a href="#id41"><span class="problematic" id="id42">**</span></a>kwargs)</div>
+<div class="line-block">
+<div class="line">Pass the grid to a user-supplied function and return self.</div>
+<div class="line"><br /></div>
+<div class="line">The <cite>func</cite> must accept an object of this type for its first</div>
+<div class="line">positional argument. Additional arguments are passed through.</div>
+<div class="line">The return value of <cite>func</cite> is ignored; this method returns self.</div>
+<div class="line">See the <cite>pipe</cite> method if you want the return value.</div>
+<div class="line"><br /></div>
+<div class="line">Added in v0.12.0.</div>
+<div class="line"><br /></div>
+</div>
+<div class="line">pipe(self, func, <a href="#id43"><span class="problematic" id="id44">*</span></a>args, <a href="#id45"><span class="problematic" id="id46">**</span></a>kwargs)</div>
+<div class="line-block">
+<div class="line">Pass the grid to a user-supplied function and return its value.</div>
+<div class="line"><br /></div>
+<div class="line">The <cite>func</cite> must accept an object of this type for its first</div>
+<div class="line">positional argument. Additional arguments are passed through.</div>
+<div class="line">The return value of <cite>func</cite> becomes the return value of this method.</div>
+<div class="line">See the <cite>apply</cite> method if you want to return self instead.</div>
+<div class="line"><br /></div>
+<div class="line">Added in v0.12.0.</div>
+<div class="line"><br /></div>
+</div>
+<div class="line">savefig(self, <a href="#id47"><span class="problematic" id="id48">*</span></a>args, <a href="#id49"><span class="problematic" id="id50">**</span></a>kwargs)</div>
+<div class="line-block">
+<div class="line">Save an image of the plot.</div>
+<div class="line"><br /></div>
+<div class="line">This wraps <code class="xref py py-meth docutils literal notranslate"><span class="pre">matplotlib.figure.Figure.savefig()</span></code>, using bbox_inches=”tight”</div>
+<div class="line">by default. Parameters are passed through to the matplotlib function.</div>
+<div class="line"><br /></div>
+</div>
+<div class="line">set(self, <a href="#id51"><span class="problematic" id="id52">**</span></a>kwargs)</div>
+<div class="line-block">
+<div class="line">Set attributes on each subplot Axes.</div>
+<div class="line"><br /></div>
+</div>
+<div class="line">———————————————————————-</div>
+<div class="line">Readonly properties inherited from _BaseGrid:</div>
+<div class="line"><br /></div>
+<div class="line">fig</div>
+<div class="line-block">
+<div class="line">DEPRECATED: prefer the <cite>figure</cite> property.</div>
+<div class="line"><br /></div>
+</div>
+<div class="line">figure</div>
+<div class="line-block">
+<div class="line">Access the <code class="xref py py-class docutils literal notranslate"><span class="pre">matplotlib.figure.Figure</span></code> object underlying the grid.</div>
+<div class="line"><br /></div>
+</div>
+<div class="line">———————————————————————-</div>
+<div class="line">Data descriptors inherited from _BaseGrid:</div>
+<div class="line"><br /></div>
+<div class="line">__dict__</div>
+<div class="line-block">
+<div class="line">dictionary for instance variables</div>
+<div class="line"><br /></div>
+</div>
+<div class="line">__weakref__</div>
+<div class="line-block">
+<div class="line">list of weak references to the object</div>
+</div>
+</div>
+</dd>
+<dt>class JointGrid(_BaseGrid)</dt><dd><div class="line-block">
+<div class="line">JointGrid(data=None, <a href="#id53"><span class="problematic" id="id54">*</span></a>, x=None, y=None, hue=None, height=6, ratio=5, space=0.2, palette=None, hue_order=None, hue_norm=None, dropna=False, xlim=None, ylim=None, marginal_ticks=False)</div>
+<div class="line"><br /></div>
+<div class="line">Grid for drawing a bivariate plot with marginal univariate plots.</div>
+<div class="line"><br /></div>
+<div class="line">Many plots can be drawn by using the figure-level interface <code class="xref py py-func docutils literal notranslate"><span class="pre">jointplot()</span></code>.</div>
+<div class="line">Use this class directly when you need more flexibility.</div>
+<div class="line"><br /></div>
+<div class="line">Method resolution order:</div>
+<div class="line-block">
+<div class="line">JointGrid</div>
+<div class="line">_BaseGrid</div>
+<div class="line">builtins.object</div>
+<div class="line"><br /></div>
+</div>
+<div class="line">Methods defined here:</div>
+<div class="line"><br /></div>
+<div class="line">__init__(self, data=None, <a href="#id55"><span class="problematic" id="id56">*</span></a>, x=None, y=None, hue=None, height=6, ratio=5, space=0.2, palette=None, hue_order=None, hue_norm=None, dropna=False, xlim=None, ylim=None, marginal_ticks=False)</div>
+<div class="line-block">
+<div class="line">Set up the grid of subplots and store data internally for easy plotting.</div>
+<div class="line"><br /></div>
+<div class="line">Parameters</div>
+<div class="line">———-</div>
+<div class="line">data : <code class="xref py py-class docutils literal notranslate"><span class="pre">pandas.DataFrame</span></code>, <code class="xref py py-class docutils literal notranslate"><span class="pre">numpy.ndarray</span></code>, mapping, or sequence</div>
+<div class="line-block">
+<div class="line">Input data structure. Either a long-form collection of vectors that can be</div>
+<div class="line">assigned to named variables or a wide-form dataset that will be internally</div>
+<div class="line">reshaped.</div>
+</div>
+<div class="line">x, y : vectors or keys in <code class="docutils literal notranslate"><span class="pre">data</span></code></div>
+<div class="line-block">
+<div class="line">Variables that specify positions on the x and y axes.</div>
+</div>
+<div class="line">height : number</div>
+<div class="line-block">
+<div class="line">Size of each side of the figure in inches (it will be square).</div>
+</div>
+<div class="line">ratio : number</div>
+<div class="line-block">
+<div class="line">Ratio of joint axes height to marginal axes height.</div>
+</div>
+<div class="line">space : number</div>
+<div class="line-block">
+<div class="line">Space between the joint and marginal axes</div>
+</div>
+<div class="line">dropna : bool</div>
+<div class="line-block">
+<div class="line">If True, remove missing observations before plotting.</div>
+</div>
+<div class="line">{x, y}lim : pairs of numbers</div>
+<div class="line-block">
+<div class="line">Set axis limits to these values before plotting.</div>
+</div>
+<div class="line">marginal_ticks : bool</div>
+<div class="line-block">
+<div class="line">If False, suppress ticks on the count/density axis of the marginal plots.</div>
+</div>
+<div class="line">hue : vector or key in <code class="docutils literal notranslate"><span class="pre">data</span></code></div>
+<div class="line-block">
+<div class="line">Semantic variable that is mapped to determine the color of plot elements.</div>
+<div class="line">Note: unlike in <code class="xref py py-class docutils literal notranslate"><span class="pre">FacetGrid</span></code> or <code class="xref py py-class docutils literal notranslate"><span class="pre">PairGrid</span></code>, the axes-level</div>
+<div class="line">functions must support <code class="docutils literal notranslate"><span class="pre">hue</span></code> to use it in <code class="xref py py-class docutils literal notranslate"><span class="pre">JointGrid</span></code>.</div>
+</div>
+<div class="line">palette : string, list, dict, or <code class="xref py py-class docutils literal notranslate"><span class="pre">matplotlib.colors.Colormap</span></code></div>
+<div class="line-block">
+<div class="line">Method for choosing the colors to use when mapping the <code class="docutils literal notranslate"><span class="pre">hue</span></code> semantic.</div>
+<div class="line">String values are passed to <code class="xref py py-func docutils literal notranslate"><span class="pre">color_palette()</span></code>. List or dict values</div>
+<div class="line">imply categorical mapping, while a colormap object implies numeric mapping.</div>
+</div>
+<div class="line">hue_order : vector of strings</div>
+<div class="line-block">
+<div class="line">Specify the order of processing and plotting for categorical levels of the</div>
+<div class="line"><code class="docutils literal notranslate"><span class="pre">hue</span></code> semantic.</div>
+</div>
+<div class="line">hue_norm : tuple or <code class="xref py py-class docutils literal notranslate"><span class="pre">matplotlib.colors.Normalize</span></code></div>
+<div class="line-block">
+<div class="line">Either a pair of values that set the normalization range in data units</div>
+<div class="line">or an object that will map from data units into a [0, 1] interval. Usage</div>
+<div class="line">implies numeric mapping.</div>
+<div class="line"><br /></div>
+</div>
+<div class="line">See Also</div>
+<div class="line">——–</div>
+<div class="line">jointplot : Draw a bivariate plot with univariate marginal distributions.</div>
+<div class="line">PairGrid : Set up a figure with joint and marginal views on multiple variables.</div>
+<div class="line">jointplot : Draw multiple bivariate plots with univariate marginal distributions.</div>
+<div class="line"><br /></div>
+<div class="line">Examples</div>
+<div class="line">——–</div>
+<div class="line"><br /></div>
+<div class="line">.. include:: ../docstrings/JointGrid.rst</div>
+<div class="line"><br /></div>
+</div>
+<div class="line">plot(self, joint_func, marginal_func, <a href="#id57"><span class="problematic" id="id58">**</span></a>kwargs)</div>
+<div class="line-block">
+<div class="line">Draw the plot by passing functions for joint and marginal axes.</div>
+<div class="line"><br /></div>
+<div class="line">This method passes the <code class="docutils literal notranslate"><span class="pre">kwargs</span></code> dictionary to both functions. If you</div>
+<div class="line">need more control, call <code class="xref py py-meth docutils literal notranslate"><span class="pre">JointGrid.plot_joint()</span></code> and</div>
+<div class="line"><code class="xref py py-meth docutils literal notranslate"><span class="pre">JointGrid.plot_marginals()</span></code> directly with specific parameters.</div>
+<div class="line"><br /></div>
+<div class="line">Parameters</div>
+<div class="line">———-</div>
+<div class="line">joint_func, marginal_func : callables</div>
+<div class="line-block">
+<div class="line">Functions to draw the bivariate and univariate plots. See methods</div>
+<div class="line">referenced above for information about the required characteristics</div>
+<div class="line">of these functions.</div>
+</div>
+<div class="line">kwargs</div>
+<div class="line-block">
+<div class="line">Additional keyword arguments are passed to both functions.</div>
+<div class="line"><br /></div>
+</div>
+<div class="line">Returns</div>
+<div class="line">——-</div>
+<div class="line"><code class="xref py py-class docutils literal notranslate"><span class="pre">JointGrid</span></code> instance</div>
+<div class="line-block">
+<div class="line">Returns <code class="docutils literal notranslate"><span class="pre">self</span></code> for easy method chaining.</div>
+<div class="line"><br /></div>
+</div>
+</div>
+<div class="line">plot_joint(self, func, <a href="#id59"><span class="problematic" id="id60">**</span></a>kwargs)</div>
+<div class="line-block">
+<div class="line">Draw a bivariate plot on the joint axes of the grid.</div>
+<div class="line"><br /></div>
+<div class="line">Parameters</div>
+<div class="line">———-</div>
+<div class="line">func : plotting callable</div>
+<div class="line-block">
+<div class="line">If a seaborn function, it should accept <code class="docutils literal notranslate"><span class="pre">x</span></code> and <code class="docutils literal notranslate"><span class="pre">y</span></code>. Otherwise,</div>
+<div class="line">it must accept <code class="docutils literal notranslate"><span class="pre">x</span></code> and <code class="docutils literal notranslate"><span class="pre">y</span></code> vectors of data as the first two</div>
+<div class="line">positional arguments, and it must plot on the “current” axes.</div>
+<div class="line">If <code class="docutils literal notranslate"><span class="pre">hue</span></code> was defined in the class constructor, the function must</div>
+<div class="line">accept <code class="docutils literal notranslate"><span class="pre">hue</span></code> as a parameter.</div>
+</div>
+<div class="line">kwargs</div>
+<div class="line-block">
+<div class="line">Keyword argument are passed to the plotting function.</div>
+<div class="line"><br /></div>
+</div>
+<div class="line">Returns</div>
+<div class="line">——-</div>
+<div class="line"><code class="xref py py-class docutils literal notranslate"><span class="pre">JointGrid</span></code> instance</div>
+<div class="line-block">
+<div class="line">Returns <code class="docutils literal notranslate"><span class="pre">self</span></code> for easy method chaining.</div>
+<div class="line"><br /></div>
+</div>
+</div>
+<div class="line">plot_marginals(self, func, <a href="#id61"><span class="problematic" id="id62">**</span></a>kwargs)</div>
+<div class="line-block">
+<div class="line">Draw univariate plots on each marginal axes.</div>
+<div class="line"><br /></div>
+<div class="line">Parameters</div>
+<div class="line">———-</div>
+<div class="line">func : plotting callable</div>
+<div class="line-block">
+<div class="line">If a seaborn function, it should  accept <code class="docutils literal notranslate"><span class="pre">x</span></code> and <code class="docutils literal notranslate"><span class="pre">y</span></code> and plot</div>
+<div class="line">when only one of them is defined. Otherwise, it must accept a vector</div>
+<div class="line">of data as the first positional argument and determine its orientation</div>
+<div class="line">using the <code class="docutils literal notranslate"><span class="pre">vertical</span></code> parameter, and it must plot on the “current” axes.</div>
+<div class="line">If <code class="docutils literal notranslate"><span class="pre">hue</span></code> was defined in the class constructor, it must accept <code class="docutils literal notranslate"><span class="pre">hue</span></code></div>
+<div class="line">as a parameter.</div>
+</div>
+<div class="line">kwargs</div>
+<div class="line-block">
+<div class="line">Keyword argument are passed to the plotting function.</div>
+<div class="line"><br /></div>
+</div>
+<div class="line">Returns</div>
+<div class="line">——-</div>
+<div class="line"><code class="xref py py-class docutils literal notranslate"><span class="pre">JointGrid</span></code> instance</div>
+<div class="line-block">
+<div class="line">Returns <code class="docutils literal notranslate"><span class="pre">self</span></code> for easy method chaining.</div>
+<div class="line"><br /></div>
+</div>
+</div>
+<div class="line">refline(self, <a href="#id63"><span class="problematic" id="id64">*</span></a>, x=None, y=None, joint=True, marginal=True, color=’.5’, linestyle=’–’, <a href="#id65"><span class="problematic" id="id66">**</span></a>line_kws)</div>
+<div class="line-block">
+<div class="line">Add a reference line(s) to joint and/or marginal axes.</div>
+<div class="line"><br /></div>
+<div class="line">Parameters</div>
+<div class="line">———-</div>
+<div class="line">x, y : numeric</div>
+<div class="line-block">
+<div class="line">Value(s) to draw the line(s) at.</div>
+</div>
+<div class="line">joint, marginal : bools</div>
+<div class="line-block">
+<div class="line">Whether to add the reference line(s) to the joint/marginal axes.</div>
+</div>
+<div class="line">color : <code class="xref py py-mod docutils literal notranslate"><span class="pre">matplotlib</span> <span class="pre">color</span></code></div>
+<div class="line-block">
+<div class="line">Specifies the color of the reference line(s).</div>
+</div>
+<div class="line">linestyle : str</div>
+<div class="line-block">
+<div class="line">Specifies the style of the reference line(s).</div>
+</div>
+<div class="line">line_kws : key, value mappings</div>
+<div class="line-block">
+<div class="line">Other keyword arguments are passed to <code class="xref py py-meth docutils literal notranslate"><span class="pre">matplotlib.axes.Axes.axvline()</span></code></div>
+<div class="line">when <code class="docutils literal notranslate"><span class="pre">x</span></code> is not None and <code class="xref py py-meth docutils literal notranslate"><span class="pre">matplotlib.axes.Axes.axhline()</span></code> when <code class="docutils literal notranslate"><span class="pre">y</span></code></div>
+<div class="line">is not None.</div>
+<div class="line"><br /></div>
+</div>
+<div class="line">Returns</div>
+<div class="line">——-</div>
+<div class="line"><code class="xref py py-class docutils literal notranslate"><span class="pre">JointGrid</span></code> instance</div>
+<div class="line-block">
+<div class="line">Returns <code class="docutils literal notranslate"><span class="pre">self</span></code> for easy method chaining.</div>
+<div class="line"><br /></div>
+</div>
+</div>
+<div class="line">set_axis_labels(self, xlabel=’’, ylabel=’’, <a href="#id67"><span class="problematic" id="id68">**</span></a>kwargs)</div>
+<div class="line-block">
+<div class="line">Set axis labels on the bivariate axes.</div>
+<div class="line"><br /></div>
+<div class="line">Parameters</div>
+<div class="line">———-</div>
+<div class="line">xlabel, ylabel : strings</div>
+<div class="line-block">
+<div class="line">Label names for the x and y variables.</div>
+</div>
+<div class="line">kwargs : key, value mappings</div>
+<div class="line-block">
+<div class="line">Other keyword arguments are passed to the following functions:</div>
+<div class="line"><br /></div>
+<div class="line">- <code class="xref py py-meth docutils literal notranslate"><span class="pre">matplotlib.axes.Axes.set_xlabel()</span></code></div>
+<div class="line">- <code class="xref py py-meth docutils literal notranslate"><span class="pre">matplotlib.axes.Axes.set_ylabel()</span></code></div>
+<div class="line"><br /></div>
+</div>
+<div class="line">Returns</div>
+<div class="line">——-</div>
+<div class="line"><code class="xref py py-class docutils literal notranslate"><span class="pre">JointGrid</span></code> instance</div>
+<div class="line-block">
+<div class="line">Returns <code class="docutils literal notranslate"><span class="pre">self</span></code> for easy method chaining.</div>
+<div class="line"><br /></div>
+</div>
+</div>
+<div class="line">———————————————————————-</div>
+<div class="line">Methods inherited from _BaseGrid:</div>
+<div class="line"><br /></div>
+<div class="line">apply(self, func, <a href="#id69"><span class="problematic" id="id70">*</span></a>args, <a href="#id71"><span class="problematic" id="id72">**</span></a>kwargs)</div>
+<div class="line-block">
+<div class="line">Pass the grid to a user-supplied function and return self.</div>
+<div class="line"><br /></div>
+<div class="line">The <cite>func</cite> must accept an object of this type for its first</div>
+<div class="line">positional argument. Additional arguments are passed through.</div>
+<div class="line">The return value of <cite>func</cite> is ignored; this method returns self.</div>
+<div class="line">See the <cite>pipe</cite> method if you want the return value.</div>
+<div class="line"><br /></div>
+<div class="line">Added in v0.12.0.</div>
+<div class="line"><br /></div>
+</div>
+<div class="line">pipe(self, func, <a href="#id73"><span class="problematic" id="id74">*</span></a>args, <a href="#id75"><span class="problematic" id="id76">**</span></a>kwargs)</div>
+<div class="line-block">
+<div class="line">Pass the grid to a user-supplied function and return its value.</div>
+<div class="line"><br /></div>
+<div class="line">The <cite>func</cite> must accept an object of this type for its first</div>
+<div class="line">positional argument. Additional arguments are passed through.</div>
+<div class="line">The return value of <cite>func</cite> becomes the return value of this method.</div>
+<div class="line">See the <cite>apply</cite> method if you want to return self instead.</div>
+<div class="line"><br /></div>
+<div class="line">Added in v0.12.0.</div>
+<div class="line"><br /></div>
+</div>
+<div class="line">savefig(self, <a href="#id77"><span class="problematic" id="id78">*</span></a>args, <a href="#id79"><span class="problematic" id="id80">**</span></a>kwargs)</div>
+<div class="line-block">
+<div class="line">Save an image of the plot.</div>
+<div class="line"><br /></div>
+<div class="line">This wraps <code class="xref py py-meth docutils literal notranslate"><span class="pre">matplotlib.figure.Figure.savefig()</span></code>, using bbox_inches=”tight”</div>
+<div class="line">by default. Parameters are passed through to the matplotlib function.</div>
+<div class="line"><br /></div>
+</div>
+<div class="line">set(self, <a href="#id81"><span class="problematic" id="id82">**</span></a>kwargs)</div>
+<div class="line-block">
+<div class="line">Set attributes on each subplot Axes.</div>
+<div class="line"><br /></div>
+</div>
+<div class="line">———————————————————————-</div>
+<div class="line">Readonly properties inherited from _BaseGrid:</div>
+<div class="line"><br /></div>
+<div class="line">fig</div>
+<div class="line-block">
+<div class="line">DEPRECATED: prefer the <cite>figure</cite> property.</div>
+<div class="line"><br /></div>
+</div>
+<div class="line">figure</div>
+<div class="line-block">
+<div class="line">Access the <code class="xref py py-class docutils literal notranslate"><span class="pre">matplotlib.figure.Figure</span></code> object underlying the grid.</div>
+<div class="line"><br /></div>
+</div>
+<div class="line">———————————————————————-</div>
+<div class="line">Data descriptors inherited from _BaseGrid:</div>
+<div class="line"><br /></div>
+<div class="line">__dict__</div>
+<div class="line-block">
+<div class="line">dictionary for instance variables</div>
+<div class="line"><br /></div>
+</div>
+<div class="line">__weakref__</div>
+<div class="line-block">
+<div class="line">list of weak references to the object</div>
+</div>
+</div>
+</dd>
+<dt>class PairGrid(Grid)</dt><dd><div class="line-block">
+<div class="line">PairGrid(data, <a href="#id83"><span class="problematic" id="id84">*</span></a>, hue=None, vars=None, x_vars=None, y_vars=None, hue_order=None, palette=None, hue_kws=None, corner=False, diag_sharey=True, height=2.5, aspect=1, layout_pad=0.5, despine=True, dropna=False)</div>
+<div class="line"><br /></div>
+<div class="line">Subplot grid for plotting pairwise relationships in a dataset.</div>
+<div class="line"><br /></div>
+<div class="line">This object maps each variable in a dataset onto a column and row in a</div>
+<div class="line">grid of multiple axes. Different axes-level plotting functions can be</div>
+<div class="line">used to draw bivariate plots in the upper and lower triangles, and the</div>
+<div class="line">marginal distribution of each variable can be shown on the diagonal.</div>
+<div class="line"><br /></div>
+<div class="line">Several different common plots can be generated in a single line using</div>
+<div class="line"><code class="xref py py-func docutils literal notranslate"><span class="pre">pairplot()</span></code>. Use <code class="xref py py-class docutils literal notranslate"><span class="pre">PairGrid</span></code> when you need more flexibility.</div>
+<div class="line"><br /></div>
+<div class="line">See the <span class="xref std std-ref">tutorial</span> for more information.</div>
+<div class="line"><br /></div>
+<div class="line">Method resolution order:</div>
+<div class="line-block">
+<div class="line">PairGrid</div>
+<div class="line">Grid</div>
+<div class="line">_BaseGrid</div>
+<div class="line">builtins.object</div>
+<div class="line"><br /></div>
+</div>
+<div class="line">Methods defined here:</div>
+<div class="line"><br /></div>
+<div class="line">__init__(self, data, <a href="#id85"><span class="problematic" id="id86">*</span></a>, hue=None, vars=None, x_vars=None, y_vars=None, hue_order=None, palette=None, hue_kws=None, corner=False, diag_sharey=True, height=2.5, aspect=1, layout_pad=0.5, despine=True, dropna=False)</div>
+<div class="line-block">
+<div class="line">Initialize the plot figure and PairGrid object.</div>
+<div class="line"><br /></div>
+<div class="line">Parameters</div>
+<div class="line">———-</div>
+<div class="line">data : DataFrame</div>
+<div class="line-block">
+<div class="line">Tidy (long-form) dataframe where each column is a variable and</div>
+<div class="line">each row is an observation.</div>
+</div>
+<div class="line">hue : string (variable name)</div>
+<div class="line-block">
+<div class="line">Variable in <code class="docutils literal notranslate"><span class="pre">data</span></code> to map plot aspects to different colors. This</div>
+<div class="line">variable will be excluded from the default x and y variables.</div>
+</div>
+<div class="line">vars : list of variable names</div>
+<div class="line-block">
+<div class="line">Variables within <code class="docutils literal notranslate"><span class="pre">data</span></code> to use, otherwise use every column with</div>
+<div class="line">a numeric datatype.</div>
+</div>
+<div class="line">{x, y}_vars : lists of variable names</div>
+<div class="line-block">
+<div class="line">Variables within <code class="docutils literal notranslate"><span class="pre">data</span></code> to use separately for the rows and</div>
+<div class="line">columns of the figure; i.e. to make a non-square plot.</div>
+</div>
+<div class="line">hue_order : list of strings</div>
+<div class="line-block">
+<div class="line">Order for the levels of the hue variable in the palette</div>
+</div>
+<div class="line">palette : dict or seaborn color palette</div>
+<div class="line-block">
+<div class="line">Set of colors for mapping the <code class="docutils literal notranslate"><span class="pre">hue</span></code> variable. If a dict, keys</div>
+<div class="line">should be values  in the <code class="docutils literal notranslate"><span class="pre">hue</span></code> variable.</div>
+</div>
+<div class="line">hue_kws : dictionary of param -&gt; list of values mapping</div>
+<div class="line-block">
+<div class="line">Other keyword arguments to insert into the plotting call to let</div>
+<div class="line">other plot attributes vary across levels of the hue variable (e.g.</div>
+<div class="line">the markers in a scatterplot).</div>
+</div>
+<div class="line">corner : bool</div>
+<div class="line-block">
+<div class="line">If True, don’t add axes to the upper (off-diagonal) triangle of the</div>
+<div class="line">grid, making this a “corner” plot.</div>
+</div>
+<div class="line">height : scalar</div>
+<div class="line-block">
+<div class="line">Height (in inches) of each facet.</div>
+</div>
+<div class="line">aspect : scalar</div>
+<div class="line-block">
+<div class="line">Aspect * height gives the width (in inches) of each facet.</div>
+</div>
+<div class="line">layout_pad : scalar</div>
+<div class="line-block">
+<div class="line">Padding between axes; passed to <code class="docutils literal notranslate"><span class="pre">fig.tight_layout</span></code>.</div>
+</div>
+<div class="line">despine : boolean</div>
+<div class="line-block">
+<div class="line">Remove the top and right spines from the plots.</div>
+</div>
+<div class="line">dropna : boolean</div>
+<div class="line-block">
+<div class="line">Drop missing values from the data before plotting.</div>
+<div class="line"><br /></div>
+</div>
+<div class="line">See Also</div>
+<div class="line">——–</div>
+<div class="line">pairplot : Easily drawing common uses of <code class="xref py py-class docutils literal notranslate"><span class="pre">PairGrid</span></code>.</div>
+<div class="line">FacetGrid : Subplot grid for plotting conditional relationships.</div>
+<div class="line"><br /></div>
+<div class="line">Examples</div>
+<div class="line">——–</div>
+<div class="line"><br /></div>
+<div class="line">.. include:: ../docstrings/PairGrid.rst</div>
+<div class="line"><br /></div>
+</div>
+<div class="line">map(self, func, <a href="#id87"><span class="problematic" id="id88">**</span></a>kwargs)</div>
+<div class="line-block">
+<div class="line">Plot with the same function in every subplot.</div>
+<div class="line"><br /></div>
+<div class="line">Parameters</div>
+<div class="line">———-</div>
+<div class="line">func : callable plotting function</div>
+<div class="line-block">
+<div class="line">Must take x, y arrays as positional arguments and draw onto the</div>
+<div class="line">“currently active” matplotlib Axes. Also needs to accept kwargs</div>
+<div class="line">called <code class="docutils literal notranslate"><span class="pre">color</span></code> and  <code class="docutils literal notranslate"><span class="pre">label</span></code>.</div>
+<div class="line"><br /></div>
+</div>
+</div>
+<div class="line">map_diag(self, func, <a href="#id89"><span class="problematic" id="id90">**</span></a>kwargs)</div>
+<div class="line-block">
+<div class="line">Plot with a univariate function on each diagonal subplot.</div>
+<div class="line"><br /></div>
+<div class="line">Parameters</div>
+<div class="line">———-</div>
+<div class="line">func : callable plotting function</div>
+<div class="line-block">
+<div class="line">Must take an x array as a positional argument and draw onto the</div>
+<div class="line">“currently active” matplotlib Axes. Also needs to accept kwargs</div>
+<div class="line">called <code class="docutils literal notranslate"><span class="pre">color</span></code> and  <code class="docutils literal notranslate"><span class="pre">label</span></code>.</div>
+<div class="line"><br /></div>
+</div>
+</div>
+<div class="line">map_lower(self, func, <a href="#id91"><span class="problematic" id="id92">**</span></a>kwargs)</div>
+<div class="line-block">
+<div class="line">Plot with a bivariate function on the lower diagonal subplots.</div>
+<div class="line"><br /></div>
+<div class="line">Parameters</div>
+<div class="line">———-</div>
+<div class="line">func : callable plotting function</div>
+<div class="line-block">
+<div class="line">Must take x, y arrays as positional arguments and draw onto the</div>
+<div class="line">“currently active” matplotlib Axes. Also needs to accept kwargs</div>
+<div class="line">called <code class="docutils literal notranslate"><span class="pre">color</span></code> and  <code class="docutils literal notranslate"><span class="pre">label</span></code>.</div>
+<div class="line"><br /></div>
+</div>
+</div>
+<div class="line">map_offdiag(self, func, <a href="#id93"><span class="problematic" id="id94">**</span></a>kwargs)</div>
+<div class="line-block">
+<div class="line">Plot with a bivariate function on the off-diagonal subplots.</div>
+<div class="line"><br /></div>
+<div class="line">Parameters</div>
+<div class="line">———-</div>
+<div class="line">func : callable plotting function</div>
+<div class="line-block">
+<div class="line">Must take x, y arrays as positional arguments and draw onto the</div>
+<div class="line">“currently active” matplotlib Axes. Also needs to accept kwargs</div>
+<div class="line">called <code class="docutils literal notranslate"><span class="pre">color</span></code> and  <code class="docutils literal notranslate"><span class="pre">label</span></code>.</div>
+<div class="line"><br /></div>
+</div>
+</div>
+<div class="line">map_upper(self, func, <a href="#id95"><span class="problematic" id="id96">**</span></a>kwargs)</div>
+<div class="line-block">
+<div class="line">Plot with a bivariate function on the upper diagonal subplots.</div>
+<div class="line"><br /></div>
+<div class="line">Parameters</div>
+<div class="line">———-</div>
+<div class="line">func : callable plotting function</div>
+<div class="line-block">
+<div class="line">Must take x, y arrays as positional arguments and draw onto the</div>
+<div class="line">“currently active” matplotlib Axes. Also needs to accept kwargs</div>
+<div class="line">called <code class="docutils literal notranslate"><span class="pre">color</span></code> and  <code class="docutils literal notranslate"><span class="pre">label</span></code>.</div>
+<div class="line"><br /></div>
+</div>
+</div>
+<div class="line">———————————————————————-</div>
+<div class="line">Methods inherited from Grid:</div>
+<div class="line"><br /></div>
+<div class="line">add_legend(self, legend_data=None, title=None, label_order=None, adjust_subtitles=False, <a href="#id97"><span class="problematic" id="id98">**</span></a>kwargs)</div>
+<div class="line-block">
+<div class="line">Draw a legend, maybe placing it outside axes and resizing the figure.</div>
+<div class="line"><br /></div>
+<div class="line">Parameters</div>
+<div class="line">———-</div>
+<div class="line">legend_data : dict</div>
+<div class="line-block">
+<div class="line">Dictionary mapping label names (or two-element tuples where the</div>
+<div class="line">second element is a label name) to matplotlib artist handles. The</div>
+<div class="line">default reads from <code class="docutils literal notranslate"><span class="pre">self._legend_data</span></code>.</div>
+</div>
+<div class="line">title : string</div>
+<div class="line-block">
+<div class="line">Title for the legend. The default reads from <code class="docutils literal notranslate"><span class="pre">self._hue_var</span></code>.</div>
+</div>
+<div class="line">label_order : list of labels</div>
+<div class="line-block">
+<div class="line">The order that the legend entries should appear in. The default</div>
+<div class="line">reads from <code class="docutils literal notranslate"><span class="pre">self.hue_names</span></code>.</div>
+</div>
+<div class="line">adjust_subtitles : bool</div>
+<div class="line-block">
+<div class="line">If True, modify entries with invisible artists to left-align</div>
+<div class="line">the labels and set the font size to that of a title.</div>
+</div>
+<div class="line">kwargs : key, value pairings</div>
+<div class="line-block">
+<div class="line">Other keyword arguments are passed to the underlying legend methods</div>
+<div class="line">on the Figure or Axes object.</div>
+<div class="line"><br /></div>
+</div>
+<div class="line">Returns</div>
+<div class="line">——-</div>
+<div class="line">self : Grid instance</div>
+<div class="line-block">
+<div class="line">Returns self for easy chaining.</div>
+<div class="line"><br /></div>
+</div>
+</div>
+<div class="line">tick_params(self, axis=’both’, <a href="#id99"><span class="problematic" id="id100">**</span></a>kwargs)</div>
+<div class="line-block">
+<div class="line">Modify the ticks, tick labels, and gridlines.</div>
+<div class="line"><br /></div>
+<div class="line">Parameters</div>
+<div class="line">———-</div>
+<div class="line">axis : {‘x’, ‘y’, ‘both’}</div>
+<div class="line-block">
+<div class="line">The axis on which to apply the formatting.</div>
+</div>
+<div class="line">kwargs : keyword arguments</div>
+<div class="line-block">
+<div class="line">Additional keyword arguments to pass to</div>
+<div class="line"><code class="xref py py-meth docutils literal notranslate"><span class="pre">matplotlib.axes.Axes.tick_params()</span></code>.</div>
+<div class="line"><br /></div>
+</div>
+<div class="line">Returns</div>
+<div class="line">——-</div>
+<div class="line">self : Grid instance</div>
+<div class="line-block">
+<div class="line">Returns self for easy chaining.</div>
+<div class="line"><br /></div>
+</div>
+</div>
+<div class="line">tight_layout(self, <a href="#id101"><span class="problematic" id="id102">*</span></a>args, <a href="#id103"><span class="problematic" id="id104">**</span></a>kwargs)</div>
+<div class="line-block">
+<div class="line">Call fig.tight_layout within rect that exclude the legend.</div>
+<div class="line"><br /></div>
+</div>
+<div class="line">———————————————————————-</div>
+<div class="line">Readonly properties inherited from Grid:</div>
+<div class="line"><br /></div>
+<div class="line">legend</div>
+<div class="line-block">
+<div class="line">The <code class="xref py py-class docutils literal notranslate"><span class="pre">matplotlib.legend.Legend</span></code> object, if present.</div>
+<div class="line"><br /></div>
+</div>
+<div class="line">———————————————————————-</div>
+<div class="line">Methods inherited from _BaseGrid:</div>
+<div class="line"><br /></div>
+<div class="line">apply(self, func, <a href="#id105"><span class="problematic" id="id106">*</span></a>args, <a href="#id107"><span class="problematic" id="id108">**</span></a>kwargs)</div>
+<div class="line-block">
+<div class="line">Pass the grid to a user-supplied function and return self.</div>
+<div class="line"><br /></div>
+<div class="line">The <cite>func</cite> must accept an object of this type for its first</div>
+<div class="line">positional argument. Additional arguments are passed through.</div>
+<div class="line">The return value of <cite>func</cite> is ignored; this method returns self.</div>
+<div class="line">See the <cite>pipe</cite> method if you want the return value.</div>
+<div class="line"><br /></div>
+<div class="line">Added in v0.12.0.</div>
+<div class="line"><br /></div>
+</div>
+<div class="line">pipe(self, func, <a href="#id109"><span class="problematic" id="id110">*</span></a>args, <a href="#id111"><span class="problematic" id="id112">**</span></a>kwargs)</div>
+<div class="line-block">
+<div class="line">Pass the grid to a user-supplied function and return its value.</div>
+<div class="line"><br /></div>
+<div class="line">The <cite>func</cite> must accept an object of this type for its first</div>
+<div class="line">positional argument. Additional arguments are passed through.</div>
+<div class="line">The return value of <cite>func</cite> becomes the return value of this method.</div>
+<div class="line">See the <cite>apply</cite> method if you want to return self instead.</div>
+<div class="line"><br /></div>
+<div class="line">Added in v0.12.0.</div>
+<div class="line"><br /></div>
+</div>
+<div class="line">savefig(self, <a href="#id113"><span class="problematic" id="id114">*</span></a>args, <a href="#id115"><span class="problematic" id="id116">**</span></a>kwargs)</div>
+<div class="line-block">
+<div class="line">Save an image of the plot.</div>
+<div class="line"><br /></div>
+<div class="line">This wraps <code class="xref py py-meth docutils literal notranslate"><span class="pre">matplotlib.figure.Figure.savefig()</span></code>, using bbox_inches=”tight”</div>
+<div class="line">by default. Parameters are passed through to the matplotlib function.</div>
+<div class="line"><br /></div>
+</div>
+<div class="line">set(self, <a href="#id117"><span class="problematic" id="id118">**</span></a>kwargs)</div>
+<div class="line-block">
+<div class="line">Set attributes on each subplot Axes.</div>
+<div class="line"><br /></div>
+</div>
+<div class="line">———————————————————————-</div>
+<div class="line">Readonly properties inherited from _BaseGrid:</div>
+<div class="line"><br /></div>
+<div class="line">fig</div>
+<div class="line-block">
+<div class="line">DEPRECATED: prefer the <cite>figure</cite> property.</div>
+<div class="line"><br /></div>
+</div>
+<div class="line">figure</div>
+<div class="line-block">
+<div class="line">Access the <code class="xref py py-class docutils literal notranslate"><span class="pre">matplotlib.figure.Figure</span></code> object underlying the grid.</div>
+<div class="line"><br /></div>
+</div>
+<div class="line">———————————————————————-</div>
+<div class="line">Data descriptors inherited from _BaseGrid:</div>
+<div class="line"><br /></div>
+<div class="line">__dict__</div>
+<div class="line-block">
+<div class="line">dictionary for instance variables</div>
+<div class="line"><br /></div>
+</div>
+<div class="line">__weakref__</div>
+<div class="line-block">
+<div class="line">list of weak references to the object</div>
+</div>
+</div>
+</dd>
+</dl>
+</dd>
+<dt>FUNCTIONS</dt><dd><dl>
+<dt>jointplot(data=None, <a href="#id119"><span class="problematic" id="id120">*</span></a>, x=None, y=None, hue=None, kind=’scatter’, height=6, ratio=5, space=0.2, dropna=False, xlim=None, ylim=None, color=None, palette=None, hue_order=None, hue_norm=None, marginal_ticks=False, joint_kws=None, marginal_kws=None, <a href="#id121"><span class="problematic" id="id122">**</span></a>kwargs)</dt><dd><p>Draw a plot of two variables with bivariate and univariate graphs.</p>
+<p>This function provides a convenient interface to the <code class="xref py py-class docutils literal notranslate"><span class="pre">JointGrid</span></code>
+class, with several canned plot kinds. This is intended to be a fairly
+lightweight wrapper; if you need more flexibility, you should use
+<code class="xref py py-class docutils literal notranslate"><span class="pre">JointGrid</span></code> directly.</p>
+<dl>
+<dt>data<span class="classifier"><code class="xref py py-class docutils literal notranslate"><span class="pre">pandas.DataFrame</span></code>, <code class="xref py py-class docutils literal notranslate"><span class="pre">numpy.ndarray</span></code>, mapping, or sequence</span></dt><dd><p>Input data structure. Either a long-form collection of vectors that can be
+assigned to named variables or a wide-form dataset that will be internally
+reshaped.</p>
+</dd>
+<dt>x, y<span class="classifier">vectors or keys in <code class="docutils literal notranslate"><span class="pre">data</span></code></span></dt><dd><p>Variables that specify positions on the x and y axes.</p>
+</dd>
+<dt>hue<span class="classifier">vector or key in <code class="docutils literal notranslate"><span class="pre">data</span></code></span></dt><dd><p>Semantic variable that is mapped to determine the color of plot elements.</p>
+</dd>
+<dt>kind<span class="classifier">{ “scatter” | “kde” | “hist” | “hex” | “reg” | “resid” }</span></dt><dd><p>Kind of plot to draw. See the examples for references to the underlying functions.</p>
+</dd>
+<dt>height<span class="classifier">numeric</span></dt><dd><p>Size of the figure (it will be square).</p>
+</dd>
+<dt>ratio<span class="classifier">numeric</span></dt><dd><p>Ratio of joint axes height to marginal axes height.</p>
+</dd>
+<dt>space<span class="classifier">numeric</span></dt><dd><p>Space between the joint and marginal axes</p>
+</dd>
+<dt>dropna<span class="classifier">bool</span></dt><dd><p>If True, remove observations that are missing from <code class="docutils literal notranslate"><span class="pre">x</span></code> and <code class="docutils literal notranslate"><span class="pre">y</span></code>.</p>
+</dd>
+<dt>{x, y}lim<span class="classifier">pairs of numbers</span></dt><dd><p>Axis limits to set before plotting.</p>
+</dd>
+<dt>color<span class="classifier"><code class="xref py py-mod docutils literal notranslate"><span class="pre">matplotlib</span> <span class="pre">color</span></code></span></dt><dd><p>Single color specification for when hue mapping is not used. Otherwise, the
+plot will try to hook into the matplotlib property cycle.</p>
+</dd>
+<dt>palette<span class="classifier">string, list, dict, or <code class="xref py py-class docutils literal notranslate"><span class="pre">matplotlib.colors.Colormap</span></code></span></dt><dd><p>Method for choosing the colors to use when mapping the <code class="docutils literal notranslate"><span class="pre">hue</span></code> semantic.
+String values are passed to <code class="xref py py-func docutils literal notranslate"><span class="pre">color_palette()</span></code>. List or dict values
+imply categorical mapping, while a colormap object implies numeric mapping.</p>
+</dd>
+<dt>hue_order<span class="classifier">vector of strings</span></dt><dd><p>Specify the order of processing and plotting for categorical levels of the
+<code class="docutils literal notranslate"><span class="pre">hue</span></code> semantic.</p>
+</dd>
+<dt>hue_norm<span class="classifier">tuple or <code class="xref py py-class docutils literal notranslate"><span class="pre">matplotlib.colors.Normalize</span></code></span></dt><dd><p>Either a pair of values that set the normalization range in data units
+or an object that will map from data units into a [0, 1] interval. Usage
+implies numeric mapping.</p>
+</dd>
+<dt>marginal_ticks<span class="classifier">bool</span></dt><dd><p>If False, suppress ticks on the count/density axis of the marginal plots.</p>
+</dd>
+<dt>{joint, marginal}_kws<span class="classifier">dicts</span></dt><dd><p>Additional keyword arguments for the plot components.</p>
+</dd>
+<dt>kwargs</dt><dd><p>Additional keyword arguments are passed to the function used to
+draw the plot on the joint Axes, superseding items in the
+<code class="docutils literal notranslate"><span class="pre">joint_kws</span></code> dictionary.</p>
+</dd>
+</dl>
+<dl class="simple">
+<dt><code class="xref py py-class docutils literal notranslate"><span class="pre">JointGrid</span></code></dt><dd><p>An object managing multiple subplots that correspond to joint and marginal axes
+for plotting a bivariate relationship or distribution.</p>
+</dd>
+</dl>
+<p>JointGrid : Set up a figure with joint and marginal views on bivariate data.
+PairGrid : Set up a figure with joint and marginal views on multiple variables.
+jointplot : Draw multiple bivariate plots with univariate marginal distributions.</p>
+</dd>
+<dt>pairplot(data, <a href="#id123"><span class="problematic" id="id124">*</span></a>, hue=None, hue_order=None, palette=None, vars=None, x_vars=None, y_vars=None, kind=’scatter’, diag_kind=’auto’, markers=None, height=2.5, aspect=1, corner=False, dropna=False, plot_kws=None, diag_kws=None, grid_kws=None, size=None)</dt><dd><p>Plot pairwise relationships in a dataset.</p>
+<p>By default, this function will create a grid of Axes such that each numeric
+variable in <code class="docutils literal notranslate"><span class="pre">data</span></code> will by shared across the y-axes across a single row and
+the x-axes across a single column. The diagonal plots are treated
+differently: a univariate distribution plot is drawn to show the marginal
+distribution of the data in each column.</p>
+<p>It is also possible to show a subset of variables or plot different
+variables on the rows and columns.</p>
+<p>This is a high-level interface for <code class="xref py py-class docutils literal notranslate"><span class="pre">PairGrid</span></code> that is intended to
+make it easy to draw a few common styles. You should use <code class="xref py py-class docutils literal notranslate"><span class="pre">PairGrid</span></code>
+directly if you need more flexibility.</p>
+<dl>
+<dt>data<span class="classifier"><cite>pandas.DataFrame</cite></span></dt><dd><p>Tidy (long-form) dataframe where each column is a variable and
+each row is an observation.</p>
+</dd>
+<dt>hue<span class="classifier">name of variable in <code class="docutils literal notranslate"><span class="pre">data</span></code></span></dt><dd><p>Variable in <code class="docutils literal notranslate"><span class="pre">data</span></code> to map plot aspects to different colors.</p>
+</dd>
+<dt>hue_order<span class="classifier">list of strings</span></dt><dd><p>Order for the levels of the hue variable in the palette</p>
+</dd>
+<dt>palette<span class="classifier">dict or seaborn color palette</span></dt><dd><p>Set of colors for mapping the <code class="docutils literal notranslate"><span class="pre">hue</span></code> variable. If a dict, keys
+should be values  in the <code class="docutils literal notranslate"><span class="pre">hue</span></code> variable.</p>
+</dd>
+<dt>vars<span class="classifier">list of variable names</span></dt><dd><p>Variables within <code class="docutils literal notranslate"><span class="pre">data</span></code> to use, otherwise use every column with
+a numeric datatype.</p>
+</dd>
+<dt>{x, y}_vars<span class="classifier">lists of variable names</span></dt><dd><p>Variables within <code class="docutils literal notranslate"><span class="pre">data</span></code> to use separately for the rows and
+columns of the figure; i.e. to make a non-square plot.</p>
+</dd>
+<dt>kind<span class="classifier">{‘scatter’, ‘kde’, ‘hist’, ‘reg’}</span></dt><dd><p>Kind of plot to make.</p>
+</dd>
+<dt>diag_kind<span class="classifier">{‘auto’, ‘hist’, ‘kde’, None}</span></dt><dd><p>Kind of plot for the diagonal subplots. If ‘auto’, choose based on
+whether or not <code class="docutils literal notranslate"><span class="pre">hue</span></code> is used.</p>
+</dd>
+<dt>markers<span class="classifier">single matplotlib marker code or list</span></dt><dd><p>Either the marker to use for all scatterplot points or a list of markers
+with a length the same as the number of levels in the hue variable so that
+differently colored points will also have different scatterplot
+markers.</p>
+</dd>
+<dt>height<span class="classifier">scalar</span></dt><dd><p>Height (in inches) of each facet.</p>
+</dd>
+<dt>aspect<span class="classifier">scalar</span></dt><dd><p>Aspect * height gives the width (in inches) of each facet.</p>
+</dd>
+<dt>corner<span class="classifier">bool</span></dt><dd><p>If True, don’t add axes to the upper (off-diagonal) triangle of the
+grid, making this a “corner” plot.</p>
+</dd>
+<dt>dropna<span class="classifier">boolean</span></dt><dd><p>Drop missing values from the data before plotting.</p>
+</dd>
+<dt>{plot, diag, grid}_kws<span class="classifier">dicts</span></dt><dd><p>Dictionaries of keyword arguments. <code class="docutils literal notranslate"><span class="pre">plot_kws</span></code> are passed to the
+bivariate plotting function, <code class="docutils literal notranslate"><span class="pre">diag_kws</span></code> are passed to the univariate
+plotting function, and <code class="docutils literal notranslate"><span class="pre">grid_kws</span></code> are passed to the <code class="xref py py-class docutils literal notranslate"><span class="pre">PairGrid</span></code>
+constructor.</p>
+</dd>
+</dl>
+<dl>
+<dt>grid<span class="classifier"><code class="xref py py-class docutils literal notranslate"><span class="pre">PairGrid</span></code></span></dt><dd><p>Returns the underlying <code class="xref py py-class docutils literal notranslate"><span class="pre">PairGrid</span></code> instance for further tweaking.</p>
+</dd>
+</dl>
+<p>PairGrid : Subplot grid for more flexible plotting of pairwise relationships.
+JointGrid : Grid for plotting joint and marginal distributions of two variables.</p>
+</dd>
+</dl>
+</dd>
+<dt>DATA</dt><dd><p>__all__ = [‘FacetGrid’, ‘PairGrid’, ‘JointGrid’, ‘pairplot’, ‘jointplo…</p>
+</dd>
+<dt>FILE</dt><dd><p>/Users/leopoldogonzalez/miniconda3/lib/python3.12/site-packages/seaborn/axisgrid.py</p>
+</dd>
+</dl>
+</section>
+
+
+           </div>
+          </div>
+          <footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2025, santosg57, santosg572@gmail.com.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

@@ -1,0 +1,160 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="../../">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>rugplot &mdash; santosg57-python 0.1 documentation</title>
+      <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=b86133f3" />
+      <link rel="stylesheet" type="text/css" href="../../_static/css/theme.css?v=9edc463e" />
+      <link rel="stylesheet" type="text/css" href="../../_static/custom.css?v=836bb062" />
+
+  
+      <script src="../../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="../../_static/documentation_options.js?v=2709fde1"></script>
+      <script src="../../_static/doctools.js?v=9a2dae69"></script>
+      <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../../index.html" class="icon icon-home">
+            santosg57-python
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+<li class="toctree-l1"><a class="reference internal" href="../../Daniel_Ejercicios_abr2025/biostatistics_daniel.html">BIOSTATISTICS-DANIEL</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../Temarios/index2.html">sss</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../funciones.html">Funciones o Métodos creados por el Usuario</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../numpy/Imagenes/imagenes.html">Estructuras de datos en el módulo numpy</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../numpy_help.html">Help numpy</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../matplotlyb.html">Matplotlib.pyplot</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../ejercicio_01.html">Ejercicio01</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../ubuntu_windows.html">Pasos para instalar Ubuntu con WSL</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../funciones_curso.html">Algunas funciones desarrolladas durante el curso</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../ejercicio_calculo_de_probabilidades.html">Cálculo de Probabilidades</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../help/index2.html">HELP</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../Python_Tkinter/index2.html">Tkinter</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">santosg57-python</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">rugplot</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../../_sources/Python_Seaborn/source/rugplot.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="rugplot">
+<h1>rugplot<a class="headerlink" href="#rugplot" title="Link to this heading"></a></h1>
+<p>Help on function rugplot in module seaborn.distributions:</p>
+<dl>
+<dt>rugplot(data=None, <a href="#id1"><span class="problematic" id="id2">*</span></a>, x=None, y=None, hue=None, height=0.025, expand_margins=True, palette=None, hue_order=None, hue_norm=None, legend=True, ax=None, <a href="#id3"><span class="problematic" id="id4">**</span></a>kwargs)</dt><dd><p>Plot marginal distributions by drawing ticks along the x and y axes.</p>
+<p>This function is intended to complement other plots by showing the location
+of individual observations in an unobtrusive way.</p>
+<dl>
+<dt>data<span class="classifier"><code class="xref py py-class docutils literal notranslate"><span class="pre">pandas.DataFrame</span></code>, <code class="xref py py-class docutils literal notranslate"><span class="pre">numpy.ndarray</span></code>, mapping, or sequence</span></dt><dd><p>Input data structure. Either a long-form collection of vectors that can be
+assigned to named variables or a wide-form dataset that will be internally
+reshaped.</p>
+</dd>
+<dt>x, y<span class="classifier">vectors or keys in <code class="docutils literal notranslate"><span class="pre">data</span></code></span></dt><dd><p>Variables that specify positions on the x and y axes.</p>
+</dd>
+<dt>hue<span class="classifier">vector or key in <code class="docutils literal notranslate"><span class="pre">data</span></code></span></dt><dd><p>Semantic variable that is mapped to determine the color of plot elements.</p>
+</dd>
+<dt>height<span class="classifier">float</span></dt><dd><p>Proportion of axes extent covered by each rug element. Can be negative.</p>
+</dd>
+<dt>expand_margins<span class="classifier">bool</span></dt><dd><p>If True, increase the axes margins by the height of the rug to avoid
+overlap with other elements.</p>
+</dd>
+<dt>palette<span class="classifier">string, list, dict, or <code class="xref py py-class docutils literal notranslate"><span class="pre">matplotlib.colors.Colormap</span></code></span></dt><dd><p>Method for choosing the colors to use when mapping the <code class="docutils literal notranslate"><span class="pre">hue</span></code> semantic.
+String values are passed to <code class="xref py py-func docutils literal notranslate"><span class="pre">color_palette()</span></code>. List or dict values
+imply categorical mapping, while a colormap object implies numeric mapping.</p>
+</dd>
+<dt>hue_order<span class="classifier">vector of strings</span></dt><dd><p>Specify the order of processing and plotting for categorical levels of the
+<code class="docutils literal notranslate"><span class="pre">hue</span></code> semantic.</p>
+</dd>
+<dt>hue_norm<span class="classifier">tuple or <code class="xref py py-class docutils literal notranslate"><span class="pre">matplotlib.colors.Normalize</span></code></span></dt><dd><p>Either a pair of values that set the normalization range in data units
+or an object that will map from data units into a [0, 1] interval. Usage
+implies numeric mapping.</p>
+</dd>
+<dt>legend<span class="classifier">bool</span></dt><dd><p>If False, do not add a legend for semantic variables.</p>
+</dd>
+<dt>ax<span class="classifier"><code class="xref py py-class docutils literal notranslate"><span class="pre">matplotlib.axes.Axes</span></code></span></dt><dd><p>Pre-existing axes for the plot. Otherwise, call <code class="xref py py-func docutils literal notranslate"><span class="pre">matplotlib.pyplot.gca()</span></code>
+internally.</p>
+</dd>
+<dt>kwargs</dt><dd><p>Other keyword arguments are passed to
+<code class="xref py py-meth docutils literal notranslate"><span class="pre">matplotlib.collections.LineCollection()</span></code></p>
+</dd>
+</dl>
+<dl class="simple">
+<dt><code class="xref py py-class docutils literal notranslate"><span class="pre">matplotlib.axes.Axes</span></code></dt><dd><p>The matplotlib axes containing the plot.</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</section>
+
+
+           </div>
+          </div>
+          <footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2025, santosg57, santosg572@gmail.com.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>
