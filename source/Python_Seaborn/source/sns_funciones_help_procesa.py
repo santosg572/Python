@@ -14,6 +14,8 @@ while i < ln:
     dd = ss.split(' ')
     file1 = dd[1]+'.rst'
     fil1 = open(file1,'w')
+    fil1.write(dd[1]+'\n')
+    fil1.write('======================\n\n')
     i = i+1
     while i < ln:
       ss = datos[i]

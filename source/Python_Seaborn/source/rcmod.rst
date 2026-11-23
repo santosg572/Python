@@ -1,3 +1,6 @@
+rcmod
+======================
+
 Help on module seaborn.rcmod in seaborn:
 
 NAME

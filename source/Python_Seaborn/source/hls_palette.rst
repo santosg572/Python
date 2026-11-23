@@ -1,3 +1,6 @@
+hls_palette
+======================
+
 Help on function hls_palette in module seaborn.palettes:
 
 hls_palette(n_colors=6, h=0.01, l=0.6, s=0.65, as_cmap=False)

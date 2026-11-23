@@ -1,3 +1,6 @@
+distplot
+======================
+
 Help on function distplot in module seaborn.distributions:
 
 distplot(a=None, bins=None, hist=True, kde=True, rug=False, fit=None, hist_kws=None, kde_kws=None, rug_kws=None, fit_kws=None, color=None, vertical=False, norm_hist=False, axlabel=None, label=None, ax=None, x=None)

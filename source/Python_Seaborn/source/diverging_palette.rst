@@ -1,3 +1,6 @@
+diverging_palette
+======================
+
 Help on function diverging_palette in module seaborn.palettes:
 
 diverging_palette(h_neg, h_pos, s=75, l=50, sep=1, n=6, center='light', as_cmap=False)

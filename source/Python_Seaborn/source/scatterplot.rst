@@ -1,3 +1,6 @@
+scatterplot
+======================
+
 Help on function scatterplot in module seaborn.relational:
 
 scatterplot(data=None, *, x=None, y=None, hue=None, size=None, style=None, palette=None, hue_order=None, hue_norm=None, sizes=None, size_order=None, size_norm=None, markers=True, style_order=None, legend='auto', ax=None, **kwargs)

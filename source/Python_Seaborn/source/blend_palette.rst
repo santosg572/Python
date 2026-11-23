@@ -1,3 +1,6 @@
+blend_palette
+======================
+
 Help on function blend_palette in module seaborn.palettes:
 
 blend_palette(colors, n_colors=6, as_cmap=False, input='rgb')

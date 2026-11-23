@@ -1,3 +1,6 @@
+choose_cubehelix_palette
+======================
+
 Help on function choose_cubehelix_palette in module seaborn.widgets:
 
 choose_cubehelix_palette(as_cmap=False)

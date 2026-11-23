@@ -1,3 +1,6 @@
+set_color_codes
+======================
+
 Help on function set_color_codes in module seaborn.palettes:
 
 set_color_codes(palette='deep')

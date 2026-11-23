@@ -1,3 +1,6 @@
+algorithms
+======================
+
 Help on module seaborn.algorithms in seaborn:
 
 NAME

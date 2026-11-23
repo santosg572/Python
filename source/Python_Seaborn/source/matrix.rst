@@ -1,3 +1,6 @@
+matrix
+======================
+
 Help on module seaborn.matrix in seaborn:
 
 NAME

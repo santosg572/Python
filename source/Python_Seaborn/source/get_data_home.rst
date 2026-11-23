@@ -1,3 +1,6 @@
+get_data_home
+======================
+
 Help on function get_data_home in module seaborn.utils:
 
 get_data_home(data_home=None)

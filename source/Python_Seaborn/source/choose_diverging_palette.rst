@@ -1,3 +1,6 @@
+choose_diverging_palette
+======================
+
 Help on function choose_diverging_palette in module seaborn.widgets:
 
 choose_diverging_palette(as_cmap=False)

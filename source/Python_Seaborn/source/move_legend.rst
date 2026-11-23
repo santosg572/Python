@@ -1,3 +1,6 @@
+move_legend
+======================
+
 Help on function move_legend in module seaborn.utils:
 
 move_legend(obj, loc, **kwargs)

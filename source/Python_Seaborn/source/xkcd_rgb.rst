@@ -1,3 +1,6 @@
+xkcd_rgb
+======================
+
 Help on dict object:
 
 class dict(object)

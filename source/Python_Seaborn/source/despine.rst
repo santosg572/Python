@@ -1,3 +1,6 @@
+despine
+======================
+
 Help on function despine in module seaborn.utils:
 
 despine(fig=None, ax=None, top=True, right=True, left=False, bottom=False, offset=None, trim=False)

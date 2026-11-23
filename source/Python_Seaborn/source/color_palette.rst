@@ -1,3 +1,6 @@
+color_palette
+======================
+
 Help on function color_palette in module seaborn.palettes:
 
 color_palette(palette=None, n_colors=None, desat=None, as_cmap=False)

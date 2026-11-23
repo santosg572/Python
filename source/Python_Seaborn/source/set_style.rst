@@ -1,3 +1,6 @@
+set_style
+======================
+
 Help on function set_style in module seaborn.rcmod:
 
 set_style(style=None, rc=None)

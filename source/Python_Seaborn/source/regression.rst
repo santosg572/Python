@@ -1,3 +1,6 @@
+regression
+======================
+
 Help on module seaborn.regression in seaborn:
 
 NAME

@@ -1,3 +1,6 @@
+dark_palette
+======================
+
 Help on function dark_palette in module seaborn.palettes:
 
 dark_palette(color, n_colors=6, reverse=False, as_cmap=False, input='rgb')

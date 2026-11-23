@@ -1,3 +1,6 @@
+axisgrid
+======================
+
 Help on module seaborn.axisgrid in seaborn:
 
 NAME

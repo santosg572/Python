@@ -1,3 +1,6 @@
+rugplot
+======================
+
 Help on function rugplot in module seaborn.distributions:
 
 rugplot(data=None, *, x=None, y=None, hue=None, height=0.025, expand_margins=True, palette=None, hue_order=None, hue_norm=None, legend=True, ax=None, **kwargs)

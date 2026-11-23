@@ -1,3 +1,6 @@
+set_hls_values
+======================
+
 Help on function set_hls_values in module seaborn.utils:
 
 set_hls_values(color, h=None, l=None, s=None)

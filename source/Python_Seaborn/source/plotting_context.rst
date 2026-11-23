@@ -1,3 +1,6 @@
+plotting_context
+======================
+
 Help on function plotting_context in module seaborn.rcmod:
 
 plotting_context(context=None, font_scale=1, rc=None)

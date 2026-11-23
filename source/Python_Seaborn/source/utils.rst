@@ -1,3 +1,6 @@
+utils
+======================
+
 Help on module seaborn.utils in seaborn:
 
 NAME

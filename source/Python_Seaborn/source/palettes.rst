@@ -1,3 +1,6 @@
+palettes
+======================
+
 Help on module seaborn.palettes in seaborn:
 
 NAME

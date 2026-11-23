@@ -1,3 +1,6 @@
+jointplot
+======================
+
 Help on function jointplot in module seaborn.axisgrid:
 
 jointplot(data=None, *, x=None, y=None, hue=None, kind='scatter', height=6, ratio=5, space=0.2, dropna=False, xlim=None, ylim=None, color=None, palette=None, hue_order=None, hue_norm=None, marginal_ticks=False, joint_kws=None, marginal_kws=None, **kwargs)

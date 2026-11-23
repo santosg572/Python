@@ -1,3 +1,6 @@
+light_palette
+======================
+
 Help on function light_palette in module seaborn.palettes:
 
 light_palette(color, n_colors=6, reverse=False, as_cmap=False, input='rgb')

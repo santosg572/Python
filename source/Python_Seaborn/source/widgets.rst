@@ -1,3 +1,6 @@
+widgets
+======================
+
 Help on module seaborn.widgets in seaborn:
 
 NAME

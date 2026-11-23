@@ -1,3 +1,6 @@
+mpl_palette
+======================
+
 Help on function mpl_palette in module seaborn.palettes:
 
 mpl_palette(name, n_colors=6, as_cmap=False)

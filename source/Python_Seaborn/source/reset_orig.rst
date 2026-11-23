@@ -1,3 +1,6 @@
+reset_orig
+======================
+
 Help on function reset_orig in module seaborn.rcmod:
 
 reset_orig()
