@@ -1,0 +1,29 @@
+Help on function choose_cubehelix_palette in module seaborn.widgets:
+
+choose_cubehelix_palette(as_cmap=False)
+    Launch an interactive widget to create a sequential cubehelix palette.
+
+    This corresponds with the :func:`cubehelix_palette` function. This kind
+    of palette is good for data that range between relatively uninteresting
+    low values and interesting high values. The cubehelix system allows the
+    palette to have more hue variance across the range, which can be helpful
+    for distinguishing a wider range of values.
+
+    Requires IPython 2+ and must be used in the notebook.
+
+    Parameters
+    ----------
+    as_cmap : bool
+        If True, the return value is a matplotlib colormap rather than a
+        list of discrete colors.
+
+    Returns
+    -------
+    pal or cmap : list of colors or matplotlib colormap
+        Object that can be passed to plotting functions.
+
+    See Also
+    --------
+    cubehelix_palette : Create a sequential palette or colormap using the
+                        cubehelix system.
+

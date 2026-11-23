@@ -1,0 +1,43 @@
+Help on package seaborn:
+
+NAME
+    seaborn - # Import seaborn objects
+
+PACKAGE CONTENTS
+    _base
+    _compat
+    _core (package)
+    _docstrings
+    _marks (package)
+    _statistics
+    _stats (package)
+    _testing
+    algorithms
+    axisgrid
+    categorical
+    cm
+    colors (package)
+    distributions
+    external (package)
+    matrix
+    miscplot
+    objects
+    palettes
+    rcmod
+    regression
+    relational
+    utils
+    widgets
+
+DATA
+    crayons = {'Almond': '#EFDECD', 'Antique Brass': '#CD9575', 'Apricot':...
+    xkcd_rgb = {'acid green': '#8ffe09', 'adobe': '#bd6c48', 'algae': '#54...
+
+VERSION
+    0.13.2
+
+FILE
+    /Users/leopoldogonzalez/miniconda3/lib/python3.12/site-packages/seaborn/__init__.py
+
+
+None

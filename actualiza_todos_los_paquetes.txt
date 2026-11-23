@@ -1,0 +1,5 @@
+python3 -m pip install --upgrade pip
+pip list --outdated --format=json | python3 -c "import json, sys, subprocess; pkgs = [p['name'] for p in json.load(sys.stdin)]; subprocess.run([sys.executable, '-m', 'pip', 'install', '--upgrade', *pkgs]) if pkgs else print('Todo actualizado')"
+
+
+
