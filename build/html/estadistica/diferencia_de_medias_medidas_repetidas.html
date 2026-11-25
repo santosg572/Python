@@ -1,0 +1,190 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="../">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>diferencia_de_medias_medidas_repetidas &mdash; santosg57-python 0.1 documentation</title>
+      <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=b86133f3" />
+      <link rel="stylesheet" type="text/css" href="../_static/css/theme.css?v=9edc463e" />
+      <link rel="stylesheet" type="text/css" href="../_static/custom.css?v=836bb062" />
+
+  
+      <script src="../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="../_static/documentation_options.js?v=2709fde1"></script>
+      <script src="../_static/doctools.js?v=9a2dae69"></script>
+      <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../index.html" class="icon icon-home">
+            santosg57-python
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+<li class="toctree-l1"><a class="reference internal" href="../Daniel_Ejercicios_abr2025/biostatistics_daniel.html">BIOSTATISTICS-DANIEL</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Temarios/index2.html">sss</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../funciones.html">Funciones o Métodos creados por el Usuario</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../numpy/Imagenes/imagenes.html">Estructuras de datos en el módulo numpy</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../numpy_help.html">Help numpy</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlyb.html">Matplotlib.pyplot</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../ejercicio_01.html">Ejercicio01</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../ubuntu_windows.html">Pasos para instalar Ubuntu con WSL</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../funciones_curso.html">Algunas funciones desarrolladas durante el curso</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../ejercicio_calculo_de_probabilidades.html">Cálculo de Probabilidades</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../help/index2.html">HELP</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Python_Tkinter/index2.html">Tkinter</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">santosg57-python</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">diferencia_de_medias_medidas_repetidas</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../_sources/estadistica/diferencia_de_medias_medidas_repetidas.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="diferencia-de-medias-medidas-repetidas">
+<h1>diferencia_de_medias_medidas_repetidas<a class="headerlink" href="#diferencia-de-medias-medidas-repetidas" title="Link to this heading"></a></h1>
+<p>Para comparar medias en medidas repetidas en Python, la prueba depende de cuántas mediciones o condiciones tenga cada sujeto:</p>
+<ul class="simple">
+<li><p>2 mediciones o condiciones (ej. antes y después): Prueba t pareada (scipy.stats.ttest_rel).</p></li>
+<li><p>3 o más mediciones o condiciones (ej. línea base, mes 1, mes 3): ANOVA de medidas repetidas (statsmodels.stats.anova.AnovaRM).</p></li>
+</ul>
+<p><strong>1. Dos medidas: Prueba t pareada (SciPy)</strong></p>
+<p>Evalúa si la diferencia media entre dos mediciones del mismo grupo es distinta de cero.</p>
+<div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">scipy</span><span class="w"> </span><span class="kn">import</span> <span class="n">stats</span>
+
+<span class="c1"># Mismos sujetos medidos antes y después</span>
+<span class="n">antes</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mi">78</span><span class="p">,</span> <span class="mi">82</span><span class="p">,</span> <span class="mi">85</span><span class="p">,</span> <span class="mi">74</span><span class="p">,</span> <span class="mi">90</span><span class="p">,</span> <span class="mi">79</span><span class="p">,</span> <span class="mi">88</span><span class="p">,</span> <span class="mi">81</span><span class="p">])</span>
+<span class="n">despues</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mi">81</span><span class="p">,</span> <span class="mi">84</span><span class="p">,</span> <span class="mi">86</span><span class="p">,</span> <span class="mi">79</span><span class="p">,</span> <span class="mi">92</span><span class="p">,</span> <span class="mi">80</span><span class="p">,</span> <span class="mi">91</span><span class="p">,</span> <span class="mi">84</span><span class="p">])</span>
+
+<span class="n">t_stat</span><span class="p">,</span> <span class="n">p_val</span> <span class="o">=</span> <span class="n">stats</span><span class="o">.</span><span class="n">ttest_rel</span><span class="p">(</span><span class="n">antes</span><span class="p">,</span> <span class="n">despues</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Estadístico t: </span><span class="si">{</span><span class="n">t_stat</span><span class="si">:</span><span class="s2">.4f</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Valor p: </span><span class="si">{</span><span class="n">p_val</span><span class="si">:</span><span class="s2">.4f</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Diferencia media (después - antes): </span><span class="si">{</span><span class="n">np</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="n">despues</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">antes</span><span class="p">)</span><span class="si">:</span><span class="s2">.2f</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>Si p_val &lt; 0.05 (con α = 0.05), existe una diferencia estadísticamente significativa entre ambas mediciones.</p></li>
+<li><p>Si no se cumple la normalidad de las diferencias, usa la alternativa no paramétrica: stats.wilcoxon(antes, despues).</p></li>
+</ul>
+<p><strong>2. Tres o más medidas: ANOVA de medidas repetidas (statsmodels)</strong></p>
+<p>Evalúa si hay diferencias significativas entre las medias de tres o más momentos o condiciones evaluadas en los mismos sujetos. Requiere
+los datos en formato largo (una fila por observación).</p>
+<div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">pandas</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">pd</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">statsmodels.stats.anova</span><span class="w"> </span><span class="kn">import</span> <span class="n">AnovaRM</span>
+
+<span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">({</span>
+ <span class="s2">&quot;sujeto&quot;</span><span class="p">:</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">5</span><span class="p">],</span>
+ <span class="s2">&quot;tiempo&quot;</span><span class="p">:</span> <span class="p">[</span>
+     <span class="s2">&quot;t1&quot;</span><span class="p">,</span>
+     <span class="s2">&quot;t2&quot;</span><span class="p">,</span>
+     <span class="s2">&quot;t3&quot;</span><span class="p">,</span>
+     <span class="s2">&quot;t1&quot;</span><span class="p">,</span>
+     <span class="s2">&quot;t2&quot;</span><span class="p">,</span>
+     <span class="s2">&quot;t3&quot;</span><span class="p">,</span>
+     <span class="s2">&quot;t1&quot;</span><span class="p">,</span>
+     <span class="s2">&quot;t2&quot;</span><span class="p">,</span>
+     <span class="s2">&quot;t3&quot;</span><span class="p">,</span>
+     <span class="s2">&quot;t1&quot;</span><span class="p">,</span>
+     <span class="s2">&quot;t2&quot;</span><span class="p">,</span>
+     <span class="s2">&quot;t3&quot;</span><span class="p">,</span>
+     <span class="s2">&quot;t1&quot;</span><span class="p">,</span>
+     <span class="s2">&quot;t2&quot;</span><span class="p">,</span>
+     <span class="s2">&quot;t3&quot;</span><span class="p">,</span>
+ <span class="p">],</span>
+ <span class="s2">&quot;puntaje&quot;</span><span class="p">:</span> <span class="p">[</span><span class="mi">60</span><span class="p">,</span> <span class="mi">65</span><span class="p">,</span> <span class="mi">70</span><span class="p">,</span> <span class="mi">55</span><span class="p">,</span> <span class="mi">58</span><span class="p">,</span> <span class="mi">64</span><span class="p">,</span> <span class="mi">72</span><span class="p">,</span> <span class="mi">74</span><span class="p">,</span> <span class="mi">75</span><span class="p">,</span> <span class="mi">50</span><span class="p">,</span> <span class="mi">56</span><span class="p">,</span> <span class="mi">61</span><span class="p">,</span> <span class="mi">68</span><span class="p">,</span> <span class="mi">70</span><span class="p">,</span> <span class="mi">73</span><span class="p">],</span>
+<span class="p">})</span>
+
+<span class="n">modelo</span> <span class="o">=</span> <span class="n">AnovaRM</span><span class="p">(</span><span class="n">data</span><span class="o">=</span><span class="n">df</span><span class="p">,</span> <span class="n">depvar</span><span class="o">=</span><span class="s2">&quot;puntaje&quot;</span><span class="p">,</span> <span class="n">subject</span><span class="o">=</span><span class="s2">&quot;sujeto&quot;</span><span class="p">,</span> <span class="n">within</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;tiempo&quot;</span><span class="p">])</span>
+<span class="n">resultados</span> <span class="o">=</span> <span class="n">modelo</span><span class="o">.</span><span class="n">fit</span><span class="p">()</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">resultados</span><span class="p">)</span>
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>Revisa Pr &gt; F en la tabla de tiempo: un valor menor a 0.05 indica que al menos una condición difiere significativamente de las demás.</p></li>
+<li><p>Si resulta significativo, aplica comparaciones post hoc pareadas (por ejemplo, con ttest_rel y corrección de Bonferroni) para identificar qué pares difieren.</p></li>
+<li><p>Si los datos no cumplen los supuestos paramétricos, usa la prueba de Friedman: stats.friedmanchisquare(t1, t2, t3).</p></li>
+</ul>
+<p><strong>Supuestos clave a verificar</strong></p>
+<ol class="arabic simple">
+<li><p>Pareamiento correcto: Cada fila o par debe corresponder exactamente al mismo sujeto u observación.</p></li>
+<li><p>Normalidad: En la prueba t pareada se evalúa en las diferencias (despues - antes), por ejemplo con stats.shapiro(despues - antes).</p></li>
+<li><p>Esfericidad (en ANOVA de medidas repetidas): Supone varianzas iguales de las diferencias entre todos los pares de condiciones.</p></li>
+</ol>
+<p>Si quieres, indícame:</p>
+<ul class="simple">
+<li><p>Cuántas mediciones o condiciones tiene cada sujeto</p></li>
+<li><p>Si tus datos son normales o si tienes datos faltantes / múltiples factores</p></li>
+</ul>
+<p>Con eso puedo darte el código exacto de supuestos, pruebas post hoc o modelos mixtos.</p>
+</section>
+
+
+           </div>
+          </div>
+          <footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2025, santosg57, santosg572@gmail.com.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>
